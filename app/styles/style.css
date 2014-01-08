@@ -7337,8 +7337,11 @@ section a:hover {
 .navbar-brand .brand {
   padding: 15px;
 }
+.affix {
+  position: relative;
+}
 @media (min-width: 768px) {
-  .ui-scrollfix {
+  .affix {
     position: fixed;
     background-color: #ffffff;
     width: 100%;
@@ -7346,7 +7349,7 @@ section a:hover {
     -webkit-box-shadow: 0 0 10px #000000;
     box-shadow: 0 0 10px #000000;
   }
-  .ui-scrollfix + * {
+  .affix + * {
     padding-top: 50px;
   }
 }
