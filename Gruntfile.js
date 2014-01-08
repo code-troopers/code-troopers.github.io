@@ -211,24 +211,34 @@ module.exports = function (grunt) {
                          htmlmin: {
                              dist: {
                                  options: {
-                                     /*removeCommentsFromCDATA: true,
-                                      // https://github.com/yeoman/grunt-usemin/issues/44
-                                      //collapseWhitespace: true,
-                                      collapseBooleanAttributes: true,
-                                      removeAttributeQuotes: true,
-                                      removeRedundantAttributes: true,
-                                      useShortDoctype: true,
-                                      removeEmptyAttributes: true,
-                                      removeOptionalTags: true*/
                                  },
                                  files: [
                                      {
                                          expand: true,
                                          cwd: '<%= yeoman.app %>',
-                                         src: ['*.html', 'views/{,*/}*.html'],
+                                         src: ['*.html'],
                                          dest: '<%= yeoman.dist %>'
                                      }
                                  ]
+                             },
+                             final:{
+                                 options:{
+                                     removeCommentsFromCDATA: true,
+                                      removeComments: true,
+                                      collapseWhitespace: false,
+                                      collapseBooleanAttributes: true,
+                                      removeAttributeQuotes: true,
+                                      removeRedundantAttributes: true,
+                                      useShortDoctype: true,
+                                      removeEmptyAttributes: true,
+                                      removeOptionalTags: true
+                                 },
+                                 files: [{
+                                     expand: true,
+                                     cwd: '<%= yeoman.dist %>',
+                                     src: ['*.html'],
+                                     dest: '<%= yeoman.dist %>'
+                                 }]
                              }
                          },
                          // Put files not handled in other tasks here
@@ -286,14 +296,8 @@ module.exports = function (grunt) {
                                  'copy:styles',
                                  'imagemin',
                                  'svgmin',
-                                 'htmlmin'
+                                 'htmlmin:dist'
                              ]
-                         },
-                         karma: {
-                             unit: {
-                                 configFile: 'karma.conf.js',
-                                 singleRun: true
-                             }
                          },
                          cdnify: {
                              dist: {
@@ -373,7 +377,8 @@ module.exports = function (grunt) {
         'cssmin',
         'uglify',
         'rev',
-        'usemin'
+        'usemin',
+        'htmlmin:final'
     ]);
 
     grunt.registerTask('default', [
