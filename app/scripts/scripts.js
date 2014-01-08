@@ -8,4 +8,5 @@ $(function () {
             $('body').scrollTo('#' + $link.attr('data-scrollToLink'), 500, {offset: {top: -50} });
         });
     });
+    $("[title]").tooltip();
 });
