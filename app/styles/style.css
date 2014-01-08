@@ -7428,17 +7428,17 @@ section ul.projects > li > figure:hover .arrow {
   left: -40px;
 }
 section ul.projects > li > figure img {
-  max-width: 320px;
-  max-height: 320px;
+  border: 20px solid #ffffff;
 }
-ul.troopers > li > figure > a > img,
-ul.projects > li > figure > a > img {
+ul.troopers > li > figure > a {
+  border: none;
+}
+ul.troopers > li > figure > a > img {
   -webkit-transition: border-width 0.3s ease;
   transition: border-width 0.3s ease;
   border: 20px solid #ffffff;
 }
-ul.troopers > li > figure > a:hover > img,
-ul.projects > li > figure > a:hover > img {
+ul.troopers > li > figure > a:hover > img {
   border-width: 0;
 }
 ul.socials li {

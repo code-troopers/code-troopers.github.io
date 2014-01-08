@@ -159,9 +159,8 @@ section {
         &:hover .arrow {
           left: -40px;
         }
-        img {
-          max-width: 320px;
-          max-height: 320px;
+        img{
+          border: 20px solid @white;
         }
       }
 
@@ -169,8 +168,9 @@ section {
   }
 }
 
-ul.troopers, ul.projects {
+ul.troopers{
   > li > figure > a {
+    border:none;
     > img {
       .transition(border-width 0.3s ease);
       border: 20px solid @white;
