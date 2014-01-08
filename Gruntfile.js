@@ -331,6 +331,9 @@ module.exports = function (grunt) {
                                      "<%= yeoman.app %>/styles/style.css": "<%= yeoman.app %>/styles/style.less"
                                  }
                              }
+                         },
+                         htmllint: {
+                             all: ["app/index.html"]
                          }
                      });
 
@@ -380,4 +383,5 @@ module.exports = function (grunt) {
     ]);
 
     grunt.loadNpmTasks('grunt-contrib-less');
+    grunt.loadNpmTasks('grunt-html');
 };
