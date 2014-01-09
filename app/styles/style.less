@@ -1,5 +1,7 @@
 @import "../bower_components/bootstrap3-less-js/less/bootstrap";
 @import "../bower_components/font-awesome/less/font-awesome";
+@import "../bower_components/owlcarousel/owl-carousel/owl.carousel.css";
+@import "../bower_components/owlcarousel/owl-carousel/owl.theme.css";
 
 @fa-font-path: "//netdna.bootstrapcdn.com/font-awesome/4.0.3/fonts";
 
@@ -119,17 +121,14 @@ section {
   }
 
   ul.skills {
-    > li {
-      margin-bottom: 30px;
-      height: 100px;
+    .owl-item{
       text-align: center;
-      img {
-        max-width: 100px;
-        max-height: 100px;
-      }
-      figcaption {
-        display: none;
-      }
+    }
+    img{
+      height: 100px;
+    }
+    figcaption {
+      display: none;
     }
   }
 
@@ -159,7 +158,7 @@ section {
         &:hover .arrow {
           left: -40px;
         }
-        img{
+        img {
           border: 20px solid @white;
         }
       }
@@ -168,9 +167,9 @@ section {
   }
 }
 
-ul.troopers{
+ul.troopers {
   > li > figure > a {
-    border:none;
+    border: none;
     > img {
       .transition(border-width 0.3s ease);
       border: 20px solid @white;
