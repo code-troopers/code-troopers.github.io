@@ -18,14 +18,6 @@ module.exports = function (grunt) {
                              dist: 'dist'
                          },
                          watch: {
-                             coffee: {
-                                 files: ['<%= yeoman.app %>/scripts/{,*/}*.coffee'],
-                                 tasks: ['coffee:dist']
-                             },
-                             coffeeTest: {
-                                 files: ['test/spec/{,*/}*.coffee'],
-                                 tasks: ['coffee:test']
-                             },
                              styles: {
                                  files: ['<%= yeoman.app %>/styles/{,*/}*.less'],
                                  tasks: ['less', 'copy:styles', 'autoprefixer']
