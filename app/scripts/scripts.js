@@ -8,9 +8,6 @@ $(function () {
             $('body').scrollTo('#' + $link.attr('data-scrollToLink'), 500, {offset: {top: -50} });
         });
     });
-    $(window).on('scroll', function() {
-        window.requestAnimationFrame(scrollHandler);
-    });
     $("#owl-example").owlCarousel({
                                       items: 7, //10 items above 1000px browser width
                                       itemsDesktop: [1000, 5], //5 items between 1000px and 901px
