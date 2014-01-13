@@ -7776,7 +7776,7 @@ header {
   width: 100%;
   z-index: 10;
 }
-section h2 {
+section h1 {
   display: none;
 }
 section .header {
