@@ -105,34 +105,6 @@ module.exports = function (grunt) {
                                  '<%= yeoman.app %>/scripts/{,*/}*.js'
                              ]
                          },
-                         coffee: {
-                             options: {
-                                 sourceMap: true,
-                                 sourceRoot: ''
-                             },
-                             dist: {
-                                 files: [
-                                     {
-                                         expand: true,
-                                         cwd: '<%= yeoman.app %>/scripts',
-                                         src: '{,*/}*.coffee',
-                                         dest: '.tmp/scripts',
-                                         ext: '.js'
-                                     }
-                                 ]
-                             },
-                             test: {
-                                 files: [
-                                     {
-                                         expand: true,
-                                         cwd: 'test/spec',
-                                         src: '{,*/}*.coffee',
-                                         dest: '.tmp/spec',
-                                         ext: '.js'
-                                     }
-                                 ]
-                             }
-                         },
                          // not used since Uglify task does concat,
                          // but still available if needed
                          /*concat: {
