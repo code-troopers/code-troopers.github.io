@@ -14,10 +14,11 @@ NODE_VERSION=0.8.4 . ./use-node
 
 npm cache clean
 
-npm install -g grunt grunt-cli bower
+npm install grunt-cli bower
+
+export PATH=$PATH:node_modules/grunt-cli/bin/
+export PATH=$PATH:node_modules/bower/bin/
 
 npm install
 
 bower install
-
-export PATH=$PATH:node_modules/grunt-cli/bin/
