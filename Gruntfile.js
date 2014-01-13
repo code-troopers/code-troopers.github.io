@@ -248,15 +248,12 @@ module.exports = function (grunt) {
                          },
                          concurrent: {
                              server: [
-                                 'coffee:dist',
                                  'copy:styles'
                              ],
                              test: [
-                                 'coffee',
                                  'copy:styles'
                              ],
                              dist: [
-                                 'coffee',
                                  'copy:styles',
                                  'imagemin',
                                  'svgmin',
@@ -302,6 +299,12 @@ module.exports = function (grunt) {
                          },
                          htmllint: {
                              all: ["app/index.html"]
+                         },
+                         'gh-pages': {
+                             options: {
+                                 base: 'dist'
+                             },
+                             src: ['**']
                          }
                      });
 
@@ -353,4 +356,5 @@ module.exports = function (grunt) {
 
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-html');
+    grunt.loadNpmTasks('grunt-gh-pages');
 };
