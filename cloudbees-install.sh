@@ -10,10 +10,12 @@ Xvfb :1 &
 #cd $1
 
 curl -s -o ./use-node https://repository-cloudbees.forge.cloudbees.com/distributions/ci-addons/node/use-node
-NODE_VERSION=0.8.14 . ./use-node
+NODE_VERSION=0.10.21 . ./use-node
 
-npm install -g grunt-cli bower
+npm install -g grunt grunt-cli bower
 
 npm install
 
 bower install
+
+export PATH=$PATH:node_modules/grunt-cli/bin/
