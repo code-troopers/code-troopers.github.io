@@ -11,10 +11,13 @@ module.exports = function (grunt) {
     require('load-grunt-tasks')(grunt);
     require('time-grunt')(grunt);
 
+    // load all grunt tasks
+    require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
+
     grunt.initConfig({
                          yeoman: {
                              // configurable paths
-                             app: require('./bower.json').appPath || 'app',
+                             app: '_site',
                              dist: 'dist'
                          },
                          watch: {
@@ -307,7 +310,13 @@ module.exports = function (grunt) {
                                  message: 'Auto-generated commit (cloudbees forge)'
                              },
                              src: ['**']
-                         }
+                         },
+                        shell:{
+                            jekyll: {
+                                command: 'rm -rf _site/*; mkdir _site; jekyll build; cp -r app/bower_components _site;',
+                                stdout: true
+                            }
+                        }
                      });
 
     grunt.registerTask('server', function (target) {
@@ -355,8 +364,4 @@ module.exports = function (grunt) {
         'test',
         'build'
     ]);
-
-    grunt.loadNpmTasks('grunt-contrib-less');
-    grunt.loadNpmTasks('grunt-html');
-    grunt.loadNpmTasks('grunt-gh-pages');
 };

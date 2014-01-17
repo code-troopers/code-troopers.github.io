@@ -1,0 +1,130 @@
+<!doctype html >
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{{page.title}}</title>
+    <meta name="description" content="Code-Troopers est une équipe de développeurs située à Tours, réalisant des projets aux environs de la Touraine et sur la région parisienne.">
+    <meta name="viewport" content="width=device-width">
+
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/style.css">
+    <!-- endbuild -->
+</head>
+<body>
+<!--[if lt IE 7]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a
+        href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<!--[if lt IE 9]>
+<script src="bower_components/es5-shim/es5-shim.js"></script>
+<![endif]-->
+
+
+<header data-spy="affix" class="affix-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span><i class="fa fa-bars fa-2x"></i></span>
+            </button>
+            <a class="navbar-brand" href="#"><img class="logo" alt="logo" src="images/logo.png"><span
+                    class="brand">Code-Troopers</span></a>
+        </div>
+        <nav class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="active"><a data-scrollToLink="aboutUs">À propos</a></li>
+                <li><a data-scrollToLink="skills">Compétences</a></li>
+                <li><a data-scrollToLink="projects">Réalisations</a></li>
+                <li><a data-scrollToLink="team">L'équipe</a></li>
+                <li><a data-scrollToLink="contact">Contact</a></li>
+                <!--<li><a href="/#!/blog">Blog</a></li>-->
+            </ul>
+        </nav>
+        <!--/.nav-collapse -->
+    </div>
+</header>
+{{content}}
+<footer id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Contact</h3>
+
+                <p>Vous avez besoin de nous pour un projet, contactez-nous sur les réseaux sociaux, par mail à <a
+                        href="mailto:dev@code-troopers.com">dev@code-troopers.com</a> ou par téléphone au <a href="tel:0782287216">0782287216</a></p>
+            </div>
+            <div class="col-md-6 simple-social-icons">
+                <h3>Réseaux sociaux</h3>
+                <ul class="socials">
+                    <li><a target="_blank" href="https://twitter.com/codetroopers"><i
+                            class="fa fa-twitter-square"></i></a></li>
+                    <li><a target="_blank"
+                           href="https://www.facebook.com/pages/Code-Troopers/123604307824664"><i
+                            class="fa fa-facebook-square"></i></a></li>
+                    <li><a target="_blank" href="https://plus.google.com/106400976575155010329/posts"><i
+                            class="fa fa-google-plus-square"></i></a></li>
+                    <li><a target="_blank" href="https://github.com/code-troopers"><i
+                            class="fa fa-github-square"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 footer-under">
+                Site réalisé par Code-Troopers<br/>
+                © 2014 Code-Troopers / Tous droits réservés
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-XXXXX-X');
+    ga('send', 'pageview');
+</script>
+
+<script type='text/javascript'>
+    (function (d, t) {
+        var bh = d.createElement(t), s = d.getElementsByTagName(t)[0];
+        bh.type = 'text/javascript';
+        bh.src = '//www.bugherd.com/sidebarv2.js?apikey=moiovmte4xhh5yufiq3qja';
+        s.parentNode.insertBefore(bh, s);
+    })(document, 'script');
+</script>
+
+<script src="bower_components/jquery/jquery.js"></script>
+
+<!-- build:js scripts/plugins.js -->
+<script src="bower_components/bootstrap3-less-js/js/tooltip.js"></script>
+<script src="bower_components/bootstrap3-less-js/js/modal.js"></script>
+<script src="bower_components/bootstrap3-less-js/js/collapse.js"></script>
+<script src="bower_components/bootstrap3-less-js/js/affix.js"></script>
+<script src="bower_components/jquery.scrollTo/jquery.scrollTo.js"></script>
+<script src="bower_components/owlcarousel/owl-carousel/owl.carousel.js"></script>
+<!-- endbuild -->
+
+<!-- build:js({.tmp,app}) scripts/scripts.js -->
+<script src="scripts/scripts.js"></script>
+<!-- endbuild -->
+</body>
+</html>
