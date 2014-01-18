@@ -17,10 +17,21 @@ module.exports = function (grunt) {
     grunt.initConfig({
                          yeoman: {
                              // configurable paths
+                             jekyll: 'app',
                              app: '_site',
                              dist: 'dist'
                          },
                          watch: {
+                             jekyllSources: {
+                                 files: [
+                                     // capture all except css
+                                     '<%= yeoman.jekyll %>/{,*/}*.html',
+                                     '.tmp/styles/{,*/}*.css',
+                                     '{.tmp,<%= yeoman.jekyll %>}/scripts/{,*/}*.js',
+                                     '<%= yeoman.jekyll %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
+                                 ],
+                                 tasks: ['shell:jekyll', 'copy:bower']
+                             },
                              styles: {
                                  files: ['<%= yeoman.app %>/styles/{,*/}*.less'],
                                  tasks: ['less', 'copy:styles', 'autoprefixer']
@@ -33,8 +44,7 @@ module.exports = function (grunt) {
                                      '<%= yeoman.app %>/{,*/}*.html',
                                      '.tmp/styles/{,*/}*.css',
                                      '{.tmp,<%= yeoman.app %>}/scripts/{,*/}*.js',
-                                     '<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
-                                     '<%= yeoman.app %>/data/*.json'
+                                     '<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
                                  ]
                              }
                          },
@@ -247,6 +257,12 @@ module.exports = function (grunt) {
                                  cwd: '<%= yeoman.app %>/styles',
                                  dest: '.tmp/styles/',
                                  src: '{,*/}*.css'
+                             },
+                             bower: {
+                                 expand: true,
+                                 cwd: '<%= yeoman.jekyll %>',
+                                 dest: '<%= yeoman.app %>',
+                                 src: 'bower_components/**/*'
                              }
                          },
                          concurrent: {
@@ -313,7 +329,7 @@ module.exports = function (grunt) {
                          },
                         shell:{
                             jekyll: {
-                                command: 'rm -rf _site/*; mkdir _site; jekyll build; cp -r app/bower_components _site;',
+                                command: 'rm -rf <%= yeoman.app %>/*; jekyll build;',
                                 stdout: true
                             }
                         }
@@ -324,7 +340,8 @@ module.exports = function (grunt) {
             return grunt.task.run(['build', 'connect:dist:keepalive']);
         }
 
-        grunt.task.run([
+        grunt.task.run([   'shell:jekyll',
+                           'copy:bower',
                            'less',
                            'clean:server',
                            'concurrent:server',
@@ -343,6 +360,8 @@ module.exports = function (grunt) {
     ]);
 
     grunt.registerTask('build', [
+        'shell:jekyll',
+        'copy:bower',
         'less',
         'clean:dist',
         'useminPrepare',
