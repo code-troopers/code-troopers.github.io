@@ -3,5 +3,22 @@ layout: default
 title: Code-Troopers - Le blog
 ---
 <section>
-    Blog
+    <h1>Blog</h1>
+
+    <div class="header">
+        <div class="container">Le <span>blog</span></div>
+    </div>
+    <div class="container">
+    {% for post in site.posts %}
+    <article>
+        <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+
+        <div class="date">posté le {{ post.date }}</div>
+        <p>{{ post.excerpt }}</p>
+        <a class="more" href="{{post.url}}">Lire plus <i class="fa fa-angle-double-right"></i></a>
+
+    </article>
+    {% endfor %}
+    </div>
+
 </section>
