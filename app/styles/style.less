@@ -14,6 +14,7 @@
 body {
   color: @primary-color;
   background-color: @white;
+  -webkit-font-smoothing: antialiased;
 }
 
 ul {
@@ -23,6 +24,10 @@ ul {
 
 a {
   cursor: pointer;
+}
+
+.img-responsive{
+  max-width: 99%; //Fix blink bug with carousel
 }
 
 footer, section {
@@ -172,7 +177,7 @@ ul.troopers {
     border: none;
     > img {
       .transition(border-width 0.3s ease);
-      border: 20px solid @white;
+      border: 19px solid @white;
     }
     &:hover > img {
       border-width: 0;
