@@ -13,7 +13,7 @@
 
 body {
   color: @primary-color;
-  background-color: @white;
+  background-color: @primary-color;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -28,6 +28,10 @@ a {
 
 .img-responsive{
   max-width: 99%; //Fix blink bug with carousel
+}
+
+section{
+  background-color: @white;
 }
 
 footer, section {
@@ -217,14 +221,24 @@ footer {
 }
 
 article{
+  p{
+    text-align: justify;
+    line-height: 1.4em;
+    font-size: 1.1em;
+  }
   h2 .date{
     .pull-right;
     .label;
     .label-primary;
     font-size: 0.5em;
     font-weight: normal;
+    background-color: @secondary-color;
   }
   .header .date{
     font-size: 0.5em;
   }
+}
+
+.header + .container{
+  padding-top:20px;
 }

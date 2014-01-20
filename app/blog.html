@@ -2,14 +2,21 @@
 layout: default
 title: Code-Troopers - Le blog
 ---
-<section id="blog">
+<section>
     <h1>Blog</h1>
 
     <div class="header">
         <div class="container">Le <span>blog</span></div>
     </div>
     <div class="container">
-    En cours de réalisation <i class="fa fa-gear fa-spin"></i>
+    {% for post in site.posts %}
+    <article>
+        <h2><a href="{{ post.url }}">{{ post.title }}</a> <div class="date">posté le {{ post.date | date: "%d/%m/%Y"}}</div></h2>
+
+        {{ post.content }}
+
+    </article>
+    {% endfor %}
     </div>
 
 </section>
