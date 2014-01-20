@@ -22,6 +22,10 @@ module.exports = function (grunt) {
                              dist: 'dist'
                          },
                          watch: {
+                             styles: {
+                                 files: ['<%= yeoman.app %>/styles/{,*/}*.less'],
+                                 tasks: ['less', 'copy:styles', 'autoprefixer']
+                             },
                              jekyllSources: {
                                  files: [
                                      // capture all except css
@@ -31,10 +35,6 @@ module.exports = function (grunt) {
                                      '<%= yeoman.jekyll %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
                                  ],
                                  tasks: ['shell:jekyll', 'copy:bower']
-                             },
-                             styles: {
-                                 files: ['<%= yeoman.app %>/styles/{,*/}*.less'],
-                                 tasks: ['less', 'copy:styles', 'autoprefixer']
                              },
                              livereload: {
                                  options: {
