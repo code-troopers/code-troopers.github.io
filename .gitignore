@@ -1,5 +1,7 @@
 node_modules
 dist
+_site
+.grunt
 .tmp
 app/bower_components
 *.iml
