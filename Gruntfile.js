@@ -231,6 +231,7 @@ module.exports = function (grunt) {
                                              '*.{ico,png,txt}',
                                              '.htaccess',
                                              'bower_components/**/*',
+                                             '_config.yml',
                                              'images/{,*/}*.{gif,webp}',
                                              'fonts/*',
                                              'data/*.json'
@@ -262,7 +263,7 @@ module.exports = function (grunt) {
                                  expand: true,
                                  cwd: '<%= yeoman.jekyll %>',
                                  dest: '<%= yeoman.app %>',
-                                 src: 'bower_components/**/*'
+                                 src: ['bower_components/**/*','_config.yml']
                              }
                          },
                          concurrent: {
