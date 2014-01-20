@@ -1,0 +1,3 @@
+source: app
+destination: _site
+exclude: ['bower_components']

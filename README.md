@@ -9,6 +9,7 @@ Prerequisites
 * node (http://richardhsu.net/2013/10/19/installing-nodejs-npm-on-ubuntu-13-10/)
 * bower
 * grunt-cli
+* jekyll
 
 
 Install

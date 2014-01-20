@@ -11,16 +11,30 @@ module.exports = function (grunt) {
     require('load-grunt-tasks')(grunt);
     require('time-grunt')(grunt);
 
+    // load all grunt tasks
+    require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
+
     grunt.initConfig({
                          yeoman: {
                              // configurable paths
-                             app: require('./bower.json').appPath || 'app',
+                             jekyll: 'app',
+                             app: '_site',
                              dist: 'dist'
                          },
                          watch: {
                              styles: {
                                  files: ['<%= yeoman.app %>/styles/{,*/}*.less'],
                                  tasks: ['less', 'copy:styles', 'autoprefixer']
+                             },
+                             jekyllSources: {
+                                 files: [
+                                     // capture all except css
+                                     '<%= yeoman.jekyll %>/{,*/}*.html',
+                                     '.tmp/styles/{,*/}*.css',
+                                     '{.tmp,<%= yeoman.jekyll %>}/scripts/{,*/}*.js',
+                                     '<%= yeoman.jekyll %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
+                                 ],
+                                 tasks: ['shell:jekyll', 'copy:bower']
                              },
                              livereload: {
                                  options: {
@@ -30,8 +44,7 @@ module.exports = function (grunt) {
                                      '<%= yeoman.app %>/{,*/}*.html',
                                      '.tmp/styles/{,*/}*.css',
                                      '{.tmp,<%= yeoman.app %>}/scripts/{,*/}*.js',
-                                     '<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
-                                     '<%= yeoman.app %>/data/*.json'
+                                     '<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
                                  ]
                              }
                          },
@@ -244,6 +257,12 @@ module.exports = function (grunt) {
                                  cwd: '<%= yeoman.app %>/styles',
                                  dest: '.tmp/styles/',
                                  src: '{,*/}*.css'
+                             },
+                             bower: {
+                                 expand: true,
+                                 cwd: '<%= yeoman.jekyll %>',
+                                 dest: '<%= yeoman.app %>',
+                                 src: 'bower_components/**/*'
                              }
                          },
                          concurrent: {
@@ -307,7 +326,13 @@ module.exports = function (grunt) {
                                  message: 'Auto-generated commit (cloudbees forge)'
                              },
                              src: ['**']
-                         }
+                         },
+                        shell:{
+                            jekyll: {
+                                command: 'rm -rf <%= yeoman.app %>/*; jekyll build;',
+                                stdout: true
+                            }
+                        }
                      });
 
     grunt.registerTask('server', function (target) {
@@ -315,7 +340,8 @@ module.exports = function (grunt) {
             return grunt.task.run(['build', 'connect:dist:keepalive']);
         }
 
-        grunt.task.run([
+        grunt.task.run([   'shell:jekyll',
+                           'copy:bower',
                            'less',
                            'clean:server',
                            'concurrent:server',
@@ -334,6 +360,8 @@ module.exports = function (grunt) {
     ]);
 
     grunt.registerTask('build', [
+        'shell:jekyll',
+        'copy:bower',
         'less',
         'clean:dist',
         'useminPrepare',
@@ -355,8 +383,4 @@ module.exports = function (grunt) {
         'test',
         'build'
     ]);
-
-    grunt.loadNpmTasks('grunt-contrib-less');
-    grunt.loadNpmTasks('grunt-html');
-    grunt.loadNpmTasks('grunt-gh-pages');
 };
