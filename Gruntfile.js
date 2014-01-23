@@ -232,6 +232,8 @@ module.exports = function (grunt) {
                                              '.htaccess',
                                              'bower_components/**/*',
                                              '_config.yml',
+                                             'CNAME',
+                                             '.gitignore',
                                              'images/{,*/}*.{gif,webp}',
                                              'fonts/*',
                                              'data/*.json'

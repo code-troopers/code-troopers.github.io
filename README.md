@@ -1,4 +1,4 @@
-angular-website
+jekyll-website
 ===============
 
 New version of the website using jekyll, grunt, font-awesome and bootstrap
