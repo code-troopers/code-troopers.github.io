@@ -1,0 +1,27 @@
+{% include head.html %}
+{% include nav.html %}
+    <section id="post">
+        <div class="header">
+            <div class="container">Le <span>blog</span></div>
+        </div>
+        <div class="container">
+        <article>
+            <div>
+                <div class="cover" style="background-image:url(/images/{{ page.cover }})">
+                    <div class="date">posté le {{ page.date | date: "%d/%m/%Y"}} par {{ page.author }}</div>
+                </div>
+                <h2><a href="{{ page.url }}">{{ page.title }}</a></h2>
+                <div class="content">
+                    {{ content }}
+                </div>
+                <div class="more">
+                    <a href="/blog.html"><i class="fa fa-arrow-circle-o-left"></i> Retour aux articles</a>
+                </div>
+            </div>
+        </article>
+        </div>
+    </section>
+{% include footer.html %}
+{% include foot.html %}
+
+

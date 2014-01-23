@@ -30,6 +30,7 @@ module.exports = function (grunt) {
                                  files: [
                                      // capture all except css
                                      '<%= yeoman.jekyll %>/{,*/}*.html',
+                                     '<%= yeoman.jekyll %>/{,*/}*.less',
                                      '.tmp/styles/{,*/}*.css',
                                      '{.tmp,<%= yeoman.jekyll %>}/scripts/{,*/}*.js',
                                      '<%= yeoman.jekyll %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
