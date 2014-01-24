@@ -30,7 +30,8 @@
     "grunt-html": "~0.3.4",
     "grunt-gh-pages": "~0.9.0",
     "grunt-shell": "~0.6.1",
-    "matchdep": "~0.3.0"
+    "matchdep": "~0.3.0",
+    "grunt-sitemap": "~1.1.0"
   },
   "engines": {
     "node": ">=0.8.0"

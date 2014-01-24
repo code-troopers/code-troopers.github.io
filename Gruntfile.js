@@ -336,7 +336,13 @@ module.exports = function (grunt) {
                                 command: 'rm -rf <%= yeoman.app %>/*; jekyll build;',
                                 stdout: true
                             }
-                        }
+                        },
+                         sitemap: {
+                             dist: {
+                                 siteRoot: '_site/',
+                                 homepage: 'www.code-troopers.com'
+                             }
+                         }
                      });
 
     grunt.registerTask('server', function (target) {
