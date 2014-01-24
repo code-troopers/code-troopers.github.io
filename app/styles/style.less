@@ -236,6 +236,22 @@ footer {
 
 article {
   overflow: hidden;
+  h2{
+    display: inline;
+  }
+  .content{
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .tags{
+    display: inline;
+    li{
+      .label;
+      background-color: @primary-color;
+      font-size: 0.5em;
+      display: inline-block;
+    }
+  }
   p {
     text-align: justify;
   }
@@ -263,17 +279,22 @@ article {
       background-size: cover;
       margin: 0 -20px;
       position: relative;
+      margin-bottom: 10px;
+    }
+    .more, .back{
+      margin: 20px 0;
     }
     .more{
-      margin: 20px 0;
+      margin-top: -40px;
+      #gradient > .vertical(rgba(255,255,255,0),rgba(255,255,255,1),0,40px);
+      padding-top:  60px;
+      position: relative;
     }
   }
 }
 
 #articles {
   article .content {
-    padding-top: 20px;
-    padding-bottom: 20px;
     max-height: 200px;
     overflow: hidden;
     width: 100%;

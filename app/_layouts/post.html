@@ -10,11 +10,17 @@
                 <div class="cover" style="background-image:url(/images/{{ page.cover }})">
                     <div class="date">posté le {{ page.date | date: "%d/%m/%Y"}} par {{ page.author }}</div>
                 </div>
-                <h2><a href="{{ page.url }}">{{ page.title }}</a></h2>
+                <h2><a href="{{ page.url }}">{{ page.title }}</a>
+                    <ul class="tags">
+                        {% for tag in page.tags %}
+                        <li>{{ tag }}</li>
+                        {% endfor %}
+                    </ul>
+                </h2>
                 <div class="content">
                     {{ content }}
                 </div>
-                <div class="more">
+                <div class="back">
                     <a href="/blog.html"><i class="fa fa-arrow-circle-o-left"></i> Retour aux articles</a>
                 </div>
             </div>
