@@ -236,16 +236,16 @@ footer {
 
 article {
   overflow: hidden;
-  h2{
+  h2 {
     display: inline;
   }
-  .content{
+  .content {
     padding-top: 20px;
     padding-bottom: 20px;
   }
-  .tags{
+  .tags {
     display: inline;
-    li{
+    li {
       .label;
       background-color: @primary-color;
       font-size: 0.5em;
@@ -265,7 +265,7 @@ article {
     background-color: @secondary-color;
     font-weight: normal;
   }
-  > div{
+  > div {
     border: 1px solid @primary-color;
     border-radius: 2px;
     .box-shadow(0 0 1px @primary-color);
@@ -273,7 +273,7 @@ article {
     padding-left: 20px;
     padding-right: 20px;
 
-    .cover{
+    .cover {
       height: 200px;
       background-position: center center;
       background-size: cover;
@@ -281,16 +281,16 @@ article {
       position: relative;
       margin-bottom: 10px;
     }
-    .fade-content, .back{
+    .fade-content, .back {
       margin: 20px 0;
     }
-    .fade-content{
+    .fade-content {
       margin-top: -40px;
-      #gradient > .vertical(rgba(255,255,255,0),rgba(255,255,255,1),0,40px);
-      padding-top:  60px;
+      #gradient > .vertical(rgba(255, 255, 255, 0), rgba(255, 255, 255, 1), 0, 40px);
+      padding-top: 60px;
       position: relative;
     }
-    .more{
+    .more {
       bottom: 20px;
       position: absolute;
     }
@@ -305,17 +305,29 @@ article {
   }
 }
 
-#post{
+#post {
   article {
-    p{
+    p {
       line-height: 1.7em;
       font-size: 1.1em;
     }
   }
 }
 
-.pagination > li > a:hover{
+.pagination > li > a:hover {
   color: rgb(42, 100, 150);
   background-color: rgb(238, 238, 238);
   border-color: rgb(221, 221, 221);
+}
+
+.back .paginate {
+  span {
+    color: #d3d3d3;
+  }
+  span, a{
+    margin: 0 10px;
+  }
+  span:last-child, a:last-child{
+    margin-right: 0;
+  }
 }

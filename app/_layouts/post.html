@@ -21,7 +21,19 @@
                     {{ content }}
                 </div>
                 <div class="back">
-                    <a href="/blog/index.html"><i class="fa fa-arrow-circle-o-left"></i> Retour aux articles</a>
+                    <a href="/blog/index.html"><i class="fa fa-arrow-circle-o-up"></i> Retour aux articles</a>
+                    <div class="pull-right paginate">
+                        {% if page.previous %}
+                        <a href="{{ page.previous.url}}"><i class="fa fa-arrow-circle-o-left"></i> Précédent</a>
+                        {% else %}
+                        <span class="disabled"><i class="fa fa-arrow-circle-o-left"></i> Précédent</span>
+                        {% endif %}
+                        {% if page.next %}
+                        <a href="{{ page.next.url}}"><i class="fa fa-arrow-circle-o-right"></i> Suivant</a>
+                        {% else %}
+                        <span class="disabled"><i class="fa fa-arrow-circle-o-right"></i> Suivant</span>
+                        {% endif %}
+                    </div>
                 </div>
                 <div id="disqus_thread"></div>
                 <script type="text/javascript">
