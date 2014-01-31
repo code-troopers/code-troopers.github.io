@@ -29,7 +29,7 @@ module.exports = function (grunt) {
                              jekyllSources: {
                                  files: [
                                      // capture all except css
-                                     '<%= yeoman.jekyll %>/{,*/}*.html',
+                                     '<%= yeoman.jekyll %>/{,**/}*.html','!**/bower_components/**',
                                      '<%= yeoman.jekyll %>/{,*/}*.less',
                                      '.tmp/styles/{,*/}*.css',
                                      '{.tmp,<%= yeoman.jekyll %>}/scripts/{,*/}*.js',
@@ -42,7 +42,7 @@ module.exports = function (grunt) {
                                      livereload: '<%= connect.options.livereload %>'
                                  },
                                  files: [
-                                     '<%= yeoman.app %>/{,*/}*.html',
+                                     '<%= yeoman.app %>/{,**/}*.html','!**/bower_components/**',
                                      '.tmp/styles/{,*/}*.css',
                                      '{.tmp,<%= yeoman.app %>}/scripts/{,*/}*.js',
                                      '<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
@@ -137,13 +137,13 @@ module.exports = function (grunt) {
                              }
                          },
                          useminPrepare: {
-                             html: '<%= yeoman.app %>/index.html',
+                             html: ['<%= yeoman.app %>/{,**/}*.html','!**/bower_components/**'],
                              options: {
                                  dest: '<%= yeoman.dist %>'
                              }
                          },
                          usemin: {
-                             html: ['<%= yeoman.dist %>/{,*/}*.html'],
+                             html: ['<%= yeoman.dist %>/{,**/}*.html','!**/bower_components/**'],
                              css: ['<%= yeoman.dist %>/styles/{,*/}*.css'],
                              options: {
                                  assetsDirs: ['<%= yeoman.dist %>'],
@@ -194,8 +194,8 @@ module.exports = function (grunt) {
                                      {
                                          expand: true,
                                          cwd: '<%= yeoman.app %>',
-                                         src: ['*.html'],
-                                         dest: '<%= yeoman.dist %>'
+                                         src: ['{,**/}*.html','!**/bower_components/**'],
+                                         dest: '<%= yeoman.dist %>',
                                      }
                                  ]
                              },
@@ -214,7 +214,7 @@ module.exports = function (grunt) {
                                  files: [{
                                      expand: true,
                                      cwd: '<%= yeoman.dist %>',
-                                     src: ['*.html'],
+                                     src: ['{,**/}*.html','!**/bower_components/**'],
                                      dest: '<%= yeoman.dist %>'
                                  }]
                              }
@@ -285,7 +285,7 @@ module.exports = function (grunt) {
                          },
                          cdnify: {
                              dist: {
-                                 html: ['<%= yeoman.dist %>/*.html']
+                                 html: ['<%= yeoman.dist %>/{,**/}*.html','!**/bower_components/**']
                              }
                          },
                          ngmin: {
@@ -319,9 +319,6 @@ module.exports = function (grunt) {
                                      "<%= yeoman.app %>/styles/style.css": "<%= yeoman.app %>/styles/style.less"
                                  }
                              }
-                         },
-                         htmllint: {
-                             all: ["app/index.html"]
                          },
                          'gh-pages': {
                              options: {
