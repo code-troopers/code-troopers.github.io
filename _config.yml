@@ -6,5 +6,5 @@ source: app
 destination: _site
 exclude: ['bower_components']
 
-paginate: 1
+paginate: 6
 paginate_path: "blog/page:num"
