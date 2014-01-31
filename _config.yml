@@ -1,3 +1,10 @@
+name: Code-Troopers blog
+description: Le blog de l'équipe Code-Troopers
+url: http://code-troopers.com
+
 source: app
 destination: _site
 exclude: ['bower_components']
+
+paginate: 6
+paginate_path: "blog/page:num"

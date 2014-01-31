@@ -488,3 +488,8 @@ FileETag None
 
 </IfModule>
 
+<ifModule mod_headers.c>
+    <FilesMatch "\.(jpg|jpeg|png|gif|swf)$">
+        Header set Cache-Control "max-age=604800, public"
+    </FilesMatch>
+</ifModule>

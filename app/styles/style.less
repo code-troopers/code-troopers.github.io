@@ -280,14 +280,18 @@ article {
       position: relative;
       margin-bottom: 10px;
     }
-    .more, .back{
+    .fade-content, .back{
       margin: 20px 0;
     }
-    .more{
+    .fade-content{
       margin-top: -40px;
       #gradient > .vertical(rgba(255,255,255,0),rgba(255,255,255,1),0,40px);
       padding-top:  60px;
       position: relative;
+    }
+    .more{
+      bottom: 20px;
+      position: absolute;
     }
   }
 }
@@ -307,4 +311,10 @@ article {
       font-size: 1.1em;
     }
   }
+}
+
+.pagination > li > a:hover{
+  color: rgb(42, 100, 150);
+  background-color: rgb(238, 238, 238);
+  border-color: rgb(221, 221, 221);
 }
