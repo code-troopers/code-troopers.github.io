@@ -45,5 +45,16 @@ $(function () {
             (a = [], (new Audio("/audio/march.mp3")).play())
         }, !0)
     }
+
+    var maxHeight = 0;
+    $("#articles article > div").each(function (i, d) {
+        var outerHeight = $(d).outerHeight();
+        if (outerHeight > maxHeight) {
+            maxHeight = outerHeight;
+        }
+    });
+    $("#articles article > div").each(function (i, d) {
+        $(d).css("height",maxHeight);
+    });
 })
 ;
