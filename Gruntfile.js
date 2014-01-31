@@ -194,7 +194,7 @@ module.exports = function (grunt) {
                                      {
                                          expand: true,
                                          cwd: '<%= yeoman.app %>',
-                                         src: ['{,**/}*.html','{,**/}*.xml','!**/bower_components/**'],
+                                         src: ['{,**/}*.html','!**/bower_components/**'],
                                          dest: '<%= yeoman.dist %>',
                                      }
                                  ]
@@ -237,7 +237,8 @@ module.exports = function (grunt) {
                                              '.gitignore',
                                              'images/{,*/}*.{gif,webp}',
                                              'fonts/*',
-                                             'data/*.json'
+                                             'data/*.json',
+                                             'feed.xml'
                                          ]
                                      },
                                      {
