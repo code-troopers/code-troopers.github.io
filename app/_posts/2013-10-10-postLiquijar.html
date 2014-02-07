@@ -52,56 +52,59 @@ tags: [liquibase, technique]
        Liquibase.</br></p>
 <br/>
 <p>La classe associée ressemble à ceci :</p>
-<br>{% highlight java linenos%}
+<br>
+<div class="codestyle">
+    {% highlight java linenos=table %}
 public class PreconditionTimeLiquijar implements CustomPrecondition {
 
 
-private String dateBeforeRun ;
-private String dateAndHourBeforeRun;
+    private String dateBeforeRun ;
+    private String dateAndHourBeforeRun;
 
-@Override
-public void check(final Database database)
-throws CustomPreconditionFailedException {
-if (StringUtils.isNotBlank(dateBeforeRun) && StringUtils.isBlank(dateAndHourBeforeRun)){
-SimpleDateFormat format = new SimpleDateFormat("dd-MM-yyyy");
-ParsePosition pos = new ParsePosition(0);
-Calendar time = Calendar.getInstance();
-Date date ;
-date = format.parse(dateBeforeRun,pos);
-if (time.getTime().before(date)){
-throw new CustomPreconditionFailedException("Try to launch before executed date asked!");
-}
-} else if (StringUtils.isNotBlank(dateAndHourBeforeRun) && StringUtils.isBlank(dateBeforeRun)){
-SimpleDateFormat format = new SimpleDateFormat("dd-MM-yyyy HH:mm");
-ParsePosition pos = new ParsePosition(0);
-Calendar time = Calendar.getInstance();
-Date date ;
-date = format.parse(dateAndHourBeforeRun,pos);
-if (time.getTime().before(date)){
-throw new CustomPreconditionFailedException("Try to launch before executed date and hour asked!");
-}
-} else {
-throw new CustomPreconditionFailedException("You can't specify both of the arguments, please remove one");
-}
-}
+    @Override
+    public void check(final Database database)
+            throws CustomPreconditionFailedException {
+        if (StringUtils.isNotBlank(dateBeforeRun) && StringUtils.isBlank(dateAndHourBeforeRun)){
+            SimpleDateFormat format = new SimpleDateFormat("dd-MM-yyyy");
+            ParsePosition pos = new ParsePosition(0);
+            Calendar time = Calendar.getInstance();
+            Date date ;
+            date = format.parse(dateBeforeRun,pos);
+            if (time.getTime().before(date)){
+                throw new CustomPreconditionFailedException("Try to launch before executed date asked!");
+            }
+        } else if (StringUtils.isNotBlank(dateAndHourBeforeRun) && StringUtils.isBlank(dateBeforeRun)){
+            SimpleDateFormat format = new SimpleDateFormat("dd-MM-yyyy HH:mm");
+            ParsePosition pos = new ParsePosition(0);
+            Calendar time = Calendar.getInstance();
+            Date date ;
+            date = format.parse(dateAndHourBeforeRun,pos);
+            if (time.getTime().before(date)){
+                throw new CustomPreconditionFailedException("Try to launch before executed date and hour asked!");
+            }
+        } else {
+            throw new CustomPreconditionFailedException("You can't specify both of the arguments, please remove one");
+        }
+    }
 
-public String getDateBeforeRun() {
-return dateBeforeRun;
-}
+    public String getDateBeforeRun() {
+        return dateBeforeRun;
+    }
 
-public void setDateBeforeRun(final String dateBeforeRun) {
-this.dateBeforeRun = dateBeforeRun;
-}
+    public void setDateBeforeRun(final String dateBeforeRun) {
+        this.dateBeforeRun = dateBeforeRun;
+    }
 
 
-public String getDateAndHourBeforeRun() {
-return dateAndHourBeforeRun;
-}
+    public String getDateAndHourBeforeRun() {
+        return dateAndHourBeforeRun;
+    }
 
-public void setDateAndHourBeforeRun(final String dateAndHourBeforeRun) {
-this.dateAndHourBeforeRun = dateAndHourBeforeRun;
-}
+    public void setDateAndHourBeforeRun(final String dateAndHourBeforeRun) {
+        this.dateAndHourBeforeRun = dateAndHourBeforeRun;
+    }
 }{% endhighlight %}
+</div>
 </br>
 <p>
     <br>Le nom du paramètre dans le ChangeSet doit correspondre au nom de l'attribut de la classe java.</br>
