@@ -312,10 +312,12 @@ article {
 }
 
 #articles {
-  article .content {
+  article {
+    .content {
     max-height: 200px;
     overflow: hidden;
     width: 100%;
+  }
   }
 }
 
@@ -332,6 +334,27 @@ article {
     ul {
         list-style: square outside none;
         padding: 0 25px;
+    }
+    .share{
+      margin-left: -20px;
+      margin-right: -20px;
+      background-color: @secondary-color;
+      color: @white;
+      padding-left: 20px;
+      .pull-left;
+      ul.socials {
+        display:inline-block;
+        margin-bottom: 0;
+        li {
+          display: inline-block;
+          font-size: 32px;
+          a {
+            border: none;
+            color: @white;
+          }
+        }
+
+      }
     }
   }
 }
