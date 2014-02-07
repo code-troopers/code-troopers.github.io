@@ -2,7 +2,7 @@
 <!-- This loops through the paginated posts -->
 {% for post in paginator.posts %}
 <article class="col-lg-4 col-md-6 col-sm-12">
-    <div>
+    <div onclick="window.location.href='{{post.url}}'" style="cursor: pointer;">
         <a href="{{ post.url }}">
         <div class="cover" style="background-image:url(/images/{{ post.cover }})">
             <div class="date">posté le {{ post.date | date: "%d/%m/%Y"}} par {{ post.author }}</div>
