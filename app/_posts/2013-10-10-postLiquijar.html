@@ -1,0 +1,114 @@
+---
+layout: post
+title: Customisation de liquibase
+author: Mattboll
+cover: logo-big.png
+tags: [liquibase, technique]
+---
+<h3>Préambule</h3>
+<a href="http://www.liquibase.org/">Liquibase</a> est une bibliothèque qui permet de gérer et d'appliquer des changements dans une base de données.
+
+<h3>Introduction</h3>
+<p>
+    Comme de nombreuses équipes, nous
+    utilisons liquibase pour gérer les modifications à apporter aux bases de données, que ce soit sur les postes de
+    développeur ou bien sur les machines de production.
+
+    Nous nous sommes cependant confrontés à certaines limitations de liquibase. Nous avons donc apporté quelques
+    améliorations.
+<ul>
+    <li>Lancer des .jar, correspondant à la migration de données.</li>
+    <li>Ne pas lancer un ChangeSet avant une date prédéfinie.</li>
+    <li>Lancer un ChangeSet sur certaines machines selon leur hostname.</li>
+</ul>
+</p>
+<!--more-->
+
+<br/>
+<h3>Que Faire</h3>
+<p>
+    Premièrement, vous avez besoin de créer une classe java qui réalisera le test à exécuter avant le lancement. Dans
+    notre cas, nous voulions tester la présence d'un fichier de migration, la date courante ou le nom de la machine.
+    <br>Si celui-ci échoue les classes java lèvent une exception qui est interceptée par Liquibase dans le ChangeSet.
+    Vous avez juste besoin de dire à Liquibase ce qu'il doit faire, par exemple s'arrêter ou continuer et exécuter les
+    autres ChangeSet.</br>
+</p>
+<br/>
+<h3>Un exemple concret</h3>
+<p>Dans votre fichier xml, voici ce que vous devriez avoir</p>
+<br>{% highlight xml linenos%}
+<changeSet id="" author="">
+    <preConditions onFail="CONTINUE">
+        <customPrecondition className="com.srmvision.liquibase.check.PreconditionTimeLiquijar">
+            <param name="dateAndHourBeforeRun" value="10-09-2013 15:32"/>
+        </customPrecondition>
+    </preConditions>
+    VOTRE COMMANDE ICI
+</changeSet>
+{% endhighlight %}
+</br>
+<p><br>Cela indique que vous allez lancer la classe PreconditionTimeLiquijar avant d'exécuter votre ChangeSet. Si la
+       condition échoue, le ChangeSet ne sera pas exécuté cette fois et il sera testé à nouveau au prochain lancement de
+       Liquibase.</br></p>
+<br/>
+<p>La classe associée ressemble à ceci :</p>
+<br>{% highlight java linenos%}
+public class PreconditionTimeLiquijar implements CustomPrecondition {
+
+
+private String dateBeforeRun ;
+private String dateAndHourBeforeRun;
+
+@Override
+public void check(final Database database)
+throws CustomPreconditionFailedException {
+if (StringUtils.isNotBlank(dateBeforeRun) && StringUtils.isBlank(dateAndHourBeforeRun)){
+SimpleDateFormat format = new SimpleDateFormat("dd-MM-yyyy");
+ParsePosition pos = new ParsePosition(0);
+Calendar time = Calendar.getInstance();
+Date date ;
+date = format.parse(dateBeforeRun,pos);
+if (time.getTime().before(date)){
+throw new CustomPreconditionFailedException("Try to launch before executed date asked!");
+}
+} else if (StringUtils.isNotBlank(dateAndHourBeforeRun) && StringUtils.isBlank(dateBeforeRun)){
+SimpleDateFormat format = new SimpleDateFormat("dd-MM-yyyy HH:mm");
+ParsePosition pos = new ParsePosition(0);
+Calendar time = Calendar.getInstance();
+Date date ;
+date = format.parse(dateAndHourBeforeRun,pos);
+if (time.getTime().before(date)){
+throw new CustomPreconditionFailedException("Try to launch before executed date and hour asked!");
+}
+} else {
+throw new CustomPreconditionFailedException("You can't specify both of the arguments, please remove one");
+}
+}
+
+public String getDateBeforeRun() {
+return dateBeforeRun;
+}
+
+public void setDateBeforeRun(final String dateBeforeRun) {
+this.dateBeforeRun = dateBeforeRun;
+}
+
+
+public String getDateAndHourBeforeRun() {
+return dateAndHourBeforeRun;
+}
+
+public void setDateAndHourBeforeRun(final String dateAndHourBeforeRun) {
+this.dateAndHourBeforeRun = dateAndHourBeforeRun;
+}
+}{% endhighlight %}
+</br>
+<p>
+    <br>Le nom du paramètre dans le ChangeSet doit correspondre au nom de l'attribut de la classe java.</br>
+    <br>Ici, nous avons deux attributs, mais nous ne pouvons en instancier qu'un seul (selon l'utilisation d'un date ou
+        d'un datetime). Comme vous pouvez le voir, avec notre pré-condition nous sommes dans le deuxième bloc if (ligne
+        19). À ce stade, il s'agit simplement de code java pour parser la date et la comparer à la date du jour. Si
+        celle-ci est antérieure à aujourd'hui, cela signifie que le ChangeSet doit être exécuté, donc nous ne faisons
+        rien dans la classe java. Sinon nous devons lancer une exception qui va être attrapée et traitée par
+        Liquibase.<br>
+</p>
