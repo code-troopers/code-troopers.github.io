@@ -2,6 +2,7 @@
 @import "../bower_components/font-awesome/less/font-awesome";
 @import (less) "../bower_components/owlcarousel/owl-carousel/owl.carousel.css";
 @import (less) "../bower_components/owlcarousel/owl-carousel/owl.theme.css";
+@import "syntax.css";
 
 @fa-font-path: "//netdna.bootstrapcdn.com/font-awesome/4.0.3/fonts";
 
@@ -297,6 +298,15 @@ article {
       bottom: 20px;
       position: absolute;
     }
+    .codestyle {
+      overflow: auto;
+    }
+    pre {
+      white-space: pre;
+    }
+  }
+  pre code {
+    word-break: normal;
   }
 }
 
@@ -341,3 +351,4 @@ article {
     margin-right: 0;
   }
 }
+

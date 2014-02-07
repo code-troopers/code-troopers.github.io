@@ -22,7 +22,9 @@ tags: [liquibase, technique]
 <br/>
 <h3>Un exemple concret</h3>
 <p>Dans votre fichier xml, voici ce que vous devriez avoir</p>
-<br>{% highlight xml linenos%}
+<br>
+<div class="codestyle">
+{% highlight xml linenos=table %}
 <changeSet id="" author="">
      <preConditions onFail="CONTINUE">
          <customPrecondition className="com.srmvision.liquibase.check.PreconditionTimeLiquijar">
@@ -32,11 +34,14 @@ tags: [liquibase, technique]
      VOTRE COMMANDE ICI
 </changeSet>
 {% endhighlight %}
+</div>
 </br>
 <p><br>Cela indique que vous allez lancer la classe PreconditionTimeLiquijar avant d'exécuter votre ChangeSet. Si la condition échoue, le ChangeSet ne sera pas exécuté cette fois et il sera testé à nouveau au prochain lancement de Liquibase.</br></p>
 <br/>
 <p>La classe associée ressemble à ceci :</p>
-<br>{% highlight java linenos%}
+<br>
+<div class="codestyle">
+    {% highlight java linenos=table %}
 public class PreconditionTimeLiquijar implements CustomPrecondition {
 
 
@@ -86,6 +91,7 @@ public class PreconditionTimeLiquijar implements CustomPrecondition {
         this.dateAndHourBeforeRun = dateAndHourBeforeRun;
     }
 }{% endhighlight %}
+</div>
 </br>
 <p>
 <br>Le nom du paramètre dans le ChangeSet doit correspondre au nom de l'attribut de la classe java.</br>
