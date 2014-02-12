@@ -115,10 +115,12 @@ section {
     color: @white;
     padding: 30px;
     text-align: center;
-    font-size: 40px;
+    @media (min-width: @screen-xs) {
+      font-size: 40px;
+    }
+    font-size:30px;
     span {
       color: @secondary-color;
-      white-space: nowrap;
       &.label {
         color: white;
         background-color: @secondary-color;
