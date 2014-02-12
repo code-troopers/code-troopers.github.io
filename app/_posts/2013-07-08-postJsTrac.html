@@ -9,7 +9,7 @@ tags: [JSTrac, trac]
 <h3>Introduction</h3>
 
 <p>
-    Comme tout développeur le sait (mais ne l'ademttra jamais), son travail n'est pas parfait.
+    Comme tout développeur le sait (mais ne l'admettra jamais), son travail n'est pas parfait.
     Il est donc nécessaire de réaliser une phase de recette de nos applications avant de les livrer.
     Même si de nombreux outils existent pour référencer les bugs (trac, jira...), cette phase est souvent laborieuse.
     Nous avons donc décidé de simplifier ce processus en créant <b>jsTrac</b>.
@@ -19,7 +19,7 @@ tags: [JSTrac, trac]
 <h3>jsTrac</h3>
 
 <p>
-    Il sagit d'un outil visant à fluidifier la recette de sites web en créant rapidement des rapports de bug sur le
+    Il s'agit d'un outil visant à fluidifier la recette de sites web en créant rapidement des rapports de bug sur le
     logiciel
     de gestion des tickets <a href="http://trac.edgewall.org/">trac</a>.
 </p>
@@ -31,7 +31,7 @@ Les principales fonctionnalités sont les suivantes :
     <li>mise en évidence de zones à l'aide de rectangles colorés et de flèches ;</li>
     <li>ajout d'annotations ;</li>
     <li>masquage d'informations ;</li>
-    <li>pré-remplissage du formulaire de création du ticket avec des informations utiles (url par exemple) ;</li>
+    <li>pré-remplissage du formulaire de création du ticket avec des informations utiles (url,login…) ;</li>
     <li>mise-à-jour des tickets.</li>
 </ul>
 </p>
@@ -40,16 +40,16 @@ Les principales fonctionnalités sont les suivantes :
 <h3>Comment ça marche ?</h3>
 <h4>1. Déclarer un bug</h4>
 <p>
-    Pour pouvoir déclarer un bug, il suffit d'ajouter un bouton dans votre page. Celui devra exécuter une fonction
+    Pour pouvoir déclarer un bug, il suffit d'ajouter un bouton dans votre page. Celui-ci devra exécuter une fonction
     javascript permettant d'appeler l'interface de <b>jsTrac</b>.
-
+    <br/>
     <a href="/images/postJsTrac/altS.png" data-lightbox="image-1" title="Bouton de lancement de jsTrac">
         <img class="mini" src="/images/postJsTrac/altS.png" alt="Bouton de lancement de jsTrac"/>
     </a>
 
 </p>
 <p>
-    De notre côté, nous l'avons aussi bindé à un raccourcis clavier.
+    De notre côté, nous l'avons aussi associé à un raccourci clavier.
     On pourrait aussi l'imaginer sous forme d'un bookmarklet ou d'un script grease-monkey, donc complètement
     décorellé du site à recetter.
 </p>
@@ -84,9 +84,9 @@ Les principales fonctionnalités sont les suivantes :
 
 <h4>4. Le ticket dans Trac</h4>
 <p>
-    Les personnes en charge de la résolution des tickets, verrons apparaitre le nouveau ticket dans trac avec le
-    screenshot lié. De plus dans notre utilisation, le ticket contient des informations supplémentaires telle que l'url
-    de la page consultée, la personne connectée, la société ... Il est possible d'adapter le contenu du ticket à vos
+    Les personnes en charge de la résolution des tickets verront apparaître le nouveau ticket dans trac avec le
+    screenshot lié. De plus dans notre utilisation, le ticket contient des informations supplémentaires telles que l'url
+    de la page consultée, la personne connectée, la société… Il est possible d'adapter le contenu du ticket à vos
     besoins.
 </p>
 <p>
@@ -97,26 +97,26 @@ Les principales fonctionnalités sont les suivantes :
 
 <br/>
 <h3>Bénéfices</h3>
-<p>Suite à l'utilisation quotidienne de <b>jsTrac</b>, nous avons pu observer les points suivants :</p>
+<p>Suite à l'utilisation quotidienne de <b>jsTrac</b>, nous avons constaté :</p>
 <p>
-    Gain de temps à la déclaration des tickets.
-<ul>
-    <li>Pas besoins de faire le screenshot</li>
-    <li>Pas besoins d'ouvrir "paint" pour y ajouter des informations</li>
-    <li>Pas besoins de se connecter sur une autre page pour créer un ticket</li>
-    <li>Réduit la perte du contexte lors de la recette</li>
-</ul>
-</p>
-<p>
-    Traitement des tickets améliorés.
-<ul>
-    <li>La présence systématique d'un screenshot aide à la compréhension du bug</li>
-    <li>Les informations supplémentaires aident à la résolution</li>
-</ul>
+    <ul>
+        <li>Gain de temps à la déclaration des tickets</li>
+        <ul>
+            <li>Pas besoins de faire le screenshot</li>
+            <li>Pas besoins d'ouvrir "paint" pour y ajouter des informations</li>
+            <li>Pas besoins de se connecter sur une autre page pour créer un ticket</li>
+            <li>Réduit la perte du contexte lors de la recette</li>
+        </ul>
+        <li>Traitement des tickets améliorés</li>
+        <ul>
+            <li>La présence systématique d'un screenshot aide à la compréhension du bug</li>
+            <li>Les informations supplémentaires aident à la résolution</li>
+        </ul>
+    </ul>
 </p>
 
 <br/>
-<h3>Je veux utiliser jsTrac</h3>
+<h3>Comment installer jsTrac ?</h3>
 
 <p>
     <b>jsTrac</b> est disponible sur <a href="https://github.com/srmvision/jsTrac">GitHub</a>.

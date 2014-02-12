@@ -249,6 +249,9 @@ article {
     padding-bottom: 20px;
   }
   .tags {
+    position: absolute;
+    left: 30px;
+    top: 0;
     display: inline;
     li {
       .label;
@@ -317,12 +320,16 @@ article {
     max-height: 200px;
     overflow: hidden;
     width: 100%;
+    h1,h2,h3{
+      display: none;
+    }
   }
   }
 }
 
 #post {
   article {
+    position: relative;
     p {
       line-height: 1.7em;
       font-size: 1.1em;
