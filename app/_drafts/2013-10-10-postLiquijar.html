@@ -39,9 +39,9 @@ tags: [liquibase, technique]
 <br>{% highlight xml linenos=table%}
 <changeSet id="" author="">
     <preConditions onFail="CONTINUE">
-        <customPrecondition className="com.srmvision.liquibase.check.PreconditionTimeLiquijar">
-            <param name="dateAndHourBeforeRun" value="10-09-2013 15:32"/>
-        </customPrecondition>
+	<customPrecondition className="com.srmvision.liquibase.check.PreconditionTimeLiquijar">
+	    <param name="dateAndHourBeforeRun" value="10-09-2013 15:32"/>
+	</customPrecondition>
     </preConditions>
     VOTRE COMMANDE ICI
 </changeSet>
@@ -63,45 +63,45 @@ public class PreconditionTimeLiquijar implements CustomPrecondition {
 
     @Override
     public void check(final Database database)
-            throws CustomPreconditionFailedException {
-        if (StringUtils.isNotBlank(dateBeforeRun) && StringUtils.isBlank(dateAndHourBeforeRun)){
-            SimpleDateFormat format = new SimpleDateFormat("dd-MM-yyyy");
-            ParsePosition pos = new ParsePosition(0);
-            Calendar time = Calendar.getInstance();
-            Date date ;
-            date = format.parse(dateBeforeRun,pos);
-            if (time.getTime().before(date)){
-                throw new CustomPreconditionFailedException("Try to launch before executed date asked!");
-            }
-        } else if (StringUtils.isNotBlank(dateAndHourBeforeRun) && StringUtils.isBlank(dateBeforeRun)){
-            SimpleDateFormat format = new SimpleDateFormat("dd-MM-yyyy HH:mm");
-            ParsePosition pos = new ParsePosition(0);
-            Calendar time = Calendar.getInstance();
-            Date date ;
-            date = format.parse(dateAndHourBeforeRun,pos);
-            if (time.getTime().before(date)){
-                throw new CustomPreconditionFailedException("Try to launch before executed date and hour asked!");
-            }
-        } else {
-            throw new CustomPreconditionFailedException("You can't specify both of the arguments, please remove one");
-        }
+	    throws CustomPreconditionFailedException {
+	if (StringUtils.isNotBlank(dateBeforeRun) && StringUtils.isBlank(dateAndHourBeforeRun)){
+	    SimpleDateFormat format = new SimpleDateFormat("dd-MM-yyyy");
+	    ParsePosition pos = new ParsePosition(0);
+	    Calendar time = Calendar.getInstance();
+	    Date date ;
+	    date = format.parse(dateBeforeRun,pos);
+	    if (time.getTime().before(date)){
+		throw new CustomPreconditionFailedException("Try to launch before executed date asked!");
+	    }
+	} else if (StringUtils.isNotBlank(dateAndHourBeforeRun) && StringUtils.isBlank(dateBeforeRun)){
+	    SimpleDateFormat format = new SimpleDateFormat("dd-MM-yyyy HH:mm");
+	    ParsePosition pos = new ParsePosition(0);
+	    Calendar time = Calendar.getInstance();
+	    Date date ;
+	    date = format.parse(dateAndHourBeforeRun,pos);
+	    if (time.getTime().before(date)){
+		throw new CustomPreconditionFailedException("Try to launch before executed date and hour asked!");
+	    }
+	} else {
+	    throw new CustomPreconditionFailedException("You can't specify both of the arguments, please remove one");
+	}
     }
 
     public String getDateBeforeRun() {
-        return dateBeforeRun;
+	return dateBeforeRun;
     }
 
     public void setDateBeforeRun(final String dateBeforeRun) {
-        this.dateBeforeRun = dateBeforeRun;
+	this.dateBeforeRun = dateBeforeRun;
     }
 
 
     public String getDateAndHourBeforeRun() {
-        return dateAndHourBeforeRun;
+	return dateAndHourBeforeRun;
     }
 
     public void setDateAndHourBeforeRun(final String dateAndHourBeforeRun) {
-        this.dateAndHourBeforeRun = dateAndHourBeforeRun;
+	this.dateAndHourBeforeRun = dateAndHourBeforeRun;
     }
 }{% endhighlight %}
 </div>
@@ -109,9 +109,9 @@ public class PreconditionTimeLiquijar implements CustomPrecondition {
 <p>
     <br>Le nom du paramètre dans le ChangeSet doit correspondre au nom de l'attribut de la classe java.</br>
     <br>Ici, nous avons deux attributs, mais nous ne pouvons en instancier qu'un seul (selon l'utilisation d'un date ou
-        d'un datetime). Comme vous pouvez le voir, avec notre pré-condition nous sommes dans le deuxième bloc if (ligne
-        19). À ce stade, il s'agit simplement de code java pour parser la date et la comparer à la date du jour. Si
-        celle-ci est antérieure à aujourd'hui, cela signifie que le ChangeSet doit être exécuté, donc nous ne faisons
-        rien dans la classe java. Sinon nous devons lancer une exception qui va être attrapée et traitée par
-        Liquibase.<br>
+	d'un datetime). Comme vous pouvez le voir, avec notre pré-condition nous sommes dans le deuxième bloc if (ligne
+	19). À ce stade, il s'agit simplement de code java pour parser la date et la comparer à la date du jour. Si
+	celle-ci est antérieure à aujourd'hui, cela signifie que le ChangeSet doit être exécuté, donc nous ne faisons
+	rien dans la classe java. Sinon nous devons lancer une exception qui va être attrapée et traitée par
+	Liquibase.<br>
 </p>
