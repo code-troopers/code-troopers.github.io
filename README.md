@@ -18,7 +18,12 @@ Install
     npm install
     bower install
 
-Run
+Run with drafts
 ----
 
     grunt server
+
+Run like prod without drafts
+----
+
+	grunt server:dist

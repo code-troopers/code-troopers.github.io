@@ -35,7 +35,7 @@ module.exports = function (grunt) {
                                      '{.tmp,<%= yeoman.jekyll %>}/scripts/{,*/}*.js',
                                      '<%= yeoman.jekyll %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
                                  ],
-                                 tasks: ['shell:jekyll', 'copy:bower']
+                                 tasks: ['shell:jekylldev', 'copy:bower']
                              },
                              livereload: {
                                  options: {
@@ -333,6 +333,10 @@ module.exports = function (grunt) {
                             jekyll: {
                                 command: 'rm -rf <%= yeoman.app %>/*; jekyll build;',
                                 stdout: true
+                            },
+                            jekylldev:{
+                                command: 'rm -rf <%= yeoman.app %>/*; jekyll build --drafts;',
+                                stdout: true
                             }
                         },
                          sitemap: {
@@ -348,7 +352,7 @@ module.exports = function (grunt) {
             return grunt.task.run(['build', 'connect:dist:keepalive']);
         }
 
-        grunt.task.run([   'shell:jekyll',
+        grunt.task.run([   'shell:jekylldev',
                            'copy:bower',
                            'less',
                            'clean:server',
