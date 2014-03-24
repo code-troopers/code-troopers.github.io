@@ -52,7 +52,7 @@ Le processus s’est plutôt bien passé, quelques bugs ont été introduits lor
 
 Pendant que nos amis du business rodaient leur présentation, nous avons eu l’idée de réaliser un screencast simple de l’utilisation de l’application pour éviter les effets pervers d’une démo en live (nous connaissons tous le [syndrôme Bonaldi](http://fr.wikipedia.org/wiki/J%C3%A9r%C3%B4me_Bonaldi#Effet_Bonaldi), et le réseau étant particulièrement capricieux, la [loi de Murphy](http://fr.wikipedia.org/wiki/Loi_de_Murphy) se serait abattue sur nous !). Vous pouvez consulter le screencast sur YouTube ([https://www.youtube.com/watch?v=hX9eeCdNIbo](https://www.youtube.com/watch?v=hX9eeCdNIbo)).
 
-<iframe width="640" height="480" src="//www.youtube.com/embed/hX9eeCdNIbo" frameborder="0"> </iframe>
+<div style="text-align: center"><iframe width="640" height="480" src="//www.youtube.com/embed/hX9eeCdNIbo" frameborder="0"> </iframe></div>
 
 Fin de marathon - 17h
 
