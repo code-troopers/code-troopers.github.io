@@ -1,26 +1,26 @@
 ---
 layout: post
-title: Startup week-end Tours
-author: Code-troopers
+title: Startup Weekend Tours
+author: Code-Troopers
 cover: swtours-banner
 tags: [startup, tours, Play2]
 ---
 
-Retour sur 54h de start-up week-end pour la première édition à Tours [#swtours](http://tours.startupweekend.org/)
+Retour sur 54h de Startup Weekend pour la première édition à Tours [#swtours](http://tours.startupweekend.org/)
 
 ## Introduction
 
-Les startup Weekends ont pour but d’encourager les entrepreneurs à créer leur projet en les confortant dans la viabilité de leur idée et en leur permettant de rencontrer des co-fondateurs. C’est par exemple l’occasion pour un charpentier de rencontrer des informaticiens pour réaliser un site, de rencontrer des avocats pour être sûr de la légalité et des investisseurs pour étudier la viabilité de la startup. Le tout en 54h, il faut aller vite !
+Les Startup Weekends ont pour but d’encourager les entrepreneurs à créer leur projet en les confortant dans la viabilité de leur idée et en leur permettant de rencontrer des co-fondateurs. C’est par exemple l’occasion pour un charpentier de rencontrer des informaticiens pour réaliser un site, de rencontrer des avocats pour être sûr de la légalité et des investisseurs pour étudier la viabilité de la startup. Le tout en 54h, il faut aller vite !
 
 ## Vendredi (Be My Tourneur):
 
 Nous avions prévu l’événement en sortant de notre backlog idées quelques sujets qui pouvaient mériter d’être présentés lors de l’événement. Nous avons finalement présenté un sujet (que nous risquons de développer en interne dans quelques temps) concernant la prise de rendez-vous auprès des artisans.
 
-La sélection des projets se fait par l’intégralité des personnes présentes, en effet, chaque participant à l’évenement avait à sa disposition trois pastilles autocollantes à disposer sur les différents sujets. 
+La sélection des projets se fait par l’intégralité des personnes présentes, en effet, chaque participant à l’événement avait à sa disposition trois pastilles autocollantes à coller sur les différents sujets. 
 
 À l’issue de ce vote, les projets ayant recueillis le plus de voix ont été conservés et leurs initiateurs ont eu l’occasion de les détailler un peu plus pour pouvoir effectuer le recrutement pour mener à bien leur idée.
 
-En plus des projets sélectionnés par le nombre de vote, n’importe quel projet qui arrivait à réunir une équipe d’au moins deux personnes avait le droit de lancer son idée (ce qui fut le cas de deux équipes).
+En plus des projets sélectionnés par le nombre de votes, n’importe quel projet qui arrivait à réunir une équipe d’au moins deux personnes avait le droit de lancer son idée (ce qui fut le cas de deux équipes).
 
 Comme vous l’avez sûrement remarqué, l’équipe Code-Troopers est composée de développeurs qui aiment la musique, un des projets présenté consistait à donner au public l’opportunité de proposer la venue d’artistes dans une ville en particulier. C’est donc tout naturellement que nous nous sommes dirigés vers celui-ci (non sans avoir hésité avec quelques autres projets, dont celui qui a fini vainqueur, et qui le mérite amplement !)
 
@@ -42,7 +42,7 @@ Les discussions allant entre les mentors et la partie business, ce n’est que v
 
 Vers minuit, les fonctionnalités étaient toutes présentes, c’était même livré en prod (sur Heroku, avec un lien vers un serveur dédié nous appartenant pour la partie ElasticSearch) ! Par contre c’était un peu… “blanc”. 
 
-C’est à ce moment là que Vincent le graphiste ([faceinteract](http://www.faceinteract.com/vnctplsn/)) est arrivé pour nous offrir un logo et une palette de couleur qui ont pu être intégré dans la maquette de la page principale faite par Benjamin.
+C’est à ce moment là que Vincent le graphiste ([faceinteract](http://www.faceinteract.com/vnctplsn/)) est arrivé pour nous offrir un logo et une palette de couleur qui ont pu être intégrés dans la maquette de la page principale faite par Benjamin.
 
 Fin de journée - 3h
 
@@ -60,7 +60,7 @@ Fin de marathon - 17h
 ## Verdict final
 Nous avons réussi à finir dans le top 3 ! La notation se fait autour de trois critères : le modèle économique, la validation client et l’exécution. Ce n’était pas gagné car l’idée du projet a été trouvée dans la journée de vendredi, rien n’avait été préparé avant le début du week-end ! C’est d’ailleurs aussi pour ça que le projet s’est tantôt appelé «be my tourneur», puis «ma ville mon artiste», pour finir sur «My Band My City». Le projet a tout de même séduit le jury qui nous a accordé une excellente 3ème place !
 
-Merci à toute l’équipe du staff qui nous a trés bien nourri pendant ce week-end et merci à nos collègues de FBS qui ont eux aussi fait du très bon boulot.
+Merci à toute l’équipe du staff qui nous a trés bien nourris pendant ce week-end et merci à nos collègues de FBS qui ont eux aussi fait du très bon boulot.
 
 ## Classement Final
 10 projets ont été présentés.
@@ -71,7 +71,7 @@ Les 3 premiers:
 * My band, My City : application permettant de développer une communauté pour faire venir un artiste dans sa ville.
 
 ## Remerciements
-Ce weekend n’aurais pas pu avoir lieu sans l’investissement de nombreuses personnes, mais nous tenons dans un premier temps a remercier les 4 organisateurs de cette premiere édition du Tours startup weekend : Marie Gassie - Julien Dargaisse - Julien Gomès - Julien Grimal. Ensuite il ne faut pas oublier Adrian Pica, qui a fait le déplacement de Roumanie, pour animer le weekend, et grace à son expérience de nombreux startup weekend, il a su motiver et remotiver tous les participants le long de l’évènement.
+Ce weekend n’aurait pas pu avoir lieu sans l’investissement de nombreuses personnes, mais nous tenons dans un premier temps a remercier les 4 organisateurs de cette premiere édition du Tours Startup Weekend : Marie Gassie - Julien Dargaisse - Julien Gomès - Julien Grimal. Ensuite il ne faut pas oublier Adrian Pica, qui a fait le déplacement de Roumanie, pour animer le weekend, et grace à son expérience de nombreux Startup Weekend, il a su motiver et remotiver tous les participants le long de l’événement.
 
 Il vient ensuite tous les mentors qui ont apportés leur connaissance du marché, leurs expériences des startups et surtout leurs côtés pragmatiques sur les questions de rentabilité et de viabilité des projets.
 
