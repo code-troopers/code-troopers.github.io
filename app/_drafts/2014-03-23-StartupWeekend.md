@@ -3,7 +3,7 @@ layout: post
 title: Startup week-end Tours
 author: Code-troopers
 cover: swtours-banner
-tags: [startup, tours, play]
+tags: [startup, tours, Play2]
 ---
 
 Retour sur 54h de start-up week-end pour la première édition à Tours [#swtours](http://tours.startupweekend.org/)
@@ -57,7 +57,7 @@ Pendant que nos amis du business rodaient leur présentation, nous avons eu l’
 Fin de marathon - 17h
 
 ## Verdict final
-Nous avons réussi à finir dans le top 3 ! La notation se fait autour de trois critères : le modèle économique, la validation client et l’exécution. Ce n’était pas gagné car l’idée du projet a été trouvée dans la journée de vendredi, rien n’avait été préparé avant le début du week-end ! C’est d’ailleurs aussi pour ça que le projet s’est tantôt appelé «be my tourneur», puis «ma ville mon artiste», pour finir sur «My Band My City». Le projet a tout de même séduit le jury qui nous a accordé une excellente 3éme place !
+Nous avons réussi à finir dans le top 3 ! La notation se fait autour de trois critères : le modèle économique, la validation client et l’exécution. Ce n’était pas gagné car l’idée du projet a été trouvée dans la journée de vendredi, rien n’avait été préparé avant le début du week-end ! C’est d’ailleurs aussi pour ça que le projet s’est tantôt appelé «be my tourneur», puis «ma ville mon artiste», pour finir sur «My Band My City». Le projet a tout de même séduit le jury qui nous a accordé une excellente 3ème place !
 
 Merci à toute l’équipe du staff qui nous a trés bien nourri pendant ce week-end et merci à nos collègues de FBS qui ont eux aussi fait du très bon boulot.
 
