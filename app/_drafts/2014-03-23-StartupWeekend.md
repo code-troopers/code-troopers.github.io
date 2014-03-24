@@ -75,8 +75,6 @@ Ce weekend n’aurait pas pu avoir lieu sans l’investissement de nombreuses pe
 
 Il vient ensuite tous les mentors qui ont apportés leur connaissance du marché, leurs expériences des startups et surtout leurs côtés pragmatiques sur les questions de rentabilité et de viabilité des projets.
 
-PS : sad story : 
-Le seul point négatif du weekend (mis à part le wifi), dimanche soir en rentrant, j’ai retrouvé mon vélo, mais la selle avait disparu. Tours conserve donc son titre de ville la moins sûre pour les vélos...
 
 <a href="/images/postSWTours/team.jpg" data-lightbox="image-1" title="L’équipe de MyBandMyCity (de gauche à droite) : François (De Feraudy), Fabian (Petit), Julien (Pagnac), Matthieu (Bollot), Cédric (Gatay), Florian (Chauveau), Benjamin (Cousin)">
         <img class="mini" src="/images/postSWTours/team.jpg" alt="L’équipe de MyBandMyCity"/>
@@ -86,3 +84,6 @@ L’équipe de MyBandMyCity (de gauche à droite) : François (De Feraudy), Fabi
 <div id="fb-root" style="text-align:center"></div> <script>(function(d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = "//connect.facebook.net/en_US/all.js#xfbml=1"; fjs.parentNode.insertBefore(js, fjs); }(document, 'script', 'facebook-jssdk'));</script>
 <div class="fb-post" data-href="https://www.facebook.com/media/set/?set=a.236794193172341.1073741831.123604307824664&amp;type=1" data-width="466"><div class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/media/set/?set=a.236794193172341.1073741831.123604307824664&amp;type=1">Post</a> by <a href="https://www.facebook.com/pages/Code-Troopers/123604307824664">Code-Troopers</a>.</div></div>
 
+
+PS : sad story : 
+Le seul point négatif du weekend (mis à part le wifi), dimanche soir en rentrant, j’ai retrouvé mon vélo, mais la selle avait disparu. Tours conserve donc son titre de ville la moins sûre pour les vélos...
