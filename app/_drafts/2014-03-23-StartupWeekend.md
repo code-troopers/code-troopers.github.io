@@ -42,6 +42,18 @@ Les discussions allant entre les mentors et la partie business, ce n’est que v
 
 Vers minuit, les fonctionnalités étaient toutes présentes, c’était même livré en prod (sur Heroku, avec un lien vers un serveur dédié nous appartenant pour la partie ElasticSearch) ! Par contre c’était un peu… “blanc”. 
 
+<div style="text-align : center">
+<a style="display: inline" href="/images/postSWTours/mbmc_nostyle_1.png" data-lightbox="image-0" title="mbmc sans style">
+        <img class="mini" src="/images/postSWTours/mbmc_nostyle_1.png" alt="mbmc sans style"/>
+</a>
+<a style="display: inline" href="/images/postSWTours/mbmc_nostyle_2.png" data-lightbox="image-0" title="mbmc sans style">
+        <img class="mini" src="/images/postSWTours/mbmc_nostyle_2.png" alt="mbmc sans style"/>
+</a>
+<a style="display: inline" href="/images/postSWTours/mbmc_nostyle_3.png" data-lightbox="image-0" title="mbmc sans style">
+        <img class="mini" src="/images/postSWTours/mbmc_nostyle_3.png" alt="mbmc sans style"/>
+</a>
+</div>
+
 C’est à ce moment là que Vincent le graphiste ([faceinteract](http://www.faceinteract.com/vnctplsn/)) est arrivé pour nous offrir un logo et une palette de couleur qui ont pu être intégrés dans la maquette de la page principale faite par Benjamin.
 
 Fin de journée - 3h
