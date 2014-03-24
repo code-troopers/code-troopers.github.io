@@ -67,6 +67,8 @@ Pendant que nos amis du business rodaient leur présentation, nous avons eu l’
 
 <div style="text-align: center"><iframe width="640" height="480" src="//www.youtube.com/embed/hX9eeCdNIbo" frameborder="0"> </iframe></div>
 
+L'application est maintenant publique [http://mybandmycity.code-troopers.com](http://mybandmycity.code-troopers.com) (attention ce n'est qu'une version alpha)!
+
 Fin de marathon - 17h
 
 ## Verdict final
@@ -79,8 +81,8 @@ Merci à toute l’équipe du staff qui nous a trés bien nourris pendant ce wee
 
 Les 3 premiers:
 * pirate de loire : sur le principe du geo caching, touristique / économique.
-* Studd app : application simplifiant la vie des étudiants dans le flux d'informations envoyé par les écoles et universités.
-* My band, My City : application permettant de développer une communauté pour faire venir un artiste dans sa ville.
+* Stud app : application simplifiant la vie des étudiants dans le flux d'informations envoyé par les écoles et universités.
+* [My band, My City](http://mybandmycity.code-troopers.com) : application permettant de développer une communauté pour faire venir un artiste dans sa ville.
 
 ## Remerciements
 Ce weekend n’aurait pas pu avoir lieu sans l’investissement de nombreuses personnes, mais nous tenons dans un premier temps à remercier les 4 organisateurs de cette premiere édition du Tours Startup Weekend : Marie Gassie - Julien Dargaisse - Julien Gomès - Julien Grimal. Ensuite il ne faut pas oublier Adrian Pica, qui a fait le déplacement de Roumanie, pour animer le weekend, et grâce à son expérience de nombreux Startup Weekend, il a su motiver et remotiver tous les participants le long de l’événement.
