@@ -29,7 +29,6 @@ Ainsi, nous nous sommes retrouvés à 8 dans l’équipe, un membre Business (re
 Nous sommes passés par beaucoup d’étapes et d’idées avortées avant de nous fixer sur le fonctionnement que nous avons développé pendant les deux journées qui ont suivi. Nous avons couché les principaux axes sur le papier et sommes rentrés nous coucher avant d’attaquer les choses sérieuses.
 
 Fin de journée - 2h
-<!--break-->
 
 ## Samedi (Ma Ville Mon Artiste)
 Pour réaliser ce site rapidement, nous avons utilisé nos outils de prédilection du moment, [Intellij IDEA](http://www.jetbrains.com/idea/) comme IDE pour coder avec [Play framework!](http://playframework.com), le partage de sources se faisant sur un dépôt git hébergé par [GitLab](https://gitlab.com). 
