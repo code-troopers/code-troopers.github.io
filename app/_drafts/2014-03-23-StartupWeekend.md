@@ -29,7 +29,6 @@ Ainsi, nous nous sommes retrouvés à 8 dans l’équipe, un membre Business (re
 Nous sommes passés par beaucoup d’étapes et d’idées avortées avant de nous fixer sur le fonctionnement que nous avons développé pendant les deux journées qui ont suivi. Nous avons couché les principaux axes sur le papier et sommes rentrés nous coucher avant d’attaquer les choses sérieuses.
 
 Fin de journée - 2h
-<!--break-->
 
 ## Samedi (Ma Ville Mon Artiste)
 Pour réaliser ce site rapidement, nous avons utilisé nos outils de prédilection du moment, [Intellij IDEA](http://www.jetbrains.com/idea/) comme IDE pour coder avec [Play framework!](http://playframework.com), le partage de sources se faisant sur un dépôt git hébergé par [GitLab](https://gitlab.com). 
@@ -83,6 +82,6 @@ Le seul point négatif du weekend (mis à part le wifi), dimanche soir en rentra
 </a>
 L’équipe de MyBandMyCity (de gauche à droite) : François (De Feraudy), Fabian (Petit), Julien (Pagnac), Matthieu (Bollot), Cédric (Gatay), Florian (Chauveau), Benjamin (Cousin)
 
-<div id="fb-root" align:center"> <script>(function(d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = "//connect.facebook.net/en_US/all.js#xfbml=1"; fjs.parentNode.insertBefore(js, fjs); }(document, 'script', 'facebook-jssdk'));</script>
+<div id="fb-root" style="text-align:center"></div> <script>(function(d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = "//connect.facebook.net/en_US/all.js#xfbml=1"; fjs.parentNode.insertBefore(js, fjs); }(document, 'script', 'facebook-jssdk'));</script>
 <div class="fb-post" data-href="https://www.facebook.com/media/set/?set=a.236794193172341.1073741831.123604307824664&amp;type=1" data-width="466"><div class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/media/set/?set=a.236794193172341.1073741831.123604307824664&amp;type=1">Post</a> by <a href="https://www.facebook.com/pages/Code-Troopers/123604307824664">Code-Troopers</a>.</div></div>
 
