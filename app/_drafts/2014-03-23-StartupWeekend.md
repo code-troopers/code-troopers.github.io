@@ -14,7 +14,7 @@ Les Startup Weekends ont pour but d’encourager les entrepreneurs à créer leu
 
 ## Vendredi (Be My Tourneur):
 
-Nous avions prévu l’événement en sortant de notre backlog idées quelques sujets qui pouvaient mériter d’être présentés lors de l’événement. Nous avons finalement présenté un sujet (que nous risquons de développer en interne dans quelques temps) concernant la prise de rendez-vous auprès des artisans.
+Nous avions prévu l’événement en sortant de notre backlog idées quelques sujets qui pouvaient mériter d’être présentés lors de l’événement. Nous avons finalement présenté un sujet (que nous risquons de développer en interne dans quelque temps) concernant la prise de rendez-vous auprès des artisans.
 
 La sélection des projets se fait par l’intégralité des personnes présentes, en effet, chaque participant à l’événement avait à sa disposition trois pastilles autocollantes à coller sur les différents sujets. 
 
@@ -63,7 +63,7 @@ Dimanche matin, réveil difficile, il reste encore beaucoup à faire pour rendre
 
 Le processus s’est plutôt bien passé, quelques bugs ont été introduits lors de l’opération, mais ceux-ci provenaient plus de changement dans les flux utilisateurs que d’erreurs de conception. 
 
-Pendant que nos amis du business rodaient leur présentation, nous avons eu l’idée de réaliser un screencast simple de l’utilisation de l’application pour éviter les effets pervers d’une démo en live (nous connaissons tous le [syndrôme Bonaldi](http://fr.wikipedia.org/wiki/J%C3%A9r%C3%B4me_Bonaldi#Effet_Bonaldi), et le réseau étant particulièrement capricieux, la [loi de Murphy](http://fr.wikipedia.org/wiki/Loi_de_Murphy) se serait abattue sur nous !). Vous pouvez consulter le screencast sur YouTube ([https://www.youtube.com/watch?v=hX9eeCdNIbo](https://www.youtube.com/watch?v=hX9eeCdNIbo)).
+Pendant que nos amis du business rodaient leur présentation, nous avons eu l’idée de réaliser un screencast simple de l’utilisation de l’application pour éviter les effets pervers d’une démo en live (nous connaissons tous le [syndrome Bonaldi](http://fr.wikipedia.org/wiki/J%C3%A9r%C3%B4me_Bonaldi#Effet_Bonaldi), et le réseau étant particulièrement capricieux, la [loi de Murphy](http://fr.wikipedia.org/wiki/Loi_de_Murphy) se serait abattue sur nous !). Vous pouvez consulter le screencast sur YouTube ([https://www.youtube.com/watch?v=hX9eeCdNIbo](https://www.youtube.com/watch?v=hX9eeCdNIbo)).
 
 <div style="text-align: center"><iframe width="640" height="480" src="//www.youtube.com/embed/hX9eeCdNIbo" frameborder="0"> </iframe></div>
 
@@ -83,7 +83,7 @@ Les 3 premiers:
 * My band, My City : application permettant de développer une communauté pour faire venir un artiste dans sa ville.
 
 ## Remerciements
-Ce weekend n’aurait pas pu avoir lieu sans l’investissement de nombreuses personnes, mais nous tenons dans un premier temps a remercier les 4 organisateurs de cette premiere édition du Tours Startup Weekend : Marie Gassie - Julien Dargaisse - Julien Gomès - Julien Grimal. Ensuite il ne faut pas oublier Adrian Pica, qui a fait le déplacement de Roumanie, pour animer le weekend, et grace à son expérience de nombreux Startup Weekend, il a su motiver et remotiver tous les participants le long de l’événement.
+Ce weekend n’aurait pas pu avoir lieu sans l’investissement de nombreuses personnes, mais nous tenons dans un premier temps à remercier les 4 organisateurs de cette premiere édition du Tours Startup Weekend : Marie Gassie - Julien Dargaisse - Julien Gomès - Julien Grimal. Ensuite il ne faut pas oublier Adrian Pica, qui a fait le déplacement de Roumanie, pour animer le weekend, et grâce à son expérience de nombreux Startup Weekend, il a su motiver et remotiver tous les participants le long de l’événement.
 
 Il vient ensuite tous les mentors qui ont apportés leur connaissance du marché, leurs expériences des startups et surtout leurs côtés pragmatiques sur les questions de rentabilité et de viabilité des projets.
 
