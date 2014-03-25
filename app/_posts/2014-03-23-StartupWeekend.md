@@ -80,7 +80,7 @@ Merci à toute l’équipe du staff qui nous a trés bien nourris pendant ce wee
 10 projets ont été présentés.
 
 Les 3 premiers:
-* pirate de loire : sur le principe du geo caching, touristique / économique.
+* Pirate de loire : sur le principe du geo caching, touristique / économique.
 * Stud app : application simplifiant la vie des étudiants dans le flux d'informations envoyé par les écoles et universités.
 * [My band, My City](http://mybandmycity.code-troopers.com) : application permettant de développer une communauté pour faire venir un artiste dans sa ville.
 
