@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Startup Weekend Tours (2)
+title: Sous le capot du Startup Weekend Tours
 author: Code-Troopers
-cover: swtours-banner
-tags: [startup, tours, Play2]
+cover: mbmc-banner
+tags: [startup, tours, Play2, tech]
 ---
 
 Après l’article global d’impressions sur le Startup Weekend, nous sommes obligés de faire un court article précisant ce que nous avons implémenté et utilisé du point de vue technique (c’est ce qui nous intéresse beaucoup après tout).
@@ -16,13 +16,13 @@ Puisque nous avons pris le temps de faire une application entière en 54h, nous 
 * proposition d’ajout de spectacle
 * vote sur un spectacle existant
 * duplication de spectacle (changement de ville)
-* partage twitter / facebook / google plus
+* partage Twitter / Facebook / Google plus
 * envoi de mail selon les statuts des événements
-* backoffice avec un tableau des événements et la possibilité de modifier leur statut
-* modération des propositions de spectacle (avec remplissage automatique de la biographie / photo d’un artiste à partir de l’API EchoNest)
-* recherche globale avec Elasticsearch (géolocalisation et full-text sur artiste)
+* _backoffice_ avec un tableau des événements et la possibilité de modifier leurs statuts
+* modération des propositions de spectacle (avec remplissage automatique de la biographie / photo d’un artiste à partir de l’API [EchoNest](http://developer.echonest.com/))
+* recherche globale avec Elasticsearch (géolocalisation et _full-text_ sur artiste)
 
-## Contenu technique : 
+## Contenu technique :
 
 Les technologies utilisées dans le projet sont :
 * [PlayFramework!](http://playframework.org)
