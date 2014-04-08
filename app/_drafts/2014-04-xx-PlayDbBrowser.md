@@ -34,9 +34,8 @@ La procédure miracle est donc la suivante :
 ```
 
 Lorsqu'il se lance h2-browser devrait vous présenter une fenêtre de connection comme celle-ci :
-<a href="/images/postPlayDbBrowser/h2-browser.png" data-lightbox="image-1" title="Fenêtre de connexion par défaut de h2-browser">
-        <img class="medium" src="/images/postPlayDbBrowser/h2-browser.png" alt="Fenêtre de connexion par défaut de h2-browser"/>
-</a>
+
+/!\ l'image ne build pas
 
 Maitenant qu'il est lancé, il faut se connecter, et par défaut c'est pas gagné, parce qu'il est configurer pour aller dans la base 'test' qui est une base valide, mais surement pas celle dans laqulle vos données sont.
 
@@ -51,4 +50,3 @@ db.default.password=
 ce sont les 3 valeurs à recopier dans la fenêtre de connexion.
 
 Et voilà le tour est joué, c'est tout de meme sympa d'être sûr de ce que l'on a en base.
-
