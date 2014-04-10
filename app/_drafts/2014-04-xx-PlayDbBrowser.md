@@ -35,12 +35,16 @@ La procédure miracle est donc la suivante :
 
 Lorsqu'il se lance h2-browser devrait vous présenter une fenêtre de connection comme celle-ci :
 
-/!\ l'image ne build pas
+<div style="text-align : center">
+    <a style="display: inline" href="/images/postPlayDbBrowser/h2-browser.png" data-lightbox="image-0" title="Fenêtre de connection h2-browser">
+            <img class="medium" src="/images/postPlayDbBrowser/h2-browser.png" alt="Fenêtre de connection h2-browser"/>
+    </a>
+</div>
 
 Maitenant qu'il est lancé, il faut se connecter, et par défaut c'est pas gagné, parce qu'il est configurer pour aller dans la base 'test' qui est une base valide, mais surement pas celle dans laqulle vos données sont.
 
 Il faut donc modifier les champs _jdbc_, _login_, _password_.
-Pour cela aller chercher dans __main.application.conf__ (normalement situé dans le repertoire _/conf/_ de votre projet) et trouvez les champs suivant
+Pour cela aller chercher dans __application.conf__ (normalement situé dans le repertoire _/conf/_ de votre projet) et trouvez les champs suivant
 
 ```
 db.default.url="jdbc:h2:mem:play"
@@ -50,3 +54,6 @@ db.default.password=
 ce sont les 3 valeurs à recopier dans la fenêtre de connexion.
 
 Et voilà le tour est joué, c'est tout de meme sympa d'être sûr de ce que l'on a en base.
+
+
+_NB_ : Il faut absolument faire le `run` avant de se connecter à la base de donnée, sinon celle-ci sera lockée lors de la connection par h2-brower et le l'application play ne pourra pas s'y connecter.
