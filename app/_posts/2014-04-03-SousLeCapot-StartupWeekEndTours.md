@@ -8,7 +8,7 @@ tags: [startup, tours, Play2, tech]
 
 Après l’article global d’impressions sur le Startup Weekend, nous sommes obligés de faire un court article précisant ce que nous avons implémenté et utilisé du point de vue technique (c’est ce qui nous intéresse beaucoup après tout).
 
-## Contenu fonctionnel:
+## Contenu fonctionnel :
 
 Puisque nous avons pris le temps de faire une application entière en 54h, nous allons tout de même détailler les fonctionnalités qui existent dans ce que nous avons produit :
 * création de compte classique (avec validation par email obligatoire)
