@@ -42,7 +42,9 @@ module.exports = function (grunt) {
                                      livereload: '<%= connect.options.livereload %>'
                                  },
                                  files: [
-                                     '<%= yeoman.app %>/{,**/}*.html','!**/bower_components/**',
+				     '<%= yeoman.app %>/{,**/}*.html',
+				   '<%= yeoman.app %>/{,**/}*.md',
+				   '!**/bower_components/**',
                                      '.tmp/styles/{,*/}*.css',
                                      '{.tmp,<%= yeoman.app %>}/scripts/{,*/}*.js',
                                      '<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
