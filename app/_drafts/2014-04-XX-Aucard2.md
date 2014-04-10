@@ -3,7 +3,7 @@ Sortie de l'appli Aucard de Tours
 
 Suite à notre partenariat avec Radio Béton, nous vous annonçons la mise à disposition sur le Play Store de l'application officielle du festival Aucard de Tours 2014.
 
-Comme vous le savez sûrement le festival Aucard de Tours, qui souhaite favoriser la découverte, ne divulgue pas la programmation heure par heure. C'est pourquoi ce n'est qu'une fois rentré dans l'enceinte du festival que vous prenez connaissance du line-up de la soirée (tableau lien). Grâce à l'application Android, vous pourrez scanner un qrcode (sur le même tableau) pour disposer du line-up complet de la soirée sur votre mobile. Fini les aller-retour au tableau pour savoir quel est le prochain concert.
+Comme vous le savez sûrement le festival Aucard de Tours, qui souhaite favoriser la découverte, ne divulgue pas la programmation heure par heure. C'est pourquoi ce n'est qu'une fois rentré dans l'enceinte du festival que vous prenez connaissance du programme de la soirée (tableau lien). Grâce à l'application Android, vous pourrez scanner un QR code (sur le même tableau) pour disposer du programme complet de la soirée sur votre mobile. Fini les allers-retours au tableau pour savoir quel est le prochain concert.
 
 Screen
 
@@ -19,4 +19,4 @@ Ainsi avec cette application vous aurez la possibilité de :
 
 Gros bouton play store + qrcode
 
- PS : n'oubliez pas, Aucard de Tours est un festival eco-citoyens, venez avec votre gobelet réutilisable.
+ PS : n'oubliez pas, Aucard de Tours est un festival éco-citoyens, venez avec votre gobelet réutilisable.
