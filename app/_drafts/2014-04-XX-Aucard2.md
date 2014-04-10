@@ -6,7 +6,7 @@ cover: aucard-banner
 tags: [Android, Festival, Aucard]
 ---
 
-Suite à notre partenariat avec Radio Béton, nous vous annonçons la mise à disposition sur le Play Store de l'application officielle du festival Aucard de Tours 2014.
+Suite à notre <a href="http://code-troopers.com/2014/03/17/Aucard.html">partenariat avec Radio Béton</a>, nous vous annonçons la mise à disposition sur le Play Store de l'application officielle du festival Aucard de Tours 2014.
 
 Comme vous le savez sûrement le festival Aucard de Tours, qui souhaite favoriser la découverte, ne divulgue pas la programmation heure par heure. C'est pourquoi ce n'est qu'une fois rentré dans l'enceinte du festival que vous prenez connaissance du programme de la soirée (tableau lien). Grâce à l'application Android, vous pourrez scanner un QR code (sur le même tableau) pour disposer du programme complet de la soirée sur votre mobile. Fini les allers-retours au tableau pour savoir quel est le prochain concert.
 
