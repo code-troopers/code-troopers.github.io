@@ -32,7 +32,7 @@ Ainsi avec cette application vous aurez la possibilité de :
  * Connaître en temps réel ce qui passe et ce qui va suivre (plus besoin de retourner voir le tableau de la programmation à l'entrée)
 
 _`Attention` : pour profiter pleinement des fonctionnalités d'écoute de la playlist Aucard et des albums des artistes
-il est nécessaire de connecter son compte premium deezer, dans le cas contraire, deezer limite l'écoute à 30 secondes par morceau._
+il est nécessaire de connecter son compte <a href="http://www.deezer.com/offers/premiumplus">premium+ deezer</a>, dans le cas contraire, deezer limite l'écoute à 30 secondes par morceau._
 
 <div style="text-align:center;margin:50px">
     <a href="https://play.google.com/store/apps/details?id=com.codetroopers.aucard">
