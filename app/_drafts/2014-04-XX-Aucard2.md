@@ -25,12 +25,16 @@ Ainsi avec cette application vous aurez la possibilité de :
  * Accéder à une fiche détaillée de l'artiste (liens web, vidéo, biographie…)
  * Connaître en temps réel ce qui passe et ce qui va suivre (plus besoin de retourner voir le tableau de la programmation à l'entrée)
 
+_`Attention` : pour profiter pleinement des fonctionnalités d'écoute de la playlist Aucard et des albums des artistes
+il est nécessaire de connecter son compte premium deezer, dans le cas contraire, deezer limite l'écoute à 30 secondes par morceau._
 
 <div style="text-align:center;margin:50px">
-<a href="https://play.google.com/store/apps/details?id=com.codetroopers.aucard">
-  <img alt="Get it on Google Play"
-       src="https://developer.android.com/images/brand/fr_generic_rgb_wo_60.png" />
-</a>
+    <a href="https://play.google.com/store/apps/details?id=com.codetroopers.aucard">
+      <img class="medium" alt="QRcode application Aucard de Tours" src="/images/postAucard2/qrcode_playstore_aucard.png" />
+    </a>
+    <a href="https://play.google.com/store/apps/details?id=com.codetroopers.aucard">
+      <img alt="Get it on Google Play" src="https://developer.android.com/images/brand/fr_generic_rgb_wo_60.png" />
+    </a>
 </div>
 
  PS : n'oubliez pas, Aucard de Tours est un festival éco-citoyens, venez avec votre gobelet réutilisable.
