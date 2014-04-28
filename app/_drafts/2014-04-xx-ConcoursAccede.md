@@ -25,6 +25,8 @@ Cette année les 3 lauréats ont été :
 * __SPS__ : un système afin d'aider les services d'intervention à l'intérieur des bâtiments (stockage des plans, emplacement des extincteurs…).
 * __My Band My City__ : billetterie participative de proximité afin de promouvoir et faire venir un artiste dans une ville.
 
+Un grand bravo aux 2 autres projets, [Studapp](https://www.facebook.com/getstudapp) et [SugarDoc](http://sugardoc.co/) arrivés au pied du podium.
+
 Les inscriptions pour la version 2015 du "Tours de la Création" sont déjà ouvertes, donc si vous avez une idée, n'hésitez pas à vous rendre [ici](http://accede-entreprendre.fr/le-tours-de-la-creation/).
 
 La 3ème place à ce concours nous a confirmé que ce projet avait un fort potentiel. Nous allons donc, avec l'aide des étudiants de FBS, terminer et véritablement lancer ce projet. Si vous êtes intéressés, restez à l'écoute sur les réseaux sociaux, sur ce blog, ou sur la [page facebook de My Band My City](https://www.facebook.com/mybandmycity).
