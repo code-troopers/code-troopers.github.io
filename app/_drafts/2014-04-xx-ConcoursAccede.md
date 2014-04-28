@@ -6,7 +6,7 @@ cover: accede-banner
 tags: [Accede, Tours, startup]
 ---
 
-Si vous nous suivez, vous savez sûrement que notre équipe a participé et est arrivée 3<sup>ème</sup> du _Startup Weekend_ qui s'est déroulé à Tours les 21-22-23 mars 2014 ([un petit résumé de ce weekend intense](http://code-troopers.com/2014/03/23/StartupWeekend.html)). Et bien ça continue, les étudiants de _FBS_, porteurs du projet, ont présenté __My Band My City__ au concours de création d'entreprises le _"[Tours de la Création](http://accede-entreprendre.fr/le-tours-de-la-creation/)"_ qui se déroulait le jeudi 17 avril 2014 et, une fois de plus, le projet est arrivé 3<sup>ème</sup> sur un total de 25 projets.
+Si vous nous suivez, vous savez sûrement que notre équipe a participé et est arrivée 3<sup>ème</sup> du _Startup Weekend_ qui s'est déroulé à Tours les 21-22-23 mars 2014 ([un petit résumé de ce weekend intense](http://code-troopers.com/2014/03/23/StartupWeekend.html)). Et bien ça continue, François, Fabian et Julien, les 3 étudiants de _FBS_, porteurs du projet, ont présenté __My Band My City__ au concours de création d'entreprises le _"[Tours de la Création](http://accede-entreprendre.fr/le-tours-de-la-creation/)"_ qui se déroulait le jeudi 17 avril 2014 et, une fois de plus, le projet est arrivé 3<sup>ème</sup> sur un total de 25 projets.
 
 <div style="text-align:center;margin:50px">
     <a href="/images/postAccede/photo.jpg" data-lightbox="group-1" title="Mode normal"  class="inlineBoxes">
@@ -23,7 +23,7 @@ Le concours se déroule en deux phases. Il faut d'abord réaliser un dossier pou
 Cette année les 3 lauréats ont été :
 * __M.O.F Box__ : création et vente de smart box avec des produits réalisés par les meilleurs ouvriers de France.
 * __SPS__ : un système afin d'aider les services d'intervention à l'intérieur des bâtiments (stockage des plans, emplacement des extincteurs…).
-* __My Band My City__ : billetterie participative de proximité afin de promouvoir et faire venir un artiste dans une ville.
+* [__My Band My City__](http://mybandmycity.code-troopers.com/) : billetterie participative de proximité afin de promouvoir et faire venir un artiste dans une ville.
 
 Un grand bravo aux 2 autres projets, [Studapp](https://www.facebook.com/getstudapp) et [SugarDoc](http://sugardoc.co/) arrivés au pied du podium.
 
