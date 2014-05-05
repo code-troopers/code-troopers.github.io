@@ -2,7 +2,7 @@
 layout: post
 title: Play2 accéder à la base de donnée
 author: Nanak
-cover: swtours-banner
+cover: play
 tags: [Play2, db, h2-browser]
 ---
 
