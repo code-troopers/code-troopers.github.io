@@ -16,7 +16,7 @@ Et forcément la question universelle est "Mais comment je peux voir ces ***** d
 
 
 La solution est simple, elle réside dans une commande `h2-browser`.
-Mais pour pouvoir l'utiliser, il va falloir se discipliner un tout petit peu. En effet, si vous aviez l'habitude de faire des `play run` pour lancer le serveur et des `ctrl-D` pour l'arreter, il va falloir changer de méthode.
+Mais pour pouvoir l'utiliser, il va falloir se discipliner un tout petit peu. En effet, si vous aviez l'habitude de faire des `play run` pour lancer le serveur et des `ctrl-D` pour l'arrêter, il va falloir changer de méthode.
 
 La procédure miracle est donc la suivante :
 
