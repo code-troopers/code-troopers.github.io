@@ -7,11 +7,11 @@ tags: [Play2, db, h2-browser]
 ---
 
 [Play2](http://www.playframework.com/), c'est fun et c'est rapide !
-Il suffit de quelques instant pour avoir une appli qui tourne en local sans rien avoir à configurer [voir la doc de play](http://www.playframework.com/documentation/2.2.x/NewApplication).
+Il suffit de quelques instants pour avoir une appli qui tourne en local sans rien avoir à configurer [voir la doc de play](http://www.playframework.com/documentation/2.2.x/NewApplication).
 En plus dès que l'on commence un peu à jouer, créer des entités, faire une page de CRUD, tout tourne toujours aussi bien. Il faut dire que c'est agréable, car [Ebean](http://www.playframework.com/documentation/2.2.x/JavaEbean) s'est occupé de générer les commandes sql dans le fichier _1.sql_ qui est joué automatiquement par play.
 
-Le problème arrive en général un peu après, lorsque l'envie nous prend de visualiser les données qu'on a inséré via les pages pour différents traitements.
-En effet, pas besoin de monter un serveur sql ou autre, par defaut tout se passe dans une base en mémoire (ce qui signifie aussi, que lorsque le serveur est arreté les datas disparaissent).
+Le problème arrive en général un peu après, lorsque l'envie nous prend de visualiser les données qu'on a insérées via les pages pour différents traitements.
+En effet, pas besoin de monter un serveur sql ou autre, par défaut tout se passe dans une base en mémoire (ce qui signifie aussi, que lorsque le serveur est arrêté les datas disparaissent).
 Et forcément la question universelle est "Mais comment je peux voir ces ***** de data en base ?".
 
 
@@ -24,7 +24,7 @@ La procédure miracle est donc la suivante :
 ```
  $ play
 ```
- * lancer le visualiseur de bdd (qui ouvre une fenetre dans votre navigateur web)
+ * lancer le visualiseur de bdd (qui ouvre une fenêtre dans votre navigateur web)
 ```
  $ h2-browser
 ```
@@ -33,7 +33,7 @@ La procédure miracle est donc la suivante :
  $ run
 ```
 
-Lorsqu'il se lance h2-browser devrait vous présenter une fenêtre de connection comme celle-ci :
+Lorsqu'il se lance h2-browser devrait vous présenter une fenêtre de connexion comme celle-ci :
 
 <div style="text-align : center">
     <a style="display: inline" href="/images/postPlayDbBrowser/h2-browser.png" data-lightbox="image-0" title="Fenêtre de connection h2-browser">
@@ -41,10 +41,10 @@ Lorsqu'il se lance h2-browser devrait vous présenter une fenêtre de connection
     </a>
 </div>
 
-Maitenant qu'il est lancé, il faut se connecter, et par défaut c'est pas gagné, parce qu'il est configuré pour aller dans la base 'test' qui est une base valide, mais surement pas celle dans laquelle vos données sont.
+Maitenant qu'il est lancé, il faut se connecter, et par défaut c'est pas gagné, parce qu'il est configuré pour aller dans la base 'test' qui est une base valide, mais surement pas celle où vos données sont.
 
 Il faut donc modifier les champs _jdbc_, _login_, _password_.
-Pour cela aller chercher dans __application.conf__ (normalement situé dans le repertoire _/conf/_ de votre projet) et trouvez les champs suivant
+Pour cela allez chercher dans __application.conf__ (normalement situé dans le répertoire _/conf/_ de votre projet) et trouvez les champs suivants
 
 ```
 db.default.url="jdbc:h2:mem:play"
@@ -53,7 +53,7 @@ db.default.password=
 ```
 ce sont les 3 valeurs à recopier dans la fenêtre de connexion.
 
-Et voilà le tour est joué, c'est tout de meme sympa d'être sûr de ce que l'on a en base.
+Et voilà le tour est joué, c'est tout de même sympa d'être sûr de ce que l'on a en base.
 
 
-_NB_ : Il faut absolument faire le `run` avant de se connecter à la base de donnée, sinon celle-ci sera lockée lors de la connection par h2-broswer et l'application play ne pourra pas s'y connecter.
+_NB_ : Il faut absolument faire le `run` avant de se connecter à la base de donnée, sinon celle-ci sera lockée lors de la connexion par h2-broswer et l'application play ne pourra pas s'y connecter.
