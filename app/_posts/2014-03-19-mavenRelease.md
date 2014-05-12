@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Distribuer sur Maven Central ses bibliothèques
-author: Samva
+author: Cedric
 cover: mavenRelease-banner
 tags: [bibliothèque, OSS, Maven]
 ---

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Play2 accéder à la base de donnée
-author: Nanak
+author: Florian
 cover: play
 tags: [Play2, db, h2-browser]
 ---

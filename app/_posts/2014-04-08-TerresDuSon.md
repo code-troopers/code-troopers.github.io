@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Application officielle Android pour Terres du son 2014
-author: Benou
+author: Benjamin
 cover: tds-banner
 tags: [Android, Festival, Terres du son]
 ---

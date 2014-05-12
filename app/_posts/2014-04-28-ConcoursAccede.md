@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Encore un podium pour MyBandMyCity
-author: Benou
+author: Benjamin
 cover: accede-banner
 tags: [Accede, Tours, startup]
 ---
