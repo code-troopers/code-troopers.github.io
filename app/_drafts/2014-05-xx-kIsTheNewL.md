@@ -2,7 +2,7 @@
 layout: post
 title: k is the new l, yo
 author: Matthieu
-cover: swtours-banner
+cover: kisthenewl-banner
 tags: [zsh, git, shell, Découverte]
 ---
 
