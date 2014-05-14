@@ -3,7 +3,7 @@ layout: post
 title: k is the new l, yo
 author: Matthieu
 cover: kisthenewl-banner
-tags: [zsh, git, shell, Découverte]
+tags: [zsh, git, shell]
 ---
 
 `ls` est une des commandes shell les plus utilisées, pourtant depuis les années 70 elle a très peu changé. Bien sûr, il y a de nombreuses options, citons `ls -a` pour afficher les fichiers cachés, `ls -l` pour afficher plus d'informations, `ls --color` pour afficher deux couleurs, une pour les fichiers et une pour les répertoires, ou encore `ls -rtl` pour trier le contenu par date et afficher le plus récent en dernier.
@@ -15,20 +15,21 @@ tags: [zsh, git, shell, Découverte]
 - dégradé de couleur pour la taille des fichiers : du vert pour les petits fichiers au rouge pour les gros ;
 - dégradé de couleur pour la date de modification : plus la date est affichée en clair et plus le fichier est récent.
 
-Voici ce que cela donne, version ls et version k
+Voici un comparatif des deux rendus, version ls et version k :
 
 <div style="text-align : center">
-<a style="display: inline" href="/images/postKisTheNewL/lsalcolor.png" data-lightbox="image-0" title="version k">
+<a style="display: inline" href="/images/postKisTheNewL/lsalcolor.png" data-lightbox="image-0" title="version ls -al --color">
         <img class="medium" src="/images/postKisTheNewL/lsalcolor_min.png" alt="version k"/>
 </a>
 <a style="display: inline" href="/images/postKisTheNewL/k.png" data-lightbox="image-0" title="version k">
         <img class="medium" src="/images/postKisTheNewL/k_min.png" alt="version k"/>
 </a>
 </div>
+<br/>
 
 
 `k` est disponible uniquement pour zsh. Pour l'installer, il suffit de cloner le dépôt [git](https://github.com/supercrabtree/k) et d'ajouter `source ~/path/k/k.sh` dans son ~/.zshrc.
 k est encore jeune mais il gagnerait à être connu, il manque quelques fonctions de base comme mettre un répertoire en paramètre ou ne pas afficher les fichiers cachés.
-Pour en savoir plus, n'hésitez pas à aller voir la page [github](https://github.com/supercrabtree/k).
+Pour en savoir plus, n'hésitez pas à aller voir la page [GitHub](https://github.com/supercrabtree/k).
 
 Comme dit leur slogan : «k is the new l, yo»
