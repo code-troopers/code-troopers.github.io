@@ -1,0 +1,695 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+        <channel>
+                <title>Code-Troopers blog</title>
+                <description>Le blog de l'équipe Code-Troopers</description>                
+                <link>http://code-troopers.com</link>
+                <atom:link href="http://code-troopers.com/feed.xml" rel="self" type="application/rss+xml"/>
+                
+                        <item>
+                                <title>Coursera - Android Handheld Systems : 2ème cours</title>
+                                <description>&lt;h3&gt;Coursera &amp; Android&lt;/h3&gt;
+&lt;p&gt;
+   Coursera propose depuis ce Lundi (12 mai) &lt;a href=&quot;https://class.coursera.org/posa-002&quot;&gt;un nouveau cours de développement Android&lt;/a&gt;.
+   Il s'agit, en fait, du second cours d'une série de trois visant à maitriser le développement d'application Android.
+&lt;/p&gt;
+&lt;p&gt;
+   &lt;a href=&quot;https://class.coursera.org/android-001&quot;&gt;Le premier cours, sur le développement Android,&lt;/a&gt; avait comme thème (et comme son nom l'indique) la découverte de la programmation d'application.
+   Cela en abordant les classes et notions majeures telles que les Activity, View, Fragment ou les Intent, ainsi que tous les cycles de vie correspondants, ce qui a pu permettre au plus grand nombre de s'y initier à moindre frais.
+&lt;/p&gt;
+&lt;h3&gt;Le cours&lt;/h3&gt;
+&lt;p&gt;
+    Ce nouveau cours a pour thème principal l'apprentissage des bons patterns et l'utilisation de plusieurs frameworks afin de réaliser avec brio les applications Android qui ont recours à des services réseaux.
+&lt;/p&gt;
+&lt;p&gt;
+    Présenté par &lt;a href=&quot;https://www.coursera.org/instructor/douglasschmidt&quot;&gt;Douglas C. Schmidt&lt;/a&gt; (qui parle plutôt vite dans les premières vidéos) et &lt;a href=&quot;https://www.coursera.org/instructor/juleswhite&quot;&gt;C. Jules White&lt;/a&gt;, les cours (vidéos et slides) semblent toujours aussi bien construits et organisés.
+    Ils sont pour le moment faciles à suivre, et donc faisaibles même si vous n'avez pas suivi le premier cours.
+
+&lt;/p&gt;
+&lt;h3&gt;Exercices&lt;/h3&gt;
+&lt;p&gt;
+    Pour ce qui est des excercices, il y a du changement. Contrairement au cours précédent où il fallait uniquement collecter quelques lignes de log pour prouver la réussite d'un exercice, il va falloir cette fois fournir les fichiers sources correspondant au travail réalisé. Ce qui est, je trouve, une bien meilleure façon de faire et surtout fait beaucoup plus 'pro'.
+&lt;/p&gt;
+&lt;p&gt;
+    Et justement, en parlant d'évaluation, nouveauté (pour moi du moins) il va falloir évaluer le travail des autres étudiants.
+    En effet pour qu'un exercice réalisé soit validé, il faudra, après l'envoi de son propre travail, noter celui d'autres étudiants, en utilisant leurs codes sources et en répondant à des questions / critères spécifiques posés par la plateforme.
+&lt;/p&gt;
+&lt;p&gt;
+    Petit point négatif à noter, l'IDE à utiliser est Eclipse, c'est sous cet environnement que les résultats seront testés.
+    Mais comme cela n'a pas été un problème lors du premier cours de pouvoir utiliser Android Studio, il faut espérer qu'il en sera de même.
+&lt;/p&gt;
+&lt;h3&gt;Inscription&lt;/h3&gt;
+&lt;p&gt;
+    Il est encore temps de s'incrire puisque les premières vidéos n'ont été diffusées que ce Lundi.
+    Et même si vous n'avez pas le temps pour faire tous les exercices, regarder les vidéos (ou bien les slides) apporte déjà bien plus d'informations, que pourrait le faire une conférence ou une formation.
+&lt;/p&gt;
+
+&lt;h3&gt;Certification&lt;/h3&gt;
+&lt;p&gt;
+    Et pour ceux qui le souhaitent, il est possible d'obtenir un certificat officiel provenant de l'université de Vanderbilt (origine des deux profs) et Coursera, ce qui permet de faire connaître et d'attester de votre réussite dans ces cours.
+    Mais évidement pour cela il faudra payer (49$), car rien n'est gratuit.
+&lt;/p&gt;
+
+
+</description>
+                                <pubDate>Thu, 15 May 2014 00:00:00 +0200</pubDate>
+                                <link>http://code-troopers.com/2014/05/15/CourseraAndroid.html</link>
+                                <guid isPermaLink="true">http://code-troopers.com/2014/05/15/CourseraAndroid.html</guid>
+                        </item>
+                
+                        <item>
+                                <title>k is the new l, yo</title>
+                                <description>&lt;p&gt;&lt;code&gt;ls&lt;/code&gt; est une des commandes shell les plus utilisées, pourtant depuis les années 70 elle a très peu changé. Bien sûr, il y a de nombreuses options, citons &lt;code&gt;ls -a&lt;/code&gt; pour afficher les fichiers cachés, &lt;code&gt;ls -l&lt;/code&gt; pour afficher plus d’informations, &lt;code&gt;ls --color&lt;/code&gt; pour afficher deux couleurs, une pour les fichiers et une pour les répertoires, ou encore &lt;code&gt;ls -rtl&lt;/code&gt; pour trier le contenu par date et afficher le plus récent en dernier.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;ls&lt;/code&gt; est donc une commande utile et pratique mais elle n’est pas folichonne. D’où la naissance de &lt;code&gt;k&lt;/code&gt; qui a pour but de remplacer &lt;code&gt;ls&lt;/code&gt; avec quelques killer features. Il ne s’agit pas d’une surcouche de &lt;code&gt;ls&lt;/code&gt; mais d’une commande complète, s’appuyant directement sur &lt;code&gt;stat&lt;/code&gt; par exemple. À ce jour, les nouvelles fonctionnalités sont les suivantes :&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;intégration de git status sur un dépôt entier : rouge si le dépôt est “sale”, vert sinon ;&lt;/li&gt;
+
+&lt;li&gt;intégration de git status à l’intérieur d’un dépôt : différenciation des fichiers modifiés, non ajoutés ou ignorés ;&lt;/li&gt;
+
+&lt;li&gt;dégradé de couleur pour la taille des fichiers : du vert pour les petits fichiers au rouge pour les gros ;&lt;/li&gt;
+
+&lt;li&gt;dégradé de couleur pour la date de modification : plus la date est affichée en clair et plus le fichier est récent.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Voici un comparatif des deux rendus, version &lt;code&gt;ls&lt;/code&gt; et version &lt;code&gt;k&lt;/code&gt; :&lt;/p&gt;
+&lt;div style='text-align : center'&gt;
+&lt;a data-lightbox='image-0' href='/images/postKisTheNewL/lsalcolor.png' style='display: inline' title='version ls -al --color'&gt;
+        &lt;img alt='version k' class='medium' src='/images/postKisTheNewL/lsalcolor_min.png' /&gt;
+&lt;/a&gt;
+&lt;a data-lightbox='image-0' href='/images/postKisTheNewL/k.png' style='display: inline' title='version k'&gt;
+        &lt;img alt='version k' class='medium' src='/images/postKisTheNewL/k_min.png' /&gt;
+&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;k&lt;/code&gt; est disponible uniquement pour zsh. Pour l’installer, il suffit de cloner le dépôt &lt;a href=&quot;https://github.com/supercrabtree/k&quot;&gt;git&lt;/a&gt; et d’ajouter &lt;code&gt;source ~/path/k/k.sh&lt;/code&gt; dans son ~/.zshrc. k est encore jeune mais il gagnerait à être connu, il manque quelques fonctions de base comme mettre un répertoire en paramètre ou ne pas afficher les fichiers cachés. Pour en savoir plus, n’hésitez pas à aller voir la page &lt;a href=&quot;https://github.com/supercrabtree/k&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Comme dit leur slogan : «k is the new l, yo».&lt;/p&gt;</description>
+                                <pubDate>Wed, 14 May 2014 00:00:00 +0200</pubDate>
+                                <link>http://code-troopers.com/2014/05/14/kIsTheNewL.html</link>
+                                <guid isPermaLink="true">http://code-troopers.com/2014/05/14/kIsTheNewL.html</guid>
+                        </item>
+                
+                        <item>
+                                <title>Play2 accéder à la base de donnée</title>
+                                <description>&lt;p&gt;&lt;a href=&quot;http://www.playframework.com/&quot;&gt;Play2&lt;/a&gt;, c’est fun et c’est rapide ! Il suffit de quelques instants pour avoir une appli qui tourne en local sans rien avoir à configurer &lt;a href=&quot;http://www.playframework.com/documentation/2.2.x/NewApplication&quot;&gt;voir la doc de play&lt;/a&gt;. En plus dès que l’on commence un peu à jouer, créer des entités, faire une page de CRUD, tout tourne toujours aussi bien. Il faut dire que c’est agréable, car &lt;a href=&quot;http://www.playframework.com/documentation/2.2.x/JavaEbean&quot;&gt;Ebean&lt;/a&gt; s’est occupé de générer les commandes sql dans le fichier &lt;em&gt;1.sql&lt;/em&gt; qui est joué automatiquement par play.&lt;/p&gt;
+
+&lt;p&gt;Le problème arrive en général un peu après, lorsque l’envie nous prend de visualiser les données qu’on a insérées via les pages pour différents traitements. En effet, pas besoin de monter un serveur sql ou autre, par défaut tout se passe dans une base en mémoire (ce qui signifie aussi, que lorsque le serveur est arrêté les datas disparaissent). Et forcément la question universelle est “Mais comment je peux voir ces ***** de data en base ?”.&lt;/p&gt;
+
+&lt;p&gt;La solution est simple, elle réside dans une commande &lt;code&gt;h2-browser&lt;/code&gt;. Mais pour pouvoir l’utiliser, il va falloir se discipliner un tout petit peu. En effet, si vous aviez l’habitude de faire des &lt;code&gt;play run&lt;/code&gt; pour lancer le serveur et des &lt;code&gt;ctrl-D&lt;/code&gt; pour l’arrêter, il va falloir changer de méthode.&lt;/p&gt;
+
+&lt;p&gt;La procédure miracle est donc la suivante :&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;lancer la console play
+&lt;pre&gt;&lt;code&gt;$ play&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+
+&lt;li&gt;lancer le visualiseur de bdd (qui ouvre une fenêtre dans votre navigateur web)
+&lt;pre&gt;&lt;code&gt;$ h2-browser&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+
+&lt;li&gt;démarrer votre serveur.
+&lt;pre&gt;&lt;code&gt;$ run&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Lorsqu’il se lance h2-browser devrait vous présenter une fenêtre de connexion comme celle-ci :&lt;/p&gt;
+&lt;div style='text-align : center'&gt;
+    &lt;a data-lightbox='image-0' href='/images/postPlayDbBrowser/h2-browser.png' style='display: inline' title='Fenêtre de connection h2-browser'&gt;
+            &lt;img alt='Fenêtre de connection h2-browser' class='medium' src='/images/postPlayDbBrowser/h2-browser.png' /&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;Maitenant qu’il est lancé, il faut se connecter, et par défaut c’est pas gagné, parce qu’il est configuré pour aller dans la base ‘test’ qui est une base valide, mais surement pas celle où vos données sont.&lt;/p&gt;
+
+&lt;p&gt;Il faut donc modifier les champs &lt;em&gt;jdbc&lt;/em&gt;, &lt;em&gt;login&lt;/em&gt;, &lt;em&gt;password&lt;/em&gt;. Pour cela allez chercher dans &lt;strong&gt;application.conf&lt;/strong&gt; (normalement situé dans le répertoire &lt;em&gt;/conf/&lt;/em&gt; de votre projet) et trouvez les champs suivants&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;db.default.url=&amp;quot;jdbc:h2:mem:play&amp;quot;
+db.default.user=sa
+db.default.password=&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;ce sont les 3 valeurs à recopier dans la fenêtre de connexion.&lt;/p&gt;
+
+&lt;p&gt;Et voilà le tour est joué, c’est tout de même sympa d’être sûr de ce que l’on a en base.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;NB&lt;/em&gt; : Il faut absolument faire le &lt;code&gt;run&lt;/code&gt; avant de se connecter à la base de donnée, sinon celle-ci sera lockée lors de la connexion par h2-broswer et l’application play ne pourra pas s’y connecter.&lt;/p&gt;</description>
+                                <pubDate>Mon, 05 May 2014 00:00:00 +0200</pubDate>
+                                <link>http://code-troopers.com/2014/05/05/PlayDbBrowser.html</link>
+                                <guid isPermaLink="true">http://code-troopers.com/2014/05/05/PlayDbBrowser.html</guid>
+                        </item>
+                
+                        <item>
+                                <title>Encore un podium pour MyBandMyCity</title>
+                                <description>&lt;p&gt;Si vous nous suivez, vous savez sûrement que notre équipe a participé et est arrivée 3&lt;sup&gt;ème&lt;/sup&gt; du &lt;em&gt;Startup Weekend&lt;/em&gt; qui s’est déroulé à Tours les 21-22-23 mars 2014 (&lt;a href=&quot;http://code-troopers.com/2014/03/23/StartupWeekend.html&quot;&gt;un petit résumé de ce weekend intense&lt;/a&gt;). Et bien ça continue, François, Fabian et Julien, les 3 étudiants de &lt;em&gt;FBS&lt;/em&gt;, porteurs du projet, ont présenté &lt;strong&gt;My Band My City&lt;/strong&gt; au concours de création d’entreprises le &lt;em&gt;”&lt;a href=&quot;http://accede-entreprendre.fr/le-tours-de-la-creation/&quot;&gt;Tours de la Création&lt;/a&gt;”&lt;/em&gt; qui se déroulait le jeudi 17 avril 2014 et, une fois de plus, le projet est arrivé 3&lt;sup&gt;ème&lt;/sup&gt; sur un total de 25 projets.&lt;/p&gt;
+&lt;div style='text-align:center;margin:50px'&gt;
+    &lt;a class='inlineBoxes' data-lightbox='group-1' href='/images/postAccede/photo.jpg' title='Mode normal'&gt;
+	&lt;img alt='Mode normal' class='medium' src='/images/postAccede/photo.jpg' /&gt;
+    &lt;/a&gt;
+    &lt;a class='inlineBoxes' data-lightbox='group-1' href='/images/postAccede/slide.png' title='Mode présentation'&gt;
+	&lt;img alt='Mode présentation' class='medium' src='/images/postAccede/slide.png' /&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;Le concours se déroule en deux phases. Il faut d’abord réaliser un dossier pour expliquer le projet, sa cible, son but, son évolution… Suite à cette première phase, 5 projets sont sélectionnés pour participer à la phase finale qui se déroulait cette année à la &lt;a href=&quot;http://www.pepinieres-agglotours.fr/&quot;&gt;Pépinière d’entreprises du Sanitas&lt;/a&gt; à Tours. Durant cette phase finale il fallait présenter et défendre son projet devant un jury d’entrepreneurs pendant 30 minutes. En parallèle de ces présentations étaient organisées des conférences sur la création d’entreprises. Une courte présentation de 5 minutes de tous les projets était également prévue pour le public, suivie par la remise des prix pour les 3 premiers.&lt;/p&gt;
+
+&lt;p&gt;Cette année les 3 lauréats ont été :&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;M.O.F Box&lt;/strong&gt; : création et vente de smart box avec des produits réalisés par les meilleurs ouvriers de France.&lt;/li&gt;
+
+&lt;li&gt;&lt;strong&gt;SPS&lt;/strong&gt; : un système afin d’aider les services d’intervention à l’intérieur des bâtiments (stockage des plans, emplacement des extincteurs…).&lt;/li&gt;
+
+&lt;li&gt;&lt;a href=&quot;http://mybandmycity.code-troopers.com/&quot;&gt;&lt;strong&gt;My Band My City&lt;/strong&gt;&lt;/a&gt; : billetterie participative de proximité afin de promouvoir et faire venir un artiste dans une ville.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Un grand bravo aux 2 autres projets, &lt;a href=&quot;https://www.facebook.com/getstudapp&quot;&gt;Studapp&lt;/a&gt; et &lt;a href=&quot;http://sugardoc.co/&quot;&gt;SugarDoc&lt;/a&gt; arrivés au pied du podium.&lt;/p&gt;
+
+&lt;p&gt;Les inscriptions pour la version 2015 du “Tours de la Création” sont déjà ouvertes, donc si vous avez une idée, n’hésitez pas à vous rendre &lt;a href=&quot;http://accede-entreprendre.fr/le-tours-de-la-creation/&quot;&gt;ici&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;La 3&lt;sup&gt;ème&lt;/sup&gt; place à ce concours nous a confirmé que ce projet avait un fort potentiel. Nous allons donc, avec l’aide des étudiants de FBS, terminer et véritablement lancer ce projet. Si vous êtes intéressés, restez à l’écoute sur les réseaux sociaux, sur ce blog, ou sur la &lt;a href=&quot;https://www.facebook.com/mybandmycity&quot;&gt;page facebook de My Band My City&lt;/a&gt;.&lt;/p&gt;</description>
+                                <pubDate>Mon, 28 Apr 2014 00:00:00 +0200</pubDate>
+                                <link>http://code-troopers.com/2014/04/28/ConcoursAccede.html</link>
+                                <guid isPermaLink="true">http://code-troopers.com/2014/04/28/ConcoursAccede.html</guid>
+                        </item>
+                
+                        <item>
+                                <title>Retour de devoxx : Améliorer son live-coding</title>
+                                <description>&lt;p&gt;Je suis un développeur passionnné&lt;sup&gt;&lt;a href='#note1'&gt;1&lt;/a&gt;&lt;/sup&gt; et, lors des conférences, JUG (ou toutes autres présentations) j’aime bien quand le speaker présente un petit bout de code pour illustrer ses propos. Lorsque c’est du live coding, c’est encore mieux. Le seul problème c’est que quand on n’est pas au Mariott et qu’il n’y a pas un vidéoproj de malade, en général dans l’audience, passé le 3&lt;sup&gt;ème&lt;/sup&gt; rang, plus personne n’y voit rien.&lt;/p&gt;
+
+&lt;p&gt;Avant la présentation &lt;a href='http://cfp.devoxx.fr/devoxxfr2014/talk/TYC-384/42%20IntelliJ%20IDEA%20tips%20and%20tricks%20in%2045%20minutes'&gt;42 IntelliJ IDEA tips and tricks&lt;/a&gt; de Hadi Hariri (&lt;a href='https://twitter.com/@hhariri'&gt;twitter&lt;/a&gt;) la solution c’était de fermer toutes les views autour de la classe ouverte puis de faire un ctrl+scroll pour zoomer. Cette époque est maintenant révolue, en effet, IntellJ possède un mode présentation qui s’occupe de faire tout cela.&lt;/p&gt;
+
+&lt;p&gt;Le résultat en deux screens de comparaison : utilisation classique vs mode présentation&lt;/p&gt;
+&lt;div style='text-align:center;margin:50px'&gt;
+    &lt;a class='inlineBoxes' data-lightbox='group-1' href='/images/postDevoxx1/normalView.png' title='Mode normal'&gt;
+        &lt;img alt='Mode normal' class='medium' src='/images/postDevoxx1/normalView.png' /&gt;
+    &lt;/a&gt;
+    &lt;a class='inlineBoxes' data-lightbox='group-1' href='/images/postDevoxx1/presentationView.png' title='Mode présentation'&gt;
+        &lt;img alt='Mode présentation' class='medium' src='/images/postDevoxx1/presentationView.png' /&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;Pour activer le mode présentation ça se passe dans le menu &lt;code&gt;View&lt;/code&gt; &amp;gt; &lt;code&gt;Enter Presentation Mode&lt;/code&gt;. Et pour le quitter &lt;code&gt;View&lt;/code&gt; &amp;gt; &lt;code&gt;Exit Presentation Mode&lt;/code&gt;.&lt;/p&gt;
+&lt;div style='text-align:center;margin:50px'&gt;
+    &lt;a class='inlineBoxes' data-lightbox='group-1' href='/images/postDevoxx1/menu1.png' title='Menu pour passer en mode présentation'&gt;
+        &lt;img alt='Accès Menu présentation' class='medium' src='/images/postDevoxx1/menu1.png' /&gt;
+    &lt;/a&gt;
+    &lt;a class='inlineBoxes' data-lightbox='group-1' href='/images/postDevoxx1/menu2.png' title='Menu pour quitter en mode présentation'&gt;
+            &lt;img alt='Retour normal' class='medium' src='/images/postDevoxx1/menu2.png' /&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;Bien évidement, assigner un raccourci clavier permettra d’être encore plus fluide pour switcher de mode.&lt;/p&gt;
+&lt;div style='text-align:center;margin:50px;'&gt;
+    &lt;a data-lightbox='group-1' href='/images/postDevoxx1/settingShortcut.png' title='Settings pour affecter un raccourci à l&amp;apos;action présentation'&gt;
+        &lt;img alt='Settings pour raccourci' class='medium' src='/images/postDevoxx1/settingShortcut.png' /&gt;
+    &lt;/a&gt;
+&lt;/div&gt;&lt;div id='note1'&gt;[1] Une jolie faute d'orthographe sur le tshirt officiel de Devoxx que personne n'avait vu, mais qui a été révélée lors de la première keynote :-)&lt;/div&gt;
+&lt;p&gt;PS : Les sources github visibles dans les screens ne sont pas de moi, vous pouvez les consulter à cet endroit &lt;a href='https://github.com/winterbe/java8-tutorial'&gt;https://github.com/winterbe/java8-tutorial&lt;/a&gt;.&lt;/p&gt;</description>
+                                <pubDate>Mon, 21 Apr 2014 00:00:00 +0200</pubDate>
+                                <link>http://code-troopers.com/2014/04/21/devoxx1.html</link>
+                                <guid isPermaLink="true">http://code-troopers.com/2014/04/21/devoxx1.html</guid>
+                        </item>
+                
+                        <item>
+                                <title>Sortie de l'appli Aucard de Tours</title>
+                                <description>&lt;p&gt;Suite à notre &lt;a href='http://code-troopers.com/2014/03/17/Aucard.html'&gt;partenariat avec Radio Béton&lt;/a&gt;, nous vous annonçons la mise à disposition sur le Play Store de l’application officielle du festival Aucard de Tours 2014.&lt;/p&gt;
+
+&lt;p&gt;Comme vous le savez sûrement le festival Aucard de Tours, qui souhaite favoriser la découverte, ne divulgue pas la programmation heure par heure. C’est pourquoi ce n’est qu’une fois rentrés dans l’enceinte du festival que vous prenez connaissance du programme de la soirée &lt;a class='inlineBoxes' data-lightbox='image-1' href='/images/postAucard2/aucard_tableau.jpg' title='Tableau de la programmation'&gt; sur le tableau&lt;/a&gt;. Grâce à l’application Android, vous pourrez scanner un QR code (sur ce même tableau) pour disposer du programme complet de la soirée sur votre mobile. Fini les allers-retours au tableau pour savoir quel est le prochain concert.&lt;/p&gt;
+&lt;div style='text-align:center;margin:50px'&gt;
+    &lt;a class='inlineBoxes' data-lightbox='group-2' href='/images/postAucard2/screen1.png' title='Splash screen de l&amp;apos;application'&gt;
+        &lt;img alt='Splash screen' class='medium' src='/images/postAucard2/screen1.png' /&gt;
+    &lt;/a&gt;
+    &lt;a class='inlineBoxes' data-lightbox='group-2' href='/images/postAucard2/screen2.png' title='Menu de l&amp;apos;application'&gt;
+        &lt;img alt='Menu screen' class='medium' src='/images/postAucard2/screen2.png' /&gt;
+    &lt;/a&gt;
+    &lt;a class='inlineBoxes' data-lightbox='group-2' href='/images/postAucard2/screen3.png' title='Home screen de l&amp;apos;application'&gt;
+        &lt;img alt='Home screen' class='medium' src='/images/postAucard2/screen3.png' /&gt;
+    &lt;/a&gt;
+    &lt;a class='inlineBoxes' data-lightbox='group-2' href='/images/postAucard2/screen4.png' title='Une fiche artiste de l&amp;apos;application'&gt;
+        &lt;img alt='Artist screen' class='medium' src='/images/postAucard2/screen4.png' /&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;Ainsi avec cette application vous aurez la possibilité de :&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Consulter la programmation jour par jour&lt;/li&gt;
+
+&lt;li&gt;Accéder à toutes les informations des Apérocks&lt;/li&gt;
+
+&lt;li&gt;Écouter la playlist officielle du festival&lt;/li&gt;
+
+&lt;li&gt;Écouter le dernier album de chaque artiste&lt;/li&gt;
+
+&lt;li&gt;Être notifié avant le passage d’un artiste (pour ne pas rater le début)&lt;/li&gt;
+
+&lt;li&gt;Accéder à une fiche détaillée de l’artiste (liens web, vidéo, biographie…)&lt;/li&gt;
+
+&lt;li&gt;Connaître en temps réel ce qui passe et ce qui va suivre (plus besoin de retourner voir le tableau de la programmation à l’entrée)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;code&gt;Attention&lt;/code&gt; : pour profiter pleinement des fonctionnalités d’écoute de la playlist Aucard et des albums des artistes il est nécessaire de connecter son compte &lt;a href='http://www.deezer.com/offers/premiumplus'&gt;premium+ Deezer&lt;/a&gt;, dans le cas contraire, Deezer limite l’écoute à 30 secondes par morceau.&lt;/em&gt;&lt;/p&gt;
+&lt;div style='text-align:center;margin:50px'&gt;
+    &lt;a href='https://play.google.com/store/apps/details?id=com.codetroopers.aucard'&gt;
+      &lt;img alt='QRcode application Aucard de Tours' class='medium' src='/images/postAucard2/qrcode_playstore_aucard.png' /&gt;
+    &lt;/a&gt;
+    &lt;a href='https://play.google.com/store/apps/details?id=com.codetroopers.aucard'&gt;
+      &lt;img alt='Get it on Google Play' src='https://developer.android.com/images/brand/fr_generic_rgb_wo_60.png' /&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;PS : n’oubliez pas, Aucard de Tours est un festival éco-citoyens, venez avec votre gobelet réutilisable.&lt;/p&gt;</description>
+                                <pubDate>Mon, 14 Apr 2014 00:00:00 +0200</pubDate>
+                                <link>http://code-troopers.com/2014/04/14/Aucard2.html</link>
+                                <guid isPermaLink="true">http://code-troopers.com/2014/04/14/Aucard2.html</guid>
+                        </item>
+                
+                        <item>
+                                <title>Application officielle Android pour Terres du son 2014</title>
+                                <description>&lt;p&gt;Comme vous avez pu le voir dans un &lt;a href=&quot;http://code-troopers.com/2014/03/17/Aucard.html&quot;&gt;article précédent&lt;/a&gt;, Code-Troopers est en train de réaliser l’application officielle Android pour &lt;a href=&quot;http://www.radiobeton.com/aucard/&quot;&gt;Aucard de Tours&lt;/a&gt;. Deuxième bonne nouvelle, nous réalisons aussi l’application officielle Android pour un autre festival tourangeau, &lt;a href=&quot;http://terresduson.com/&quot;&gt;Terres du son&lt;/a&gt;.&lt;/p&gt;
+&lt;div style='text-align : center'&gt;
+&lt;a data-lightbox='image-0' href='/images/postTDS/tds.png' style='display: inline' title='Logo Terres du son'&gt;
+        &lt;img alt='tds logo' class='mini' src='/images/postTDS/tds.png' /&gt;
+&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;Si vous êtes à Tours, vous connaissez sûrement ce festival qui se déroule cette année le 11, 12, 13 Juillet 2014 au Domaine de Candé dans la ville de Monts (37). La programmation complète n’a pas été encore annoncée mais quelques grands noms sont déjà sortis comme -M-, Woodkid ou Ayo.&lt;/p&gt;
+
+&lt;p&gt;Cette année vous pourrez retrouver tout le programme directement sur votre mobile Android. De plus, vous allez avoir la possibilité de connaître les concerts en cours sur toutes les scènes du festival, y compris les scènes villages (partie gratuite du festival). Vous ne pourrez plus louper le début d’un concert grâce aux notifications que vous pourrez configurer sur vos artistes favoris. Enfin, l’application vous donnera des informations sur tous les artistes du festival avec des liens et la radio Deezer de l’artiste.&lt;/p&gt;
+
+&lt;p&gt;L’application devrait bientôt être disponible sur le Play Store, suivez-nous sur &lt;a href=&quot;https://twitter.com/codetroopers&quot;&gt;twitter&lt;/a&gt; pour être les premiers à l’installer.&lt;/p&gt;
+
+&lt;p&gt;Comme pour l’application Aucard de Tours, vous pouvez faire partie des betas testeurs, laissez un commentaire et vous serez peut-être sélectionnés.&lt;/p&gt;</description>
+                                <pubDate>Tue, 08 Apr 2014 00:00:00 +0200</pubDate>
+                                <link>http://code-troopers.com/2014/04/08/TerresDuSon.html</link>
+                                <guid isPermaLink="true">http://code-troopers.com/2014/04/08/TerresDuSon.html</guid>
+                        </item>
+                
+                        <item>
+                                <title>Sous le capot du Startup Weekend Tours</title>
+                                <description>&lt;p&gt;Après l’article global d’impressions sur le Startup Weekend, nous sommes obligés de faire un court article précisant ce que nous avons implémenté et utilisé du point de vue technique (c’est ce qui nous intéresse beaucoup après tout).&lt;/p&gt;
+
+&lt;h2 id=&quot;contenu_fonctionnel_&quot;&gt;Contenu fonctionnel :&lt;/h2&gt;
+
+&lt;p&gt;Puisque nous avons pris le temps de faire une application entière en 54h, nous allons tout de même détailler les fonctionnalités qui existent dans ce que nous avons produit :&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;création de compte classique (avec validation par email obligatoire)&lt;/li&gt;
+
+&lt;li&gt;création de compte via connexion Facebook&lt;/li&gt;
+
+&lt;li&gt;proposition d’ajout de spectacle&lt;/li&gt;
+
+&lt;li&gt;vote sur un spectacle existant&lt;/li&gt;
+
+&lt;li&gt;duplication de spectacle (changement de ville)&lt;/li&gt;
+
+&lt;li&gt;partage Twitter / Facebook / Google plus&lt;/li&gt;
+
+&lt;li&gt;envoi de mail selon les statuts des événements&lt;/li&gt;
+
+&lt;li&gt;&lt;em&gt;backoffice&lt;/em&gt; avec un tableau des événements et la possibilité de modifier leurs statuts&lt;/li&gt;
+
+&lt;li&gt;modération des propositions de spectacle (avec remplissage automatique de la biographie / photo d’un artiste à partir de l’API &lt;a href=&quot;http://developer.echonest.com/&quot;&gt;EchoNest&lt;/a&gt;)&lt;/li&gt;
+
+&lt;li&gt;recherche globale avec Elasticsearch (géolocalisation et &lt;em&gt;full-text&lt;/em&gt; sur artiste)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;contenu_technique_&quot;&gt;Contenu technique :&lt;/h2&gt;
+
+&lt;p&gt;Les technologies utilisées dans le projet sont :&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://playframework.org&quot;&gt;PlayFramework!&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;socle &lt;a href=&quot;https://github.com/joscha/play-authenticate&quot;&gt;Play authenticate&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;intégration &lt;a href=&quot;http://code-troopers.com/2014/03/05/passwordStrength.html&quot;&gt;password-strength&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;intégration &lt;a href=&quot;https://github.com/CedricGatay/play2-elasticsearch-jest&quot;&gt;elasticsearch-jest&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;intégration &lt;a href=&quot;https://github.com/CedricGatay/play-liquibase&quot;&gt;liquibase&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+
+&lt;li&gt;&lt;a href=&quot;http://getbootstrap.com/&quot;&gt;Twitter Bootstrap&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;a href=&quot;http://requirejs.org/&quot;&gt;RequireJS&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;a href=&quot;http://jquery.com&quot;&gt;JQuery&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://ivaynberg.github.io/select2/&quot;&gt;select2&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;a href=&quot;https://github.com/stchangg/placecomplete&quot;&gt;select2-placecomplete&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;a href=&quot;https://github.com/seiyria/bootstrap-slider&quot;&gt;bootstrap-slider&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;a href=&quot;https://github.com/dangrossman/bootstrap-daterangepicker&quot;&gt;bootstrap-daterangepicker&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+
+&lt;li&gt;&lt;a href=&quot;http://parsleyjs.org&quot;&gt;ParsleyJS&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;a href=&quot;http://elasticsearch.org&quot;&gt;ElasticSearch&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;a href=&quot;http://git-scm.com/&quot;&gt;Git&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;a href=&quot;http://gitlab.com&quot;&gt;Gitlab&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;a href=&quot;http://heroku.com&quot;&gt;Heroku&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;a href=&quot;http://www.postgresql.org/&quot;&gt;PostgreSQL&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Dans la liste des librairies utilisées, certaines sont des développements internes qui vont certainement donner lieu bientôt à quelques articles pour les détailler plus précisément. Pour rappel, le projet est consutable ici : &lt;a href=&quot;http://mybandmycity.code-troopers.com&quot;&gt;My band, My City&lt;/a&gt;.&lt;/p&gt;</description>
+                                <pubDate>Thu, 03 Apr 2014 00:00:00 +0200</pubDate>
+                                <link>http://code-troopers.com/2014/04/03/SousLeCapot-StartupWeekEndTours.html</link>
+                                <guid isPermaLink="true">http://code-troopers.com/2014/04/03/SousLeCapot-StartupWeekEndTours.html</guid>
+                        </item>
+                
+                        <item>
+                                <title>Startup Weekend Tours</title>
+                                <description>&lt;p&gt;Retour sur 54h de Startup Weekend pour la première édition à Tours &lt;a href=&quot;http://tours.startupweekend.org/&quot;&gt;#swtours&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+
+&lt;p&gt;Les Startup Weekends ont pour but d’encourager les entrepreneurs à créer leur projet en les confortant dans la viabilité de leur idée et en leur permettant de rencontrer des co-fondateurs. C’est par exemple l’occasion pour un charpentier de rencontrer des informaticiens pour réaliser un site, de rencontrer des avocats pour être sûr de la légalité et des investisseurs pour étudier la viabilité de la startup. Le tout en 54h, il faut aller vite !&lt;/p&gt;
+
+&lt;h2 id=&quot;vendredi_be_my_tourneur&quot;&gt;Vendredi (Be My Tourneur):&lt;/h2&gt;
+
+&lt;p&gt;Nous avions prévu l’événement en sortant de notre backlog idées quelques sujets qui pouvaient mériter d’être présentés lors de l’événement. Nous avons finalement présenté un sujet (que nous risquons de développer en interne dans quelque temps) concernant la prise de rendez-vous auprès des artisans.&lt;/p&gt;
+
+&lt;p&gt;La sélection des projets se fait par l’intégralité des personnes présentes, en effet, chaque participant à l’événement avait à sa disposition trois pastilles autocollantes à coller sur les différents sujets.&lt;/p&gt;
+
+&lt;p&gt;À l’issue de ce vote, les projets ayant recueillis le plus de voix ont été conservés et leurs initiateurs ont eu l’occasion de les détailler un peu plus pour pouvoir effectuer le recrutement pour mener à bien leur idée.&lt;/p&gt;
+
+&lt;p&gt;En plus des projets sélectionnés par le nombre de votes, n’importe quel projet qui arrivait à réunir une équipe d’au moins deux personnes avait le droit de lancer son idée (ce qui fut le cas de deux équipes).&lt;/p&gt;
+
+&lt;p&gt;Comme vous l’avez sûrement remarqué, l’équipe Code-Troopers est composée de développeurs qui aiment la musique, un des projets présenté consistait à donner au public l’opportunité de proposer la venue d’artistes dans une ville en particulier. C’est donc tout naturellement que nous nous sommes dirigés vers celui-ci (non sans avoir hésité avec quelques autres projets, dont celui qui a fini vainqueur, et qui le mérite amplement !)&lt;/p&gt;
+
+&lt;p&gt;Ainsi, nous nous sommes retrouvés à 8 dans l’équipe, un membre Business (responsable d’une entreprise de développement locale), trois étudiants de FBS Tours (Business également donc), un graphiste (partagé entre plusieurs projets) et les quatre Code-Troopers inscrits. Nous avons passé le reste de la soirée à brainstormer autour du sujet et voir où nous pouvions raisonnablement aller.&lt;/p&gt;
+
+&lt;p&gt;Nous sommes passés par beaucoup d’étapes et d’idées avortées avant de nous fixer sur le fonctionnement que nous avons développé pendant les deux journées qui ont suivi. Nous avons couché les principaux axes sur le papier et sommes rentrés nous coucher avant d’attaquer les choses sérieuses.&lt;/p&gt;
+
+&lt;p&gt;Fin de journée - 2h &lt;!--break--&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;samedi_ma_ville_mon_artiste&quot;&gt;Samedi (Ma Ville Mon Artiste)&lt;/h2&gt;
+
+&lt;p&gt;Pour réaliser ce site rapidement, nous avons utilisé nos outils de prédilection du moment, &lt;a href=&quot;http://www.jetbrains.com/idea/&quot;&gt;Intellij IDEA&lt;/a&gt; comme IDE pour coder avec &lt;a href=&quot;http://playframework.com&quot;&gt;Play framework!&lt;/a&gt;, le partage de sources se faisant sur un dépôt git hébergé par &lt;a href=&quot;https://gitlab.com&quot;&gt;GitLab&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Les EPICS en tête, nous nous sommes répartis les tâches pour construire le socle, les entités, les pages et les services dont nous aurions besoin. Pendant ce temps, nos collègues de la partie business s’occupaient du business plan et de l’étude de marché. La demande était forte auprès des personnes sondées mais nous n’étions pas sereins sur le financement, à savoir qui paierait et pour quels services.&lt;/p&gt;
+
+&lt;p&gt;Nous devions nous réunir vers 16h pour savoir vers quoi le développement devait s’orienter. Par exemple nous avions envisagé une partie pour que les petits groupes puissent organiser leur tournée ou pour que les clients fassent du crowdfunding pour faire venir un groupe. L’idée n’était pas arrêtée et les besoins étaient presque opposés, en un week-end nous n’aurions pas le temps de tout faire !&lt;/p&gt;
+
+&lt;p&gt;Les discussions allant entre les mentors et la partie business, ce n’est que vers 20h que nous avons eu le projet final, nous avons alors pu arrêter de nous disperser sur les fonctionnalités potentielles et nous concentrer sur le strict nécessaire pour avoir un projet fini à la fin du week-end.&lt;/p&gt;
+
+&lt;p&gt;Vers minuit, les fonctionnalités étaient toutes présentes, c’était même livré en prod (sur Heroku, avec un lien vers un serveur dédié nous appartenant pour la partie ElasticSearch) ! Par contre c’était un peu… “blanc”.&lt;/p&gt;
+&lt;div style='text-align : center'&gt;
+&lt;a data-lightbox='image-0' href='/images/postSWTours/mbmc_nostyle_1.png' style='display: inline' title='mbmc sans style'&gt;
+        &lt;img alt='mbmc sans style' class='mini' src='/images/postSWTours/mbmc_nostyle_1.png' /&gt;
+&lt;/a&gt;
+&lt;a data-lightbox='image-0' href='/images/postSWTours/mbmc_nostyle_2.png' style='display: inline' title='mbmc sans style'&gt;
+        &lt;img alt='mbmc sans style' class='mini' src='/images/postSWTours/mbmc_nostyle_2.png' /&gt;
+&lt;/a&gt;
+&lt;a data-lightbox='image-0' href='/images/postSWTours/mbmc_nostyle_3.png' style='display: inline' title='mbmc sans style'&gt;
+        &lt;img alt='mbmc sans style' class='mini' src='/images/postSWTours/mbmc_nostyle_3.png' /&gt;
+&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;C’est à ce moment là que Vincent le graphiste (&lt;a href=&quot;http://www.faceinteract.com/vnctplsn/&quot;&gt;faceinteract&lt;/a&gt;) est arrivé pour nous offrir un logo et une palette de couleur qui ont pu être intégrés dans la maquette de la page principale faite par Benjamin.&lt;/p&gt;
+
+&lt;p&gt;Fin de journée - 3h&lt;/p&gt;
+
+&lt;h2 id=&quot;dimanche_my_band_my_city&quot;&gt;Dimanche (My Band My City)&lt;/h2&gt;
+
+&lt;p&gt;Dimanche matin, réveil difficile, il reste encore beaucoup à faire pour rendre le produit sympa visuellement, mais fonctionnellement nous avons quelque chose qui tient la route. En partant du travail fourni par Vincent et Benjamin, il ne nous restait plus qu’à traduire les maquettes dans leurs versions dynamiques.&lt;/p&gt;
+
+&lt;p&gt;Le processus s’est plutôt bien passé, quelques bugs ont été introduits lors de l’opération, mais ceux-ci provenaient plus de changement dans les flux utilisateurs que d’erreurs de conception.&lt;/p&gt;
+
+&lt;p&gt;Pendant que nos amis du business rodaient leur présentation, nous avons eu l’idée de réaliser un screencast simple de l’utilisation de l’application pour éviter les effets pervers d’une démo en live (nous connaissons tous le &lt;a href=&quot;http://fr.wikipedia.org/wiki/J%C3%A9r%C3%B4me_Bonaldi#Effet_Bonaldi&quot;&gt;syndrome Bonaldi&lt;/a&gt;, et le réseau étant particulièrement capricieux, la &lt;a href=&quot;http://fr.wikipedia.org/wiki/Loi_de_Murphy&quot;&gt;loi de Murphy&lt;/a&gt; se serait abattue sur nous !). Vous pouvez consulter le screencast sur YouTube (&lt;a href=&quot;https://www.youtube.com/watch?v=hX9eeCdNIbo&quot;&gt;https://www.youtube.com/watch?v=hX9eeCdNIbo&lt;/a&gt;).&lt;/p&gt;
+&lt;div style='text-align: center'&gt;&lt;iframe frameborder='0' height='480' src='//www.youtube.com/embed/hX9eeCdNIbo' width='640'&gt; &lt;/iframe&gt;&lt;/div&gt;
+&lt;p&gt;L’application est maintenant publique &lt;a href=&quot;http://mybandmycity.code-troopers.com&quot;&gt;http://mybandmycity.code-troopers.com&lt;/a&gt; (attention ce n’est qu’une version alpha)!&lt;/p&gt;
+
+&lt;p&gt;Fin de marathon - 17h&lt;/p&gt;
+
+&lt;h2 id=&quot;verdict_final&quot;&gt;Verdict final&lt;/h2&gt;
+
+&lt;p&gt;Nous avons réussi à finir dans le top 3 ! La notation se fait autour de trois critères : le modèle économique, la validation client et l’exécution. Ce n’était pas gagné car l’idée du projet a été trouvée dans la journée de vendredi, rien n’avait été préparé avant le début du week-end ! C’est d’ailleurs aussi pour ça que le projet s’est tantôt appelé «be my tourneur», puis «ma ville mon artiste», pour finir sur «My Band My City». Le projet a tout de même séduit le jury qui nous a accordé une excellente 3ème place !&lt;/p&gt;
+
+&lt;p&gt;Merci à toute l’équipe du staff qui nous a trés bien nourris pendant ce week-end et merci à nos collègues de FBS qui ont eux aussi fait du très bon boulot.&lt;/p&gt;
+
+&lt;h2 id=&quot;classement_final&quot;&gt;Classement Final&lt;/h2&gt;
+
+&lt;p&gt;10 projets ont été présentés.&lt;/p&gt;
+
+&lt;p&gt;Les 3 premiers:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Pirate de loire : sur le principe du geo caching, touristique / économique.&lt;/li&gt;
+
+&lt;li&gt;Stud app : application simplifiant la vie des étudiants dans le flux d’informations envoyé par les écoles et universités.&lt;/li&gt;
+
+&lt;li&gt;&lt;a href=&quot;http://mybandmycity.code-troopers.com&quot;&gt;My band, My City&lt;/a&gt; : application permettant de développer une communauté pour faire venir un artiste dans sa ville.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;remerciements&quot;&gt;Remerciements&lt;/h2&gt;
+
+&lt;p&gt;Ce weekend n’aurait pas pu avoir lieu sans l’investissement de nombreuses personnes, mais nous tenons dans un premier temps à remercier les 4 organisateurs de cette premiere édition du Tours Startup Weekend : Marie Gassie - Julien Dargaisse - Julien Gomès - Julien Grimal. Ensuite il ne faut pas oublier Adrian Pica, qui a fait le déplacement de Roumanie, pour animer le weekend, et grâce à son expérience de nombreux Startup Weekend, il a su motiver et remotiver tous les participants le long de l’événement.&lt;/p&gt;
+
+&lt;p&gt;Il vient ensuite tous les mentors qui ont apportés leur connaissance du marché, leurs expériences des startups et surtout leurs côtés pragmatiques sur les questions de rentabilité et de viabilité des projets.&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-lightbox='image-1' href='/images/postSWTours/team.jpg' title='L’équipe de MyBandMyCity (de gauche à droite) : François (De Feraudy), Fabian (Petit), Julien (Pagnac), Matthieu (Bollot), Cédric (Gatay), Florian (Chauveau), Benjamin (Cousin)'&gt;
+        &lt;img alt='L’équipe de MyBandMyCity' class='mini' src='/images/postSWTours/team.jpg' /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;L’équipe de MyBandMyCity (de gauche à droite) : François (De Feraudy), Fabian (Petit), Julien (Pagnac), Matthieu (Bollot), Cédric (Gatay), Florian (Chauveau), Benjamin (Cousin)&lt;/p&gt;
+&lt;div id='fb-root' style='text-align:center' /&gt;&lt;script&gt;(function(d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = &quot;//connect.facebook.net/en_US/all.js#xfbml=1&quot;; fjs.parentNode.insertBefore(js, fjs); }(document, 'script', 'facebook-jssdk'));&lt;/script&gt;&lt;div class='fb-post' data-href='https://www.facebook.com/media/set/?set=a.236794193172341.1073741831.123604307824664&amp;amp;type=1' data-width='466'&gt;&lt;div class='fb-xfbml-parse-ignore'&gt;&lt;a href='https://www.facebook.com/media/set/?set=a.236794193172341.1073741831.123604307824664&amp;amp;type=1'&gt;Post&lt;/a&gt; by &lt;a href='https://www.facebook.com/pages/Code-Troopers/123604307824664'&gt;Code-Troopers&lt;/a&gt;.&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;PS : sad story : Le seul point négatif du weekend (mis à part le wifi), dimanche soir en rentrant, j’ai retrouvé mon vélo, mais la selle avait disparu. Tours conserve donc son titre de ville la moins sûre pour les vélos&lt;/p&gt;</description>
+                                <pubDate>Sun, 23 Mar 2014 00:00:00 +0100</pubDate>
+                                <link>http://code-troopers.com/2014/03/23/StartupWeekend.html</link>
+                                <guid isPermaLink="true">http://code-troopers.com/2014/03/23/StartupWeekend.html</guid>
+                        </item>
+                
+                        <item>
+                                <title>Distribuer sur Maven Central ses bibliothèques</title>
+                                <description>&lt;h2 id=&quot;cas_dutilisation&quot;&gt;Cas d’utilisation&lt;/h2&gt;
+
+&lt;p&gt;Il est fréquent que nous réalisions des bouts de codes qui peuvent devenir des bibliothèques (ou librairies pour les faux amis).&lt;/p&gt;
+
+&lt;p&gt;Souvent un des freins à la libre distribution de ces sources très utiles n’est pas la mise à disposition des sources (&lt;a href=&quot;http://www.github.com/code-troopers&quot;&gt;Github&lt;/a&gt; a bien aidé dans ce sens ces dernières années), mais la distribution sur un des dépôts Maven accessible au tout venant.&lt;/p&gt;
+
+&lt;p&gt;En fait, il est bon de savoir que &lt;a href=&quot;http://www.sonatype.org&quot;&gt;Sonatype&lt;/a&gt; permet la mise à disposition de n’importe quelle bibliothèque ( &lt;em&gt;open source&lt;/em&gt; ) dans &lt;a href=&quot;http://repo1.maven.org/maven2&quot;&gt;les dépôts centraux de Maven&lt;/a&gt;. Pour ce faire il suffit de suivre quelques étapes.&lt;/p&gt;
+
+&lt;h2 id=&quot;signature_des_artefacts&quot;&gt;Signature des &lt;em&gt;artefacts&lt;/em&gt;&lt;/h2&gt;
+
+&lt;p&gt;Si vous vous êtes déjà penchés sur la façon de fonctionner des dépôts Maven, vous aurez remarqué que les binaires disponibles sont en réalité signés par leurs développeurs. Le but est simple, permettre d’éviter que des petits malins introduisent des backdoors dans des librairies réputées (par exemple imaginez un hacker qui s’attaque à apache-httpclient…).&lt;/p&gt;
+
+&lt;p&gt;Ainsi il va être nécessaire de signer tous les binaires que vous allez produire, ceci passe par l’utilisation de &lt;a href=&quot;http://www.gnupg.org/&quot;&gt;GnuPG&lt;/a&gt; et de la mise à disposition de votre clef publique.&lt;/p&gt;
+
+&lt;h3 id=&quot;installation_de_gnupg&quot;&gt;Installation de GnuPG&lt;/h3&gt;
+
+&lt;p&gt;L’installation passe par votre gestionnaire de package classique (&lt;code&gt;apt-get install gpg&lt;/code&gt;, &lt;code&gt;brew install gpg&lt;/code&gt;, &lt;code&gt;install-gpg-on-my-os.exe&lt;/code&gt;…). De là, vous pourrez vérifier dans un &lt;em&gt;shell&lt;/em&gt; que vous avez une version d’accessible en tapant par exemple la commande suivante:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ gpg --version
+gpg (GnuPG) 1.4.16
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later &amp;lt;http://gnu.org/licenses/gpl.html&amp;gt;
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Home: ~/.gnupg
+Supported algorithms:
+Pubkey: RSA, RSA-E, RSA-S, ELG-E, DSA
+Cipher: IDEA, 3DES, CAST5, BLOWFISH, AES, AES192, AES256, TWOFISH,
+        CAMELLIA128, CAMELLIA192, CAMELLIA256
+Hash: MD5, SHA1, RIPEMD160, SHA256, SHA384, SHA512, SHA224
+Compression: Uncompressed, ZIP, ZLIB, BZIP2&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;gnration_de_la_clef&quot;&gt;Génération de la clef&lt;/h3&gt;
+
+&lt;p&gt;GnuPG est un mécanisme de chiffrement impliquant une clef publique (distribuée librement) associée à une clef privée (à garder précieusement). Avant de pouvoir prétendre distribuer des binaires chiffrés, il convient donc de générer le couple clef privée/publique et de distribuer la clef publique sur les serveurs appropriés. Ainsi, après avoir fourni nom, email et commentaire pour votre clef, vous serez prêt à la distribuer au plus grand nombre :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;gpg --gen-key&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Dans les écrans qui apparaissent, vous pouvez conserver les valeurs par défaut pour la plupart des éléments (type, taille et durée de validité). Enfin, vous allez devoir spécifier la &lt;em&gt;passphrase&lt;/em&gt; de votre clef. N’hésitez pas à utiliser une phrase : elle sera plus difficilement “cassable” et vous vous en rappelerez certainement mieux qu’un mot de passe complexe.&lt;/p&gt;
+
+&lt;h3 id=&quot;vrification_de_la_clef&quot;&gt;Vérification de la clef&lt;/h3&gt;
+
+&lt;p&gt;Pour vérifier que votre clef est correctement installée, vous pouvez récupérer la liste des clefs connues par votre système. Ainsi pour connaître les clefs publiques vous pouvez taper :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ gpg --list-keys
+/Users/cgatay/.gnupg/pubring.gpg
+--------------------------------
+pub   2048R/CE236D5E 2013-04-28
+uid                  Cedric Gatay &amp;lt;cedric@gatay.fr&amp;gt;
+sub   2048R/08130909 2013-04-28&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Et pour les clefs privées :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ gpg --list-secret-keys
+/Users/cgatay/.gnupg/secring.gpg
+--------------------------------
+sec   2048R/CE236D5E 2013-04-28
+uid                  Cedric Gatay &amp;lt;cedric@gatay.fr&amp;gt;
+ssb   2048R/08130909 2013-04-28&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Si la génération s’est déroulée comme prévu, la seule différence résidera dans l’emplacement du fichier correspondant au stockage de la clef publique et privée.&lt;/p&gt;
+
+&lt;h3 id=&quot;distribution_de_la_clef_publique&quot;&gt;Distribution de la clef publique&lt;/h3&gt;
+
+&lt;p&gt;Pour que tout le monde soit à même de vérifier votre “identité”, il faut distribuer votre clef publique sur les dépôts reconnus. L’un d’eux est &lt;code&gt;hkp://pool.sks-keyservers.net&lt;/code&gt; qui fera la distribution auprès des différents serveurs OpenPGP. Pour se faire, il suffit de lancer la synchronisation vers ce serveur, en remplaçant &lt;code&gt;${KEY_ID}&lt;/code&gt; par l’id de votre clef publique tel que récupéré lors de la commande précédente (dans mon cas il s’agit de &lt;code&gt;CE236D5E&lt;/code&gt;):&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ gpg --keyserver hkp://pool.sks-keyservers.net --send-keys ${KEY_ID}&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Pour vérifier que l’envoi s’est fait comme attendu, vous pouvez demander à récupérer la clef par la commande suivante :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ gpg --keyserver hkp://pool.sks-keyservers.net --recv-keys ${KEY_ID}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;cration_dun_compte_sur_sonatype&quot;&gt;Création d’un compte sur Sonatype&lt;/h2&gt;
+
+&lt;p&gt;La distribution de binaires passe par la création d’un compte sur le &lt;a href=&quot;https://issues.sonatype.org&quot;&gt;JIRA de Sonatype&lt;/a&gt;. La procédure est assez simple, elle ne vaut pas la peine d’être détaillée plus avant. Ensuite, pour faire vous autoriser à distribuer vos applicatifs, il est nécessaire de créer un ticket pour demander les droits correspondants. Ce ticket doit être du type &lt;em&gt;Support - Open Source Project Repository Hosting&lt;/em&gt; - &lt;em&gt;New Project&lt;/em&gt; dans le JIRA OSSRH. Il vous faudra ensuite remplir les champs suivants :&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;summary : Descriptif de votre projet&lt;/li&gt;
+
+&lt;li&gt;groupId : le groupId de votre projet (généralement votre nom de domaine, &lt;code&gt;com.code-troopers&lt;/code&gt; dans notre cas)&lt;/li&gt;
+
+&lt;li&gt;Project URL : URL vers le site du projet&lt;/li&gt;
+
+&lt;li&gt;SCM URL : URL vers les sources du projet&lt;/li&gt;
+
+&lt;li&gt;Nexus Username : votre nom d’utilisateur actuel (et les éventuels noms d’utilisateurs à autoriser)&lt;/li&gt;
+
+&lt;li&gt;Already sync to central : si il y a déjà des projets sur Maven central avec le même groupId&lt;/li&gt;
+
+&lt;li&gt;Description : n’importe quelle information supplémentaire que vous jugez utile de préciser&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Par exemple, le ticket correspondant à la mise à disposition de l’intégration entre &lt;a href=&quot;http://wicket.apache.org&quot;&gt;Apache Wicket&lt;/a&gt; et &lt;a href=&quot;http://www.parsleyjs.org&quot;&gt;ParsleyJS&lt;/a&gt; est &lt;a href=&quot;https://issues.sonatype.org/browse/OSSRH-6026&quot;&gt;OSSRH-6026&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;prparation_du_projet_pour_la_distribution&quot;&gt;Préparation du projet pour la distribution&lt;/h2&gt;
+
+&lt;p&gt;Pour que vous puissiez distribuer votre projet, il est nécessaire d’ajuster légèrement le descripteur de votre projet (le fameux &lt;code&gt;pom.xml&lt;/code&gt; dans notre cas traitant de Maven).&lt;/p&gt;
+
+&lt;h3 id=&quot;informations_indispensables&quot;&gt;Informations indispensables&lt;/h3&gt;
+
+&lt;p&gt;Il est nécessaire que le &lt;code&gt;pom.xml&lt;/code&gt; contienne les informations suivantes :&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;modelVersion&lt;/code&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;code&gt;groupId&lt;/code&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;code&gt;artifactId&lt;/code&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;code&gt;version&lt;/code&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;code&gt;packaging&lt;/code&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;code&gt;name&lt;/code&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;code&gt;description&lt;/code&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;code&gt;url&lt;/code&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;code&gt;licenses&lt;/code&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;code&gt;scm.url&lt;/code&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;code&gt;scm.connection&lt;/code&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;code&gt;developers&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;modification_de_votre_projet&quot;&gt;Modification de votre projet&lt;/h3&gt;
+
+&lt;p&gt;De plus il est indispensable d’hériter du &lt;a href=&quot;http://repo1.maven.org/maven2/org/sonatype/oss/oss-parent/7/oss-parent-7.pom&quot;&gt;projet parent de Sonatype&lt;/a&gt;, celui-ci décrit en fait les plugins ainsi que les dépôts qui vont être utilisés pour la livraison.&lt;/p&gt;
+
+&lt;p&gt;Vous devez donc ajouter dans votre descripteur le lien avec le parent Sonatype :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;project&amp;gt;
+  &amp;lt;parent&amp;gt;
+    &amp;lt;groupId&amp;gt;org.sonatype.oss&amp;lt;/groupId&amp;gt;
+    &amp;lt;artifactId&amp;gt;oss-parent&amp;lt;/artifactId&amp;gt;
+    &amp;lt;version&amp;gt;7&amp;lt;/version&amp;gt;
+  &amp;lt;/parent&amp;gt;
+  &amp;lt;!-- le reste de votre descripteur --&amp;gt;
+&amp;lt;/project&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Pour le remplissage des informations de votre dépôt de sources, plusieurs façon de les remplir s’offrent à vous en fonction du type de dépôt que vous utilisez, dans la majorité des cas pour les projets récents, le système de gestion de version utilisé est Git, la partie correspondant dans le &lt;code&gt;pom.xml&lt;/code&gt;sera donc de la forme suivante (en ajustant &lt;code&gt;${USER}&lt;/code&gt; et &lt;code&gt;${PROJECT}&lt;/code&gt; bien entendu) :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; &amp;lt;scm&amp;gt;
+    &amp;lt;connection&amp;gt;scm:git:git@github.com:${USER}/${PROJECT}.git&amp;lt;/connection&amp;gt;
+    &amp;lt;developerConnection&amp;gt;scm:git:git@github.com:${USER}/${PROJECT}.git&amp;lt;/developerConnection&amp;gt;
+    &amp;lt;url&amp;gt;git@github.com:${USER}/${PROJECT}.git&amp;lt;/url&amp;gt;
+  &amp;lt;/scm&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;prparation_de_votre_poste_pour_la_distribution&quot;&gt;Préparation de votre poste pour la distribution&lt;/h2&gt;
+
+&lt;p&gt;Pour déployer sur les dépôts gérés par Sonatype, vous allez devoir vous identifier pour gérer l’upload, bien entendu, il n’est pas concevable de stocker vos informations d’identification au sein du descripteur de votre projet :&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;vous ne voulez pas publier vos identifiants au grand public&lt;/li&gt;
+
+&lt;li&gt;vous ne voulez pas passer sur chacun des projets si vous les changez&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;La technique est donc d’utiliser le fichier de configuration global de Maven en définissant des paramètres. Ainsi, en éditant le fichier &lt;code&gt;~/.m2/settings.xml&lt;/code&gt; vous allez ajouter vos identifiants (encore une fois, en ajustant &lt;code&gt;${USER}&lt;/code&gt; et &lt;code&gt;${PASSWORD}&lt;/code&gt;):&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;  &amp;lt;servers&amp;gt;
+    &amp;lt;server&amp;gt;
+      &amp;lt;id&amp;gt;sonatype-nexus-snapshots&amp;lt;/id&amp;gt;
+      &amp;lt;username&amp;gt;${USER}&amp;lt;/username&amp;gt;
+      &amp;lt;password&amp;gt;${PASSWORD}&amp;lt;/password&amp;gt;
+    &amp;lt;/server&amp;gt;
+    &amp;lt;server&amp;gt;
+      &amp;lt;id&amp;gt;sonatype-nexus-staging&amp;lt;/id&amp;gt;
+      &amp;lt;username&amp;gt;${USER}&amp;lt;/username&amp;gt;
+      &amp;lt;password&amp;gt;${PASSWORD}&amp;lt;/password&amp;gt;
+    &amp;lt;/server&amp;gt;
+  &amp;lt;/servers&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;distribution_dune_version_&quot;&gt;Distribution d’une version &lt;code&gt;SNAPSHOT&lt;/code&gt;&lt;/h2&gt;
+
+&lt;p&gt;Si vous désirez distribuer vos bibliothèques sur des dépôts centraux, vous devez connaître les notions de &lt;code&gt;SNAPSHOT&lt;/code&gt; et &lt;em&gt;release&lt;/em&gt; propres à Maven. Pour faire un bref rappel, les versions &lt;code&gt;SNAPSHOT&lt;/code&gt; sont des versions en développement alors que les versions &lt;em&gt;release&lt;/em&gt; sont les versions finales. Ainsi, dépendre d’une version &lt;code&gt;SNAPSHOT&lt;/code&gt; déclenchera des vérifications régulières par l’outil de construction pour récupérer toujours la dernière version alors qu’une version &lt;em&gt;release&lt;/em&gt; ne sera rapatriée qu’une et une seule fois (en assurant la stabilité de la construction).&lt;/p&gt;
+
+&lt;p&gt;Sonatype fourni un dépôt pour de telles versions de développement ainsi qu’un dépôt pour les versions stables. Dans un premier temps et pour tester que votre système est correctement configuré, vous allez déployer une version &lt;code&gt;SNAPSHOT&lt;/code&gt; de votre librairie :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ mvn clean deploy&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Si tout se passe comme prévu, votre livrable sera visible et disponible sur le dépôt SNAPSHOT de Sonatype : &lt;a href=&quot;https://oss.sonatype.org/content/repositories/snapshots&quot;&gt;https://oss.sonatype.org/content/repositories/snapshots&lt;/a&gt; En cas d’erreur &lt;code&gt;401 Unauthorized&lt;/code&gt;, vérifiez que vos identifiants JIRA sont corrects (en vous connectant sur &lt;a href=&quot;https://issues.sonatype.org&quot;&gt;https://issues.sonatype.org&lt;/a&gt;).&lt;/p&gt;
+
+&lt;h2 id=&quot;prparation_et_distribution_dune_release&quot;&gt;Préparation et distribution d’une &lt;em&gt;release&lt;/em&gt;&lt;/h2&gt;
+
+&lt;p&gt;Le &lt;em&gt;plugin&lt;/em&gt; Maven &lt;em&gt;release&lt;/em&gt; est préconfiguré grace à l’intégration du descripteur parent de Sonatype, il suffit donc de l’utiliser pour construire votre projet, il va s’occuper de construire les livrables nécessaires, de les signer et de les déployer en tant que &lt;em&gt;staging&lt;/em&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ mvn release:clean
+$ mvn release:prepare
+$ mvn release:perform&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Lors de la procédure, le plugin &lt;em&gt;release&lt;/em&gt; va s’occuper de changer le numéro de version &lt;code&gt;SNAPSHOT&lt;/code&gt; vers un numéro &lt;em&gt;release&lt;/em&gt;, de préparer la version &lt;code&gt;SNAPSHOT&lt;/code&gt;suivante, de &lt;em&gt;tagguer&lt;/em&gt; le tout sur le système de gestion de sources. Un de ses atouts est de préparer la construction à partir d’une version propre provenant du système de gestion de sources, de cette façon vous pourrez vous assurer de la reproductibilité des constructions.&lt;/p&gt;
+
+&lt;p&gt;Vous aurez donc besoin de saisir la &lt;em&gt;passphrase&lt;/em&gt; de votre clef &lt;em&gt;GnuPG&lt;/em&gt; lors du processus, pour effectuer la signature des livrables.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Vous pouvez également distribuer votre livrable avec la commande &lt;code&gt;deploy&lt;/code&gt; comme dans le cas d’une livraison &lt;code&gt;SNAPSHOT&lt;/code&gt;.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;publication_de_vos_livrables&quot;&gt;Publication de vos livrables&lt;/h2&gt;
+
+&lt;p&gt;Pour finir la publication de votre livrable, il faut passer par l’interface de Sonatype https://oss.sonatype.org Dans la partie &lt;em&gt;Staging Repositories&lt;/em&gt;, vous verrez une ligne correspondant à votre déploiement, sur cette ligne, il faudra &lt;em&gt;close&lt;/em&gt; pour dire que la distribution est terminée, puis, une fois qu’il sera clos, il faudra en faire la &lt;em&gt;promote&lt;/em&gt; pour qu’il soit distribué vers les dépôts Maven centraux.&lt;/p&gt;
+
+&lt;p&gt;Si vous ne pouvez pas clôre ou promouvoir votre livrable, Nexus vous fournira un message d’explication (tel que “impossible de trouver le jar de sources”)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Attention&lt;/strong&gt;: pour votre première livraison vers les dépôts centraux, il sera nécessaire de mettre à jour le ticket JIRA que vous avez ouvert pour demander la synchronisation vers Maven Central.&lt;/p&gt;
+
+&lt;h2 id=&quot;ajout_dun_collaborateur&quot;&gt;Ajout d’un collaborateur&lt;/h2&gt;
+
+&lt;p&gt;Il est rare que seul une personne ait le droit d’effectuer les distributions, ainsi, dès que vous désirez ajouter quelqu’un vous devrez mettre à jour le ticket JIRA pour demander l’ajout (collaborateur qui devra suivre également la première partie du guide pour créer un compte et distribuer sa signature numérique).&lt;/p&gt;
+
+&lt;h2 id=&quot;livraison_dun_nouveau_projet&quot;&gt;Livraison d’un nouveau projet&lt;/h2&gt;
+
+&lt;p&gt;Tant que votre projet respecte le &lt;em&gt;groupId&lt;/em&gt; dont vous avez revendiqué la paternité, vous pourrez livrer et distribuer à votre convenance sans avoir besoin de créer de nouvelles demandes sur le JIRA de Sonatype.&lt;/p&gt;
+
+&lt;p&gt;Dans notre cas, nous avons enregistré &lt;code&gt;com.code-troopers&lt;/code&gt; en tant que &lt;em&gt;groupId&lt;/em&gt; parent de nos réalisations.&lt;/p&gt;</description>
+                                <pubDate>Wed, 19 Mar 2014 00:00:00 +0100</pubDate>
+                                <link>http://code-troopers.com/2014/03/19/mavenRelease.html</link>
+                                <guid isPermaLink="true">http://code-troopers.com/2014/03/19/mavenRelease.html</guid>
+                        </item>
+                
+        </channel>
+</rss>
