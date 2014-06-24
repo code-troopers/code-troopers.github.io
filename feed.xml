@@ -7,6 +7,63 @@
                 <atom:link href="http://code-troopers.com/feed.xml" rel="self" type="application/rss+xml"/>
                 
                         <item>
+                                <title>L'application Terres du Son est disponible</title>
+                                <description>&lt;p&gt;C’était annoncé, c’est maintenant chose faite ! L’application android pour &lt;em&gt;Terres du Son 2014&lt;/em&gt; est sur le Play Store.&lt;/p&gt;
+
+&lt;p&gt;Développée en partenariat avec l’équipe de TDS, cette application vous offre la possibilité de :&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Consulter la programmation jour par jour&lt;/li&gt;
+
+&lt;li&gt;Être notifié avant le passage d’un artiste (pour ne pas rater le début)&lt;/li&gt;
+
+&lt;li&gt;Être notifié avant le départ des navettes Fil Vert (pour ne pas rentrer à pied !)&lt;/li&gt;
+
+&lt;li&gt;Écouter la playlist officielle du festival&lt;/li&gt;
+
+&lt;li&gt;Écouter le dernier album de chaque artiste&lt;/li&gt;
+
+&lt;li&gt;Accéder à une fiche détaillée de l’artiste (liens web, vidéo, biographie…)&lt;/li&gt;
+
+&lt;li&gt;Connaître en temps réel ce qui passe et ce qui va suivre pour chacune des scènes&lt;/li&gt;
+
+&lt;li&gt;Consulter les horaires des navettes Fil Vert (qui font les aller-retours entre la gare routière de Tours et l’entrée du site)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div style='text-align:center;margin:50px'&gt;
+    &lt;a class='inlineBoxes' data-lightbox='group-2' href='/images/postTDS2/launch.png' title='Splash screen de l&amp;apos;application'&gt;
+        &lt;img alt='Splash screen' class='medium' src='/images/postTDS2/launch.png' /&gt;
+    &lt;/a&gt;
+    &lt;a class='inlineBoxes' data-lightbox='group-2' href='/images/postTDS2/home.png' title='Menu de l&amp;apos;application'&gt;
+        &lt;img alt='Menu screen' class='medium' src='/images/postTDS2/home.png' /&gt;
+    &lt;/a&gt;
+    &lt;a class='inlineBoxes' data-lightbox='group-2' href='/images/postTDS2/prog.png' title='Programme par jour et par scène'&gt;
+        &lt;img alt='Programme screen' class='medium' src='/images/postTDS2/prog.png' /&gt;
+    &lt;/a&gt;
+    &lt;a class='inlineBoxes' data-lightbox='group-2' href='/images/postTDS2/artiste.png' title='Une fiche artiste de l&amp;apos;application'&gt;
+        &lt;img alt='Artist screen' class='medium' src='/images/postTDS2/artiste.png' /&gt;
+    &lt;/a&gt;
+    &lt;a class='inlineBoxes' data-lightbox='group-2' href='/images/postTDS2/notifs.png' title='Récap de notifications plannifiées pour les navettes'&gt;
+        &lt;img alt='Alerte screen' class='medium' src='/images/postTDS2/notifs.png' /&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;Rendez-vous dès à présent sur le Play Store pour télécharger l’appli.&lt;br /&gt; Terres du Son est engagé dans une démarche de développement durable, télécharger l’application, c’est aussi imprimer moins de programmes et donc réduire les déchets.&lt;br /&gt; Et comme pour tous les festivals en région Centre, pensez à venir avec votre gobelet réutilisable.&lt;/p&gt;
+&lt;div style='text-align:center;margin:50px'&gt;
+    &lt;a href='https://play.google.com/store/apps/details?id=com.codetroopers.terresduson'&gt;
+      &lt;img alt='QRcode application Terres du Son' class='medium' src='/images/postTDS2/qrcode_playstore_tds.png' /&gt;
+    &lt;/a&gt;
+    &lt;a href='https://play.google.com/store/apps/details?id=com.codetroopers.terresduson'&gt;
+      &lt;img alt='Get it on Google Play' src='https://developer.android.com/images/brand/fr_generic_rgb_wo_60.png' /&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;Tous les retours, positifs comme négatifs sont les bienvenus. Alors n’hésitez pas à donner votre avis, nous en tiendrons compte pour les prochaines versions de l’application.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;code&gt;NB&lt;/code&gt; : pour profiter pleinement des fonctionnalités d’écoute de la playlist Terres du Son et des albums des artistes il est nécessaire de connecter son compte &lt;a href='http://www.deezer.com/offers/premiumplus'&gt;premium+ Deezer&lt;/a&gt;, dans le cas contraire, Deezer limite l’écoute à 30 secondes par morceau.&lt;/em&gt;&lt;/p&gt;</description>
+                                <pubDate>Tue, 24 Jun 2014 00:00:00 +0200</pubDate>
+                                <link>http://code-troopers.com/2014/06/24/TDS2.html</link>
+                                <guid isPermaLink="true">http://code-troopers.com/2014/06/24/TDS2.html</guid>
+                        </item>
+                
+                        <item>
                                 <title>Coursera - Android Handheld Systems : 2ème cours</title>
                                 <description>&lt;h3&gt;Coursera &amp; Android&lt;/h3&gt;
 &lt;p&gt;
@@ -463,232 +520,6 @@ db.default.password=&lt;/code&gt;&lt;/pre&gt;
                                 <pubDate>Sun, 23 Mar 2014 00:00:00 +0100</pubDate>
                                 <link>http://code-troopers.com/2014/03/23/StartupWeekend.html</link>
                                 <guid isPermaLink="true">http://code-troopers.com/2014/03/23/StartupWeekend.html</guid>
-                        </item>
-                
-                        <item>
-                                <title>Distribuer sur Maven Central ses bibliothèques</title>
-                                <description>&lt;h2 id=&quot;cas_dutilisation&quot;&gt;Cas d’utilisation&lt;/h2&gt;
-
-&lt;p&gt;Il est fréquent que nous réalisions des bouts de codes qui peuvent devenir des bibliothèques (ou librairies pour les faux amis).&lt;/p&gt;
-
-&lt;p&gt;Souvent un des freins à la libre distribution de ces sources très utiles n’est pas la mise à disposition des sources (&lt;a href=&quot;http://www.github.com/code-troopers&quot;&gt;Github&lt;/a&gt; a bien aidé dans ce sens ces dernières années), mais la distribution sur un des dépôts Maven accessible au tout venant.&lt;/p&gt;
-
-&lt;p&gt;En fait, il est bon de savoir que &lt;a href=&quot;http://www.sonatype.org&quot;&gt;Sonatype&lt;/a&gt; permet la mise à disposition de n’importe quelle bibliothèque ( &lt;em&gt;open source&lt;/em&gt; ) dans &lt;a href=&quot;http://repo1.maven.org/maven2&quot;&gt;les dépôts centraux de Maven&lt;/a&gt;. Pour ce faire il suffit de suivre quelques étapes.&lt;/p&gt;
-
-&lt;h2 id=&quot;signature_des_artefacts&quot;&gt;Signature des &lt;em&gt;artefacts&lt;/em&gt;&lt;/h2&gt;
-
-&lt;p&gt;Si vous vous êtes déjà penchés sur la façon de fonctionner des dépôts Maven, vous aurez remarqué que les binaires disponibles sont en réalité signés par leurs développeurs. Le but est simple, permettre d’éviter que des petits malins introduisent des backdoors dans des librairies réputées (par exemple imaginez un hacker qui s’attaque à apache-httpclient…).&lt;/p&gt;
-
-&lt;p&gt;Ainsi il va être nécessaire de signer tous les binaires que vous allez produire, ceci passe par l’utilisation de &lt;a href=&quot;http://www.gnupg.org/&quot;&gt;GnuPG&lt;/a&gt; et de la mise à disposition de votre clef publique.&lt;/p&gt;
-
-&lt;h3 id=&quot;installation_de_gnupg&quot;&gt;Installation de GnuPG&lt;/h3&gt;
-
-&lt;p&gt;L’installation passe par votre gestionnaire de package classique (&lt;code&gt;apt-get install gpg&lt;/code&gt;, &lt;code&gt;brew install gpg&lt;/code&gt;, &lt;code&gt;install-gpg-on-my-os.exe&lt;/code&gt;…). De là, vous pourrez vérifier dans un &lt;em&gt;shell&lt;/em&gt; que vous avez une version d’accessible en tapant par exemple la commande suivante:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ gpg --version
-gpg (GnuPG) 1.4.16
-Copyright (C) 2013 Free Software Foundation, Inc.
-License GPLv3+: GNU GPL version 3 or later &amp;lt;http://gnu.org/licenses/gpl.html&amp;gt;
-This is free software: you are free to change and redistribute it.
-There is NO WARRANTY, to the extent permitted by law.
-
-Home: ~/.gnupg
-Supported algorithms:
-Pubkey: RSA, RSA-E, RSA-S, ELG-E, DSA
-Cipher: IDEA, 3DES, CAST5, BLOWFISH, AES, AES192, AES256, TWOFISH,
-        CAMELLIA128, CAMELLIA192, CAMELLIA256
-Hash: MD5, SHA1, RIPEMD160, SHA256, SHA384, SHA512, SHA224
-Compression: Uncompressed, ZIP, ZLIB, BZIP2&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&quot;gnration_de_la_clef&quot;&gt;Génération de la clef&lt;/h3&gt;
-
-&lt;p&gt;GnuPG est un mécanisme de chiffrement impliquant une clef publique (distribuée librement) associée à une clef privée (à garder précieusement). Avant de pouvoir prétendre distribuer des binaires chiffrés, il convient donc de générer le couple clef privée/publique et de distribuer la clef publique sur les serveurs appropriés. Ainsi, après avoir fourni nom, email et commentaire pour votre clef, vous serez prêt à la distribuer au plus grand nombre :&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;gpg --gen-key&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Dans les écrans qui apparaissent, vous pouvez conserver les valeurs par défaut pour la plupart des éléments (type, taille et durée de validité). Enfin, vous allez devoir spécifier la &lt;em&gt;passphrase&lt;/em&gt; de votre clef. N’hésitez pas à utiliser une phrase : elle sera plus difficilement “cassable” et vous vous en rappelerez certainement mieux qu’un mot de passe complexe.&lt;/p&gt;
-
-&lt;h3 id=&quot;vrification_de_la_clef&quot;&gt;Vérification de la clef&lt;/h3&gt;
-
-&lt;p&gt;Pour vérifier que votre clef est correctement installée, vous pouvez récupérer la liste des clefs connues par votre système. Ainsi pour connaître les clefs publiques vous pouvez taper :&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ gpg --list-keys
-/Users/cgatay/.gnupg/pubring.gpg
---------------------------------
-pub   2048R/CE236D5E 2013-04-28
-uid                  Cedric Gatay &amp;lt;cedric@gatay.fr&amp;gt;
-sub   2048R/08130909 2013-04-28&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Et pour les clefs privées :&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ gpg --list-secret-keys
-/Users/cgatay/.gnupg/secring.gpg
---------------------------------
-sec   2048R/CE236D5E 2013-04-28
-uid                  Cedric Gatay &amp;lt;cedric@gatay.fr&amp;gt;
-ssb   2048R/08130909 2013-04-28&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Si la génération s’est déroulée comme prévu, la seule différence résidera dans l’emplacement du fichier correspondant au stockage de la clef publique et privée.&lt;/p&gt;
-
-&lt;h3 id=&quot;distribution_de_la_clef_publique&quot;&gt;Distribution de la clef publique&lt;/h3&gt;
-
-&lt;p&gt;Pour que tout le monde soit à même de vérifier votre “identité”, il faut distribuer votre clef publique sur les dépôts reconnus. L’un d’eux est &lt;code&gt;hkp://pool.sks-keyservers.net&lt;/code&gt; qui fera la distribution auprès des différents serveurs OpenPGP. Pour se faire, il suffit de lancer la synchronisation vers ce serveur, en remplaçant &lt;code&gt;${KEY_ID}&lt;/code&gt; par l’id de votre clef publique tel que récupéré lors de la commande précédente (dans mon cas il s’agit de &lt;code&gt;CE236D5E&lt;/code&gt;):&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ gpg --keyserver hkp://pool.sks-keyservers.net --send-keys ${KEY_ID}&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Pour vérifier que l’envoi s’est fait comme attendu, vous pouvez demander à récupérer la clef par la commande suivante :&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ gpg --keyserver hkp://pool.sks-keyservers.net --recv-keys ${KEY_ID}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&quot;cration_dun_compte_sur_sonatype&quot;&gt;Création d’un compte sur Sonatype&lt;/h2&gt;
-
-&lt;p&gt;La distribution de binaires passe par la création d’un compte sur le &lt;a href=&quot;https://issues.sonatype.org&quot;&gt;JIRA de Sonatype&lt;/a&gt;. La procédure est assez simple, elle ne vaut pas la peine d’être détaillée plus avant. Ensuite, pour faire vous autoriser à distribuer vos applicatifs, il est nécessaire de créer un ticket pour demander les droits correspondants. Ce ticket doit être du type &lt;em&gt;Support - Open Source Project Repository Hosting&lt;/em&gt; - &lt;em&gt;New Project&lt;/em&gt; dans le JIRA OSSRH. Il vous faudra ensuite remplir les champs suivants :&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;summary : Descriptif de votre projet&lt;/li&gt;
-
-&lt;li&gt;groupId : le groupId de votre projet (généralement votre nom de domaine, &lt;code&gt;com.code-troopers&lt;/code&gt; dans notre cas)&lt;/li&gt;
-
-&lt;li&gt;Project URL : URL vers le site du projet&lt;/li&gt;
-
-&lt;li&gt;SCM URL : URL vers les sources du projet&lt;/li&gt;
-
-&lt;li&gt;Nexus Username : votre nom d’utilisateur actuel (et les éventuels noms d’utilisateurs à autoriser)&lt;/li&gt;
-
-&lt;li&gt;Already sync to central : si il y a déjà des projets sur Maven central avec le même groupId&lt;/li&gt;
-
-&lt;li&gt;Description : n’importe quelle information supplémentaire que vous jugez utile de préciser&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Par exemple, le ticket correspondant à la mise à disposition de l’intégration entre &lt;a href=&quot;http://wicket.apache.org&quot;&gt;Apache Wicket&lt;/a&gt; et &lt;a href=&quot;http://www.parsleyjs.org&quot;&gt;ParsleyJS&lt;/a&gt; est &lt;a href=&quot;https://issues.sonatype.org/browse/OSSRH-6026&quot;&gt;OSSRH-6026&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;prparation_du_projet_pour_la_distribution&quot;&gt;Préparation du projet pour la distribution&lt;/h2&gt;
-
-&lt;p&gt;Pour que vous puissiez distribuer votre projet, il est nécessaire d’ajuster légèrement le descripteur de votre projet (le fameux &lt;code&gt;pom.xml&lt;/code&gt; dans notre cas traitant de Maven).&lt;/p&gt;
-
-&lt;h3 id=&quot;informations_indispensables&quot;&gt;Informations indispensables&lt;/h3&gt;
-
-&lt;p&gt;Il est nécessaire que le &lt;code&gt;pom.xml&lt;/code&gt; contienne les informations suivantes :&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;modelVersion&lt;/code&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;code&gt;groupId&lt;/code&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;code&gt;artifactId&lt;/code&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;code&gt;version&lt;/code&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;code&gt;packaging&lt;/code&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;code&gt;name&lt;/code&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;code&gt;description&lt;/code&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;code&gt;url&lt;/code&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;code&gt;licenses&lt;/code&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;code&gt;scm.url&lt;/code&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;code&gt;scm.connection&lt;/code&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;code&gt;developers&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;modification_de_votre_projet&quot;&gt;Modification de votre projet&lt;/h3&gt;
-
-&lt;p&gt;De plus il est indispensable d’hériter du &lt;a href=&quot;http://repo1.maven.org/maven2/org/sonatype/oss/oss-parent/7/oss-parent-7.pom&quot;&gt;projet parent de Sonatype&lt;/a&gt;, celui-ci décrit en fait les plugins ainsi que les dépôts qui vont être utilisés pour la livraison.&lt;/p&gt;
-
-&lt;p&gt;Vous devez donc ajouter dans votre descripteur le lien avec le parent Sonatype :&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;lt;project&amp;gt;
-  &amp;lt;parent&amp;gt;
-    &amp;lt;groupId&amp;gt;org.sonatype.oss&amp;lt;/groupId&amp;gt;
-    &amp;lt;artifactId&amp;gt;oss-parent&amp;lt;/artifactId&amp;gt;
-    &amp;lt;version&amp;gt;7&amp;lt;/version&amp;gt;
-  &amp;lt;/parent&amp;gt;
-  &amp;lt;!-- le reste de votre descripteur --&amp;gt;
-&amp;lt;/project&amp;gt;&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Pour le remplissage des informations de votre dépôt de sources, plusieurs façon de les remplir s’offrent à vous en fonction du type de dépôt que vous utilisez, dans la majorité des cas pour les projets récents, le système de gestion de version utilisé est Git, la partie correspondant dans le &lt;code&gt;pom.xml&lt;/code&gt;sera donc de la forme suivante (en ajustant &lt;code&gt;${USER}&lt;/code&gt; et &lt;code&gt;${PROJECT}&lt;/code&gt; bien entendu) :&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt; &amp;lt;scm&amp;gt;
-    &amp;lt;connection&amp;gt;scm:git:git@github.com:${USER}/${PROJECT}.git&amp;lt;/connection&amp;gt;
-    &amp;lt;developerConnection&amp;gt;scm:git:git@github.com:${USER}/${PROJECT}.git&amp;lt;/developerConnection&amp;gt;
-    &amp;lt;url&amp;gt;git@github.com:${USER}/${PROJECT}.git&amp;lt;/url&amp;gt;
-  &amp;lt;/scm&amp;gt;&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&quot;prparation_de_votre_poste_pour_la_distribution&quot;&gt;Préparation de votre poste pour la distribution&lt;/h2&gt;
-
-&lt;p&gt;Pour déployer sur les dépôts gérés par Sonatype, vous allez devoir vous identifier pour gérer l’upload, bien entendu, il n’est pas concevable de stocker vos informations d’identification au sein du descripteur de votre projet :&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;vous ne voulez pas publier vos identifiants au grand public&lt;/li&gt;
-
-&lt;li&gt;vous ne voulez pas passer sur chacun des projets si vous les changez&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;La technique est donc d’utiliser le fichier de configuration global de Maven en définissant des paramètres. Ainsi, en éditant le fichier &lt;code&gt;~/.m2/settings.xml&lt;/code&gt; vous allez ajouter vos identifiants (encore une fois, en ajustant &lt;code&gt;${USER}&lt;/code&gt; et &lt;code&gt;${PASSWORD}&lt;/code&gt;):&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;  &amp;lt;servers&amp;gt;
-    &amp;lt;server&amp;gt;
-      &amp;lt;id&amp;gt;sonatype-nexus-snapshots&amp;lt;/id&amp;gt;
-      &amp;lt;username&amp;gt;${USER}&amp;lt;/username&amp;gt;
-      &amp;lt;password&amp;gt;${PASSWORD}&amp;lt;/password&amp;gt;
-    &amp;lt;/server&amp;gt;
-    &amp;lt;server&amp;gt;
-      &amp;lt;id&amp;gt;sonatype-nexus-staging&amp;lt;/id&amp;gt;
-      &amp;lt;username&amp;gt;${USER}&amp;lt;/username&amp;gt;
-      &amp;lt;password&amp;gt;${PASSWORD}&amp;lt;/password&amp;gt;
-    &amp;lt;/server&amp;gt;
-  &amp;lt;/servers&amp;gt;&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&quot;distribution_dune_version_&quot;&gt;Distribution d’une version &lt;code&gt;SNAPSHOT&lt;/code&gt;&lt;/h2&gt;
-
-&lt;p&gt;Si vous désirez distribuer vos bibliothèques sur des dépôts centraux, vous devez connaître les notions de &lt;code&gt;SNAPSHOT&lt;/code&gt; et &lt;em&gt;release&lt;/em&gt; propres à Maven. Pour faire un bref rappel, les versions &lt;code&gt;SNAPSHOT&lt;/code&gt; sont des versions en développement alors que les versions &lt;em&gt;release&lt;/em&gt; sont les versions finales. Ainsi, dépendre d’une version &lt;code&gt;SNAPSHOT&lt;/code&gt; déclenchera des vérifications régulières par l’outil de construction pour récupérer toujours la dernière version alors qu’une version &lt;em&gt;release&lt;/em&gt; ne sera rapatriée qu’une et une seule fois (en assurant la stabilité de la construction).&lt;/p&gt;
-
-&lt;p&gt;Sonatype fourni un dépôt pour de telles versions de développement ainsi qu’un dépôt pour les versions stables. Dans un premier temps et pour tester que votre système est correctement configuré, vous allez déployer une version &lt;code&gt;SNAPSHOT&lt;/code&gt; de votre librairie :&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ mvn clean deploy&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Si tout se passe comme prévu, votre livrable sera visible et disponible sur le dépôt SNAPSHOT de Sonatype : &lt;a href=&quot;https://oss.sonatype.org/content/repositories/snapshots&quot;&gt;https://oss.sonatype.org/content/repositories/snapshots&lt;/a&gt; En cas d’erreur &lt;code&gt;401 Unauthorized&lt;/code&gt;, vérifiez que vos identifiants JIRA sont corrects (en vous connectant sur &lt;a href=&quot;https://issues.sonatype.org&quot;&gt;https://issues.sonatype.org&lt;/a&gt;).&lt;/p&gt;
-
-&lt;h2 id=&quot;prparation_et_distribution_dune_release&quot;&gt;Préparation et distribution d’une &lt;em&gt;release&lt;/em&gt;&lt;/h2&gt;
-
-&lt;p&gt;Le &lt;em&gt;plugin&lt;/em&gt; Maven &lt;em&gt;release&lt;/em&gt; est préconfiguré grace à l’intégration du descripteur parent de Sonatype, il suffit donc de l’utiliser pour construire votre projet, il va s’occuper de construire les livrables nécessaires, de les signer et de les déployer en tant que &lt;em&gt;staging&lt;/em&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ mvn release:clean
-$ mvn release:prepare
-$ mvn release:perform&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Lors de la procédure, le plugin &lt;em&gt;release&lt;/em&gt; va s’occuper de changer le numéro de version &lt;code&gt;SNAPSHOT&lt;/code&gt; vers un numéro &lt;em&gt;release&lt;/em&gt;, de préparer la version &lt;code&gt;SNAPSHOT&lt;/code&gt;suivante, de &lt;em&gt;tagguer&lt;/em&gt; le tout sur le système de gestion de sources. Un de ses atouts est de préparer la construction à partir d’une version propre provenant du système de gestion de sources, de cette façon vous pourrez vous assurer de la reproductibilité des constructions.&lt;/p&gt;
-
-&lt;p&gt;Vous aurez donc besoin de saisir la &lt;em&gt;passphrase&lt;/em&gt; de votre clef &lt;em&gt;GnuPG&lt;/em&gt; lors du processus, pour effectuer la signature des livrables.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Vous pouvez également distribuer votre livrable avec la commande &lt;code&gt;deploy&lt;/code&gt; comme dans le cas d’une livraison &lt;code&gt;SNAPSHOT&lt;/code&gt;.&lt;/em&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;publication_de_vos_livrables&quot;&gt;Publication de vos livrables&lt;/h2&gt;
-
-&lt;p&gt;Pour finir la publication de votre livrable, il faut passer par l’interface de Sonatype https://oss.sonatype.org Dans la partie &lt;em&gt;Staging Repositories&lt;/em&gt;, vous verrez une ligne correspondant à votre déploiement, sur cette ligne, il faudra &lt;em&gt;close&lt;/em&gt; pour dire que la distribution est terminée, puis, une fois qu’il sera clos, il faudra en faire la &lt;em&gt;promote&lt;/em&gt; pour qu’il soit distribué vers les dépôts Maven centraux.&lt;/p&gt;
-
-&lt;p&gt;Si vous ne pouvez pas clôre ou promouvoir votre livrable, Nexus vous fournira un message d’explication (tel que “impossible de trouver le jar de sources”)&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Attention&lt;/strong&gt;: pour votre première livraison vers les dépôts centraux, il sera nécessaire de mettre à jour le ticket JIRA que vous avez ouvert pour demander la synchronisation vers Maven Central.&lt;/p&gt;
-
-&lt;h2 id=&quot;ajout_dun_collaborateur&quot;&gt;Ajout d’un collaborateur&lt;/h2&gt;
-
-&lt;p&gt;Il est rare que seul une personne ait le droit d’effectuer les distributions, ainsi, dès que vous désirez ajouter quelqu’un vous devrez mettre à jour le ticket JIRA pour demander l’ajout (collaborateur qui devra suivre également la première partie du guide pour créer un compte et distribuer sa signature numérique).&lt;/p&gt;
-
-&lt;h2 id=&quot;livraison_dun_nouveau_projet&quot;&gt;Livraison d’un nouveau projet&lt;/h2&gt;
-
-&lt;p&gt;Tant que votre projet respecte le &lt;em&gt;groupId&lt;/em&gt; dont vous avez revendiqué la paternité, vous pourrez livrer et distribuer à votre convenance sans avoir besoin de créer de nouvelles demandes sur le JIRA de Sonatype.&lt;/p&gt;
-
-&lt;p&gt;Dans notre cas, nous avons enregistré &lt;code&gt;com.code-troopers&lt;/code&gt; en tant que &lt;em&gt;groupId&lt;/em&gt; parent de nos réalisations.&lt;/p&gt;</description>
-                                <pubDate>Wed, 19 Mar 2014 00:00:00 +0100</pubDate>
-                                <link>http://code-troopers.com/2014/03/19/mavenRelease.html</link>
-                                <guid isPermaLink="true">http://code-troopers.com/2014/03/19/mavenRelease.html</guid>
                         </item>
                 
         </channel>
