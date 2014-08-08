@@ -22,7 +22,7 @@ Nouvelle feature introduite dans la semaine, le partage monde est une possibilit
 À voir ce que cela donne sur le long terme.
 
 ## 5 - Côté Administration
-Pour la partie gestion de sa société (ou groupe, ou n'importe) pas grand chose à faire, et c'est tant mieux. Il est possible d'ajouter / supprimer des utilisateurs, de les flaguer comme administrateur à leur tour. Et c'est à peu prêt tout.
+Pour la partie gestion de sa société (ou groupe, ou n'importe) pas grand chose à faire, et c'est tant mieux. Il est possible d'ajouter / supprimer des utilisateurs, de les flaguer comme administrateur à leur tour. Et c'est à peu près tout.
 Il y a aussi la gestion des catégories utilisées lors de la publication des liens. Cela mériterait peut-être d'être accessible par défaut à tous les utilisateurs afin de ne pas avoir à répondre aux "Tu peux ajouter cette catégorie stp !"
 
 ## 6 - Le plus d'ElCurator
