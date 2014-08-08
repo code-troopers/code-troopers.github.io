@@ -7,6 +7,44 @@
                 <atom:link href="http://code-troopers.com/feed.xml" rel="self" type="application/rss+xml"/>
                 
                         <item>
+                                <title>Elcurator, le nouvel outil de curation par Octo</title>
+                                <description>&lt;h2 id=&quot;1__la_curation&quot;&gt;1 - La curation&lt;/h2&gt;
+
+&lt;p&gt;Fatigué de partager vos bons liens à vos collègues par irc, hipchat ou mail et que 2 jours plus tard on vous les redemande pour la 5ème fois ? Dans ce cas c’est que vous avez besoin d’un outil de curation. Derrière ce mot plutôt moche se cache le principe de veille technologique à l’échelle de l’entreprise. Cela permet de concentrer les efforts en la matière en un seul endroit pour que toute une équipe (ou société, ou autre) puisse en bénéficier.&lt;/p&gt;
+
+&lt;h2 id=&quot;2_pourquoi_elcurator_&quot;&gt;2- Pourquoi ElCurator ?&lt;/h2&gt;
+
+&lt;p&gt;Chez Code-Troopers, nous utilisons &lt;a href=&quot;http://www.elcurator.net/&quot;&gt;ElCurator&lt;/a&gt; depuis déjà 3 semaines, et cela pour deux raisons. La première c’est que nous venons tout juste de ressentir le besoin d’avoir un tel outil à notre service (équipe pas toujours sur hipchat en même temps, pas toujours dans le même bureau, et surtout début des vacances, donc passage de connaissances rendu plus compliqué). Et deuxièmement, c’est pile pendant nos recherches qu’&lt;a href=&quot;http://www.octo.com/&quot;&gt;Octo&lt;/a&gt; a lancé sa solution ElCurator. Donc en plus d’un timming parfait de leur part, c’est aussi parce que nous apprécions la création française que nous avons saisi l’occasion de tester et soutenir une bonne initiative d’une autre boite de développement Made in France.&lt;/p&gt;
+
+&lt;h2 id=&quot;3__les_fonctionnalits&quot;&gt;3 - Les Fonctionnalités&lt;/h2&gt;
+
+&lt;p&gt;Dans ce qu’il est possible de faire avec ElCurator, on retrouve évidemment la possiblité de poster un lien. Lors de cette action, il faut lui attribuer une catégorie et un commentaire / descriptif (un peu fastidieux les premières fois, ce commentaire est finalement bien utile pour les autres utilisateurs, afin d’avoir quelques informations sur le lien en question) Ensuite, une fois un lien posté, chaque utilisateur a la possibilité de le lire (bien évidement), de le marquer comme favori, de le flaguer pour le lire plus tard… autant de petites actions permettant à chacun de s’organiser comme il le souhaite. Il s’agit donc d’une interface claire et efficace, sans features superflues qui viendraient capter inutilement notre attention et qui répond parfaitement à la problématique posée de partage d’informations et de gain de temps.&lt;/p&gt;
+
+&lt;h2 id=&quot;4__partage_monde&quot;&gt;4 - Partage Monde&lt;/h2&gt;
+
+&lt;p&gt;Nouvelle feature introduite dans la semaine, le partage monde est une possibilité offerte lors de l’ajout d’un lien, de le publier à tous les utilisateurs d’ElCurator (et pas uniquement à ceux de son groupe). Pour le moment je reste perplexe face à cette fonctionnalité qui ressemble de prime abord à un twitter privé ElCurator (sans les selfies ou autres) dans lequel il va falloir creuser pour trouver les liens qui nous correspondent : l’effet inverse de ce qu’ElCurator est censé nous apporter… À voir ce que cela donne sur le long terme.&lt;/p&gt;
+
+&lt;h2 id=&quot;5__ct_administration&quot;&gt;5 - Côté Administration&lt;/h2&gt;
+
+&lt;p&gt;Pour la partie gestion de sa société (ou groupe, ou n’importe) pas grand chose à faire, et c’est tant mieux. Il est possible d’ajouter / supprimer des utilisateurs, de les flaguer comme administrateur à leur tour. Et c’est à peu près tout. Il y a aussi la gestion des catégories utilisées lors de la publication des liens. Cela mériterait peut-être d’être accessible par défaut à tous les utilisateurs afin de ne pas avoir à répondre aux “Tu peux ajouter cette catégorie stp !”&lt;/p&gt;
+
+&lt;h2 id=&quot;6__le_plus_delcurator&quot;&gt;6 - Le plus d’ElCurator&lt;/h2&gt;
+
+&lt;p&gt;Octo a introduit une notion de gamification dans sa plateforme. Ainsi, lorsqu’un utilisateur poste un lien, tous les autres membres peuvent voter (à coup de +1) sur la publication afin de distinguer facilement les liens les plus appréciés par le groupe. Et une fois par semaine un récapitulatif est généré afin de savoir qui a posté les liens les plus utiles (les plus votés) et cette personne est désignée “ElCurator de la semaine”. Il y a donc un petit challenge entre les personnes de l’équipe pour savoir qui apportera les liens les plus utiles. Attention toutefois à ce que les chefs d’équipe/managers ou autres n’utilisent pas cette fonction à mauvais escient pour désigner une personne plus efficace que les autres en se basant uniquement sur ce fait.&lt;/p&gt;
+
+&lt;h2 id=&quot;7_un_outil_encore__paufiner&quot;&gt;7- Un outil encore à paufiner&lt;/h2&gt;
+
+&lt;p&gt;Disponible seulement depuis quelques semaines, ElCurator n’a pas encore atteint sa forme finale. Les équipes d’Octo travaillant dessus ont d’ailleurs branché uservoice afin de recueillir le feedback des utilisateurs. Et ils prennent en compte ces remontées. Donc n’hésitez pas à leur faire part des dysfonctionnements ou souhaits d’évolution. Ils ont déjà répondu favorablement à quelque uns de mes tickets.&lt;/p&gt;
+
+&lt;h2 id=&quot;8__conclusion&quot;&gt;8 - Conclusion&lt;/h2&gt;
+
+&lt;p&gt;ElCurator est une réalisastion très bien menée par Octo. Simple et fluide, chez Code-Troopers nous l’avons adoptée avec plaisir. Et je conseille vivement à tous ceux qui n’ont pas encore testé la curation de s’y mettre avec cet outil, c’est un gain de temps assuré pour peu que quelques utilisateurs jouent le jeu.&lt;/p&gt;</description>
+                                <pubDate>Fri, 08 Aug 2014 00:00:00 +0200</pubDate>
+                                <link>http://code-troopers.com/2014/08/08/ElCurator.html</link>
+                                <guid isPermaLink="true">http://code-troopers.com/2014/08/08/ElCurator.html</guid>
+                        </item>
+                
+                        <item>
                                 <title>Coursera - Android Handheld Systems : 3ème et dernier cours</title>
                                 <description>&lt;h3&gt;On Enchaîne !&lt;/h3&gt;
 &lt;p&gt;
@@ -410,88 +448,6 @@ db.default.password=&lt;/code&gt;&lt;/pre&gt;
                                 <pubDate>Tue, 08 Apr 2014 00:00:00 +0200</pubDate>
                                 <link>http://code-troopers.com/2014/04/08/TerresDuSon.html</link>
                                 <guid isPermaLink="true">http://code-troopers.com/2014/04/08/TerresDuSon.html</guid>
-                        </item>
-                
-                        <item>
-                                <title>Sous le capot du Startup Weekend Tours</title>
-                                <description>&lt;p&gt;Après l’article global d’impressions sur le Startup Weekend, nous sommes obligés de faire un court article précisant ce que nous avons implémenté et utilisé du point de vue technique (c’est ce qui nous intéresse beaucoup après tout).&lt;/p&gt;
-
-&lt;h2 id=&quot;contenu_fonctionnel_&quot;&gt;Contenu fonctionnel :&lt;/h2&gt;
-
-&lt;p&gt;Puisque nous avons pris le temps de faire une application entière en 54h, nous allons tout de même détailler les fonctionnalités qui existent dans ce que nous avons produit :&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;création de compte classique (avec validation par email obligatoire)&lt;/li&gt;
-
-&lt;li&gt;création de compte via connexion Facebook&lt;/li&gt;
-
-&lt;li&gt;proposition d’ajout de spectacle&lt;/li&gt;
-
-&lt;li&gt;vote sur un spectacle existant&lt;/li&gt;
-
-&lt;li&gt;duplication de spectacle (changement de ville)&lt;/li&gt;
-
-&lt;li&gt;partage Twitter / Facebook / Google plus&lt;/li&gt;
-
-&lt;li&gt;envoi de mail selon les statuts des événements&lt;/li&gt;
-
-&lt;li&gt;&lt;em&gt;backoffice&lt;/em&gt; avec un tableau des événements et la possibilité de modifier leurs statuts&lt;/li&gt;
-
-&lt;li&gt;modération des propositions de spectacle (avec remplissage automatique de la biographie / photo d’un artiste à partir de l’API &lt;a href=&quot;http://developer.echonest.com/&quot;&gt;EchoNest&lt;/a&gt;)&lt;/li&gt;
-
-&lt;li&gt;recherche globale avec Elasticsearch (géolocalisation et &lt;em&gt;full-text&lt;/em&gt; sur artiste)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;contenu_technique_&quot;&gt;Contenu technique :&lt;/h2&gt;
-
-&lt;p&gt;Les technologies utilisées dans le projet sont :&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://playframework.org&quot;&gt;PlayFramework!&lt;/a&gt;
-&lt;ul&gt;
-&lt;li&gt;socle &lt;a href=&quot;https://github.com/joscha/play-authenticate&quot;&gt;Play authenticate&lt;/a&gt;&lt;/li&gt;
-
-&lt;li&gt;intégration &lt;a href=&quot;http://code-troopers.com/2014/03/05/passwordStrength.html&quot;&gt;password-strength&lt;/a&gt;&lt;/li&gt;
-
-&lt;li&gt;intégration &lt;a href=&quot;https://github.com/CedricGatay/play2-elasticsearch-jest&quot;&gt;elasticsearch-jest&lt;/a&gt;&lt;/li&gt;
-
-&lt;li&gt;intégration &lt;a href=&quot;https://github.com/CedricGatay/play-liquibase&quot;&gt;liquibase&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-
-&lt;li&gt;&lt;a href=&quot;http://getbootstrap.com/&quot;&gt;Twitter Bootstrap&lt;/a&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;a href=&quot;http://requirejs.org/&quot;&gt;RequireJS&lt;/a&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;a href=&quot;http://jquery.com&quot;&gt;JQuery&lt;/a&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://ivaynberg.github.io/select2/&quot;&gt;select2&lt;/a&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;a href=&quot;https://github.com/stchangg/placecomplete&quot;&gt;select2-placecomplete&lt;/a&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;a href=&quot;https://github.com/seiyria/bootstrap-slider&quot;&gt;bootstrap-slider&lt;/a&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;a href=&quot;https://github.com/dangrossman/bootstrap-daterangepicker&quot;&gt;bootstrap-daterangepicker&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-
-&lt;li&gt;&lt;a href=&quot;http://parsleyjs.org&quot;&gt;ParsleyJS&lt;/a&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;a href=&quot;http://elasticsearch.org&quot;&gt;ElasticSearch&lt;/a&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;a href=&quot;http://git-scm.com/&quot;&gt;Git&lt;/a&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;a href=&quot;http://gitlab.com&quot;&gt;Gitlab&lt;/a&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;a href=&quot;http://heroku.com&quot;&gt;Heroku&lt;/a&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;a href=&quot;http://www.postgresql.org/&quot;&gt;PostgreSQL&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Dans la liste des librairies utilisées, certaines sont des développements internes qui vont certainement donner lieu bientôt à quelques articles pour les détailler plus précisément. Pour rappel, le projet est consutable ici : &lt;a href=&quot;http://mybandmycity.code-troopers.com&quot;&gt;My band, My City&lt;/a&gt;.&lt;/p&gt;</description>
-                                <pubDate>Thu, 03 Apr 2014 00:00:00 +0200</pubDate>
-                                <link>http://code-troopers.com/2014/04/03/SousLeCapot-StartupWeekEndTours.html</link>
-                                <guid isPermaLink="true">http://code-troopers.com/2014/04/03/SousLeCapot-StartupWeekEndTours.html</guid>
                         </item>
                 
         </channel>
