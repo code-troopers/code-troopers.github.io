@@ -21,9 +21,7 @@ $(function () {
                                                autoPlay: 3000,
                                                stopOnHover: true,
                                                lazyLoad: true,
-                                               afterInit: function () {
-                                                   $("[title]").tooltip();
-                                               }
+
                                            });
 
     $(".projects-carousel").owlCarousel({
@@ -33,9 +31,7 @@ $(function () {
                                             autoPlay: 3000,
                                             stopOnHover: true,
                                             lazyLoad: true,
-                                            afterInit: function () {
-                                                $("[title]").tooltip();
-                                            }
+                                            
                                         });
     if (window.addEventListener) {
         var a = [];
