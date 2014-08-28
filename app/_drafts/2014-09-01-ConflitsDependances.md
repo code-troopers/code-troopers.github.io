@@ -6,7 +6,6 @@ cover: maven-banner
 tags: [Maven, Dependances, Tips]
 ---
 
-# Résoudre les conflits de dépendances
 Lors de nos développements, nous reposons beaucoup sur des projets externes qui nous fournissent énormément de services
 utiles. Dans un récent projet, nous avons eu besoin de faire fonctionner Neo4j conjointement à ElasticSearch. Jusqu'ici,
 aucun soucis n'est à déplorer, mais nous avions une exigeance particulière : il fallait que l'application puisse
