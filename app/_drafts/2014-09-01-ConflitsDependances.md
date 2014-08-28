@@ -11,7 +11,9 @@ utiles. Dans un récent projet, nous avons eu besoin de faire fonctionner Neo4j 
 aucun soucis n'est à déplorer, mais nous avions une exigeance particulière : il fallait que l'application puisse
 démarrer automatiquement un serveur Neo4J ainsi qu'un serveur ElasticSearch sur les postes de développements (ainsi que
 pour les tests d'intégration).
+
 ## Problème existant
+
 Les deux outils que nous utilisons se basent sur Apache Lucene pour toute la partie indexation et accès aux données.
 Mais, et c'est là que le problème se situe, ils n'utilisent pas les mêmes versions de Lucene.
 
@@ -39,6 +41,7 @@ ou `NoSuchMethodError` qui n'est pas des plus explicites (d'autant plus lorsque 
 contient ledit symbole non trouvé).
 
 ## Solution de contournement
+
 Le conflit est assez simple à contourner une fois qu'on a compris ce qui se passe. En fait, il y a deux classes portant
 le même nom dans les classes chargées, par exemple `org.lucene.MaClass`, l'une effaçant l'autre aux yeux du
 `ClassLoader`.
@@ -78,6 +81,7 @@ configuré le plugin `shade` pour qu'il inclue le contenu de la dépendance d'Ap
       </plugin>
 
 ## Déploiement et nommage
+
 Pour ne pas polluer les dépôts, le numéro de version modifié a été postfixé par `-shaded`. Le déploiement a été fait sur
 un dépôt Maven qui est en fait un simple repository Github.
 Le commit correspondant à cette modification [est consultable
