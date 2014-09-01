@@ -8,7 +8,7 @@ tags: [Maven, Dependances, Tips]
 
 Lors de nos développements, nous reposons beaucoup sur des projets externes qui nous fournissent énormément de services
 utiles. Dans un récent projet, nous avons eu besoin de faire fonctionner Neo4j conjointement à ElasticSearch. Jusqu'ici,
-aucun soucis n'est à déplorer, mais nous avions une exigeance particulière : il fallait que l'application puisse
+aucun soucis n'est à déplorer, mais nous avions une exigence particulière : il fallait que l'application puisse
 démarrer automatiquement un serveur Neo4J ainsi qu'un serveur ElasticSearch sur les postes de développements (ainsi que
 pour les tests d'intégration).
 
