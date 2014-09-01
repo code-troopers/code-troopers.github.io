@@ -8,7 +8,7 @@
                 
                         <item>
                                 <title>Résoudre les conflits de dépendances</title>
-                                <description>&lt;p&gt;Lors de nos développements, nous reposons beaucoup sur des projets externes qui nous fournissent énormément de services utiles. Dans un récent projet, nous avons eu besoin de faire fonctionner Neo4j conjointement à ElasticSearch. Jusqu’ici, aucun soucis n’est à déplorer, mais nous avions une exigeance particulière : il fallait que l’application puisse démarrer automatiquement un serveur Neo4J ainsi qu’un serveur ElasticSearch sur les postes de développements (ainsi que pour les tests d’intégration).&lt;/p&gt;
+                                <description>&lt;p&gt;Lors de nos développements, nous reposons beaucoup sur des projets externes qui nous fournissent énormément de services utiles. Dans un récent projet, nous avons eu besoin de faire fonctionner Neo4j conjointement à ElasticSearch. Jusqu’ici, aucun soucis n’est à déplorer, mais nous avions une exigence particulière : il fallait que l’application puisse démarrer automatiquement un serveur Neo4J ainsi qu’un serveur ElasticSearch sur les postes de développements (ainsi que pour les tests d’intégration).&lt;/p&gt;
 
 &lt;h2 id=&quot;problme_existant&quot;&gt;Problème existant&lt;/h2&gt;
 
