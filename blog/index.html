@@ -47,6 +47,89 @@
 
 
 <article class="col-lg-4 col-md-6 col-sm-12">
+    <div onclick="window.location.href='/2014/09/01/ConflitsDependances.html' ;  return false" style="cursor: pointer">
+	<div class=cover style=background-image:url(/images/banner/maven-banner.png)>
+            <div class=date>posté le 01/09/2014 par Cedric</div>
+        </div>
+        <h2><a href=/2014/09/01/ConflitsDependances.html>Résoudre les conflits de dépendances</a><ul class=tags>
+            
+            <li>Maven</li>
+            
+            <li>Dependances</li>
+            
+            <li>Tips</li>
+            
+        </ul></h2>
+        <div class=content>
+            <p>Lors de nos développements, nous reposons beaucoup sur des projets externes qui nous fournissent énormément de services utiles. Dans un récent projet, nous avons eu besoin de faire fonctionner Neo4j conjointement à ElasticSearch. Jusqu’ici, aucun soucis n’est à déplorer, mais nous avions une exigeance particulière : il fallait que l’application puisse démarrer automatiquement un serveur Neo4J ainsi qu’un serveur ElasticSearch sur les postes de développements (ainsi que pour les tests d’intégration).</p>
+
+<h2 id=problme_existant>Problème existant</h2>
+
+<p>Les deux outils que nous utilisons se basent sur Apache Lucene pour toute la partie indexation et accès aux données. Mais, et c’est là que le problème se situe, ils n’utilisent pas les mêmes versions de Lucene.</p>
+
+<pre><code>&lt;!-- Extrait du pom d'ElasticSearch --&gt;
+&lt;dependency&gt;
+    &lt;groupId&gt;org.apache.lucene&lt;/groupId&gt;
+    &lt;artifactId&gt;lucene-core&lt;/artifactId&gt;
+    &lt;version&gt;4.9.0&lt;/version&gt;
+    &lt;scope&gt;compile&lt;/scope&gt;
+&lt;/dependency&gt;</code></pre>
+<hr>
+<pre><code>&lt;!-- Extrait du pom de Neo4j --&gt; 
+&lt;dependency&gt;
+    &lt;groupId&gt;org.apache.lucene&lt;/groupId&gt;
+    &lt;artifactId&gt;lucene-core&lt;/artifactId&gt;
+    &lt;version&gt;3.6.2&lt;/version&gt;
+&lt;/dependency&gt;</code></pre>
+
+<p>ElasticSearch utilise la version 4.9.0, alors que Neo4J utilise la version 3.6.2. Ainsi, en fonction du bon vouloir du <code>Classloader</code> qui sera utilisé par l’application, il se peut qu’ElasticSearch ou Neo4J refuse de fonctionner. La difficulté pour comprendre et détecter le problème est qu’il se manifeste souvent par un obscur <code>NoClassDefFoundError</code> ou <code>NoSuchMethodError</code> qui n’est pas des plus explicites (d’autant plus lorsque notre IDE nous montre une version qui contient ledit symbole non trouvé).</p>
+
+<h2 id=solution_de_contournement>Solution de contournement</h2>
+
+<p>Le conflit est assez simple à contourner une fois qu’on a compris ce qui se passe. En fait, il y a deux classes portant le même nom dans les classes chargées, par exemple <code>org.lucene.MaClass</code>, l’une effaçant l’autre aux yeux du <code>ClassLoader</code>. Une pratique courante est de renommer (ou relocate) le package de base d’une bibliothèque utilisée et de l’inclure dans le fichier de package du projet, le plugin <code>maven-shade</code> est conçu dans cette optique. Le choix fait est de renommer la dépendance Lucene dans Neo4J pour notre part, ainsi, nous avons forké le projet et configuré le plugin <code>shade</code> pour qu’il inclue le contenu de la dépendance d’Apache Lucene et qu’il fasse le renommage de <code>org.apache.lucene</code> en <code>shaded.org.apache.lucene</code>.</p>
+
+<pre><code> &lt;plugin&gt;
+        &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
+        &lt;artifactId&gt;maven-shade-plugin&lt;/artifactId&gt;
+        &lt;version&gt;2.2&lt;/version&gt;
+        &lt;executions&gt;
+            &lt;execution&gt;
+                &lt;phase&gt;package&lt;/phase&gt;
+                &lt;goals&gt;
+                    &lt;goal&gt;shade&lt;/goal&gt;
+                &lt;/goals&gt;
+                &lt;configuration&gt;
+                    &lt;createDependencyReducedPom&gt;true&lt;/createDependencyReducedPom&gt;
+
+                    &lt;artifactSet&gt;
+                        &lt;includes&gt;
+                            &lt;include&gt;org.apache.lucene:*&lt;/include&gt;
+                        &lt;/includes&gt;
+                    &lt;/artifactSet&gt;
+                    &lt;relocations&gt;
+                        &lt;relocation&gt;
+                            &lt;pattern&gt;org.apache.lucene&lt;/pattern&gt;
+                            &lt;shadedPattern&gt;shaded.org.apache.lucene&lt;/shadedPattern&gt;
+                        &lt;/relocation&gt;
+                    &lt;/relocations&gt;
+                &lt;/configuration&gt;
+            &lt;/execution&gt;
+        &lt;/executions&gt;
+  &lt;/plugin&gt;</code></pre>
+
+<h2 id=dploiement_et_nommage>Déploiement et nommage</h2>
+
+<p>Pour ne pas polluer les dépôts, le numéro de version modifié a été postfixé par <code>-shaded</code>. Le déploiement a été fait sur un dépôt Maven qui est en fait un simple repository Github. Le commit correspondant à cette modification <a href=https://github.com/CedricGatay/neo4j/commit/452f58fca69ffe3b1d0eab6261b8342f8da95889>est consultable ici</a>.</p>
+        </div>
+        <div class=fade-content>
+        </div>
+        <div class=more>
+            <a href=/2014/09/01/ConflitsDependances.html><i class="fa fa-arrow-circle-o-right"></i> Lire la suite</a>
+        </div>
+    </div>
+</article>
+
+<article class="col-lg-4 col-md-6 col-sm-12">
     <div onclick="window.location.href='/2014/08/08/ElCurator.html' ;  return false" style="cursor: pointer">
 	<div class=cover style=background-image:url(/images/banner/elcurator-banner.png)>
             <div class=date>posté le 08/08/2014 par Florian</div>
@@ -380,71 +463,6 @@
     </div>
 </article>
 
-<article class="col-lg-4 col-md-6 col-sm-12">
-    <div onclick="window.location.href='/2014/05/05/PlayDbBrowser.html' ;  return false" style="cursor: pointer">
-	<div class=cover style=background-image:url(/images/banner/play.png)>
-            <div class=date>posté le 05/05/2014 par Florian</div>
-        </div>
-        <h2><a href=/2014/05/05/PlayDbBrowser.html>Play2 accéder à la base de donnée</a><ul class=tags>
-            
-            <li>Play2</li>
-            
-            <li>db</li>
-            
-            <li>h2-browser</li>
-            
-        </ul></h2>
-        <div class=content>
-            <p><a href="http://www.playframework.com/">Play2</a>, c’est fun et c’est rapide ! Il suffit de quelques instants pour avoir une appli qui tourne en local sans rien avoir à configurer <a href=http://www.playframework.com/documentation/2.2.x/NewApplication>voir la doc de play</a>. En plus dès que l’on commence un peu à jouer, créer des entités, faire une page de CRUD, tout tourne toujours aussi bien. Il faut dire que c’est agréable, car <a href=http://www.playframework.com/documentation/2.2.x/JavaEbean>Ebean</a> s’est occupé de générer les commandes sql dans le fichier <em>1.sql</em> qui est joué automatiquement par play.</p>
-
-<p>Le problème arrive en général un peu après, lorsque l’envie nous prend de visualiser les données qu’on a insérées via les pages pour différents traitements. En effet, pas besoin de monter un serveur sql ou autre, par défaut tout se passe dans une base en mémoire (ce qui signifie aussi, que lorsque le serveur est arrêté les datas disparaissent). Et forcément la question universelle est “Mais comment je peux voir ces ***** de data en base ?”.</p>
-
-<p>La solution est simple, elle réside dans une commande <code>h2-browser</code>. Mais pour pouvoir l’utiliser, il va falloir se discipliner un tout petit peu. En effet, si vous aviez l’habitude de faire des <code>play run</code> pour lancer le serveur et des <code>ctrl-D</code> pour l’arrêter, il va falloir changer de méthode.</p>
-
-<p>La procédure miracle est donc la suivante :</p>
-
-<ul>
-<li>lancer la console play
-<pre><code>$ play</code></pre>
-</li>
-
-<li>lancer le visualiseur de bdd (qui ouvre une fenêtre dans votre navigateur web)
-<pre><code>$ h2-browser</code></pre>
-</li>
-
-<li>démarrer votre serveur.
-<pre><code>$ run</code></pre>
-</li>
-</ul>
-
-<p>Lorsqu’il se lance h2-browser devrait vous présenter une fenêtre de connexion comme celle-ci :</p>
-<div style="text-align : center">
-    <a data-lightbox=image-0 href=/images/postPlayDbBrowser/h2-browser.png style="display: inline" title="Fenêtre de connection h2-browser">
-            <img alt="Fenêtre de connection h2-browser" class=medium src=/images/postPlayDbBrowser/h2-browser.png>
-    </a>
-</div>
-<p>Maitenant qu’il est lancé, il faut se connecter, et par défaut c’est pas gagné, parce qu’il est configuré pour aller dans la base ‘test’ qui est une base valide, mais surement pas celle où vos données sont.</p>
-
-<p>Il faut donc modifier les champs <em>jdbc</em>, <em>login</em>, <em>password</em>. Pour cela allez chercher dans <strong>application.conf</strong> (normalement situé dans le répertoire <em>/conf/</em> de votre projet) et trouvez les champs suivants</p>
-
-<pre><code>db.default.url=&quot;jdbc:h2:mem:play&quot;
-db.default.user=sa
-db.default.password=</code></pre>
-
-<p>ce sont les 3 valeurs à recopier dans la fenêtre de connexion.</p>
-
-<p>Et voilà le tour est joué, c’est tout de même sympa d’être sûr de ce que l’on a en base.</p>
-
-<p><em>NB</em> : Il faut absolument faire le <code>run</code> avant de se connecter à la base de donnée, sinon celle-ci sera lockée lors de la connexion par h2-broswer et l’application play ne pourra pas s’y connecter.</p>
-        </div>
-        <div class=fade-content>
-        </div>
-        <div class=more>
-            <a href=/2014/05/05/PlayDbBrowser.html><i class="fa fa-arrow-circle-o-right"></i> Lire la suite</a>
-        </div>
-    </div>
-</article>
-
 </div>
 
         <div class="row text-center">
@@ -466,6 +484,10 @@ db.default.password=</code></pre>
         
         
         <li><a href=/blog/page3>3</a></li>
+        
+        
+        
+        <li><a href=/blog/page4>4</a></li>
         
         
 

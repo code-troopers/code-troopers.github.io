@@ -47,6 +47,71 @@
 
 
 <article class="col-lg-4 col-md-6 col-sm-12">
+    <div onclick="window.location.href='/2014/05/05/PlayDbBrowser.html' ;  return false" style="cursor: pointer">
+	<div class=cover style=background-image:url(/images/banner/play.png)>
+            <div class=date>posté le 05/05/2014 par Florian</div>
+        </div>
+        <h2><a href=/2014/05/05/PlayDbBrowser.html>Play2 accéder à la base de donnée</a><ul class=tags>
+            
+            <li>Play2</li>
+            
+            <li>db</li>
+            
+            <li>h2-browser</li>
+            
+        </ul></h2>
+        <div class=content>
+            <p><a href="http://www.playframework.com/">Play2</a>, c’est fun et c’est rapide ! Il suffit de quelques instants pour avoir une appli qui tourne en local sans rien avoir à configurer <a href=http://www.playframework.com/documentation/2.2.x/NewApplication>voir la doc de play</a>. En plus dès que l’on commence un peu à jouer, créer des entités, faire une page de CRUD, tout tourne toujours aussi bien. Il faut dire que c’est agréable, car <a href=http://www.playframework.com/documentation/2.2.x/JavaEbean>Ebean</a> s’est occupé de générer les commandes sql dans le fichier <em>1.sql</em> qui est joué automatiquement par play.</p>
+
+<p>Le problème arrive en général un peu après, lorsque l’envie nous prend de visualiser les données qu’on a insérées via les pages pour différents traitements. En effet, pas besoin de monter un serveur sql ou autre, par défaut tout se passe dans une base en mémoire (ce qui signifie aussi, que lorsque le serveur est arrêté les datas disparaissent). Et forcément la question universelle est “Mais comment je peux voir ces ***** de data en base ?”.</p>
+
+<p>La solution est simple, elle réside dans une commande <code>h2-browser</code>. Mais pour pouvoir l’utiliser, il va falloir se discipliner un tout petit peu. En effet, si vous aviez l’habitude de faire des <code>play run</code> pour lancer le serveur et des <code>ctrl-D</code> pour l’arrêter, il va falloir changer de méthode.</p>
+
+<p>La procédure miracle est donc la suivante :</p>
+
+<ul>
+<li>lancer la console play
+<pre><code>$ play</code></pre>
+</li>
+
+<li>lancer le visualiseur de bdd (qui ouvre une fenêtre dans votre navigateur web)
+<pre><code>$ h2-browser</code></pre>
+</li>
+
+<li>démarrer votre serveur.
+<pre><code>$ run</code></pre>
+</li>
+</ul>
+
+<p>Lorsqu’il se lance h2-browser devrait vous présenter une fenêtre de connexion comme celle-ci :</p>
+<div style="text-align : center">
+    <a data-lightbox=image-0 href=/images/postPlayDbBrowser/h2-browser.png style="display: inline" title="Fenêtre de connection h2-browser">
+            <img alt="Fenêtre de connection h2-browser" class=medium src=/images/postPlayDbBrowser/h2-browser.png>
+    </a>
+</div>
+<p>Maitenant qu’il est lancé, il faut se connecter, et par défaut c’est pas gagné, parce qu’il est configuré pour aller dans la base ‘test’ qui est une base valide, mais surement pas celle où vos données sont.</p>
+
+<p>Il faut donc modifier les champs <em>jdbc</em>, <em>login</em>, <em>password</em>. Pour cela allez chercher dans <strong>application.conf</strong> (normalement situé dans le répertoire <em>/conf/</em> de votre projet) et trouvez les champs suivants</p>
+
+<pre><code>db.default.url=&quot;jdbc:h2:mem:play&quot;
+db.default.user=sa
+db.default.password=</code></pre>
+
+<p>ce sont les 3 valeurs à recopier dans la fenêtre de connexion.</p>
+
+<p>Et voilà le tour est joué, c’est tout de même sympa d’être sûr de ce que l’on a en base.</p>
+
+<p><em>NB</em> : Il faut absolument faire le <code>run</code> avant de se connecter à la base de donnée, sinon celle-ci sera lockée lors de la connexion par h2-broswer et l’application play ne pourra pas s’y connecter.</p>
+        </div>
+        <div class=fade-content>
+        </div>
+        <div class=more>
+            <a href=/2014/05/05/PlayDbBrowser.html><i class="fa fa-arrow-circle-o-right"></i> Lire la suite</a>
+        </div>
+    </div>
+</article>
+
+<article class="col-lg-4 col-md-6 col-sm-12">
     <div onclick="window.location.href='/2014/04/28/ConcoursAccede.html' ;  return false" style="cursor: pointer">
 	<div class=cover style=background-image:url(/images/banner/accede-banner.png)>
             <div class=date>posté le 28/04/2014 par Benjamin</div>
@@ -356,53 +421,6 @@
     </div>
 </article>
 
-<article class="col-lg-4 col-md-6 col-sm-12">
-    <div onclick="window.location.href='/2014/03/23/StartupWeekend.html' ;  return false" style="cursor: pointer">
-	<div class=cover style=background-image:url(/images/banner/swtours-banner.png)>
-            <div class=date>posté le 23/03/2014 par Code-Troopers</div>
-        </div>
-        <h2><a href=/2014/03/23/StartupWeekend.html>Startup Weekend Tours</a><ul class=tags>
-            
-            <li>startup</li>
-            
-            <li>tours</li>
-            
-            <li>Play2</li>
-            
-        </ul></h2>
-        <div class=content>
-            <p>Retour sur 54h de Startup Weekend pour la première édition à Tours <a href="http://tours.startupweekend.org/">#swtours</a></p>
-
-<h2 id=introduction>Introduction</h2>
-
-<p>Les Startup Weekends ont pour but d’encourager les entrepreneurs à créer leur projet en les confortant dans la viabilité de leur idée et en leur permettant de rencontrer des co-fondateurs. C’est par exemple l’occasion pour un charpentier de rencontrer des informaticiens pour réaliser un site, de rencontrer des avocats pour être sûr de la légalité et des investisseurs pour étudier la viabilité de la startup. Le tout en 54h, il faut aller vite !</p>
-
-<h2 id=vendredi_be_my_tourneur>Vendredi (Be My Tourneur):</h2>
-
-<p>Nous avions prévu l’événement en sortant de notre backlog idées quelques sujets qui pouvaient mériter d’être présentés lors de l’événement. Nous avons finalement présenté un sujet (que nous risquons de développer en interne dans quelque temps) concernant la prise de rendez-vous auprès des artisans.</p>
-
-<p>La sélection des projets se fait par l’intégralité des personnes présentes, en effet, chaque participant à l’événement avait à sa disposition trois pastilles autocollantes à coller sur les différents sujets.</p>
-
-<p>À l’issue de ce vote, les projets ayant recueillis le plus de voix ont été conservés et leurs initiateurs ont eu l’occasion de les détailler un peu plus pour pouvoir effectuer le recrutement pour mener à bien leur idée.</p>
-
-<p>En plus des projets sélectionnés par le nombre de votes, n’importe quel projet qui arrivait à réunir une équipe d’au moins deux personnes avait le droit de lancer son idée (ce qui fut le cas de deux équipes).</p>
-
-<p>Comme vous l’avez sûrement remarqué, l’équipe Code-Troopers est composée de développeurs qui aiment la musique, un des projets présenté consistait à donner au public l’opportunité de proposer la venue d’artistes dans une ville en particulier. C’est donc tout naturellement que nous nous sommes dirigés vers celui-ci (non sans avoir hésité avec quelques autres projets, dont celui qui a fini vainqueur, et qui le mérite amplement !)</p>
-
-<p>Ainsi, nous nous sommes retrouvés à 8 dans l’équipe, un membre Business (responsable d’une entreprise de développement locale), trois étudiants de FBS Tours (Business également donc), un graphiste (partagé entre plusieurs projets) et les quatre Code-Troopers inscrits. Nous avons passé le reste de la soirée à brainstormer autour du sujet et voir où nous pouvions raisonnablement aller.</p>
-
-<p>Nous sommes passés par beaucoup d’étapes et d’idées avortées avant de nous fixer sur le fonctionnement que nous avons développé pendant les deux journées qui ont suivi. Nous avons couché les principaux axes sur le papier et sommes rentrés nous coucher avant d’attaquer les choses sérieuses.</p>
-
-<p>Fin de journée - 2h 
-        </p></div>
-        <div class=fade-content>
-        </div>
-        <div class=more>
-            <a href=/2014/03/23/StartupWeekend.html><i class="fa fa-arrow-circle-o-right"></i> Lire la suite</a>
-        </div>
-    </div>
-</article>
-
 </div>
 
         <div class="row text-center">
@@ -424,6 +442,10 @@
         
         
         <li><a href=/blog/page3>3</a></li>
+        
+        
+        
+        <li><a href=/blog/page4>4</a></li>
         
         
 
