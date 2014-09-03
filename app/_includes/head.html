@@ -10,6 +10,7 @@
         <meta property="twitter:card" content="summary"/>
         <meta property="twitter:site" content="codetroopers"/>
         <meta property="twitter:image:src" content="{% if page.cover %}{{site.url}}/images/banner/{{ page.cover }}.png{% else %}{{ site.url }}/images/{{ site.logo }}{% endif %}"/>
+        <meta property="og:image" content="{% if page.cover %}{{site.url}}/images/banner/{{ page.cover }}.png{% else %}{{ site.url }}/images/{{ site.logo }}{% endif %}"/>
         <meta property="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}"/>
         <meta property="twitter:creator" content="@{% if page.twitter %}{{ page.twitter }}{% else %}codetroopers{% endif %}"/>
         <meta property="twitter:domain" content="{{site.url}}"/>
