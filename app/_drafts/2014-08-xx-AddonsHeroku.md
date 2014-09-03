@@ -33,4 +33,4 @@ SendGrid est un service de messagerie électronique. Une fois l'add-ons ajouté 
 
 
 Bien sûr tous ces add-ons sont disponibles hors heroku et peuvent être utilisés sur n'importe quel autre serveur.
-Dans tous les cas, essayez, testez, bidouillez, faîtes vous plaisir ! C'est tout à faire le type de service qui fait gagner un maximum de temps pour déployer une application, que ce soit pour un POC une démo ou même une mise en prod !
+Dans tous les cas, essayez, testez, bidouillez, faîtes vous plaisir ! C'est tout à fait le type de service qui fait gagner un maximum de temps pour déployer une application, que ce soit pour un POC une démo ou même une mise en prod !
