@@ -4,7 +4,32 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta charset="utf-8">
         <title>{{page.title}}</title>
-        <meta name="description" content="Code-Troopers est une équipe de développeurs située à Tours, réalisant des projets aux environs de la Touraine et sur la région parisienne.">
+        <meta property="fb:app_id" content="432735746865877"/>
+        <meta property="og:url" content="http://code-troopers.com{{ page.url }}"/>
+        <meta property="og:title" content="{{page.title}}"/>
+        <meta property="twitter:card" content="summary"/>
+        <meta property="twitter:site" content="codetroopers"/>
+        <meta property="twitter:image:src" content="{% if page.cover %}{{site.url}}/images/banner/{{ page.cover }}.png{% else %}{{ site.url }}/images/logo.png{% endif %}"/>
+        <meta property="og:image" content="{% if page.cover %}{{site.url}}/images/banner/{{ page.cover }}.png{% else %}{{ site.url }}/images/logo.png{% endif %}"/>
+        <meta property="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}"/>
+        <meta property="twitter:creator" content="@{% if page.twitter %}{{ page.twitter }}{% else %}codetroopers{% endif %}"/>
+        <meta property="twitter:domain" content="{{site.url}}"/>
+        {% if page.twitterdescription %}
+        <meta property="twitter:description" content="{{ page.twitterdescription }}">
+        {% else %}
+        {% if page.description %}
+        <meta property="twitter:description" content="{{ page.description | truncatewords: 20 | strip_newlines | escape_once }}">
+        {% else %}
+        <meta property="twitter:description" content="{{ content | strip_html | truncatewords: 20 | strip_newlines | escape_once }}">
+        {% endif %}
+        {% endif %}
+        {% if page.description %}
+        <meta name="description" content="{{ page.description | truncatewords: 200 | strip_newlines | escape_once }}" />
+        <meta property="og:description" content="{{ page.description | truncatewords: 200 | strip_newlines | escape_once }}">
+        {% else %}
+        <meta name="description" content="{{ content | strip_html | truncatewords: 200 | strip_newlines | escape_once }}" />
+        <meta property="og:description" content="{{ content | strip_html | truncatewords: 200 | strip_newlines | escape_once }}">
+        {% endif %}
         <meta name="viewport" content="width=device-width">
         <meta http-equiv="content-language" content="fr-FR" />
 
