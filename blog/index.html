@@ -16,12 +16,12 @@
         <meta property=twitter:domain content=http://code-troopers.com>
         
         
-        <meta property=twitter:description content="Le blog posté le 01/09/2014 par Cedric Résoudre les conflits de dépendances Maven Dependances Tips Lors de nos développements, nous...">
+        <meta property=twitter:description content="Le blog posté le 04/09/2014 par Benjamin Top 3 add-ons Heroku Heroku Add-ons Vous connaissez sûrement Heroku le service de...">
         
         
         
-        <meta name=description content="Le blog posté le 01/09/2014 par Cedric Résoudre les conflits de dépendances Maven Dependances Tips Lors de nos développements, nous reposons beaucoup sur des projets externes qui nous fournissent énormément de services utiles. Dans un récent projet, nous avons eu besoin de faire fonctionner Neo4j conjointement à ElasticSearch. Jusqu’ici, aucun soucis n’est à déplorer, mais nous avions une exigence particulière : il fallait que l’application puisse démarrer automatiquement un serveur Neo4J ainsi qu’un serveur ElasticSearch sur les postes de développements (ainsi que pour les tests d’intégration). Problème existant Les deux outils que nous utilisons se basent sur Apache Lucene pour toute la partie indexation et accès aux données. Mais, et c’est là que le problème se situe, ils n’utilisent pas les mêmes versions de Lucene. &lt;!-- Extrait du pom d'ElasticSearch --&gt; &lt;dependency&gt; &lt;groupId&gt;org.apache.lucene&lt;/groupId&gt; &lt;artifactId&gt;lucene-core&lt;/artifactId&gt; &lt;version&gt;4.9.0&lt;/version&gt; &lt;scope&gt;compile&lt;/scope&gt; &lt;/dependency&gt; &lt;!-- Extrait du pom de Neo4j --&gt; &lt;dependency&gt; &lt;groupId&gt;org.apache.lucene&lt;/groupId&gt; &lt;artifactId&gt;lucene-core&lt;/artifactId&gt; &lt;version&gt;3.6.2&lt;/version&gt; &lt;/dependency&gt; ElasticSearch utilise la version 4.9.0, alors que Neo4J utilise la version 3.6.2. Ainsi, en fonction du bon vouloir du Classloader qui sera utilisé par l’application, il se peut qu’ElasticSearch ou Neo4J refuse de fonctionner. La difficulté pour comprendre et détecter le problème est qu’il se manifeste souvent par un obscur NoClassDefFoundError...">
-        <meta property=og:description content="Le blog posté le 01/09/2014 par Cedric Résoudre les conflits de dépendances Maven Dependances Tips Lors de nos développements, nous reposons beaucoup sur des projets externes qui nous fournissent énormément de services utiles. Dans un récent projet, nous avons eu besoin de faire fonctionner Neo4j conjointement à ElasticSearch. Jusqu’ici, aucun soucis n’est à déplorer, mais nous avions une exigence particulière : il fallait que l’application puisse démarrer automatiquement un serveur Neo4J ainsi qu’un serveur ElasticSearch sur les postes de développements (ainsi que pour les tests d’intégration). Problème existant Les deux outils que nous utilisons se basent sur Apache Lucene pour toute la partie indexation et accès aux données. Mais, et c’est là que le problème se situe, ils n’utilisent pas les mêmes versions de Lucene. &lt;!-- Extrait du pom d'ElasticSearch --&gt; &lt;dependency&gt; &lt;groupId&gt;org.apache.lucene&lt;/groupId&gt; &lt;artifactId&gt;lucene-core&lt;/artifactId&gt; &lt;version&gt;4.9.0&lt;/version&gt; &lt;scope&gt;compile&lt;/scope&gt; &lt;/dependency&gt; &lt;!-- Extrait du pom de Neo4j --&gt; &lt;dependency&gt; &lt;groupId&gt;org.apache.lucene&lt;/groupId&gt; &lt;artifactId&gt;lucene-core&lt;/artifactId&gt; &lt;version&gt;3.6.2&lt;/version&gt; &lt;/dependency&gt; ElasticSearch utilise la version 4.9.0, alors que Neo4J utilise la version 3.6.2. Ainsi, en fonction du bon vouloir du Classloader qui sera utilisé par l’application, il se peut qu’ElasticSearch ou Neo4J refuse de fonctionner. La difficulté pour comprendre et détecter le problème est qu’il se manifeste souvent par un obscur NoClassDefFoundError...">
+        <meta name=description content="Le blog posté le 04/09/2014 par Benjamin Top 3 add-ons Heroku Heroku Add-ons Vous connaissez sûrement Heroku le service de cloud computing de type plate-forme en tant que service (PaaS), si ce n’est pas le cas, je vous conseille de vous y intéresser. Chez Code-Troopers, nous l’utilisons à la fois pour effectuer nos tests en pré-production mais aussi pour certaines de nos applications en production. Ce qui est aussi intéressant chez Heroku, c’est le nombre d’add-ons disponibles. Ils sont simples d’installation, la plupart du temps il suffit de deux clics et d’une variable à ajouter dans la configuration de l’application. Ils disposent presque tous de versions gratuites (souvent suffisant pour une petite application en production) mais il est aussi possible d’évoluer vers des versions payantes et plus complètes en un clic, souvent déclinées en 3 ou 4 offres. Les add-ons sont rangés en catégories, vous avez des services de bases de données, de logs, d’analytics, de cache, de monitoring… Je vous invite à les consulter sur cette page. Mais je vais m’attarder sur les 3 add-ons qu’on installe presque machinalement dès que l’on créé une application sur Heroku : Papertrail pour gérer les logs SendGrid pour envoyer des mails New...">
+        <meta property=og:description content="Le blog posté le 04/09/2014 par Benjamin Top 3 add-ons Heroku Heroku Add-ons Vous connaissez sûrement Heroku le service de cloud computing de type plate-forme en tant que service (PaaS), si ce n’est pas le cas, je vous conseille de vous y intéresser. Chez Code-Troopers, nous l’utilisons à la fois pour effectuer nos tests en pré-production mais aussi pour certaines de nos applications en production. Ce qui est aussi intéressant chez Heroku, c’est le nombre d’add-ons disponibles. Ils sont simples d’installation, la plupart du temps il suffit de deux clics et d’une variable à ajouter dans la configuration de l’application. Ils disposent presque tous de versions gratuites (souvent suffisant pour une petite application en production) mais il est aussi possible d’évoluer vers des versions payantes et plus complètes en un clic, souvent déclinées en 3 ou 4 offres. Les add-ons sont rangés en catégories, vous avez des services de bases de données, de logs, d’analytics, de cache, de monitoring… Je vous invite à les consulter sur cette page. Mais je vais m’attarder sur les 3 add-ons qu’on installe presque machinalement dès que l’on créé une application sur Heroku : Papertrail pour gérer les logs SendGrid pour envoyer des mails New...">
         
         <meta name=viewport content="width=device-width">
         <meta http-equiv=content-language content=fr-FR>
@@ -63,6 +63,53 @@
     <div class=container>
         <div class=row>
 
+
+<article class="col-lg-4 col-md-6 col-sm-12">
+    <div onclick="window.location.href='/2014/09/04/AddonsHeroku.html' ;  return false" style="cursor: pointer">
+	<div class=cover style=background-image:url(/images/banner/addonsheroku-banner.png)>
+            <div class=date>posté le 04/09/2014 par Benjamin</div>
+        </div>
+        <h2><a href=/2014/09/04/AddonsHeroku.html>Top 3 add-ons Heroku</a><ul class=tags>
+            
+            <li>Heroku</li>
+            
+            <li>Add-ons</li>
+            
+        </ul></h2>
+        <div class=content>
+            <p>Vous connaissez sûrement <a href="https://www.heroku.com/">Heroku</a> le service de cloud computing de type plate-forme en tant que service (PaaS), si ce n’est pas le cas, je vous conseille de vous y intéresser. Chez Code-Troopers, nous l’utilisons à la fois pour effectuer nos tests en pré-production mais aussi pour certaines de nos applications en production. Ce qui est aussi intéressant chez Heroku, c’est le nombre d’<a href="https://addons.heroku.com/">add-ons</a> disponibles. Ils sont simples d’installation, la plupart du temps il suffit de deux clics et d’une variable à ajouter dans la configuration de l’application. Ils disposent presque tous de versions gratuites (souvent suffisant pour une petite application en production) mais il est aussi possible d’évoluer vers des versions payantes et plus complètes en un clic, souvent déclinées en 3 ou 4 offres.</p>
+
+<p>Les add-ons sont rangés en catégories, vous avez des services de bases de données, de logs, d’analytics, de cache, de monitoring… Je vous invite à les consulter sur <a href="https://addons.heroku.com/">cette page</a>. Mais je vais m’attarder sur les 3 add-ons qu’on installe presque machinalement dès que l’on créé une application sur Heroku :</p>
+
+<ul>
+<li><a href=https://addons.heroku.com/papertrail>Papertrail</a> pour gérer les logs</li>
+
+<li><a href=https://addons.heroku.com/sendgrid>SendGrid</a> pour envoyer des mails</li>
+
+<li><a href=https://addons.heroku.com/newrelic>New Relic</a> pour surveiller l’application</li>
+</ul>
+
+<h2 id=logo_papertrail_papertrail><img src=../../../images/postAddonsHeroku/papertrail.png alt="Logo Papertrail"> Papertrail</h2>
+
+<p><a href="https://papertrailapp.com/">Papertrail</a> est un service de logs. Il permet de consulter en temps réel les logs de votre application Heroku. Vous avez même la possibilité de sauvegarder vos recherches ou de créer des alertes personnalisées. La version gratuite permet de stocker jusqu’à 10Mo de log par jour, de rechercher sur 2 jours et de retenir jusqu’à 7 jours les logs. Pour l’installer, il suffit de l’ajouter depuis l’interface d’Heroku, il n’y a rien à configurer. Ensuite, vous avez juste à cliquer sur le lien pour consulter vos logs.</p>
+
+<h2 id=logo_sendgrid_sendgrid><img src=../../../images/postAddonsHeroku/sendgrid.png alt="Logo SendGrid"> SendGrid</h2>
+
+<p><a href="http://sendgrid.com/">SendGrid</a> est un service de messagerie électronique. Une fois l’add-on ajouté sur Heroku, vous disposez dans les variables de configuration de votre application, d’un login et d’un mot de passe. Il ne vous reste plus qu’à changer l’accès au serveur smtp dans votre application pour utiliser ces variables. En plus de faire office de serveur smtp, SendGrid vous offre la possibilité de tracer les mails, c’est-à-dire de savoir combien ont été ouverts, combien de personnes ont cliqué sur les liens contenus, combien ne sont pas arrivés à destination… tout ça même dans la version gratuite. La seule contrainte en version gratuite est la limitation à 200 mails par jour.</p>
+
+<h2 id=logo_new_relic_new_relic><img src=../../../images/postAddonsHeroku/newrelic.png alt="Logo New Relic"> New Relic</h2>
+
+<p><a href="http://www.newrelic.com/">New Relic</a> enfin, est un service de surveillance de votre application. Il permet à la fois de surveiller les performances de la machine, mais aussi de repérer par exemple les requêtes SQL qui sont lentes, ainsi que les méthodes de votre code qui sont coûteuse en temps processeur et d’autres données. Vous avez la possibilité de créer des rapports sur toutes ces données ainsi que de créer des alertes sur certains évenements. Les versions payantes permettent d’aller plus loin dans la recherche de points noirs dans l’application ainsi que de débloquer la limite de l’historique. L’installation est plus complexe que les autres add-ons mais reste très bien expliquée au premier lancement du service.</p>
+
+<p>Bien sûr tous ces add-ons sont disponibles hors Heroku et peuvent être utilisés sur n’importe quel autre serveur. Dans tous les cas, essayez, testez, bidouillez, faîtes vous plaisir ! C’est tout à fait le type de service qui fait gagner un maximum de temps pour déployer une application, que ce soit pour un POC, une démo ou même une mise en prod !</p>
+        </div>
+        <div class=fade-content>
+        </div>
+        <div class=more>
+            <a href=/2014/09/04/AddonsHeroku.html><i class="fa fa-arrow-circle-o-right"></i> Lire la suite</a>
+        </div>
+    </div>
+</article>
 
 <article class="col-lg-4 col-md-6 col-sm-12">
     <div onclick="window.location.href='/2014/09/01/ConflitsDependances.html' ;  return false" style="cursor: pointer">
@@ -425,58 +472,6 @@
         </div>
         <div class=more>
             <a href=/2014/05/15/CourseraAndroid.html><i class="fa fa-arrow-circle-o-right"></i> Lire la suite</a>
-        </div>
-    </div>
-</article>
-
-<article class="col-lg-4 col-md-6 col-sm-12">
-    <div onclick="window.location.href='/2014/05/14/kIsTheNewL.html' ;  return false" style="cursor: pointer">
-	<div class=cover style=background-image:url(/images/banner/kisthenewl-banner.png)>
-            <div class=date>posté le 14/05/2014 par Matthieu</div>
-        </div>
-        <h2><a href=/2014/05/14/kIsTheNewL.html>k is the new l, yo</a><ul class=tags>
-            
-            <li>zsh</li>
-            
-            <li>git</li>
-            
-            <li>shell</li>
-            
-        </ul></h2>
-        <div class=content>
-            <p><code>ls</code> est une des commandes shell les plus utilisées, pourtant depuis les années 70 elle a très peu changé. Bien sûr, il y a de nombreuses options, citons <code>ls -a</code> pour afficher les fichiers cachés, <code>ls -l</code> pour afficher plus d’informations, <code>ls --color</code> pour afficher deux couleurs, une pour les fichiers et une pour les répertoires, ou encore <code>ls -rtl</code> pour trier le contenu par date et afficher le plus récent en dernier.</p>
-
-<p><code>ls</code> est donc une commande utile et pratique mais elle n’est pas folichonne. D’où la naissance de <code>k</code> qui a pour but de remplacer <code>ls</code> avec quelques killer features. Il ne s’agit pas d’une surcouche de <code>ls</code> mais d’une commande complète, s’appuyant directement sur <code>stat</code> par exemple. À ce jour, les nouvelles fonctionnalités sont les suivantes :</p>
-
-<ul>
-<li>intégration de git status sur un dépôt entier : rouge si le dépôt est “sale”, vert sinon ;</li>
-
-<li>intégration de git status à l’intérieur d’un dépôt : différenciation des fichiers modifiés, non ajoutés ou ignorés ;</li>
-
-<li>dégradé de couleur pour la taille des fichiers : du vert pour les petits fichiers au rouge pour les gros ;</li>
-
-<li>dégradé de couleur pour la date de modification : plus la date est affichée en clair et plus le fichier est récent.</li>
-</ul>
-
-<p>Voici un comparatif des deux rendus, version <code>ls</code> et version <code>k</code> :</p>
-<div style="text-align : center">
-<a data-lightbox=image-0 href=/images/postKisTheNewL/lsalcolor.png style="display: inline" title="version ls -al --color">
-        <img alt="version k" class=medium src=/images/postKisTheNewL/lsalcolor_min.png>
-</a>
-<a data-lightbox=image-0 href=/images/postKisTheNewL/k.png style="display: inline" title="version k">
-        <img alt="version k" class=medium src=/images/postKisTheNewL/k_min.png>
-</a>
-</div>
-<p><br></p>
-
-<p><code>k</code> est disponible uniquement pour zsh. Pour l’installer, il suffit de cloner le dépôt <a href=https://github.com/supercrabtree/k>git</a> et d’ajouter <code>source ~/path/k/k.sh</code> dans son ~/.zshrc. k est encore jeune mais il gagnerait à être connu, il manque quelques fonctions de base comme mettre un répertoire en paramètre ou ne pas afficher les fichiers cachés. Pour en savoir plus, n’hésitez pas à aller voir la page <a href=https://github.com/supercrabtree/k>GitHub</a>.</p>
-
-<p>Comme dit leur slogan : «k is the new l, yo».</p>
-        </div>
-        <div class=fade-content>
-        </div>
-        <div class=more>
-            <a href=/2014/05/14/kIsTheNewL.html><i class="fa fa-arrow-circle-o-right"></i> Lire la suite</a>
         </div>
     </div>
 </article>
