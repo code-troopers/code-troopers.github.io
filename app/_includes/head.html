@@ -24,11 +24,11 @@
         {% endif %}
         {% endif %}
         {% if page.description %}
-        <meta name="description" content="{{ page.description | truncatewords: 200 | strip_newlines | escape_once }}" />
-        <meta property="og:description" content="{{ page.description | truncatewords: 200 | strip_newlines | escape_once }}">
+        <meta name="description" content="{{ page.description | truncatewords: 200 | strip_newlines | escape_once | replace:'"','' }}" />
+        <meta property="og:description" content="{{ page.description | truncatewords: 200 | strip_newlines | escape_once | replace:'"','' }}">
         {% else %}
-        <meta name="description" content="Code-Troopers est une équipe de développeurs située à Tours, réalisant des projets aux environs de la Touraine et sur la région parisienne." />
-        <meta property="og:description" content="Code-Troopers est une équipe de développeurs située à Tours, réalisant des projets aux environs de la Touraine et sur la région parisienne.">
+        <meta name="description" content="{{ content | strip_html | truncatewords: 200 | strip_newlines | escape_once | replace:'"','' }}" />
+        <meta property="og:description" content="{{ content | strip_html | truncatewords: 200 | strip_newlines | escape_once | replace:'"','' }}">
         {% endif %}
         <meta name="viewport" content="width=device-width">
         <meta http-equiv="content-language" content="fr-FR" />
