@@ -2,61 +2,9 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
         <channel>
                 <title>Code-Troopers blog</title>
-                <description>Le blog de l&#39;équipe Code-Troopers</description>                
+                <description>Le blog de l'équipe Code-Troopers</description>                
                 <link>http://code-troopers.com</link>
                 <atom:link href="http://code-troopers.com/feed.xml" rel="self" type="application/rss+xml"/>
-                
-                        <item>
-                                <title>oh-my-zsh : l&#39;outil indispensable pour avoir un zsh bien configuré.</title>
-                                <description>&lt;h2 id=&quot;introduction-&quot;&gt;Introduction :&lt;/h2&gt;
-&lt;p&gt;Que l’on soit dev, ops, sysadmin ou autre pour effectuer nos tâches répétitives et quotidiennes on a généralement deux possibilités : une première communément appelée “clic-clic” qui consiste à utiliser les interfaces graphique aussi souvent que possible (afin de perdre un maximum de temps) ; et une seconde qualifiée de “barbue” qui elle est orientée ligne de commande, scripting et automatisation.
-Nous les Code-Troopers, on est plutôt technique barbus ! Et donc peut importe l’OS qu’on utilise on cherche toujours à avoir le meilleur terminal possible.
-Par défaut sous linux ou mac OS on trouvera souvent &lt;em&gt;bash&lt;/em&gt;, sous windows ce sera &lt;em&gt;powershell&lt;/em&gt; mais il en existe d’autres comme &lt;em&gt;csh&lt;/em&gt;, &lt;em&gt;ksh&lt;/em&gt; ou dans le cas qui nous intéresse &lt;em&gt;zsh&lt;/em&gt;.
-&lt;em&gt;zsh&lt;/em&gt; est puissant mais ce n’est pas le sujet du jour de dire pourquoi il serait mieux qu’un autre. En revanche, qui dit puissance dit difficultés de paramétrage ;
-d’ailleurs à la première utilisation lorsque l’on n’a pas de fichier de configuration il commence par dire qu’il peut en créer un pour nous mais qu’il faudra le modifier à la main.
-Ce sera inutile grace à &lt;em&gt;oh-my-zsh&lt;/em&gt;.&lt;/p&gt;
-
-&lt;h2 id=&quot;installation-&quot;&gt;Installation :&lt;/h2&gt;
-&lt;p&gt;C’est très simple, il suffit de cloner le dépôt
-&lt;code&gt;git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh&lt;/code&gt;
-Et de mettre le fichier de configuration dans son home
-&lt;code&gt;cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc&lt;/code&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;les-thmes-&quot;&gt;Les thèmes :&lt;/h2&gt;
-&lt;p&gt;Premièrement, les couleurs. Chacun ses goûts mais comme tout  informaticien fan de  matrix on a tendance à configurer son terminal pour obtenir du vert sur fond noir donc on choisira un thème en conséquence pour avoir des couleurs claires (ce qui est le cas de presque tous les thèmes) Vous pouvez voir un aperçu des thèmes ici : &lt;a href=&quot;http://zshthem.es/all/&quot;&gt;http://zshthem.es/all/&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Deuxièmement le prompt. Toujours sur le site &lt;a href=&quot;http://zshthem.es&quot;&gt;http://zshthem.es&lt;/a&gt;, vous pouvez voir qu’en plus des couleurs, chaque thème a un prompt différent. C’est ce qui s’affiche à chaque ligne donc il doit être beau, rapide et fonctionnel.
-J’utilisais &lt;a href=&quot;https://github.com/nojhan/liquidprompt&quot;&gt;https://github.com/nojhan/liquidprompt&lt;/a&gt; pendant un temps, j’ai donc fait un thème qui ressemble pour les fonctionnalités qui me manquaient. Les fonctionnalités que je trouve pratique :&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;l’heure à droite : je veux savoir à quelle heure j’ai lancé une commande et à quelle heure elle s’est finie. C’est pas souvent utile mais ça arrive.&lt;/li&gt;
-  &lt;li&gt;l’utilisateur courant : je veux savoir avec quel utilisateur je suis connecté, simplement par-ce que je veux que ça crie si je suis en root pour éviter de faire des bêtises&lt;/li&gt;
-  &lt;li&gt;le hostname : je veux savoir sur quelle machine je suis connecté, de préférence uniquement lorsque je suis en ssh sinon c’est pas utile, toujours dans le but d’éviter les bêtises.&lt;/li&gt;
-  &lt;li&gt;un path de taille limitée : pas besoin d’afficher &lt;code&gt;/home/mattboll/workspace/projetSecret/java/com/codetroopers/projetxx/machin/bean&lt;/code&gt; il me suffit de lire &lt;code&gt;~/.../machin/bean&lt;/code&gt; pour savoir où je suis et ça permet de toujours avoir un prompt de taille raisonnable, c’est plus agréable.&lt;/li&gt;
-  &lt;li&gt;des infos git : sur quelle branche je suis, est-ce que je suis synchro, est-ce que je dois merger, combien j’ai de commits en attente d’être pushé etc.&lt;/li&gt;
-  &lt;li&gt;le code retour de la commande : parfois des commandes sont en erreur mais on n’a pas de message, donc on ne sait pas si la commande s’est bien exécutée, et en supposant qu’elle soit mal exécutée on ne sait pas quelle était l’erreur (l’équivalent des erreurs 404, 503 etc. des erreurs http)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Pour choisir le thème il faut éditer le fichier &lt;code&gt;~/.zshrc&lt;/code&gt; et modifier la ligne 
-&lt;code&gt;ZSH_THEME=”nom_du_theme”&lt;/code&gt; où nom du thème correspond au nom de fichier que l’on peut trouver dans &lt;code&gt;~/.oh-my-zsh/themes&lt;/code&gt;. Du coup, pour réaliser un thème personnel c’est simple il suffit de créer un fichier qui s’appelle nom.zsh-theme et de le mettre dans le même répertoire que les autres.
-Voici ce que cela donne avec mon thème (adapté du thème sunrise), que vous pouvez trouver  sur &lt;a href=&quot;https://raw.githubusercontent.com/mattboll/zshrc/master/mattboll.zsh-theme&quot;&gt;GitHub&lt;/a&gt; : 
-&lt;img class=&quot;medium&quot; src=&quot;/images/postOhMyZsh/oh-my-zsh-theme.png&quot; alt=&quot;Mode normal&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;les-plugins&quot;&gt;Les plugins&lt;/h2&gt;
-&lt;p&gt;Les plugins permettent d’incorporer des fonctions spécifiques. Ce sont en général de simples alias mais il arrive aussi de tomber sur des fonctions utiles auxquelles on ne pense pas, par exemple en activant le plugin GitHub, on accède à la commande &lt;code&gt;empty_gh&lt;/code&gt; qui prend en paramètre le nom du dépôt et qui va créer le répertoire, faire un git init, ajouter un readme vide et faire le premier commit.
-Pour ajouter des plugins, il faut évidemment éditer le fichier &lt;code&gt;~/.zshrc&lt;/code&gt; et modifier la ligne &lt;code&gt;plugins=(liste des plugins)&lt;/code&gt;
-Vous trouverez la liste des plugins dans &lt;code&gt;~/.oh-my-zsh/plugins&lt;/code&gt; À l’heure où j’écris il y en a 172, de git à symfony en passant par heroku. Pour savoir à quoi ça correspond, le plus simple est de lire les code source, en général il y a un fichier par plugin et les noms sont assez explicite pour savoir ceux qui nous seront utiles ou pas.&lt;/p&gt;
-
-&lt;h2 id=&quot;les-libs&quot;&gt;Les libs&lt;/h2&gt;
-&lt;p&gt;Si vous voulez créer un plugin ou que vous voulez voir un peu plus les fonctionnalités de oh-my-zsh, vous pouvez parcourir le répertoire lib, ne serait-ce que pour le fichier aliases.zsh qui définit des alias de base, par exemple &lt;code&gt;“…”=”cd ../..”&lt;/code&gt; ou les habituels &lt;code&gt;la&lt;/code&gt;, &lt;code&gt;ll&lt;/code&gt; etc. C’est aussi dans ce répertoire que sont définies des fonctions générique comme celle qui permet de savoir si le dépôt git est “dirty” et qui est utilisée dans certains prompt.&lt;/p&gt;
-
-&lt;p&gt;Si vous voulez plus d’informations sur zsh je vous invite à commencer par l’article de &lt;a href=&quot;http://wiki.gcu.info/doku.php?id=unix:zsh_le_z_shell&quot;&gt;gcu-squad&lt;/a&gt;. Pour oh-my-zsh vous pouvez allez voir le projet sur &lt;a href=&quot;https://github.com/robbyrussell/oh-my-zsh&quot;&gt;GitHub&lt;/a&gt;. Enfin, si vous avez d’autres questions, n’hésitez pas à poster un commentaire ou à en parler sur twitter &lt;a href=&quot;http://twitter.com/codetroopers&quot;&gt;@codetroopers&lt;/a&gt; ou &lt;a href=&quot;http://twitter.com/mattboll&quot;&gt;@mattboll&lt;/a&gt;&lt;/p&gt;
-
-</description>
-                                <pubDate>Wed, 17 Sep 2014 00:00:00 +0200</pubDate>
-                                <link>http://code-troopers.com/2014/09/17/ohMyZsh.html</link>
-                                <guid isPermaLink="true">http://code-troopers.com/2014/09/17/ohMyZsh.html</guid>
-                        </item>
                 
                         <item>
                                 <title>Top 3 add-ons Heroku</title>
@@ -65,26 +13,26 @@ Vous trouverez la liste des plugins dans &lt;code&gt;~/.oh-my-zsh/plugins&lt;/co
 &lt;p&gt;Les add-ons sont rangés en catégories, vous avez des services de bases de données, de logs, d’analytics, de cache, de monitoring… Je vous invite à les consulter sur &lt;a href=&quot;https://addons.heroku.com/&quot;&gt;cette page&lt;/a&gt;. Mais je vais m’attarder sur les 3 add-ons qu’on installe presque machinalement dès que l’on créé une application sur Heroku :&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://addons.heroku.com/papertrail&quot;&gt;Papertrail&lt;/a&gt; pour gérer les logs&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://addons.heroku.com/sendgrid&quot;&gt;SendGrid&lt;/a&gt; pour envoyer des mails&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://addons.heroku.com/newrelic&quot;&gt;New Relic&lt;/a&gt; pour surveiller l’application&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://addons.heroku.com/papertrail&quot;&gt;Papertrail&lt;/a&gt; pour gérer les logs&lt;/li&gt;
+
+&lt;li&gt;&lt;a href=&quot;https://addons.heroku.com/sendgrid&quot;&gt;SendGrid&lt;/a&gt; pour envoyer des mails&lt;/li&gt;
+
+&lt;li&gt;&lt;a href=&quot;https://addons.heroku.com/newrelic&quot;&gt;New Relic&lt;/a&gt; pour surveiller l’application&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;logo-papertrailimagespostaddonsherokupapertrailpng-papertrail&quot;&gt;&lt;img src=&quot;../../../images/postAddonsHeroku/papertrail.png&quot; alt=&quot;Logo Papertrail&quot; /&gt; Papertrail&lt;/h2&gt;
+&lt;h2 id=&quot;logo_papertrail_papertrail&quot;&gt;&lt;img src=&quot;../../../images/postAddonsHeroku/papertrail.png&quot; alt=&quot;Logo Papertrail&quot; /&gt; Papertrail&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://papertrailapp.com/&quot;&gt;Papertrail&lt;/a&gt; est un service de logs. Il permet de consulter en temps réel les logs de votre application Heroku. Vous avez même la possibilité de sauvegarder vos recherches ou de créer des alertes personnalisées. La version gratuite permet de stocker jusqu’à 10Mo de log par jour, de rechercher sur 2 jours et de retenir jusqu’à 7 jours les logs. Pour l’installer, il suffit de l’ajouter depuis l’interface d’Heroku, il n’y a rien à configurer. Ensuite, vous avez juste à cliquer sur le lien pour consulter vos logs.&lt;/p&gt;
 
-&lt;h2 id=&quot;logo-sendgridimagespostaddonsherokusendgridpng-sendgrid&quot;&gt;&lt;img src=&quot;../../../images/postAddonsHeroku/sendgrid.png&quot; alt=&quot;Logo SendGrid&quot; /&gt; SendGrid&lt;/h2&gt;
+&lt;h2 id=&quot;logo_sendgrid_sendgrid&quot;&gt;&lt;img src=&quot;../../../images/postAddonsHeroku/sendgrid.png&quot; alt=&quot;Logo SendGrid&quot; /&gt; SendGrid&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://sendgrid.com/&quot;&gt;SendGrid&lt;/a&gt; est un service de messagerie électronique. Une fois l’add-on ajouté sur Heroku, vous disposez dans les variables de configuration de votre application, d’un login et d’un mot de passe. Il ne vous reste plus qu’à changer l’accès au serveur smtp dans votre application pour utiliser ces variables. En plus de faire office de serveur smtp, SendGrid vous offre la possibilité de tracer les mails, c’est-à-dire de savoir combien ont été ouverts, combien de personnes ont cliqué sur les liens contenus, combien ne sont pas arrivés à destination… tout ça même dans la version gratuite. La seule contrainte en version gratuite est la limitation à 200 mails par jour.&lt;/p&gt;
 
-&lt;h2 id=&quot;logo-new-relicimagespostaddonsherokunewrelicpng-new-relic&quot;&gt;&lt;img src=&quot;../../../images/postAddonsHeroku/newrelic.png&quot; alt=&quot;Logo New Relic&quot; /&gt; New Relic&lt;/h2&gt;
+&lt;h2 id=&quot;logo_new_relic_new_relic&quot;&gt;&lt;img src=&quot;../../../images/postAddonsHeroku/newrelic.png&quot; alt=&quot;Logo New Relic&quot; /&gt; New Relic&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://www.newrelic.com/&quot;&gt;New Relic&lt;/a&gt; enfin, est un service de surveillance de votre application. Il permet à la fois de surveiller les performances de la machine, mais aussi de repérer par exemple les requêtes SQL qui sont lentes, ainsi que les méthodes de votre code qui sont coûteuse en temps processeur et d’autres données. Vous avez la possibilité de créer des rapports sur toutes ces données ainsi que de créer des alertes sur certains évenements. Les versions payantes permettent d’aller plus loin dans la recherche de points noirs dans l’application ainsi que de débloquer la limite de l’historique. L’installation est plus complexe que les autres add-ons mais reste très bien expliquée au premier lancement du service.&lt;/p&gt;
 
-&lt;p&gt;Bien sûr tous ces add-ons sont disponibles hors Heroku et peuvent être utilisés sur n’importe quel autre serveur.
-Dans tous les cas, essayez, testez, bidouillez, faîtes vous plaisir ! C’est tout à fait le type de service qui fait gagner un maximum de temps pour déployer une application, que ce soit pour un POC, une démo ou même une mise en prod !&lt;/p&gt;
-</description>
+&lt;p&gt;Bien sûr tous ces add-ons sont disponibles hors Heroku et peuvent être utilisés sur n’importe quel autre serveur. Dans tous les cas, essayez, testez, bidouillez, faîtes vous plaisir ! C’est tout à fait le type de service qui fait gagner un maximum de temps pour déployer une application, que ce soit pour un POC, une démo ou même une mise en prod !&lt;/p&gt;</description>
                                 <pubDate>Thu, 04 Sep 2014 00:00:00 +0200</pubDate>
                                 <link>http://code-troopers.com/2014/09/04/AddonsHeroku.html</link>
                                 <guid isPermaLink="true">http://code-troopers.com/2014/09/04/AddonsHeroku.html</guid>
@@ -92,52 +40,32 @@ Dans tous les cas, essayez, testez, bidouillez, faîtes vous plaisir ! C’est t
                 
                         <item>
                                 <title>Résoudre les conflits de dépendances</title>
-                                <description>&lt;p&gt;Lors de nos développements, nous reposons beaucoup sur des projets externes qui nous fournissent énormément de services
-utiles. Dans un récent projet, nous avons eu besoin de faire fonctionner Neo4j conjointement à ElasticSearch. Jusqu’ici,
-aucun soucis n’est à déplorer, mais nous avions une exigence particulière : il fallait que l’application puisse
-démarrer automatiquement un serveur Neo4J ainsi qu’un serveur ElasticSearch sur les postes de développements (ainsi que
-pour les tests d’intégration).&lt;/p&gt;
+                                <description>&lt;p&gt;Lors de nos développements, nous reposons beaucoup sur des projets externes qui nous fournissent énormément de services utiles. Dans un récent projet, nous avons eu besoin de faire fonctionner Neo4j conjointement à ElasticSearch. Jusqu’ici, aucun soucis n’est à déplorer, mais nous avions une exigence particulière : il fallait que l’application puisse démarrer automatiquement un serveur Neo4J ainsi qu’un serveur ElasticSearch sur les postes de développements (ainsi que pour les tests d’intégration).&lt;/p&gt;
 
-&lt;h2 id=&quot;problme-existant&quot;&gt;Problème existant&lt;/h2&gt;
+&lt;h2 id=&quot;problme_existant&quot;&gt;Problème existant&lt;/h2&gt;
 
-&lt;p&gt;Les deux outils que nous utilisons se basent sur Apache Lucene pour toute la partie indexation et accès aux données.
-Mais, et c’est là que le problème se situe, ils n’utilisent pas les mêmes versions de Lucene.&lt;/p&gt;
+&lt;p&gt;Les deux outils que nous utilisons se basent sur Apache Lucene pour toute la partie indexation et accès aux données. Mais, et c’est là que le problème se situe, ils n’utilisent pas les mêmes versions de Lucene.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;&amp;lt;!-- Extrait du pom d&#39;ElasticSearch --&amp;gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;!-- Extrait du pom d'ElasticSearch --&amp;gt;
 &amp;lt;dependency&amp;gt;
     &amp;lt;groupId&amp;gt;org.apache.lucene&amp;lt;/groupId&amp;gt;
     &amp;lt;artifactId&amp;gt;lucene-core&amp;lt;/artifactId&amp;gt;
     &amp;lt;version&amp;gt;4.9.0&amp;lt;/version&amp;gt;
     &amp;lt;scope&amp;gt;compile&amp;lt;/scope&amp;gt;
-&amp;lt;/dependency&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
+&amp;lt;/dependency&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;hr /&gt;
-
 &lt;pre&gt;&lt;code&gt;&amp;lt;!-- Extrait du pom de Neo4j --&amp;gt; 
 &amp;lt;dependency&amp;gt;
     &amp;lt;groupId&amp;gt;org.apache.lucene&amp;lt;/groupId&amp;gt;
     &amp;lt;artifactId&amp;gt;lucene-core&amp;lt;/artifactId&amp;gt;
     &amp;lt;version&amp;gt;3.6.2&amp;lt;/version&amp;gt;
-&amp;lt;/dependency&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
+&amp;lt;/dependency&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;ElasticSearch utilise la version 4.9.0, alors que Neo4J utilise la version 3.6.2. Ainsi, en fonction du bon vouloir du
-&lt;code&gt;Classloader&lt;/code&gt; qui sera utilisé par l’application, il se peut qu’ElasticSearch ou Neo4J refuse de fonctionner. La
-difficulté pour comprendre et détecter le problème est qu’il se manifeste souvent par un obscur &lt;code&gt;NoClassDefFoundError&lt;/code&gt;
-ou &lt;code&gt;NoSuchMethodError&lt;/code&gt; qui n’est pas des plus explicites (d’autant plus lorsque notre IDE nous montre une version qui
-contient ledit symbole non trouvé).&lt;/p&gt;
+&lt;p&gt;ElasticSearch utilise la version 4.9.0, alors que Neo4J utilise la version 3.6.2. Ainsi, en fonction du bon vouloir du &lt;code&gt;Classloader&lt;/code&gt; qui sera utilisé par l’application, il se peut qu’ElasticSearch ou Neo4J refuse de fonctionner. La difficulté pour comprendre et détecter le problème est qu’il se manifeste souvent par un obscur &lt;code&gt;NoClassDefFoundError&lt;/code&gt; ou &lt;code&gt;NoSuchMethodError&lt;/code&gt; qui n’est pas des plus explicites (d’autant plus lorsque notre IDE nous montre une version qui contient ledit symbole non trouvé).&lt;/p&gt;
 
-&lt;h2 id=&quot;solution-de-contournement&quot;&gt;Solution de contournement&lt;/h2&gt;
+&lt;h2 id=&quot;solution_de_contournement&quot;&gt;Solution de contournement&lt;/h2&gt;
 
-&lt;p&gt;Le conflit est assez simple à contourner une fois qu’on a compris ce qui se passe. En fait, il y a deux classes portant
-le même nom dans les classes chargées, par exemple &lt;code&gt;org.lucene.MaClass&lt;/code&gt;, l’une effaçant l’autre aux yeux du
-&lt;code&gt;ClassLoader&lt;/code&gt;.
-Une pratique courante est de renommer (ou relocate) le package de base d’une bibliothèque utilisée et de l’inclure dans
-le fichier de package du projet, le plugin &lt;code&gt;maven-shade&lt;/code&gt; est conçu dans cette optique.
-Le choix fait est de renommer la dépendance Lucene dans Neo4J pour notre part, ainsi, nous avons forké le projet et
-configuré le plugin &lt;code&gt;shade&lt;/code&gt; pour qu’il inclue le contenu de la dépendance d’Apache Lucene et qu’il fasse le renommage de
-&lt;code&gt;org.apache.lucene&lt;/code&gt; en &lt;code&gt;shaded.org.apache.lucene&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Le conflit est assez simple à contourner une fois qu’on a compris ce qui se passe. En fait, il y a deux classes portant le même nom dans les classes chargées, par exemple &lt;code&gt;org.lucene.MaClass&lt;/code&gt;, l’une effaçant l’autre aux yeux du &lt;code&gt;ClassLoader&lt;/code&gt;. Une pratique courante est de renommer (ou relocate) le package de base d’une bibliothèque utilisée et de l’inclure dans le fichier de package du projet, le plugin &lt;code&gt;maven-shade&lt;/code&gt; est conçu dans cette optique. Le choix fait est de renommer la dépendance Lucene dans Neo4J pour notre part, ainsi, nous avons forké le projet et configuré le plugin &lt;code&gt;shade&lt;/code&gt; pour qu’il inclue le contenu de la dépendance d’Apache Lucene et qu’il fasse le renommage de &lt;code&gt;org.apache.lucene&lt;/code&gt; en &lt;code&gt;shaded.org.apache.lucene&lt;/code&gt;.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt; &amp;lt;plugin&amp;gt;
         &amp;lt;groupId&amp;gt;org.apache.maven.plugins&amp;lt;/groupId&amp;gt;
@@ -166,17 +94,11 @@ configuré le plugin &lt;code&gt;shade&lt;/code&gt; pour qu’il inclue le conte
                 &amp;lt;/configuration&amp;gt;
             &amp;lt;/execution&amp;gt;
         &amp;lt;/executions&amp;gt;
-  &amp;lt;/plugin&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
+  &amp;lt;/plugin&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&quot;dploiement-et-nommage&quot;&gt;Déploiement et nommage&lt;/h2&gt;
+&lt;h2 id=&quot;dploiement_et_nommage&quot;&gt;Déploiement et nommage&lt;/h2&gt;
 
-&lt;p&gt;Pour ne pas polluer les dépôts, le numéro de version modifié a été postfixé par &lt;code&gt;-shaded&lt;/code&gt;. Le déploiement a été fait sur
-un dépôt Maven qui est en fait un simple repository Github.
-Le commit correspondant à cette modification &lt;a href=&quot;https://github.com/CedricGatay/neo4j/commit/452f58fca69ffe3b1d0eab6261b8342f8da95889&quot;&gt;est consultable
-ici&lt;/a&gt;.&lt;/p&gt;
-
-</description>
+&lt;p&gt;Pour ne pas polluer les dépôts, le numéro de version modifié a été postfixé par &lt;code&gt;-shaded&lt;/code&gt;. Le déploiement a été fait sur un dépôt Maven qui est en fait un simple repository Github. Le commit correspondant à cette modification &lt;a href=&quot;https://github.com/CedricGatay/neo4j/commit/452f58fca69ffe3b1d0eab6261b8342f8da95889&quot;&gt;est consultable ici&lt;/a&gt;.&lt;/p&gt;</description>
                                 <pubDate>Mon, 01 Sep 2014 00:00:00 +0200</pubDate>
                                 <link>http://code-troopers.com/2014/09/01/ConflitsDependances.html</link>
                                 <guid isPermaLink="true">http://code-troopers.com/2014/09/01/ConflitsDependances.html</guid>
@@ -184,35 +106,37 @@ ici&lt;/a&gt;.&lt;/p&gt;
                 
                         <item>
                                 <title>Elcurator, le nouvel outil de curation par Octo</title>
-                                <description>&lt;h2 id=&quot;la-curation&quot;&gt;1 - La curation&lt;/h2&gt;
+                                <description>&lt;h2 id=&quot;1__la_curation&quot;&gt;1 - La curation&lt;/h2&gt;
+
 &lt;p&gt;Fatigué de partager vos bons liens à vos collègues par irc, hipchat ou mail et que 2 jours plus tard on vous les redemande pour la 5ème fois ? Dans ce cas c’est que vous avez besoin d’un outil de curation. Derrière ce mot plutôt moche se cache le principe de veille technologique à l’échelle de l’entreprise. Cela permet de concentrer les efforts en la matière en un seul endroit pour que toute une équipe (ou société, ou autre) puisse en bénéficier.&lt;/p&gt;
 
-&lt;h2 id=&quot;pourquoi-elcurator-&quot;&gt;2- Pourquoi ElCurator ?&lt;/h2&gt;
+&lt;h2 id=&quot;2_pourquoi_elcurator_&quot;&gt;2- Pourquoi ElCurator ?&lt;/h2&gt;
+
 &lt;p&gt;Chez Code-Troopers, nous utilisons &lt;a href=&quot;http://www.elcurator.net/&quot;&gt;ElCurator&lt;/a&gt; depuis déjà 3 semaines, et cela pour deux raisons. La première c’est que nous venons tout juste de ressentir le besoin d’avoir un tel outil à notre service (équipe pas toujours sur hipchat en même temps, pas toujours dans le même bureau, et surtout début des vacances, donc passage de connaissances rendu plus compliqué). Et deuxièmement, c’est pile pendant nos recherches qu’&lt;a href=&quot;http://www.octo.com/&quot;&gt;Octo&lt;/a&gt; a lancé sa solution ElCurator. Donc en plus d’un timming parfait de leur part, c’est aussi parce que nous apprécions la création française que nous avons saisi l’occasion de tester et soutenir une bonne initiative d’une autre boite de développement Made in France.&lt;/p&gt;
 
-&lt;h2 id=&quot;les-fonctionnalits&quot;&gt;3 - Les Fonctionnalités&lt;/h2&gt;
-&lt;p&gt;Dans ce qu’il est possible de faire avec ElCurator, on retrouve évidemment la possiblité de poster un lien. Lors de cette action, il faut lui attribuer une catégorie et un commentaire / descriptif (un peu fastidieux les premières fois, ce commentaire est finalement bien utile pour les autres utilisateurs, afin d’avoir quelques informations sur le lien en question)
-Ensuite, une fois un lien posté, chaque utilisateur a la possibilité de le lire (bien évidement), de le marquer comme favori, de le flaguer pour le lire plus tard… autant de petites actions permettant à chacun de s’organiser comme il le souhaite.
-Il s’agit donc d’une interface claire et efficace, sans features superflues qui viendraient capter inutilement notre attention et qui répond parfaitement à la problématique posée de partage d’informations et de gain de temps.&lt;/p&gt;
+&lt;h2 id=&quot;3__les_fonctionnalits&quot;&gt;3 - Les Fonctionnalités&lt;/h2&gt;
 
-&lt;h2 id=&quot;partage-monde&quot;&gt;4 - Partage Monde&lt;/h2&gt;
-&lt;p&gt;Nouvelle feature introduite dans la semaine, le partage monde est une possibilité offerte lors de l’ajout d’un lien, de le publier à tous les utilisateurs d’ElCurator (et pas uniquement à ceux de son groupe). Pour le moment je reste perplexe face à cette fonctionnalité qui ressemble de prime abord à un twitter privé ElCurator (sans les selfies ou autres) dans lequel  il va falloir creuser pour trouver les liens qui nous correspondent : l’effet inverse de ce qu’ElCurator est censé nous apporter…
-À voir ce que cela donne sur le long terme.&lt;/p&gt;
+&lt;p&gt;Dans ce qu’il est possible de faire avec ElCurator, on retrouve évidemment la possiblité de poster un lien. Lors de cette action, il faut lui attribuer une catégorie et un commentaire / descriptif (un peu fastidieux les premières fois, ce commentaire est finalement bien utile pour les autres utilisateurs, afin d’avoir quelques informations sur le lien en question) Ensuite, une fois un lien posté, chaque utilisateur a la possibilité de le lire (bien évidement), de le marquer comme favori, de le flaguer pour le lire plus tard… autant de petites actions permettant à chacun de s’organiser comme il le souhaite. Il s’agit donc d’une interface claire et efficace, sans features superflues qui viendraient capter inutilement notre attention et qui répond parfaitement à la problématique posée de partage d’informations et de gain de temps.&lt;/p&gt;
 
-&lt;h2 id=&quot;ct-administration&quot;&gt;5 - Côté Administration&lt;/h2&gt;
-&lt;p&gt;Pour la partie gestion de sa société (ou groupe, ou n’importe) pas grand chose à faire, et c’est tant mieux. Il est possible d’ajouter / supprimer des utilisateurs, de les flaguer comme administrateur à leur tour. Et c’est à peu près tout.
-Il y a aussi la gestion des catégories utilisées lors de la publication des liens. Cela mériterait peut-être d’être accessible par défaut à tous les utilisateurs afin de ne pas avoir à répondre aux “Tu peux ajouter cette catégorie stp !”&lt;/p&gt;
+&lt;h2 id=&quot;4__partage_monde&quot;&gt;4 - Partage Monde&lt;/h2&gt;
 
-&lt;h2 id=&quot;le-plus-delcurator&quot;&gt;6 - Le plus d’ElCurator&lt;/h2&gt;
-&lt;p&gt;Octo a introduit une notion de gamification dans sa plateforme. Ainsi, lorsqu’un utilisateur poste un lien, tous les autres membres peuvent voter (à coup de +1) sur la publication afin de distinguer facilement les liens les plus appréciés par le groupe. Et une fois par semaine un récapitulatif est généré afin de savoir qui a posté les liens les plus utiles (les plus votés) et cette personne est désignée “ElCurator de la semaine”. Il y a donc un petit challenge entre les personnes de l’équipe pour savoir qui apportera les liens les plus utiles.
-Attention toutefois à ce que les chefs d’équipe/managers ou autres n’utilisent pas cette fonction à mauvais escient pour désigner une personne plus efficace que les autres en se basant uniquement sur ce fait.&lt;/p&gt;
+&lt;p&gt;Nouvelle feature introduite dans la semaine, le partage monde est une possibilité offerte lors de l’ajout d’un lien, de le publier à tous les utilisateurs d’ElCurator (et pas uniquement à ceux de son groupe). Pour le moment je reste perplexe face à cette fonctionnalité qui ressemble de prime abord à un twitter privé ElCurator (sans les selfies ou autres) dans lequel il va falloir creuser pour trouver les liens qui nous correspondent : l’effet inverse de ce qu’ElCurator est censé nous apporter… À voir ce que cela donne sur le long terme.&lt;/p&gt;
 
-&lt;h2 id=&quot;un-outil-encore--paufiner&quot;&gt;7- Un outil encore à paufiner&lt;/h2&gt;
+&lt;h2 id=&quot;5__ct_administration&quot;&gt;5 - Côté Administration&lt;/h2&gt;
+
+&lt;p&gt;Pour la partie gestion de sa société (ou groupe, ou n’importe) pas grand chose à faire, et c’est tant mieux. Il est possible d’ajouter / supprimer des utilisateurs, de les flaguer comme administrateur à leur tour. Et c’est à peu près tout. Il y a aussi la gestion des catégories utilisées lors de la publication des liens. Cela mériterait peut-être d’être accessible par défaut à tous les utilisateurs afin de ne pas avoir à répondre aux “Tu peux ajouter cette catégorie stp !”&lt;/p&gt;
+
+&lt;h2 id=&quot;6__le_plus_delcurator&quot;&gt;6 - Le plus d’ElCurator&lt;/h2&gt;
+
+&lt;p&gt;Octo a introduit une notion de gamification dans sa plateforme. Ainsi, lorsqu’un utilisateur poste un lien, tous les autres membres peuvent voter (à coup de +1) sur la publication afin de distinguer facilement les liens les plus appréciés par le groupe. Et une fois par semaine un récapitulatif est généré afin de savoir qui a posté les liens les plus utiles (les plus votés) et cette personne est désignée “ElCurator de la semaine”. Il y a donc un petit challenge entre les personnes de l’équipe pour savoir qui apportera les liens les plus utiles. Attention toutefois à ce que les chefs d’équipe/managers ou autres n’utilisent pas cette fonction à mauvais escient pour désigner une personne plus efficace que les autres en se basant uniquement sur ce fait.&lt;/p&gt;
+
+&lt;h2 id=&quot;7_un_outil_encore__paufiner&quot;&gt;7- Un outil encore à paufiner&lt;/h2&gt;
+
 &lt;p&gt;Disponible seulement depuis quelques semaines, ElCurator n’a pas encore atteint sa forme finale. Les équipes d’Octo travaillant dessus ont d’ailleurs branché uservoice afin de recueillir le feedback des utilisateurs. Et ils prennent en compte ces remontées. Donc n’hésitez pas à leur faire part des dysfonctionnements ou souhaits d’évolution. Ils ont déjà répondu favorablement à quelque uns de mes tickets.&lt;/p&gt;
 
-&lt;h2 id=&quot;conclusion&quot;&gt;8 - Conclusion&lt;/h2&gt;
-&lt;p&gt;ElCurator est une réalisastion très bien menée par Octo. Simple et fluide, chez Code-Troopers nous l’avons adoptée avec plaisir. Et je conseille vivement à tous ceux qui n’ont pas encore testé la curation de s’y mettre avec cet outil, c’est un gain de temps assuré pour peu que quelques utilisateurs jouent le jeu.&lt;/p&gt;
-</description>
+&lt;h2 id=&quot;8__conclusion&quot;&gt;8 - Conclusion&lt;/h2&gt;
+
+&lt;p&gt;ElCurator est une réalisastion très bien menée par Octo. Simple et fluide, chez Code-Troopers nous l’avons adoptée avec plaisir. Et je conseille vivement à tous ceux qui n’ont pas encore testé la curation de s’y mettre avec cet outil, c’est un gain de temps assuré pour peu que quelques utilisateurs jouent le jeu.&lt;/p&gt;</description>
                                 <pubDate>Fri, 08 Aug 2014 00:00:00 +0200</pubDate>
                                 <link>http://code-troopers.com/2014/08/08/ElCurator.html</link>
                                 <guid isPermaLink="true">http://code-troopers.com/2014/08/08/ElCurator.html</guid>
@@ -224,12 +148,12 @@ Attention toutefois à ce que les chefs d’équipe/managers ou autres n’utili
 &lt;p&gt;
     Ce lundi 21 juillet vient de débuter &lt;a
         href=&quot;https://class.coursera.org/mobilecloud-001&quot;&gt;le 3ème cours&lt;/a&gt; de la série sur le développement Android proposée par Coursera, alors que
-    &lt;a href=&quot;https://class.coursera.org/posa-002&quot;&gt;le second&lt;/a&gt; vient à peine de se terminer et que les résultats n&#39;ont pas encore été envoyés.
+    &lt;a href=&quot;https://class.coursera.org/posa-002&quot;&gt;le second&lt;/a&gt; vient à peine de se terminer et que les résultats n'ont pas encore été envoyés.
     Pour rappel le cours qui vient de s’achever a traité en grande majorité tout ce qui touche aux Threads, Services (binding, starting), tâche synchrone &amp; asynchrone, Messenger, AIDL.... (rien que ça)
 &lt;/p&gt;
 &lt;p&gt;
     La prochaine étape que nous propose Coursera intitulée
-    &lt;b&gt;Programming Cloud Services for Android Handheld Systems&lt;/b&gt; sera axée sur la création d&#39;applications qui communiqueront avec des serveurs &quot;dans le cloud&quot;.
+    &lt;b&gt;Programming Cloud Services for Android Handheld Systems&lt;/b&gt; sera axée sur la création d'applications qui communiqueront avec des serveurs &quot;dans le cloud&quot;.
     Ce qui semble correspondre à la majorité des applications actuelles offrant un minimum de fonctionnalités.
 &lt;/p&gt;
 &lt;h3&gt;Il faut emporter son pc à la plage ?&lt;/h3&gt;
@@ -246,40 +170,40 @@ Attention toutefois à ce que les chefs d’équipe/managers ou autres n’utili
 &lt;h3&gt;&quot;Go to class&quot;&lt;/h3&gt;
 &lt;p&gt;
     Les premières vidéos sont déjà en ligne, donc si vous êtes intéressé, il est encore temps de s’inscrire pour travailler tout l’été,
-    &lt;a href=&quot;https://www.coursera.org/course/mobilecloud&quot;&gt;c&#39;est par là&lt;/a&gt;
+    &lt;a href=&quot;https://www.coursera.org/course/mobilecloud&quot;&gt;c'est par là&lt;/a&gt;
 &lt;/p&gt;
 
 &lt;h3&gt;Retours sur le cours N°2 &lt;/h3&gt;
 &lt;p&gt;
-    J&#39;ai vraiment apprécié ce cours, principalement parce que  &lt;a href=&quot;https://www.coursera.org/instructor/douglasschmidt&quot;&gt;Douglas Schmidt&lt;/a&gt; maîtrise son sujet.
-    Autant sur le fonctionnement d&#39;Android qu&#39;il a profondément étudié ou sur les patterns qu&#39;il explique et pour lesquels il est reconnu. Ce fut vraiment pour moi, du temps bien investi.
+    J'ai vraiment apprécié ce cours, principalement parce que  &lt;a href=&quot;https://www.coursera.org/instructor/douglasschmidt&quot;&gt;Douglas Schmidt&lt;/a&gt; maîtrise son sujet.
+    Autant sur le fonctionnement d'Android qu'il a profondément étudié ou sur les patterns qu'il explique et pour lesquels il est reconnu. Ce fut vraiment pour moi, du temps bien investi.
 &lt;/p&gt;
 &lt;p&gt;
-    Mais je voudrais surtout revenir sur l&#39;évaluation des exercices à faire.
+    Mais je voudrais surtout revenir sur l'évaluation des exercices à faire.
     Je l’avais évoqué dans &lt;a
         href=&quot;http://code-troopers.com/2014/05/15/CourseraAndroid.html&quot;&gt;mon précédent billet&lt;/a&gt;, la façon dont chacun allait être évalué était une première pour moi (sur Coursera).
     Il s’agissait de noter le travail d’autres étudiants (au moins 5 pour chaque exercice)
 &lt;/p&gt;
 &lt;p&gt;
-    Comme dans toutes situations, il y a du bon et du mauvais. Personnellement je n&#39;ai pas tellement aimé cette façon de faire, notamment pour les raisons suivantes :
+    Comme dans toutes situations, il y a du bon et du mauvais. Personnellement je n'ai pas tellement aimé cette façon de faire, notamment pour les raisons suivantes :
 &lt;/p&gt;
 &lt;ul&gt;
-    &lt;li&gt;Trop gourmand en temps car cela demande le temps de regarder la longue vidéo d&#39;explication des solutions possibles puis en plus celui pour évaluer au moins 5 élèves;&lt;/li&gt;
-    &lt;li&gt;Feedback lent : une semaine pour faire l&#39;exercice puis une nouvelle pour que tout le monde s&#39;entre note, si on a fait quelque chose de travers, c&#39;est quasi oublié;&lt;/li&gt;
-    &lt;li&gt;Noter le travail de quelqu&#39;un n&#39;est pas quelque chose d&#39;évident ni de naturel (même si les points à prendre compte étaient donnés).&lt;/li&gt;
+    &lt;li&gt;Trop gourmand en temps car cela demande le temps de regarder la longue vidéo d'explication des solutions possibles puis en plus celui pour évaluer au moins 5 élèves;&lt;/li&gt;
+    &lt;li&gt;Feedback lent : une semaine pour faire l'exercice puis une nouvelle pour que tout le monde s'entre note, si on a fait quelque chose de travers, c'est quasi oublié;&lt;/li&gt;
+    &lt;li&gt;Noter le travail de quelqu'un n'est pas quelque chose d'évident ni de naturel (même si les points à prendre compte étaient donnés).&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;
-    Mais j&#39;en retiens tout de même ces quelques points positifs :
+    Mais j'en retiens tout de même ces quelques points positifs :
 &lt;/p&gt;
 &lt;ul&gt;
-    &lt;li&gt;Lire du code d’autres personnes, ça permet de voir d’autres approches et façons de penser(même si là j&#39;ai rarement vu 2 solutions différentes);&lt;/li&gt;
+    &lt;li&gt;Lire du code d’autres personnes, ça permet de voir d’autres approches et façons de penser(même si là j'ai rarement vu 2 solutions différentes);&lt;/li&gt;
     &lt;li&gt;Avoir des commentaires sur ses propres solutions (positifs ou négatifs, mais dans les deux cas quelqu’un a pris le temps de regarder, ce qui n’arrive pas si souvent dans la vraie vie).&lt;/li&gt;
 &lt;/ul&gt;
 
 
 &lt;h3&gt;Les MOOCs&lt;/h3&gt;
 &lt;p&gt;
-    Pour le moment chacun des cours que j&#39;ai suivi m&#39;a apporté quelque chose, que ça soit une nouvelle façon de réfléchir (principalement pour le Scala)
+    Pour le moment chacun des cours que j'ai suivi m'a apporté quelque chose, que ça soit une nouvelle façon de réfléchir (principalement pour le Scala)
     ou de nombreux éclaircissements sur la façon dont certains systèmes fonctionnent ou doivent fonctionner.
     Donc si vous avez un peu de temps, même simplement pour regarder les slides ou les vidéos, je vous invite vivement à suivre des MOOC et ce quelque soit la plateforme.
 &lt;/p&gt;
@@ -293,59 +217,57 @@ Attention toutefois à ce que les chefs d’équipe/managers ou autres n’utili
                         </item>
                 
                         <item>
-                                <title>L&#39;application Terres du Son est disponible</title>
+                                <title>L'application Terres du Son est disponible</title>
                                 <description>&lt;p&gt;C’était annoncé, c’est maintenant chose faite ! L’application android pour &lt;em&gt;Terres du Son 2014&lt;/em&gt; est sur le Play Store.&lt;/p&gt;
 
 &lt;p&gt;Développée en partenariat avec l’équipe de TDS, cette application vous offre la possibilité de :&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Consulter la programmation jour par jour&lt;/li&gt;
-  &lt;li&gt;Être notifié avant le passage d’un artiste (pour ne pas rater le début)&lt;/li&gt;
-  &lt;li&gt;Être notifié avant le départ des navettes Fil Vert (pour ne pas rentrer à pied !)&lt;/li&gt;
-  &lt;li&gt;Écouter la playlist officielle du festival&lt;/li&gt;
-  &lt;li&gt;Écouter le dernier album de chaque artiste&lt;/li&gt;
-  &lt;li&gt;Accéder à une fiche détaillée de l’artiste (liens web, vidéo, biographie…)&lt;/li&gt;
-  &lt;li&gt;Connaître en temps réel ce qui passe et ce qui va suivre pour chacune des scènes&lt;/li&gt;
-  &lt;li&gt;Consulter les horaires des navettes Fil Vert (qui font les aller-retours entre la gare routière de Tours et l’entrée du site)&lt;/li&gt;
+&lt;li&gt;Consulter la programmation jour par jour&lt;/li&gt;
+
+&lt;li&gt;Être notifié avant le passage d’un artiste (pour ne pas rater le début)&lt;/li&gt;
+
+&lt;li&gt;Être notifié avant le départ des navettes Fil Vert (pour ne pas rentrer à pied !)&lt;/li&gt;
+
+&lt;li&gt;Écouter la playlist officielle du festival&lt;/li&gt;
+
+&lt;li&gt;Écouter le dernier album de chaque artiste&lt;/li&gt;
+
+&lt;li&gt;Accéder à une fiche détaillée de l’artiste (liens web, vidéo, biographie…)&lt;/li&gt;
+
+&lt;li&gt;Connaître en temps réel ce qui passe et ce qui va suivre pour chacune des scènes&lt;/li&gt;
+
+&lt;li&gt;Consulter les horaires des navettes Fil Vert (qui font les aller-retours entre la gare routière de Tours et l’entrée du site)&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;div style=&quot;text-align:center;margin:50px&quot;&gt;
-    &lt;a href=&quot;/images/postTDS2/launch.png&quot; data-lightbox=&quot;group-2&quot; title=&quot;Splash screen de l&#39;application&quot; class=&quot;inlineBoxes&quot;&gt;
-        &lt;img class=&quot;medium&quot; src=&quot;/images/postTDS2/launch.png&quot; alt=&quot;Splash screen&quot; /&gt;
+&lt;div style='text-align:center;margin:50px'&gt;
+    &lt;a class='inlineBoxes' data-lightbox='group-2' href='/images/postTDS2/launch.png' title='Splash screen de l&amp;apos;application'&gt;
+        &lt;img alt='Splash screen' class='medium' src='/images/postTDS2/launch.png' /&gt;
     &lt;/a&gt;
-    &lt;a href=&quot;/images/postTDS2/home.png&quot; data-lightbox=&quot;group-2&quot; title=&quot;Menu de l&#39;application&quot; class=&quot;inlineBoxes&quot;&gt;
-        &lt;img class=&quot;medium&quot; src=&quot;/images/postTDS2/home.png&quot; alt=&quot;Menu screen&quot; /&gt;
+    &lt;a class='inlineBoxes' data-lightbox='group-2' href='/images/postTDS2/home.png' title='Menu de l&amp;apos;application'&gt;
+        &lt;img alt='Menu screen' class='medium' src='/images/postTDS2/home.png' /&gt;
     &lt;/a&gt;
-    &lt;a href=&quot;/images/postTDS2/prog.png&quot; data-lightbox=&quot;group-2&quot; title=&quot;Programme par jour et par scène&quot; class=&quot;inlineBoxes&quot;&gt;
-        &lt;img class=&quot;medium&quot; src=&quot;/images/postTDS2/prog.png&quot; alt=&quot;Programme screen&quot; /&gt;
+    &lt;a class='inlineBoxes' data-lightbox='group-2' href='/images/postTDS2/prog.png' title='Programme par jour et par scène'&gt;
+        &lt;img alt='Programme screen' class='medium' src='/images/postTDS2/prog.png' /&gt;
     &lt;/a&gt;
-    &lt;a href=&quot;/images/postTDS2/artiste.png&quot; data-lightbox=&quot;group-2&quot; title=&quot;Une fiche artiste de l&#39;application&quot; class=&quot;inlineBoxes&quot;&gt;
-        &lt;img class=&quot;medium&quot; src=&quot;/images/postTDS2/artiste.png&quot; alt=&quot;Artist screen&quot; /&gt;
+    &lt;a class='inlineBoxes' data-lightbox='group-2' href='/images/postTDS2/artiste.png' title='Une fiche artiste de l&amp;apos;application'&gt;
+        &lt;img alt='Artist screen' class='medium' src='/images/postTDS2/artiste.png' /&gt;
     &lt;/a&gt;
-    &lt;a href=&quot;/images/postTDS2/notifs.png&quot; data-lightbox=&quot;group-2&quot; title=&quot;Récap de notifications plannifiées pour les navettes&quot; class=&quot;inlineBoxes&quot;&gt;
-        &lt;img class=&quot;medium&quot; src=&quot;/images/postTDS2/notifs.png&quot; alt=&quot;Alerte screen&quot; /&gt;
-    &lt;/a&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Rendez-vous dès à présent sur le Play Store pour télécharger l’appli.&lt;br /&gt; 
-Terres du Son est engagé dans une démarche de développement durable, télécharger l’application, c’est aussi imprimer moins de programmes et donc réduire les déchets.&lt;br /&gt;
-Et comme pour tous les festivals en région Centre, pensez à venir avec votre gobelet réutilisable.&lt;/p&gt;
-
-&lt;div style=&quot;text-align:center;margin:50px&quot;&gt;
-    &lt;a href=&quot;https://play.google.com/store/apps/details?id=com.codetroopers.terresduson&quot;&gt;
-      &lt;img class=&quot;medium&quot; alt=&quot;QRcode application Terres du Son&quot; src=&quot;/images/postTDS2/qrcode_playstore_tds.png&quot; /&gt;
-    &lt;/a&gt;
-    &lt;a href=&quot;https://play.google.com/store/apps/details?id=com.codetroopers.terresduson&quot;&gt;
-      &lt;img alt=&quot;Get it on Google Play&quot; src=&quot;https://developer.android.com/images/brand/fr_generic_rgb_wo_60.png&quot; /&gt;
+    &lt;a class='inlineBoxes' data-lightbox='group-2' href='/images/postTDS2/notifs.png' title='Récap de notifications plannifiées pour les navettes'&gt;
+        &lt;img alt='Alerte screen' class='medium' src='/images/postTDS2/notifs.png' /&gt;
     &lt;/a&gt;
 &lt;/div&gt;
-
+&lt;p&gt;Rendez-vous dès à présent sur le Play Store pour télécharger l’appli.&lt;br /&gt; Terres du Son est engagé dans une démarche de développement durable, télécharger l’application, c’est aussi imprimer moins de programmes et donc réduire les déchets.&lt;br /&gt; Et comme pour tous les festivals en région Centre, pensez à venir avec votre gobelet réutilisable.&lt;/p&gt;
+&lt;div style='text-align:center;margin:50px'&gt;
+    &lt;a href='https://play.google.com/store/apps/details?id=com.codetroopers.terresduson'&gt;
+      &lt;img alt='QRcode application Terres du Son' class='medium' src='/images/postTDS2/qrcode_playstore_tds.png' /&gt;
+    &lt;/a&gt;
+    &lt;a href='https://play.google.com/store/apps/details?id=com.codetroopers.terresduson'&gt;
+      &lt;img alt='Get it on Google Play' src='https://developer.android.com/images/brand/fr_generic_rgb_wo_60.png' /&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
 &lt;p&gt;Tous les retours, positifs comme négatifs sont les bienvenus. Alors n’hésitez pas à donner votre avis, nous en tiendrons compte pour les prochaines versions de l’application.&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;&lt;code&gt;NB&lt;/code&gt; : pour profiter pleinement des fonctionnalités d’écoute de la playlist Terres du Son et des albums des artistes
-il est nécessaire de connecter son compte &lt;a href=&quot;http://www.deezer.com/offers/premiumplus&quot;&gt;premium+ Deezer&lt;/a&gt;, dans le cas contraire, Deezer limite l’écoute à 30 secondes par morceau.&lt;/em&gt;&lt;/p&gt;
-
-</description>
+&lt;p&gt;&lt;em&gt;&lt;code&gt;NB&lt;/code&gt; : pour profiter pleinement des fonctionnalités d’écoute de la playlist Terres du Son et des albums des artistes il est nécessaire de connecter son compte &lt;a href='http://www.deezer.com/offers/premiumplus'&gt;premium+ Deezer&lt;/a&gt;, dans le cas contraire, Deezer limite l’écoute à 30 secondes par morceau.&lt;/em&gt;&lt;/p&gt;</description>
                                 <pubDate>Tue, 24 Jun 2014 00:00:00 +0200</pubDate>
                                 <link>http://code-troopers.com/2014/06/24/TDS2.html</link>
                                 <guid isPermaLink="true">http://code-troopers.com/2014/06/24/TDS2.html</guid>
@@ -356,43 +278,43 @@ il est nécessaire de connecter son compte &lt;a href=&quot;http://www.deezer.co
                                 <description>&lt;h3&gt;Coursera &amp; Android&lt;/h3&gt;
 &lt;p&gt;
    Coursera propose depuis ce Lundi (12 mai) &lt;a href=&quot;https://class.coursera.org/posa-002&quot;&gt;un nouveau cours de développement Android&lt;/a&gt;.
-   Il s&#39;agit, en fait, du second cours d&#39;une série de trois visant à maitriser le développement d&#39;application Android.
+   Il s'agit, en fait, du second cours d'une série de trois visant à maitriser le développement d'application Android.
 &lt;/p&gt;
 &lt;p&gt;
-   &lt;a href=&quot;https://class.coursera.org/android-001&quot;&gt;Le premier cours, sur le développement Android,&lt;/a&gt; avait comme thème (et comme son nom l&#39;indique) la découverte de la programmation d&#39;application.
-   Cela en abordant les classes et notions majeures telles que les Activity, View, Fragment ou les Intent, ainsi que tous les cycles de vie correspondants, ce qui a pu permettre au plus grand nombre de s&#39;y initier à moindre frais.
+   &lt;a href=&quot;https://class.coursera.org/android-001&quot;&gt;Le premier cours, sur le développement Android,&lt;/a&gt; avait comme thème (et comme son nom l'indique) la découverte de la programmation d'application.
+   Cela en abordant les classes et notions majeures telles que les Activity, View, Fragment ou les Intent, ainsi que tous les cycles de vie correspondants, ce qui a pu permettre au plus grand nombre de s'y initier à moindre frais.
 &lt;/p&gt;
 &lt;h3&gt;Le cours&lt;/h3&gt;
 &lt;p&gt;
-    Ce nouveau cours a pour thème principal l&#39;apprentissage des bons patterns et l&#39;utilisation de plusieurs frameworks afin de réaliser avec brio les applications Android qui ont recours à des services réseaux.
+    Ce nouveau cours a pour thème principal l'apprentissage des bons patterns et l'utilisation de plusieurs frameworks afin de réaliser avec brio les applications Android qui ont recours à des services réseaux.
 &lt;/p&gt;
 &lt;p&gt;
     Présenté par &lt;a href=&quot;https://www.coursera.org/instructor/douglasschmidt&quot;&gt;Douglas C. Schmidt&lt;/a&gt; (qui parle plutôt vite dans les premières vidéos) et &lt;a href=&quot;https://www.coursera.org/instructor/juleswhite&quot;&gt;C. Jules White&lt;/a&gt;, les cours (vidéos et slides) semblent toujours aussi bien construits et organisés.
-    Ils sont pour le moment faciles à suivre, et donc faisaibles même si vous n&#39;avez pas suivi le premier cours.
+    Ils sont pour le moment faciles à suivre, et donc faisaibles même si vous n'avez pas suivi le premier cours.
 
 &lt;/p&gt;
 &lt;h3&gt;Exercices&lt;/h3&gt;
 &lt;p&gt;
-    Pour ce qui est des excercices, il y a du changement. Contrairement au cours précédent où il fallait uniquement collecter quelques lignes de log pour prouver la réussite d&#39;un exercice, il va falloir cette fois fournir les fichiers sources correspondant au travail réalisé. Ce qui est, je trouve, une bien meilleure façon de faire et surtout fait beaucoup plus &#39;pro&#39;.
+    Pour ce qui est des excercices, il y a du changement. Contrairement au cours précédent où il fallait uniquement collecter quelques lignes de log pour prouver la réussite d'un exercice, il va falloir cette fois fournir les fichiers sources correspondant au travail réalisé. Ce qui est, je trouve, une bien meilleure façon de faire et surtout fait beaucoup plus 'pro'.
 &lt;/p&gt;
 &lt;p&gt;
-    Et justement, en parlant d&#39;évaluation, nouveauté (pour moi du moins) il va falloir évaluer le travail des autres étudiants.
-    En effet pour qu&#39;un exercice réalisé soit validé, il faudra, après l&#39;envoi de son propre travail, noter celui d&#39;autres étudiants, en utilisant leurs codes sources et en répondant à des questions / critères spécifiques posés par la plateforme.
+    Et justement, en parlant d'évaluation, nouveauté (pour moi du moins) il va falloir évaluer le travail des autres étudiants.
+    En effet pour qu'un exercice réalisé soit validé, il faudra, après l'envoi de son propre travail, noter celui d'autres étudiants, en utilisant leurs codes sources et en répondant à des questions / critères spécifiques posés par la plateforme.
 &lt;/p&gt;
 &lt;p&gt;
-    Petit point négatif à noter, l&#39;IDE à utiliser est Eclipse, c&#39;est sous cet environnement que les résultats seront testés.
-    Mais comme cela n&#39;a pas été un problème lors du premier cours de pouvoir utiliser Android Studio, il faut espérer qu&#39;il en sera de même.
+    Petit point négatif à noter, l'IDE à utiliser est Eclipse, c'est sous cet environnement que les résultats seront testés.
+    Mais comme cela n'a pas été un problème lors du premier cours de pouvoir utiliser Android Studio, il faut espérer qu'il en sera de même.
 &lt;/p&gt;
 &lt;h3&gt;Inscription&lt;/h3&gt;
 &lt;p&gt;
-    Il est encore temps de s&#39;incrire puisque les premières vidéos n&#39;ont été diffusées que ce Lundi.
-    Et même si vous n&#39;avez pas le temps pour faire tous les exercices, regarder les vidéos (ou bien les slides) apporte déjà bien plus d&#39;informations, que pourrait le faire une conférence ou une formation.
+    Il est encore temps de s'incrire puisque les premières vidéos n'ont été diffusées que ce Lundi.
+    Et même si vous n'avez pas le temps pour faire tous les exercices, regarder les vidéos (ou bien les slides) apporte déjà bien plus d'informations, que pourrait le faire une conférence ou une formation.
 &lt;/p&gt;
 
 &lt;h3&gt;Certification&lt;/h3&gt;
 &lt;p&gt;
-    Et pour ceux qui le souhaitent, il est possible d&#39;obtenir un certificat officiel provenant de l&#39;université de Vanderbilt (origine des deux profs) et Coursera, ce qui permet de faire connaître et d&#39;attester de votre réussite dans ces cours.
-    Mais évidement pour cela il faudra payer (49$), car rien n&#39;est gratuit.
+    Et pour ceux qui le souhaitent, il est possible d'obtenir un certificat officiel provenant de l'université de Vanderbilt (origine des deux profs) et Coursera, ce qui permet de faire connaître et d'attester de votre réussite dans ces cours.
+    Mais évidement pour cela il faudra payer (49$), car rien n'est gratuit.
 &lt;/p&gt;
 
 
@@ -409,30 +331,29 @@ il est nécessaire de connecter son compte &lt;a href=&quot;http://www.deezer.co
 &lt;p&gt;&lt;code&gt;ls&lt;/code&gt; est donc une commande utile et pratique mais elle n’est pas folichonne. D’où la naissance de &lt;code&gt;k&lt;/code&gt; qui a pour but de remplacer &lt;code&gt;ls&lt;/code&gt; avec quelques killer features. Il ne s’agit pas d’une surcouche de &lt;code&gt;ls&lt;/code&gt; mais d’une commande complète, s’appuyant directement sur &lt;code&gt;stat&lt;/code&gt; par exemple. À ce jour, les nouvelles fonctionnalités sont les suivantes :&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;intégration de git status sur un dépôt entier : rouge si le dépôt est “sale”, vert sinon ;&lt;/li&gt;
-  &lt;li&gt;intégration de git status à l’intérieur d’un dépôt : différenciation des fichiers modifiés, non ajoutés ou ignorés ;&lt;/li&gt;
-  &lt;li&gt;dégradé de couleur pour la taille des fichiers : du vert pour les petits fichiers au rouge pour les gros ;&lt;/li&gt;
-  &lt;li&gt;dégradé de couleur pour la date de modification : plus la date est affichée en clair et plus le fichier est récent.&lt;/li&gt;
+&lt;li&gt;intégration de git status sur un dépôt entier : rouge si le dépôt est “sale”, vert sinon ;&lt;/li&gt;
+
+&lt;li&gt;intégration de git status à l’intérieur d’un dépôt : différenciation des fichiers modifiés, non ajoutés ou ignorés ;&lt;/li&gt;
+
+&lt;li&gt;dégradé de couleur pour la taille des fichiers : du vert pour les petits fichiers au rouge pour les gros ;&lt;/li&gt;
+
+&lt;li&gt;dégradé de couleur pour la date de modification : plus la date est affichée en clair et plus le fichier est récent.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;Voici un comparatif des deux rendus, version &lt;code&gt;ls&lt;/code&gt; et version &lt;code&gt;k&lt;/code&gt; :&lt;/p&gt;
-
-&lt;div style=&quot;text-align : center&quot;&gt;
-&lt;a style=&quot;display: inline&quot; href=&quot;/images/postKisTheNewL/lsalcolor.png&quot; data-lightbox=&quot;image-0&quot; title=&quot;version ls -al --color&quot;&gt;
-        &lt;img class=&quot;medium&quot; src=&quot;/images/postKisTheNewL/lsalcolor_min.png&quot; alt=&quot;version k&quot; /&gt;
+&lt;div style='text-align : center'&gt;
+&lt;a data-lightbox='image-0' href='/images/postKisTheNewL/lsalcolor.png' style='display: inline' title='version ls -al --color'&gt;
+        &lt;img alt='version k' class='medium' src='/images/postKisTheNewL/lsalcolor_min.png' /&gt;
 &lt;/a&gt;
-&lt;a style=&quot;display: inline&quot; href=&quot;/images/postKisTheNewL/k.png&quot; data-lightbox=&quot;image-0&quot; title=&quot;version k&quot;&gt;
-        &lt;img class=&quot;medium&quot; src=&quot;/images/postKisTheNewL/k_min.png&quot; alt=&quot;version k&quot; /&gt;
+&lt;a data-lightbox='image-0' href='/images/postKisTheNewL/k.png' style='display: inline' title='version k'&gt;
+        &lt;img alt='version k' class='medium' src='/images/postKisTheNewL/k_min.png' /&gt;
 &lt;/a&gt;
 &lt;/div&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;k&lt;/code&gt; est disponible uniquement pour zsh. Pour l’installer, il suffit de cloner le dépôt &lt;a href=&quot;https://github.com/supercrabtree/k&quot;&gt;git&lt;/a&gt; et d’ajouter &lt;code&gt;source ~/path/k/k.sh&lt;/code&gt; dans son ~/.zshrc.
-k est encore jeune mais il gagnerait à être connu, il manque quelques fonctions de base comme mettre un répertoire en paramètre ou ne pas afficher les fichiers cachés.
-Pour en savoir plus, n’hésitez pas à aller voir la page &lt;a href=&quot;https://github.com/supercrabtree/k&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;k&lt;/code&gt; est disponible uniquement pour zsh. Pour l’installer, il suffit de cloner le dépôt &lt;a href=&quot;https://github.com/supercrabtree/k&quot;&gt;git&lt;/a&gt; et d’ajouter &lt;code&gt;source ~/path/k/k.sh&lt;/code&gt; dans son ~/.zshrc. k est encore jeune mais il gagnerait à être connu, il manque quelques fonctions de base comme mettre un répertoire en paramètre ou ne pas afficher les fichiers cachés. Pour en savoir plus, n’hésitez pas à aller voir la page &lt;a href=&quot;https://github.com/supercrabtree/k&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;Comme dit leur slogan : «k is the new l, yo».&lt;/p&gt;
-</description>
+&lt;p&gt;Comme dit leur slogan : «k is the new l, yo».&lt;/p&gt;</description>
                                 <pubDate>Wed, 14 May 2014 00:00:00 +0200</pubDate>
                                 <link>http://code-troopers.com/2014/05/14/kIsTheNewL.html</link>
                                 <guid isPermaLink="true">http://code-troopers.com/2014/05/14/kIsTheNewL.html</guid>
@@ -440,58 +361,47 @@ Pour en savoir plus, n’hésitez pas à aller voir la page &lt;a href=&quot;htt
                 
                         <item>
                                 <title>Play2 accéder à la base de donnée</title>
-                                <description>&lt;p&gt;&lt;a href=&quot;http://www.playframework.com/&quot;&gt;Play2&lt;/a&gt;, c’est fun et c’est rapide !
-Il suffit de quelques instants pour avoir une appli qui tourne en local sans rien avoir à configurer &lt;a href=&quot;http://www.playframework.com/documentation/2.2.x/NewApplication&quot;&gt;voir la doc de play&lt;/a&gt;.
-En plus dès que l’on commence un peu à jouer, créer des entités, faire une page de CRUD, tout tourne toujours aussi bien. Il faut dire que c’est agréable, car &lt;a href=&quot;http://www.playframework.com/documentation/2.2.x/JavaEbean&quot;&gt;Ebean&lt;/a&gt; s’est occupé de générer les commandes sql dans le fichier &lt;em&gt;1.sql&lt;/em&gt; qui est joué automatiquement par play.&lt;/p&gt;
+                                <description>&lt;p&gt;&lt;a href=&quot;http://www.playframework.com/&quot;&gt;Play2&lt;/a&gt;, c’est fun et c’est rapide ! Il suffit de quelques instants pour avoir une appli qui tourne en local sans rien avoir à configurer &lt;a href=&quot;http://www.playframework.com/documentation/2.2.x/NewApplication&quot;&gt;voir la doc de play&lt;/a&gt;. En plus dès que l’on commence un peu à jouer, créer des entités, faire une page de CRUD, tout tourne toujours aussi bien. Il faut dire que c’est agréable, car &lt;a href=&quot;http://www.playframework.com/documentation/2.2.x/JavaEbean&quot;&gt;Ebean&lt;/a&gt; s’est occupé de générer les commandes sql dans le fichier &lt;em&gt;1.sql&lt;/em&gt; qui est joué automatiquement par play.&lt;/p&gt;
 
-&lt;p&gt;Le problème arrive en général un peu après, lorsque l’envie nous prend de visualiser les données qu’on a insérées via les pages pour différents traitements.
-En effet, pas besoin de monter un serveur sql ou autre, par défaut tout se passe dans une base en mémoire (ce qui signifie aussi, que lorsque le serveur est arrêté les datas disparaissent).
-Et forcément la question universelle est “Mais comment je peux voir ces ***** de data en base ?”.&lt;/p&gt;
+&lt;p&gt;Le problème arrive en général un peu après, lorsque l’envie nous prend de visualiser les données qu’on a insérées via les pages pour différents traitements. En effet, pas besoin de monter un serveur sql ou autre, par défaut tout se passe dans une base en mémoire (ce qui signifie aussi, que lorsque le serveur est arrêté les datas disparaissent). Et forcément la question universelle est “Mais comment je peux voir ces ***** de data en base ?”.&lt;/p&gt;
 
-&lt;p&gt;La solution est simple, elle réside dans une commande &lt;code&gt;h2-browser&lt;/code&gt;.
-Mais pour pouvoir l’utiliser, il va falloir se discipliner un tout petit peu. En effet, si vous aviez l’habitude de faire des &lt;code&gt;play run&lt;/code&gt; pour lancer le serveur et des &lt;code&gt;ctrl-D&lt;/code&gt; pour l’arrêter, il va falloir changer de méthode.&lt;/p&gt;
+&lt;p&gt;La solution est simple, elle réside dans une commande &lt;code&gt;h2-browser&lt;/code&gt;. Mais pour pouvoir l’utiliser, il va falloir se discipliner un tout petit peu. En effet, si vous aviez l’habitude de faire des &lt;code&gt;play run&lt;/code&gt; pour lancer le serveur et des &lt;code&gt;ctrl-D&lt;/code&gt; pour l’arrêter, il va falloir changer de méthode.&lt;/p&gt;
 
 &lt;p&gt;La procédure miracle est donc la suivante :&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;lancer la console play
-&lt;code&gt;
- $ play
-&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;lancer le visualiseur de bdd (qui ouvre une fenêtre dans votre navigateur web)
-&lt;code&gt;
- $ h2-browser
-&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;démarrer votre serveur.
-&lt;code&gt;
- $ run
-&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;lancer la console play
+&lt;pre&gt;&lt;code&gt;$ play&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+
+&lt;li&gt;lancer le visualiseur de bdd (qui ouvre une fenêtre dans votre navigateur web)
+&lt;pre&gt;&lt;code&gt;$ h2-browser&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+
+&lt;li&gt;démarrer votre serveur.
+&lt;pre&gt;&lt;code&gt;$ run&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;Lorsqu’il se lance h2-browser devrait vous présenter une fenêtre de connexion comme celle-ci :&lt;/p&gt;
-
-&lt;div style=&quot;text-align : center&quot;&gt;
-    &lt;a style=&quot;display: inline&quot; href=&quot;/images/postPlayDbBrowser/h2-browser.png&quot; data-lightbox=&quot;image-0&quot; title=&quot;Fenêtre de connection h2-browser&quot;&gt;
-            &lt;img class=&quot;medium&quot; src=&quot;/images/postPlayDbBrowser/h2-browser.png&quot; alt=&quot;Fenêtre de connection h2-browser&quot; /&gt;
+&lt;div style='text-align : center'&gt;
+    &lt;a data-lightbox='image-0' href='/images/postPlayDbBrowser/h2-browser.png' style='display: inline' title='Fenêtre de connection h2-browser'&gt;
+            &lt;img alt='Fenêtre de connection h2-browser' class='medium' src='/images/postPlayDbBrowser/h2-browser.png' /&gt;
     &lt;/a&gt;
 &lt;/div&gt;
-
 &lt;p&gt;Maitenant qu’il est lancé, il faut se connecter, et par défaut c’est pas gagné, parce qu’il est configuré pour aller dans la base ‘test’ qui est une base valide, mais surement pas celle où vos données sont.&lt;/p&gt;
 
-&lt;p&gt;Il faut donc modifier les champs &lt;em&gt;jdbc&lt;/em&gt;, &lt;em&gt;login&lt;/em&gt;, &lt;em&gt;password&lt;/em&gt;.
-Pour cela allez chercher dans &lt;strong&gt;application.conf&lt;/strong&gt; (normalement situé dans le répertoire &lt;em&gt;/conf/&lt;/em&gt; de votre projet) et trouvez les champs suivants&lt;/p&gt;
+&lt;p&gt;Il faut donc modifier les champs &lt;em&gt;jdbc&lt;/em&gt;, &lt;em&gt;login&lt;/em&gt;, &lt;em&gt;password&lt;/em&gt;. Pour cela allez chercher dans &lt;strong&gt;application.conf&lt;/strong&gt; (normalement situé dans le répertoire &lt;em&gt;/conf/&lt;/em&gt; de votre projet) et trouvez les champs suivants&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;
-db.default.url=&quot;jdbc:h2:mem:play&quot;
+&lt;pre&gt;&lt;code&gt;db.default.url=&amp;quot;jdbc:h2:mem:play&amp;quot;
 db.default.user=sa
-db.default.password=
-&lt;/code&gt;
-ce sont les 3 valeurs à recopier dans la fenêtre de connexion.&lt;/p&gt;
+db.default.password=&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;ce sont les 3 valeurs à recopier dans la fenêtre de connexion.&lt;/p&gt;
 
 &lt;p&gt;Et voilà le tour est joué, c’est tout de même sympa d’être sûr de ce que l’on a en base.&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;NB&lt;/em&gt; : Il faut absolument faire le &lt;code&gt;run&lt;/code&gt; avant de se connecter à la base de donnée, sinon celle-ci sera lockée lors de la connexion par h2-broswer et l’application play ne pourra pas s’y connecter.&lt;/p&gt;
-</description>
+&lt;p&gt;&lt;em&gt;NB&lt;/em&gt; : Il faut absolument faire le &lt;code&gt;run&lt;/code&gt; avant de se connecter à la base de donnée, sinon celle-ci sera lockée lors de la connexion par h2-broswer et l’application play ne pourra pas s’y connecter.&lt;/p&gt;</description>
                                 <pubDate>Mon, 05 May 2014 00:00:00 +0200</pubDate>
                                 <link>http://code-troopers.com/2014/05/05/PlayDbBrowser.html</link>
                                 <guid isPermaLink="true">http://code-troopers.com/2014/05/05/PlayDbBrowser.html</guid>
@@ -499,33 +409,71 @@ ce sont les 3 valeurs à recopier dans la fenêtre de connexion.&lt;/p&gt;
                 
                         <item>
                                 <title>Encore un podium pour MyBandMyCity</title>
-                                <description>&lt;p&gt;Si vous nous suivez, vous savez sûrement que notre équipe a participé et est arrivée 3&lt;sup&gt;ème&lt;/sup&gt; du &lt;em&gt;Startup Weekend&lt;/em&gt; qui s’est déroulé à Tours les 21-22-23 mars 2014 (&lt;a href=&quot;http://code-troopers.com/2014/03/23/StartupWeekend.html&quot;&gt;un petit résumé de ce weekend intense&lt;/a&gt;). Et bien ça continue, François, Fabian et Julien, les 3 étudiants de &lt;em&gt;FBS&lt;/em&gt;, porteurs du projet, ont présenté &lt;strong&gt;My Band My City&lt;/strong&gt; au concours de création d’entreprises le &lt;em&gt;“&lt;a href=&quot;http://accede-entreprendre.fr/le-tours-de-la-creation/&quot;&gt;Tours de la Création&lt;/a&gt;“&lt;/em&gt; qui se déroulait le jeudi 17 avril 2014 et, une fois de plus, le projet est arrivé 3&lt;sup&gt;ème&lt;/sup&gt; sur un total de 25 projets.&lt;/p&gt;
-
-&lt;div style=&quot;text-align:center;margin:50px&quot;&gt;
-    &lt;a href=&quot;/images/postAccede/photo.jpg&quot; data-lightbox=&quot;group-1&quot; title=&quot;Mode normal&quot; class=&quot;inlineBoxes&quot;&gt;
-	&lt;img class=&quot;medium&quot; src=&quot;/images/postAccede/photo.jpg&quot; alt=&quot;Mode normal&quot; /&gt;
+                                <description>&lt;p&gt;Si vous nous suivez, vous savez sûrement que notre équipe a participé et est arrivée 3&lt;sup&gt;ème&lt;/sup&gt; du &lt;em&gt;Startup Weekend&lt;/em&gt; qui s’est déroulé à Tours les 21-22-23 mars 2014 (&lt;a href=&quot;http://code-troopers.com/2014/03/23/StartupWeekend.html&quot;&gt;un petit résumé de ce weekend intense&lt;/a&gt;). Et bien ça continue, François, Fabian et Julien, les 3 étudiants de &lt;em&gt;FBS&lt;/em&gt;, porteurs du projet, ont présenté &lt;strong&gt;My Band My City&lt;/strong&gt; au concours de création d’entreprises le &lt;em&gt;”&lt;a href=&quot;http://accede-entreprendre.fr/le-tours-de-la-creation/&quot;&gt;Tours de la Création&lt;/a&gt;”&lt;/em&gt; qui se déroulait le jeudi 17 avril 2014 et, une fois de plus, le projet est arrivé 3&lt;sup&gt;ème&lt;/sup&gt; sur un total de 25 projets.&lt;/p&gt;
+&lt;div style='text-align:center;margin:50px'&gt;
+    &lt;a class='inlineBoxes' data-lightbox='group-1' href='/images/postAccede/photo.jpg' title='Mode normal'&gt;
+	&lt;img alt='Mode normal' class='medium' src='/images/postAccede/photo.jpg' /&gt;
     &lt;/a&gt;
-    &lt;a href=&quot;/images/postAccede/slide.png&quot; data-lightbox=&quot;group-1&quot; title=&quot;Mode présentation&quot; class=&quot;inlineBoxes&quot;&gt;
-	&lt;img class=&quot;medium&quot; src=&quot;/images/postAccede/slide.png&quot; alt=&quot;Mode présentation&quot; /&gt;
+    &lt;a class='inlineBoxes' data-lightbox='group-1' href='/images/postAccede/slide.png' title='Mode présentation'&gt;
+	&lt;img alt='Mode présentation' class='medium' src='/images/postAccede/slide.png' /&gt;
     &lt;/a&gt;
 &lt;/div&gt;
-
 &lt;p&gt;Le concours se déroule en deux phases. Il faut d’abord réaliser un dossier pour expliquer le projet, sa cible, son but, son évolution… Suite à cette première phase, 5 projets sont sélectionnés pour participer à la phase finale qui se déroulait cette année à la &lt;a href=&quot;http://www.pepinieres-agglotours.fr/&quot;&gt;Pépinière d’entreprises du Sanitas&lt;/a&gt; à Tours. Durant cette phase finale il fallait présenter et défendre son projet devant un jury d’entrepreneurs pendant 30 minutes. En parallèle de ces présentations étaient organisées des conférences sur la création d’entreprises. Une courte présentation de 5 minutes de tous les projets était également prévue pour le public, suivie par la remise des prix pour les 3 premiers.&lt;/p&gt;
 
-&lt;p&gt;Cette année les 3 lauréats ont été :
-* &lt;strong&gt;M.O.F Box&lt;/strong&gt; : création et vente de smart box avec des produits réalisés par les meilleurs ouvriers de France.
-* &lt;strong&gt;SPS&lt;/strong&gt; : un système afin d’aider les services d’intervention à l’intérieur des bâtiments (stockage des plans, emplacement des extincteurs…).
-* &lt;a href=&quot;http://mybandmycity.code-troopers.com/&quot;&gt;&lt;strong&gt;My Band My City&lt;/strong&gt;&lt;/a&gt; : billetterie participative de proximité afin de promouvoir et faire venir un artiste dans une ville.&lt;/p&gt;
+&lt;p&gt;Cette année les 3 lauréats ont été :&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;M.O.F Box&lt;/strong&gt; : création et vente de smart box avec des produits réalisés par les meilleurs ouvriers de France.&lt;/li&gt;
+
+&lt;li&gt;&lt;strong&gt;SPS&lt;/strong&gt; : un système afin d’aider les services d’intervention à l’intérieur des bâtiments (stockage des plans, emplacement des extincteurs…).&lt;/li&gt;
+
+&lt;li&gt;&lt;a href=&quot;http://mybandmycity.code-troopers.com/&quot;&gt;&lt;strong&gt;My Band My City&lt;/strong&gt;&lt;/a&gt; : billetterie participative de proximité afin de promouvoir et faire venir un artiste dans une ville.&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;p&gt;Un grand bravo aux 2 autres projets, &lt;a href=&quot;https://www.facebook.com/getstudapp&quot;&gt;Studapp&lt;/a&gt; et &lt;a href=&quot;http://sugardoc.co/&quot;&gt;SugarDoc&lt;/a&gt; arrivés au pied du podium.&lt;/p&gt;
 
 &lt;p&gt;Les inscriptions pour la version 2015 du “Tours de la Création” sont déjà ouvertes, donc si vous avez une idée, n’hésitez pas à vous rendre &lt;a href=&quot;http://accede-entreprendre.fr/le-tours-de-la-creation/&quot;&gt;ici&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;La 3&lt;sup&gt;ème&lt;/sup&gt; place à ce concours nous a confirmé que ce projet avait un fort potentiel. Nous allons donc, avec l’aide des étudiants de FBS, terminer et véritablement lancer ce projet. Si vous êtes intéressés, restez à l’écoute sur les réseaux sociaux, sur ce blog, ou sur la &lt;a href=&quot;https://www.facebook.com/mybandmycity&quot;&gt;page facebook de My Band My City&lt;/a&gt;.&lt;/p&gt;
-</description>
+&lt;p&gt;La 3&lt;sup&gt;ème&lt;/sup&gt; place à ce concours nous a confirmé que ce projet avait un fort potentiel. Nous allons donc, avec l’aide des étudiants de FBS, terminer et véritablement lancer ce projet. Si vous êtes intéressés, restez à l’écoute sur les réseaux sociaux, sur ce blog, ou sur la &lt;a href=&quot;https://www.facebook.com/mybandmycity&quot;&gt;page facebook de My Band My City&lt;/a&gt;.&lt;/p&gt;</description>
                                 <pubDate>Mon, 28 Apr 2014 00:00:00 +0200</pubDate>
                                 <link>http://code-troopers.com/2014/04/28/ConcoursAccede.html</link>
                                 <guid isPermaLink="true">http://code-troopers.com/2014/04/28/ConcoursAccede.html</guid>
+                        </item>
+                
+                        <item>
+                                <title>Retour de devoxx : Améliorer son live-coding</title>
+                                <description>&lt;p&gt;Je suis un développeur passionnné&lt;sup&gt;&lt;a href='#note1'&gt;1&lt;/a&gt;&lt;/sup&gt; et, lors des conférences, JUG (ou toutes autres présentations) j’aime bien quand le speaker présente un petit bout de code pour illustrer ses propos. Lorsque c’est du live coding, c’est encore mieux. Le seul problème c’est que quand on n’est pas au Mariott et qu’il n’y a pas un vidéoproj de malade, en général dans l’audience, passé le 3&lt;sup&gt;ème&lt;/sup&gt; rang, plus personne n’y voit rien.&lt;/p&gt;
+
+&lt;p&gt;Avant la présentation &lt;a href='http://cfp.devoxx.fr/devoxxfr2014/talk/TYC-384/42%20IntelliJ%20IDEA%20tips%20and%20tricks%20in%2045%20minutes'&gt;42 IntelliJ IDEA tips and tricks&lt;/a&gt; de Hadi Hariri (&lt;a href='https://twitter.com/@hhariri'&gt;twitter&lt;/a&gt;) la solution c’était de fermer toutes les views autour de la classe ouverte puis de faire un ctrl+scroll pour zoomer. Cette époque est maintenant révolue, en effet, IntellJ possède un mode présentation qui s’occupe de faire tout cela.&lt;/p&gt;
+
+&lt;p&gt;Le résultat en deux screens de comparaison : utilisation classique vs mode présentation&lt;/p&gt;
+&lt;div style='text-align:center;margin:50px'&gt;
+    &lt;a class='inlineBoxes' data-lightbox='group-1' href='/images/postDevoxx1/normalView.png' title='Mode normal'&gt;
+        &lt;img alt='Mode normal' class='medium' src='/images/postDevoxx1/normalView.png' /&gt;
+    &lt;/a&gt;
+    &lt;a class='inlineBoxes' data-lightbox='group-1' href='/images/postDevoxx1/presentationView.png' title='Mode présentation'&gt;
+        &lt;img alt='Mode présentation' class='medium' src='/images/postDevoxx1/presentationView.png' /&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;Pour activer le mode présentation ça se passe dans le menu &lt;code&gt;View&lt;/code&gt; &amp;gt; &lt;code&gt;Enter Presentation Mode&lt;/code&gt;. Et pour le quitter &lt;code&gt;View&lt;/code&gt; &amp;gt; &lt;code&gt;Exit Presentation Mode&lt;/code&gt;.&lt;/p&gt;
+&lt;div style='text-align:center;margin:50px'&gt;
+    &lt;a class='inlineBoxes' data-lightbox='group-1' href='/images/postDevoxx1/menu1.png' title='Menu pour passer en mode présentation'&gt;
+        &lt;img alt='Accès Menu présentation' class='medium' src='/images/postDevoxx1/menu1.png' /&gt;
+    &lt;/a&gt;
+    &lt;a class='inlineBoxes' data-lightbox='group-1' href='/images/postDevoxx1/menu2.png' title='Menu pour quitter en mode présentation'&gt;
+            &lt;img alt='Retour normal' class='medium' src='/images/postDevoxx1/menu2.png' /&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;Bien évidement, assigner un raccourci clavier permettra d’être encore plus fluide pour switcher de mode.&lt;/p&gt;
+&lt;div style='text-align:center;margin:50px;'&gt;
+    &lt;a data-lightbox='group-1' href='/images/postDevoxx1/settingShortcut.png' title='Settings pour affecter un raccourci à l&amp;apos;action présentation'&gt;
+        &lt;img alt='Settings pour raccourci' class='medium' src='/images/postDevoxx1/settingShortcut.png' /&gt;
+    &lt;/a&gt;
+&lt;/div&gt;&lt;div id='note1'&gt;[1] Une jolie faute d'orthographe sur le tshirt officiel de Devoxx que personne n'avait vu, mais qui a été révélée lors de la première keynote :-)&lt;/div&gt;
+&lt;p&gt;PS : Les sources github visibles dans les screens ne sont pas de moi, vous pouvez les consulter à cet endroit &lt;a href='https://github.com/winterbe/java8-tutorial'&gt;https://github.com/winterbe/java8-tutorial&lt;/a&gt;.&lt;/p&gt;</description>
+                                <pubDate>Mon, 21 Apr 2014 00:00:00 +0200</pubDate>
+                                <link>http://code-troopers.com/2014/04/21/devoxx1.html</link>
+                                <guid isPermaLink="true">http://code-troopers.com/2014/04/21/devoxx1.html</guid>
                         </item>
                 
         </channel>
