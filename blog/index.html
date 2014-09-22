@@ -16,12 +16,12 @@
         <meta property=twitter:domain content=http://code-troopers.com>
         
         
-        <meta property=twitter:description content="Le blog posté le 04/09/2014 par Benjamin Top 3 add-ons Heroku Heroku Add-ons Vous connaissez sûrement Heroku le service de...">
+        <meta property=twitter:description content="Le blog posté le 17/09/2014 par Matthieu oh-my-zsh : l'outil indispensable pour avoir un zsh bien configuré. zsh shell oh-my-zsh...">
         
         
         
-        <meta name=description content="Le blog posté le 04/09/2014 par Benjamin Top 3 add-ons Heroku Heroku Add-ons Vous connaissez sûrement Heroku le service de cloud computing de type plate-forme en tant que service (PaaS), si ce n’est pas le cas, je vous conseille de vous y intéresser. Chez Code-Troopers, nous l’utilisons à la fois pour effectuer nos tests en pré-production mais aussi pour certaines de nos applications en production. Ce qui est aussi intéressant chez Heroku, c’est le nombre d’add-ons disponibles. Ils sont simples d’installation, la plupart du temps il suffit de deux clics et d’une variable à ajouter dans la configuration de l’application. Ils disposent presque tous de versions gratuites (souvent suffisant pour une petite application en production) mais il est aussi possible d’évoluer vers des versions payantes et plus complètes en un clic, souvent déclinées en 3 ou 4 offres. Les add-ons sont rangés en catégories, vous avez des services de bases de données, de logs, d’analytics, de cache, de monitoring… Je vous invite à les consulter sur cette page. Mais je vais m’attarder sur les 3 add-ons qu’on installe presque machinalement dès que l’on créé une application sur Heroku : Papertrail pour gérer les logs SendGrid pour envoyer des mails New...">
-        <meta property=og:description content="Le blog posté le 04/09/2014 par Benjamin Top 3 add-ons Heroku Heroku Add-ons Vous connaissez sûrement Heroku le service de cloud computing de type plate-forme en tant que service (PaaS), si ce n’est pas le cas, je vous conseille de vous y intéresser. Chez Code-Troopers, nous l’utilisons à la fois pour effectuer nos tests en pré-production mais aussi pour certaines de nos applications en production. Ce qui est aussi intéressant chez Heroku, c’est le nombre d’add-ons disponibles. Ils sont simples d’installation, la plupart du temps il suffit de deux clics et d’une variable à ajouter dans la configuration de l’application. Ils disposent presque tous de versions gratuites (souvent suffisant pour une petite application en production) mais il est aussi possible d’évoluer vers des versions payantes et plus complètes en un clic, souvent déclinées en 3 ou 4 offres. Les add-ons sont rangés en catégories, vous avez des services de bases de données, de logs, d’analytics, de cache, de monitoring… Je vous invite à les consulter sur cette page. Mais je vais m’attarder sur les 3 add-ons qu’on installe presque machinalement dès que l’on créé une application sur Heroku : Papertrail pour gérer les logs SendGrid pour envoyer des mails New...">
+        <meta name=description content="Le blog posté le 17/09/2014 par Matthieu oh-my-zsh : l'outil indispensable pour avoir un zsh bien configuré. zsh shell oh-my-zsh Introduction : Que l’on soit dev, ops, sysadmin ou autre pour effectuer nos tâches répétitives et quotidiennes on a généralement deux possibilités : une première communément appelée “clic-clic” qui consiste à utiliser les interfaces graphique aussi souvent que possible (afin de perdre un maximum de temps) ; et une seconde qualifiée de “barbue” qui elle est orientée ligne de commande, scripting et automatisation. Nous les Code-Troopers, on est plutôt technique barbus ! Et donc peut importe l’OS qu’on utilise on cherche toujours à avoir le meilleur terminal possible. Par défaut sous linux ou mac OS on trouvera souvent bash, sous windows ce sera powershell mais il en existe d’autres comme csh, ksh ou dans le cas qui nous intéresse zsh. zsh est puissant mais ce n’est pas le sujet du jour de dire pourquoi il serait mieux qu’un autre. En revanche, qui dit puissance dit difficultés de paramétrage ; d’ailleurs à la première utilisation lorsque l’on n’a pas de fichier de configuration il commence par dire qu’il peut en créer un pour nous mais qu’il faudra le modifier à la...">
+        <meta property=og:description content="Le blog posté le 17/09/2014 par Matthieu oh-my-zsh : l'outil indispensable pour avoir un zsh bien configuré. zsh shell oh-my-zsh Introduction : Que l’on soit dev, ops, sysadmin ou autre pour effectuer nos tâches répétitives et quotidiennes on a généralement deux possibilités : une première communément appelée “clic-clic” qui consiste à utiliser les interfaces graphique aussi souvent que possible (afin de perdre un maximum de temps) ; et une seconde qualifiée de “barbue” qui elle est orientée ligne de commande, scripting et automatisation. Nous les Code-Troopers, on est plutôt technique barbus ! Et donc peut importe l’OS qu’on utilise on cherche toujours à avoir le meilleur terminal possible. Par défaut sous linux ou mac OS on trouvera souvent bash, sous windows ce sera powershell mais il en existe d’autres comme csh, ksh ou dans le cas qui nous intéresse zsh. zsh est puissant mais ce n’est pas le sujet du jour de dire pourquoi il serait mieux qu’un autre. En revanche, qui dit puissance dit difficultés de paramétrage ; d’ailleurs à la première utilisation lorsque l’on n’a pas de fichier de configuration il commence par dire qu’il peut en créer un pour nous mais qu’il faudra le modifier à la...">
         
         <meta name=viewport content="width=device-width">
         <meta http-equiv=content-language content=fr-FR>
@@ -65,6 +65,75 @@
 
 
 <article class="col-lg-4 col-md-6 col-sm-12">
+    <div onclick="window.location.href='/2014/09/17/ohMyZsh.html' ;  return false" style="cursor: pointer">
+	<div class=cover style=background-image:url(/images/banner/zsh-banner.png)>
+            <div class=date>posté le 17/09/2014 par Matthieu</div>
+        </div>
+        <h2><a href=/2014/09/17/ohMyZsh.html>oh-my-zsh : l'outil indispensable pour avoir un zsh bien configuré.</a><ul class=tags>
+            
+            <li>zsh</li>
+            
+            <li>shell</li>
+            
+            <li>oh-my-zsh</li>
+            
+        </ul></h2>
+        <div class=content>
+            <h2 id=introduction->Introduction :</h2>
+<p>Que l’on soit dev, ops, sysadmin ou autre pour effectuer nos tâches répétitives et quotidiennes on a généralement deux possibilités : une première communément appelée “clic-clic” qui consiste à utiliser les interfaces graphique aussi souvent que possible (afin de perdre un maximum de temps) ; et une seconde qualifiée de “barbue” qui elle est orientée ligne de commande, scripting et automatisation.
+Nous les Code-Troopers, on est plutôt technique barbus ! Et donc peut importe l’OS qu’on utilise on cherche toujours à avoir le meilleur terminal possible.
+Par défaut sous linux ou mac OS on trouvera souvent <em>bash</em>, sous windows ce sera <em>powershell</em> mais il en existe d’autres comme <em>csh</em>, <em>ksh</em> ou dans le cas qui nous intéresse <em>zsh</em>.
+<em>zsh</em> est puissant mais ce n’est pas le sujet du jour de dire pourquoi il serait mieux qu’un autre. En revanche, qui dit puissance dit difficultés de paramétrage ;
+d’ailleurs à la première utilisation lorsque l’on n’a pas de fichier de configuration il commence par dire qu’il peut en créer un pour nous mais qu’il faudra le modifier à la main.
+Ce sera inutile grace à <em>oh-my-zsh</em>.</p>
+
+<h2 id=installation->Installation :</h2>
+<p>C’est très simple, il suffit de cloner le dépôt
+<code>git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh</code>
+Et de mettre le fichier de configuration dans son home
+<code>cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc</code></p>
+
+<h2 id=les-thmes->Les thèmes :</h2>
+<p>Premièrement, les couleurs. Chacun ses goûts mais comme tout  informaticien fan de  matrix on a tendance à configurer son terminal pour obtenir du vert sur fond noir donc on choisira un thème en conséquence pour avoir des couleurs claires (ce qui est le cas de presque tous les thèmes) Vous pouvez voir un aperçu des thèmes ici : <a href="http://zshthem.es/all/">http://zshthem.es/all/</a></p>
+
+<p>Deuxièmement le prompt. Toujours sur le site <a href=http://zshthem.es>http://zshthem.es</a>, vous pouvez voir qu’en plus des couleurs, chaque thème a un prompt différent. C’est ce qui s’affiche à chaque ligne donc il doit être beau, rapide et fonctionnel.
+J’utilisais <a href=https://github.com/nojhan/liquidprompt>https://github.com/nojhan/liquidprompt</a> pendant un temps, j’ai donc fait un thème qui ressemble pour les fonctionnalités qui me manquaient. Les fonctionnalités que je trouve pratique :</p>
+
+<ul>
+  <li>l’heure à droite : je veux savoir à quelle heure j’ai lancé une commande et à quelle heure elle s’est finie. C’est pas souvent utile mais ça arrive.</li>
+  <li>l’utilisateur courant : je veux savoir avec quel utilisateur je suis connecté, simplement par-ce que je veux que ça crie si je suis en root pour éviter de faire des bêtises</li>
+  <li>le hostname : je veux savoir sur quelle machine je suis connecté, de préférence uniquement lorsque je suis en ssh sinon c’est pas utile, toujours dans le but d’éviter les bêtises.</li>
+  <li>un path de taille limitée : pas besoin d’afficher <code>/home/mattboll/workspace/projetSecret/java/com/codetroopers/projetxx/machin/bean</code> il me suffit de lire <code>~/.../machin/bean</code> pour savoir où je suis et ça permet de toujours avoir un prompt de taille raisonnable, c’est plus agréable.</li>
+  <li>des infos git : sur quelle branche je suis, est-ce que je suis synchro, est-ce que je dois merger, combien j’ai de commits en attente d’être pushé etc.</li>
+  <li>le code retour de la commande : parfois des commandes sont en erreur mais on n’a pas de message, donc on ne sait pas si la commande s’est bien exécutée, et en supposant qu’elle soit mal exécutée on ne sait pas quelle était l’erreur (l’équivalent des erreurs 404, 503 etc. des erreurs http)</li>
+</ul>
+
+<p>Pour choisir le thème il faut éditer le fichier <code>~/.zshrc</code> et modifier la ligne 
+<code>ZSH_THEME=”nom_du_theme”</code> où nom du thème correspond au nom de fichier que l’on peut trouver dans <code>~/.oh-my-zsh/themes</code>. Du coup, pour réaliser un thème personnel c’est simple il suffit de créer un fichier qui s’appelle nom.zsh-theme et de le mettre dans le même répertoire que les autres.
+Voici ce que cela donne avec mon thème (adapté du thème sunrise), que vous pouvez trouver  sur <a href=https://raw.githubusercontent.com/mattboll/zshrc/master/mattboll.zsh-theme>GitHub</a> : 
+<img class=medium src=/images/postOhMyZsh/oh-my-zsh-theme.png alt="Mode normal"></p>
+
+<h2 id=les-plugins>Les plugins</h2>
+<p>Les plugins permettent d’incorporer des fonctions spécifiques. Ce sont en général de simples alias mais il arrive aussi de tomber sur des fonctions utiles auxquelles on ne pense pas, par exemple en activant le plugin GitHub, on accède à la commande <code>empty_gh</code> qui prend en paramètre le nom du dépôt et qui va créer le répertoire, faire un git init, ajouter un readme vide et faire le premier commit.
+Pour ajouter des plugins, il faut évidemment éditer le fichier <code>~/.zshrc</code> et modifier la ligne <code>plugins=(liste des plugins)</code>
+Vous trouverez la liste des plugins dans <code>~/.oh-my-zsh/plugins</code> À l’heure où j’écris il y en a 172, de git à symfony en passant par heroku. Pour savoir à quoi ça correspond, le plus simple est de lire les code source, en général il y a un fichier par plugin et les noms sont assez explicite pour savoir ceux qui nous seront utiles ou pas.</p>
+
+<h2 id=les-libs>Les libs</h2>
+<p>Si vous voulez créer un plugin ou que vous voulez voir un peu plus les fonctionnalités de oh-my-zsh, vous pouvez parcourir le répertoire lib, ne serait-ce que pour le fichier aliases.zsh qui définit des alias de base, par exemple <code>“…”=”cd ../..”</code> ou les habituels <code>la</code>, <code>ll</code> etc. C’est aussi dans ce répertoire que sont définies des fonctions générique comme celle qui permet de savoir si le dépôt git est “dirty” et qui est utilisée dans certains prompt.</p>
+
+<p>Si vous voulez plus d’informations sur zsh je vous invite à commencer par l’article de <a href="http://wiki.gcu.info/doku.php?id=unix:zsh_le_z_shell">gcu-squad</a>. Pour oh-my-zsh vous pouvez allez voir le projet sur <a href=https://github.com/robbyrussell/oh-my-zsh>GitHub</a>. Enfin, si vous avez d’autres questions, n’hésitez pas à poster un commentaire ou à en parler sur twitter <a href=http://twitter.com/codetroopers>@codetroopers</a> ou <a href=http://twitter.com/mattboll>@mattboll</a></p>
+
+
+        </div>
+        <div class=fade-content>
+        </div>
+        <div class=more>
+            <a href=/2014/09/17/ohMyZsh.html><i class="fa fa-arrow-circle-o-right"></i> Lire la suite</a>
+        </div>
+    </div>
+</article>
+
+<article class="col-lg-4 col-md-6 col-sm-12">
     <div onclick="window.location.href='/2014/09/04/AddonsHeroku.html' ;  return false" style="cursor: pointer">
 	<div class=cover style=background-image:url(/images/banner/addonsheroku-banner.png)>
             <div class=date>posté le 04/09/2014 par Benjamin</div>
@@ -82,26 +151,26 @@
 <p>Les add-ons sont rangés en catégories, vous avez des services de bases de données, de logs, d’analytics, de cache, de monitoring… Je vous invite à les consulter sur <a href="https://addons.heroku.com/">cette page</a>. Mais je vais m’attarder sur les 3 add-ons qu’on installe presque machinalement dès que l’on créé une application sur Heroku :</p>
 
 <ul>
-<li><a href=https://addons.heroku.com/papertrail>Papertrail</a> pour gérer les logs</li>
-
-<li><a href=https://addons.heroku.com/sendgrid>SendGrid</a> pour envoyer des mails</li>
-
-<li><a href=https://addons.heroku.com/newrelic>New Relic</a> pour surveiller l’application</li>
+  <li><a href=https://addons.heroku.com/papertrail>Papertrail</a> pour gérer les logs</li>
+  <li><a href=https://addons.heroku.com/sendgrid>SendGrid</a> pour envoyer des mails</li>
+  <li><a href=https://addons.heroku.com/newrelic>New Relic</a> pour surveiller l’application</li>
 </ul>
 
-<h2 id=logo_papertrail_papertrail><img src=../../../images/postAddonsHeroku/papertrail.png alt="Logo Papertrail"> Papertrail</h2>
+<h2 id=logo-papertrailimagespostaddonsherokupapertrailpng-papertrail><img src=../../../images/postAddonsHeroku/papertrail.png alt="Logo Papertrail"> Papertrail</h2>
 
 <p><a href="https://papertrailapp.com/">Papertrail</a> est un service de logs. Il permet de consulter en temps réel les logs de votre application Heroku. Vous avez même la possibilité de sauvegarder vos recherches ou de créer des alertes personnalisées. La version gratuite permet de stocker jusqu’à 10Mo de log par jour, de rechercher sur 2 jours et de retenir jusqu’à 7 jours les logs. Pour l’installer, il suffit de l’ajouter depuis l’interface d’Heroku, il n’y a rien à configurer. Ensuite, vous avez juste à cliquer sur le lien pour consulter vos logs.</p>
 
-<h2 id=logo_sendgrid_sendgrid><img src=../../../images/postAddonsHeroku/sendgrid.png alt="Logo SendGrid"> SendGrid</h2>
+<h2 id=logo-sendgridimagespostaddonsherokusendgridpng-sendgrid><img src=../../../images/postAddonsHeroku/sendgrid.png alt="Logo SendGrid"> SendGrid</h2>
 
 <p><a href="http://sendgrid.com/">SendGrid</a> est un service de messagerie électronique. Une fois l’add-on ajouté sur Heroku, vous disposez dans les variables de configuration de votre application, d’un login et d’un mot de passe. Il ne vous reste plus qu’à changer l’accès au serveur smtp dans votre application pour utiliser ces variables. En plus de faire office de serveur smtp, SendGrid vous offre la possibilité de tracer les mails, c’est-à-dire de savoir combien ont été ouverts, combien de personnes ont cliqué sur les liens contenus, combien ne sont pas arrivés à destination… tout ça même dans la version gratuite. La seule contrainte en version gratuite est la limitation à 200 mails par jour.</p>
 
-<h2 id=logo_new_relic_new_relic><img src=../../../images/postAddonsHeroku/newrelic.png alt="Logo New Relic"> New Relic</h2>
+<h2 id=logo-new-relicimagespostaddonsherokunewrelicpng-new-relic><img src=../../../images/postAddonsHeroku/newrelic.png alt="Logo New Relic"> New Relic</h2>
 
 <p><a href="http://www.newrelic.com/">New Relic</a> enfin, est un service de surveillance de votre application. Il permet à la fois de surveiller les performances de la machine, mais aussi de repérer par exemple les requêtes SQL qui sont lentes, ainsi que les méthodes de votre code qui sont coûteuse en temps processeur et d’autres données. Vous avez la possibilité de créer des rapports sur toutes ces données ainsi que de créer des alertes sur certains évenements. Les versions payantes permettent d’aller plus loin dans la recherche de points noirs dans l’application ainsi que de débloquer la limite de l’historique. L’installation est plus complexe que les autres add-ons mais reste très bien expliquée au premier lancement du service.</p>
 
-<p>Bien sûr tous ces add-ons sont disponibles hors Heroku et peuvent être utilisés sur n’importe quel autre serveur. Dans tous les cas, essayez, testez, bidouillez, faîtes vous plaisir ! C’est tout à fait le type de service qui fait gagner un maximum de temps pour déployer une application, que ce soit pour un POC, une démo ou même une mise en prod !</p>
+<p>Bien sûr tous ces add-ons sont disponibles hors Heroku et peuvent être utilisés sur n’importe quel autre serveur.
+Dans tous les cas, essayez, testez, bidouillez, faîtes vous plaisir ! C’est tout à fait le type de service qui fait gagner un maximum de temps pour déployer une application, que ce soit pour un POC, une démo ou même une mise en prod !</p>
+
         </div>
         <div class=fade-content>
         </div>
@@ -126,11 +195,16 @@
             
         </ul></h2>
         <div class=content>
-            <p>Lors de nos développements, nous reposons beaucoup sur des projets externes qui nous fournissent énormément de services utiles. Dans un récent projet, nous avons eu besoin de faire fonctionner Neo4j conjointement à ElasticSearch. Jusqu’ici, aucun soucis n’est à déplorer, mais nous avions une exigence particulière : il fallait que l’application puisse démarrer automatiquement un serveur Neo4J ainsi qu’un serveur ElasticSearch sur les postes de développements (ainsi que pour les tests d’intégration).</p>
+            <p>Lors de nos développements, nous reposons beaucoup sur des projets externes qui nous fournissent énormément de services
+utiles. Dans un récent projet, nous avons eu besoin de faire fonctionner Neo4j conjointement à ElasticSearch. Jusqu’ici,
+aucun soucis n’est à déplorer, mais nous avions une exigence particulière : il fallait que l’application puisse
+démarrer automatiquement un serveur Neo4J ainsi qu’un serveur ElasticSearch sur les postes de développements (ainsi que
+pour les tests d’intégration).</p>
 
-<h2 id=problme_existant>Problème existant</h2>
+<h2 id=problme-existant>Problème existant</h2>
 
-<p>Les deux outils que nous utilisons se basent sur Apache Lucene pour toute la partie indexation et accès aux données. Mais, et c’est là que le problème se situe, ils n’utilisent pas les mêmes versions de Lucene.</p>
+<p>Les deux outils que nous utilisons se basent sur Apache Lucene pour toute la partie indexation et accès aux données.
+Mais, et c’est là que le problème se situe, ils n’utilisent pas les mêmes versions de Lucene.</p>
 
 <pre><code>&lt;!-- Extrait du pom d'ElasticSearch --&gt;
 &lt;dependency&gt;
@@ -138,20 +212,35 @@
     &lt;artifactId&gt;lucene-core&lt;/artifactId&gt;
     &lt;version&gt;4.9.0&lt;/version&gt;
     &lt;scope&gt;compile&lt;/scope&gt;
-&lt;/dependency&gt;</code></pre>
+&lt;/dependency&gt;
+</code></pre>
+
 <hr>
+
 <pre><code>&lt;!-- Extrait du pom de Neo4j --&gt; 
 &lt;dependency&gt;
     &lt;groupId&gt;org.apache.lucene&lt;/groupId&gt;
     &lt;artifactId&gt;lucene-core&lt;/artifactId&gt;
     &lt;version&gt;3.6.2&lt;/version&gt;
-&lt;/dependency&gt;</code></pre>
+&lt;/dependency&gt;
+</code></pre>
 
-<p>ElasticSearch utilise la version 4.9.0, alors que Neo4J utilise la version 3.6.2. Ainsi, en fonction du bon vouloir du <code>Classloader</code> qui sera utilisé par l’application, il se peut qu’ElasticSearch ou Neo4J refuse de fonctionner. La difficulté pour comprendre et détecter le problème est qu’il se manifeste souvent par un obscur <code>NoClassDefFoundError</code> ou <code>NoSuchMethodError</code> qui n’est pas des plus explicites (d’autant plus lorsque notre IDE nous montre une version qui contient ledit symbole non trouvé).</p>
+<p>ElasticSearch utilise la version 4.9.0, alors que Neo4J utilise la version 3.6.2. Ainsi, en fonction du bon vouloir du
+<code>Classloader</code> qui sera utilisé par l’application, il se peut qu’ElasticSearch ou Neo4J refuse de fonctionner. La
+difficulté pour comprendre et détecter le problème est qu’il se manifeste souvent par un obscur <code>NoClassDefFoundError</code>
+ou <code>NoSuchMethodError</code> qui n’est pas des plus explicites (d’autant plus lorsque notre IDE nous montre une version qui
+contient ledit symbole non trouvé).</p>
 
-<h2 id=solution_de_contournement>Solution de contournement</h2>
+<h2 id=solution-de-contournement>Solution de contournement</h2>
 
-<p>Le conflit est assez simple à contourner une fois qu’on a compris ce qui se passe. En fait, il y a deux classes portant le même nom dans les classes chargées, par exemple <code>org.lucene.MaClass</code>, l’une effaçant l’autre aux yeux du <code>ClassLoader</code>. Une pratique courante est de renommer (ou relocate) le package de base d’une bibliothèque utilisée et de l’inclure dans le fichier de package du projet, le plugin <code>maven-shade</code> est conçu dans cette optique. Le choix fait est de renommer la dépendance Lucene dans Neo4J pour notre part, ainsi, nous avons forké le projet et configuré le plugin <code>shade</code> pour qu’il inclue le contenu de la dépendance d’Apache Lucene et qu’il fasse le renommage de <code>org.apache.lucene</code> en <code>shaded.org.apache.lucene</code>.</p>
+<p>Le conflit est assez simple à contourner une fois qu’on a compris ce qui se passe. En fait, il y a deux classes portant
+le même nom dans les classes chargées, par exemple <code>org.lucene.MaClass</code>, l’une effaçant l’autre aux yeux du
+<code>ClassLoader</code>.
+Une pratique courante est de renommer (ou relocate) le package de base d’une bibliothèque utilisée et de l’inclure dans
+le fichier de package du projet, le plugin <code>maven-shade</code> est conçu dans cette optique.
+Le choix fait est de renommer la dépendance Lucene dans Neo4J pour notre part, ainsi, nous avons forké le projet et
+configuré le plugin <code>shade</code> pour qu’il inclue le contenu de la dépendance d’Apache Lucene et qu’il fasse le renommage de
+<code>org.apache.lucene</code> en <code>shaded.org.apache.lucene</code>.</p>
 
 <pre><code> &lt;plugin&gt;
         &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
@@ -180,11 +269,17 @@
                 &lt;/configuration&gt;
             &lt;/execution&gt;
         &lt;/executions&gt;
-  &lt;/plugin&gt;</code></pre>
+  &lt;/plugin&gt;
+</code></pre>
 
-<h2 id=dploiement_et_nommage>Déploiement et nommage</h2>
+<h2 id=dploiement-et-nommage>Déploiement et nommage</h2>
 
-<p>Pour ne pas polluer les dépôts, le numéro de version modifié a été postfixé par <code>-shaded</code>. Le déploiement a été fait sur un dépôt Maven qui est en fait un simple repository Github. Le commit correspondant à cette modification <a href=https://github.com/CedricGatay/neo4j/commit/452f58fca69ffe3b1d0eab6261b8342f8da95889>est consultable ici</a>.</p>
+<p>Pour ne pas polluer les dépôts, le numéro de version modifié a été postfixé par <code>-shaded</code>. Le déploiement a été fait sur
+un dépôt Maven qui est en fait un simple repository Github.
+Le commit correspondant à cette modification <a href=https://github.com/CedricGatay/neo4j/commit/452f58fca69ffe3b1d0eab6261b8342f8da95889>est consultable
+ici</a>.</p>
+
+
         </div>
         <div class=fade-content>
         </div>
@@ -209,37 +304,35 @@
             
         </ul></h2>
         <div class=content>
-            <h2 id=1__la_curation>1 - La curation</h2>
-
+            <h2 id=la-curation>1 - La curation</h2>
 <p>Fatigué de partager vos bons liens à vos collègues par irc, hipchat ou mail et que 2 jours plus tard on vous les redemande pour la 5ème fois ? Dans ce cas c’est que vous avez besoin d’un outil de curation. Derrière ce mot plutôt moche se cache le principe de veille technologique à l’échelle de l’entreprise. Cela permet de concentrer les efforts en la matière en un seul endroit pour que toute une équipe (ou société, ou autre) puisse en bénéficier.</p>
 
-<h2 id=2_pourquoi_elcurator_>2- Pourquoi ElCurator ?</h2>
-
+<h2 id=pourquoi-elcurator->2- Pourquoi ElCurator ?</h2>
 <p>Chez Code-Troopers, nous utilisons <a href="http://www.elcurator.net/">ElCurator</a> depuis déjà 3 semaines, et cela pour deux raisons. La première c’est que nous venons tout juste de ressentir le besoin d’avoir un tel outil à notre service (équipe pas toujours sur hipchat en même temps, pas toujours dans le même bureau, et surtout début des vacances, donc passage de connaissances rendu plus compliqué). Et deuxièmement, c’est pile pendant nos recherches qu’<a href="http://www.octo.com/">Octo</a> a lancé sa solution ElCurator. Donc en plus d’un timming parfait de leur part, c’est aussi parce que nous apprécions la création française que nous avons saisi l’occasion de tester et soutenir une bonne initiative d’une autre boite de développement Made in France.</p>
 
-<h2 id=3__les_fonctionnalits>3 - Les Fonctionnalités</h2>
+<h2 id=les-fonctionnalits>3 - Les Fonctionnalités</h2>
+<p>Dans ce qu’il est possible de faire avec ElCurator, on retrouve évidemment la possiblité de poster un lien. Lors de cette action, il faut lui attribuer une catégorie et un commentaire / descriptif (un peu fastidieux les premières fois, ce commentaire est finalement bien utile pour les autres utilisateurs, afin d’avoir quelques informations sur le lien en question)
+Ensuite, une fois un lien posté, chaque utilisateur a la possibilité de le lire (bien évidement), de le marquer comme favori, de le flaguer pour le lire plus tard… autant de petites actions permettant à chacun de s’organiser comme il le souhaite.
+Il s’agit donc d’une interface claire et efficace, sans features superflues qui viendraient capter inutilement notre attention et qui répond parfaitement à la problématique posée de partage d’informations et de gain de temps.</p>
 
-<p>Dans ce qu’il est possible de faire avec ElCurator, on retrouve évidemment la possiblité de poster un lien. Lors de cette action, il faut lui attribuer une catégorie et un commentaire / descriptif (un peu fastidieux les premières fois, ce commentaire est finalement bien utile pour les autres utilisateurs, afin d’avoir quelques informations sur le lien en question) Ensuite, une fois un lien posté, chaque utilisateur a la possibilité de le lire (bien évidement), de le marquer comme favori, de le flaguer pour le lire plus tard… autant de petites actions permettant à chacun de s’organiser comme il le souhaite. Il s’agit donc d’une interface claire et efficace, sans features superflues qui viendraient capter inutilement notre attention et qui répond parfaitement à la problématique posée de partage d’informations et de gain de temps.</p>
+<h2 id=partage-monde>4 - Partage Monde</h2>
+<p>Nouvelle feature introduite dans la semaine, le partage monde est une possibilité offerte lors de l’ajout d’un lien, de le publier à tous les utilisateurs d’ElCurator (et pas uniquement à ceux de son groupe). Pour le moment je reste perplexe face à cette fonctionnalité qui ressemble de prime abord à un twitter privé ElCurator (sans les selfies ou autres) dans lequel  il va falloir creuser pour trouver les liens qui nous correspondent : l’effet inverse de ce qu’ElCurator est censé nous apporter…
+À voir ce que cela donne sur le long terme.</p>
 
-<h2 id=4__partage_monde>4 - Partage Monde</h2>
+<h2 id=ct-administration>5 - Côté Administration</h2>
+<p>Pour la partie gestion de sa société (ou groupe, ou n’importe) pas grand chose à faire, et c’est tant mieux. Il est possible d’ajouter / supprimer des utilisateurs, de les flaguer comme administrateur à leur tour. Et c’est à peu près tout.
+Il y a aussi la gestion des catégories utilisées lors de la publication des liens. Cela mériterait peut-être d’être accessible par défaut à tous les utilisateurs afin de ne pas avoir à répondre aux “Tu peux ajouter cette catégorie stp !”</p>
 
-<p>Nouvelle feature introduite dans la semaine, le partage monde est une possibilité offerte lors de l’ajout d’un lien, de le publier à tous les utilisateurs d’ElCurator (et pas uniquement à ceux de son groupe). Pour le moment je reste perplexe face à cette fonctionnalité qui ressemble de prime abord à un twitter privé ElCurator (sans les selfies ou autres) dans lequel il va falloir creuser pour trouver les liens qui nous correspondent : l’effet inverse de ce qu’ElCurator est censé nous apporter… À voir ce que cela donne sur le long terme.</p>
+<h2 id=le-plus-delcurator>6 - Le plus d’ElCurator</h2>
+<p>Octo a introduit une notion de gamification dans sa plateforme. Ainsi, lorsqu’un utilisateur poste un lien, tous les autres membres peuvent voter (à coup de +1) sur la publication afin de distinguer facilement les liens les plus appréciés par le groupe. Et une fois par semaine un récapitulatif est généré afin de savoir qui a posté les liens les plus utiles (les plus votés) et cette personne est désignée “ElCurator de la semaine”. Il y a donc un petit challenge entre les personnes de l’équipe pour savoir qui apportera les liens les plus utiles.
+Attention toutefois à ce que les chefs d’équipe/managers ou autres n’utilisent pas cette fonction à mauvais escient pour désigner une personne plus efficace que les autres en se basant uniquement sur ce fait.</p>
 
-<h2 id=5__ct_administration>5 - Côté Administration</h2>
-
-<p>Pour la partie gestion de sa société (ou groupe, ou n’importe) pas grand chose à faire, et c’est tant mieux. Il est possible d’ajouter / supprimer des utilisateurs, de les flaguer comme administrateur à leur tour. Et c’est à peu près tout. Il y a aussi la gestion des catégories utilisées lors de la publication des liens. Cela mériterait peut-être d’être accessible par défaut à tous les utilisateurs afin de ne pas avoir à répondre aux “Tu peux ajouter cette catégorie stp !”</p>
-
-<h2 id=6__le_plus_delcurator>6 - Le plus d’ElCurator</h2>
-
-<p>Octo a introduit une notion de gamification dans sa plateforme. Ainsi, lorsqu’un utilisateur poste un lien, tous les autres membres peuvent voter (à coup de +1) sur la publication afin de distinguer facilement les liens les plus appréciés par le groupe. Et une fois par semaine un récapitulatif est généré afin de savoir qui a posté les liens les plus utiles (les plus votés) et cette personne est désignée “ElCurator de la semaine”. Il y a donc un petit challenge entre les personnes de l’équipe pour savoir qui apportera les liens les plus utiles. Attention toutefois à ce que les chefs d’équipe/managers ou autres n’utilisent pas cette fonction à mauvais escient pour désigner une personne plus efficace que les autres en se basant uniquement sur ce fait.</p>
-
-<h2 id=7_un_outil_encore__paufiner>7- Un outil encore à paufiner</h2>
-
+<h2 id=un-outil-encore--paufiner>7- Un outil encore à paufiner</h2>
 <p>Disponible seulement depuis quelques semaines, ElCurator n’a pas encore atteint sa forme finale. Les équipes d’Octo travaillant dessus ont d’ailleurs branché uservoice afin de recueillir le feedback des utilisateurs. Et ils prennent en compte ces remontées. Donc n’hésitez pas à leur faire part des dysfonctionnements ou souhaits d’évolution. Ils ont déjà répondu favorablement à quelque uns de mes tickets.</p>
 
-<h2 id=8__conclusion>8 - Conclusion</h2>
-
+<h2 id=conclusion>8 - Conclusion</h2>
 <p>ElCurator est une réalisastion très bien menée par Octo. Simple et fluide, chez Code-Troopers nous l’avons adoptée avec plaisir. Et je conseille vivement à tous ceux qui n’ont pas encore testé la curation de s’y mettre avec cet outil, c’est un gain de temps assuré pour peu que quelques utilisateurs jouent le jeu.</p>
+
         </div>
         <div class=fade-content>
         </div>
@@ -356,122 +449,58 @@
 <p>Développée en partenariat avec l’équipe de TDS, cette application vous offre la possibilité de :</p>
 
 <ul>
-<li>Consulter la programmation jour par jour</li>
-
-<li>Être notifié avant le passage d’un artiste (pour ne pas rater le début)</li>
-
-<li>Être notifié avant le départ des navettes Fil Vert (pour ne pas rentrer à pied !)</li>
-
-<li>Écouter la playlist officielle du festival</li>
-
-<li>Écouter le dernier album de chaque artiste</li>
-
-<li>Accéder à une fiche détaillée de l’artiste (liens web, vidéo, biographie…)</li>
-
-<li>Connaître en temps réel ce qui passe et ce qui va suivre pour chacune des scènes</li>
-
-<li>Consulter les horaires des navettes Fil Vert (qui font les aller-retours entre la gare routière de Tours et l’entrée du site)</li>
+  <li>Consulter la programmation jour par jour</li>
+  <li>Être notifié avant le passage d’un artiste (pour ne pas rater le début)</li>
+  <li>Être notifié avant le départ des navettes Fil Vert (pour ne pas rentrer à pied !)</li>
+  <li>Écouter la playlist officielle du festival</li>
+  <li>Écouter le dernier album de chaque artiste</li>
+  <li>Accéder à une fiche détaillée de l’artiste (liens web, vidéo, biographie…)</li>
+  <li>Connaître en temps réel ce qui passe et ce qui va suivre pour chacune des scènes</li>
+  <li>Consulter les horaires des navettes Fil Vert (qui font les aller-retours entre la gare routière de Tours et l’entrée du site)</li>
 </ul>
+
 <div style=text-align:center;margin:50px>
-    <a class=inlineBoxes data-lightbox=group-2 href=/images/postTDS2/launch.png title="Splash screen de l&apos;application">
-        <img alt="Splash screen" class=medium src=/images/postTDS2/launch.png>
+    <a href=/images/postTDS2/launch.png data-lightbox=group-2 title="Splash screen de l'application" class=inlineBoxes>
+        <img class=medium src=/images/postTDS2/launch.png alt="Splash screen">
     </a>
-    <a class=inlineBoxes data-lightbox=group-2 href=/images/postTDS2/home.png title="Menu de l&apos;application">
-        <img alt="Menu screen" class=medium src=/images/postTDS2/home.png>
+    <a href=/images/postTDS2/home.png data-lightbox=group-2 title="Menu de l'application" class=inlineBoxes>
+        <img class=medium src=/images/postTDS2/home.png alt="Menu screen">
     </a>
-    <a class=inlineBoxes data-lightbox=group-2 href=/images/postTDS2/prog.png title="Programme par jour et par scène">
-        <img alt="Programme screen" class=medium src=/images/postTDS2/prog.png>
+    <a href=/images/postTDS2/prog.png data-lightbox=group-2 title="Programme par jour et par scène" class=inlineBoxes>
+        <img class=medium src=/images/postTDS2/prog.png alt="Programme screen">
     </a>
-    <a class=inlineBoxes data-lightbox=group-2 href=/images/postTDS2/artiste.png title="Une fiche artiste de l&apos;application">
-        <img alt="Artist screen" class=medium src=/images/postTDS2/artiste.png>
+    <a href=/images/postTDS2/artiste.png data-lightbox=group-2 title="Une fiche artiste de l'application" class=inlineBoxes>
+        <img class=medium src=/images/postTDS2/artiste.png alt="Artist screen">
     </a>
-    <a class=inlineBoxes data-lightbox=group-2 href=/images/postTDS2/notifs.png title="Récap de notifications plannifiées pour les navettes">
-        <img alt="Alerte screen" class=medium src=/images/postTDS2/notifs.png>
+    <a href=/images/postTDS2/notifs.png data-lightbox=group-2 title="Récap de notifications plannifiées pour les navettes" class=inlineBoxes>
+        <img class=medium src=/images/postTDS2/notifs.png alt="Alerte screen">
     </a>
 </div>
-<p>Rendez-vous dès à présent sur le Play Store pour télécharger l’appli.<br> Terres du Son est engagé dans une démarche de développement durable, télécharger l’application, c’est aussi imprimer moins de programmes et donc réduire les déchets.<br> Et comme pour tous les festivals en région Centre, pensez à venir avec votre gobelet réutilisable.</p>
+
+<p>Rendez-vous dès à présent sur le Play Store pour télécharger l’appli.<br> 
+Terres du Son est engagé dans une démarche de développement durable, télécharger l’application, c’est aussi imprimer moins de programmes et donc réduire les déchets.<br>
+Et comme pour tous les festivals en région Centre, pensez à venir avec votre gobelet réutilisable.</p>
+
 <div style=text-align:center;margin:50px>
     <a href="https://play.google.com/store/apps/details?id=com.codetroopers.terresduson">
-      <img alt="QRcode application Terres du Son" class=medium src=/images/postTDS2/qrcode_playstore_tds.png>
+      <img class=medium alt="QRcode application Terres du Son" src=/images/postTDS2/qrcode_playstore_tds.png>
     </a>
     <a href="https://play.google.com/store/apps/details?id=com.codetroopers.terresduson">
       <img alt="Get it on Google Play" src=https://developer.android.com/images/brand/fr_generic_rgb_wo_60.png>
     </a>
 </div>
+
 <p>Tous les retours, positifs comme négatifs sont les bienvenus. Alors n’hésitez pas à donner votre avis, nous en tiendrons compte pour les prochaines versions de l’application.</p>
 
-<p><em><code>NB</code> : pour profiter pleinement des fonctionnalités d’écoute de la playlist Terres du Son et des albums des artistes il est nécessaire de connecter son compte <a href=http://www.deezer.com/offers/premiumplus>premium+ Deezer</a>, dans le cas contraire, Deezer limite l’écoute à 30 secondes par morceau.</em></p>
+<p><em><code>NB</code> : pour profiter pleinement des fonctionnalités d’écoute de la playlist Terres du Son et des albums des artistes
+il est nécessaire de connecter son compte <a href=http://www.deezer.com/offers/premiumplus>premium+ Deezer</a>, dans le cas contraire, Deezer limite l’écoute à 30 secondes par morceau.</em></p>
+
+
         </div>
         <div class=fade-content>
         </div>
         <div class=more>
             <a href=/2014/06/24/TDS2.html><i class="fa fa-arrow-circle-o-right"></i> Lire la suite</a>
-        </div>
-    </div>
-</article>
-
-<article class="col-lg-4 col-md-6 col-sm-12">
-    <div onclick="window.location.href='/2014/05/15/CourseraAndroid.html' ;  return false" style="cursor: pointer">
-	<div class=cover style=background-image:url(/images/banner/coursera-android-banner.png)>
-            <div class=date>posté le 15/05/2014 par Florian</div>
-        </div>
-        <h2><a href=/2014/05/15/CourseraAndroid.html>Coursera - Android Handheld Systems : 2ème cours</a><ul class=tags>
-            
-            <li>Android</li>
-            
-            <li>Coursera</li>
-            
-        </ul></h2>
-        <div class=content>
-            <h3>Coursera & Android</h3>
-<p>
-   Coursera propose depuis ce Lundi (12 mai) <a href=https://class.coursera.org/posa-002>un nouveau cours de développement Android</a>.
-   Il s'agit, en fait, du second cours d'une série de trois visant à maitriser le développement d'application Android.
-</p>
-<p>
-   <a href=https://class.coursera.org/android-001>Le premier cours, sur le développement Android,</a> avait comme thème (et comme son nom l'indique) la découverte de la programmation d'application.
-   Cela en abordant les classes et notions majeures telles que les Activity, View, Fragment ou les Intent, ainsi que tous les cycles de vie correspondants, ce qui a pu permettre au plus grand nombre de s'y initier à moindre frais.
-</p>
-<h3>Le cours</h3>
-<p>
-    Ce nouveau cours a pour thème principal l'apprentissage des bons patterns et l'utilisation de plusieurs frameworks afin de réaliser avec brio les applications Android qui ont recours à des services réseaux.
-</p>
-<p>
-    Présenté par <a href=https://www.coursera.org/instructor/douglasschmidt>Douglas C. Schmidt</a> (qui parle plutôt vite dans les premières vidéos) et <a href=https://www.coursera.org/instructor/juleswhite>C. Jules White</a>, les cours (vidéos et slides) semblent toujours aussi bien construits et organisés.
-    Ils sont pour le moment faciles à suivre, et donc faisaibles même si vous n'avez pas suivi le premier cours.
-
-</p>
-<h3>Exercices</h3>
-<p>
-    Pour ce qui est des excercices, il y a du changement. Contrairement au cours précédent où il fallait uniquement collecter quelques lignes de log pour prouver la réussite d'un exercice, il va falloir cette fois fournir les fichiers sources correspondant au travail réalisé. Ce qui est, je trouve, une bien meilleure façon de faire et surtout fait beaucoup plus 'pro'.
-</p>
-<p>
-    Et justement, en parlant d'évaluation, nouveauté (pour moi du moins) il va falloir évaluer le travail des autres étudiants.
-    En effet pour qu'un exercice réalisé soit validé, il faudra, après l'envoi de son propre travail, noter celui d'autres étudiants, en utilisant leurs codes sources et en répondant à des questions / critères spécifiques posés par la plateforme.
-</p>
-<p>
-    Petit point négatif à noter, l'IDE à utiliser est Eclipse, c'est sous cet environnement que les résultats seront testés.
-    Mais comme cela n'a pas été un problème lors du premier cours de pouvoir utiliser Android Studio, il faut espérer qu'il en sera de même.
-</p>
-<h3>Inscription</h3>
-<p>
-    Il est encore temps de s'incrire puisque les premières vidéos n'ont été diffusées que ce Lundi.
-    Et même si vous n'avez pas le temps pour faire tous les exercices, regarder les vidéos (ou bien les slides) apporte déjà bien plus d'informations, que pourrait le faire une conférence ou une formation.
-</p>
-
-<h3>Certification</h3>
-<p>
-    Et pour ceux qui le souhaitent, il est possible d'obtenir un certificat officiel provenant de l'université de Vanderbilt (origine des deux profs) et Coursera, ce qui permet de faire connaître et d'attester de votre réussite dans ces cours.
-    Mais évidement pour cela il faudra payer (49$), car rien n'est gratuit.
-</p>
-
-
-
-        </div>
-        <div class=fade-content>
-        </div>
-        <div class=more>
-            <a href=/2014/05/15/CourseraAndroid.html><i class="fa fa-arrow-circle-o-right"></i> Lire la suite</a>
         </div>
     </div>
 </article>
@@ -492,15 +521,15 @@
         
         
         
-        <li><a href=/blog/page2>2</a></li>
+        <li><a href=blog/page2>2</a></li>
         
         
         
-        <li><a href=/blog/page3>3</a></li>
+        <li><a href=blog/page3>3</a></li>
         
         
         
-        <li><a href=/blog/page4>4</a></li>
+        <li><a href=blog/page4>4</a></li>
         
         
 
@@ -563,7 +592,7 @@
 
 <script src=//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js></script>
 
-<script src=/scripts/229ace39.plugins.js></script>
+<script src=/scripts/f35f3183.plugins.js></script>
 
 <script src=/scripts/32bd55f7.scripts.js></script>
 

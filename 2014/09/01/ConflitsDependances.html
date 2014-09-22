@@ -78,11 +78,16 @@
                     </ul>
                 </h2>
                 <div class=content>
-                    <p>Lors de nos développements, nous reposons beaucoup sur des projets externes qui nous fournissent énormément de services utiles. Dans un récent projet, nous avons eu besoin de faire fonctionner Neo4j conjointement à ElasticSearch. Jusqu’ici, aucun soucis n’est à déplorer, mais nous avions une exigence particulière : il fallait que l’application puisse démarrer automatiquement un serveur Neo4J ainsi qu’un serveur ElasticSearch sur les postes de développements (ainsi que pour les tests d’intégration).</p>
+                    <p>Lors de nos développements, nous reposons beaucoup sur des projets externes qui nous fournissent énormément de services
+utiles. Dans un récent projet, nous avons eu besoin de faire fonctionner Neo4j conjointement à ElasticSearch. Jusqu’ici,
+aucun soucis n’est à déplorer, mais nous avions une exigence particulière : il fallait que l’application puisse
+démarrer automatiquement un serveur Neo4J ainsi qu’un serveur ElasticSearch sur les postes de développements (ainsi que
+pour les tests d’intégration).</p>
 
-<h2 id=problme_existant>Problème existant</h2>
+<h2 id=problme-existant>Problème existant</h2>
 
-<p>Les deux outils que nous utilisons se basent sur Apache Lucene pour toute la partie indexation et accès aux données. Mais, et c’est là que le problème se situe, ils n’utilisent pas les mêmes versions de Lucene.</p>
+<p>Les deux outils que nous utilisons se basent sur Apache Lucene pour toute la partie indexation et accès aux données.
+Mais, et c’est là que le problème se situe, ils n’utilisent pas les mêmes versions de Lucene.</p>
 
 <pre><code>&lt;!-- Extrait du pom d'ElasticSearch --&gt;
 &lt;dependency&gt;
@@ -90,20 +95,35 @@
     &lt;artifactId&gt;lucene-core&lt;/artifactId&gt;
     &lt;version&gt;4.9.0&lt;/version&gt;
     &lt;scope&gt;compile&lt;/scope&gt;
-&lt;/dependency&gt;</code></pre>
+&lt;/dependency&gt;
+</code></pre>
+
 <hr>
+
 <pre><code>&lt;!-- Extrait du pom de Neo4j --&gt; 
 &lt;dependency&gt;
     &lt;groupId&gt;org.apache.lucene&lt;/groupId&gt;
     &lt;artifactId&gt;lucene-core&lt;/artifactId&gt;
     &lt;version&gt;3.6.2&lt;/version&gt;
-&lt;/dependency&gt;</code></pre>
+&lt;/dependency&gt;
+</code></pre>
 
-<p>ElasticSearch utilise la version 4.9.0, alors que Neo4J utilise la version 3.6.2. Ainsi, en fonction du bon vouloir du <code>Classloader</code> qui sera utilisé par l’application, il se peut qu’ElasticSearch ou Neo4J refuse de fonctionner. La difficulté pour comprendre et détecter le problème est qu’il se manifeste souvent par un obscur <code>NoClassDefFoundError</code> ou <code>NoSuchMethodError</code> qui n’est pas des plus explicites (d’autant plus lorsque notre IDE nous montre une version qui contient ledit symbole non trouvé).</p>
+<p>ElasticSearch utilise la version 4.9.0, alors que Neo4J utilise la version 3.6.2. Ainsi, en fonction du bon vouloir du
+<code>Classloader</code> qui sera utilisé par l’application, il se peut qu’ElasticSearch ou Neo4J refuse de fonctionner. La
+difficulté pour comprendre et détecter le problème est qu’il se manifeste souvent par un obscur <code>NoClassDefFoundError</code>
+ou <code>NoSuchMethodError</code> qui n’est pas des plus explicites (d’autant plus lorsque notre IDE nous montre une version qui
+contient ledit symbole non trouvé).</p>
 
-<h2 id=solution_de_contournement>Solution de contournement</h2>
+<h2 id=solution-de-contournement>Solution de contournement</h2>
 
-<p>Le conflit est assez simple à contourner une fois qu’on a compris ce qui se passe. En fait, il y a deux classes portant le même nom dans les classes chargées, par exemple <code>org.lucene.MaClass</code>, l’une effaçant l’autre aux yeux du <code>ClassLoader</code>. Une pratique courante est de renommer (ou relocate) le package de base d’une bibliothèque utilisée et de l’inclure dans le fichier de package du projet, le plugin <code>maven-shade</code> est conçu dans cette optique. Le choix fait est de renommer la dépendance Lucene dans Neo4J pour notre part, ainsi, nous avons forké le projet et configuré le plugin <code>shade</code> pour qu’il inclue le contenu de la dépendance d’Apache Lucene et qu’il fasse le renommage de <code>org.apache.lucene</code> en <code>shaded.org.apache.lucene</code>.</p>
+<p>Le conflit est assez simple à contourner une fois qu’on a compris ce qui se passe. En fait, il y a deux classes portant
+le même nom dans les classes chargées, par exemple <code>org.lucene.MaClass</code>, l’une effaçant l’autre aux yeux du
+<code>ClassLoader</code>.
+Une pratique courante est de renommer (ou relocate) le package de base d’une bibliothèque utilisée et de l’inclure dans
+le fichier de package du projet, le plugin <code>maven-shade</code> est conçu dans cette optique.
+Le choix fait est de renommer la dépendance Lucene dans Neo4J pour notre part, ainsi, nous avons forké le projet et
+configuré le plugin <code>shade</code> pour qu’il inclue le contenu de la dépendance d’Apache Lucene et qu’il fasse le renommage de
+<code>org.apache.lucene</code> en <code>shaded.org.apache.lucene</code>.</p>
 
 <pre><code> &lt;plugin&gt;
         &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
@@ -132,11 +152,17 @@
                 &lt;/configuration&gt;
             &lt;/execution&gt;
         &lt;/executions&gt;
-  &lt;/plugin&gt;</code></pre>
+  &lt;/plugin&gt;
+</code></pre>
 
-<h2 id=dploiement_et_nommage>Déploiement et nommage</h2>
+<h2 id=dploiement-et-nommage>Déploiement et nommage</h2>
 
-<p>Pour ne pas polluer les dépôts, le numéro de version modifié a été postfixé par <code>-shaded</code>. Le déploiement a été fait sur un dépôt Maven qui est en fait un simple repository Github. Le commit correspondant à cette modification <a href=https://github.com/CedricGatay/neo4j/commit/452f58fca69ffe3b1d0eab6261b8342f8da95889>est consultable ici</a>.</p>
+<p>Pour ne pas polluer les dépôts, le numéro de version modifié a été postfixé par <code>-shaded</code>. Le déploiement a été fait sur
+un dépôt Maven qui est en fait un simple repository Github.
+Le commit correspondant à cette modification <a href=https://github.com/CedricGatay/neo4j/commit/452f58fca69ffe3b1d0eab6261b8342f8da95889>est consultable
+ici</a>.</p>
+
+
                 </div>
 <div class=share>
 L'article vous a plu ? Partagez-le :
@@ -250,7 +276,7 @@ L'article vous a plu ? Partagez-le :
 
 <script src=//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js></script>
 
-<script src=/scripts/229ace39.plugins.js></script>
+<script src=/scripts/f35f3183.plugins.js></script>
 
 <script src=/scripts/32bd55f7.scripts.js></script>
 
