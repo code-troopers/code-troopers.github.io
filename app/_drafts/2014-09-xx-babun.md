@@ -15,7 +15,7 @@ Bien sûr, la plupart d'entre vous connaît Cygwin, qui permet de résoudre bien
 Heureusement,  [Tom Bujok](https://twitter.com/tombujok) s'est penché sur le souci et a pris le temps de faire une configuration aux petits oignons d'un cygwin complet, avec zsh et oh-my-zsh pour avoir une bonne configuration. De plus, pour faire comme si on était sous un unix, on a même un package manager qui permet d'installer les outils nécessaires.
 
 ## Installation et configuration
-Il suffit de récupérer le zip sur le site officiel http://babun.github.io/ de le dézipper et de lancer le script `install.bat`. Ce qui est bien c'est qu'il est possible de lancer le script d'installation et donc d'utiliser babun sans disposer des droits d'administrateur sur sa machine.
+Il suffit de récupérer le zip sur le site officiel [http://babun.github.io](http://babun.github.io/) de le dézipper et de lancer le script `install.bat`. Ce qui est bien c'est qu'il est possible de lancer le script d'installation et donc d'utiliser babun sans disposer des droits d'administrateur sur sa machine.
 
 Une fois la _longue_ installation terminée, vous disposez d'un shell bien configuré avec la plupart des outils nécessaires bien configurés. 
 
