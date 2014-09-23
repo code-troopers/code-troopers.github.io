@@ -8,7 +8,7 @@ tags: [Palo Altech, Agilité, Conférence]
 ---
 
 
-## Ça bouge a la cantine du numérique
+## Ça bouge à la cantine du numérique
 
 Depuis la rentrée il y a de l'animation à la [cantine du numérique de Tours](http://paloaltours.org/la-cantine-numerique-tours/). En plus de continuer les rendez-vous hebdomadaire tels que le FunLab ou la WebSchool, depuis peu sont organisés des codings goûters (initié par [Jean-Lou Le Bars](https://twitter.com/j2lb)) ainsi que les soirées Palo Altech (inité par [Rodrigo Reyes](https://twitter.com/nogunner) et [Ludovic Lafole](https://twitter.com/LudovicLafole)).  
 Palo Altech a pour ambition de promovoir les rendez-vous autour de l'informatique en général (pour apporter un complément aux soirées JUG déjà spécialisées autour du développement java)
