@@ -21,7 +21,7 @@ C'est donc dans le cadre de Palo Altech que le **mardi 30 septembre à 19h** est
  - Retour d’expérience d’un développeur en milieu semi-hostile, par [Miguel Basire](https://twitter.com/MiguelBasire)
 
 ##Perfection Games
-Point crucial de l'amélioration continue, les perfection games dont le Trooper Florian fera la présentation sont un excellent moyen de discuter des points de blocages dans les équipes. Cette présentation sera axée principalement sur les expériences vécues au sein de la team Code-Troopers au fil des dernières années de travail ainsi que lors des diverses rencontres.
+Point crucial de l'amélioration continue, les perfection games dont un dévoué Trooper fera la présentation sont un excellent moyen de discuter des points de blocages dans les équipes. Cette présentation sera axée principalement sur les expériences vécues au sein de la team Code-Troopers au fil des dernières années de travail ainsi que lors des diverses rencontres.
 
 
 ##Liens 
