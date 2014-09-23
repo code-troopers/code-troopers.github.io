@@ -28,9 +28,9 @@ Cependant vous voudrez certainement personnaliser votre environnement avec quelq
 </div>
 
 ### Conseils pratiques
-Depuis quelques temps, nous sommes quelques membres de l'équipe à __devoir__ travailler  sous Windows. Nous avons rapidement ajouté `tmux` à la liste des outils indispensables (la gestion des terminaux Windows n'étant pas optimale) ainsi que `irsii` en tant que client IRC. 
+Depuis quelques temps, nous sommes quelques membres de l'équipe à __devoir__ travailler  sous Windows. Nous avons rapidement ajouté `tmux` à la liste des outils indispensables (la gestion des terminaux Windows n'étant pas optimale) ainsi que `irssi` en tant que client IRC. 
         
-    $ pact install tmux irsii
+    $ pact install tmux irssi
 
 Puisque c'est ni plus ni moins qu'une installation de cygwin, l'accès à vos disque se fera par le montage `/cygdrive/c/` pour le disque `C:` par exemple. Veuillez noter également que l'emplacement de votre `home` sera en fait `/cygdrive/c/Users/$USER/.babun/cygwin/home/$USER`
 
