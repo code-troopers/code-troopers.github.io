@@ -7,6 +7,40 @@
                 <atom:link href="http://code-troopers.com/feed.xml" rel="self" type="application/rss+xml"/>
                 
                         <item>
+                                <title>Soirée Agilité à Tours</title>
+                                <description>&lt;h2 id=&quot;a_bouge__la_cantine_du_numrique&quot;&gt;Ça bouge à la cantine du numérique&lt;/h2&gt;
+
+&lt;p&gt;Depuis la rentrée il y a de l’animation à la &lt;a href=&quot;http://paloaltours.org/la-cantine-numerique-tours/&quot;&gt;cantine du numérique de Tours&lt;/a&gt;. En plus de continuer les rendez-vous hebdomadairez tels que le FunLab ou la WebSchool, depuis peu sont organisés des codings goûters (initiés par &lt;a href=&quot;https://twitter.com/j2lb&quot;&gt;Jean-Lou Le Bars&lt;/a&gt;) ainsi que les soirées Palo Altech (initées par &lt;a href=&quot;https://twitter.com/nogunner&quot;&gt;Rodrigo Reyes&lt;/a&gt; et &lt;a href=&quot;https://twitter.com/LudovicLafole&quot;&gt;Ludovic Lafole&lt;/a&gt;).&lt;br /&gt;Palo Altech a pour ambition de promovoir les rendez-vous autour de l’informatique en général (pour apporter un complément aux soirées JUG déjà spécialisées autour du développement java)&lt;/p&gt;
+
+&lt;h2 id=&quot;soire_agilit&quot;&gt;Soirée Agilité&lt;/h2&gt;
+
+&lt;p&gt;C’est donc dans le cadre de Palo Altech que le &lt;strong&gt;mardi 30 septembre à 19h&lt;/strong&gt; est organisée une soirée autour de l’agilité. Cette soirée sera découpée en trois présentations :&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Une introduction à l’Agilité, par &lt;a href=&quot;https://twitter.com/f_leguedois&quot;&gt;Frédéric Leguédois&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;Perfection Games : ou comment résoudre ses problèmes avec des post-it, par &lt;a href=&quot;https://twitter.com/FlorianChauveau&quot;&gt;Florian Chauveau&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;Retour d’expérience d’un développeur en milieu semi-hostile, par &lt;a href=&quot;https://twitter.com/MiguelBasire&quot;&gt;Miguel Basire&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;perfection_games&quot;&gt;Perfection Games&lt;/h2&gt;
+
+&lt;p&gt;Point crucial de l’amélioration continue, les perfection games dont votre dévoué Trooper fera la présentation sont un excellent moyen de discuter des points de blocages dans les équipes. Cette présentation sera axée principalement sur les expériences vécues au sein de la team Code-Troopers au fil des dernières années de travail ainsi que lors des diverses rencontres.&lt;/p&gt;
+
+&lt;h2 id=&quot;liens&quot;&gt;Liens&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://paloaltours.org/agenda/&quot;&gt;Agenda de la cantine&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;a href=&quot;https://www.eventbrite.fr/e/billets-soiree-palo-altech-2-lagilite-13128837707&quot;&gt;Pour s’inscrire pour la soirée (c’est gratuit, c’est juste pour prévoir la place)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+                                <pubDate>Tue, 23 Sep 2014 00:00:00 +0200</pubDate>
+                                <link>http://code-troopers.com/2014/09/23/agile_paloaltech_tours.html</link>
+                                <guid isPermaLink="true">http://code-troopers.com/2014/09/23/agile_paloaltech_tours.html</guid>
+                        </item>
+                
+                        <item>
                                 <title>oh-my-zsh : l'outil indispensable pour avoir un zsh bien configuré.</title>
                                 <description>&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
 
@@ -456,39 +490,6 @@ db.default.password=&lt;/code&gt;&lt;/pre&gt;
                                 <pubDate>Mon, 05 May 2014 00:00:00 +0200</pubDate>
                                 <link>http://code-troopers.com/2014/05/05/PlayDbBrowser.html</link>
                                 <guid isPermaLink="true">http://code-troopers.com/2014/05/05/PlayDbBrowser.html</guid>
-                        </item>
-                
-                        <item>
-                                <title>Encore un podium pour MyBandMyCity</title>
-                                <description>&lt;p&gt;Si vous nous suivez, vous savez sûrement que notre équipe a participé et est arrivée 3&lt;sup&gt;ème&lt;/sup&gt; du &lt;em&gt;Startup Weekend&lt;/em&gt; qui s’est déroulé à Tours les 21-22-23 mars 2014 (&lt;a href=&quot;http://code-troopers.com/2014/03/23/StartupWeekend.html&quot;&gt;un petit résumé de ce weekend intense&lt;/a&gt;). Et bien ça continue, François, Fabian et Julien, les 3 étudiants de &lt;em&gt;FBS&lt;/em&gt;, porteurs du projet, ont présenté &lt;strong&gt;My Band My City&lt;/strong&gt; au concours de création d’entreprises le &lt;em&gt;”&lt;a href=&quot;http://accede-entreprendre.fr/le-tours-de-la-creation/&quot;&gt;Tours de la Création&lt;/a&gt;”&lt;/em&gt; qui se déroulait le jeudi 17 avril 2014 et, une fois de plus, le projet est arrivé 3&lt;sup&gt;ème&lt;/sup&gt; sur un total de 25 projets.&lt;/p&gt;
-&lt;div style='text-align:center;margin:50px'&gt;
-    &lt;a class='inlineBoxes' data-lightbox='group-1' href='/images/postAccede/photo.jpg' title='Mode normal'&gt;
-	&lt;img alt='Mode normal' class='medium' src='/images/postAccede/photo.jpg' /&gt;
-    &lt;/a&gt;
-    &lt;a class='inlineBoxes' data-lightbox='group-1' href='/images/postAccede/slide.png' title='Mode présentation'&gt;
-	&lt;img alt='Mode présentation' class='medium' src='/images/postAccede/slide.png' /&gt;
-    &lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;Le concours se déroule en deux phases. Il faut d’abord réaliser un dossier pour expliquer le projet, sa cible, son but, son évolution… Suite à cette première phase, 5 projets sont sélectionnés pour participer à la phase finale qui se déroulait cette année à la &lt;a href=&quot;http://www.pepinieres-agglotours.fr/&quot;&gt;Pépinière d’entreprises du Sanitas&lt;/a&gt; à Tours. Durant cette phase finale il fallait présenter et défendre son projet devant un jury d’entrepreneurs pendant 30 minutes. En parallèle de ces présentations étaient organisées des conférences sur la création d’entreprises. Une courte présentation de 5 minutes de tous les projets était également prévue pour le public, suivie par la remise des prix pour les 3 premiers.&lt;/p&gt;
-
-&lt;p&gt;Cette année les 3 lauréats ont été :&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;M.O.F Box&lt;/strong&gt; : création et vente de smart box avec des produits réalisés par les meilleurs ouvriers de France.&lt;/li&gt;
-
-&lt;li&gt;&lt;strong&gt;SPS&lt;/strong&gt; : un système afin d’aider les services d’intervention à l’intérieur des bâtiments (stockage des plans, emplacement des extincteurs…).&lt;/li&gt;
-
-&lt;li&gt;&lt;a href=&quot;http://mybandmycity.code-troopers.com/&quot;&gt;&lt;strong&gt;My Band My City&lt;/strong&gt;&lt;/a&gt; : billetterie participative de proximité afin de promouvoir et faire venir un artiste dans une ville.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Un grand bravo aux 2 autres projets, &lt;a href=&quot;https://www.facebook.com/getstudapp&quot;&gt;Studapp&lt;/a&gt; et &lt;a href=&quot;http://sugardoc.co/&quot;&gt;SugarDoc&lt;/a&gt; arrivés au pied du podium.&lt;/p&gt;
-
-&lt;p&gt;Les inscriptions pour la version 2015 du “Tours de la Création” sont déjà ouvertes, donc si vous avez une idée, n’hésitez pas à vous rendre &lt;a href=&quot;http://accede-entreprendre.fr/le-tours-de-la-creation/&quot;&gt;ici&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;La 3&lt;sup&gt;ème&lt;/sup&gt; place à ce concours nous a confirmé que ce projet avait un fort potentiel. Nous allons donc, avec l’aide des étudiants de FBS, terminer et véritablement lancer ce projet. Si vous êtes intéressés, restez à l’écoute sur les réseaux sociaux, sur ce blog, ou sur la &lt;a href=&quot;https://www.facebook.com/mybandmycity&quot;&gt;page facebook de My Band My City&lt;/a&gt;.&lt;/p&gt;</description>
-                                <pubDate>Mon, 28 Apr 2014 00:00:00 +0200</pubDate>
-                                <link>http://code-troopers.com/2014/04/28/ConcoursAccede.html</link>
-                                <guid isPermaLink="true">http://code-troopers.com/2014/04/28/ConcoursAccede.html</guid>
                         </item>
                 
         </channel>
