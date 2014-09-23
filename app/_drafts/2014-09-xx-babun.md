@@ -23,11 +23,11 @@ Cependant vous voudrez certainement personnaliser votre environnement avec quelq
 
 <div style="text-align:center;margin:50px">
  <a style="display: inline" href="/images/postBabun/babun.png" data-lightbox="image-0" title="Babun et tmux">
-         <img class="mini" src="/images/postBabun/babun.png" alt="Babun et tmux"/>
+         <img class="medium" src="/images/postBabun/babun.png" alt="Babun et tmux"/>
  </a>
 </div>
 
-### Conseils pratiques
+## Conseils pratiques
 Depuis quelques temps, nous sommes quelques membres de l'équipe à __devoir__ travailler  sous Windows. Nous avons rapidement ajouté `tmux` à la liste des outils indispensables (la gestion des terminaux Windows n'étant pas optimale) ainsi que `irssi` en tant que client IRC. 
         
     $ pact install tmux irssi
