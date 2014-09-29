@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Soirée Agilité à Tours"
-description: "Le mardi 30 sepetembre Palo Altech organise une soirée Agilité à la cantine bêta à Tours" 
+description: "Le mardi 30 septembre Palo Altech organise une soirée Agilité à la cantine bêta à Tours" 
 author: Florian
 cover: paloaltech-banner
 tags: [Palo Altech, Agilité, Conférence]
