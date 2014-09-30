@@ -19,7 +19,7 @@ Il suffit de récupérer le zip sur le site officiel [http://babun.github.io](ht
 
 Une fois la _longue_ installation terminée, vous disposez d'un shell bien configuré avec la plupart des outils nécessaires bien configurés. 
 
-Cependant vous voudrez certainement personnaliser votre environnement avec quelques alias. Pour ceci, il suffit de créer un fichier contenant vos alias dans `~/.oh-my-zsh/custom/aliases.zsh` (le nom est libre, le fichier doit porter l'extension zsh pour qu'il soit automatiquement chargé). Il ne s'agit ni plus ni moins de la configuration permise par oh-my-zsh (vous pouvez vous référer [à cet article]() pour plus de détails)
+Cependant vous voudrez certainement personnaliser votre environnement avec quelques alias. Pour ceci, il suffit de créer un fichier contenant vos alias dans `~/.oh-my-zsh/custom/aliases.zsh` (le nom est libre, le fichier doit porter l'extension zsh pour qu'il soit automatiquement chargé). Il ne s'agit ni plus ni moins de la configuration permise par oh-my-zsh (vous pouvez vous référer [à cet article]({% post_url 2014-09-17-ohMyZsh %}) pour plus de détails)
 
 <div style="text-align:center;margin:50px">
  <a style="display: inline" href="/images/postBabun/babun.png" data-lightbox="image-0" title="Babun et tmux">
