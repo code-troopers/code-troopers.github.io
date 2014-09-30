@@ -12,14 +12,14 @@ Malheureusement, il est fréquent que nous soyons forcé de travailler sous un e
 ## Donnez moi un shell !
 Bien sûr, la plupart d'entre vous connaît Cygwin, qui permet de résoudre bien des problèmes, mais qui en crée aussi un paquet avant d'avoir une installation complète et qui fonctionne comme attendu.
 
-Heureusement,  [Tom Bujok](https://twitter.com/tombujok) s'est penché sur le souci et a pris le temps de faire une configuration aux petits oignons d'un cygwin complet, avec zsh et oh-my-zsh pour avoir une bonne configuration. De plus, pour faire comme si on était sous un unix, on a même un package manager qui permet d'installer les outils nécessaires.
+Heureusement,  [Tom Bujok](https://twitter.com/tombujok) s'est penché sur le souci et a pris le temps de faire une configuration aux petits oignons d'un cygwin complet, avec `zsh` et `oh-my-zsh` pour avoir une bonne configuration. De plus, pour faire comme si on était sous un unix, on a même un package manager qui permet d'installer les outils nécessaires.
 
 ## Installation et configuration
-Il suffit de récupérer le zip sur le site officiel [http://babun.github.io](http://babun.github.io/) de le dézipper et de lancer le script `install.bat`. Ce qui est bien c'est qu'il est possible de lancer le script d'installation et donc d'utiliser babun sans disposer des droits d'administrateur sur sa machine.
+Il suffit de récupérer le zip sur le site officiel [http://babun.github.io](http://babun.github.io/) de le dézipper et de lancer le script `install.bat`. Ce qui est bien, c'est qu'il est possible de lancer le script d'installation et donc d'utiliser babun sans disposer des droits d'administrateur sur sa machine.
 
 Une fois la _longue_ installation terminée, vous disposez d'un shell bien configuré avec la plupart des outils nécessaires bien configurés. 
 
-Cependant vous voudrez certainement personnaliser votre environnement avec quelques alias. Pour ceci, il suffit de créer un fichier contenant vos alias dans `~/.oh-my-zsh/custom/aliases.zsh` (le nom est libre, le fichier doit porter l'extension zsh pour qu'il soit automatiquement chargé). Il ne s'agit ni plus ni moins de la configuration permise par oh-my-zsh (vous pouvez vous référer [à cet article]({% post_url 2014-09-17-ohMyZsh %}) pour plus de détails)
+Cependant vous voudrez certainement personnaliser votre environnement avec quelques alias. Pour ceci, il suffit de créer un fichier contenant vos alias dans `~/.oh-my-zsh/custom/aliases.zsh` (le nom est libre, le fichier doit porter l'extension  `zsh` pour qu'il soit automatiquement chargé). Il ne s'agit ni plus ni moins de la configuration permise par oh-my-zsh (vous pouvez vous référer [à cet article]({% post_url 2014-09-17-ohMyZsh %}) pour plus de détails)
 
 <div style="text-align:center;margin:50px">
  <a style="display: inline" href="/images/postBabun/babun.png" data-lightbox="image-0" title="Babun et tmux">
@@ -35,4 +35,4 @@ Depuis quelques temps, nous sommes quelques membres de l'équipe à __devoir__ t
 Puisque c'est ni plus ni moins qu'une installation de cygwin, l'accès à vos disque se fera par le montage `/cygdrive/c/` pour le disque `C:` par exemple. Veuillez noter également que l'emplacement de votre `home` sera en fait `/cygdrive/c/Users/$USER/.babun/cygwin/home/$USER`
 
 
-
+Maintenant, vous serez presque aussi productif sous Windows que sous un système "agréable" !
