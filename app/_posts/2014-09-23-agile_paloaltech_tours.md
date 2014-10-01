@@ -29,3 +29,6 @@ Point crucial de l'amélioration continue, les perfection games dont votre dévo
  * [Agenda de la cantine](http://paloaltours.org/agenda/)
  * [Pour s'inscrire pour la soirée (c'est gratuit, c'est juste pour prévoir la place)](https://www.eventbrite.fr/e/billets-soiree-palo-altech-2-lagilite-13128837707)
 
+
+###[EDIT]
+Les slides de la présentation ``Perfection Games`` sont sur slideshare : [http://fr.slideshare.net/FlorianChauveau/agilit-les-perfection-games-en-action](http://fr.slideshare.net/FlorianChauveau/agilit-les-perfection-games-en-action)
