@@ -7,6 +7,44 @@
                 <atom:link href="http://code-troopers.com/feed.xml" rel="self" type="application/rss+xml"/>
                 
                         <item>
+                                <title>Babun un shell sous Windows</title>
+                                <description>&lt;h2 id=&quot;oh_non_mon_client_moblige__tre_sous_windows&quot;&gt;Oh non, mon client m’oblige à être sous Windows&lt;/h2&gt;
+
+&lt;p&gt;Malheureusement, il est fréquent que nous soyons forcés de travailler sous un environnement que nous n’aimons pas. Les raisons sont souvent diverses mais sont presque toujours inflexibles. Le problème est que lorsqu’on est habitué à une ligne de commande puissante, le fait d’être sous Windows devient un réel handicap.&lt;/p&gt;
+
+&lt;h2 id=&quot;donnez_moi_un_shell_&quot;&gt;Donnez moi un shell !&lt;/h2&gt;
+
+&lt;p&gt;Bien sûr, la plupart d’entre vous connaîssent Cygwin, qui permet de résoudre bien des problèmes, mais qui en créé aussi un paquet avant d’avoir une installation complète et qui fonctionne comme attendu.&lt;/p&gt;
+
+&lt;p&gt;Heureusement, &lt;a href=&quot;https://twitter.com/tombujok&quot;&gt;Tom Bujok&lt;/a&gt; s’est penché sur le souci et a pris le temps de faire une configuration aux petits oignons d’un Cygwin complet, avec &lt;code&gt;zsh&lt;/code&gt; et &lt;code&gt;oh-my-zsh&lt;/code&gt; pour avoir une bonne configuration. De plus, pour faire comme si on était sous un unix, on a même un package manager qui permet d’installer les outils nécessaires.&lt;/p&gt;
+
+&lt;h2 id=&quot;installation_et_configuration&quot;&gt;Installation et configuration&lt;/h2&gt;
+
+&lt;p&gt;Il suffit de récupérer le zip sur le site officiel &lt;a href=&quot;http://babun.github.io/&quot;&gt;http://babun.github.io&lt;/a&gt; de le dézipper et de lancer le script &lt;code&gt;install.bat&lt;/code&gt;. Ce qui est bien, c’est qu’il est possible de lancer le script d’installation et donc d’utiliser babun sans disposer des droits d’administrateur sur sa machine.&lt;/p&gt;
+
+&lt;p&gt;Une fois la &lt;em&gt;longue&lt;/em&gt; installation terminée, vous disposez d’un shell bien configuré avec la plupart des outils nécessaires bien configurés.&lt;/p&gt;
+
+&lt;p&gt;Cependant vous voudrez certainement personnaliser votre environnement avec quelques alias. Pour ceci, il suffit de créer un fichier contenant vos alias dans &lt;code&gt;~/.oh-my-zsh/custom/aliases.zsh&lt;/code&gt; (le nom est libre, le fichier doit porter l’extension &lt;code&gt;zsh&lt;/code&gt; pour qu’il soit automatiquement chargé). Il ne s’agit ni plus ni moins de la configuration permise par oh-my-zsh (vous pouvez vous référer &lt;a href=&quot;/2014/09/17/ohMyZsh.html&quot;&gt;à cet article&lt;/a&gt; pour plus de détails)&lt;/p&gt;
+&lt;div style='text-align:center;margin:50px'&gt;
+ &lt;a data-lightbox='image-0' href='/images/postBabun/babun.png' style='display: inline' title='Babun et tmux'&gt;
+         &lt;img alt='Babun et tmux' class='medium' src='/images/postBabun/babun.png' /&gt;
+ &lt;/a&gt;
+&lt;/div&gt;
+&lt;h2 id=&quot;conseils_pratiques&quot;&gt;Conseils pratiques&lt;/h2&gt;
+
+&lt;p&gt;Depuis quelques temps, nous sommes quelques membres de l’équipe à &lt;strong&gt;devoir&lt;/strong&gt; travailler sous Windows. Nous avons rapidement ajouté &lt;code&gt;tmux&lt;/code&gt; à la liste des outils indispensables (la gestion des terminaux Windows n’étant pas optimale) ainsi que &lt;code&gt;irssi&lt;/code&gt; en tant que client IRC.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ pact install tmux irssi&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Puisque c’est ni plus ni moins qu’une installation de Cygwin, l’accès à vos disque se fera par le montage &lt;code&gt;/cygdrive/c/&lt;/code&gt; pour le disque &lt;code&gt;C:&lt;/code&gt; par exemple. Veuillez noter également que l’emplacement de votre &lt;code&gt;home&lt;/code&gt; sera en fait &lt;code&gt;/cygdrive/c/Users/$USER/.babun/cygwin/home/$USER&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Maintenant, vous serez presque aussi productifs sous Windows que sous un système “agréable” !&lt;/p&gt;</description>
+                                <pubDate>Wed, 01 Oct 2014 00:00:00 +0200</pubDate>
+                                <link>http://code-troopers.com/2014/10/01/babun.html</link>
+                                <guid isPermaLink="true">http://code-troopers.com/2014/10/01/babun.html</guid>
+                        </item>
+                
+                        <item>
                                 <title>Soirée Agilité à Tours</title>
                                 <description>&lt;h2 id=&quot;a_bouge__la_cantine_du_numrique&quot;&gt;Ça bouge à la cantine du numérique&lt;/h2&gt;
 
@@ -34,7 +72,11 @@
 &lt;li&gt;&lt;a href=&quot;http://paloaltours.org/agenda/&quot;&gt;Agenda de la cantine&lt;/a&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;a href=&quot;https://www.eventbrite.fr/e/billets-soiree-palo-altech-2-lagilite-13128837707&quot;&gt;Pour s’inscrire pour la soirée (c’est gratuit, c’est juste pour prévoir la place)&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description>
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;edit&quot;&gt;[EDIT]&lt;/h3&gt;
+
+&lt;p&gt;Les slides de la présentation &lt;code&gt;Perfection Games&lt;/code&gt; sont sur slideshare : &lt;a href=&quot;http://fr.slideshare.net/FlorianChauveau/agilit-les-perfection-games-en-action&quot;&gt;http://fr.slideshare.net/FlorianChauveau/agilit-les-perfection-games-en-action&lt;/a&gt;&lt;/p&gt;</description>
                                 <pubDate>Tue, 23 Sep 2014 00:00:00 +0200</pubDate>
                                 <link>http://code-troopers.com/2014/09/23/agile_paloaltech_tours.html</link>
                                 <guid isPermaLink="true">http://code-troopers.com/2014/09/23/agile_paloaltech_tours.html</guid>
@@ -442,54 +484,6 @@
                                 <pubDate>Wed, 14 May 2014 00:00:00 +0200</pubDate>
                                 <link>http://code-troopers.com/2014/05/14/kIsTheNewL.html</link>
                                 <guid isPermaLink="true">http://code-troopers.com/2014/05/14/kIsTheNewL.html</guid>
-                        </item>
-                
-                        <item>
-                                <title>Play2 accéder à la base de donnée</title>
-                                <description>&lt;p&gt;&lt;a href=&quot;http://www.playframework.com/&quot;&gt;Play2&lt;/a&gt;, c’est fun et c’est rapide ! Il suffit de quelques instants pour avoir une appli qui tourne en local sans rien avoir à configurer &lt;a href=&quot;http://www.playframework.com/documentation/2.2.x/NewApplication&quot;&gt;voir la doc de play&lt;/a&gt;. En plus dès que l’on commence un peu à jouer, créer des entités, faire une page de CRUD, tout tourne toujours aussi bien. Il faut dire que c’est agréable, car &lt;a href=&quot;http://www.playframework.com/documentation/2.2.x/JavaEbean&quot;&gt;Ebean&lt;/a&gt; s’est occupé de générer les commandes sql dans le fichier &lt;em&gt;1.sql&lt;/em&gt; qui est joué automatiquement par play.&lt;/p&gt;
-
-&lt;p&gt;Le problème arrive en général un peu après, lorsque l’envie nous prend de visualiser les données qu’on a insérées via les pages pour différents traitements. En effet, pas besoin de monter un serveur sql ou autre, par défaut tout se passe dans une base en mémoire (ce qui signifie aussi, que lorsque le serveur est arrêté les datas disparaissent). Et forcément la question universelle est “Mais comment je peux voir ces ***** de data en base ?”.&lt;/p&gt;
-
-&lt;p&gt;La solution est simple, elle réside dans une commande &lt;code&gt;h2-browser&lt;/code&gt;. Mais pour pouvoir l’utiliser, il va falloir se discipliner un tout petit peu. En effet, si vous aviez l’habitude de faire des &lt;code&gt;play run&lt;/code&gt; pour lancer le serveur et des &lt;code&gt;ctrl-D&lt;/code&gt; pour l’arrêter, il va falloir changer de méthode.&lt;/p&gt;
-
-&lt;p&gt;La procédure miracle est donc la suivante :&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;lancer la console play
-&lt;pre&gt;&lt;code&gt;$ play&lt;/code&gt;&lt;/pre&gt;
-&lt;/li&gt;
-
-&lt;li&gt;lancer le visualiseur de bdd (qui ouvre une fenêtre dans votre navigateur web)
-&lt;pre&gt;&lt;code&gt;$ h2-browser&lt;/code&gt;&lt;/pre&gt;
-&lt;/li&gt;
-
-&lt;li&gt;démarrer votre serveur.
-&lt;pre&gt;&lt;code&gt;$ run&lt;/code&gt;&lt;/pre&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Lorsqu’il se lance h2-browser devrait vous présenter une fenêtre de connexion comme celle-ci :&lt;/p&gt;
-&lt;div style='text-align : center'&gt;
-    &lt;a data-lightbox='image-0' href='/images/postPlayDbBrowser/h2-browser.png' style='display: inline' title='Fenêtre de connection h2-browser'&gt;
-            &lt;img alt='Fenêtre de connection h2-browser' class='medium' src='/images/postPlayDbBrowser/h2-browser.png' /&gt;
-    &lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;Maitenant qu’il est lancé, il faut se connecter, et par défaut c’est pas gagné, parce qu’il est configuré pour aller dans la base ‘test’ qui est une base valide, mais surement pas celle où vos données sont.&lt;/p&gt;
-
-&lt;p&gt;Il faut donc modifier les champs &lt;em&gt;jdbc&lt;/em&gt;, &lt;em&gt;login&lt;/em&gt;, &lt;em&gt;password&lt;/em&gt;. Pour cela allez chercher dans &lt;strong&gt;application.conf&lt;/strong&gt; (normalement situé dans le répertoire &lt;em&gt;/conf/&lt;/em&gt; de votre projet) et trouvez les champs suivants&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;db.default.url=&amp;quot;jdbc:h2:mem:play&amp;quot;
-db.default.user=sa
-db.default.password=&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;ce sont les 3 valeurs à recopier dans la fenêtre de connexion.&lt;/p&gt;
-
-&lt;p&gt;Et voilà le tour est joué, c’est tout de même sympa d’être sûr de ce que l’on a en base.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;NB&lt;/em&gt; : Il faut absolument faire le &lt;code&gt;run&lt;/code&gt; avant de se connecter à la base de donnée, sinon celle-ci sera lockée lors de la connexion par h2-broswer et l’application play ne pourra pas s’y connecter.&lt;/p&gt;</description>
-                                <pubDate>Mon, 05 May 2014 00:00:00 +0200</pubDate>
-                                <link>http://code-troopers.com/2014/05/05/PlayDbBrowser.html</link>
-                                <guid isPermaLink="true">http://code-troopers.com/2014/05/05/PlayDbBrowser.html</guid>
                         </item>
                 
         </channel>
