@@ -7,12 +7,12 @@ tags: [Shell, Windows, Tips]
 ---
 
 ## Oh non, mon client m'oblige à être sous Windows
-Malheureusement, il est fréquent que nous soyons forcé de travailler sous un environnement que nous n'aimons pas. Les raisons sont souvent diverses mais sont presque toujours inflexibles. Le problème est que lorsqu'on est habitué à une ligne de commande puissante, le fait d'être sous Windows deviens un réel handicap.
+Malheureusement, il est fréquent que nous soyons forcés de travailler sous un environnement que nous n'aimons pas. Les raisons sont souvent diverses mais sont presque toujours inflexibles. Le problème est que lorsqu'on est habitué à une ligne de commande puissante, le fait d'être sous Windows devient un réel handicap.
 
 ## Donnez moi un shell !
-Bien sûr, la plupart d'entre vous connaît Cygwin, qui permet de résoudre bien des problèmes, mais qui en crée aussi un paquet avant d'avoir une installation complète et qui fonctionne comme attendu.
+Bien sûr, la plupart d'entre vous connaîssent Cygwin, qui permet de résoudre bien des problèmes, mais qui en créé aussi un paquet avant d'avoir une installation complète et qui fonctionne comme attendue.
 
-Heureusement,  [Tom Bujok](https://twitter.com/tombujok) s'est penché sur le souci et a pris le temps de faire une configuration aux petits oignons d'un cygwin complet, avec `zsh` et `oh-my-zsh` pour avoir une bonne configuration. De plus, pour faire comme si on était sous un unix, on a même un package manager qui permet d'installer les outils nécessaires.
+Heureusement,  [Tom Bujok](https://twitter.com/tombujok) s'est penché sur le souci et a pris le temps de faire une configuration aux petits oignons d'un Cygwin complet, avec `zsh` et `oh-my-zsh` pour avoir une bonne configuration. De plus, pour faire comme si on était sous un unix, on a même un package manager qui permet d'installer les outils nécessaires.
 
 ## Installation et configuration
 Il suffit de récupérer le zip sur le site officiel [http://babun.github.io](http://babun.github.io/) de le dézipper et de lancer le script `install.bat`. Ce qui est bien, c'est qu'il est possible de lancer le script d'installation et donc d'utiliser babun sans disposer des droits d'administrateur sur sa machine.
@@ -32,7 +32,7 @@ Depuis quelques temps, nous sommes quelques membres de l'équipe à __devoir__ t
         
     $ pact install tmux irssi
 
-Puisque c'est ni plus ni moins qu'une installation de cygwin, l'accès à vos disque se fera par le montage `/cygdrive/c/` pour le disque `C:` par exemple. Veuillez noter également que l'emplacement de votre `home` sera en fait `/cygdrive/c/Users/$USER/.babun/cygwin/home/$USER`
+Puisque c'est ni plus ni moins qu'une installation de Cygwin, l'accès à vos disque se fera par le montage `/cygdrive/c/` pour le disque `C:` par exemple. Veuillez noter également que l'emplacement de votre `home` sera en fait `/cygdrive/c/Users/$USER/.babun/cygwin/home/$USER`
 
 
-Maintenant, vous serez presque aussi productif sous Windows que sous un système "agréable" !
+Maintenant, vous serez presque aussi productifs sous Windows que sous un système "agréable" !
