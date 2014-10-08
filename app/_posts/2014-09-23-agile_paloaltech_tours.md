@@ -31,4 +31,5 @@ Point crucial de l'amélioration continue, les perfection games dont votre dévo
 
 
 ###[EDIT]
-Les slides de la présentation ``Perfection Games`` sont sur slideshare : [http://fr.slideshare.net/FlorianChauveau/agilit-les-perfection-games-en-action](http://fr.slideshare.net/FlorianChauveau/agilit-les-perfection-games-en-action)
+ * Les slides de la présentation ``Perfection Games`` sont sur slideshare : [http://fr.slideshare.net/FlorianChauveau/agilit-les-perfection-games-en-action](http://fr.slideshare.net/FlorianChauveau/agilit-les-perfection-games-en-action)
+ * Si vous la voulez chez vous un midi, il suffit de faire une demande de BBL via [le site http://www.brownbaglunch.fr ](http://www.brownbaglunch.fr/baggers.html#Florian_Chauveau_Tours)
