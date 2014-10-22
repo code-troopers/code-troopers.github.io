@@ -7,6 +7,167 @@
                 <atom:link href="http://code-troopers.com/feed.xml" rel="self" type="application/rss+xml"/>
                 
                         <item>
+                                <title>Appli Fil Bleu : ouverture aux bêta-testeurs</title>
+                                <description>&lt;p&gt;
+Depuis déjà quelques temps, l'équipe travaille sur une application &lt;code&gt;Android&lt;/code&gt; pour consulter les horaires des bus et tram du réseau &lt;b&gt;Fil Bleu&lt;/b&gt;.
+&lt;br/&gt;
+Et comme hier soir a eu lieu la première soirée bêta-test organisée à la &lt;a href=&quot;http://paloaltours.org/event/soiree-beta-testing/&quot;&gt;cantine de Tours&lt;/a&gt;, nous avons décidé de lancer officiellement notre campagne de bêta-test aujourd'hui.
+&lt;/p&gt;
+
+&lt;h3&gt;Pourquoi une appli Fil Bleu ?&lt;/h3&gt;
+
+    &lt;p&gt;
+        Nous sommes tous les 7 tourangeaux, il nous arrive donc parfois de prendre le bus, et bien que le site &lt;a href=&quot;www.filbleu.fr&quot;&gt;Fil Bleu&lt;/a&gt; soit de mieux en mieux chaque année, il n'offre pas toutes les fonctionnalités et ni le confort que peut apporter une application mobile. Et pour le moment sur le Play Store il n'y a que l'application &lt;a href=&quot;https://play.google.com/store/apps/details?id=org.gitorious.scrapfilbleu.android&quot;&gt;Fil@Tours&lt;/a&gt;, mais celle-ci n'est visuellement plus vraiment adaptée / conforme à la philosophie des applications Google.        
+    &lt;/p&gt;
+    &lt;p&gt;
+        Donc puisque le besoin d'une application Fil Bleu est présent et que nous aimons bien relever les défis techniques, nous avons eu envie de nous lancer dans ce développement.
+    &lt;/p&gt;
+&lt;div style=&quot;text-align:center;&quot;&gt;
+    &lt;a href=&quot;/images/postFilBleu/search.png&quot; data-lightbox=&quot;group-1&quot; title=&quot;Navig'Tours&quot; class=&quot;inlineBoxes&quot;&gt;
+        &lt;img class=&quot;medium&quot; src=&quot;/images/postFilBleu/navig_tours.gif&quot; alt=&quot;Navig'Tours&quot;/&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+&lt;h3&gt;Pourquoi des bêta-testeurs ?&lt;/h3&gt;
+    &lt;p&gt;
+        Dans le monde du développement logiciel c'est une phase du projet très couramment utilisée. Cela permet de faire un &lt;b&gt;test grandeur nature&lt;/b&gt; du produit créé, afin de récolter des &lt;b&gt;retours utilisateurs&lt;/b&gt; (surtout les bugs) et d'avoir le temps de les corriger avant la sortie officielle.
+        C'est d'ailleurs de plus en plus fréquent dans l'univers du jeu vidéo. On entend bien souvent parler de bêta ouverte ou bêta fermée peu avant la sortie officielle d'un jeu.
+    &lt;/p&gt;
+    &lt;p&gt;
+        Nous souhaitons donc passer par une phase de bêta plus ou moins longue (on n'a pas encore fixé de date de fin) afin de développer une application qui collera au mieux aux besoins des futurs utilisateurs.
+        C'est pour cela que l'on cherche des testeurs fous qui nous feront part de toutes leur envies d'évolutions sur l'appli, de tous les changements qu'ils voudraient voir apporter, et aussi capables de tolérer quelques plantages (mais ça ne devrait pas arriver).
+    &lt;/p&gt;
+    &lt;p&gt;
+        L'objectif pour nous est d'atteindre une centaine de bêta-testeurs afin de recueillir un panel d'utilisateur et d'utilisation assez large et le plus représentatif possible.
+    &lt;/p&gt;
+
+&lt;h3&gt;Temps perso&lt;/h3&gt;
+    &lt;p&gt;
+    Cette application est développée par l'équipe sur notre temps perso, ce qui veut dire que nous ne sommes pas payés pour cela.
+    Donc même si l'on souhaite faire le truc le plus propre, le plus beau, le plus simple (un truc parfait donc), nous ne sommes pas à plein temps sur ce développement.
+    Dans cette optique, merci d'avance de votre indulgence si parfois il nous arrive de ne pas réagir du tac au tac si une petite erreur survient.
+    &lt;/p&gt;
+    &lt;p&gt;
+    Cependant nous ne sommes pas totalement barges, on ne recréé pas un algo de recherche du meilleur trajet. Ce qui signifie que les informations, horaires, itinéraires, que nous utilisons sont récupérés après avoir interrogé les serveurs Fil Bleu.
+    Donc merci de ne pas nous tenir responsables si des mauvais horaires sont retournés, ou si un bus tombe en panne...
+    &lt;/p&gt;
+
+&lt;h3&gt;Pour quelle version d'Android ?&lt;/h3&gt;
+    &lt;p&gt;
+    Nous souhaitons que le public le plus large puisse profiter de cette application.
+    Pour le moment il n'y a pas vraiment de restriction sur la version d'Android à avoir sur son téléphone. Il faut posséder un téléphone qui soit au moins en &lt;code&gt;version 2.3&lt;/code&gt; (Gingerbread), donc les téléphones datant, au plus, de 2011.
+    &lt;/p&gt;
+    &lt;p&gt;
+    Mais nous gardons la possibilité de faire évoluer ce choix si un besoin ou une contrainte technique venait à se présenter.
+    &lt;/p&gt;
+
+&lt;h3&gt;On pourra faire quoi avec ?&lt;/h3&gt;
+    &lt;p&gt;
+    En plus de pouvoir rechercher des horaires, ce qui est le minimum vital, l'application offre pour le moment les fonctionnalités suivantes :
+    &lt;/p&gt;
+    &lt;ul&gt;
+        &lt;li&gt;Affichage des arrêts en fonction de leur &lt;b&gt;proximité&lt;/b&gt; ;&lt;/li&gt;
+        &lt;li&gt;Mise en &lt;b&gt;favoris&lt;/b&gt; d'arrêts pour les avoir toujours en premier ;&lt;/li&gt;
+        &lt;li&gt;Consultation de la &lt;b&gt;carte&lt;/b&gt; de tous les arrêts ;&lt;/li&gt;
+        &lt;li&gt;Utilisation de la carte pour choisir un arrêt de départ ou d'arrivée ;&lt;/li&gt;
+        &lt;li&gt;Planification de &lt;b&gt;notification&lt;/b&gt; pour être averti avant le passage d'un bus.&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;p&gt;
+    C'est peu, mais c'est un début, nous avons plein d'idées mais pas forcément beaucoup de temps. Encore une fois, c'est pour cela que l'on souhaite recueillir les besoins les plus récurrents.
+    &lt;/p&gt;
+
+&lt;h3&gt;Et à quoi ça ressemble ?&lt;/h3&gt;
+    &lt;p&gt;
+    Pour le moment l'interface ressemble à ça :
+    &lt;/p&gt;
+    &lt;div style=&quot;text-align:center;margin:50px&quot;&gt;
+        &lt;a href=&quot;/images/postFilBleu/search.png&quot; data-lightbox=&quot;group-2&quot; title=&quot;Écran de recherche d'itinéraire&quot; class=&quot;inlineBoxes&quot;&gt;
+            &lt;img class=&quot;medium&quot; src=&quot;/images/postFilBleu/search.png&quot; alt=&quot;Splash screen&quot;/&gt;
+        &lt;/a&gt;
+        &lt;a href=&quot;/images/postFilBleu/commutes1.png&quot; data-lightbox=&quot;group-2&quot; title=&quot;Écran de plusieurs trajets possibles&quot; class=&quot;inlineBoxes&quot;&gt;
+            &lt;img class=&quot;medium&quot; src=&quot;/images/postFilBleu/commutes1.png&quot; alt=&quot;Menu screen&quot;/&gt;
+        &lt;/a&gt;
+        &lt;a href=&quot;/images/postFilBleu/commutes2.png&quot; data-lightbox=&quot;group-2&quot; title=&quot;Écran de plusieurs trajets possibles - bis&quot; class=&quot;inlineBoxes&quot;&gt;
+            &lt;img class=&quot;medium&quot; src=&quot;/images/postFilBleu/commutes2.png&quot; alt=&quot;Home screen&quot;/&gt;
+        &lt;/a&gt;
+        &lt;a href=&quot;/images/postFilBleu/detail1.png&quot; data-lightbox=&quot;group-2&quot; title=&quot;Écran de détail d'un trajet avec plusieurs correspondances&quot; class=&quot;inlineBoxes&quot;&gt;
+            &lt;img class=&quot;medium&quot; src=&quot;/images/postFilBleu/detail1.png&quot; alt=&quot;Artist screen&quot;/&gt;
+        &lt;/a&gt;
+        &lt;a href=&quot;/images/postFilBleu/detail2.png&quot; data-lightbox=&quot;group-2&quot; title=&quot;Écran de détail d'un trajet avec le tracé sur la carte&quot; class=&quot;inlineBoxes&quot;&gt;
+            &lt;img class=&quot;medium&quot; src=&quot;/images/postFilBleu/detail2.png&quot; alt=&quot;Artist screen&quot;/&gt;
+        &lt;/a&gt;
+        &lt;a href=&quot;/images/postFilBleu/notif.png&quot; data-lightbox=&quot;group-2&quot; title=&quot;Notification pour un trajet&quot; class=&quot;inlineBoxes&quot;&gt;
+            &lt;img class=&quot;medium&quot; src=&quot;/images/postFilBleu/notif.png&quot; alt=&quot;Artist screen&quot;/&gt;
+        &lt;/a&gt;
+        &lt;a href=&quot;/images/postFilBleu/map1.png&quot; data-lightbox=&quot;group-2&quot; title=&quot;Écran de la carte de tours avec l'emplacement des arrêts&quot; class=&quot;inlineBoxes&quot;&gt;
+            &lt;img class=&quot;medium&quot; src=&quot;/images/postFilBleu/map1.png&quot; alt=&quot;Artist screen&quot;/&gt;
+        &lt;/a&gt;
+        &lt;a href=&quot;/images/postFilBleu/map2.png&quot; data-lightbox=&quot;group-2&quot; title=&quot;Écran de la carte de tours avec l'emplacement des arrêts - bis&quot; class=&quot;inlineBoxes&quot;&gt;
+            &lt;img class=&quot;medium&quot; src=&quot;/images/postFilBleu/map2.png&quot; alt=&quot;Artist screen&quot;/&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;p&gt;
+    Mais comme je l'ai dit nous restons très ouverts sur les retours. Donc il y a de grandes chances pour que cela change en fonction des commentaires qui nous seront remontés.
+    &lt;/p&gt;
+
+&lt;h3&gt;Bonus : les notifications wear&lt;/h3&gt;
+    &lt;p&gt;
+    Si vous avez la chance de posséder une &lt;b&gt;google watch&lt;/b&gt;, vous pourrez bénéficier de notifications tout spécialement prévues lorsque vous planifirez une alerte sur un trajet. Et voilà ce que ça donne :
+    &lt;/p&gt;
+    &lt;div style=&quot;text-align:center;margin:50px&quot;&gt;
+        &lt;a href=&quot;/images/postFilBleu/watch-1.png&quot; data-lightbox=&quot;group-3&quot; title=&quot;&quot; class=&quot;inlineBoxes&quot;&gt;
+            &lt;img class=&quot;medium&quot; src=&quot;/images/postFilBleu/watch-1.png&quot; alt=&quot;Google watch 1&quot;/&gt;
+        &lt;/a&gt;
+        &lt;a href=&quot;/images/postFilBleu/watch-2.png&quot; data-lightbox=&quot;group-3&quot; title=&quot;&quot; class=&quot;inlineBoxes&quot;&gt;
+            &lt;img class=&quot;medium&quot; src=&quot;/images/postFilBleu/watch-2.png&quot; alt=&quot;Google watch 2&quot;/&gt;
+        &lt;/a&gt;
+        &lt;a href=&quot;/images/postFilBleu/watch-3.png&quot; data-lightbox=&quot;group-3&quot; title=&quot;&quot; class=&quot;inlineBoxes&quot;&gt;
+            &lt;img class=&quot;medium&quot; src=&quot;/images/postFilBleu/watch-3.png&quot; alt=&quot;Google watch 3&quot;/&gt;
+        &lt;/a&gt;
+        &lt;a href=&quot;/images/postFilBleu/watch-4.png&quot; data-lightbox=&quot;group-3&quot; title=&quot;&quot; class=&quot;inlineBoxes&quot;&gt;
+            &lt;img class=&quot;medium&quot; src=&quot;/images/postFilBleu/watch-4.png&quot; alt=&quot;Google watch 4&quot;/&gt;
+        &lt;/a&gt;
+        &lt;a href=&quot;/images/postFilBleu/watch-5.png&quot; data-lightbox=&quot;group-3&quot; title=&quot;&quot; class=&quot;inlineBoxes&quot;&gt;
+            &lt;img class=&quot;medium&quot; src=&quot;/images/postFilBleu/watch-5.png&quot; alt=&quot;Google watch 5&quot;/&gt;
+        &lt;/a&gt;
+        &lt;a href=&quot;/images/postFilBleu/watch-6.png&quot; data-lightbox=&quot;group-3&quot; title=&quot;&quot; class=&quot;inlineBoxes&quot;&gt;
+            &lt;img class=&quot;medium&quot; src=&quot;/images/postFilBleu/watch-6.png&quot; alt=&quot;Google watch 6&quot;/&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+&lt;h3&gt;Je veux être bêta-testeur !&lt;/h3&gt;
+    &lt;p&gt;
+    Pour cela, rien de plus simple. &lt;b&gt;Inscrivez-vous avec l’email de votre compte Android&lt;/b&gt; et nous vous ajouterons dans la liste des bêta-testeurs. Ensuite, en fonction de l’heure à laquelle nous recevrons la demande, vous aurez accès à la bêta plus ou moins rapidement.
+    &lt;/p&gt;
+    &lt;br /&gt;
+    &lt;!-- Begin MailChimp Signup Form --&gt;
+    &lt;div id=&quot;mc_embed_signup text-center&quot;&gt;
+        &lt;form action=&quot;//code-troopers.us8.list-manage.com/subscribe/post?u=f163ac78ea17d91c5f8c88a39&amp;amp;id=4a22cf5a31&quot;
+              method=&quot;post&quot; id=&quot;mc-embedded-subscribe-form&quot; name=&quot;mc-embedded-subscribe-form&quot;
+              class=&quot;validate navbar-form&quot; target=&quot;_blank&quot; novalidate&gt;
+            &lt;div class=&quot;col-lg-6&quot;&gt;
+                &lt;div class=&quot;input-group&quot;&gt;
+                    &lt;input type=&quot;email&quot; value=&quot;&quot; name=&quot;EMAIL&quot; class=&quot;email form-control&quot; id=&quot;mce-EMAIL&quot; placeholder=&quot;email@example.com&quot; required&gt;
+                    &lt;!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups--&gt;
+                    &lt;span style=&quot;position: absolute; left: -5000px;&quot;&gt;&lt;input type=&quot;text&quot; name=&quot;b_f163ac78ea17d91c5f8c88a39_4a22cf5a31&quot;tabindex=&quot;-1&quot; value=&quot;&quot;&gt;&lt;/span&gt;
+                    &lt;span class=&quot;input-group-btn&quot;&gt;
+                        &lt;input type=&quot;submit&quot; value=&quot;Participer&quot; name=&quot;subscribe&quot; id=&quot;mc-embedded-subscribe&quot;class=&quot;btn btn-default&quot; style=&quot;color: white; background-color: #004353;&quot;&gt;
+                    &lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/form&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;clearfix&quot;&gt;&lt;/div&gt;
+    &lt;!--End mc_embed_signup--&gt;
+    &lt;br /&gt;
+    &lt;p&gt;
+        Et pour vous tenir informé des dernières nouveautées vous pouvez suivre le twitter dédié &lt;a href=&quot;https://twitter.com/NavigTours&quot;&gt;@NavigTours&lt;/a&gt; et bien sur le compte &lt;a href=&quot;https://twitter.com/codetroopers&quot;&gt;@CodeTroopers&lt;/a&gt;.
+    &lt;/p&gt;
+</description>
+                                <pubDate>Wed, 22 Oct 2014 00:00:00 +0200</pubDate>
+                                <link>http://code-troopers.com/2014/10/22/Filbleu_Tours_Application_Android.html</link>
+                                <guid isPermaLink="true">http://code-troopers.com/2014/10/22/Filbleu_Tours_Application_Android.html</guid>
+                        </item>
+                
+                        <item>
                                 <title>Babun un shell sous Windows</title>
                                 <description>&lt;h2 id=&quot;oh_non_mon_client_moblige__tre_sous_windows&quot;&gt;Oh non, mon client m’oblige à être sous Windows&lt;/h2&gt;
 
@@ -453,41 +614,6 @@
                                 <pubDate>Thu, 15 May 2014 00:00:00 +0200</pubDate>
                                 <link>http://code-troopers.com/2014/05/15/CourseraAndroid.html</link>
                                 <guid isPermaLink="true">http://code-troopers.com/2014/05/15/CourseraAndroid.html</guid>
-                        </item>
-                
-                        <item>
-                                <title>k is the new l, yo</title>
-                                <description>&lt;p&gt;&lt;code&gt;ls&lt;/code&gt; est une des commandes shell les plus utilisées, pourtant depuis les années 70 elle a très peu changé. Bien sûr, il y a de nombreuses options, citons &lt;code&gt;ls -a&lt;/code&gt; pour afficher les fichiers cachés, &lt;code&gt;ls -l&lt;/code&gt; pour afficher plus d’informations, &lt;code&gt;ls --color&lt;/code&gt; pour afficher deux couleurs, une pour les fichiers et une pour les répertoires, ou encore &lt;code&gt;ls -rtl&lt;/code&gt; pour trier le contenu par date et afficher le plus récent en dernier.&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;ls&lt;/code&gt; est donc une commande utile et pratique mais elle n’est pas folichonne. D’où la naissance de &lt;code&gt;k&lt;/code&gt; qui a pour but de remplacer &lt;code&gt;ls&lt;/code&gt; avec quelques killer features. Il ne s’agit pas d’une surcouche de &lt;code&gt;ls&lt;/code&gt; mais d’une commande complète, s’appuyant directement sur &lt;code&gt;stat&lt;/code&gt; par exemple. À ce jour, les nouvelles fonctionnalités sont les suivantes :&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;intégration de git status sur un dépôt entier : rouge si le dépôt est “sale”, vert sinon ;&lt;/li&gt;
-
-&lt;li&gt;intégration de git status à l’intérieur d’un dépôt : différenciation des fichiers modifiés, non ajoutés ou ignorés ;&lt;/li&gt;
-
-&lt;li&gt;dégradé de couleur pour la taille des fichiers : du vert pour les petits fichiers au rouge pour les gros ;&lt;/li&gt;
-
-&lt;li&gt;dégradé de couleur pour la date de modification : plus la date est affichée en clair et plus le fichier est récent.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Voici un comparatif des deux rendus, version &lt;code&gt;ls&lt;/code&gt; et version &lt;code&gt;k&lt;/code&gt; :&lt;/p&gt;
-&lt;div style='text-align : center'&gt;
-&lt;a data-lightbox='image-0' href='/images/postKisTheNewL/lsalcolor.png' style='display: inline' title='version ls -al --color'&gt;
-        &lt;img alt='version k' class='medium' src='/images/postKisTheNewL/lsalcolor_min.png' /&gt;
-&lt;/a&gt;
-&lt;a data-lightbox='image-0' href='/images/postKisTheNewL/k.png' style='display: inline' title='version k'&gt;
-        &lt;img alt='version k' class='medium' src='/images/postKisTheNewL/k_min.png' /&gt;
-&lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;k&lt;/code&gt; est disponible uniquement pour zsh. Pour l’installer, il suffit de cloner le dépôt &lt;a href=&quot;https://github.com/supercrabtree/k&quot;&gt;git&lt;/a&gt; et d’ajouter &lt;code&gt;source ~/path/k/k.sh&lt;/code&gt; dans son ~/.zshrc. k est encore jeune mais il gagnerait à être connu, il manque quelques fonctions de base comme mettre un répertoire en paramètre ou ne pas afficher les fichiers cachés. Pour en savoir plus, n’hésitez pas à aller voir la page &lt;a href=&quot;https://github.com/supercrabtree/k&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Comme dit leur slogan : «k is the new l, yo».&lt;/p&gt;</description>
-                                <pubDate>Wed, 14 May 2014 00:00:00 +0200</pubDate>
-                                <link>http://code-troopers.com/2014/05/14/kIsTheNewL.html</link>
-                                <guid isPermaLink="true">http://code-troopers.com/2014/05/14/kIsTheNewL.html</guid>
                         </item>
                 
         </channel>
