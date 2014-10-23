@@ -7,20 +7,20 @@
                 <atom:link href="http://code-troopers.com/feed.xml" rel="self" type="application/rss+xml"/>
                 
                         <item>
-                                <title>Appli Fil Bleu : ouverture aux bêta-testeurs</title>
+                                <title>Appli Navig'Tours : ouverture aux bêta-testeurs</title>
                                 <description>&lt;p&gt;
 Depuis déjà quelques temps, l'équipe travaille sur une application &lt;code&gt;Android&lt;/code&gt; pour consulter les horaires des bus et tram du réseau &lt;b&gt;Fil Bleu&lt;/b&gt;.
 &lt;br/&gt;
 Et comme hier soir a eu lieu la première soirée bêta-test organisée à la &lt;a href=&quot;http://paloaltours.org/event/soiree-beta-testing/&quot;&gt;cantine de Tours&lt;/a&gt;, nous avons décidé de lancer officiellement notre campagne de bêta-test aujourd'hui.
 &lt;/p&gt;
 
-&lt;h3&gt;Pourquoi une appli Fil Bleu ?&lt;/h3&gt;
+&lt;h3&gt;Pourquoi une telle application ?&lt;/h3&gt;
 
     &lt;p&gt;
         Nous sommes tous les 7 tourangeaux, il nous arrive donc parfois de prendre le bus, et bien que le site &lt;a href=&quot;www.filbleu.fr&quot;&gt;Fil Bleu&lt;/a&gt; soit de mieux en mieux chaque année, il n'offre pas toutes les fonctionnalités et ni le confort que peut apporter une application mobile. Et pour le moment sur le Play Store il n'y a que l'application &lt;a href=&quot;https://play.google.com/store/apps/details?id=org.gitorious.scrapfilbleu.android&quot;&gt;Fil@Tours&lt;/a&gt;, mais celle-ci n'est visuellement plus vraiment adaptée / conforme à la philosophie des applications Google.        
     &lt;/p&gt;
     &lt;p&gt;
-        Donc puisque le besoin d'une application Fil Bleu est présent et que nous aimons bien relever les défis techniques, nous avons eu envie de nous lancer dans ce développement.
+        Donc puisque le besoin d'une telle application est présent et que nous aimons bien relever les défis techniques, nous avons eu envie de nous lancer dans ce développement.
     &lt;/p&gt;
 &lt;div style=&quot;text-align:center;&quot;&gt;
     &lt;a href=&quot;/images/postFilBleu/search.png&quot; data-lightbox=&quot;group-1&quot; title=&quot;Navig'Tours&quot; class=&quot;inlineBoxes&quot;&gt;
@@ -160,6 +160,11 @@ Et comme hier soir a eu lieu la première soirée bêta-test organisée à la &l
     &lt;br /&gt;
     &lt;p&gt;
         Et pour vous tenir informé des dernières nouveautées vous pouvez suivre le twitter dédié &lt;a href=&quot;https://twitter.com/NavigTours&quot;&gt;@NavigTours&lt;/a&gt; et bien sur le compte &lt;a href=&quot;https://twitter.com/codetroopers&quot;&gt;@CodeTroopers&lt;/a&gt;.
+    &lt;/p&gt;
+
+&lt;h3&gt;[ÉDIT]&lt;/h3&gt;
+    &lt;p&gt;
+        Fil Bleu étant une marque appartenant à la communauté d'agglomération Tour(s)Plus, nous nous efforçons de ne pas employer les termes &quot;Appli Fil Bleu&quot; afin de ne pas apporter de confusion.
     &lt;/p&gt;
 </description>
                                 <pubDate>Wed, 22 Oct 2014 00:00:00 +0200</pubDate>
