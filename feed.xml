@@ -14,6 +14,7 @@ Depuis déjà quelques temps, l'équipe travaille sur une application &lt;code&g
 Et comme hier soir a eu lieu la première soirée bêta-test organisée à la &lt;a href=&quot;http://paloaltours.org/event/soiree-beta-testing/&quot;&gt;cantine de Tours&lt;/a&gt;, nous avons décidé de lancer officiellement notre campagne de bêta-test aujourd'hui.
 &lt;/p&gt;
 
+&lt;!--break--&gt;
 &lt;h3&gt;Pourquoi une telle application ?&lt;/h3&gt;
 
     &lt;p&gt;
@@ -180,7 +181,7 @@ Et comme hier soir a eu lieu la première soirée bêta-test organisée à la &l
                                 <title>Babun un shell sous Windows</title>
                                 <description>&lt;h2 id=&quot;oh_non_mon_client_moblige__tre_sous_windows&quot;&gt;Oh non, mon client m’oblige à être sous Windows&lt;/h2&gt;
 
-&lt;p&gt;Malheureusement, il est fréquent que nous soyons forcés de travailler sous un environnement que nous n’aimons pas. Les raisons sont souvent diverses mais sont presque toujours inflexibles. Le problème est que lorsqu’on est habitué à une ligne de commande puissante, le fait d’être sous Windows devient un réel handicap.&lt;/p&gt;
+&lt;p&gt;Malheureusement, il est fréquent que nous soyons forcés de travailler sous un environnement que nous n’aimons pas. Les raisons sont souvent diverses mais sont presque toujours inflexibles. Le problème est que lorsqu’on est habitué à une ligne de commande puissante, le fait d’être sous Windows devient un réel handicap. &lt;!--break--&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;donnez_moi_un_shell_&quot;&gt;Donnez moi un shell !&lt;/h2&gt;
 
@@ -218,7 +219,7 @@ Et comme hier soir a eu lieu la première soirée bêta-test organisée à la &l
                                 <title>Soirée Agilité à Tours</title>
                                 <description>&lt;h2 id=&quot;a_bouge__la_cantine_du_numrique&quot;&gt;Ça bouge à la cantine du numérique&lt;/h2&gt;
 
-&lt;p&gt;Depuis la rentrée il y a de l’animation à la &lt;a href=&quot;http://paloaltours.org/la-cantine-numerique-tours/&quot;&gt;cantine du numérique de Tours&lt;/a&gt;. En plus de continuer les rendez-vous hebdomadaires tels que le FunLab ou la WebSchool, depuis peu sont organisés des codings goûters (initiés par &lt;a href=&quot;https://twitter.com/j2lb&quot;&gt;Jean-Lou Le Bars&lt;/a&gt;) ainsi que les soirées Palo Altech (initées par &lt;a href=&quot;https://twitter.com/nogunner&quot;&gt;Rodrigo Reyes&lt;/a&gt; et &lt;a href=&quot;https://twitter.com/LudovicLafole&quot;&gt;Ludovic Lafole&lt;/a&gt;).&lt;br /&gt;Palo Altech a pour ambition de promovoir les rendez-vous autour de l’informatique en général (pour apporter un complément aux soirées JUG déjà spécialisées autour du développement java)&lt;/p&gt;
+&lt;p&gt;Depuis la rentrée il y a de l’animation à la &lt;a href=&quot;http://paloaltours.org/la-cantine-numerique-tours/&quot;&gt;cantine du numérique de Tours&lt;/a&gt;. En plus de continuer les rendez-vous hebdomadaires tels que le FunLab ou la WebSchool, depuis peu sont organisés des codings goûters (initiés par &lt;a href=&quot;https://twitter.com/j2lb&quot;&gt;Jean-Lou Le Bars&lt;/a&gt;) ainsi que les soirées Palo Altech (initées par &lt;a href=&quot;https://twitter.com/nogunner&quot;&gt;Rodrigo Reyes&lt;/a&gt; et &lt;a href=&quot;https://twitter.com/LudovicLafole&quot;&gt;Ludovic Lafole&lt;/a&gt;).&lt;br /&gt;Palo Altech a pour ambition de promovoir les rendez-vous autour de l’informatique en général (pour apporter un complément aux soirées JUG déjà spécialisées autour du développement java) &lt;!--break--&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;soire_agilit&quot;&gt;Soirée Agilité&lt;/h2&gt;
 
@@ -260,7 +261,7 @@ Et comme hier soir a eu lieu la première soirée bêta-test organisée à la &l
                                 <title>oh-my-zsh : l'outil indispensable pour avoir un zsh bien configuré.</title>
                                 <description>&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
 
-&lt;p&gt;Que l’on soit dev, ops, sysadmin ou autre pour effectuer nos tâches répétitives et quotidiennes on a généralement deux possibilités : une première communément appelée “clic-clic” qui consiste à utiliser les interfaces graphiques aussi souvent que possible (afin de perdre un maximum de temps) ; et une seconde qualifiée de “barbue” qui elle est orientée ligne de commande, scripting et automatisation. Nous les Code-Troopers, on est plutôt technique de barbus ! Et donc peut importe l’OS qu’on utilise on cherche toujours à avoir le meilleur terminal possible. Par défaut sous linux ou mac OS on trouvera souvent &lt;em&gt;bash&lt;/em&gt;, sous windows ce sera &lt;em&gt;powershell&lt;/em&gt; mais il en existe d’autres comme &lt;em&gt;csh&lt;/em&gt;, &lt;em&gt;ksh&lt;/em&gt; ou dans le cas qui nous intéresse &lt;em&gt;zsh&lt;/em&gt;. &lt;em&gt;zsh&lt;/em&gt; est puissant mais ce n’est pas le sujet du jour de dire pourquoi il serait mieux qu’un autre. En revanche, qui dit puissance dit difficultés de paramétrage ; d’ailleurs à la première utilisation lorsque l’on n’a pas de fichier de configuration il commence par dire qu’il peut en créer un pour nous mais qu’il faudra le modifier à la main. Ce sera inutile grâce à &lt;em&gt;oh-my-zsh&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Que l’on soit dev, ops, sysadmin ou autre pour effectuer nos tâches répétitives et quotidiennes on a généralement deux possibilités : une première communément appelée “clic-clic” qui consiste à utiliser les interfaces graphiques aussi souvent que possible (afin de perdre un maximum de temps) ; et une seconde qualifiée de “barbue” qui elle est orientée ligne de commande, scripting et automatisation. Nous les Code-Troopers, on est plutôt technique de barbus ! Et donc peut importe l’OS qu’on utilise on cherche toujours à avoir le meilleur terminal possible. Par défaut sous linux ou mac OS on trouvera souvent &lt;em&gt;bash&lt;/em&gt;, sous windows ce sera &lt;em&gt;powershell&lt;/em&gt; mais il en existe d’autres comme &lt;em&gt;csh&lt;/em&gt;, &lt;em&gt;ksh&lt;/em&gt; ou dans le cas qui nous intéresse &lt;em&gt;zsh&lt;/em&gt;. &lt;em&gt;zsh&lt;/em&gt; est puissant mais ce n’est pas le sujet du jour de dire pourquoi il serait mieux qu’un autre. En revanche, qui dit puissance dit difficultés de paramétrage ; d’ailleurs à la première utilisation lorsque l’on n’a pas de fichier de configuration il commence par dire qu’il peut en créer un pour nous mais qu’il faudra le modifier à la main. Ce sera inutile grâce à &lt;em&gt;oh-my-zsh&lt;/em&gt;. &lt;!--break--&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;installation&quot;&gt;Installation&lt;/h2&gt;
 
@@ -309,7 +310,7 @@ Et comme hier soir a eu lieu la première soirée bêta-test organisée à la &l
                 
                         <item>
                                 <title>Top 3 add-ons Heroku</title>
-                                <description>&lt;p&gt;Vous connaissez sûrement &lt;a href=&quot;https://www.heroku.com/&quot;&gt;Heroku&lt;/a&gt; le service de cloud computing de type plate-forme en tant que service (PaaS), si ce n’est pas le cas, je vous conseille de vous y intéresser. Chez Code-Troopers, nous l’utilisons à la fois pour effectuer nos tests en pré-production mais aussi pour certaines de nos applications en production. Ce qui est aussi intéressant chez Heroku, c’est le nombre d’&lt;a href=&quot;https://addons.heroku.com/&quot;&gt;add-ons&lt;/a&gt; disponibles. Ils sont simples d’installation, la plupart du temps il suffit de deux clics et d’une variable à ajouter dans la configuration de l’application. Ils disposent presque tous de versions gratuites (souvent suffisant pour une petite application en production) mais il est aussi possible d’évoluer vers des versions payantes et plus complètes en un clic, souvent déclinées en 3 ou 4 offres.&lt;/p&gt;
+                                <description>&lt;p&gt;Vous connaissez sûrement &lt;a href=&quot;https://www.heroku.com/&quot;&gt;Heroku&lt;/a&gt; le service de cloud computing de type plate-forme en tant que service (PaaS), si ce n’est pas le cas, je vous conseille de vous y intéresser. Chez Code-Troopers, nous l’utilisons à la fois pour effectuer nos tests en pré-production mais aussi pour certaines de nos applications en production. Ce qui est aussi intéressant chez Heroku, c’est le nombre d’&lt;a href=&quot;https://addons.heroku.com/&quot;&gt;add-ons&lt;/a&gt; disponibles. Ils sont simples d’installation, la plupart du temps il suffit de deux clics et d’une variable à ajouter dans la configuration de l’application. Ils disposent presque tous de versions gratuites (souvent suffisant pour une petite application en production) mais il est aussi possible d’évoluer vers des versions payantes et plus complètes en un clic, souvent déclinées en 3 ou 4 offres. &lt;!--break--&gt;&lt;/p&gt;
 
 &lt;p&gt;Les add-ons sont rangés en catégories, vous avez des services de bases de données, de logs, d’analytics, de cache, de monitoring… Je vous invite à les consulter sur &lt;a href=&quot;https://addons.heroku.com/&quot;&gt;cette page&lt;/a&gt;. Mais je vais m’attarder sur les 3 add-ons qu’on installe presque machinalement dès que l’on créé une application sur Heroku :&lt;/p&gt;
 
@@ -341,7 +342,7 @@ Et comme hier soir a eu lieu la première soirée bêta-test organisée à la &l
                 
                         <item>
                                 <title>Résoudre les conflits de dépendances</title>
-                                <description>&lt;p&gt;Lors de nos développements, nous reposons beaucoup sur des projets externes qui nous fournissent énormément de services utiles. Dans un récent projet, nous avons eu besoin de faire fonctionner Neo4j conjointement à ElasticSearch. Jusqu’ici, aucun soucis n’est à déplorer, mais nous avions une exigence particulière : il fallait que l’application puisse démarrer automatiquement un serveur Neo4J ainsi qu’un serveur ElasticSearch sur les postes de développements (ainsi que pour les tests d’intégration).&lt;/p&gt;
+                                <description>&lt;p&gt;Lors de nos développements, nous reposons beaucoup sur des projets externes qui nous fournissent énormément de services utiles. Dans un récent projet, nous avons eu besoin de faire fonctionner Neo4j conjointement à ElasticSearch. Jusqu’ici, aucun soucis n’est à déplorer, mais nous avions une exigence particulière : il fallait que l’application puisse démarrer automatiquement un serveur Neo4J ainsi qu’un serveur ElasticSearch sur les postes de développements (ainsi que pour les tests d’intégration). &lt;!--break--&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;problme_existant&quot;&gt;Problème existant&lt;/h2&gt;
 
@@ -409,7 +410,7 @@ Et comme hier soir a eu lieu la première soirée bêta-test organisée à la &l
                                 <title>Elcurator, le nouvel outil de curation par Octo</title>
                                 <description>&lt;h2 id=&quot;1__la_curation&quot;&gt;1 - La curation&lt;/h2&gt;
 
-&lt;p&gt;Fatigué de partager vos bons liens à vos collègues par irc, hipchat ou mail et que 2 jours plus tard on vous les redemande pour la 5ème fois ? Dans ce cas c’est que vous avez besoin d’un outil de curation. Derrière ce mot plutôt moche se cache le principe de veille technologique à l’échelle de l’entreprise. Cela permet de concentrer les efforts en la matière en un seul endroit pour que toute une équipe (ou société, ou autre) puisse en bénéficier.&lt;/p&gt;
+&lt;p&gt;Fatigué de partager vos bons liens à vos collègues par irc, hipchat ou mail et que 2 jours plus tard on vous les redemande pour la 5ème fois ? Dans ce cas c’est que vous avez besoin d’un outil de curation. Derrière ce mot plutôt moche se cache le principe de veille technologique à l’échelle de l’entreprise. Cela permet de concentrer les efforts en la matière en un seul endroit pour que toute une équipe (ou société, ou autre) puisse en bénéficier. &lt;!--break--&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;2_pourquoi_elcurator_&quot;&gt;2- Pourquoi ElCurator ?&lt;/h2&gt;
 
@@ -452,6 +453,7 @@ Et comme hier soir a eu lieu la première soirée bêta-test organisée à la &l
     &lt;a href=&quot;https://class.coursera.org/posa-002&quot;&gt;le second&lt;/a&gt; vient à peine de se terminer et que les résultats n'ont pas encore été envoyés.
     Pour rappel le cours qui vient de s’achever a traité en grande majorité tout ce qui touche aux Threads, Services (binding, starting), tâche synchrone &amp; asynchrone, Messenger, AIDL.... (rien que ça)
 &lt;/p&gt;
+&lt;!--break--&gt;
 &lt;p&gt;
     La prochaine étape que nous propose Coursera intitulée
     &lt;b&gt;Programming Cloud Services for Android Handheld Systems&lt;/b&gt; sera axée sur la création d'applications qui communiqueront avec des serveurs &quot;dans le cloud&quot;.
@@ -540,7 +542,7 @@ Et comme hier soir a eu lieu la première soirée bêta-test organisée à la &l
 
 &lt;li&gt;Consulter les horaires des navettes Fil Vert (qui font les aller-retours entre la gare routière de Tours et l’entrée du site)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div style='text-align:center;margin:50px'&gt;
+&lt;!--break--&gt;&lt;div style='text-align:center;margin:50px'&gt;
     &lt;a class='inlineBoxes' data-lightbox='group-2' href='/images/postTDS2/launch.png' title='Splash screen de l&amp;apos;application'&gt;
         &lt;img alt='Splash screen' class='medium' src='/images/postTDS2/launch.png' /&gt;
     &lt;/a&gt;
@@ -585,6 +587,7 @@ Et comme hier soir a eu lieu la première soirée bêta-test organisée à la &l
    &lt;a href=&quot;https://class.coursera.org/android-001&quot;&gt;Le premier cours, sur le développement Android,&lt;/a&gt; avait comme thème (et comme son nom l'indique) la découverte de la programmation d'application.
    Cela en abordant les classes et notions majeures telles que les Activity, View, Fragment ou les Intent, ainsi que tous les cycles de vie correspondants, ce qui a pu permettre au plus grand nombre de s'y initier à moindre frais.
 &lt;/p&gt;
+&lt;!--break--&gt;
 &lt;h3&gt;Le cours&lt;/h3&gt;
 &lt;p&gt;
     Ce nouveau cours a pour thème principal l'apprentissage des bons patterns et l'utilisation de plusieurs frameworks afin de réaliser avec brio les applications Android qui ont recours à des services réseaux.
