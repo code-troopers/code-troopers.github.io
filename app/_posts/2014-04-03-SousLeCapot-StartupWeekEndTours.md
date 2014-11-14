@@ -7,6 +7,7 @@ tags: [startup, tours, Play2, tech]
 ---
 
 Après l’article global d’impressions sur le Startup Weekend, nous sommes obligés de faire un court article précisant ce que nous avons implémenté et utilisé du point de vue technique (c’est ce qui nous intéresse beaucoup après tout).
+<!--break-->
 
 ## Contenu fonctionnel :
 

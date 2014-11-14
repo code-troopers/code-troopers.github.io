@@ -7,6 +7,7 @@ tags: [Heroku, Add-ons]
 ---
 
 Vous connaissez sûrement [Heroku](https://www.heroku.com/) le service de cloud computing de type plate-forme en tant que service (PaaS), si ce n'est pas le cas, je vous conseille de vous y intéresser. Chez Code-Troopers, nous l'utilisons à la fois pour effectuer nos tests en pré-production mais aussi pour certaines de nos applications en production. Ce qui est aussi intéressant chez Heroku, c'est le nombre d'[add-ons](https://addons.heroku.com/) disponibles. Ils sont simples d'installation, la plupart du temps il suffit de deux clics et d'une variable à ajouter dans la configuration de l'application. Ils disposent presque tous de versions gratuites (souvent suffisant pour une petite application en production) mais il est aussi possible d'évoluer vers des versions payantes et plus complètes en un clic, souvent déclinées en 3 ou 4 offres.
+<!--break-->
 
 Les add-ons sont rangés en catégories, vous avez des services de bases de données, de logs, d'analytics, de cache, de monitoring… Je vous invite à les consulter sur [cette page](https://addons.heroku.com/). Mais je vais m'attarder sur les 3 add-ons qu'on installe presque machinalement dès que l'on créé une application sur Heroku :
 

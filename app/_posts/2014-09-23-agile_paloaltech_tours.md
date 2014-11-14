@@ -12,6 +12,7 @@ tags: [Palo Altech, Agilité, Conférence]
 
 Depuis la rentrée il y a de l'animation à la [cantine du numérique de Tours](http://paloaltours.org/la-cantine-numerique-tours/). En plus de continuer les rendez-vous hebdomadaires tels que le FunLab ou la WebSchool, depuis peu sont organisés des codings goûters (initiés par [Jean-Lou Le Bars](https://twitter.com/j2lb)) ainsi que les soirées Palo Altech (initées par [Rodrigo Reyes](https://twitter.com/nogunner) et [Ludovic Lafole](https://twitter.com/LudovicLafole)).  
 Palo Altech a pour ambition de promovoir les rendez-vous autour de l'informatique en général (pour apporter un complément aux soirées JUG déjà spécialisées autour du développement java)
+<!--break-->
 
 ##Soirée Agilité
 C'est donc dans le cadre de Palo Altech que le **mardi 30 septembre à 19h** est organisée une soirée autour de l'agilité. Cette soirée sera découpée en trois présentations : 

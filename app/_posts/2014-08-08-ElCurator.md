@@ -8,6 +8,7 @@ tags: [Veille, Outil, Curation]
 
 ## 1 - La curation
 Fatigué de partager vos bons liens à vos collègues par irc, hipchat ou mail et que 2 jours plus tard on vous les redemande pour la 5ème fois ? Dans ce cas c'est que vous avez besoin d'un outil de curation. Derrière ce mot plutôt moche se cache le principe de veille technologique à l'échelle de l'entreprise. Cela permet de concentrer les efforts en la matière en un seul endroit pour que toute une équipe (ou société, ou autre) puisse en bénéficier.
+<!--break-->
 
 ## 2- Pourquoi ElCurator ?
 Chez Code-Troopers, nous utilisons [ElCurator](http://www.elcurator.net/) depuis déjà 3 semaines, et cela pour deux raisons. La première c'est que nous venons tout juste de ressentir le besoin d'avoir un tel outil à notre service (équipe pas toujours sur hipchat en même temps, pas toujours dans le même bureau, et surtout début des vacances, donc passage de connaissances rendu plus compliqué). Et deuxièmement, c'est pile pendant nos recherches qu'[Octo](http://www.octo.com/) a lancé sa solution ElCurator. Donc en plus d'un timming parfait de leur part, c'est aussi parce que nous apprécions la création française que nous avons saisi l'occasion de tester et soutenir une bonne initiative d'une autre boite de développement Made in France.

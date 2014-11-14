@@ -12,7 +12,7 @@ Il est fréquent que nous réalisions des bouts de codes qui peuvent devenir des
 Souvent un des freins à la libre distribution de ces sources très utiles n'est pas la mise à disposition des sources ([Github](http://www.github.com/code-troopers) a bien aidé dans ce sens ces dernières années), mais la distribution sur un des dépôts Maven accessible au tout venant.
 
 En fait, il est bon de savoir que [Sonatype](http://www.sonatype.org) permet la mise à disposition de n'importe quelle bibliothèque ( _open source_ ) dans [les dépôts centraux de Maven](http://repo1.maven.org/maven2). Pour ce faire il suffit de suivre quelques étapes.
-
+<!--break-->
 
 ## Signature des _artefacts_
 

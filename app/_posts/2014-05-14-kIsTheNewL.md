@@ -7,6 +7,7 @@ tags: [zsh, git, shell]
 ---
 
 `ls` est une des commandes shell les plus utilisées, pourtant depuis les années 70 elle a très peu changé. Bien sûr, il y a de nombreuses options, citons `ls -a` pour afficher les fichiers cachés, `ls -l` pour afficher plus d'informations, `ls --color` pour afficher deux couleurs, une pour les fichiers et une pour les répertoires, ou encore `ls -rtl` pour trier le contenu par date et afficher le plus récent en dernier.
+<!--break-->
 
 `ls` est donc une commande utile et pratique mais elle n'est pas folichonne. D'où la naissance de `k` qui a pour but de remplacer `ls` avec quelques killer features. Il ne s'agit pas d'une surcouche de `ls` mais d'une commande complète, s'appuyant directement sur `stat` par exemple. À ce jour, les nouvelles fonctionnalités sont les suivantes :
 

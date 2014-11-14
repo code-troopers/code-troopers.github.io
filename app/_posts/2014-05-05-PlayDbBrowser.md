@@ -9,6 +9,7 @@ tags: [Play2, db, h2-browser]
 [Play2](http://www.playframework.com/), c'est fun et c'est rapide !
 Il suffit de quelques instants pour avoir une appli qui tourne en local sans rien avoir à configurer [voir la doc de play](http://www.playframework.com/documentation/2.2.x/NewApplication).
 En plus dès que l'on commence un peu à jouer, créer des entités, faire une page de CRUD, tout tourne toujours aussi bien. Il faut dire que c'est agréable, car [Ebean](http://www.playframework.com/documentation/2.2.x/JavaEbean) s'est occupé de générer les commandes sql dans le fichier _1.sql_ qui est joué automatiquement par play.
+<!--break-->
 
 Le problème arrive en général un peu après, lorsque l'envie nous prend de visualiser les données qu'on a insérées via les pages pour différents traitements.
 En effet, pas besoin de monter un serveur sql ou autre, par défaut tout se passe dans une base en mémoire (ce qui signifie aussi, que lorsque le serveur est arrêté les datas disparaissent).

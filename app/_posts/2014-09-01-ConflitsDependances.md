@@ -11,6 +11,7 @@ utiles. Dans un récent projet, nous avons eu besoin de faire fonctionner Neo4j 
 aucun soucis n'est à déplorer, mais nous avions une exigence particulière : il fallait que l'application puisse
 démarrer automatiquement un serveur Neo4J ainsi qu'un serveur ElasticSearch sur les postes de développements (ainsi que
 pour les tests d'intégration).
+<!--break-->
 
 ## Problème existant
 

@@ -8,6 +8,7 @@ tags: [Android, Festival, Terres du son]
 
 Comme vous avez pu le voir dans un [article précédent](http://code-troopers.com/2014/03/17/Aucard.html), Code-Troopers est en train de réaliser l'application officielle Android pour [Aucard de Tours](http://www.radiobeton.com/aucard/). Deuxième bonne nouvelle, nous réalisons aussi l'application officielle Android pour un autre festival tourangeau, [Terres du son](http://terresduson.com/).
 
+<!--break-->
 <div style="text-align : center">
 <a style="display: inline" href="/images/postTDS/tds.png" data-lightbox="image-0" title="Logo Terres du son">
         <img class="mini" src="/images/postTDS/tds.png" alt="tds logo"/>
