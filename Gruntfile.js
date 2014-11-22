@@ -29,7 +29,8 @@ module.exports = function (grunt) {
                              jekyllSources: {
                                  files: [
                                      // capture all except css
-                                     '<%= yeoman.jekyll %>/{,**/}*.html','!**/bower_components/**',
+                                     '<%= yeoman.jekyll %>/{,**/}*.html','<%= yeoman.jekyll %>/{,**/}*.md',
+                                     '!**/bower_components/**',
                                      '<%= yeoman.jekyll %>/{,*/}*.less',
                                      '.tmp/styles/{,*/}*.css',
                                      '{.tmp,<%= yeoman.jekyll %>}/scripts/{,*/}*.js',
