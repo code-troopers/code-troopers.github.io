@@ -17,7 +17,7 @@ Chez Code-Troopers, nous avons pas mal de projets __Android__. Au début du proj
  5. on modifie le thème
 
 Toutes ces étapes sont répétitives. De plus, avec l'arrivée du __Material Design__ et
-les nouvelles libraires de compatibilités, les templates que propose __Android Studio__ ne sont plus d'actualités. Par exemple si l'on choisit un template avec le __NavigationDrawer__, il faut presque tout changer pour que celui-ci colle au nouveau standard __Material Design__.
+les nouvelles libraires de compatibilités, les templates que propose __Android Studio__ ne sont plus d'actualité. Par exemple si l'on choisit un template avec le __NavigationDrawer__, il faut presque tout changer pour que celui-ci colle au nouveau standard __Material Design__.
 
 <!--break-->
 
@@ -41,7 +41,7 @@ Depuis l'arrivée de __Lollipop__, un nouvel élément a fait son entrée dans l
 
 ### NavigationDrawer
 
-Si l'on se réfère aux [specifications du __Material Design__](http://www.google.com/design/spec/patterns/navigation-drawer.html), le menu doit prendre toute la hauteur de l'écran et se placer sous la barre de statut. Ceci n'est pas encore bien implémenté par tout le monde. De plus, l'implémentation n'est pas si simple. J'ai donc décidé de l'inclure dans ce squelette en ajoutant par la même, l'intéraction avec la __Toolbar__ (pour pouvoir avoir l'icône hamburger sans avoir à ajouter de ressources). Je tiens au passage à remercier l'auteur de ce [post](http://stackoverflow.com/questions/26745300/navigation-drawer-semi-transparent-over-status-bar-not-working) qui m'a grandement aidé.
+Si l'on se réfère aux [specifications du __Material Design__](http://www.google.com/design/spec/patterns/navigation-drawer.html), le menu doit prendre toute la hauteur de l'écran et se placer sous la barre de statut. Ceci n'est pas encore bien implémenté par tout le monde. De plus, l'implémentation n'est pas si simple. J'ai donc décidé de l'inclure dans ce squelette en ajoutant par là même, l'intéraction avec la __Toolbar__ (pour pouvoir avoir l'icône hamburger sans avoir à ajouter de ressources). Je tiens au passage à remercier l'auteur de ce [post](http://stackoverflow.com/questions/26745300/navigation-drawer-semi-transparent-over-status-bar-not-working) qui m'a grandement aidé.
 
 ### Librairies
 
