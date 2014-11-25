@@ -47,9 +47,9 @@ Si l'on se réfère aux [specifications du __Material Design__](http://www.googl
 
 Pour l'instant, j'ai ajouté seulement trois librairies :
 
-* __ButterKnife__ pour l'injection de view
-* __Dagger__ pour l'injection du reste
-* __Picasso__ pour le chargement et la gestion des images
+* [__ButterKnife__](http://jakewharton.github.io/butterknife/) pour l'injection de view
+* [__Dagger__](http://square.github.io/dagger/) pour l'injection du reste
+* [__Picasso__](http://square.github.io/picasso/) pour le chargement et la gestion des images
 
 ### Le thème
 
