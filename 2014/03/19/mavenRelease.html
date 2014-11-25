@@ -143,7 +143,7 @@ ssb   2048R/08130909 2013-04-28</code></pre>
 
 <h3 id=distribution_de_la_clef_publique>Distribution de la clef publique</h3>
 
-<p>Pour que tout le monde soit à même de vérifier votre _proidentité”, il faut distribuer votre clef publique sur les dépôts reconnus. L’un d’eux est <code>hkp://pool.sks-keyservers.net</code> qui fera la distribution auprès des différents serveurs OpenPGP. Pour se faire, il suffit de lancer la synchronisation vers ce serveur, en remplaçant <code>${KEY_ID}</code> par l’id de votre clef publique tel que récupéré lors de la commande précédente (dans mon cas il s’agit de <code>CE236D5E</code>):</p>
+<p>Pour que tout le monde soit à même de vérifier votre “identité”, il faut distribuer votre clef publique sur les dépôts reconnus. L’un d’eux est <code>hkp://pool.sks-keyservers.net</code> qui fera la distribution auprès des différents serveurs OpenPGP. Pour se faire, il suffit de lancer la synchronisation vers ce serveur, en remplaçant <code>${KEY_ID}</code> par l’id de votre clef publique tel que récupéré lors de la commande précédente (dans mon cas il s’agit de <code>CE236D5E</code>):</p>
 
 <pre><code>$ gpg --keyserver hkp://pool.sks-keyservers.net --send-keys ${KEY_ID}</code></pre>
 
