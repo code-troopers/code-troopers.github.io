@@ -7,6 +7,69 @@
                 <atom:link href="http://code-troopers.com/feed.xml" rel="self" type="application/rss+xml"/>
                 
                         <item>
+                                <title>Squelette Android 5.0</title>
+                                <description>&lt;h2 id=&quot;pourquoi_&quot;&gt;Pourquoi ?&lt;/h2&gt;
+
+&lt;p&gt;Chez Code-Troopers, nous avons pas mal de projets &lt;strong&gt;Android&lt;/strong&gt;. Au début du projet, on fait toujours la même chose :&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;on lance &lt;strong&gt;Android Studio&lt;/strong&gt;&lt;/li&gt;
+
+&lt;li&gt;on créé un nouveau projet&lt;/li&gt;
+
+&lt;li&gt;on choisit parmi les templates qu’il nous propose&lt;/li&gt;
+
+&lt;li&gt;on ajoute nos librairies favorites&lt;/li&gt;
+
+&lt;li&gt;on modifie le thème&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Toutes ces étapes sont répétitives. De plus, avec l’arrivée du &lt;strong&gt;Material Design&lt;/strong&gt; et les nouvelles libraires de compatibilités, les templates que propose &lt;strong&gt;Android Studio&lt;/strong&gt; ne sont plus d’actualité. Par exemple si l’on choisit un template avec le &lt;strong&gt;NavigationDrawer&lt;/strong&gt;, il faut presque tout changer pour que celui-ci colle au nouveau standard &lt;strong&gt;Material Design&lt;/strong&gt;.&lt;/p&gt;
+&lt;!--break--&gt;
+&lt;h2 id=&quot;le_squelette&quot;&gt;Le squelette&lt;/h2&gt;
+
+&lt;p&gt;Afin de faciliter la vie des troopers, j’ai décidé de créer un squelette d’application &lt;strong&gt;Android&lt;/strong&gt; contenant nos librairies favorites et le minimum visuel.&lt;/p&gt;
+&lt;div style='text-align:center;margin:50px'&gt;
+&lt;a class='inlineBoxes' data-lightbox='group-1' href='/images/postAndroid5/screen1.png' title='Page d&amp;apos;accueil du squelette'&gt;
+&lt;img alt='Page d&amp;apos;accueil du squelette' class='medium' src='/images/postAndroid5/screen1.png' /&gt;
+&lt;/a&gt;
+&lt;a class='inlineBoxes' data-lightbox='group-1' href='/images/postAndroid5/screen2.png' title='Navigation drawer'&gt;
+&lt;img alt='Navigation drawer' class='medium' src='/images/postAndroid5/screen2.png' /&gt;
+&lt;/a&gt;
+&lt;/div&gt;
+&lt;h3 id=&quot;bye_bye_actionbar_hello_toolbar&quot;&gt;Bye bye ActionBar, Hello Toolbar&lt;/h3&gt;
+
+&lt;p&gt;Depuis l’arrivée de &lt;strong&gt;Lollipop&lt;/strong&gt;, un nouvel élément a fait son entrée dans le SDK, la &lt;strong&gt;Toolbar&lt;/strong&gt;. Celle-ci possède quasiment les mêmes fonctionnalités que l’__ActionBar__. Le principal avantage, c’est qu’elle n’est pas liée magiquement au layout, c’est à nous de l’inclure.&lt;/p&gt;
+
+&lt;h3 id=&quot;navigationdrawer&quot;&gt;NavigationDrawer&lt;/h3&gt;
+
+&lt;p&gt;Si l’on se réfère aux &lt;a href=&quot;http://www.google.com/design/spec/patterns/navigation-drawer.html&quot;&gt;specifications du &lt;strong&gt;Material Design&lt;/strong&gt;&lt;/a&gt;, le menu doit prendre toute la hauteur de l’écran et se placer sous la barre de statut. Ceci n’est pas encore bien implémenté par tout le monde. De plus, l’implémentation n’est pas si simple. J’ai donc décidé de l’inclure dans ce squelette en ajoutant par là même, l’intéraction avec la &lt;strong&gt;Toolbar&lt;/strong&gt; (pour pouvoir avoir l’icône hamburger sans avoir à ajouter de ressources). Je tiens au passage à remercier l’auteur de ce &lt;a href=&quot;http://stackoverflow.com/questions/26745300/navigation-drawer-semi-transparent-over-status-bar-not-working&quot;&gt;post&lt;/a&gt; qui m’a grandement aidé.&lt;/p&gt;
+
+&lt;h3 id=&quot;librairies&quot;&gt;Librairies&lt;/h3&gt;
+
+&lt;p&gt;Pour l’instant, j’ai ajouté seulement trois librairies :&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://jakewharton.github.io/butterknife/&quot;&gt;&lt;strong&gt;ButterKnife&lt;/strong&gt;&lt;/a&gt; pour l’injection de view&lt;/li&gt;
+
+&lt;li&gt;&lt;a href=&quot;http://square.github.io/dagger/&quot;&gt;&lt;strong&gt;Dagger&lt;/strong&gt;&lt;/a&gt; pour l’injection du reste&lt;/li&gt;
+
+&lt;li&gt;&lt;a href=&quot;http://square.github.io/picasso/&quot;&gt;&lt;strong&gt;Picasso&lt;/strong&gt;&lt;/a&gt; pour le chargement et la gestion des images&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;le_thme&quot;&gt;Le thème&lt;/h3&gt;
+
+&lt;p&gt;Je me suis basé sur le thème par défaut de &lt;strong&gt;AppCompat&lt;/strong&gt;, je l’ai ensuite modifié pour changer les couleurs des barres de statut et d’action lorsque le téléphone est sous &lt;strong&gt;Lollipop&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;projet&quot;&gt;Projet&lt;/h2&gt;
+
+&lt;p&gt;Voilà, vous pouvez trouver ce projet sur notre &lt;a href=&quot;https://github.com/code-troopers/material-android-bootstrap&quot;&gt;github&lt;/a&gt;. Il va sûrement évoluer avec le temps pour ajouter d’autres choses afin d’avoir des exemples d’implémentations. Vos commentaires, issues sont les bienvenues, je me ferai un plaisir d’y répondre et si vous avez d’autres idées, vous pouvez toujours forker.&lt;/p&gt;</description>
+                                <pubDate>Wed, 26 Nov 2014 00:00:00 +0100</pubDate>
+                                <link>http://code-troopers.com/2014/11/26/SqueletteAndroid5.html</link>
+                                <guid isPermaLink="true">http://code-troopers.com/2014/11/26/SqueletteAndroid5.html</guid>
+                        </item>
+                
+                        <item>
                                 <title>Appli Navig'Tours : ouverture aux bêta-testeurs</title>
                                 <description>&lt;p&gt;
 Depuis déjà quelques temps, l'équipe travaille sur une application &lt;code&gt;Android&lt;/code&gt; pour consulter les horaires des bus et tram du réseau &lt;b&gt;Fil Bleu&lt;/b&gt;.
@@ -575,58 +638,6 @@ Et comme hier soir a eu lieu la première soirée bêta-test organisée à la &l
                                 <pubDate>Tue, 24 Jun 2014 00:00:00 +0200</pubDate>
                                 <link>http://code-troopers.com/2014/06/24/TDS2.html</link>
                                 <guid isPermaLink="true">http://code-troopers.com/2014/06/24/TDS2.html</guid>
-                        </item>
-                
-                        <item>
-                                <title>Coursera - Android Handheld Systems : 2ème cours</title>
-                                <description>&lt;h3&gt;Coursera &amp; Android&lt;/h3&gt;
-&lt;p&gt;
-   Coursera propose depuis ce Lundi (12 mai) &lt;a href=&quot;https://class.coursera.org/posa-002&quot;&gt;un nouveau cours de développement Android&lt;/a&gt;.
-   Il s'agit, en fait, du second cours d'une série de trois visant à maitriser le développement d'application Android.
-&lt;/p&gt;
-&lt;p&gt;
-   &lt;a href=&quot;https://class.coursera.org/android-001&quot;&gt;Le premier cours, sur le développement Android,&lt;/a&gt; avait comme thème (et comme son nom l'indique) la découverte de la programmation d'application.
-   Cela en abordant les classes et notions majeures telles que les Activity, View, Fragment ou les Intent, ainsi que tous les cycles de vie correspondants, ce qui a pu permettre au plus grand nombre de s'y initier à moindre frais.
-&lt;/p&gt;
-&lt;!--break--&gt;
-&lt;h3&gt;Le cours&lt;/h3&gt;
-&lt;p&gt;
-    Ce nouveau cours a pour thème principal l'apprentissage des bons patterns et l'utilisation de plusieurs frameworks afin de réaliser avec brio les applications Android qui ont recours à des services réseaux.
-&lt;/p&gt;
-&lt;p&gt;
-    Présenté par &lt;a href=&quot;https://www.coursera.org/instructor/douglasschmidt&quot;&gt;Douglas C. Schmidt&lt;/a&gt; (qui parle plutôt vite dans les premières vidéos) et &lt;a href=&quot;https://www.coursera.org/instructor/juleswhite&quot;&gt;C. Jules White&lt;/a&gt;, les cours (vidéos et slides) semblent toujours aussi bien construits et organisés.
-    Ils sont pour le moment faciles à suivre, et donc faisaibles même si vous n'avez pas suivi le premier cours.
-
-&lt;/p&gt;
-&lt;h3&gt;Exercices&lt;/h3&gt;
-&lt;p&gt;
-    Pour ce qui est des excercices, il y a du changement. Contrairement au cours précédent où il fallait uniquement collecter quelques lignes de log pour prouver la réussite d'un exercice, il va falloir cette fois fournir les fichiers sources correspondant au travail réalisé. Ce qui est, je trouve, une bien meilleure façon de faire et surtout fait beaucoup plus 'pro'.
-&lt;/p&gt;
-&lt;p&gt;
-    Et justement, en parlant d'évaluation, nouveauté (pour moi du moins) il va falloir évaluer le travail des autres étudiants.
-    En effet pour qu'un exercice réalisé soit validé, il faudra, après l'envoi de son propre travail, noter celui d'autres étudiants, en utilisant leurs codes sources et en répondant à des questions / critères spécifiques posés par la plateforme.
-&lt;/p&gt;
-&lt;p&gt;
-    Petit point négatif à noter, l'IDE à utiliser est Eclipse, c'est sous cet environnement que les résultats seront testés.
-    Mais comme cela n'a pas été un problème lors du premier cours de pouvoir utiliser Android Studio, il faut espérer qu'il en sera de même.
-&lt;/p&gt;
-&lt;h3&gt;Inscription&lt;/h3&gt;
-&lt;p&gt;
-    Il est encore temps de s'incrire puisque les premières vidéos n'ont été diffusées que ce Lundi.
-    Et même si vous n'avez pas le temps pour faire tous les exercices, regarder les vidéos (ou bien les slides) apporte déjà bien plus d'informations, que pourrait le faire une conférence ou une formation.
-&lt;/p&gt;
-
-&lt;h3&gt;Certification&lt;/h3&gt;
-&lt;p&gt;
-    Et pour ceux qui le souhaitent, il est possible d'obtenir un certificat officiel provenant de l'université de Vanderbilt (origine des deux profs) et Coursera, ce qui permet de faire connaître et d'attester de votre réussite dans ces cours.
-    Mais évidement pour cela il faudra payer (49$), car rien n'est gratuit.
-&lt;/p&gt;
-
-
-</description>
-                                <pubDate>Thu, 15 May 2014 00:00:00 +0200</pubDate>
-                                <link>http://code-troopers.com/2014/05/15/CourseraAndroid.html</link>
-                                <guid isPermaLink="true">http://code-troopers.com/2014/05/15/CourseraAndroid.html</guid>
                         </item>
                 
         </channel>
