@@ -10,13 +10,12 @@
 		<div class="cover" style="background-image:url(/images/banner/{{ page.cover }}-big.png)">
                     <div class="date">posté le {{ page.date | date: "%d/%m/%Y"}} par {{ page.author }}</div>
                 </div>
-                <h2><a href="{{ page.url }}">{{ page.title }}</a>
-                    <ul class="tags">
-                        {% for tag in page.tags %}
-                        <li>{{ tag }}</li>
-                        {% endfor %}
-                    </ul>
-                </h2>
+                <h2><a href="{{ page.url }}">{{ page.title }}</a></h2>
+                <ul class="tags">
+                    {% for tag in page.tags %}
+                    <li>{{ tag }}</li>
+                    {% endfor %}
+                </ul>
                 <div class="content">
                     {{ content }}
                 </div>
