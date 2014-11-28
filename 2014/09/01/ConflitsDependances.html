@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class=no-js>
+<html class=no-js lang=fr>
     <head>
         <meta http-equiv=X-UA-Compatible content="IE=edge">
         <meta charset=utf-8>
@@ -24,9 +24,8 @@
         <meta property=og:description content="Lors de nos développements, nous reposons beaucoup sur des projets externes qui nous fournissent énormément de services utiles. Dans un récent projet, nous avons eu besoin de faire fonctionner Neo4j conjointement à ElasticSearch. Jusqu’ici, aucun soucis n’est à déplorer, mais nous avions une exigence particulière : il fallait que l’application puisse démarrer automatiquement un serveur Neo4J ainsi qu’un serveur ElasticSearch sur les postes de développements (ainsi que pour les tests d’intégration). Problème existant Les deux outils que nous utilisons se basent sur Apache Lucene pour toute la partie indexation et accès aux données. Mais, et c’est là que le problème se situe, ils n’utilisent pas les mêmes versions de Lucene. &lt;!-- Extrait du pom d'ElasticSearch --&gt; &lt;dependency&gt; &lt;groupId&gt;org.apache.lucene&lt;/groupId&gt; &lt;artifactId&gt;lucene-core&lt;/artifactId&gt; &lt;version&gt;4.9.0&lt;/version&gt; &lt;scope&gt;compile&lt;/scope&gt; &lt;/dependency&gt; &lt;!-- Extrait du pom de Neo4j --&gt; &lt;dependency&gt; &lt;groupId&gt;org.apache.lucene&lt;/groupId&gt; &lt;artifactId&gt;lucene-core&lt;/artifactId&gt; &lt;version&gt;3.6.2&lt;/version&gt; &lt;/dependency&gt; ElasticSearch utilise la version 4.9.0, alors que Neo4J utilise la version 3.6.2. Ainsi, en fonction du bon vouloir du Classloader qui sera utilisé par l’application, il se peut qu’ElasticSearch ou Neo4J refuse de fonctionner. La difficulté pour comprendre et détecter le problème est qu’il se manifeste souvent par un obscur NoClassDefFoundError ou NoSuchMethodError qui n’est pas des plus explicites (d’autant plus lorsque notre IDE nous montre...">
         
         <meta name=viewport content="width=device-width">
-        <meta http-equiv=content-language content=fr-FR>
 
-        <link rel=stylesheet href=/styles/07a2e531.main.css>
+        <link rel=stylesheet href=/styles/2e03639a.main.css>
 
         <!--[if lt IE 9]><script src="/scripts/7b95c9a5.ie8.js"></script><![endif]-->
     </head>
@@ -36,11 +35,11 @@
 
 <header data-spy=affix class=affix-top>
     <div class=container>
-        <div class=navbar-header>
+        <div class=navbar-header itemscope itemtype=http://schema.org/Organization>
             <button type=button class=navbar-toggle data-toggle=collapse data-target=.navbar-collapse>
                 <span><i class="fa fa-bars fa-2x"></i></span>
             </button>
-            <a class=navbar-brand href="/"><img itemprop=image class=logo alt="Code-Troopers logo" title="Code-Troopers logo" src=/images/logo.png><span itemprop=name class=brand>Code-Troopers</span></a>
+            <a class=navbar-brand href="/"><img itemprop=logo class=logo alt="Code-Troopers logo" title="Code-Troopers logo" src=/images/logo.png><span itemprop=name class=brand>Code-Troopers</span></a>
         </div>
         <nav class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
@@ -66,17 +65,16 @@
 		<div class=cover style=background-image:url(/images/banner/maven-banner-big.png)>
                     <div class=date>posté le 01/09/2014 par Cedric</div>
                 </div>
-                <h2><a href=/2014/09/01/ConflitsDependances.html>Résoudre les conflits de dépendances</a>
-                    <ul class=tags>
-                        
-                        <li>Maven</li>
-                        
-                        <li>Dependances</li>
-                        
-                        <li>Tips</li>
-                        
-                    </ul>
-                </h2>
+                <h2><a href=/2014/09/01/ConflitsDependances.html>Résoudre les conflits de dépendances</a></h2>
+                <ul class=tags>
+                    
+                    <li>Maven</li>
+                    
+                    <li>Dependances</li>
+                    
+                    <li>Tips</li>
+                    
+                </ul>
                 <div class=content>
                     <p>Lors de nos développements, nous reposons beaucoup sur des projets externes qui nous fournissent énormément de services utiles. Dans un récent projet, nous avons eu besoin de faire fonctionner Neo4j conjointement à ElasticSearch. Jusqu’ici, aucun soucis n’est à déplorer, mais nous avions une exigence particulière : il fallait que l’application puisse démarrer automatiquement un serveur Neo4J ainsi qu’un serveur ElasticSearch sur les postes de développements (ainsi que pour les tests d’intégration). </p>
 
@@ -205,7 +203,7 @@ L'article vous a plu ? Partagez-le :
 <footer id=contact>
     <div class=container>
         <div class=row>
-            <div class=col-md-6>
+            <div class=col-md-6 itemscope itemtype=http://schema.org/Organization>
                 <h3>Contact</h3>
 
                 <p>Vous avez besoin de nous pour un projet, contactez-nous sur les réseaux sociaux, par mail à <a href=mailto:contact@code-troopers.com><meta itemprop=email content=contact@code-troopers.com>contact@code-
@@ -230,6 +228,7 @@ L'article vous a plu ? Partagez-le :
         </div>
     </div>
 </footer>
+
 
 <script>
     (function (i, s, o, g, r, a, m) {

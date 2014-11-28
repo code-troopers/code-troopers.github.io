@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class=no-js>
+<html class=no-js lang=fr>
     <head>
         <meta http-equiv=X-UA-Compatible content="IE=edge">
         <meta charset=utf-8>
@@ -24,9 +24,8 @@
         <meta property=og:description content="Après l’article global d’impressions sur le Startup Weekend, nous sommes obligés de faire un court article précisant ce que nous avons implémenté et utilisé du point de vue technique (c’est ce qui nous intéresse beaucoup après tout). Contenu fonctionnel : Puisque nous avons pris le temps de faire une application entière en 54h, nous allons tout de même détailler les fonctionnalités qui existent dans ce que nous avons produit : création de compte classique (avec validation par email obligatoire) création de compte via connexion Facebook proposition d’ajout de spectacle vote sur un spectacle existant duplication de spectacle (changement de ville) partage Twitter / Facebook / Google plus envoi de mail selon les statuts des événements backoffice avec un tableau des événements et la possibilité de modifier leurs statuts modération des propositions de spectacle (avec remplissage automatique de la biographie / photo d’un artiste à partir de l’API EchoNest) recherche globale avec Elasticsearch (géolocalisation et full-text sur artiste) Contenu technique : Les technologies utilisées dans le projet sont : PlayFramework! socle Play authenticate intégration password-strength intégration elasticsearch-jest intégration liquibase Twitter Bootstrap RequireJS JQuery select2 select2-placecomplete bootstrap-slider bootstrap-daterangepicker ParsleyJS ElasticSearch Git Gitlab Heroku PostgreSQL Dans la liste des librairies utilisées, certaines sont...">
         
         <meta name=viewport content="width=device-width">
-        <meta http-equiv=content-language content=fr-FR>
 
-        <link rel=stylesheet href=/styles/07a2e531.main.css>
+        <link rel=stylesheet href=/styles/2e03639a.main.css>
 
         <!--[if lt IE 9]><script src="/scripts/7b95c9a5.ie8.js"></script><![endif]-->
     </head>
@@ -36,11 +35,11 @@
 
 <header data-spy=affix class=affix-top>
     <div class=container>
-        <div class=navbar-header>
+        <div class=navbar-header itemscope itemtype=http://schema.org/Organization>
             <button type=button class=navbar-toggle data-toggle=collapse data-target=.navbar-collapse>
                 <span><i class="fa fa-bars fa-2x"></i></span>
             </button>
-            <a class=navbar-brand href="/"><img itemprop=image class=logo alt="Code-Troopers logo" title="Code-Troopers logo" src=/images/logo.png><span itemprop=name class=brand>Code-Troopers</span></a>
+            <a class=navbar-brand href="/"><img itemprop=logo class=logo alt="Code-Troopers logo" title="Code-Troopers logo" src=/images/logo.png><span itemprop=name class=brand>Code-Troopers</span></a>
         </div>
         <nav class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
@@ -66,19 +65,18 @@
 		<div class=cover style=background-image:url(/images/banner/mbmc-banner-big.png)>
                     <div class=date>posté le 03/04/2014 par Code-Troopers</div>
                 </div>
-                <h2><a href=/2014/04/03/SousLeCapot-StartupWeekEndTours.html>Sous le capot du Startup Weekend Tours</a>
-                    <ul class=tags>
-                        
-                        <li>startup</li>
-                        
-                        <li>tours</li>
-                        
-                        <li>Play2</li>
-                        
-                        <li>tech</li>
-                        
-                    </ul>
-                </h2>
+                <h2><a href=/2014/04/03/SousLeCapot-StartupWeekEndTours.html>Sous le capot du Startup Weekend Tours</a></h2>
+                <ul class=tags>
+                    
+                    <li>startup</li>
+                    
+                    <li>tours</li>
+                    
+                    <li>Play2</li>
+                    
+                    <li>tech</li>
+                    
+                </ul>
                 <div class=content>
                     <p>Après l’article global d’impressions sur le Startup Weekend, nous sommes obligés de faire un court article précisant ce que nous avons implémenté et utilisé du point de vue technique (c’est ce qui nous intéresse beaucoup après tout). </p>
 
@@ -223,7 +221,7 @@ L'article vous a plu ? Partagez-le :
 <footer id=contact>
     <div class=container>
         <div class=row>
-            <div class=col-md-6>
+            <div class=col-md-6 itemscope itemtype=http://schema.org/Organization>
                 <h3>Contact</h3>
 
                 <p>Vous avez besoin de nous pour un projet, contactez-nous sur les réseaux sociaux, par mail à <a href=mailto:contact@code-troopers.com><meta itemprop=email content=contact@code-troopers.com>contact@code-
@@ -248,6 +246,7 @@ L'article vous a plu ? Partagez-le :
         </div>
     </div>
 </footer>
+
 
 <script>
     (function (i, s, o, g, r, a, m) {
