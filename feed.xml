@@ -39,7 +39,7 @@
 &lt;/div&gt;
 &lt;h3 id=&quot;bye_bye_actionbar_hello_toolbar&quot;&gt;Bye bye ActionBar, Hello Toolbar&lt;/h3&gt;
 
-&lt;p&gt;Depuis l’arrivée de &lt;strong&gt;Lollipop&lt;/strong&gt;, un nouvel élément a fait son entrée dans le SDK, la &lt;strong&gt;Toolbar&lt;/strong&gt;. Celle-ci possède quasiment les mêmes fonctionnalités que l’__ActionBar__. Le principal avantage, c’est qu’elle n’est pas liée magiquement au layout, c’est à nous de l’inclure.&lt;/p&gt;
+&lt;p&gt;Depuis l’arrivée de &lt;strong&gt;Lollipop&lt;/strong&gt;, un nouvel élément a fait son entrée dans le SDK, la &lt;strong&gt;Toolbar&lt;/strong&gt;. Celle-ci possède quasiment les mêmes fonctionnalités que l’ActionBar. Le principal avantage, c’est qu’elle n’est pas liée magiquement au layout, c’est à nous de l’inclure.&lt;/p&gt;
 
 &lt;h3 id=&quot;navigationdrawer&quot;&gt;NavigationDrawer&lt;/h3&gt;
 
