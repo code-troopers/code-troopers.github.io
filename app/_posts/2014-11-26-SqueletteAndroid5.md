@@ -37,7 +37,7 @@ Afin de faciliter la vie des troopers, j'ai décidé de créer un squelette d'ap
 
 ### Bye bye ActionBar, Hello Toolbar
 
-Depuis l'arrivée de __Lollipop__, un nouvel élément a fait son entrée dans le SDK, la __Toolbar__. Celle-ci possède quasiment les mêmes fonctionnalités que l'__ActionBar__. Le principal avantage, c'est qu'elle n'est pas liée magiquement au layout, c'est à nous de l'inclure.
+Depuis l'arrivée de __Lollipop__, un nouvel élément a fait son entrée dans le SDK, la __Toolbar__. Celle-ci possède quasiment les mêmes fonctionnalités que l'ActionBar. Le principal avantage, c'est qu'elle n'est pas liée magiquement au layout, c'est à nous de l'inclure.
 
 ### NavigationDrawer
 
