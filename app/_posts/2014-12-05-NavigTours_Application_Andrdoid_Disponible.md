@@ -41,7 +41,7 @@ L'application est disponible pour tout le monde sur le Play store.
 
 ## Merci au testeurs
 Nous avions lancé l'application en test lors de la soirée bêta organisée par @PaloalTours à la cantine du numérique le 21 octobre dernier.
-Grâce à cela, et au retour des plus de 70 testeurs nous avons amélioré certaines choses et corriger quelques (rares) bugs.
+Grâce à cela, et au retour des plus de 70 testeurs nous avons amélioré certaines choses et corrigé quelques (rares) bugs.
 Nous avons aussi pris en compte un certain nombre de remarques quant aux fonctionnalités disponibles à travers l'application.
 
 Merci donc à tous ceux qui ont testé l'application et surtout continuez à nous faire part de vos remarques et souhaits 
