@@ -41,15 +41,15 @@ L'application est disponible pour tout le monde sur le Play store.
 
 ## Merci au testeurs
 Nous avions lancé l'application en test lors de la soirée bêta organisée par @PaloalTours à la cantine du numérique le 21 octobre dernier.
-Grâce à cela, et au retour des plus de 70 testeurs nous avons améliorer certaines choses et corriger quelques (rares) bugs.
-Nous avons aussi pris en compte un certain nombre de remarques quant au fonctionnalités disponible à travers l'application.
+Grâce à cela, et au retour des plus de 70 testeurs nous avons amélioré certaines choses et corriger quelques (rares) bugs.
+Nous avons aussi pris en compte un certain nombre de remarques quant aux fonctionnalités disponibles à travers l'application.
 
-Merci donc à tout ceux qui ont testé l'application et surtout continuer à nous faire part de vos remarques et souhaits 
+Merci donc à tous ceux qui ont testé l'application et surtout continuez à nous faire part de vos remarques et souhaits 
 
 
 ## La suite
 Car ce n'est pas fini (un développement informatique l'est rarement). 
-Il y a encore plein de chose que l'on souhaite ajouter dans l'application (par exemple la liste des lignes du réseau fil bleu, avoir des alertes lors des perturbations...)
-Mais nous n'avons pas un temps illimité à consacrer à cette applications. Donc des évolutions viendront s'ajouter au fil des mises a jours, mais nous ne pouvons pas donner de dates pour celles-ci
+Il y a encore plein de choses que l'on souhaite ajouter dans l'application (par exemple la liste des lignes du réseau fil bleu, avoir des alertes lors des perturbations...)
+Mais nous n'avons pas un temps illimité à consacrer à cette application. Donc des évolutions viendront s'ajouter au fil des mises à jours, mais nous ne pouvons pas donner de dates pour celles-ci.
 
 
