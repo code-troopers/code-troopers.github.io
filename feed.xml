@@ -7,6 +7,52 @@
                 <atom:link href="http://code-troopers.com/feed.xml" rel="self" type="application/rss+xml"/>
                 
                         <item>
+                                <title>Navig'Tours est disponible</title>
+                                <description>&lt;h2 id=&quot;a_y_est_&quot;&gt;Ça y est !&lt;/h2&gt;
+
+&lt;p&gt;L’application est disponible pour tout le monde sur le Play store.&lt;/p&gt;
+&lt;div style='text-align:center;margin-bottom:50px'&gt;
+    &lt;a href='https://play.google.com/store/apps/details?id=com.codetroopers.transport.tours'&gt;
+        &lt;img alt='QRcode application Aucard de Tours' class='medium' src='/images/postNavigTours2/qrCode_playstore_navigtours.png' /&gt;
+    &lt;/a&gt;
+    &lt;a href='https://play.google.com/store/apps/details?id=com.codetroopers.transport.tours'&gt;
+        &lt;img alt='Get it on Google Play' src='https://developer.android.com/images/brand/fr_generic_rgb_wo_60.png' /&gt;
+    &lt;/a&gt;
+&lt;/div&gt;&lt;div style='text-align:center;margin:50px'&gt;
+    &lt;a class='inlineBoxes' data-lightbox='group-1' href='/images/postNavigTours2/preview_search.png' title=''&gt;
+        &lt;img alt='Google watch 1' class='medium' src='/images/postNavigTours2/preview_search.png' /&gt;
+    &lt;/a&gt;
+    &lt;a class='inlineBoxes' data-lightbox='group-1' href='/images/postNavigTours2/preview_map.png' title=''&gt;
+        &lt;img alt='Google watch 2' class='medium' src='/images/postNavigTours2/preview_map.png' /&gt;
+    &lt;/a&gt;
+    &lt;a class='inlineBoxes' data-lightbox='group-1' href='/images/postNavigTours2/preview_favorite.png' title=''&gt;
+        &lt;img alt='Google watch 3' class='medium' src='/images/postNavigTours2/preview_favorite.png' /&gt;
+    &lt;/a&gt;
+    &lt;a class='inlineBoxes' data-lightbox='group-1' href='/images/postNavigTours2/preview_stop_detail.png' title=''&gt;
+        &lt;img alt='Google watch 4' class='medium' src='/images/postNavigTours2/preview_stop_detail.png' /&gt;
+    &lt;/a&gt;
+    &lt;a class='inlineBoxes' data-lightbox='group-1' href='/images/postNavigTours2/preview_notifications.png' title=''&gt;
+        &lt;img alt='Google watch 5' class='medium' src='/images/postNavigTours2/preview_notifications.png' /&gt;
+    &lt;/a&gt;
+    &lt;a class='inlineBoxes' data-lightbox='group-1' href='/images/postNavigTours2/preview_settings.png' title=''&gt;
+        &lt;img alt='Google watch 6' class='medium' src='/images/postNavigTours2/preview_settings.png' /&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+&lt;h2 id=&quot;merci_aux_testeurs&quot;&gt;Merci aux testeurs&lt;/h2&gt;
+
+&lt;p&gt;Nous avions lancé l’application en test lors de la soirée bêta organisée par &lt;a href=&quot;https://twitter.com/paloaltours&quot;&gt;@paloaltours&lt;/a&gt; à la &lt;a href=&quot;https://twitter.com/cantinebtatours&quot;&gt;cantine de Tours&lt;/a&gt; le 21 octobre dernier. Grâce à cela, et au retour de plus de 70 testeurs nous avons amélioré certaines choses et même corrigé quelques (rares) bugs. Nous avons aussi pris en compte un certain nombre de remarques quant aux fonctionnalités disponibles à travers l’application.&lt;/p&gt;
+
+&lt;p&gt;Merci donc à tous ceux qui ont testé l’application et surtout continuez à nous faire part de vos remarques et souhaits.&lt;/p&gt;
+
+&lt;h2 id=&quot;la_suite&quot;&gt;La suite&lt;/h2&gt;
+
+&lt;p&gt;Car ce n’est pas fini (un développement informatique l’est rarement). Il y a encore plein de choses que l’on souhaite ajouter dans l’application (par exemple la liste des lignes du réseau fil bleu, avoir des alertes lors des perturbations…). Mais nous n’avons pas un temps illimité à consacrer à cette application. Donc des évolutions viendront s’ajouter au fil des mises à jours, mais nous ne pouvons pas donner de dates pour celles-ci.&lt;/p&gt;</description>
+                                <pubDate>Fri, 05 Dec 2014 00:00:00 +0100</pubDate>
+                                <link>http://code-troopers.com/2014/12/05/NavigTours_Application_Android_Disponible.html</link>
+                                <guid isPermaLink="true">http://code-troopers.com/2014/12/05/NavigTours_Application_Android_Disponible.html</guid>
+                        </item>
+                
+                        <item>
                                 <title>Squelette Android 5.0</title>
                                 <description>&lt;h2 id=&quot;pourquoi_&quot;&gt;Pourquoi ?&lt;/h2&gt;
 
@@ -200,33 +246,22 @@ Et comme hier soir a eu lieu la première soirée bêta-test organisée à la &l
     &lt;/div&gt;
 &lt;h3&gt;Je veux être bêta-testeur !&lt;/h3&gt;
     &lt;p&gt;
-    Pour cela, rien de plus simple, et en plus vous avez le choix :
+        &lt;del&gt;Pour cela, rien de plus simple, et en plus vous avez le choix :&lt;/del&gt;
     &lt;/p&gt;
     &lt;ul&gt;
-        &lt;li&gt;&lt;b&gt;Rejoindre notre communauté Google+&lt;/b&gt; &lt;a href=&quot;https://plus.google.com/communities/103478157157356210565&quot;&gt;Code-Troopers Bêta&lt;/a&gt;, ce qui donne immédiatement accès à la bêta ;&lt;/li&gt;
-        &lt;li&gt;&lt;b&gt;Inscrivez-vous avec l’email de votre compte Android&lt;/b&gt; ci-après, et nous vous ajouterons dans la liste des bêta-testeurs. Ensuite, en fonction de l’heure à laquelle nous recevrons la demande, vous aurez accès à la bêta plus ou moins rapidement.&lt;/li&gt;
+        &lt;li&gt;&lt;del&gt;&lt;b&gt;Rejoindre notre communauté Google+&lt;/b&gt; &lt;a href=&quot;https://plus.google.com/communities/103478157157356210565&quot;&gt;Code-Troopers Bêta&lt;/a&gt;, ce qui donne immédiatement accès à la bêta ;&lt;/del&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;del&gt;&lt;b&gt;Inscrivez-vous avec l’email de votre compte Android&lt;/b&gt; ci-après, et nous vous ajouterons dans la liste des bêta-testeurs. Ensuite, en fonction de l’heure à laquelle nous recevrons la demande, vous aurez accès à la bêta plus ou moins rapidement.&lt;/del&gt;&lt;/li&gt;
     &lt;/ul&gt;
-    &lt;br /&gt;
-    &lt;!-- Begin MailChimp Signup Form --&gt;
-    &lt;div id=&quot;mc_embed_signup text-center&quot;&gt;
-        &lt;form action=&quot;//code-troopers.us8.list-manage.com/subscribe/post?u=f163ac78ea17d91c5f8c88a39&amp;amp;id=4a22cf5a31&quot;
-              method=&quot;post&quot; id=&quot;mc-embedded-subscribe-form&quot; name=&quot;mc-embedded-subscribe-form&quot;
-              class=&quot;validate navbar-form&quot; target=&quot;_blank&quot; novalidate&gt;
-            &lt;div class=&quot;col-lg-6&quot;&gt;
-                &lt;div class=&quot;input-group&quot;&gt;
-                    &lt;input type=&quot;email&quot; value=&quot;&quot; name=&quot;EMAIL&quot; class=&quot;email form-control&quot; id=&quot;mce-EMAIL&quot; placeholder=&quot;email@example.com&quot; required&gt;
-                    &lt;!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups--&gt;
-                    &lt;span style=&quot;position: absolute; left: -5000px;&quot;&gt;&lt;input type=&quot;text&quot; name=&quot;b_f163ac78ea17d91c5f8c88a39_4a22cf5a31&quot;tabindex=&quot;-1&quot; value=&quot;&quot;&gt;&lt;/span&gt;
-                    &lt;span class=&quot;input-group-btn&quot;&gt;
-                        &lt;input type=&quot;submit&quot; value=&quot;Participer&quot; name=&quot;subscribe&quot; id=&quot;mc-embedded-subscribe&quot;class=&quot;btn btn-default&quot; style=&quot;color: white; background-color: #004353;&quot;&gt;
-                    &lt;/span&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-        &lt;/form&gt;
+    &lt;p style=&quot;color:red&quot;&gt;La phase de bêta-test est terminée. L'application Navig'Tours est accessible pour tous sur le Play Store :&lt;/p&gt;
+    &lt;div style=&quot;text-align:center;margin-bottom:50px&quot;&gt;
+        &lt;a href=&quot;https://play.google.com/store/apps/details?id=com.codetroopers.transport.tours&quot;&gt;
+            &lt;img class=&quot;medium&quot; alt=&quot;QRcode application Aucard de Tours&quot; src=&quot;/images/postNavigTours2/qrCode_playstore_navigtours.png&quot; /&gt;
+        &lt;/a&gt;
+        &lt;a href=&quot;https://play.google.com/store/apps/details?id=com.codetroopers.transport.tours&quot;&gt;
+            &lt;img alt=&quot;Get it on Google Play&quot; src=&quot;https://developer.android.com/images/brand/fr_generic_rgb_wo_60.png&quot; /&gt;
+        &lt;/a&gt;
     &lt;/div&gt;
-    &lt;div class=&quot;clearfix&quot;&gt;&lt;/div&gt;
-    &lt;!--End mc_embed_signup--&gt;
-    &lt;br /&gt;
+
     &lt;p&gt;
         Et pour vous tenir informé des dernières nouveautées vous pouvez suivre le twitter dédié &lt;a href=&quot;https://twitter.com/NavigTours&quot;&gt;@NavigTours&lt;/a&gt; et bien sur le compte &lt;a href=&quot;https://twitter.com/codetroopers&quot;&gt;@CodeTroopers&lt;/a&gt;.
     &lt;/p&gt;
@@ -581,63 +616,6 @@ Et comme hier soir a eu lieu la première soirée bêta-test organisée à la &l
                                 <pubDate>Wed, 23 Jul 2014 00:00:00 +0200</pubDate>
                                 <link>http://code-troopers.com/2014/07/23/CourseraAndroid2.html</link>
                                 <guid isPermaLink="true">http://code-troopers.com/2014/07/23/CourseraAndroid2.html</guid>
-                        </item>
-                
-                        <item>
-                                <title>L'application Terres du Son est disponible</title>
-                                <description>&lt;p&gt;C’était annoncé, c’est maintenant chose faite ! L’application android pour &lt;em&gt;Terres du Son 2014&lt;/em&gt; est sur le Play Store.&lt;/p&gt;
-
-&lt;p&gt;Développée en partenariat avec l’équipe de TDS, cette application vous offre la possibilité de :&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Consulter la programmation jour par jour&lt;/li&gt;
-
-&lt;li&gt;Être notifié avant le passage d’un artiste (pour ne pas rater le début)&lt;/li&gt;
-
-&lt;li&gt;Être notifié avant le départ des navettes Fil Vert (pour ne pas rentrer à pied !)&lt;/li&gt;
-
-&lt;li&gt;Écouter la playlist officielle du festival&lt;/li&gt;
-
-&lt;li&gt;Écouter le dernier album de chaque artiste&lt;/li&gt;
-
-&lt;li&gt;Accéder à une fiche détaillée de l’artiste (liens web, vidéo, biographie…)&lt;/li&gt;
-
-&lt;li&gt;Connaître en temps réel ce qui passe et ce qui va suivre pour chacune des scènes&lt;/li&gt;
-
-&lt;li&gt;Consulter les horaires des navettes Fil Vert (qui font les aller-retours entre la gare routière de Tours et l’entrée du site)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;!--break--&gt;&lt;div style='text-align:center;margin:50px'&gt;
-    &lt;a class='inlineBoxes' data-lightbox='group-2' href='/images/postTDS2/launch.png' title='Splash screen de l&amp;apos;application'&gt;
-        &lt;img alt='Splash screen' class='medium' src='/images/postTDS2/launch.png' /&gt;
-    &lt;/a&gt;
-    &lt;a class='inlineBoxes' data-lightbox='group-2' href='/images/postTDS2/home.png' title='Menu de l&amp;apos;application'&gt;
-        &lt;img alt='Menu screen' class='medium' src='/images/postTDS2/home.png' /&gt;
-    &lt;/a&gt;
-    &lt;a class='inlineBoxes' data-lightbox='group-2' href='/images/postTDS2/prog.png' title='Programme par jour et par scène'&gt;
-        &lt;img alt='Programme screen' class='medium' src='/images/postTDS2/prog.png' /&gt;
-    &lt;/a&gt;
-    &lt;a class='inlineBoxes' data-lightbox='group-2' href='/images/postTDS2/artiste.png' title='Une fiche artiste de l&amp;apos;application'&gt;
-        &lt;img alt='Artist screen' class='medium' src='/images/postTDS2/artiste.png' /&gt;
-    &lt;/a&gt;
-    &lt;a class='inlineBoxes' data-lightbox='group-2' href='/images/postTDS2/notifs.png' title='Récap de notifications plannifiées pour les navettes'&gt;
-        &lt;img alt='Alerte screen' class='medium' src='/images/postTDS2/notifs.png' /&gt;
-    &lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;Rendez-vous dès à présent sur le Play Store pour télécharger l’appli.&lt;br /&gt; Terres du Son est engagé dans une démarche de développement durable, télécharger l’application, c’est aussi imprimer moins de programmes et donc réduire les déchets.&lt;br /&gt; Et comme pour tous les festivals en région Centre, pensez à venir avec votre gobelet réutilisable.&lt;/p&gt;
-&lt;div style='text-align:center;margin:50px'&gt;
-    &lt;a href='https://play.google.com/store/apps/details?id=com.codetroopers.terresduson'&gt;
-      &lt;img alt='QRcode application Terres du Son' class='medium' src='/images/postTDS2/qrcode_playstore_tds.png' /&gt;
-    &lt;/a&gt;
-    &lt;a href='https://play.google.com/store/apps/details?id=com.codetroopers.terresduson'&gt;
-      &lt;img alt='Get it on Google Play' src='https://developer.android.com/images/brand/fr_generic_rgb_wo_60.png' /&gt;
-    &lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;Tous les retours, positifs comme négatifs sont les bienvenus. Alors n’hésitez pas à donner votre avis, nous en tiendrons compte pour les prochaines versions de l’application.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;&lt;code&gt;NB&lt;/code&gt; : pour profiter pleinement des fonctionnalités d’écoute de la playlist Terres du Son et des albums des artistes il est nécessaire de connecter son compte &lt;a href='http://www.deezer.com/offers/premiumplus'&gt;premium+ Deezer&lt;/a&gt;, dans le cas contraire, Deezer limite l’écoute à 30 secondes par morceau.&lt;/em&gt;&lt;/p&gt;</description>
-                                <pubDate>Tue, 24 Jun 2014 00:00:00 +0200</pubDate>
-                                <link>http://code-troopers.com/2014/06/24/TDS2.html</link>
-                                <guid isPermaLink="true">http://code-troopers.com/2014/06/24/TDS2.html</guid>
                         </item>
                 
         </channel>
