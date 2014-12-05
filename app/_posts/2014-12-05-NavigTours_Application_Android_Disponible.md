@@ -41,7 +41,7 @@ L'application est disponible pour tout le monde sur le Play store.
 
 ## Merci aux testeurs
 Nous avions lancé l'application en test lors de la soirée bêta organisée par [@paloaltours](https://twitter.com/paloaltours) à la [cantine de Tours](https://twitter.com/cantinebtatours) le 21 octobre dernier.
-Grâce à cela, et au retour de plus de 70 testeurs nous avons amélioré certaines choses et même corrigé quelques (rares) bugs.
+Grâce à cela, et au retours de plus de 70 testeurs, nous avons amélioré certaines choses et même corrigé quelques (rares) bugs.
 Nous avons aussi pris en compte un certain nombre de remarques quant aux fonctionnalités disponibles à travers l'application.
 
 Merci donc à tous ceux qui ont testé l'application et surtout continuez à nous faire part de vos remarques et souhaits.
@@ -49,5 +49,5 @@ Merci donc à tous ceux qui ont testé l'application et surtout continuez à nou
 
 ## La suite
 Car ce n'est pas fini (un développement informatique l'est rarement).
-Il y a encore plein de choses que l'on souhaite ajouter dans l'application (par exemple la liste des lignes du réseau fil bleu, avoir des alertes lors des perturbations…).
+Il y a encore plein de choses que l'on souhaite ajouter dans l'application (par exemple la liste des lignes du réseau Fil Bleu, recevoir des alertes lors des perturbations…).
 Mais nous n'avons pas un temps illimité à consacrer à cette application. Donc des évolutions viendront s'ajouter au fil des mises à jours, mais nous ne pouvons pas donner de dates pour celles-ci.
