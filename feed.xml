@@ -13,43 +13,75 @@
 &lt;p&gt;L’application est disponible pour tout le monde sur le Play store.&lt;/p&gt;
 &lt;div style='text-align:center;margin-bottom:50px'&gt;
     &lt;a href='https://play.google.com/store/apps/details?id=com.codetroopers.transport.tours'&gt;
-        &lt;img alt='QRcode application Aucard de Tours' class='medium' src='/images/postNavigTours2/qrCode_playstore_navigtours.png' /&gt;
+        &lt;img alt='QRcode application Navig&amp;apos;Tours' class='medium' src='/images/postNavigTours2/qrCode_playstore_navigtours.png' /&gt;
     &lt;/a&gt;
     &lt;a href='https://play.google.com/store/apps/details?id=com.codetroopers.transport.tours'&gt;
         &lt;img alt='Get it on Google Play' src='https://developer.android.com/images/brand/fr_generic_rgb_wo_60.png' /&gt;
     &lt;/a&gt;
-&lt;/div&gt;&lt;div style='text-align:center;margin:50px'&gt;
-    &lt;a class='inlineBoxes' data-lightbox='group-1' href='/images/postNavigTours2/preview_search.png' title=''&gt;
-        &lt;img alt='Google watch 1' class='medium' src='/images/postNavigTours2/preview_search.png' /&gt;
+&lt;/div&gt;&lt;!--break--&gt;&lt;div style='text-align:center;margin:50px'&gt;
+    &lt;a class='inlineBoxes' data-lightbox='group-1' href='/images/postNavigTours2/preview_search.png' title='Écrans recherche d&amp;apos;itinéraire'&gt;
+        &lt;img alt='Écrans recherche d&amp;apos;itinéraire' class='medium' src='/images/postNavigTours2/preview_search.png' /&gt;
     &lt;/a&gt;
-    &lt;a class='inlineBoxes' data-lightbox='group-1' href='/images/postNavigTours2/preview_map.png' title=''&gt;
-        &lt;img alt='Google watch 2' class='medium' src='/images/postNavigTours2/preview_map.png' /&gt;
+    &lt;a class='inlineBoxes' data-lightbox='group-1' href='/images/postNavigTours2/preview_map.png' title='Écran carte des arrêts'&gt;
+        &lt;img alt='Écran carte des arrêts' class='medium' src='/images/postNavigTours2/preview_map.png' /&gt;
     &lt;/a&gt;
-    &lt;a class='inlineBoxes' data-lightbox='group-1' href='/images/postNavigTours2/preview_favorite.png' title=''&gt;
-        &lt;img alt='Google watch 3' class='medium' src='/images/postNavigTours2/preview_favorite.png' /&gt;
+    &lt;a class='inlineBoxes' data-lightbox='group-1' href='/images/postNavigTours2/preview_favorite.png' title='Écrans arrêts favoris'&gt;
+        &lt;img alt='Écrans arrêts favoris' class='medium' src='/images/postNavigTours2/preview_favorite.png' /&gt;
     &lt;/a&gt;
-    &lt;a class='inlineBoxes' data-lightbox='group-1' href='/images/postNavigTours2/preview_stop_detail.png' title=''&gt;
-        &lt;img alt='Google watch 4' class='medium' src='/images/postNavigTours2/preview_stop_detail.png' /&gt;
+    &lt;a class='inlineBoxes' data-lightbox='group-1' href='/images/postNavigTours2/preview_stop_detail.png' title='Écran arrêt'&gt;
+        &lt;img alt='Écran arrêt' class='medium' src='/images/postNavigTours2/preview_stop_detail.png' /&gt;
     &lt;/a&gt;
-    &lt;a class='inlineBoxes' data-lightbox='group-1' href='/images/postNavigTours2/preview_notifications.png' title=''&gt;
-        &lt;img alt='Google watch 5' class='medium' src='/images/postNavigTours2/preview_notifications.png' /&gt;
+    &lt;a class='inlineBoxes' data-lightbox='group-1' href='/images/postNavigTours2/preview_notifications.png' title='Écrans notifications'&gt;
+        &lt;img alt='Écrans notifications' class='medium' src='/images/postNavigTours2/preview_notifications.png' /&gt;
     &lt;/a&gt;
-    &lt;a class='inlineBoxes' data-lightbox='group-1' href='/images/postNavigTours2/preview_settings.png' title=''&gt;
-        &lt;img alt='Google watch 6' class='medium' src='/images/postNavigTours2/preview_settings.png' /&gt;
+    &lt;a class='inlineBoxes' data-lightbox='group-1' href='/images/postNavigTours2/preview_settings.png' title='Écran paramètre'&gt;
+        &lt;img alt='Écran paramètre' class='medium' src='/images/postNavigTours2/preview_settings.png' /&gt;
     &lt;/a&gt;
 &lt;/div&gt;
 &lt;h2 id=&quot;merci_aux_testeurs&quot;&gt;Merci aux testeurs&lt;/h2&gt;
 
-&lt;p&gt;Nous avions lancé l’application en test lors de la soirée bêta organisée par &lt;a href=&quot;https://twitter.com/paloaltours&quot;&gt;@paloaltours&lt;/a&gt; à la &lt;a href=&quot;https://twitter.com/cantinebtatours&quot;&gt;cantine de Tours&lt;/a&gt; le 21 octobre dernier. Grâce à cela, et au retour de plus de 70 testeurs nous avons amélioré certaines choses et même corrigé quelques (rares) bugs. Nous avons aussi pris en compte un certain nombre de remarques quant aux fonctionnalités disponibles à travers l’application.&lt;/p&gt;
+&lt;p&gt;Nous avions lancé l’application en test lors de la soirée bêta organisée par &lt;a href=&quot;https://twitter.com/paloaltours&quot;&gt;@paloaltours&lt;/a&gt; à la &lt;a href=&quot;https://twitter.com/cantinebtatours&quot;&gt;cantine de Tours&lt;/a&gt; le 21 octobre dernier. Grâce à cela, et au retours de plus de 70 testeurs, nous avons amélioré certaines choses et même corrigé quelques (rares) bugs. Nous avons aussi pris en compte un certain nombre de remarques quant aux fonctionnalités disponibles à travers l’application.&lt;/p&gt;
 
 &lt;p&gt;Merci donc à tous ceux qui ont testé l’application et surtout continuez à nous faire part de vos remarques et souhaits.&lt;/p&gt;
 
 &lt;h2 id=&quot;la_suite&quot;&gt;La suite&lt;/h2&gt;
 
-&lt;p&gt;Car ce n’est pas fini (un développement informatique l’est rarement). Il y a encore plein de choses que l’on souhaite ajouter dans l’application (par exemple la liste des lignes du réseau fil bleu, avoir des alertes lors des perturbations…). Mais nous n’avons pas un temps illimité à consacrer à cette application. Donc des évolutions viendront s’ajouter au fil des mises à jours, mais nous ne pouvons pas donner de dates pour celles-ci.&lt;/p&gt;</description>
+&lt;p&gt;Car ce n’est pas fini (un développement informatique l’est rarement). Il y a encore plein de choses que l’on souhaite ajouter dans l’application (par exemple la liste des lignes du réseau Fil Bleu, recevoir des alertes lors des perturbations…). Mais nous n’avons pas un temps illimité à consacrer à cette application. Donc des évolutions viendront s’ajouter au fil des mises à jours, mais nous ne pouvons pas donner de dates pour celles-ci.&lt;/p&gt;</description>
                                 <pubDate>Fri, 05 Dec 2014 00:00:00 +0100</pubDate>
                                 <link>http://code-troopers.com/2014/12/05/NavigTours_Application_Android_Disponible.html</link>
                                 <guid isPermaLink="true">http://code-troopers.com/2014/12/05/NavigTours_Application_Android_Disponible.html</guid>
+                        </item>
+                
+                        <item>
+                                <title>elCurator devient payant !</title>
+                                <description>&lt;p&gt;J’avais parlé cet été dans &lt;a href=&quot;http://code-troopers.com/2014/08/08/ElCurator.html&quot;&gt;un autre article&lt;/a&gt; du nouvel outil d’&lt;a href=&quot;www.octo.com&quot;&gt;OCTO Technology&lt;/a&gt; pour le partage de contenu au sein d’une entreprise. Depuis, entre Code-Troopers (+ 2 autres amis codeurs) nous l’utilisons quotidiennement.&lt;/p&gt;
+&lt;!--break--&gt;
+&lt;h2 id=&quot;douche_froide&quot;&gt;Douche Froide&lt;/h2&gt;
+
+&lt;p&gt;Quelle ne fût pas ma surprise lorsqu’hier j’ai reçu un mail de la part du product manager m’indiquant que le produit &lt;em&gt;“sort de sa phase de test en 2015”&lt;/em&gt;. Nulle part sur le site il n’est précisé que le produit est en phase bêta (ou de test), et il est meme encore visible sur la page &lt;code&gt;inscription gratuite&lt;/code&gt;&lt;/p&gt;
+&lt;div style='text-align:center;margin-bottom:50px'&gt;
+    &lt;a class='inlineBoxes' data-lightbox='group-1' href='/images/postElCurator2/elcurator_home.png' title='elCurator Home Page'&gt;
+        &lt;img alt='elCurator Home Page' class='medium' src='/images/postElCurator2/elcurator_home.png' /&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+&lt;h2 id=&quot;660_en_licence_annuelle&quot;&gt;660€ en licence annuelle&lt;/h2&gt;
+
+&lt;p&gt;Le plus embêtant là-dedans étant le coût lié à ce passage en production : &lt;em&gt;“60€/mois ou 660€ en licence annuelle”&lt;/em&gt; car nous sommes une équipe entre 5 et 20 personnes (j’oublie volontairement les 10% de remise la première année).&lt;/p&gt;
+
+&lt;p&gt;Certes, il y a du travail (en tant que dev nous aussi on apprécie que notre travail soit payé à sa juste valeur), et du travail bien fait. C’est un beau produit qui fonctionne bien, il faut aussi compter l’hébergement et sûrement d’autres coûts cachés… Mais tout de même ça commence à représenter un budget.&lt;/p&gt;
+&lt;div style='text-align:center;margin-top:50px'&gt;
+    &lt;a class='inlineBoxes' data-lightbox='group-2' href='/images/postElCurator2/elcurator_monde.png' title='elCurator Page Monde'&gt;
+        &lt;img alt='elCurator Page Monde' class='medium' src='/images/postElCurator2/elcurator_monde.png' /&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;C’est d’autant plus dommage que la fonctionnalité de partage monde, ajoutée après le lancement, et qui permet de trouver facilement des liens pertinents sur l’actualité du monde du développement informatique est vraiment utile pour faire de la veille.&lt;/p&gt;
+
+&lt;h2 id=&quot;fin&quot;&gt;Fin&lt;/h2&gt;
+
+&lt;p&gt;C’est donc une grande déception, mais certainement pas la fin du monde. Nous allons maintenant nous mettre en quête d’un nouvel outil pour partager nos liens.&lt;/p&gt;</description>
+                                <pubDate>Fri, 05 Dec 2014 00:00:00 +0100</pubDate>
+                                <link>http://code-troopers.com/2014/12/05/ElCurator2.html</link>
+                                <guid isPermaLink="true">http://code-troopers.com/2014/12/05/ElCurator2.html</guid>
                         </item>
                 
                         <item>
@@ -541,81 +573,6 @@ Et comme hier soir a eu lieu la première soirée bêta-test organisée à la &l
                                 <pubDate>Fri, 08 Aug 2014 00:00:00 +0200</pubDate>
                                 <link>http://code-troopers.com/2014/08/08/ElCurator.html</link>
                                 <guid isPermaLink="true">http://code-troopers.com/2014/08/08/ElCurator.html</guid>
-                        </item>
-                
-                        <item>
-                                <title>Coursera - Android Handheld Systems : 3ème et dernier cours</title>
-                                <description>&lt;h3&gt;On Enchaîne !&lt;/h3&gt;
-&lt;p&gt;
-    Ce lundi 21 juillet vient de débuter &lt;a
-        href=&quot;https://class.coursera.org/mobilecloud-001&quot;&gt;le 3ème cours&lt;/a&gt; de la série sur le développement Android proposée par Coursera, alors que
-    &lt;a href=&quot;https://class.coursera.org/posa-002&quot;&gt;le second&lt;/a&gt; vient à peine de se terminer et que les résultats n'ont pas encore été envoyés.
-    Pour rappel le cours qui vient de s’achever a traité en grande majorité tout ce qui touche aux Threads, Services (binding, starting), tâche synchrone &amp; asynchrone, Messenger, AIDL.... (rien que ça)
-&lt;/p&gt;
-&lt;!--break--&gt;
-&lt;p&gt;
-    La prochaine étape que nous propose Coursera intitulée
-    &lt;b&gt;Programming Cloud Services for Android Handheld Systems&lt;/b&gt; sera axée sur la création d'applications qui communiqueront avec des serveurs &quot;dans le cloud&quot;.
-    Ce qui semble correspondre à la majorité des applications actuelles offrant un minimum de fonctionnalités.
-&lt;/p&gt;
-&lt;h3&gt;Il faut emporter son pc à la plage ?&lt;/h3&gt;
-&lt;p&gt;
-    Pas de soucis pour suivre ce cours pendant les vacances. Initialement prévu sur 6 semaines il a été étendu sur 10 semaines,
-    et les jalons habituels pour rendre les exercices (une fois par semaine) on été enlevés.
-    Ainsi aucun problème pour partir 2 ou 3 semaines en vacances, il n’y aura pas de pénalité ni de retard pris dans le cheminement du cours.
-&lt;/p&gt;
-&lt;p&gt;
-    En revanche, le point négatif de ce cours risque d’être les supports. En effet seules des vidéos seront disponibles,
-    &lt;a href=&quot;https://www.coursera.org/instructor/juleswhite&quot;&gt;Jules White&lt;/a&gt; travaillant avec un tableau transparent sur lequel il dessine, aucun silde ne sera téléchargeable pour lire à son rythme.
-&lt;/p&gt;
-
-&lt;h3&gt;&quot;Go to class&quot;&lt;/h3&gt;
-&lt;p&gt;
-    Les premières vidéos sont déjà en ligne, donc si vous êtes intéressé, il est encore temps de s’inscrire pour travailler tout l’été,
-    &lt;a href=&quot;https://www.coursera.org/course/mobilecloud&quot;&gt;c'est par là&lt;/a&gt;
-&lt;/p&gt;
-
-&lt;h3&gt;Retours sur le cours N°2 &lt;/h3&gt;
-&lt;p&gt;
-    J'ai vraiment apprécié ce cours, principalement parce que  &lt;a href=&quot;https://www.coursera.org/instructor/douglasschmidt&quot;&gt;Douglas Schmidt&lt;/a&gt; maîtrise son sujet.
-    Autant sur le fonctionnement d'Android qu'il a profondément étudié ou sur les patterns qu'il explique et pour lesquels il est reconnu. Ce fut vraiment pour moi, du temps bien investi.
-&lt;/p&gt;
-&lt;p&gt;
-    Mais je voudrais surtout revenir sur l'évaluation des exercices à faire.
-    Je l’avais évoqué dans &lt;a
-        href=&quot;http://code-troopers.com/2014/05/15/CourseraAndroid.html&quot;&gt;mon précédent billet&lt;/a&gt;, la façon dont chacun allait être évalué était une première pour moi (sur Coursera).
-    Il s’agissait de noter le travail d’autres étudiants (au moins 5 pour chaque exercice)
-&lt;/p&gt;
-&lt;p&gt;
-    Comme dans toutes situations, il y a du bon et du mauvais. Personnellement je n'ai pas tellement aimé cette façon de faire, notamment pour les raisons suivantes :
-&lt;/p&gt;
-&lt;ul&gt;
-    &lt;li&gt;Trop gourmand en temps car cela demande le temps de regarder la longue vidéo d'explication des solutions possibles puis en plus celui pour évaluer au moins 5 élèves;&lt;/li&gt;
-    &lt;li&gt;Feedback lent : une semaine pour faire l'exercice puis une nouvelle pour que tout le monde s'entre note, si on a fait quelque chose de travers, c'est quasi oublié;&lt;/li&gt;
-    &lt;li&gt;Noter le travail de quelqu'un n'est pas quelque chose d'évident ni de naturel (même si les points à prendre compte étaient donnés).&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;
-    Mais j'en retiens tout de même ces quelques points positifs :
-&lt;/p&gt;
-&lt;ul&gt;
-    &lt;li&gt;Lire du code d’autres personnes, ça permet de voir d’autres approches et façons de penser(même si là j'ai rarement vu 2 solutions différentes);&lt;/li&gt;
-    &lt;li&gt;Avoir des commentaires sur ses propres solutions (positifs ou négatifs, mais dans les deux cas quelqu’un a pris le temps de regarder, ce qui n’arrive pas si souvent dans la vraie vie).&lt;/li&gt;
-&lt;/ul&gt;
-
-
-&lt;h3&gt;Les MOOCs&lt;/h3&gt;
-&lt;p&gt;
-    Pour le moment chacun des cours que j'ai suivi m'a apporté quelque chose, que ça soit une nouvelle façon de réfléchir (principalement pour le Scala)
-    ou de nombreux éclaircissements sur la façon dont certains systèmes fonctionnent ou doivent fonctionner.
-    Donc si vous avez un peu de temps, même simplement pour regarder les slides ou les vidéos, je vous invite vivement à suivre des MOOC et ce quelque soit la plateforme.
-&lt;/p&gt;
-
-
-
-</description>
-                                <pubDate>Wed, 23 Jul 2014 00:00:00 +0200</pubDate>
-                                <link>http://code-troopers.com/2014/07/23/CourseraAndroid2.html</link>
-                                <guid isPermaLink="true">http://code-troopers.com/2014/07/23/CourseraAndroid2.html</guid>
                         </item>
                 
         </channel>
