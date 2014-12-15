@@ -6,12 +6,12 @@ cover: ct-banner
 tags: [Shell, Helper]
 ---
 
-Dans l’équipe Code-Troopers, nous manipulons un ensemble de technos qui sont assez différentes et qui possèdent chacune leur façon “officielle” de fonctionner en ligne de commande.
-Du coup, un de nos problèmes récurrent était de se rappeler de quelle commande lance l’application (`mvn jetty:run`, `gradle assemble`, `grunt serve`…).
+Dans l’équipe Code-Troopers, nous manipulons des technos qui sont assez différentes et qui possèdent chacune un vocabulaire différent qui leur peremet de fonctionner en ligne de commande.
+Du coup, un de nos problèmes récurrent est de se rappeler quelle commande dois-je lancer lorsque je veux travailler sur tel projet (`mvn jetty:run`, `gradle assemble`, `grunt serve`…).
 
-L’autre côté pénible à avoir plein de façon différentes de fonctionner est qu’il est quasiment impossible d’avoir des alias pertinents dans son shell préféré.
+Un autre aspect pénible à avoir plein de façon différentes de fonctionner est qu’il est quasiment impossible d’avoir des alias pertinents dans son shell préféré.
 
-Fort de ce constat pénible, nous avons entrepris d’écrire notre petit outil qui nous permet de moins réflechir quand on change de projet, puisqu’on est pas super imaginatif et qu’on n’avait pas encore de petit outil à notre nom, nous l’avons nommé “ct”.
+Fort de ce constat, nous avons entrepris d’écrire notre petit outil qui nous permet de moins réflechir quand on change de projet. Puisqu’on est pas super imaginatif et qu’on n’avait pas encore de petit outil à notre nom, nous l’avons nommé “ct”.
 <!-- break -->
 
 Qu’est ce que c’est ?
