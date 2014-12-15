@@ -70,3 +70,8 @@ Nous avons donc rajouté la commande `ct ports` qui démarre un micro serveur ht
 </div>
 
 Pour pouvoir utiliser cette commande, il faut que les quelques outils suivants soient installés : _netcat_, _awk_, _wget_ et _lsof_.
+
+### Exemple d'utilisation
+<div style="text-align:center;">
+<video controls src="/videos/screencast_ct.webm">Screencast d'une utilisation quotidienne de ct.</video>
+</div>
