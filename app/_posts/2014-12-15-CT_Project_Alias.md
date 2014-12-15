@@ -37,7 +37,7 @@ Tout se fait en très peu d’étapes :
 
 Référez-vous au [README](https://github.com/code-troopers/ct/blob/master/README.md) présent sur le dépôt [Github](https://github.com/code-troopers/ct/). 
 
-Pour résummer il est juste nécessaire de placer une copie du script dans votre `$PATH`.
+Pour résumer il est juste nécessaire de placer une copie du script dans votre `$PATH`.
 
     CT_TARGET=~/bin;mkdir $CT_TARGET; wget -O $CT_TARGET/ct https://raw.githubusercontent.com/code-troopers/ct/master/ct && chmod +x $CT_TARGET/ct
 
@@ -58,19 +58,15 @@ Il suffit de lancer la commande qui correspond à un alias (par exemple ici : `c
 
 En définissant votre nomenclature d’alias par projet, vous pourrez vous permettre d’exporter des alias globaux sur vos machines pour appeler `ct`.
 
-Petit bonus
+Bonus : lister les ports ouverts
 ----
-Puisque nous jonglons souvent entre les projets, un des autres soucis que nous avons est que nous oublions parfois les ports sur lesquels les projets écoutent et nous avons souvent plusieurs projets de démarrés sans même nous rappeler qu’ils le sont (surtout avec les projets légers REST/AngularJS).
+Puisque nous jonglons souvent entre projets, un autres soucis que nous avons est que nous oublions les ports sur lesquels chaques projets écoutent. En plus, nous avons souvent plusieurs projets de démarrés sans même nous rappeler qu’ils le sont (surtout avec les projets légers REST/AngularJS).
 
-Nous avons donc rajouté la commande `ct ports` qui démarre un micro serveur http et permet de récupérer la liste des ports qui attendent des connexions sur nos machines, ainsi que le dossier de travail courant (ce qui est souvent suffisant pour savoir de quel projet il s’agit).
-Pour pouvoir utiliser cette commande, il faut quelques outils (et désolé, ça ne fonctionne pas sous Windows) :
-
-* netcat
-* awk
-* wget
-* lsof
+Nous avons donc rajouté la commande `ct ports` qui démarre un micro serveur http et permet de récupérer la liste des ports qui attendent des connexions sur nos machines, ainsi que le dossier de travail associé (ce qui est souvent suffisant pour savoir de quel projet il s’agit).
 
 <div style="text-align:center;">
     <a href="/images/postCT/listen.png" title="Exemple de listing des ports" data-lightbox="group1">
     <img class="medium" src="/images/postCT/listen.png" alt="Exemple de listing des ports"></a>
 </div>
+
+Pour pouvoir utiliser cette commande, il faut que les quelques outils suivant soient installés : _netcat_, _awk_, _wget_ et _lsof_.
