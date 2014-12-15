@@ -7,22 +7,22 @@ tags: [Shell, Helper]
 ---
 
 Dans l’équipe Code-Troopers, nous manipulons des technos qui sont assez différentes et qui possèdent chacune un vocabulaire différent qui leur peremet de fonctionner en ligne de commande.
-Du coup, un de nos problèmes récurrent est de se rappeler quelle commande dois-je lancer lorsque je veux travailler sur tel projet (`mvn jetty:run`, `gradle assemble`, `grunt serve`…).
+Du coup, un de nos problèmes récurrents est de se rappeler quelle commande dois-je lancer lorsque je veux travailler sur tel projet (`mvn jetty:run`, `gradle assemble`, `grunt serve`…).
 
-Un autre aspect pénible à avoir plein de façon différentes de fonctionner est qu’il est quasiment impossible d’avoir des alias pertinents dans son shell préféré.
+Un autre aspect pénible à avoir plein de façons différentes de fonctionner est qu’il est quasiment impossible d’avoir des alias pertinents dans son shell préféré.
 
 Fort de ce constat, nous avons entrepris d’écrire notre petit outil qui nous permet de moins réflechir quand on change de projet. Puisqu’on est pas super imaginatif et qu’on n’avait pas encore de petit outil à notre nom, nous l’avons nommé “ct”.
 <!-- break -->
 
 Qu’est ce que c’est ?
 ---
-Imaginez que pour chaque projet vous n’ayiez qu’à remplir un fichier (à la façon de votre `.gitignore`) pour définir les différentes tâches disponibles. Une fois ceci fait, les autres développeurs n’ont plus à se soucier des tâches à lancer, ils peuvent se contenter d’utiliser le vocabulaire commun, de se placer dans le répertoire du projet et de lancer la commande `ct run` au lieu de `mvn jetty:run` (et s’ils veulent connaître la liste des tâches disponibles il le peuvent via un `ct help`).
+Imaginez que pour chaque projet vous n’ayiez qu’à remplir un fichier (à la façon de votre `.gitignore`) pour définir les différentes tâches disponibles. Une fois ceci fait, les autres développeurs n’ont plus à se soucier des tâches à lancer, ils peuvent se contenter d’utiliser le vocabulaire commun, de se placer dans le répertoire du projet et de lancer la commande `ct run` au lieu de `mvn jetty:run` (et s’ils veulent connaître la liste des tâches disponibles ils le peuvent via un `ct help`).
 
 Encore mieux, puisque les commandes sont normalisées, vous pouvez directement exporter vos alias qui accélèrent encore l’utilisation (`run` pour `ct run`), et bingo, c’est transverse pour tous vos projets.
 
 Comment ça marche ?
 ---
-Le tout est un bête script shell qui utilise quelques commandes de base et quelques outils indispensable à tout développeur.
+Le tout est un bête script shell qui utilise quelques commandes de base et quelques outils indispensables à tout développeur.
 
 Quelques spécificités sont à remarquer en fonction de votre OS :
 
@@ -52,7 +52,7 @@ L’idéal étant de le faire au démarrage du projet, plus de questions à se p
 
 ### Utilisation dans un projet
 
-Il suffit de lancer la commande qui correspond à un alias (par exemple ici : `ct run`, `ct debug` ou `ct test`, ou d’exécuter `ct help` pour avoir la liste des alias disponibles.
+Il suffit de lancer la commande qui correspond à un alias (par exemple ici : `ct run`, `ct debug` ou `ct test`, ou d’exécuter `ct help` pour avoir la liste des alias disponibles).
 
 ### Tuning sur plusieurs projets
 
@@ -69,4 +69,4 @@ Nous avons donc rajouté la commande `ct ports` qui démarre un micro serveur ht
     <img class="medium" src="/images/postCT/listen.png" alt="Exemple de listing des ports"></a>
 </div>
 
-Pour pouvoir utiliser cette commande, il faut que les quelques outils suivant soient installés : _netcat_, _awk_, _wget_ et _lsof_.
+Pour pouvoir utiliser cette commande, il faut que les quelques outils suivants soient installés : _netcat_, _awk_, _wget_ et _lsof_.
