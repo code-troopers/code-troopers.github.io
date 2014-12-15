@@ -16,7 +16,7 @@ Fort de ce constat, nous avons entrepris d’écrire notre petit outil qui nous 
 
 Qu’est ce que c’est ?
 ---
-Imaginez que pour chaque projet vous n’ayiez qu’à remplir un fichier (à la façon de votre `.gitignore`) pour définir les différentes tâches courantes. Une fois ceci fait, les autres développeurs n’ont plus à se soucier des tâches à lancer, ils peuvent se contenter d’utiliser le vocabulaire commun, de se placer dans le répertoire du projet et de lancer la commande `ct run` au lieu de `mvn jetty:run` (et s’ils veulent connaître la liste des tâches disponibles il le peuvent via un `ct help`).
+Imaginez que pour chaque projet vous n’ayiez qu’à remplir un fichier (à la façon de votre `.gitignore`) pour définir les différentes tâches disponibles. Une fois ceci fait, les autres développeurs n’ont plus à se soucier des tâches à lancer, ils peuvent se contenter d’utiliser le vocabulaire commun, de se placer dans le répertoire du projet et de lancer la commande `ct run` au lieu de `mvn jetty:run` (et s’ils veulent connaître la liste des tâches disponibles il le peuvent via un `ct help`).
 
 Encore mieux, puisque les commandes sont normalisées, vous pouvez directement exporter vos alias qui accélèrent encore l’utilisation (`run` pour `ct run`), et bingo, c’est transverse pour tous vos projets.
 
@@ -35,7 +35,11 @@ Tout se fait en très peu d’étapes :
 
 ### Installation de l’outil:
 
-Référez-vous au [README](https://github.com/code-troopers/ct/blob/master/README.md) présent sur le dépôt [Github](https://github.com/code-troopers/ct/), mais pour résummer il est juste nécessaire de placer une copie du script dans votre `$PATH`.
+Référez-vous au [README](https://github.com/code-troopers/ct/blob/master/README.md) présent sur le dépôt [Github](https://github.com/code-troopers/ct/). 
+
+Pour résummer il est juste nécessaire de placer une copie du script dans votre `$PATH`.
+
+    CT_TARGET=~/bin;mkdir $CT_TARGET; wget -O $CT_TARGET/ct https://raw.githubusercontent.com/code-troopers/ct/master/ct && chmod +x $CT_TARGET/ct
 
 ### Intégration dans un projet
 Créez à la racine un fichier nommé `.ctproject` qui va contenir vos alias
