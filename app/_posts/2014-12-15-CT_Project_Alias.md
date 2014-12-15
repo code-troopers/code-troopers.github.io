@@ -73,5 +73,10 @@ Pour pouvoir utiliser cette commande, il faut que les quelques outils suivants s
 
 ### Exemple d'utilisation
 <div style="text-align:center;">
-<video controls src="/videos/screencast_ct.webm">Screencast d'une utilisation quotidienne de ct.</video>
+<video width="90%" controls src="/videos/screencast_ct.webm">
+<object type="application/x-shockwave-flash" width="400" height="222" data="http://www.youtube.com/v/HVMoJqg41Bw">
+  <param name="movie" value="http://www.youtube.com/v/jkWjmGdraR8" />
+  <param name="wmode" value="transparent" />
+Screencast d'une utilisation quotidienne de ct. Vous n'avez pas de navigateur moderne, ni Flash installé...
+ </object></video>
 </div>
