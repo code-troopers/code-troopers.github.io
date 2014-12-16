@@ -60,7 +60,7 @@ En définissant votre nomenclature d’alias par projet, vous pourrez vous perme
 
 Bonus : lister les ports ouverts
 ----
-Puisque nous jonglons souvent entre projets, un autres soucis que nous avons est que nous oublions les ports sur lesquels chaque projet écoutent. En plus, nous avons souvent plusieurs projets de démarrés sans même nous rappeler qu’ils le sont (surtout avec les projets légers REST/AngularJS).
+Puisque nous jonglons souvent entre projets, un autres soucis que nous avons est que nous oublions les ports ouverts pour chacun des projets. En plus, nous avons souvent plusieurs projets de démarrés sans même nous rappeler qu’ils le sont (surtout avec les projets légers REST/AngularJS).
 
 Nous avons donc rajouté la commande `ct ports` qui démarre un micro serveur http et permet de récupérer la liste des ports qui attendent des connexions sur nos machines, ainsi que le dossier de travail associé (ce qui est souvent suffisant pour savoir de quel projet il s’agit).
 
