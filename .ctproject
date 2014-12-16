@@ -1,0 +1,2 @@
+run='grunt server'
+dist='grunt server:dist'
