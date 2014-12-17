@@ -140,7 +140,9 @@ module.exports = function (grunt) {
                              }
                          },
                          useminPrepare: {
-                             html: ['<%= yeoman.app %>/{,**/}*.html','!**/bower_components/**'],
+                             html: [
+                                '<%= yeoman.app %>/index.html'
+                                ],
                              options: {
                                  dest: '<%= yeoman.dist %>'
                              }
@@ -240,6 +242,7 @@ module.exports = function (grunt) {
                                              '.gitignore',
                                              'images/{,*/}*.{gif,webp}',
                                              'fonts/*',
+                                             'videos/*',
                                              'data/*.json',
                                              'feed.xml'
                                          ]
