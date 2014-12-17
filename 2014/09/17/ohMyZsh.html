@@ -85,49 +85,58 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
                 </ul>
                 <div class=content>
                     <h2 id=introduction>Introduction</h2>
-
-<p>Que l’on soit dev, ops, sysadmin ou autre pour effectuer nos tâches répétitives et quotidiennes on a généralement deux possibilités : une première communément appelée “clic-clic” qui consiste à utiliser les interfaces graphiques aussi souvent que possible (afin de perdre un maximum de temps) ; et une seconde qualifiée de “barbue” qui elle est orientée ligne de commande, scripting et automatisation. Nous les Code-Troopers, on est plutôt technique de barbus ! Et donc peut importe l’OS qu’on utilise on cherche toujours à avoir le meilleur terminal possible. Par défaut sous linux ou mac OS on trouvera souvent <em>bash</em>, sous windows ce sera <em>powershell</em> mais il en existe d’autres comme <em>csh</em>, <em>ksh</em> ou dans le cas qui nous intéresse <em>zsh</em>. <em>zsh</em> est puissant mais ce n’est pas le sujet du jour de dire pourquoi il serait mieux qu’un autre. En revanche, qui dit puissance dit difficultés de paramétrage ; d’ailleurs à la première utilisation lorsque l’on n’a pas de fichier de configuration il commence par dire qu’il peut en créer un pour nous mais qu’il faudra le modifier à la main. Ce sera inutile grâce à <em>oh-my-zsh</em>. </p>
+<p>Que l’on soit dev, ops, sysadmin ou autre pour effectuer nos tâches répétitives et quotidiennes on a généralement deux possibilités : une première communément appelée “clic-clic” qui consiste à utiliser les interfaces graphiques aussi souvent que possible (afin de perdre un maximum de temps) ; et une seconde qualifiée de “barbue” qui elle est orientée ligne de commande, scripting et automatisation.
+Nous les Code-Troopers, on est plutôt technique de barbus ! Et donc peut importe l’OS qu’on utilise on cherche toujours à avoir le meilleur terminal possible.
+Par défaut sous linux ou mac OS on trouvera souvent <em>bash</em>, sous windows ce sera <em>powershell</em> mais il en existe d’autres comme <em>csh</em>, <em>ksh</em> ou dans le cas qui nous intéresse <em>zsh</em>.
+<em>zsh</em> est puissant mais ce n’est pas le sujet du jour de dire pourquoi il serait mieux qu’un autre. En revanche, qui dit puissance dit difficultés de paramétrage ;
+d’ailleurs à la première utilisation lorsque l’on n’a pas de fichier de configuration il commence par dire qu’il peut en créer un pour nous mais qu’il faudra le modifier à la main.
+Ce sera inutile grâce à <em>oh-my-zsh</em>.
+</p>
 
 <h2 id=installation>Installation</h2>
+<p>C’est très simple, il suffit de cloner le dépôt
+<code>git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh</code>
+Et de mettre le fichier de configuration dans son home
+<code>cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc</code></p>
 
-<p>C’est très simple, il suffit de cloner le dépôt <code>git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh</code> Et de mettre le fichier de configuration dans son home <code>cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc</code></p>
+<h2 id=les-thmes>Les thèmes</h2>
+<p>Premièrement, les couleurs. Chacun ses goûts mais comme tout  informaticien fan de  matrix on a tendance à configurer son terminal pour obtenir du vert sur fond noir donc on choisira un thème en conséquence pour avoir des couleurs claires (ce qui est le cas de presque tous les thèmes) Vous pouvez voir un aperçu des thèmes ici : <a href="http://zshthem.es/all/">http://zshthem.es/all/</a></p>
 
-<h2 id=les_thmes>Les thèmes</h2>
-
-<p>Premièrement, les couleurs. Chacun ses goûts mais comme tout informaticien fan de matrix on a tendance à configurer son terminal pour obtenir du vert sur fond noir donc on choisira un thème en conséquence pour avoir des couleurs claires (ce qui est le cas de presque tous les thèmes) Vous pouvez voir un aperçu des thèmes ici : <a href="http://zshthem.es/all/">http://zshthem.es/all/</a></p>
-
-<p>Deuxièmement le prompt. Toujours sur le site <a href=http://zshthem.es>http://zshthem.es</a>, vous pouvez voir qu’en plus des couleurs, chaque thème a un prompt différent. C’est ce qui s’affiche à chaque ligne donc il doit être beau, rapide et fonctionnel. J’utilisais <a href=https://github.com/nojhan/liquidprompt>https://github.com/nojhan/liquidprompt</a> pendant un temps, j’ai donc fait un thème qui ressemble pour les fonctionnalités qui me manquaient. Les fonctionnalités que je trouve pratique :</p>
+<p>Deuxièmement le prompt. Toujours sur le site <a href=http://zshthem.es>http://zshthem.es</a>, vous pouvez voir qu’en plus des couleurs, chaque thème a un prompt différent. C’est ce qui s’affiche à chaque ligne donc il doit être beau, rapide et fonctionnel.
+J’utilisais <a href=https://github.com/nojhan/liquidprompt>https://github.com/nojhan/liquidprompt</a> pendant un temps, j’ai donc fait un thème qui ressemble pour les fonctionnalités qui me manquaient. Les fonctionnalités que je trouve pratique :</p>
 
 <ul>
-<li>l’heure à droite : je veux savoir à quelle heure j’ai lancé une commande et à quelle heure elle s’est finie. C’est utile de temps en temps.</li>
-
-<li>l’utilisateur courant : je veux savoir avec quel utilisateur je suis connecté, simplement parce que je veux que ça crie si je suis en root pour éviter de faire des bêtises</li>
-
-<li>le hostname : je veux savoir sur quelle machine je suis connecté, de préférence uniquement lorsque je suis en ssh sinon c’est pas utile, toujours dans le but d’éviter les bêtises.</li>
-
-<li>un path de taille limitée : pas besoin d’afficher <code>/home/mattboll/workspace/projetSecret/java/com/codetroopers/projetxx/machin/bean</code> il me suffit de lire <code>~/.../machin/bean</code> pour savoir où je suis et ça permet de toujours avoir un prompt de taille raisonnable, c’est plus agréable.</li>
-
-<li>des infos git : sur quelle branche je suis, est-ce que je suis synchro, est-ce que je dois merger, combien j’ai de commits en attente d’être pushé etc.</li>
-
-<li>le code retour de la commande : parfois des commandes sont en erreur mais on n’a pas de message, donc on ne sait pas si la commande s’est bien exécutée, et en supposant qu’elle soit mal exécutée on ne sait pas quelle était l’erreur (l’équivalent des erreurs 404, 503 etc. des erreurs http)</li>
+  <li>l’heure à droite : je veux savoir à quelle heure j’ai lancé une commande et à quelle heure elle s’est finie. C’est utile de temps en temps.</li>
+  <li>l’utilisateur courant : je veux savoir avec quel utilisateur je suis connecté, simplement parce que je veux que ça crie si je suis en root pour éviter de faire des bêtises</li>
+  <li>le hostname : je veux savoir sur quelle machine je suis connecté, de préférence uniquement lorsque je suis en ssh sinon c’est pas utile, toujours dans le but d’éviter les bêtises.</li>
+  <li>un path de taille limitée : pas besoin d’afficher <code>/home/mattboll/workspace/projetSecret/java/com/codetroopers/projetxx/machin/bean</code> il me suffit de lire <code>~/.../machin/bean</code> pour savoir où je suis et ça permet de toujours avoir un prompt de taille raisonnable, c’est plus agréable.</li>
+  <li>des infos git : sur quelle branche je suis, est-ce que je suis synchro, est-ce que je dois merger, combien j’ai de commits en attente d’être pushé etc.</li>
+  <li>le code retour de la commande : parfois des commandes sont en erreur mais on n’a pas de message, donc on ne sait pas si la commande s’est bien exécutée, et en supposant qu’elle soit mal exécutée on ne sait pas quelle était l’erreur (l’équivalent des erreurs 404, 503 etc. des erreurs http)</li>
 </ul>
 
-<p>Pour choisir le thème il faut éditer le fichier <code>~/.zshrc</code> et modifier la ligne <code>ZSH_THEME=”nom_du_theme”</code> où nom du thème correspond au nom de fichier que l’on peut trouver dans <code>~/.oh-my-zsh/themes</code>. Du coup, pour réaliser un thème personnel c’est simple il suffit de créer un fichier qui s’appelle nom.zsh-theme et de le mettre dans le même répertoire que les autres. Voici ce que cela donne avec mon thème (adapté du thème sunrise), que vous pouvez trouver sur <a href=https://raw.githubusercontent.com/mattboll/zshrc/master/mattboll.zsh-theme>GitHub</a> :</p>
+<p>Pour choisir le thème il faut éditer le fichier <code>~/.zshrc</code> et modifier la ligne 
+<code>ZSH_THEME=”nom_du_theme”</code> où nom du thème correspond au nom de fichier que l’on peut trouver dans <code>~/.oh-my-zsh/themes</code>. Du coup, pour réaliser un thème personnel c’est simple il suffit de créer un fichier qui s’appelle nom.zsh-theme et de le mettre dans le même répertoire que les autres.
+Voici ce que cela donne avec mon thème (adapté du thème sunrise), que vous pouvez trouver  sur <a href=https://raw.githubusercontent.com/mattboll/zshrc/master/mattboll.zsh-theme>GitHub</a> : </p>
+
 <div style=text-align:center;margin:50px>
-<a data-lightbox=image-0 href=/images/postOhMyZsh/oh-my-zsh-theme.png style="display: inline" title="Thème oh-my-zsh">
-        <img alt="Thème oh-my-zsh" class=medium src=/images/postOhMyZsh/oh-my-zsh-theme.png>
+<a style="display: inline" href=/images/postOhMyZsh/oh-my-zsh-theme.png data-lightbox=image-0 title="Thème oh-my-zsh">
+        <img class=medium src=/images/postOhMyZsh/oh-my-zsh-theme.png alt="Thème oh-my-zsh">
 </a>
 </div>
-<h2 id=les_plugins>Les plugins</h2>
 
-<p>Les plugins permettent d’incorporer des fonctions spécifiques. Ce sont en général de simples alias mais il arrive aussi de tomber sur des fonctions utiles auxquelles on ne pense pas, par exemple en activant le plugin GitHub, on accède à la commande <code>empty_gh</code> qui prend en paramètre le nom du dépôt et qui va créer le répertoire, faire un git init, ajouter un readme vide et faire le premier commit. Pour ajouter des plugins, il faut évidemment éditer le fichier <code>~/.zshrc</code> et modifier la ligne <code>plugins=(liste des plugins)</code> Vous trouverez la liste des plugins dans <code>~/.oh-my-zsh/plugins</code> À l’heure où j’écris il y en a 172, de git à symfony en passant par heroku. Pour savoir à quoi ça correspond, le plus simple est de lire le code source, en général il y a un fichier par plugin et les noms sont assez explicites pour savoir ceux qui nous seront utiles ou pas.</p>
+<h2 id=les-plugins>Les plugins</h2>
+<p>Les plugins permettent d’incorporer des fonctions spécifiques. Ce sont en général de simples alias mais il arrive aussi de tomber sur des fonctions utiles auxquelles on ne pense pas, par exemple en activant le plugin GitHub, on accède à la commande <code>empty_gh</code> qui prend en paramètre le nom du dépôt et qui va créer le répertoire, faire un git init, ajouter un readme vide et faire le premier commit.
+Pour ajouter des plugins, il faut évidemment éditer le fichier <code>~/.zshrc</code> et modifier la ligne <code>plugins=(liste des plugins)</code>
+Vous trouverez la liste des plugins dans <code>~/.oh-my-zsh/plugins</code> À l’heure où j’écris il y en a 172, de git à symfony en passant par heroku. Pour savoir à quoi ça correspond, le plus simple est de lire le code source, en général il y a un fichier par plugin et les noms sont assez explicites pour savoir ceux qui nous seront utiles ou pas.</p>
 
-<h2 id=les_libs>Les libs</h2>
-
+<h2 id=les-libs>Les libs</h2>
 <p>Si vous voulez créer un plugin ou que vous voulez voir un peu plus les fonctionnalités de oh-my-zsh, vous pouvez parcourir le répertoire lib, ne serait-ce que pour le fichier aliases.zsh qui définit des alias de base, par exemple <code>“…”=”cd ../..”</code> ou les habituels <code>la</code>, <code>ll</code> etc. C’est aussi dans ce répertoire que sont définies des fonctions génériques comme celle qui permet de savoir si le dépôt git est “dirty” et qui est utilisée dans certains prompts.</p>
 
 <p>Si vous voulez plus d’informations sur zsh je vous invite à commencer par l’article de <a href="http://wiki.gcu.info/doku.php?id=unix:zsh_le_z_shell">gcu-squad</a>. Pour oh-my-zsh vous pouvez allez voir le projet sur <a href=https://github.com/robbyrussell/oh-my-zsh>GitHub</a>. Enfin, si vous avez d’autres questions, n’hésitez pas à poster un commentaire ou à en parler sur twitter <a href=http://twitter.com/codetroopers>@codetroopers</a> ou <a href=http://twitter.com/mattboll>@mattboll</a></p>
+
 <hr>
+
+
                 </div>
 <div class=share>
 L'article vous a plu ? Partagez-le :
@@ -224,7 +233,7 @@ L'article vous a plu ? Partagez-le :
 
 <script src=//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js></script>
 
-<script src=/scripts/229ace39.plugins.js></script>
+<script src=/scripts/4bd70b82.plugins.js></script>
 
 <script src=/scripts/32bd55f7.scripts.js></script>
 

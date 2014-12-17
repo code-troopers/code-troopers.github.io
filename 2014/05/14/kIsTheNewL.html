@@ -84,34 +84,36 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
                     
                 </ul>
                 <div class=content>
-                    <p><code>ls</code> est une des commandes shell les plus utilisées, pourtant depuis les années 70 elle a très peu changé. Bien sûr, il y a de nombreuses options, citons <code>ls -a</code> pour afficher les fichiers cachés, <code>ls -l</code> pour afficher plus d’informations, <code>ls --color</code> pour afficher deux couleurs, une pour les fichiers et une pour les répertoires, ou encore <code>ls -rtl</code> pour trier le contenu par date et afficher le plus récent en dernier. </p>
+                    <p><code>ls</code> est une des commandes shell les plus utilisées, pourtant depuis les années 70 elle a très peu changé. Bien sûr, il y a de nombreuses options, citons <code>ls -a</code> pour afficher les fichiers cachés, <code>ls -l</code> pour afficher plus d’informations, <code>ls --color</code> pour afficher deux couleurs, une pour les fichiers et une pour les répertoires, ou encore <code>ls -rtl</code> pour trier le contenu par date et afficher le plus récent en dernier.
+</p>
 
 <p><code>ls</code> est donc une commande utile et pratique mais elle n’est pas folichonne. D’où la naissance de <code>k</code> qui a pour but de remplacer <code>ls</code> avec quelques killer features. Il ne s’agit pas d’une surcouche de <code>ls</code> mais d’une commande complète, s’appuyant directement sur <code>stat</code> par exemple. À ce jour, les nouvelles fonctionnalités sont les suivantes :</p>
 
 <ul>
-<li>intégration de git status sur un dépôt entier : rouge si le dépôt est “sale”, vert sinon ;</li>
-
-<li>intégration de git status à l’intérieur d’un dépôt : différenciation des fichiers modifiés, non ajoutés ou ignorés ;</li>
-
-<li>dégradé de couleur pour la taille des fichiers : du vert pour les petits fichiers au rouge pour les gros ;</li>
-
-<li>dégradé de couleur pour la date de modification : plus la date est affichée en clair et plus le fichier est récent.</li>
+  <li>intégration de git status sur un dépôt entier : rouge si le dépôt est “sale”, vert sinon ;</li>
+  <li>intégration de git status à l’intérieur d’un dépôt : différenciation des fichiers modifiés, non ajoutés ou ignorés ;</li>
+  <li>dégradé de couleur pour la taille des fichiers : du vert pour les petits fichiers au rouge pour les gros ;</li>
+  <li>dégradé de couleur pour la date de modification : plus la date est affichée en clair et plus le fichier est récent.</li>
 </ul>
 
 <p>Voici un comparatif des deux rendus, version <code>ls</code> et version <code>k</code> :</p>
+
 <div style="text-align : center">
-<a data-lightbox=image-0 href=/images/postKisTheNewL/lsalcolor.png style="display: inline" title="version ls -al --color">
-        <img alt="version k" class=medium src=/images/postKisTheNewL/lsalcolor_min.png>
+<a style="display: inline" href=/images/postKisTheNewL/lsalcolor.png data-lightbox=image-0 title="version ls -al --color">
+        <img class=medium src=/images/postKisTheNewL/lsalcolor_min.png alt="version k">
 </a>
-<a data-lightbox=image-0 href=/images/postKisTheNewL/k.png style="display: inline" title="version k">
-        <img alt="version k" class=medium src=/images/postKisTheNewL/k_min.png>
+<a style="display: inline" href=/images/postKisTheNewL/k.png data-lightbox=image-0 title="version k">
+        <img class=medium src=/images/postKisTheNewL/k_min.png alt="version k">
 </a>
 </div>
 <p><br></p>
 
-<p><code>k</code> est disponible uniquement pour zsh. Pour l’installer, il suffit de cloner le dépôt <a href=https://github.com/supercrabtree/k>git</a> et d’ajouter <code>source ~/path/k/k.sh</code> dans son ~/.zshrc. k est encore jeune mais il gagnerait à être connu, il manque quelques fonctions de base comme mettre un répertoire en paramètre ou ne pas afficher les fichiers cachés. Pour en savoir plus, n’hésitez pas à aller voir la page <a href=https://github.com/supercrabtree/k>GitHub</a>.</p>
+<p><code>k</code> est disponible uniquement pour zsh. Pour l’installer, il suffit de cloner le dépôt <a href=https://github.com/supercrabtree/k>git</a> et d’ajouter <code>source ~/path/k/k.sh</code> dans son ~/.zshrc.
+k est encore jeune mais il gagnerait à être connu, il manque quelques fonctions de base comme mettre un répertoire en paramètre ou ne pas afficher les fichiers cachés.
+Pour en savoir plus, n’hésitez pas à aller voir la page <a href=https://github.com/supercrabtree/k>GitHub</a>.</p>
 
 <p>Comme dit leur slogan : «k is the new l, yo».</p>
+
                 </div>
 <div class=share>
 L'article vous a plu ? Partagez-le :
@@ -208,7 +210,7 @@ L'article vous a plu ? Partagez-le :
 
 <script src=//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js></script>
 
-<script src=/scripts/229ace39.plugins.js></script>
+<script src=/scripts/4bd70b82.plugins.js></script>
 
 <script src=/scripts/32bd55f7.scripts.js></script>
 

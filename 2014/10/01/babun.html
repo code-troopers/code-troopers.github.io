@@ -84,37 +84,38 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
                     
                 </ul>
                 <div class=content>
-                    <h2 id=oh_non_mon_client_moblige__tre_sous_windows>Oh non, mon client m’oblige à être sous Windows</h2>
+                    <h2 id=oh-non-mon-client-moblige--tre-sous-windows>Oh non, mon client m’oblige à être sous Windows</h2>
+<p>Malheureusement, il est fréquent que nous soyons forcés de travailler sous un environnement que nous n’aimons pas. Les raisons sont souvent diverses mais sont presque toujours inflexibles. Le problème est que lorsqu’on est habitué à une ligne de commande puissante, le fait d’être sous Windows devient un réel handicap.
+</p>
 
-<p>Malheureusement, il est fréquent que nous soyons forcés de travailler sous un environnement que nous n’aimons pas. Les raisons sont souvent diverses mais sont presque toujours inflexibles. Le problème est que lorsqu’on est habitué à une ligne de commande puissante, le fait d’être sous Windows devient un réel handicap. </p>
-
-<h2 id=donnez_moi_un_shell_>Donnez moi un shell !</h2>
-
+<h2 id=donnez-moi-un-shell->Donnez moi un shell !</h2>
 <p>Bien sûr, la plupart d’entre vous connaîssent Cygwin, qui permet de résoudre bien des problèmes, mais qui en créé aussi un paquet avant d’avoir une installation complète et qui fonctionne comme attendu.</p>
 
-<p>Heureusement, <a href=https://twitter.com/tombujok>Tom Bujok</a> s’est penché sur le souci et a pris le temps de faire une configuration aux petits oignons d’un Cygwin complet, avec <code>zsh</code> et <code>oh-my-zsh</code> pour avoir une bonne configuration. De plus, pour faire comme si on était sous un unix, on a même un package manager qui permet d’installer les outils nécessaires.</p>
+<p>Heureusement,  <a href=https://twitter.com/tombujok>Tom Bujok</a> s’est penché sur le souci et a pris le temps de faire une configuration aux petits oignons d’un Cygwin complet, avec <code>zsh</code> et <code>oh-my-zsh</code> pour avoir une bonne configuration. De plus, pour faire comme si on était sous un unix, on a même un package manager qui permet d’installer les outils nécessaires.</p>
 
-<h2 id=installation_et_configuration>Installation et configuration</h2>
-
+<h2 id=installation-et-configuration>Installation et configuration</h2>
 <p>Il suffit de récupérer le zip sur le site officiel <a href="http://babun.github.io/">http://babun.github.io</a> de le dézipper et de lancer le script <code>install.bat</code>. Ce qui est bien, c’est qu’il est possible de lancer le script d’installation et donc d’utiliser babun sans disposer des droits d’administrateur sur sa machine.</p>
 
-<p>Une fois la <em>longue</em> installation terminée, vous disposez d’un shell bien configuré avec la plupart des outils nécessaires bien configurés.</p>
+<p>Une fois la <em>longue</em> installation terminée, vous disposez d’un shell bien configuré avec la plupart des outils nécessaires bien configurés. </p>
 
-<p>Cependant vous voudrez certainement personnaliser votre environnement avec quelques alias. Pour ceci, il suffit de créer un fichier contenant vos alias dans <code>~/.oh-my-zsh/custom/aliases.zsh</code> (le nom est libre, le fichier doit porter l’extension <code>zsh</code> pour qu’il soit automatiquement chargé). Il ne s’agit ni plus ni moins de la configuration permise par oh-my-zsh (vous pouvez vous référer <a href=/2014/09/17/ohMyZsh.html>à cet article</a> pour plus de détails)</p>
+<p>Cependant vous voudrez certainement personnaliser votre environnement avec quelques alias. Pour ceci, il suffit de créer un fichier contenant vos alias dans <code>~/.oh-my-zsh/custom/aliases.zsh</code> (le nom est libre, le fichier doit porter l’extension  <code>zsh</code> pour qu’il soit automatiquement chargé). Il ne s’agit ni plus ni moins de la configuration permise par oh-my-zsh (vous pouvez vous référer <a href=/2014/09/17/ohMyZsh.html>à cet article</a> pour plus de détails)</p>
+
 <div style=text-align:center;margin:50px>
- <a data-lightbox=image-0 href=/images/postBabun/babun.png style="display: inline" title="Babun et tmux">
-         <img alt="Babun et tmux" class=medium src=/images/postBabun/babun.png>
+ <a style="display: inline" href=/images/postBabun/babun.png data-lightbox=image-0 title="Babun et tmux">
+         <img class=medium src=/images/postBabun/babun.png alt="Babun et tmux">
  </a>
 </div>
-<h2 id=conseils_pratiques>Conseils pratiques</h2>
 
-<p>Depuis quelques temps, nous sommes quelques membres de l’équipe à <strong>devoir</strong> travailler sous Windows. Nous avons rapidement ajouté <code>tmux</code> à la liste des outils indispensables (la gestion des terminaux Windows n’étant pas optimale) ainsi que <code>irssi</code> en tant que client IRC.</p>
+<h2 id=conseils-pratiques>Conseils pratiques</h2>
+<p>Depuis quelques temps, nous sommes quelques membres de l’équipe à <strong>devoir</strong> travailler  sous Windows. Nous avons rapidement ajouté <code>tmux</code> à la liste des outils indispensables (la gestion des terminaux Windows n’étant pas optimale) ainsi que <code>irssi</code> en tant que client IRC. </p>
 
-<pre><code>$ pact install tmux irssi</code></pre>
+<pre><code>$ pact install tmux irssi
+</code></pre>
 
 <p>Puisque c’est ni plus ni moins qu’une installation de Cygwin, l’accès à vos disque se fera par le montage <code>/cygdrive/c/</code> pour le disque <code>C:</code> par exemple. Veuillez noter également que l’emplacement de votre <code>home</code> sera en fait <code>/cygdrive/c/Users/$USER/.babun/cygwin/home/$USER</code></p>
 
 <p>Maintenant, vous serez presque aussi productifs sous Windows que sous un système “agréable” !</p>
+
                 </div>
 <div class=share>
 L'article vous a plu ? Partagez-le :
@@ -211,7 +212,7 @@ L'article vous a plu ? Partagez-le :
 
 <script src=//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js></script>
 
-<script src=/scripts/229ace39.plugins.js></script>
+<script src=/scripts/4bd70b82.plugins.js></script>
 
 <script src=/scripts/32bd55f7.scripts.js></script>
 

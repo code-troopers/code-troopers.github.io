@@ -84,47 +84,59 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
                     
                 </ul>
                 <div class=content>
-                    <p><a href="http://www.playframework.com/">Play2</a>, c’est fun et c’est rapide ! Il suffit de quelques instants pour avoir une appli qui tourne en local sans rien avoir à configurer <a href=http://www.playframework.com/documentation/2.2.x/NewApplication>voir la doc de play</a>. En plus dès que l’on commence un peu à jouer, créer des entités, faire une page de CRUD, tout tourne toujours aussi bien. Il faut dire que c’est agréable, car <a href=http://www.playframework.com/documentation/2.2.x/JavaEbean>Ebean</a> s’est occupé de générer les commandes sql dans le fichier <em>1.sql</em> qui est joué automatiquement par play. </p>
+                    <p><a href="http://www.playframework.com/">Play2</a>, c’est fun et c’est rapide !
+Il suffit de quelques instants pour avoir une appli qui tourne en local sans rien avoir à configurer <a href=http://www.playframework.com/documentation/2.2.x/NewApplication>voir la doc de play</a>.
+En plus dès que l’on commence un peu à jouer, créer des entités, faire une page de CRUD, tout tourne toujours aussi bien. Il faut dire que c’est agréable, car <a href=http://www.playframework.com/documentation/2.2.x/JavaEbean>Ebean</a> s’est occupé de générer les commandes sql dans le fichier <em>1.sql</em> qui est joué automatiquement par play.
+</p>
 
-<p>Le problème arrive en général un peu après, lorsque l’envie nous prend de visualiser les données qu’on a insérées via les pages pour différents traitements. En effet, pas besoin de monter un serveur sql ou autre, par défaut tout se passe dans une base en mémoire (ce qui signifie aussi, que lorsque le serveur est arrêté les datas disparaissent). Et forcément la question universelle est “Mais comment je peux voir ces ***** de data en base ?”.</p>
+<p>Le problème arrive en général un peu après, lorsque l’envie nous prend de visualiser les données qu’on a insérées via les pages pour différents traitements.
+En effet, pas besoin de monter un serveur sql ou autre, par défaut tout se passe dans une base en mémoire (ce qui signifie aussi, que lorsque le serveur est arrêté les datas disparaissent).
+Et forcément la question universelle est “Mais comment je peux voir ces ***** de data en base ?”.</p>
 
-<p>La solution est simple, elle réside dans une commande <code>h2-browser</code>. Mais pour pouvoir l’utiliser, il va falloir se discipliner un tout petit peu. En effet, si vous aviez l’habitude de faire des <code>play run</code> pour lancer le serveur et des <code>ctrl-D</code> pour l’arrêter, il va falloir changer de méthode.</p>
+<p>La solution est simple, elle réside dans une commande <code>h2-browser</code>.
+Mais pour pouvoir l’utiliser, il va falloir se discipliner un tout petit peu. En effet, si vous aviez l’habitude de faire des <code>play run</code> pour lancer le serveur et des <code>ctrl-D</code> pour l’arrêter, il va falloir changer de méthode.</p>
 
 <p>La procédure miracle est donc la suivante :</p>
 
 <ul>
-<li>lancer la console play
-<pre><code>$ play</code></pre>
-</li>
-
-<li>lancer le visualiseur de bdd (qui ouvre une fenêtre dans votre navigateur web)
-<pre><code>$ h2-browser</code></pre>
-</li>
-
-<li>démarrer votre serveur.
-<pre><code>$ run</code></pre>
-</li>
+  <li>lancer la console play
+<code>
+ $ play
+</code></li>
+  <li>lancer le visualiseur de bdd (qui ouvre une fenêtre dans votre navigateur web)
+<code>
+ $ h2-browser
+</code></li>
+  <li>démarrer votre serveur.
+<code>
+ $ run
+</code></li>
 </ul>
 
 <p>Lorsqu’il se lance h2-browser devrait vous présenter une fenêtre de connexion comme celle-ci :</p>
+
 <div style="text-align : center">
-    <a data-lightbox=image-0 href=/images/postPlayDbBrowser/h2-browser.png style="display: inline" title="Fenêtre de connection h2-browser">
-            <img alt="Fenêtre de connection h2-browser" class=medium src=/images/postPlayDbBrowser/h2-browser.png>
+    <a style="display: inline" href=/images/postPlayDbBrowser/h2-browser.png data-lightbox=image-0 title="Fenêtre de connection h2-browser">
+            <img class=medium src=/images/postPlayDbBrowser/h2-browser.png alt="Fenêtre de connection h2-browser">
     </a>
 </div>
+
 <p>Maitenant qu’il est lancé, il faut se connecter, et par défaut c’est pas gagné, parce qu’il est configuré pour aller dans la base ‘test’ qui est une base valide, mais surement pas celle où vos données sont.</p>
 
-<p>Il faut donc modifier les champs <em>jdbc</em>, <em>login</em>, <em>password</em>. Pour cela allez chercher dans <strong>application.conf</strong> (normalement situé dans le répertoire <em>/conf/</em> de votre projet) et trouvez les champs suivants</p>
+<p>Il faut donc modifier les champs <em>jdbc</em>, <em>login</em>, <em>password</em>.
+Pour cela allez chercher dans <strong>application.conf</strong> (normalement situé dans le répertoire <em>/conf/</em> de votre projet) et trouvez les champs suivants</p>
 
-<pre><code>db.default.url=&quot;jdbc:h2:mem:play&quot;
+<p><code>
+db.default.url="jdbc:h2:mem:play"
 db.default.user=sa
-db.default.password=</code></pre>
-
-<p>ce sont les 3 valeurs à recopier dans la fenêtre de connexion.</p>
+db.default.password=
+</code>
+ce sont les 3 valeurs à recopier dans la fenêtre de connexion.</p>
 
 <p>Et voilà le tour est joué, c’est tout de même sympa d’être sûr de ce que l’on a en base.</p>
 
 <p><em>NB</em> : Il faut absolument faire le <code>run</code> avant de se connecter à la base de donnée, sinon celle-ci sera lockée lors de la connexion par h2-broswer et l’application play ne pourra pas s’y connecter.</p>
+
                 </div>
 <div class=share>
 L'article vous a plu ? Partagez-le :
@@ -221,7 +233,7 @@ L'article vous a plu ? Partagez-le :
 
 <script src=//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js></script>
 
-<script src=/scripts/229ace39.plugins.js></script>
+<script src=/scripts/4bd70b82.plugins.js></script>
 
 <script src=/scripts/32bd55f7.scripts.js></script>
 

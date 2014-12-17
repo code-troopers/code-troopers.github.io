@@ -82,31 +82,32 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
                     
                 </ul>
                 <div class=content>
-                    <p>Vous connaissez sûrement <a href="https://www.heroku.com/">Heroku</a> le service de cloud computing de type plate-forme en tant que service (PaaS), si ce n’est pas le cas, je vous conseille de vous y intéresser. Chez Code-Troopers, nous l’utilisons à la fois pour effectuer nos tests en pré-production mais aussi pour certaines de nos applications en production. Ce qui est aussi intéressant chez Heroku, c’est le nombre d’<a href="https://addons.heroku.com/">add-ons</a> disponibles. Ils sont simples d’installation, la plupart du temps il suffit de deux clics et d’une variable à ajouter dans la configuration de l’application. Ils disposent presque tous de versions gratuites (souvent suffisant pour une petite application en production) mais il est aussi possible d’évoluer vers des versions payantes et plus complètes en un clic, souvent déclinées en 3 ou 4 offres. </p>
+                    <p>Vous connaissez sûrement <a href="https://www.heroku.com/">Heroku</a> le service de cloud computing de type plate-forme en tant que service (PaaS), si ce n’est pas le cas, je vous conseille de vous y intéresser. Chez Code-Troopers, nous l’utilisons à la fois pour effectuer nos tests en pré-production mais aussi pour certaines de nos applications en production. Ce qui est aussi intéressant chez Heroku, c’est le nombre d’<a href="https://addons.heroku.com/">add-ons</a> disponibles. Ils sont simples d’installation, la plupart du temps il suffit de deux clics et d’une variable à ajouter dans la configuration de l’application. Ils disposent presque tous de versions gratuites (souvent suffisant pour une petite application en production) mais il est aussi possible d’évoluer vers des versions payantes et plus complètes en un clic, souvent déclinées en 3 ou 4 offres.
+</p>
 
 <p>Les add-ons sont rangés en catégories, vous avez des services de bases de données, de logs, d’analytics, de cache, de monitoring… Je vous invite à les consulter sur <a href="https://addons.heroku.com/">cette page</a>. Mais je vais m’attarder sur les 3 add-ons qu’on installe presque machinalement dès que l’on créé une application sur Heroku :</p>
 
 <ul>
-<li><a href=https://addons.heroku.com/papertrail>Papertrail</a> pour gérer les logs</li>
-
-<li><a href=https://addons.heroku.com/sendgrid>SendGrid</a> pour envoyer des mails</li>
-
-<li><a href=https://addons.heroku.com/newrelic>New Relic</a> pour surveiller l’application</li>
+  <li><a href=https://addons.heroku.com/papertrail>Papertrail</a> pour gérer les logs</li>
+  <li><a href=https://addons.heroku.com/sendgrid>SendGrid</a> pour envoyer des mails</li>
+  <li><a href=https://addons.heroku.com/newrelic>New Relic</a> pour surveiller l’application</li>
 </ul>
 
-<h2 id=logo_papertrail_papertrail><img src=../../../images/postAddonsHeroku/papertrail.png alt="Logo Papertrail"> Papertrail</h2>
+<h2 id=logo-papertrailimagespostaddonsherokupapertrailpng-papertrail><img src=../../../images/postAddonsHeroku/papertrail.png alt="Logo Papertrail"> Papertrail</h2>
 
 <p><a href="https://papertrailapp.com/">Papertrail</a> est un service de logs. Il permet de consulter en temps réel les logs de votre application Heroku. Vous avez même la possibilité de sauvegarder vos recherches ou de créer des alertes personnalisées. La version gratuite permet de stocker jusqu’à 10Mo de log par jour, de rechercher sur 2 jours et de retenir jusqu’à 7 jours les logs. Pour l’installer, il suffit de l’ajouter depuis l’interface d’Heroku, il n’y a rien à configurer. Ensuite, vous avez juste à cliquer sur le lien pour consulter vos logs.</p>
 
-<h2 id=logo_sendgrid_sendgrid><img src=../../../images/postAddonsHeroku/sendgrid.png alt="Logo SendGrid"> SendGrid</h2>
+<h2 id=logo-sendgridimagespostaddonsherokusendgridpng-sendgrid><img src=../../../images/postAddonsHeroku/sendgrid.png alt="Logo SendGrid"> SendGrid</h2>
 
 <p><a href="http://sendgrid.com/">SendGrid</a> est un service de messagerie électronique. Une fois l’add-on ajouté sur Heroku, vous disposez dans les variables de configuration de votre application, d’un login et d’un mot de passe. Il ne vous reste plus qu’à changer l’accès au serveur smtp dans votre application pour utiliser ces variables. En plus de faire office de serveur smtp, SendGrid vous offre la possibilité de tracer les mails, c’est-à-dire de savoir combien ont été ouverts, combien de personnes ont cliqué sur les liens contenus, combien ne sont pas arrivés à destination… tout ça même dans la version gratuite. La seule contrainte en version gratuite est la limitation à 200 mails par jour.</p>
 
-<h2 id=logo_new_relic_new_relic><img src=../../../images/postAddonsHeroku/newrelic.png alt="Logo New Relic"> New Relic</h2>
+<h2 id=logo-new-relicimagespostaddonsherokunewrelicpng-new-relic><img src=../../../images/postAddonsHeroku/newrelic.png alt="Logo New Relic"> New Relic</h2>
 
 <p><a href="http://www.newrelic.com/">New Relic</a> enfin, est un service de surveillance de votre application. Il permet à la fois de surveiller les performances de la machine, mais aussi de repérer par exemple les requêtes SQL qui sont lentes, ainsi que les méthodes de votre code qui sont coûteuse en temps processeur et d’autres données. Vous avez la possibilité de créer des rapports sur toutes ces données ainsi que de créer des alertes sur certains évenements. Les versions payantes permettent d’aller plus loin dans la recherche de points noirs dans l’application ainsi que de débloquer la limite de l’historique. L’installation est plus complexe que les autres add-ons mais reste très bien expliquée au premier lancement du service.</p>
 
-<p>Bien sûr tous ces add-ons sont disponibles hors Heroku et peuvent être utilisés sur n’importe quel autre serveur. Dans tous les cas, essayez, testez, bidouillez, faîtes vous plaisir ! C’est tout à fait le type de service qui fait gagner un maximum de temps pour déployer une application, que ce soit pour un POC, une démo ou même une mise en prod !</p>
+<p>Bien sûr tous ces add-ons sont disponibles hors Heroku et peuvent être utilisés sur n’importe quel autre serveur.
+Dans tous les cas, essayez, testez, bidouillez, faîtes vous plaisir ! C’est tout à fait le type de service qui fait gagner un maximum de temps pour déployer une application, que ce soit pour un POC, une démo ou même une mise en prod !</p>
+
                 </div>
 <div class=share>
 L'article vous a plu ? Partagez-le :
@@ -203,7 +204,7 @@ L'article vous a plu ? Partagez-le :
 
 <script src=//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js></script>
 
-<script src=/scripts/229ace39.plugins.js></script>
+<script src=/scripts/4bd70b82.plugins.js></script>
 
 <script src=/scripts/32bd55f7.scripts.js></script>
 
