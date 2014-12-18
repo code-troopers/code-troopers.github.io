@@ -1,6 +1,7 @@
 name: Code-Troopers blog
 description: Le blog de l'équipe Code-Troopers
 url: http://code-troopers.com
+baseurl: /
 
 source: app
 destination: _site
