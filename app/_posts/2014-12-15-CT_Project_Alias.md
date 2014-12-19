@@ -12,7 +12,7 @@ Du coup, un de nos problèmes récurrents est de se rappeler quelle commande doi
 Un autre aspect pénible à avoir plein de façons différentes de fonctionner est qu’il est quasiment impossible d’avoir des alias pertinents dans son shell préféré.
 
 Fort de ce constat, nous avons entrepris d’écrire notre petit outil qui nous permet de moins réflechir quand on change de projet. Puisqu’on est pas super imaginatif et qu’on n’avait pas encore de petit outil à notre nom, nous l’avons nommé “ct”.
-<!-- break -->
+<!--break-->
 
 Qu’est ce que c’est ?
 ---
