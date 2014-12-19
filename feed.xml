@@ -14,7 +14,7 @@ Du coup, un de nos problèmes récurrents est de se rappeler quelle commande doi
 &lt;p&gt;Un autre aspect pénible à avoir plein de façons différentes de fonctionner est qu’il est quasiment impossible d’avoir des alias pertinents dans son shell préféré.&lt;/p&gt;
 
 &lt;p&gt;Fort de ce constat, nous avons entrepris d’écrire notre petit outil qui nous permet de moins réflechir quand on change de projet. Puisqu’on est pas super imaginatif et qu’on n’avait pas encore de petit outil à notre nom, nous l’avons nommé “ct”.
-&lt;!-- break --&gt;&lt;/p&gt;
+&lt;!--break--&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;quest-ce-que-cest-&quot;&gt;Qu’est ce que c’est ?&lt;/h2&gt;
 &lt;p&gt;Imaginez que pour chaque projet vous n’ayiez qu’à remplir un fichier (à la façon de votre &lt;code&gt;.gitignore&lt;/code&gt;) pour définir les différentes tâches disponibles. Une fois ceci fait, les autres développeurs n’ont plus à se soucier des tâches à lancer, ils peuvent se contenter d’utiliser le vocabulaire commun, de se placer dans le répertoire du projet et de lancer la commande &lt;code&gt;ct run&lt;/code&gt; au lieu de &lt;code&gt;mvn jetty:run&lt;/code&gt; (et s’ils veulent connaître la liste des tâches disponibles ils le peuvent via un &lt;code&gt;ct help&lt;/code&gt;).&lt;/p&gt;
