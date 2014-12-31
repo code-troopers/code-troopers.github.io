@@ -1,4 +1,4 @@
-FROM ruby
+FROM ruby:2.2.0-wheezy
 MAINTAINER bitard [DOT] michael [AT] gmail [DOT] com
 
 RUN apt-get update && \
