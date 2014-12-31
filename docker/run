@@ -1,0 +1,5 @@
+#!/bin/bash
+npm install
+export CI=true
+bower install
+grunt server
