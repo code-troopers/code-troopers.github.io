@@ -1,7 +1,11 @@
 {
   "name": "com.codetroopers.website",
   "version": "0.0.1",
-  "dependencies": {},
+  "dependencies": {
+    "request": "^2.51.0",
+    "tar": "^1.0.3",
+    "tempfile": "^1.1.0"
+  },
   "devDependencies": {
     "grunt": "~0.4.1",
     "grunt-contrib-less": "~0.8.3",
