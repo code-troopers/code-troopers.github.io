@@ -22,7 +22,8 @@ Ainsi il va être nécessaire de signer tous les binaires que vous allez produir
 
 ### Installation de GnuPG
 L'installation passe par votre gestionnaire de package classique (`apt-get install gpg`, `brew install gpg`, `install-gpg-on-my-os.exe`...). De là, vous pourrez vérifier dans un _shell_ que vous avez une version d'accessible en tapant par exemple la commande suivante:
-```
+
+{% highlight bash %}
 $ gpg --version
 gpg (GnuPG) 1.4.16
 Copyright (C) 2013 Free Software Foundation, Inc.
@@ -37,7 +38,7 @@ Cipher: IDEA, 3DES, CAST5, BLOWFISH, AES, AES192, AES256, TWOFISH,
         CAMELLIA128, CAMELLIA192, CAMELLIA256
 Hash: MD5, SHA1, RIPEMD160, SHA256, SHA384, SHA512, SHA224
 Compression: Uncompressed, ZIP, ZLIB, BZIP2
-```
+{% endhighlight %}
 
 ### Génération de la clef
 GnuPG est un mécanisme de chiffrement impliquant une clef publique (distribuée librement) associée à une clef privée (à garder précieusement). Avant de pouvoir prétendre distribuer des binaires chiffrés, il convient donc de générer le couple clef privée/publique et de distribuer la clef publique sur les serveurs appropriés.
@@ -46,27 +47,32 @@ Ainsi, après avoir fourni nom, email et commentaire pour votre clef, vous serez
 ```
 gpg --gen-key
 ```
+
 Dans les écrans qui apparaissent, vous pouvez conserver les valeurs par défaut pour la plupart des éléments (type, taille et durée de validité). Enfin, vous allez devoir spécifier la _passphrase_ de votre clef. N'hésitez pas à utiliser une phrase : elle sera plus difficilement "cassable" et vous vous en rappelerez certainement mieux qu'un mot de passe complexe.
 
 ### Vérification de la clef
 Pour vérifier que votre clef est correctement installée, vous pouvez récupérer la liste des clefs connues par votre système. Ainsi pour connaître les clefs publiques vous pouvez taper :
-```
+
+{% highlight bash %}
 $ gpg --list-keys
 /Users/cgatay/.gnupg/pubring.gpg
 --------------------------------
 pub   2048R/CE236D5E 2013-04-28
 uid                  Cedric Gatay <cedric@gatay.fr>
 sub   2048R/08130909 2013-04-28
-```
+{% endhighlight %}
+
 Et pour les clefs privées :
-```
+
+{% highlight bash %}
 $ gpg --list-secret-keys
 /Users/cgatay/.gnupg/secring.gpg
 --------------------------------
 sec   2048R/CE236D5E 2013-04-28
 uid                  Cedric Gatay <cedric@gatay.fr>
 ssb   2048R/08130909 2013-04-28
-```
+{% endhighlight %}
+
 Si la génération s'est déroulée comme prévu, la seule différence résidera dans l'emplacement du fichier correspondant au stockage de la clef publique et privée.
 
 ### Distribution de la clef publique
@@ -79,7 +85,6 @@ $ gpg --keyserver hkp://pool.sks-keyservers.net --send-keys ${KEY_ID}
 Pour vérifier que l'envoi s'est fait comme attendu, vous pouvez demander à récupérer la clef par la commande suivante :
 ```
 $ gpg --keyserver hkp://pool.sks-keyservers.net --recv-keys ${KEY_ID}
-
 ```
 
 ## Création d'un compte sur Sonatype
@@ -100,6 +105,7 @@ Par exemple, le ticket correspondant à la mise à disposition de l'intégration
 
 ## Préparation du projet pour la distribution
 Pour que vous puissiez distribuer votre projet, il est nécessaire d'ajuster légèrement le descripteur de votre projet (le fameux `pom.xml` dans notre cas traitant de Maven).
+
 ### Informations indispensables
 Il est nécessaire que le `pom.xml` contienne les informations suivantes :
 
@@ -121,7 +127,7 @@ Il est nécessaire que le `pom.xml` contienne les informations suivantes :
 De plus il est indispensable d'hériter du [projet parent de Sonatype](http://repo1.maven.org/maven2/org/sonatype/oss/oss-parent/7/oss-parent-7.pom), celui-ci décrit en fait les plugins ainsi que les dépôts qui vont être utilisés pour la livraison.
 
 Vous devez donc ajouter dans votre descripteur le lien avec le parent Sonatype :
-```
+{% highlight xml %}
 <project>
   <parent>
     <groupId>org.sonatype.oss</groupId>
@@ -130,16 +136,16 @@ Vous devez donc ajouter dans votre descripteur le lien avec le parent Sonatype :
   </parent>
   <!-- le reste de votre descripteur -->
 </project>
-```
+{% endhighlight %}
 
 Pour le remplissage des informations de votre dépôt de sources, plusieurs façon de les remplir s'offrent à vous en fonction du type de dépôt que vous utilisez, dans la majorité des cas pour les projets récents, le système de gestion de version utilisé est Git, la partie correspondant dans le `pom.xml`sera donc de la forme suivante (en ajustant `${USER}` et `${PROJECT}` bien entendu) :
-```
- <scm>
-    <connection>scm:git:git@github.com:${USER}/${PROJECT}.git</connection>
-    <developerConnection>scm:git:git@github.com:${USER}/${PROJECT}.git</developerConnection>
-    <url>git@github.com:${USER}/${PROJECT}.git</url>
-  </scm>
-```
+{% highlight xml %}
+<scm>
+  <connection>scm:git:git@github.com:${USER}/${PROJECT}.git</connection>
+  <developerConnection>scm:git:git@github.com:${USER}/${PROJECT}.git</developerConnection>
+  <url>git@github.com:${USER}/${PROJECT}.git</url>
+</scm>
+{% endhighlight %}
 
 ## Préparation de votre poste pour la distribution
 Pour déployer sur les dépôts gérés par Sonatype, vous allez devoir vous identifier pour gérer l'upload, bien entendu, il n'est pas concevable de stocker vos informations d'identification au sein du descripteur de votre projet :
@@ -148,7 +154,7 @@ Pour déployer sur les dépôts gérés par Sonatype, vous allez devoir vous ide
 
 La technique est donc d'utiliser le fichier de configuration global de Maven en définissant des paramètres. Ainsi, en éditant le fichier `~/.m2/settings.xml` vous allez ajouter vos identifiants (encore une fois, en ajustant `${USER}` et `${PASSWORD}`):
 
-```
+{% highlight xml %}
   <servers>
     <server>
       <id>sonatype-nexus-snapshots</id>
@@ -161,25 +167,25 @@ La technique est donc d'utiliser le fichier de configuration global de Maven en 
       <password>${PASSWORD}</password>
     </server>
   </servers>
-```
+{% endhighlight %}
 
 ## Distribution d'une version `SNAPSHOT`
 Si vous désirez distribuer vos bibliothèques sur des dépôts centraux, vous devez connaître les notions de `SNAPSHOT` et _release_ propres à Maven. Pour faire un bref rappel, les versions `SNAPSHOT` sont des versions en développement alors que les versions _release_ sont les versions finales. Ainsi, dépendre d'une version `SNAPSHOT` déclenchera des vérifications régulières par l'outil de construction pour récupérer toujours la dernière version alors qu'une version _release_ ne sera rapatriée qu'une et une seule fois (en assurant la stabilité de la construction).
 
 Sonatype fourni un dépôt pour de telles versions de développement ainsi qu'un dépôt pour les versions stables. Dans un premier temps et pour tester que votre système est correctement configuré, vous allez déployer une version `SNAPSHOT` de votre librairie :
-```
+{% highlight bash %}
 $ mvn clean deploy
-```
+{% endhighlight %}
 Si tout se passe comme prévu, votre livrable sera visible et disponible sur le dépôt SNAPSHOT de Sonatype : [https://oss.sonatype.org/content/repositories/snapshots](https://oss.sonatype.org/content/repositories/snapshots)
 En cas d'erreur `401 Unauthorized`, vérifiez que vos identifiants JIRA sont corrects (en vous connectant sur [https://issues.sonatype.org](https://issues.sonatype.org)).
 
 ## Préparation et distribution d'une _release_
 Le _plugin_ Maven _release_ est préconfiguré grace à l'intégration du descripteur parent de Sonatype, il suffit donc de l'utiliser pour construire votre projet, il va s'occuper de construire les livrables nécessaires, de les signer et de les déployer en tant que _staging_.
-```
+{% highlight bash %}
 $ mvn release:clean
 $ mvn release:prepare
 $ mvn release:perform
-```
+{% endhighlight %}
 Lors de la procédure, le plugin _release_ va s'occuper de changer le numéro de version `SNAPSHOT` vers un numéro _release_, de préparer la version `SNAPSHOT`suivante, de _tagguer_ le tout sur le système de gestion de sources. Un de ses atouts est de préparer la construction à partir d'une version propre provenant du système de gestion de sources, de cette façon vous pourrez vous assurer de la reproductibilité des constructions.
 
 Vous aurez donc besoin de saisir la _passphrase_ de votre clef _GnuPG_ lors du processus, pour effectuer la signature des livrables.
