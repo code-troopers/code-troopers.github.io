@@ -21,6 +21,15 @@ RUN curl -k -s https://deb.nodesource.com/gpgkey/nodesource.gpg.key | apt-key ad
     apt-get install -y nodejs && \
     apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
+RUN cd /tmp && \
+    wget http://www.nasm.us/pub/nasm/releasebuilds/2.11.06/nasm-2.11.06.tar.gz && \
+    tar xvzf nasm-*.tar.gz && \
+    cd nasm-* && \
+    ./configure && \
+    make && \
+    sudo make install && \
+    rm -rf nasm-*
+
 RUN npm install -g gulp && \
     npm install -g grunt && \
     npm install -g grunt-cli && \
