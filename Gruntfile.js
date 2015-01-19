@@ -330,7 +330,7 @@ module.exports = function (grunt) {
                          'gh-pages': {
                              options: {
                                  base: 'dist',
-                                 push: true,
+                                 push: false,
                                  message: 'Auto-generated commit (cloudbees forge)'
                              },
                              src: ['**']
