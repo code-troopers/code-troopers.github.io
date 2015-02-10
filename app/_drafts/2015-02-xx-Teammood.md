@@ -43,7 +43,7 @@ Et si on se plante, parce qu'on a des gros doigts sur un petit écran on peut re
 </div>
 
 
-Ensuite on retombe sur le fonctionnement souhaité, en fonction de son vote, on vois apparaître son _mood_  avec une palette de couleur et de smileys simple à comprendre en un coup d'œil.
+Ensuite on retombe sur le fonctionnement souhaité, en fonction de son vote, on vois apparaître son _mood_  avec une palette de couleur et de smileys simples à comprendre en un coup d'œil.
 Avec un peu d'historique on peut aussi apprécier via des stats simple l'évolution de l'humeur de l'équipe sur du plus long terme.
 
 
@@ -57,7 +57,7 @@ Avec un peu d'historique on peut aussi apprécier via des stats simple l'évolut
 </div>
 
 Finalement il ne reste plus qu'a exploiter ces données. Et là libre à chacun (et chaque équipe) de l'interpréter comme il le souhaite. 
-De notre côté nous avons expérimenté plusieurs façon de faire.
+De notre côté nous avons expérimenté plusieurs façons de faire.
 Une revue en rétro de fin de sprint, une alerte au daily le lendemain d'un jour noir.
 Cela demande plus ou moins de temps afin de trouver une méthode efficace pour tirer bénéfice de ces informations.
 En général plus on attend plus le souvenir s'estompe et donc le problème est amoindri, ce qui à mon avis n'est pas une bonne chose.
@@ -68,7 +68,7 @@ Mais là c'est vraiment chacun ses goûts.
 Que dire de plus ?
 [TeamMood](https://www.teammood.com/) est un produit français (un de plus) développé à Toulouse par [Nicolas Deverge](https://twitter.com/ndeverge).
 C'est encore en bêta, mais ça fonctionne parfaitement (aucun problème à signaler depuis qu'on l'utilise).
-Je sais que la roadmap et bien remplie, mais la prochaine fonctionnalité qu'on attend c'est la gestion de congés/absence, histoire de ne pas être dérangé pendant les vacances.
+Je sais que la roadmap est bien remplie, mais la prochaine fonctionnalité qu'on attend c'est la gestion de congés/absence, histoire de ne pas être dérangé pendant les vacances.
 
 Conclusion : 
 je le recommande à toutes les équipes qui sont prêtes à se prendre en main pour faire bouger les choses afin d'être heureuse au quotidien
