@@ -3,7 +3,7 @@ layout: post
 title: Suivre l'humeur de son équipe avec TeamMood
 author: Florian
 cover: teammood-banner
-tags: [Outils, Agilité, Happyness Chart]
+tags: [Outils, Agilité, Happiness Chart]
 ---
 
 
