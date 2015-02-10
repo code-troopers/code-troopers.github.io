@@ -71,4 +71,4 @@ C'est encore en bêta, mais ça fonctionne parfaitement (aucun problème à sign
 Je sais que la roadmap est bien remplie, mais la prochaine fonctionnalité qu'on attend c'est la gestion de congés/absence, histoire de ne pas être dérangé pendant les vacances.
 
 Conclusion : 
-je le recommande à toutes les équipes qui sont prêtes à se prendre en main pour faire bouger les choses afin d'être heureuse au quotidien
+je le recommande à toutes les équipes qui sont prêtes à se prendre en main pour faire bouger les choses afin d'être heureuse au quotidien.
