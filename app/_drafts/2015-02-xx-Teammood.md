@@ -15,11 +15,11 @@ nous avions expérimenté un outil sur un grand tableau blanc pour connaître no
 Nous l'appelions à l'époque `happiness chart` (d'autres l'appelent aussi `niko-niko`).
 Toute l'équipe a rapidement adhéré au principe, car dans la façon dont nous avions établi les règles nous pouvions dessiner ce que l'on souhaitait dans notre case, c'est la couleur qui importait : 
 
+<!--break-->
+
   * Vert = Content ; 
   * Bleu = Neutre ;
   * Rouge = Pas content.
-  
-<!--break-->
 
 On avait régulièrement droit à toutes sortes de dessins, du simple smiley au gribouillis le plus improbable. 
 (Je suis assez déçu de n'avoir retrouvé aucune photo de ces grands moments d'art)
