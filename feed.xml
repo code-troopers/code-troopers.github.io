@@ -7,6 +7,76 @@
                 <atom:link href="http://code-troopers.com/feed.xml" rel="self" type="application/rss+xml"/>
                 
                         <item>
+                                <title>Suivre l'humeur de son équipe avec TeamMood</title>
+                                <description>&lt;p&gt;Depuis bientôt 6 mois l’équipe des Code-Troopers utilise &lt;a href=&quot;https://www.teammood.com/&quot;&gt;TeamMood&lt;/a&gt; pour suivre son bonheur au quotidien. Retour sur l’utilisation d’un outil fort sympathique. &lt;/p&gt;
+
+&lt;p&gt;Si l’on remonte quelques années en arrière, lorsque nous travaillions encore tous les 7 pour SRMvision, 
+nous avions expérimenté un outil sur un grand tableau blanc pour connaître notre état d’esprit à la fin de chaque journée de travail. 
+Nous l’appelions à l’époque &lt;code&gt;happiness chart&lt;/code&gt; (d’autres l’appellent aussi &lt;code&gt;niko-niko&lt;/code&gt;).
+Toute l’équipe a rapidement adhéré au principe, car, dans la façon dont nous avions établi les règles, nous pouvions dessiner ce que l’on souhaitait dans notre case, seule la couleur importait : &lt;/p&gt;
+
+&lt;!--break--&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Vert = Content ; &lt;/li&gt;
+  &lt;li&gt;Bleu = Neutre ;&lt;/li&gt;
+  &lt;li&gt;Rouge = Pas content.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;On avait régulièrement droit à toutes sortes de dessins, du simple smiley au gribouillis le plus improbable. 
+(Je suis assez déçu de n’avoir retrouvé aucune photo de ces grands moments d’art)&lt;/p&gt;
+
+&lt;p&gt;Le problème que nous avions relevé alors était principalement l’assiduité de remplissage. 
+En effet, même si pour partir le soir on passait dans la salle où se trouvait le tableau à remplir, on n’y pensait pas forcément (trop pressé de rentrer chez soi). 
+Il n’était donc pas rare qu’il y ait des trous, comblés sans conviction le lendemain matin.&lt;/p&gt;
+
+&lt;p&gt;C’est là où &lt;a href=&quot;https://www.teammood.com/&quot;&gt;TeamMood&lt;/a&gt; entre en action avec une grosse valeur ajoutée : l’envoi d’un mail quotidien ! 
+Plus d’excuse pour oublier de voter, il suffit de cliquer sur le lien qui correspond à notre humeur du jour dans le mail reçu, 
+c’est super simple et rapide, ça marche par téléphone, ça peut se faire dans le bus sur le trajet du retour.
+Et si on se plante, parce qu’on a des gros doigts sur un petit écran, on peut revoter dans la foulée, ça permet d’écraser son propre vote du jour.&lt;/p&gt;
+
+&lt;div style=&quot;text-align:center;margin-bottom:50px&quot;&gt;
+    &lt;a href=&quot;/images/postTeammood/mailBig.png&quot; data-lightbox=&quot;group-1&quot; title=&quot;Mail du vote quotidien&quot; class=&quot;inlineBoxes&quot;&gt;
+        &lt;img class=&quot;medium&quot; src=&quot;/images/postTeammood/mailBig.png&quot; alt=&quot;Mail du vote quotidien&quot; /&gt;
+    &lt;/a&gt;
+    &lt;a href=&quot;/images/postTeammood/mailPhone.png&quot; data-lightbox=&quot;group-1&quot; title=&quot;Mail du vote quotidien sur téléphone&quot; class=&quot;inlineBoxes&quot;&gt;
+        &lt;img class=&quot;medium&quot; src=&quot;/images/postTeammood/mailPhone.png&quot; alt=&quot;Mail du vote quotidien sur téléphone&quot; /&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Ensuite on retombe sur le fonctionnement souhaité : en fonction de son vote, on voit apparaître son &lt;em&gt;mood&lt;/em&gt;  avec une palette de couleurs et de smileys simples à comprendre en un coup d’œil.
+Avec un peu d’historique on peut aussi apprécier via des stats simples l’évolution de l’humeur de l’équipe sur du plus long terme.&lt;/p&gt;
+
+&lt;div style=&quot;text-align:center;margin-bottom:50px&quot;&gt;
+    &lt;a href=&quot;/images/postTeammood/quotidien.png&quot; data-lightbox=&quot;group-2&quot; title=&quot;&quot; class=&quot;inlineBoxes&quot;&gt;
+        &lt;img class=&quot;medium&quot; src=&quot;/images/postTeammood/quotidien.png&quot; alt=&quot;&quot; /&gt;
+    &lt;/a&gt;
+    &lt;a href=&quot;/images/postTeammood/stat.png&quot; data-lightbox=&quot;group-2&quot; title=&quot;&quot; class=&quot;inlineBoxes&quot;&gt;
+        &lt;img class=&quot;medium&quot; src=&quot;/images/postTeammood/stat.png&quot; alt=&quot;&quot; /&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Finalement il ne reste plus qu’à exploiter ces données. Et là, libre à chacun (et à chaque équipe) de l’interpréter comme il le souhaite. 
+De notre côté nous avons expérimenté plusieurs façons de faire : 
+une revue en rétro de fin de sprint, une alerte au daily le lendemain d’un jour…
+Cela demande plus ou moins de temps afin de trouver une méthode efficace pour tirer bénéfice de ces informations.
+En général, plus on attend plus le souvenir s’estompe et donc le problème est amoindri, ce qui, à mon avis, n’est pas une bonne chose.
+Mais là c’est vraiment chacun ses goûts.&lt;/p&gt;
+
+&lt;p&gt;Que dire de plus ?
+&lt;a href=&quot;https://www.teammood.com/&quot;&gt;TeamMood&lt;/a&gt; est un produit français (un de plus) développé à Toulouse par &lt;a href=&quot;https://twitter.com/ndeverge&quot;&gt;Nicolas Deverge&lt;/a&gt;.
+C’est encore en bêta, mais ça fonctionne parfaitement (aucun problème à signaler depuis qu’on l’utilise).
+Je sais que la roadmap est bien remplie, mais la prochaine fonctionnalité qu’on attend c’est la gestion des congés/absences, histoire de ne pas être dérangé pendant les vacances.&lt;/p&gt;
+
+&lt;p&gt;Conclusion : 
+je le recommande à toutes les équipes qui sont prêtes à se prendre en main pour faire bouger les choses afin d’être heureuses au quotidien.&lt;/p&gt;
+</description>
+                                <pubDate>Wed, 11 Feb 2015 00:00:00 +0100</pubDate>
+                                <link>http://code-troopers.com/2015/02/11/Teammood.html</link>
+                                <guid isPermaLink="true">http://code-troopers.com/2015/02/11/Teammood.html</guid>
+                        </item>
+                
+                        <item>
                                 <title>ct - alias de projets</title>
                                 <description>&lt;p&gt;Dans l’équipe Code-Troopers, nous manipulons des technos qui sont assez différentes et qui possèdent chacune un vocabulaire différent qui leur permet de fonctionner en ligne de commande.
 Du coup, un de nos problèmes récurrents est de se rappeler quelle commande dois-je lancer lorsque je veux travailler sur tel projet (&lt;code&gt;mvn jetty:run&lt;/code&gt;, &lt;code&gt;gradle assemble&lt;/code&gt;, &lt;code&gt;grunt serve&lt;/code&gt;…).&lt;/p&gt;
@@ -583,99 +653,6 @@ Dans tous les cas, essayez, testez, bidouillez, faîtes vous plaisir ! C’est t
                                 <pubDate>Thu, 04 Sep 2014 00:00:00 +0200</pubDate>
                                 <link>http://code-troopers.com/2014/09/04/AddonsHeroku.html</link>
                                 <guid isPermaLink="true">http://code-troopers.com/2014/09/04/AddonsHeroku.html</guid>
-                        </item>
-                
-                        <item>
-                                <title>Résoudre les conflits de dépendances</title>
-                                <description>&lt;p&gt;Lors de nos développements, nous reposons beaucoup sur des projets externes qui nous fournissent énormément de services
-utiles. Dans un récent projet, nous avons eu besoin de faire fonctionner Neo4j conjointement à ElasticSearch. Jusqu’ici,
-aucun soucis n’est à déplorer, mais nous avions une exigence particulière : il fallait que l’application puisse
-démarrer automatiquement un serveur Neo4J ainsi qu’un serveur ElasticSearch sur les postes de développements (ainsi que
-pour les tests d’intégration).
-&lt;!--break--&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;problme-existant&quot;&gt;Problème existant&lt;/h2&gt;
-
-&lt;p&gt;Les deux outils que nous utilisons se basent sur Apache Lucene pour toute la partie indexation et accès aux données.
-Mais, et c’est là que le problème se situe, ils n’utilisent pas les mêmes versions de Lucene.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;lt;!-- Extrait du pom d'ElasticSearch --&amp;gt;
-&amp;lt;dependency&amp;gt;
-    &amp;lt;groupId&amp;gt;org.apache.lucene&amp;lt;/groupId&amp;gt;
-    &amp;lt;artifactId&amp;gt;lucene-core&amp;lt;/artifactId&amp;gt;
-    &amp;lt;version&amp;gt;4.9.0&amp;lt;/version&amp;gt;
-    &amp;lt;scope&amp;gt;compile&amp;lt;/scope&amp;gt;
-&amp;lt;/dependency&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;hr /&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;lt;!-- Extrait du pom de Neo4j --&amp;gt; 
-&amp;lt;dependency&amp;gt;
-    &amp;lt;groupId&amp;gt;org.apache.lucene&amp;lt;/groupId&amp;gt;
-    &amp;lt;artifactId&amp;gt;lucene-core&amp;lt;/artifactId&amp;gt;
-    &amp;lt;version&amp;gt;3.6.2&amp;lt;/version&amp;gt;
-&amp;lt;/dependency&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;ElasticSearch utilise la version 4.9.0, alors que Neo4J utilise la version 3.6.2. Ainsi, en fonction du bon vouloir du
-&lt;code&gt;Classloader&lt;/code&gt; qui sera utilisé par l’application, il se peut qu’ElasticSearch ou Neo4J refuse de fonctionner. La
-difficulté pour comprendre et détecter le problème est qu’il se manifeste souvent par un obscur &lt;code&gt;NoClassDefFoundError&lt;/code&gt;
-ou &lt;code&gt;NoSuchMethodError&lt;/code&gt; qui n’est pas des plus explicites (d’autant plus lorsque notre IDE nous montre une version qui
-contient ledit symbole non trouvé).&lt;/p&gt;
-
-&lt;h2 id=&quot;solution-de-contournement&quot;&gt;Solution de contournement&lt;/h2&gt;
-
-&lt;p&gt;Le conflit est assez simple à contourner une fois qu’on a compris ce qui se passe. En fait, il y a deux classes portant
-le même nom dans les classes chargées, par exemple &lt;code&gt;org.lucene.MaClass&lt;/code&gt;, l’une effaçant l’autre aux yeux du
-&lt;code&gt;ClassLoader&lt;/code&gt;.
-Une pratique courante est de renommer (ou relocate) le package de base d’une bibliothèque utilisée et de l’inclure dans
-le fichier de package du projet, le plugin &lt;code&gt;maven-shade&lt;/code&gt; est conçu dans cette optique.
-Le choix fait est de renommer la dépendance Lucene dans Neo4J pour notre part, ainsi, nous avons forké le projet et
-configuré le plugin &lt;code&gt;shade&lt;/code&gt; pour qu’il inclue le contenu de la dépendance d’Apache Lucene et qu’il fasse le renommage de
-&lt;code&gt;org.apache.lucene&lt;/code&gt; en &lt;code&gt;shaded.org.apache.lucene&lt;/code&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt; &amp;lt;plugin&amp;gt;
-        &amp;lt;groupId&amp;gt;org.apache.maven.plugins&amp;lt;/groupId&amp;gt;
-        &amp;lt;artifactId&amp;gt;maven-shade-plugin&amp;lt;/artifactId&amp;gt;
-        &amp;lt;version&amp;gt;2.2&amp;lt;/version&amp;gt;
-        &amp;lt;executions&amp;gt;
-            &amp;lt;execution&amp;gt;
-                &amp;lt;phase&amp;gt;package&amp;lt;/phase&amp;gt;
-                &amp;lt;goals&amp;gt;
-                    &amp;lt;goal&amp;gt;shade&amp;lt;/goal&amp;gt;
-                &amp;lt;/goals&amp;gt;
-                &amp;lt;configuration&amp;gt;
-                    &amp;lt;createDependencyReducedPom&amp;gt;true&amp;lt;/createDependencyReducedPom&amp;gt;
-
-                    &amp;lt;artifactSet&amp;gt;
-                        &amp;lt;includes&amp;gt;
-                            &amp;lt;include&amp;gt;org.apache.lucene:*&amp;lt;/include&amp;gt;
-                        &amp;lt;/includes&amp;gt;
-                    &amp;lt;/artifactSet&amp;gt;
-                    &amp;lt;relocations&amp;gt;
-                        &amp;lt;relocation&amp;gt;
-                            &amp;lt;pattern&amp;gt;org.apache.lucene&amp;lt;/pattern&amp;gt;
-                            &amp;lt;shadedPattern&amp;gt;shaded.org.apache.lucene&amp;lt;/shadedPattern&amp;gt;
-                        &amp;lt;/relocation&amp;gt;
-                    &amp;lt;/relocations&amp;gt;
-                &amp;lt;/configuration&amp;gt;
-            &amp;lt;/execution&amp;gt;
-        &amp;lt;/executions&amp;gt;
-  &amp;lt;/plugin&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&quot;dploiement-et-nommage&quot;&gt;Déploiement et nommage&lt;/h2&gt;
-
-&lt;p&gt;Pour ne pas polluer les dépôts, le numéro de version modifié a été postfixé par &lt;code&gt;-shaded&lt;/code&gt;. Le déploiement a été fait sur
-un dépôt Maven qui est en fait un simple repository Github.
-Le commit correspondant à cette modification &lt;a href=&quot;https://github.com/CedricGatay/neo4j/commit/452f58fca69ffe3b1d0eab6261b8342f8da95889&quot;&gt;est consultable
-ici&lt;/a&gt;.&lt;/p&gt;
-
-</description>
-                                <pubDate>Mon, 01 Sep 2014 00:00:00 +0200</pubDate>
-                                <link>http://code-troopers.com/2014/09/01/ConflitsDependances.html</link>
-                                <guid isPermaLink="true">http://code-troopers.com/2014/09/01/ConflitsDependances.html</guid>
                         </item>
                 
         </channel>
