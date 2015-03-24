@@ -54,7 +54,7 @@ Nous sommes 9 dans notre équipe, ce qui fait du monde à découvrir en peu de t
 &lt;p&gt;&lt;code&gt;Kaléméon&lt;/code&gt;
 Marie, notre super graphiste, a trouvé un lien entre le caméléon et sa vision à 360° et la solution que l’on souhaite apporter à nos utilisateurs : toute l’équipe valide !&lt;/p&gt;
 
-&lt;p&gt;Côté business Stéphane, Mélodie, Bénédicte et Alexis ont plein d’idées, et Victor est là pour apporte son expertise, en tant qu’étudiant en droit c’est pile la personne qu’il fallait.&lt;/p&gt;
+&lt;p&gt;Côté business Stéphane, Mélodie, Bénédicte et Alexis ont plein d’idées, et Victor est là pour apporter son expertise, en tant qu’étudiant en droit c’est pile la personne qu’il fallait.&lt;/p&gt;
 
 &lt;p&gt;Il reste Maxime, Joris et moi, on a entammé le dev en partant des vagues concepts métier évoqués : des assurances, des contrats, des mots clés et des assurés. &lt;/p&gt;
 
@@ -86,15 +86,15 @@ De mon coté, je me charge d’une saisie de données réelles, c’est toujours
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;dimanche---14h--pause-repas-et-lections&quot;&gt;Dimanche - 14h : pause repas et élections&lt;/h2&gt;
-&lt;p&gt;À croire que PaloAlTours fixe la date du Startup Weekend en se basant sur le calendrier électoral car, encore une fois, c’est un weekend d’élections. C’est donc après une petite pause citoyenne que nous reprenons le travail.
-Le problème, c’est que côté dev il n’y a presque plus de travail. Le MVP semble bien fonctionner selon les cas d’utilisations séléctionnés pour la démo. 
+&lt;p&gt;À croire que Palo Altours fixe la date du Startup Weekend en se basant sur le calendrier électoral car, encore une fois, c’est un weekend d’élections. C’est donc après une petite pause citoyenne que nous reprenons le travail.
+Le problème, c’est que côté dev il n’y a presque plus de travail. Le MVP semble bien fonctionner selon les cas d’utilisations sélectionnés pour la démo. 
 Il reste donc surtout de la cosmétique à faire, c’est pas le plus fun.&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;dimanche---17h--prparation-de-la-dmo--la-fin-du-monde&quot;&gt;Dimanche - 17h : Préparation de la démo : la fin du monde&lt;/h2&gt;
-&lt;p&gt;Encore un couac ! Une appletv est disponible mais le rendu sur iphone 5 n’est pas génial et impossible de trouver un ipad. Par chance on a mis la main sur un Slimport, mais la encore échec, le vidéoprojecteur n’est pas compatible : grrr.
-Derniere tentative avec un Chromecast et là, c’est le wifi qui lache toutes les 10 secondes :/
+&lt;p&gt;Encore un couac ! Une appletv est disponible mais le rendu sur iphone 5 n’est pas génial et impossible de trouver un ipad. Par chance on a mis la main sur un Slimport, mais là encore échec, le vidéoprojecteur n’est pas compatible : grrr.
+Derniere tentative avec un Chromecast et là, c’est le wifi qui lâche toutes les 10 secondes :/
 Finalement ce sera un PC avec un navigateur redimmensionné à la taille d’un téléphone, c’est mieux que rien…&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
@@ -115,7 +115,7 @@ Finalement ce sera un PC avec un navigateur redimmensionné à la taille d’un 
 &lt;ul&gt;
   &lt;li&gt;Pour Kaléméon (la gestion des contrats d’assurance) : &lt;a href=&quot;http://app.kalemeon.co&quot;&gt;app.kalemeon.co&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;Pour TIM (la prise de rendez-vous) : &lt;a href=&quot;https://timfront.herokuapp.com/#/&quot;&gt;https://timfront.herokuapp.com/&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Pour Roadmad (la recherche de lieux insolite autour de soi) : &lt;em&gt;pas de lien&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;Pour Roadmad (la recherche de lieux insolites autour de soi) : &lt;em&gt;pas de lien&lt;/em&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;Rendez-vous avant la fin de l’année pour la prochaine édition, on sera encore là et toujours aussi motivés ! Il me semble qu’il y a les élections régionales à la fin de l’année, c’est sûr, bloquez ce weekend-là sur vos agendas :P&lt;/p&gt;
