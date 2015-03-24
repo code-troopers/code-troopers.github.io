@@ -68,7 +68,7 @@ De l’autre coté de la table, ça bouge beaucoup aussi. Mais je n’écoute qu
 Au milieu de l’après-midi, Alexis, Mélodie et Bénédicte sortent sonder des gens dans la rue. Ils sont partis sur le terrain pour tester nos choix et idées avec des 'vrais' gens dans la rue. 
 C'est une étape indispensable du weekend.  
 
-5h30 : il est temps d’aller dormir. Je laisse Marie et Maxime qui ont encore des ressources insoupçonnées. 
+5h30 (oui oui le temps passe vraiment aussi vite) : il est temps d’aller dormir. Je laisse Marie et Maxime qui ont encore des ressources insoupçonnées. 
 
 
 <br/>
@@ -85,7 +85,8 @@ Pendant ce temps, l’autre moitié de l’équipe a travaillé sur la présenta
 
 ## Dimanche - 14h : pause repas et élections
 À croire que PaloAlTours fixe la date du Startup Weekend en se basant sur le calendrier électoral car, encore une fois, c’est un weekend d’élections. C’est donc après une petite pause citoyenne que nous reprenons le travail.
-Le problème, c’est qu’il n’y a presque plus de travail.
+Le problème, c’est que côté dev il n’y a presque plus de travail. Le MVP semble bien fonctionner selon les cas d'utilisations séléctionnés pour la démo. 
+Il reste donc surtout de la cosmétique à faire, c'est pas le plus fun.
 
 
 <br/>
