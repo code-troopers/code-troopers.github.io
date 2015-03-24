@@ -52,7 +52,7 @@ On ne sait pas encore où on va, mais côté dev il faut déjà avancer. Maxime 
 `Kaléméon`
 Marie, notre super graphiste, a trouvé un lien entre le caméléon et sa vision à 360° et la solution que l’on souhaite apporter à nos utilisateurs : toute l’équipe valide !
 
-Côté business Stéphane, Mélodie, Bénédicte et Alexis ont plein d'idées, et Victor est là pour apporte son expertise, en tant qu'étudiant en droit c'est pile la personne qu'il fallait.
+Côté business Stéphane, Mélodie, Bénédicte et Alexis ont plein d'idées, et Victor est là pour apporter son expertise, en tant qu'étudiant en droit c'est pile la personne qu'il fallait.
 
 Il reste Maxime, Joris et moi, on a entammé le dev en partant des vagues concepts métier évoqués : des assurances, des contrats, des mots clés et des assurés. 
 
@@ -87,16 +87,16 @@ Pendant ce temps, l’autre moitié de l’équipe a travaillé sur la présenta
 <br/>
 
 ## Dimanche - 14h : pause repas et élections
-À croire que PaloAlTours fixe la date du Startup Weekend en se basant sur le calendrier électoral car, encore une fois, c’est un weekend d’élections. C’est donc après une petite pause citoyenne que nous reprenons le travail.
-Le problème, c’est que côté dev il n’y a presque plus de travail. Le MVP semble bien fonctionner selon les cas d'utilisations séléctionnés pour la démo. 
+À croire que Palo Altours fixe la date du Startup Weekend en se basant sur le calendrier électoral car, encore une fois, c’est un weekend d’élections. C’est donc après une petite pause citoyenne que nous reprenons le travail.
+Le problème, c’est que côté dev il n’y a presque plus de travail. Le MVP semble bien fonctionner selon les cas d'utilisations sélectionnés pour la démo. 
 Il reste donc surtout de la cosmétique à faire, c'est pas le plus fun.
 
 
 <br/>
 
 ## Dimanche - 17h : Préparation de la démo : la fin du monde
-Encore un couac ! Une appletv est disponible mais le rendu sur iphone 5 n’est pas génial et impossible de trouver un ipad. Par chance on a mis la main sur un Slimport, mais la encore échec, le vidéoprojecteur n’est pas compatible : grrr.
-Derniere tentative avec un Chromecast et là, c’est le wifi qui lache toutes les 10 secondes :/
+Encore un couac ! Une appletv est disponible mais le rendu sur iphone 5 n’est pas génial et impossible de trouver un ipad. Par chance on a mis la main sur un Slimport, mais là encore échec, le vidéoprojecteur n’est pas compatible : grrr.
+Derniere tentative avec un Chromecast et là, c’est le wifi qui lâche toutes les 10 secondes :/
 Finalement ce sera un PC avec un navigateur redimmensionné à la taille d’un téléphone, c’est mieux que rien…
 
 
@@ -116,7 +116,7 @@ Si vous souhaitez regarder ce qui a été réalisé (il n'est pas garanti que ca
 
  * Pour Kaléméon (la gestion des contrats d'assurance) : [app.kalemeon.co](http://app.kalemeon.co)
  * Pour TIM (la prise de rendez-vous) : [https://timfront.herokuapp.com/](https://timfront.herokuapp.com/#/)
- * Pour Roadmad (la recherche de lieux insolite autour de soi) : _pas de lien_
+ * Pour Roadmad (la recherche de lieux insolites autour de soi) : _pas de lien_
 
 Rendez-vous avant la fin de l’année pour la prochaine édition, on sera encore là et toujours aussi motivés ! Il me semble qu’il y a les élections régionales à la fin de l’année, c’est sûr, bloquez ce weekend-là sur vos agendas :P
 
