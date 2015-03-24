@@ -21,14 +21,14 @@ Nous n’étions pas non plus venus avec une idée de pitch, ce qui nous a permi
 <br/>
 
 ## Vendredi - 18h : pitchs et choix des projets
-En tant que dev c’est le moment le plus complexe : plein d’idées, plein de monde, plein de sollicitations et un choix à faire vite ! très vite !
+En tant que dev c’est le moment le plus complexe : plein d’idées, plein de monde, plein de sollicitations et un choix à faire vite ! Très vite !
 Comme l’année dernière, il n’y a pas énormément de dev et les porteurs de projet (souvent business) ont presque tous besoin de dev dans leur équipe. 
 Et ce n’est pas facile de refuser un appel à l’aide. 
-Mais il faut faire un choix et en plus il faut faire le tri entre les projets qui semblent intéressants et ceux ou il y a un minimum de dev à faire, car on est venu pour ça.
+Mais il faut faire un choix et en plus il faut faire le tri entre les projets qui semblent intéressants et ceux où il y a un minimum de dev à faire, car on est venu pour ça.
 Après avoir pris notre temps pour faire le tour de tous les projets, voici notre verdict : 
 
 * Matthieu va travailler sur _TIM_ : une plate-forme qui permet de prendre rendez-vous chez des professionnels de tous genres (coiffeur, plombier…),
-* Vincent va travailler sur _Mes lieux de sport_ : une application pour trouver des lieux sympa pour faire du sport,
+* Vincent va travailler sur _Roadmad_ : une application pour trouver des lieux insolites localement,
 * Joris et moi, enfin, allons travailler sur _OnAssur_ : une plate-forme qui va nous aider dans la compréhension et la gestion de nos contrats d’assurance.
 
 
@@ -54,7 +54,7 @@ Marie, notre super graphiste, a trouvé un lien entre le caméléon et sa vision
 
 Côté business Stéphane, Mélodie, Bénédicte et Alexis ont plein d'idées, et Victor est là pour apporte son expertise, en tant qu'étudiant en droit c'est pile la personne qu'il fallait.
 
-Il reste Maxime, Joris et moi, on à entammé le dev en partant des vagues concepts métier évoqués : des assurances, des contrats, des mots clés et des assurés. 
+Il reste Maxime, Joris et moi, on a entammé le dev en partant des vagues concepts métier évoqués : des assurances, des contrats, des mots clés et des assurés. 
 
 
 <br/>
@@ -69,7 +69,7 @@ Au milieu de l’après-midi, Alexis, Mélodie et Bénédicte sortent sonder des
 C'est une étape indispensable du weekend. Les retours des personnes sondées sont super positifs, donc on va en mettre dans la présentation finale. 
 Ils enchainent sur le _Business Model Canevas_, là je suis complètement largué, et aussi admiratif de ce qu'ils arrivent à faire en si peu de temps.
 
-Sur la partie dev ça se passe bien, à peine quelques conflits de commit, mais c'est normal vu qu'on travail sur les mêmes fichiers.
+Sur la partie dev ça se passe bien, à peine quelques conflits de commit, mais c'est normal vu qu'on travaille sur les mêmes fichiers.
 5h30 (oui oui le temps passe vraiment aussi vite) : il est temps d’aller dormir. Je laisse Marie et Maxime qui ont encore des ressources insoupçonnées. 
 
 
@@ -78,8 +78,8 @@ Sur la partie dev ça se passe bien, à peine quelques conflits de commit, mais 
 ## Dimanche - 10h : un peu de recul
 Retour au travail le dimanche vers 10h, toute l’équipe est là. Maxime n’a pas dormi (wahoo).
 Il a terminé la page d'accueil du site [http://kalemeon.co/](http://kalemeon.co/).
-Et pour la partie application, le travail a bien avancé aussi, niveau visuel c’est presque bon. Il reste du travail coté back. Il bien gérer les jointures entre un utilisateur et ses contrats associés. C’est Joris qui part sur cette tâche.
-De mon coté, je me charge d’une saisie de données réelles, c’est toujours plus sympa pour une démo. Sur ce point, un grand merci à Victor qui a épluché plusieurs types de contrats pour en extraire les infos pertinentes sous forme de clauses et de mots-clés associés. Je n’ai plus qu’a jouer avec un builder et voilà une BDD bien remplie.
+Et pour la partie application, le travail a bien avancé aussi, niveau visuel c’est presque bon. Il reste du travail coté back. Il a bien géré les jointures entre un utilisateur et ses contrats associés. C’est Joris qui part sur cette tâche.
+De mon coté, je me charge d’une saisie de données réelles, c’est toujours plus sympa pour une démo. Sur ce point, un grand merci à Victor qui a épluché plusieurs types de contrats pour en extraire les infos pertinentes sous forme de clauses et de mots-clés associés. Je n’ai plus qu’à jouer avec un builder et voilà une BDD bien remplie.
 
 Pendant ce temps, l’autre moitié de l’équipe a travaillé sur la présentation finale et le rendu est vraiment bien.
 
@@ -95,7 +95,7 @@ Il reste donc surtout de la cosmétique à faire, c'est pas le plus fun.
 <br/>
 
 ## Dimanche - 17h : Préparation de la démo : la fin du monde
-Encore un couac ! Une appletv est disponible mais le rendu sur iphone 5 n’est pas génial et impossible de trouver un ipad. Par chance on a mis la main sur un Slimport, mais la encore échec, le vidéoprojecteur  n’est pas compatible : grrr.
+Encore un couac ! Une appletv est disponible mais le rendu sur iphone 5 n’est pas génial et impossible de trouver un ipad. Par chance on a mis la main sur un Slimport, mais la encore échec, le vidéoprojecteur n’est pas compatible : grrr.
 Derniere tentative avec un Chromecast et là, c’est le wifi qui lache toutes les 10 secondes :/
 Finalement ce sera un PC avec un navigateur redimmensionné à la taille d’un téléphone, c’est mieux que rien…
 
