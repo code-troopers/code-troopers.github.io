@@ -42,7 +42,7 @@ Nous sommes 9 dans notre équipe, ce qui fait du monde à découvrir en peu de t
 
 Petit tour de table de notre équipe : [Mélodie](https://twitter.com/MelodieFourez), [Stéphane](https://twitter.com/SandeauGruberS), [Marie](https://twitter.com/MarieCottu), [Maxime](https://twitter.com/maximepvrt),
  [Bénédicte](https://twitter.com/loustalotbene), [Alexis](https://twitter.com/alexescu), [Victor](https://twitter.com/victor_proust), [Joris](https://twitter.com/Joris_Potier) et [moi](https://twitter.com/FlorianChauveau)
- (quelques têtes déjà vue, mais personne avec qui nous avions déjà travaillé : _challenge accepted_).
+ (quelques têtes déjà vues, mais personne avec qui nous avions déjà travaillé : _challenge accepted_).
 
 On ne sait pas encore où on va, mais côté dev il faut déjà avancer. Maxime est venu avec une stack AngularJS + Google endpoint. Parfait, ce sera simple à héberger, on peut au moins commencer à commiter sur son repo github.
 
@@ -52,7 +52,7 @@ On ne sait pas encore où on va, mais côté dev il faut déjà avancer. Maxime 
 `Kaléméon`
 Marie, notre super graphiste, a trouvé un lien entre le caméléon et sa vision à 360° et la solution que l’on souhaite apporter à nos utilisateurs : toute l’équipe valide !
 
-Côté business Stéphane, Mélodie, Bénédicte et Alexis ont plein d'idées, et Victor et là pour apporte son expertise, en tant qu'étuidant en droit c'est pile la personne qu'il fallait.
+Côté business Stéphane, Mélodie, Bénédicte et Alexis ont plein d'idées, et Victor et là pour apporte son expertise, en tant qu'étudiant en droit c'est pile la personne qu'il fallait.
 
 Il reste Maxime, Joris et moi, on à entammé le dev en partant des vagues concepts métier évoqués : des assurances, des contrats, des mots clés et des assurés. 
 
@@ -112,7 +112,7 @@ L'annonce des résultats se fait dans une ambiance survoltée, et le classement 
 Arghhh !! Quelle déception, aucun des 4 Troopers n’est sur le podium. C’est sûrement le signe que les Troopers sont fait pour travailler unis. On le saura pour la prochaine fois…
 
 
-Si vous souhaitez regarder ce qui a été réalisé (il n'est pas garantie que ca reste en ligne très longtemps) :
+Si vous souhaitez regarder ce qui a été réalisé (il n'est pas garanti que ca reste en ligne très longtemps) :
 
  * Pour Kaléméon (la gestion des contrats d'assurance) : [app.kalemeon.co](http://app.kalemeon.co)
  * Pour TIM (la prise de rendez-vous) : [https://timfront.herokuapp.com/](https://timfront.herokuapp.com/#/)
