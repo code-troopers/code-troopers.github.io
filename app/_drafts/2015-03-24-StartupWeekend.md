@@ -101,8 +101,8 @@ Finalement ce sera un PC avec un navigateur redimmensionné à la taille d’un 
 ## Dimanche - 21h : les résultats
 L'annonce des résultats se fait dans une ambiance survoltée, et le classement est le suivant :
 
-  * 1er - `Peetch` https://twitter.com/PeetchApp
-  * 2nd - `Sonson` https://twitter.com/sonsonapp
+  * 1er - `Peetch` [https://twitter.com/PeetchApp](https://twitter.com/PeetchApp)
+  * 2nd - `Sonson` [https://twitter.com/sonsonapp](https://twitter.com/sonsonapp)
   * 3ème - `Qui apporte quoi ?`
 
 Arghhh !! Quelle déception, aucun des 4 Troopers n’est sur le podium. C’est sûrement le signe que les Troopers sont fait pour travailler unis. On le saura pour la prochaine fois…
@@ -128,3 +128,24 @@ Merci l’orga
 
 ## Photos
 Pour voir quelques photos du weekend vous pouvez allez jetter un oeil sur [twitter](https://twitter.com/search?q=%23SWTOURS&src=tyah&mode=photos) ou bien sur la galerie de la [smilybox](http://www.smilybox.fr/albums/index.php?galerie=swtours) qui était installée dans la zone détente.
+
+<div style="text-align:center;">
+    <a href="/images/postSWTours2015/swtours_2015_4.jpg" title="" data-lightbox="group1" class="inlineBoxes">
+      <img class="mini" src="/images/postSWTours2015/swtours_2015_4.jpg" alt="">
+    </a>
+    <a href="/images/postSWTours2015/swtours_2015_2.jpg" title="" data-lightbox="group1" class="inlineBoxes">
+      <img class="mini" src="/images/postSWTours2015/swtours_2015_2.jpg" alt="">
+    </a>
+    <a href="/images/postSWTours2015/swtours_2015_6.jpg" title="" data-lightbox="group1" class="inlineBoxes">
+      <img class="mini" src="/images/postSWTours2015/swtours_2015_6.jpg" alt="">
+    </a>
+    <a href="/images/postSWTours2015/swtours_2015_7.jpg" title="" data-lightbox="group1" class="inlineBoxes">
+      <img class="mini" src="/images/postSWTours2015/swtours_2015_7.jpg" alt="">
+    </a>
+    <a href="/images/postSWTours2015/swtours_2015_3.jpg" title="" data-lightbox="group1" class="inlineBoxes">
+      <img class="mini" src="/images/postSWTours2015/swtours_2015_3.jpg" alt="">
+    </a>
+    <a href="/images/postSWTours2015/swtours_2015_5.jpg" title="" data-lightbox="group1" class="inlineBoxes">
+      <img class="mini" src="/images/postSWTours2015/swtours_2015_5.jpg" alt="">
+    </a>
+</div>
