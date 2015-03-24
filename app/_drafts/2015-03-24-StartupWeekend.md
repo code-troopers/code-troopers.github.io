@@ -52,7 +52,7 @@ On ne sait pas encore où on va, mais côté dev il faut déjà avancer. Maxime 
 `Kaléméon`
 Marie, notre super graphiste, a trouvé un lien entre le caméléon et sa vision à 360° et la solution que l’on souhaite apporter à nos utilisateurs : toute l’équipe valide !
 
-Côté business Stéphane, Mélodie, Bénédicte et Alexis ont plein d'idées, et Victor et là pour apporte son expertise, en tant qu'étudiant en droit c'est pile la personne qu'il fallait.
+Côté business Stéphane, Mélodie, Bénédicte et Alexis ont plein d'idées, et Victor est là pour apporte son expertise, en tant qu'étudiant en droit c'est pile la personne qu'il fallait.
 
 Il reste Maxime, Joris et moi, on à entammé le dev en partant des vagues concepts métier évoqués : des assurances, des contrats, des mots clés et des assurés. 
 
