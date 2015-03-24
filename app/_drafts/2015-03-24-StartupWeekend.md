@@ -22,7 +22,7 @@ Nous n’étions pas non plus venus avec une idée de pitch, ce qui nous a permi
 
 ## Vendredi - 18h : pitchs et choix des projets
 En tant que dev c’est le moment le plus complexe : plein d’idées, plein de monde, plein de sollicitations et un choix à faire vite ! très vite !
-Comme l’année dernière, il n’y a pas énormément de dev et les porteurs de projet (souvent buisiness) ont presque tous besoin de dev dans leur équipe. 
+Comme l’année dernière, il n’y a pas énormément de dev et les porteurs de projet (souvent business) ont presque tous besoin de dev dans leur équipe. 
 Et ce n’est pas facile de refuser un appel à l’aide. 
 Mais il faut faire un choix et en plus il faut faire le tri entre les projets qui semblent intéressants et ceux ou il y a un minimum de dev à faire, car on est venu pour ça.
 Après avoir pris notre temps pour faire le tour de tous les projets, voici notre verdict : 
@@ -40,7 +40,7 @@ Les équipes formées, les hostilités peuvent commencer.
 Il faut affiner le concept, définir le MVP (Most Valuable Product), trouver un nom, une identité. Il faut aller vite tout en laissant à tout le monde la possibilité de s’exprimer.
 Nous sommes 9 dans notre équipe, ce qui fait du monde à découvrir en peu de temps pour réussir à communiquer efficacement.
 
-Petit tour de table de notre : [Mélodie](https://twitter.com/MelodieFourez), [Stéphane](https://twitter.com/SandeauGruberS), [Marie](https://twitter.com/MarieCottu), [Maxime](https://twitter.com/maximepvrt),
+Petit tour de table de notre équipe : [Mélodie](https://twitter.com/MelodieFourez), [Stéphane](https://twitter.com/SandeauGruberS), [Marie](https://twitter.com/MarieCottu), [Maxime](https://twitter.com/maximepvrt),
  [Bénédicte](https://twitter.com/loustalotbene), [Alexis](https://twitter.com/alexescu), [Victor](https://twitter.com/victor_proust), [Joris](https://twitter.com/Joris_Potier) et [moi](https://twitter.com/FlorianChauveau)
  (quelques têtes déjà vue, mais personne avec qui nous avions déjà travaillé : _challenge accepted_).
 
@@ -52,7 +52,7 @@ On ne sait pas encore où on va, mais côté dev il faut déjà avancer. Maxime 
 `Kaléméon`
 Marie, notre super graphiste, a trouvé un lien entre le caméléon et sa vision à 360° et la solution que l’on souhaite apporter à nos utilisateurs : toute l’équipe valide !
 
-Côté buisness Stéphane, Mélodie, Bénédicte et Alexis ont plein d'idées, et Victor et là pour apporte son expertise, en tant qu'étuidant en droit c'est pile la personne qu'il fallait.
+Côté business Stéphane, Mélodie, Bénédicte et Alexis ont plein d'idées, et Victor et là pour apporte son expertise, en tant qu'étuidant en droit c'est pile la personne qu'il fallait.
 
 Il reste Maxime, Joris et moi, on à entammé le dev en partant des vagues concepts métier évoqués : des assurances, des contrats, des mots clés et des assurés. 
 
@@ -76,7 +76,7 @@ C'est une étape indispensable du weekend.
 ## Dimanche - 10h : un peu de recul
 Retour au travail le dimanche vers 10h, toute l’équipe est là. Maxime n’a pas dormi (wahoo).
 Le travail a bien avancé, niveau visuel c’est presque bon. Il reste du travail coté back. Il bien gérer les jointures entre un utilisateur et ses contrats associés. C’est Joris qui part sur cette tâche.
-De mon coté, je me charge d’une saisie de données réelles, c’est toujours plus sympa pour une démo. Sur ce point, un grand merci à Victor qui a épluché plusieurs types de contrats pour en extraire les infos pertinentes sous forme de closes et de mots-clés associés. Je n’ai plus qu’a jouer avec un builder et voilà une BDD bien remplie.
+De mon coté, je me charge d’une saisie de données réelles, c’est toujours plus sympa pour une démo. Sur ce point, un grand merci à Victor qui a épluché plusieurs types de contrats pour en extraire les infos pertinentes sous forme de clauses et de mots-clés associés. Je n’ai plus qu’a jouer avec un builder et voilà une BDD bien remplie.
 
 Pendant ce temps, l’autre moitié de l’équipe a travaillé sur la présentation finale et le rendu est vraiment bien.
 
@@ -91,8 +91,8 @@ Le problème, c’est qu’il n’y a presque plus de travail.
 <br/>
 
 ## Dimanche - 17h : Préparation de la démo : la fin du monde
-Encore un couac ! Une appeltv est disponible mais le rendu sur iphone 5 n’est pas génial et impossible de trouver un ipad. Par chance on a mis la main sur un Slimport, mais la encore eéhec, le vidéoprojecteur  n’est pas compatible : grrr.
-Derniere tentative avec un chrome cast et là ,c’est le wifi qui lache toutes les 10 secondes :/
+Encore un couac ! Une appletv est disponible mais le rendu sur iphone 5 n’est pas génial et impossible de trouver un ipad. Par chance on a mis la main sur un Slimport, mais la encore échec, le vidéoprojecteur  n’est pas compatible : grrr.
+Derniere tentative avec un Chromecast et là ,c’est le wifi qui lache toutes les 10 secondes :/
 Finalement ce sera un PC avec un navigateur redimmensionné à la taille d’un téléphone, c’est mieux que rien…
 
 
