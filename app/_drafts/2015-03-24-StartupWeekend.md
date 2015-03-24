@@ -114,7 +114,7 @@ Arghhh !! Quelle déception, aucun des 4 Troopers n’est sur le podium. C’est
 
 Si vous souhaitez regarder ce qui a été réalisé (il n'est pas garantie que ca reste en ligne très longtemps) :
 
- * Pour Kaléméon (la gestion des contrats d'assurance) : [app.kalemeon.co](app.kalemeon.co)
+ * Pour Kaléméon (la gestion des contrats d'assurance) : [app.kalemeon.co](http://app.kalemeon.co)
  * Pour TIM (la prise de rendez-vous) : [https://timfront.herokuapp.com/](https://timfront.herokuapp.com/#/)
  * Pour Roadmad (la recherche de lieux insolite autour de soi) : _pas de lien_
 
