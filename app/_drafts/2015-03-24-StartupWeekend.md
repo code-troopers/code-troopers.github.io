@@ -28,7 +28,7 @@ Mais il faut faire un choix et en plus il faut faire le tri entre les projets qu
 Après avoir pris notre temps pour faire le tour de tous les projets, voici notre verdict : 
 
 * Matthieu va travailler sur _TIM_ : une plate-forme qui permet de prendre rendez-vous chez des professionnels de tous genres (coiffeur, plombier…),
-* Vincent va travailler sur _xxx_ : une application pour trouver des lieux sympa pour faire du sport,
+* Vincent va travailler sur _Mes lieux de sport_ : une application pour trouver des lieux sympa pour faire du sport,
 * Joris et moi, enfin, allons travailler sur _OnAssur_ : une plate-forme qui va nous aider dans la compréhension et la gestion de nos contrats d’assurance.
 
 
@@ -61,13 +61,15 @@ Il reste Maxime, Joris et moi, on à entammé le dev en partant des vagues conce
 
 ## Samedi - 10h : au travail
 L’objectif de la journée : avoir un MVP avec une démo fonctionnelle.
-On essaie donc de définir un certain use case et la trame que l’on souhaite présenter lors de la démo. 
+On essaie donc de définir un certain nombre de _use case_ et la trame que l’on souhaite présenter lors de la démo. 
 Cela nous permet d’affiner en grande partie le dev qu’on a à faire. Joris se concentre sur les endpoints, de mon coté je gère la partie front en angular et Maxime me file un coup de main pour l’interface en intégrant les visuels de Marie.
 
 De l’autre coté de la table, ça bouge beaucoup aussi. Mais je n’écoute que d’une oreille car je suis concentré.
-Au milieu de l’après-midi, Alexis, Mélodie et Bénédicte sortent sonder des gens dans la rue. Ils sont partis sur le terrain pour tester nos choix et idées avec des 'vrais' gens dans la rue. 
-C'est une étape indispensable du weekend.  
+Au milieu de l’après-midi, Alexis, Mélodie et Bénédicte sortent sonder des gens dans la rue. Ils sont partis sur le terrain pour tester nos choix et idées avec des 'vrais' gens. 
+C'est une étape indispensable du weekend. Le retours des personnes sondées sont super positifs, donc on va en mettre dans la présentation finale. 
+Ils enchainent sur le _Business Model Canevas_, là je suis complètement largué, et aussi admiratif de ce qu'ils arrivent à faire en si peu de temps.
 
+Sur la partie dev ça se passe bien, à peine quelques conflits de commit, mais c'est normal vu qu'on travail sur les mêmes fichiers.
 5h30 (oui oui le temps passe vraiment aussi vite) : il est temps d’aller dormir. Je laisse Marie et Maxime qui ont encore des ressources insoupçonnées. 
 
 
@@ -75,7 +77,8 @@ C'est une étape indispensable du weekend.
 
 ## Dimanche - 10h : un peu de recul
 Retour au travail le dimanche vers 10h, toute l’équipe est là. Maxime n’a pas dormi (wahoo).
-Le travail a bien avancé, niveau visuel c’est presque bon. Il reste du travail coté back. Il bien gérer les jointures entre un utilisateur et ses contrats associés. C’est Joris qui part sur cette tâche.
+Il a terminé la page d'accueil du site [http://kalemeon.co/](http://kalemeon.co/).
+Et pour la partie application, le travail a bien avancé aussi, niveau visuel c’est presque bon. Il reste du travail coté back. Il bien gérer les jointures entre un utilisateur et ses contrats associés. C’est Joris qui part sur cette tâche.
 De mon coté, je me charge d’une saisie de données réelles, c’est toujours plus sympa pour une démo. Sur ce point, un grand merci à Victor qui a épluché plusieurs types de contrats pour en extraire les infos pertinentes sous forme de clauses et de mots-clés associés. Je n’ai plus qu’a jouer avec un builder et voilà une BDD bien remplie.
 
 Pendant ce temps, l’autre moitié de l’équipe a travaillé sur la présentation finale et le rendu est vraiment bien.
@@ -93,7 +96,7 @@ Il reste donc surtout de la cosmétique à faire, c'est pas le plus fun.
 
 ## Dimanche - 17h : Préparation de la démo : la fin du monde
 Encore un couac ! Une appletv est disponible mais le rendu sur iphone 5 n’est pas génial et impossible de trouver un ipad. Par chance on a mis la main sur un Slimport, mais la encore échec, le vidéoprojecteur  n’est pas compatible : grrr.
-Derniere tentative avec un Chromecast et là ,c’est le wifi qui lache toutes les 10 secondes :/
+Derniere tentative avec un Chromecast et là, c’est le wifi qui lache toutes les 10 secondes :/
 Finalement ce sera un PC avec un navigateur redimmensionné à la taille d’un téléphone, c’est mieux que rien…
 
 
@@ -109,6 +112,11 @@ L'annonce des résultats se fait dans une ambiance survoltée, et le classement 
 Arghhh !! Quelle déception, aucun des 4 Troopers n’est sur le podium. C’est sûrement le signe que les Troopers sont fait pour travailler unis. On le saura pour la prochaine fois…
 
 
+Si vous souhaitez regarder ce qui a été réaliser (il n'est pas garantie que ca reste en ligne très longtemps) :
+
+ * Pour Kaléméon (la gestion des contrats d'assurance) : [app.kalemeon.co](app.kalemeon.co)
+ * Pour TIM (la prise de rendez-vous) : [https://timfront.herokuapp.com/](https://timfront.herokuapp.com/#/)
+ * Pour Roadmad (la recherche de lieux insolite autour de soi) : _pas de lien_
 
 Rendez-vous avant la fin de l’année pour la prochaine édition, on sera encore là et toujours aussi motivés ! Il me semble qu’il y a les élections régionales à la fin de l’année, c’est sûr, bloquez ce weekend-là sur vos agendas :P
 
