@@ -6,7 +6,7 @@ cover: swtours-banner
 tags: [startup, tours]
 ---
 
-Ce weekend a eu lieu la seconde édition du Startup Weekend Tours, organisé par PaloAlTours. 
+Ce weekend a eu lieu la seconde édition du Startup Weekend Tours, organisé par Palo Altours. 
 Cette année nous avons pris possession du futur lieu emblématique de l’activité numérique tourangelle : le site de l’ancienne imprimerie MAME.
 
 
