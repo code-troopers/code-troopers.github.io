@@ -65,7 +65,7 @@ On essaie donc de définir un certain nombre de _use case_ et la trame que l’o
 Cela nous permet d’affiner en grande partie le dev qu’on a à faire. Joris se concentre sur les endpoints, de mon coté je gère la partie front en angular et Maxime me file un coup de main pour l’interface en intégrant les visuels de Marie.
 
 De l’autre coté de la table, ça bouge beaucoup aussi. Mais je n’écoute que d’une oreille car je suis concentré.
-Au milieu de l’après-midi, Alexis, Mélodie et Bénédicte sortent sonder des gens dans la rue. Ils sont partis sur le terrain pour tester nos choix et idées avec des 'vrais' gens. 
+Au milieu de l’après-midi, Stéphane, Alexis, Victor et Bénédicte sortent sonder des gens dans la rue. Ils sont partis sur le terrain pour tester nos choix et idées avec des 'vrais' gens. 
 C'est une étape indispensable du weekend. Les retours des personnes sondées sont super positifs, donc on va en mettre dans la présentation finale. 
 Ils enchainent sur le _Business Model Canevas_, là je suis complètement largué, et aussi admiratif de ce qu'ils arrivent à faire en si peu de temps.
 
