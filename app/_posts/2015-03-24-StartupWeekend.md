@@ -142,7 +142,7 @@ Pour voir quelques photos du weekend vous pouvez allez jetter un oeil sur [twitt
     <a href="/images/postSWTours2015/swtours_2015_0.jpg" title="" data-lightbox="group1" class="inlineBoxes">
       <img class="mini" src="/images/postSWTours2015/swtours_2015_0.jpg" alt="">
     </a>
-    <a href="/images/postSWTours2015/swtours_2015_.jpg" title="" data-lightbox="group1" class="inlineBoxes">
+    <a href="/images/postSWTours2015/swtours_2015_1.jpg" title="" data-lightbox="group1" class="inlineBoxes">
       <img class="mini" src="/images/postSWTours2015/swtours_2015_1.jpg" alt="">
     </a>
     <a href="/images/postSWTours2015/swtours_2015_4.jpg" title="" data-lightbox="group1" class="inlineBoxes">
