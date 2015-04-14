@@ -99,19 +99,22 @@ Mais pour pouvoir l’utiliser, il va falloir se discipliner un tout petit peu. 
 <p>La procédure miracle est donc la suivante :</p>
 
 <ul>
-  <li>lancer la console play
-<code>
- $ play
-</code></li>
-  <li>lancer le visualiseur de bdd (qui ouvre une fenêtre dans votre navigateur web)
-<code>
- $ h2-browser
-</code></li>
-  <li>démarrer votre serveur.
-<code>
- $ run
-</code></li>
+  <li>lancer la console play</li>
 </ul>
+
+<div class=highlight><pre><code class=language-bash data-lang=bash><span class=nv>$ </span>play</code></pre></div>
+
+<ul>
+  <li>lancer le visualiseur de bdd (qui ouvre une fenêtre dans votre navigateur web)</li>
+</ul>
+
+<div class=highlight><pre><code class=language-bash data-lang=bash><span class=nv>$ </span>h2-browser</code></pre></div>
+
+<ul>
+  <li>démarrer votre serveur.</li>
+</ul>
+
+<div class=highlight><pre><code class=language-bash data-lang=bash><span class=nv>$ </span>run</code></pre></div>
 
 <p>Lorsqu’il se lance h2-browser devrait vous présenter une fenêtre de connexion comme celle-ci :</p>
 
@@ -126,12 +129,12 @@ Mais pour pouvoir l’utiliser, il va falloir se discipliner un tout petit peu. 
 <p>Il faut donc modifier les champs <em>jdbc</em>, <em>login</em>, <em>password</em>.
 Pour cela allez chercher dans <strong>application.conf</strong> (normalement situé dans le répertoire <em>/conf/</em> de votre projet) et trouvez les champs suivants</p>
 
-<p><code>
-db.default.url="jdbc:h2:mem:play"
+<pre><code>db.default.url="jdbc:h2:mem:play"
 db.default.user=sa
 db.default.password=
-</code>
-ce sont les 3 valeurs à recopier dans la fenêtre de connexion.</p>
+</code></pre>
+
+<p>ce sont les 3 valeurs à recopier dans la fenêtre de connexion.</p>
 
 <p>Et voilà le tour est joué, c’est tout de même sympa d’être sûr de ce que l’on a en base.</p>
 
