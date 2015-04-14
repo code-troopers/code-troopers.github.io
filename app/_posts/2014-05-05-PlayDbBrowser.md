@@ -21,18 +21,22 @@ Mais pour pouvoir l'utiliser, il va falloir se discipliner un tout petit peu. En
 
 La procédure miracle est donc la suivante :
 
- * lancer la console play
-```
- $ play
-```
- * lancer le visualiseur de bdd (qui ouvre une fenêtre dans votre navigateur web)
-```
- $ h2-browser
-```
- * démarrer votre serveur.
-```
- $ run
-```
+* lancer la console play
+{% highlight bash %}
+    $ play
+{% endhighlight %}
+
+* lancer le visualiseur de bdd (qui ouvre une fenêtre dans votre navigateur web)
+
+{% highlight bash %}
+    $ h2-browser
+{% endhighlight %}
+
+* démarrer votre serveur.
+
+{% highlight bash %}
+    $ run
+{% endhighlight %}
 
 Lorsqu'il se lance h2-browser devrait vous présenter une fenêtre de connexion comme celle-ci :
 
@@ -47,11 +51,10 @@ Maitenant qu'il est lancé, il faut se connecter, et par défaut c'est pas gagn�
 Il faut donc modifier les champs _jdbc_, _login_, _password_.
 Pour cela allez chercher dans __application.conf__ (normalement situé dans le répertoire _/conf/_ de votre projet) et trouvez les champs suivants
 
-```
-db.default.url="jdbc:h2:mem:play"
-db.default.user=sa
-db.default.password=
-```
+    db.default.url="jdbc:h2:mem:play"
+    db.default.user=sa
+    db.default.password=
+
 ce sont les 3 valeurs à recopier dans la fenêtre de connexion.
 
 Et voilà le tour est joué, c'est tout de même sympa d'être sûr de ce que l'on a en base.
