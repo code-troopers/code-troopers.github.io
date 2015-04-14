@@ -44,9 +44,9 @@ Compression: Uncompressed, ZIP, ZLIB, BZIP2
 GnuPG est un mécanisme de chiffrement impliquant une clef publique (distribuée librement) associée à une clef privée (à garder précieusement). Avant de pouvoir prétendre distribuer des binaires chiffrés, il convient donc de générer le couple clef privée/publique et de distribuer la clef publique sur les serveurs appropriés.
 Ainsi, après avoir fourni nom, email et commentaire pour votre clef, vous serez prêt à la distribuer au plus grand nombre :
 
-```
-gpg --gen-key
-```
+{% highlight bash %}
+$ gpg --gen-key
+{% endhighlight %}
 
 Dans les écrans qui apparaissent, vous pouvez conserver les valeurs par défaut pour la plupart des éléments (type, taille et durée de validité). Enfin, vous allez devoir spécifier la _passphrase_ de votre clef. N'hésitez pas à utiliser une phrase : elle sera plus difficilement "cassable" et vous vous en rappelerez certainement mieux qu'un mot de passe complexe.
 
@@ -78,14 +78,16 @@ Si la génération s'est déroulée comme prévu, la seule différence résidera
 ### Distribution de la clef publique
 Pour que tout le monde soit à même de vérifier votre "identité", il faut distribuer votre clef publique sur les dépôts reconnus. L'un d'eux est `hkp://pool.sks-keyservers.net` qui fera la distribution auprès des différents serveurs OpenPGP.
 Pour se faire, il suffit de lancer la synchronisation vers ce serveur, en remplaçant `${KEY_ID}` par l'id de votre clef publique tel que récupéré lors de la commande précédente (dans mon cas il s'agit de `CE236D5E`):
-```
-$ gpg --keyserver hkp://pool.sks-keyservers.net --send-keys ${KEY_ID}
-```
+
+{% highlight bash %}
+    $ gpg --keyserver hkp://pool.sks-keyservers.net --send-keys ${KEY_ID}
+{% endhighlight %}
 
 Pour vérifier que l'envoi s'est fait comme attendu, vous pouvez demander à récupérer la clef par la commande suivante :
-```
-$ gpg --keyserver hkp://pool.sks-keyservers.net --recv-keys ${KEY_ID}
-```
+
+{% highlight bash %}
+    $ gpg --keyserver hkp://pool.sks-keyservers.net --recv-keys ${KEY_ID}
+{% endhighlight %}
 
 ## Création d'un compte sur Sonatype
 La distribution de binaires passe par la création d'un compte sur le [JIRA de Sonatype](https://issues.sonatype.org). La procédure est assez simple, elle ne vaut pas la peine d'être détaillée plus avant.
