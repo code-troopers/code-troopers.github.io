@@ -7,6 +7,71 @@
                 <atom:link href="http://code-troopers.com/feed.xml" rel="self" type="application/rss+xml"/>
                 
                         <item>
+                                <title>Devoxx 2015 : c'était bien, mais...</title>
+                                <description>&lt;p&gt;Cette année nous étions tous les Troopers à nous rendre à Paris pour LA conférence à ne pas rater.&lt;/p&gt;
+
+&lt;p&gt;Pour ceux qui n’auraient pas vu l’info sur &lt;a href=&quot;https://twitter.com/search?q=%23DevoxxFR&amp;amp;src=tyah&quot;&gt;Twitter&lt;/a&gt; ou ailleurs, pour la première fois nous étions au Palais des Congrès, et ça on peut dire que c’est la classe.&lt;/p&gt;
+
+&lt;!-- break --&gt;
+
+&lt;p&gt;Mais, dans cet article, je ne vais pas vous faire un résumé des conférences que j’ai vu, d’abord parce que je n’ai pas pris de notes, 
+ensuite parce que beaucoup d’autres le font déjà, par exemple &lt;a href=&quot;http://agileek.github.io/&quot;&gt;là&lt;/a&gt; et &lt;a href=&quot;http://javamind-fr.blogspot.fr/&quot;&gt;là&lt;/a&gt;, et surtout parce que toutes les sessions étaient filmées et 
+seront mises en ligne sur Parleys et accessibles gratuitement (comme les autres années). 
+Je vous conseille par exemple &lt;a href=&quot;https://www.parleys.com/tutorial/java-8-streams-collectors-patterns-performances-parallelisation&quot;&gt;les streams Java 8 de José Paumard&lt;/a&gt; 
+si vous n’êtes toujours pas familiers de la chose.&lt;/p&gt;
+
+&lt;p&gt;Ce que je vais vous raconter dans cet article, ce sont les &lt;code&gt;mais&lt;/code&gt;, parce que &lt;em&gt;Devoxx c’est bien mais…&lt;/em&gt; &lt;/p&gt;
+
+&lt;p&gt;Car finalement assez peu de personnes en parlent. Et comme en France on aime bien se plaindre (et que je suis un bon français), je veux  bien endosser le rôle du râleur.&lt;/p&gt;
+
+&lt;p&gt;Première chose, sûrement la plus flagrante (et déjà discutée) &lt;strong&gt;les paniers repas&lt;/strong&gt;. 
+En effet je trouve tout simplement aberrante l’utilisation de ces petites sacoches pour la distribution des repas. 
+Car si elles sont dites réutilisables, 90% d’entre elles ont dû finir à la poubelle. 
+J’ai pu lire qu’elles sont faites en fibres biodégradables, ce qui est bien, mais un produit créé pour finir dans la poubelle 5 min après son utilisation ça reste un gaspillage totalement inutile. 
+D’après ce que j’ai compris d’un rapide échange avec une personne de l’orga, ce n’est pas ce qui avait été prévu/commandé. Dans tous les cas, 
+je ne vois pas comment la société en face peut se dire écolo (ou tenter de le faire croire) en proposant une prestation qui consiste à fournir 3 jours de suite aux mêmes personnes le même mini sac réutilisable. 
+Il ne faut pas lire l’avenir dans les foies de mouton¹ pour se douter qu’au moins deux tiers vont finir à la poubelle.&lt;/p&gt;
+
+&lt;div style=&quot;text-align:center;margin:50px&quot;&gt;
+  &lt;a href=&quot;/images/postDevoxx2015/devoxx2015_1.jpg&quot; data-lightbox=&quot;group-2&quot; title=&quot;Les sac pour les sandwichs...&quot; class=&quot;inlineBoxes&quot;&gt;
+    &lt;img class=&quot;medium&quot; src=&quot;/images/postDevoxx2015/devoxx2015_1.jpg&quot; alt=&quot;Les sac pour les sandwichs...&quot; /&gt;
+  &lt;/a&gt;
+  &lt;a href=&quot;/images/postDevoxx2015/devoxx2015_2.jpg&quot; data-lightbox=&quot;group-2&quot; title=&quot;... qui finissent à la poubelle&quot; class=&quot;inlineBoxes&quot;&gt;
+    &lt;img class=&quot;medium&quot; src=&quot;/images/postDevoxx2015/devoxx2015_2.jpg&quot; alt=&quot;... qui finissent à la poubelle&quot; /&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Et en parlant de poubelles, on peut aussi vivement critiquer le Palais des Congrès lui même qui ne propose aucune solution de tri sélectif, tous les déchets finissant au même endroit…
+C’est d’ailleurs bien dommage car plusieurs personnes ont tenté de trier les sacoches des autres déchets en les mettant de côté dans des cartons vides, mais à chaque fois le personnel du Palais des Congrès récupérait tout dans leurs grandes poubelles. Peut-être parce qu’ils facturent une partie de leur prestation au volume de déchets…&lt;/p&gt;
+
+&lt;p&gt;Ensuite j’aimerais vous faire part de mon indignation² envers &lt;strong&gt;le comportement des participants&lt;/strong&gt; lors des confs, quickies et autres sessions. 
+Je trouve qu’un très grand nombre de personnes a fait preuve d’irrespect, d’incivisme ou tout autre adjectif de ce genre par bien des manières. 
+La principale étant de quitter la salle avant la fin de la présentation elle même, souvent au début des questions, pour se rendre le plus vite possible ailleurs (au buffet ou dans une autre salle je suppose) 
+et je ne parle pas là d’une ou deux personnes lors d’une ou deux sessions, mais d’au moins une quinzaine et à chaque session. Les questions font partie intégrante d’une session et même si le sujet ne nous a finalement pas intéressés, ce n’est pas un gros effort que de rester assis 5 minutes de plus et ainsi permettre aux autres personnes, qui elles étaient intéressées, de pouvoir entendre dans le calme les questions/réponses.&lt;/p&gt;
+
+&lt;p&gt;Toujours sur le thème de l’incivilité, je trouve scandaleux la quantité de déchets laissés par terre les deux premiers jours. Sachant qu’il y avait des poubelles quasiment à chaque sortie de salle. Je ne comprends pas ces comportements (les gens font ça aussi chez eux et sur leur lieu de travail ?)&lt;/p&gt;
+
+&lt;p&gt;Pour finir j’aimerais aborder un sujet de beaucoup plus subjectif, &lt;strong&gt;le niveau des conférences&lt;/strong&gt;. En effet j’ai (avis personnel, donc) 
+eu le sentiment que, par rapport à l’année dernière, le niveau était en deçà. J’en ai déjà pas mal discuté et plusieurs personnes ne sont pas de cet avis. 
+Il est donc assez probable que ce soit dû aux choix que j’ai fait plutôt qu’à l’ensemble des conférences disponibles. &lt;/p&gt;
+
+&lt;p&gt;Mais dans ce cas là, ne faudrait-il pas que le niveau estimé de la conf soit annoncé avant, afin de limiter les déceptions et de mieux cibler le public (par exemple avec des labels &lt;em&gt;débutant, medium, avancé&lt;/em&gt; sur le programme) ?&lt;/p&gt;
+
+&lt;p&gt;Tout cela n’est aucunement une charge contre l’orga qui a, encore une fois, fait un boulot extraordinaire pour réunir &lt;code&gt;2509&lt;/code&gt; &lt;em&gt;développeurs (et développeuses) passionné(e)s&lt;/em&gt; au Palais des Congrès. 
+Et parce que pouvoir assister à une conf de &lt;a href=&quot;https://twitter.com/briangoetz&quot;&gt;Brian Goetz&lt;/a&gt; (architecte de java), ça n’arrive pas tous les jours, je serai présent l’année prochaine. &lt;/p&gt;
+
+&lt;p&gt;PS : Pour voir quelques photos, il y a le site de &lt;a href=&quot;http://www.devoxx.fr/2015/04/devoxx-france-2015-en-images/&quot;&gt;Devoxx France&lt;/a&gt; et aussi ce &lt;a href=&quot;https://m.flickr.com/#/photos/123583479@N03/sets/72157651881953421&quot;&gt;compte flickr&lt;/a&gt;. Sinon, vous avez toujours internet.&lt;/p&gt;
+
+&lt;p&gt;&lt;small&gt;¹ : Référence au discours de Charles-Alexandre Sabourdin qui a animé les deux keynotes.&lt;/small&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;small&gt;² : oui oui, carrément !&lt;/small&gt; &lt;/p&gt;
+</description>
+                                <pubDate>Wed, 15 Apr 2015 00:00:00 +0200</pubDate>
+                                <link>http://code-troopers.com/2015/04/15/DevoxxFR-2015.html</link>
+                                <guid isPermaLink="true">http://code-troopers.com/2015/04/15/DevoxxFR-2015.html</guid>
+                        </item>
+                
+                        <item>
                                 <title>Retour sur le Second #SWTours</title>
                                 <description>&lt;p&gt;Ce weekend a eu lieu la seconde édition du Startup Weekend Tours, organisé par Palo Altours. 
 Cette année nous avons pris possession du futur lieu emblématique de l’activité numérique tourangelle : le site de l’ancienne imprimerie MAME.&lt;/p&gt;
@@ -723,66 +788,6 @@ Palo Altech a pour ambition de promovoir les rendez-vous autour de l’informati
                                 <pubDate>Tue, 23 Sep 2014 00:00:00 +0200</pubDate>
                                 <link>http://code-troopers.com/2014/09/23/agile_paloaltech_tours.html</link>
                                 <guid isPermaLink="true">http://code-troopers.com/2014/09/23/agile_paloaltech_tours.html</guid>
-                        </item>
-                
-                        <item>
-                                <title>oh-my-zsh : l'outil indispensable pour avoir un zsh bien configuré.</title>
-                                <description>&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;Que l’on soit dev, ops, sysadmin ou autre pour effectuer nos tâches répétitives et quotidiennes on a généralement deux possibilités : une première communément appelée “clic-clic” qui consiste à utiliser les interfaces graphiques aussi souvent que possible (afin de perdre un maximum de temps) ; et une seconde qualifiée de “barbue” qui elle est orientée ligne de commande, scripting et automatisation.
-Nous les Code-Troopers, on est plutôt technique de barbus ! Et donc peut importe l’OS qu’on utilise on cherche toujours à avoir le meilleur terminal possible.
-Par défaut sous linux ou mac OS on trouvera souvent &lt;em&gt;bash&lt;/em&gt;, sous windows ce sera &lt;em&gt;powershell&lt;/em&gt; mais il en existe d’autres comme &lt;em&gt;csh&lt;/em&gt;, &lt;em&gt;ksh&lt;/em&gt; ou dans le cas qui nous intéresse &lt;em&gt;zsh&lt;/em&gt;.
-&lt;em&gt;zsh&lt;/em&gt; est puissant mais ce n’est pas le sujet du jour de dire pourquoi il serait mieux qu’un autre. En revanche, qui dit puissance dit difficultés de paramétrage ;
-d’ailleurs à la première utilisation lorsque l’on n’a pas de fichier de configuration il commence par dire qu’il peut en créer un pour nous mais qu’il faudra le modifier à la main.
-Ce sera inutile grâce à &lt;em&gt;oh-my-zsh&lt;/em&gt;.
-&lt;!--break--&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;installation&quot;&gt;Installation&lt;/h2&gt;
-&lt;p&gt;C’est très simple, il suffit de cloner le dépôt
-&lt;code&gt;git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh&lt;/code&gt;
-Et de mettre le fichier de configuration dans son home
-&lt;code&gt;cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc&lt;/code&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;les-thmes&quot;&gt;Les thèmes&lt;/h2&gt;
-&lt;p&gt;Premièrement, les couleurs. Chacun ses goûts mais comme tout  informaticien fan de  matrix on a tendance à configurer son terminal pour obtenir du vert sur fond noir donc on choisira un thème en conséquence pour avoir des couleurs claires (ce qui est le cas de presque tous les thèmes) Vous pouvez voir un aperçu des thèmes ici : &lt;a href=&quot;http://zshthem.es/all/&quot;&gt;http://zshthem.es/all/&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Deuxièmement le prompt. Toujours sur le site &lt;a href=&quot;http://zshthem.es&quot;&gt;http://zshthem.es&lt;/a&gt;, vous pouvez voir qu’en plus des couleurs, chaque thème a un prompt différent. C’est ce qui s’affiche à chaque ligne donc il doit être beau, rapide et fonctionnel.
-J’utilisais &lt;a href=&quot;https://github.com/nojhan/liquidprompt&quot;&gt;https://github.com/nojhan/liquidprompt&lt;/a&gt; pendant un temps, j’ai donc fait un thème qui ressemble pour les fonctionnalités qui me manquaient. Les fonctionnalités que je trouve pratique :&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;l’heure à droite : je veux savoir à quelle heure j’ai lancé une commande et à quelle heure elle s’est finie. C’est utile de temps en temps.&lt;/li&gt;
-  &lt;li&gt;l’utilisateur courant : je veux savoir avec quel utilisateur je suis connecté, simplement parce que je veux que ça crie si je suis en root pour éviter de faire des bêtises&lt;/li&gt;
-  &lt;li&gt;le hostname : je veux savoir sur quelle machine je suis connecté, de préférence uniquement lorsque je suis en ssh sinon c’est pas utile, toujours dans le but d’éviter les bêtises.&lt;/li&gt;
-  &lt;li&gt;un path de taille limitée : pas besoin d’afficher &lt;code&gt;/home/mattboll/workspace/projetSecret/java/com/codetroopers/projetxx/machin/bean&lt;/code&gt; il me suffit de lire &lt;code&gt;~/.../machin/bean&lt;/code&gt; pour savoir où je suis et ça permet de toujours avoir un prompt de taille raisonnable, c’est plus agréable.&lt;/li&gt;
-  &lt;li&gt;des infos git : sur quelle branche je suis, est-ce que je suis synchro, est-ce que je dois merger, combien j’ai de commits en attente d’être pushé etc.&lt;/li&gt;
-  &lt;li&gt;le code retour de la commande : parfois des commandes sont en erreur mais on n’a pas de message, donc on ne sait pas si la commande s’est bien exécutée, et en supposant qu’elle soit mal exécutée on ne sait pas quelle était l’erreur (l’équivalent des erreurs 404, 503 etc. des erreurs http)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Pour choisir le thème il faut éditer le fichier &lt;code&gt;~/.zshrc&lt;/code&gt; et modifier la ligne 
-&lt;code&gt;ZSH_THEME=”nom_du_theme”&lt;/code&gt; où nom du thème correspond au nom de fichier que l’on peut trouver dans &lt;code&gt;~/.oh-my-zsh/themes&lt;/code&gt;. Du coup, pour réaliser un thème personnel c’est simple il suffit de créer un fichier qui s’appelle nom.zsh-theme et de le mettre dans le même répertoire que les autres.
-Voici ce que cela donne avec mon thème (adapté du thème sunrise), que vous pouvez trouver  sur &lt;a href=&quot;https://raw.githubusercontent.com/mattboll/zshrc/master/mattboll.zsh-theme&quot;&gt;GitHub&lt;/a&gt; : &lt;/p&gt;
-
-&lt;div style=&quot;text-align:center;margin:50px&quot;&gt;
-&lt;a style=&quot;display: inline&quot; href=&quot;/images/postOhMyZsh/oh-my-zsh-theme.png&quot; data-lightbox=&quot;image-0&quot; title=&quot;Thème oh-my-zsh&quot;&gt;
-        &lt;img class=&quot;medium&quot; src=&quot;/images/postOhMyZsh/oh-my-zsh-theme.png&quot; alt=&quot;Thème oh-my-zsh&quot; /&gt;
-&lt;/a&gt;
-&lt;/div&gt;
-
-&lt;h2 id=&quot;les-plugins&quot;&gt;Les plugins&lt;/h2&gt;
-&lt;p&gt;Les plugins permettent d’incorporer des fonctions spécifiques. Ce sont en général de simples alias mais il arrive aussi de tomber sur des fonctions utiles auxquelles on ne pense pas, par exemple en activant le plugin GitHub, on accède à la commande &lt;code&gt;empty_gh&lt;/code&gt; qui prend en paramètre le nom du dépôt et qui va créer le répertoire, faire un git init, ajouter un readme vide et faire le premier commit.
-Pour ajouter des plugins, il faut évidemment éditer le fichier &lt;code&gt;~/.zshrc&lt;/code&gt; et modifier la ligne &lt;code&gt;plugins=(liste des plugins)&lt;/code&gt;
-Vous trouverez la liste des plugins dans &lt;code&gt;~/.oh-my-zsh/plugins&lt;/code&gt; À l’heure où j’écris il y en a 172, de git à symfony en passant par heroku. Pour savoir à quoi ça correspond, le plus simple est de lire le code source, en général il y a un fichier par plugin et les noms sont assez explicites pour savoir ceux qui nous seront utiles ou pas.&lt;/p&gt;
-
-&lt;h2 id=&quot;les-libs&quot;&gt;Les libs&lt;/h2&gt;
-&lt;p&gt;Si vous voulez créer un plugin ou que vous voulez voir un peu plus les fonctionnalités de oh-my-zsh, vous pouvez parcourir le répertoire lib, ne serait-ce que pour le fichier aliases.zsh qui définit des alias de base, par exemple &lt;code&gt;“…”=”cd ../..”&lt;/code&gt; ou les habituels &lt;code&gt;la&lt;/code&gt;, &lt;code&gt;ll&lt;/code&gt; etc. C’est aussi dans ce répertoire que sont définies des fonctions génériques comme celle qui permet de savoir si le dépôt git est “dirty” et qui est utilisée dans certains prompts.&lt;/p&gt;
-
-&lt;p&gt;Si vous voulez plus d’informations sur zsh je vous invite à commencer par l’article de &lt;a href=&quot;http://wiki.gcu.info/doku.php?id=unix:zsh_le_z_shell&quot;&gt;gcu-squad&lt;/a&gt;. Pour oh-my-zsh vous pouvez allez voir le projet sur &lt;a href=&quot;https://github.com/robbyrussell/oh-my-zsh&quot;&gt;GitHub&lt;/a&gt;. Enfin, si vous avez d’autres questions, n’hésitez pas à poster un commentaire ou à en parler sur twitter &lt;a href=&quot;http://twitter.com/codetroopers&quot;&gt;@codetroopers&lt;/a&gt; ou &lt;a href=&quot;http://twitter.com/mattboll&quot;&gt;@mattboll&lt;/a&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-</description>
-                                <pubDate>Wed, 17 Sep 2014 00:00:00 +0200</pubDate>
-                                <link>http://code-troopers.com/2014/09/17/ohMyZsh.html</link>
-                                <guid isPermaLink="true">http://code-troopers.com/2014/09/17/ohMyZsh.html</guid>
                         </item>
                 
         </channel>
