@@ -7,7 +7,7 @@ cover: ohmyzsh-banner
 tags: [vim, vimrc, shell]
 ---
 
-Cet article sera le premier d'une série consacrée aux _dotfiles_. Alors les _dotfiles_, qu'est-ce que c'est Obi-Wan ? Les _dotfiles_, ce sont tous les fichiers texte de configuration que l'on peut retrouver dans son répertoire utilisateur pour sauvegarder ses préférences. De nombreux logiciels utilisent cette méthode. On peut citer gnome, intellij,  MAVEN,  ssh, git, bash et tant d'autres. On les appelle _dotfiles_ −que l'on peut traduire par fichiers point− parce qu'ils on un nom qui commence par un point, ce qui correspond aux fichiers cachés sous linux.
+Cet article sera le premier d'une série consacrée aux _dotfiles_. Alors les _dotfiles_, qu'est-ce que c'est Obi-Wan ? Les _dotfiles_, ce sont tous les fichiers texte de configuration que l'on peut retrouver dans son répertoire utilisateur pour sauvegarder ses préférences. De nombreux logiciels utilisent cette méthode. On peut citer gnome, intellij,  MAVEN,  ssh, git, bash et tant d'autres. On les appelle _dotfiles_ −que l'on peut traduire par fichiers point− parce qu'ils ont un nom qui commence par un point, ce qui correspond aux fichiers cachés sous linux.
 
 Introduction
 ============
@@ -68,6 +68,7 @@ un peu de couleurs
 
 
     syntax on
+
 vim connaît à peu près tous les langages, de Shell à Java, en passant par le XML ou les simples fichiers de configuration. Avec cette commande,  vous aurez donc automatiquement la coloration syntaxique. 
 
 <div style="text-align: center;margin:50px;">
@@ -113,7 +114,7 @@ Pour l'installation, il suffit de faire :
     mkdir -p ~/.vim/autoload ~/.vim/bundle && \
     curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 
-aintenant, passons à quelques plugins.
+Maintenant, passons à quelques plugins.
 
 Colorscheme couleurs
 --------------------
