@@ -47,7 +47,9 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
             <button type=button class=navbar-toggle data-toggle=collapse data-target=.navbar-collapse>
                 <span><i class="fa fa-bars fa-2x"></i></span>
             </button>
-            <a class=navbar-brand href="/"><img itemprop=logo class=logo alt="Code-Troopers logo" title="Code-Troopers logo" src=/images/logo.png><span itemprop=name class=brand>Code-Troopers</span></a>
+            <a class=navbar-brand href="/"><img itemprop=logo class=logo alt="Code-Troopers logo" title="Code-Troopers logo" src=/images/logo.png>
+                <span itemprop=name class=brand>Code-Troopers</span>
+            </a>
         </div>
         <nav class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
@@ -123,6 +125,37 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     <div class=container>
         <div class=row>
     
+        <article class="col-lg-4 col-md-6 col-sm-12">
+            <div onclick="window.location.href='/2015/05/15/Dotfiles-vim.html' ;  return false" style="cursor: pointer">
+            <div class=cover style=background-image:url(/images/banner/ohmyzsh-banner.png)>
+                    <div class=date>posté le 15/05/2015 par Matthieu</div>
+                </div>
+                <h2><a href=/2015/05/15/Dotfiles-vim.html>vim : 10 astuces de configuration pour vos dotfiles</a></h2><ul class=tags>
+                    
+                    <li>vim</li>
+                    
+                    <li>vimrc</li>
+                    
+                    <li>shell</li>
+                    
+                </ul>
+                <div class=content>
+                    <p>Cet article sera le premier d’une série consacrée aux <em>dotfiles</em>. Alors les <em>dotfiles</em>, qu’est-ce que c’est Obi-Wan ? Les <em>dotfiles</em>, ce sont tous les fichiers texte de configuration que l’on peut retrouver dans son répertoire utilisateur pour sauvegarder ses préférences. De nombreux logiciels utilisent cette méthode. On peut citer gnome, intellij,  MAVEN,  ssh, git, bash et tant d’autres. On les appelle <em>dotfiles</em> −que l’on peut traduire par fichiers point− parce qu’ils ont un nom qui commence par un point, ce qui correspond aux fichiers cachés sous linux.</p>
+
+<h1 id=introduction>Introduction</h1>
+
+<p>Chez les troopers, on est comme beaucoup d’autres constamment alliés à la ligne de commande, cf nos articles sur babun et oh-my-zsh. Un outil indispensable dans un terminal est un éditeur de fichier. Dans notre premier article sur les <em>dotfiles</em> nous parlerons de vim, et plus spécialement de sa configuration avec vimrc. Si vous ne connaissez pas l’un des plus puissants éditeur de texte, commencez par vous renseigner dessus et sur les commandes de base par exemple sur <a href=http://www.openvim.com/tutorial.html>http://www.openvim.com/tutorial.html</a>.
+Pour configurer vim, une seule chose à faire : <code>vim ~/.vimrc</code>
+
+                </p></div>
+                <div class=fade-content>
+                </div>
+                <div class=more>
+                    <a href=/2015/05/15/Dotfiles-vim.html><i class="fa fa-arrow-circle-o-right"></i> Lire la suite</a>
+                </div>
+            </div>
+        </article>
+        
         <article class="col-lg-4 col-md-6 col-sm-12">
             <div onclick="window.location.href='/2015/04/15/DevoxxFR-2015.html' ;  return false" style="cursor: pointer">
             <div class=cover style=background-image:url(/images/banner/devoxx2015-banner.png)>
@@ -231,38 +264,6 @@ Nous n’étions pas non plus venus avec une idée de pitch, ce qui nous a permi
                 </div>
                 <div class=more>
                     <a href=/2015/03/24/StartupWeekend.html><i class="fa fa-arrow-circle-o-right"></i> Lire la suite</a>
-                </div>
-            </div>
-        </article>
-        
-        <article class="col-lg-4 col-md-6 col-sm-12">
-            <div onclick="window.location.href='/2015/02/11/Teammood.html' ;  return false" style="cursor: pointer">
-            <div class=cover style=background-image:url(/images/banner/banner-teammood.png)>
-                    <div class=date>posté le 11/02/2015 par Florian</div>
-                </div>
-                <h2><a href=/2015/02/11/Teammood.html>Suivre l'humeur de son équipe avec TeamMood</a></h2><ul class=tags>
-                    
-                    <li>Outils</li>
-                    
-                    <li>Agilité</li>
-                    
-                    <li>Happiness Chart</li>
-                    
-                </ul>
-                <div class=content>
-                    <p>Depuis bientôt 6 mois l’équipe des Code-Troopers utilise <a href="https://www.teammood.com/">TeamMood</a> pour suivre son bonheur au quotidien. Retour sur l’utilisation d’un outil fort sympathique. </p>
-
-<p>Si l’on remonte quelques années en arrière, lorsque nous travaillions encore tous les 7 pour SRMvision, 
-nous avions expérimenté un outil sur un grand tableau blanc pour connaître notre état d’esprit à la fin de chaque journée de travail. 
-Nous l’appelions à l’époque <code>happiness chart</code> (d’autres l’appellent aussi <code>niko-niko</code>).
-Toute l’équipe a rapidement adhéré au principe, car, dans la façon dont nous avions établi les règles, nous pouvions dessiner ce que l’on souhaitait dans notre case, seule la couleur importait : </p>
-
-
-                </div>
-                <div class=fade-content>
-                </div>
-                <div class=more>
-                    <a href=/2015/02/11/Teammood.html><i class="fa fa-arrow-circle-o-right"></i> Lire la suite</a>
                 </div>
             </div>
         </article>
@@ -1451,7 +1452,8 @@ Toute l’équipe a rapidement adhéré au principe, car, dans la façon dont no
     </figure>
 
     
-    <div class="modal fade" id=samva tabindex=-1 role=dialog aria-hidden=true>
+    <div class="modal fade" id=samva tabindex=-1 role=dialog aria-hidden=true itemscope itemtype=http://schema.org/Organization>
+        <meta itemprop=name class=brand>CT-CDGT
         <div class=modal-dialog>
             <div class=modal-content>
                 <div class=modal-header>
@@ -1501,7 +1503,8 @@ Toute l’équipe a rapidement adhéré au principe, car, dans la façon dont no
     </figure>
 
     
-    <div class="modal fade" id=lulu tabindex=-1 role=dialog aria-hidden=true>
+    <div class="modal fade" id=lulu tabindex=-1 role=dialog aria-hidden=true itemscope itemtype=http://schema.org/Organization>
+        <meta itemprop=name class=brand>CT-RMLC
         <div class=modal-dialog>
             <div class=modal-content>
                 <div class=modal-header>
@@ -1548,7 +1551,8 @@ Toute l’équipe a rapidement adhéré au principe, car, dans la façon dont no
     </figure>
 
     
-    <div class="modal fade" id=benou tabindex=-1 role=dialog aria-hidden=true>
+    <div class="modal fade" id=benou tabindex=-1 role=dialog aria-hidden=true itemscope itemtype=http://schema.org/Organization>
+        <meta itemprop=name class=brand>CT-BNCS
         <div class=modal-dialog>
             <div class=modal-content>
                 <div class=modal-header>
@@ -1598,7 +1602,8 @@ Toute l’équipe a rapidement adhéré au principe, car, dans la façon dont no
     </figure>
 
     
-    <div class="modal fade" id=jojo tabindex=-1 role=dialog aria-hidden=true>
+    <div class="modal fade" id=jojo tabindex=-1 role=dialog aria-hidden=true itemscope itemtype=http://schema.org/Organization>
+        <meta itemprop=name class=brand>CT-JRPT
         <div class=modal-dialog>
             <div class=modal-content>
                 <div class=modal-header>
@@ -1645,7 +1650,8 @@ Toute l’équipe a rapidement adhéré au principe, car, dans la façon dont no
     </figure>
 
     
-    <div class="modal fade" id=nanak tabindex=-1 role=dialog aria-hidden=true>
+    <div class="modal fade" id=nanak tabindex=-1 role=dialog aria-hidden=true itemscope itemtype=http://schema.org/Organization>
+        <meta itemprop=name class=brand>CT-FLCH
         <div class=modal-dialog>
             <div class=modal-content>
                 <div class=modal-header>
@@ -1692,7 +1698,8 @@ Toute l’équipe a rapidement adhéré au principe, car, dans la façon dont no
     </figure>
 
     
-    <div class="modal fade" id=mattboll tabindex=-1 role=dialog aria-hidden=true>
+    <div class="modal fade" id=mattboll tabindex=-1 role=dialog aria-hidden=true itemscope itemtype=http://schema.org/Organization>
+        <meta itemprop=name class=brand>CT-MTBL
         <div class=modal-dialog>
             <div class=modal-content>
                 <div class=modal-header>
@@ -1736,7 +1743,8 @@ Toute l’équipe a rapidement adhéré au principe, car, dans la façon dont no
     </figure>
 
     
-    <div class="modal fade" id=20100 tabindex=-1 role=dialog aria-hidden=true>
+    <div class="modal fade" id=20100 tabindex=-1 role=dialog aria-hidden=true itemscope itemtype=http://schema.org/Organization>
+        <meta itemprop=name class=brand>CT-VCMB
         <div class=modal-dialog>
             <div class=modal-content>
                 <div class=modal-header>
