@@ -12,7 +12,7 @@ Cet article sera le premier d'une série consacrée aux _dotfiles_. Alors les _d
 Introduction
 ============
 
-Chez les troopers, on est comme beaucoup d'autres constamment alliés à la ligne de commande, cf nos articles sur babun et oh-my-zsh. Un outil indispensable dans un terminal est un éditeur de fichier. Dans notre premier article sur les _dotfiles_ nous parlerons de vim, et plus spécialement de sa configuration avec vimrc. Si vous ne connaissez pas l'un des plus puissants éditeur de texte, commencez par vous renseigner dessus et sur les commandes de base par exemple sur [http://www.openvim.com/tutorial.html](http://www.openvim.com/tutorial.html).
+Chez les troopers, on est comme beaucoup d'autres constamment alliés à la ligne de commande, cf nos articles sur [babun](http://code-troopers.com/2014/10/01/babun.html) et [oh-my-zsh](http://code-troopers.com/2014/09/17/ohMyZsh.html). Un outil indispensable dans un terminal est un éditeur de fichier. Dans notre premier article sur les _dotfiles_ nous parlerons de vim, et plus spécialement de sa configuration avec vimrc. Si vous ne connaissez pas l'un des plus puissants éditeur de texte, commencez par vous renseigner dessus et sur les commandes de base par exemple sur [http://www.openvim.com/tutorial.html](http://www.openvim.com/tutorial.html).
 Pour configurer vim, une seule chose à faire : `vim ~/.vimrc`
 <!--break-->
 
