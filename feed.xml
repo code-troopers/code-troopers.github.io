@@ -12,7 +12,7 @@
 
 &lt;h1 id=&quot;introduction&quot;&gt;Introduction&lt;/h1&gt;
 
-&lt;p&gt;Chez les troopers, on est comme beaucoup d’autres constamment alliés à la ligne de commande, cf nos articles sur babun et oh-my-zsh. Un outil indispensable dans un terminal est un éditeur de fichier. Dans notre premier article sur les &lt;em&gt;dotfiles&lt;/em&gt; nous parlerons de vim, et plus spécialement de sa configuration avec vimrc. Si vous ne connaissez pas l’un des plus puissants éditeur de texte, commencez par vous renseigner dessus et sur les commandes de base par exemple sur &lt;a href=&quot;http://www.openvim.com/tutorial.html&quot;&gt;http://www.openvim.com/tutorial.html&lt;/a&gt;.
+&lt;p&gt;Chez les troopers, on est comme beaucoup d’autres constamment alliés à la ligne de commande, cf nos articles sur &lt;a href=&quot;http://code-troopers.com/2014/10/01/babun.html&quot;&gt;babun&lt;/a&gt; et &lt;a href=&quot;http://code-troopers.com/2014/09/17/ohMyZsh.html&quot;&gt;oh-my-zsh&lt;/a&gt;. Un outil indispensable dans un terminal est un éditeur de fichier. Dans notre premier article sur les &lt;em&gt;dotfiles&lt;/em&gt; nous parlerons de vim, et plus spécialement de sa configuration avec vimrc. Si vous ne connaissez pas l’un des plus puissants éditeur de texte, commencez par vous renseigner dessus et sur les commandes de base par exemple sur &lt;a href=&quot;http://www.openvim.com/tutorial.html&quot;&gt;http://www.openvim.com/tutorial.html&lt;/a&gt;.
 Pour configurer vim, une seule chose à faire : &lt;code&gt;vim ~/.vimrc&lt;/code&gt;
 &lt;!--break--&gt;&lt;/p&gt;
 
