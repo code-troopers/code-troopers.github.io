@@ -7,7 +7,7 @@ cover: ohmyzsh-banner
 tags: [vim, vimrc, shell]
 ---
 
-Cet article sera le premier d'une série consacrée aux _dotfiles_. Alors les _dotfiles_, qu'est-ce que c'est Obi-Wan ? Les _dotfiles_, ce sont tous les fichiers texte de configuration que l'on peut retrouver dans son répertoire utilisateur pour sauvegarder ses préférences. De nombreux logiciels utilisent cette méthode. On peut citer gnome, intellij,  MAVEN,  ssh, git, bash et tant d'autres. On les appelle _dotfiles_ −que l'on peut traduire par fichiers point− parce qu'ils ont un nom qui commence par un point, ce qui correspond aux fichiers cachés sous linux.
+Cet article sera le premier d'une série consacrée aux _dotfiles_. Alors les _dotfiles_, qu'est-ce que c'est Obi-Wan ? Les _dotfiles_, ce sont tous les fichiers texte de configuration que l'on peut retrouver dans son répertoire utilisateur pour sauvegarder ses préférences. De nombreux logiciels utilisent cette méthode. On peut citer gnome, IntelliJ, Maven,  ssh, git, bash et tant d'autres. On les appelle _dotfiles_ −que l'on peut traduire par fichiers point− parce qu'ils ont un nom qui commence par un point, ce qui correspond aux fichiers cachés sous linux.
 
 Introduction
 ============
@@ -97,7 +97,7 @@ Pour afficher les numéros de ligne on peut taper `:set nu`. La commande est cer
 
 
 Pour sortir du mode **insertion**, il faut appuyer sur la touche échap par défaut. Même pour un pianiste, cette touche est trèèèèès loin sur le clavier. Mais vous pouvez bien évidemment remapper cette action. Si vous voulez des inspirations sur les meilleurs combinaisons, vous pouvez regarder là : [http://vim.wikia.com/wiki/Avoid_the_escape_key](http://vim.wikia.com/wiki/Avoid_the_escape_key)
-Comme je suis en bépo (au lieu de azerty) et que je n'écris presque jamais de français avec vim, j'ai utilisé le mot clé `éé`. Certains mappent sur `ii` mais vim marquera une légère pause à chaque appuie sur la touche i qui est assez déstabilisant.
+Comme je suis en bépo (au lieu de azerty) et que je n'écris presque jamais de français avec vim, j'ai utilisé le mot clé `éé`. Certains mappent sur `ii` mais vim marquera une légère pause à chaque appui sur la touche i qui est assez déstabilisant.
 
 <div style="text-align: center;margin:50px;">
 <video style="width: 90%; max-width: 600px;" 
@@ -168,7 +168,7 @@ En attendant d'autres articles sur les _dotfiles_, ou pour aller plus loin dans 
 Bonus
 =====
 
-Si vous aimez vim et intellij, vous pouvez installer le plugin ideavim qui permet d'avoir vim comme éditeur de texte et depuis quelques mois vous pouvez même importer vos settings vim dans le plugin :
+Si vous aimez vim et IntelliJ, vous pouvez installer le plugin ideavim qui permet d'avoir vim comme éditeur de texte et depuis quelques mois vous pouvez même importer vos settings vim dans le plugin :
 
     $ cat ~/.ideavimrc
     source ~/.vimrc
