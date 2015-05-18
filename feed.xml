@@ -84,7 +84,7 @@ Selon la disposition de votre clavier, vous pouvez remplacer &lt;code&gt;c&lt;/c
 &lt;pre&gt;&lt;code&gt;inoremap éé &amp;lt;esc&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Pour sortir du mode &lt;strong&gt;insertion&lt;/strong&gt;, il faut appuyer sur la touche échap par défaut. Même pour un pianiste, cette touche est trèèèèès loin sur le clavier. Mais vous pouvez bien évidemment remapper cette action. Si vous voulez des inspirations sur les meilleurs combinaisons, vous pouvez regarder là : &lt;a href=&quot;http://vim.wikia.com/wiki/Avoid_the_escape_key&quot;&gt;http://vim.wikia.com/wiki/Avoid_the_escape_key&lt;/a&gt;
+&lt;p&gt;Pour sortir du mode &lt;strong&gt;insertion&lt;/strong&gt;, il faut appuyer sur la touche échap par défaut. Même pour un pianiste, cette touche est trèèèèès loin sur le clavier. Mais vous pouvez bien évidemment remapper cette action. Si vous voulez des inspirations sur les meilleures combinaisons, vous pouvez regarder là : &lt;a href=&quot;http://vim.wikia.com/wiki/Avoid_the_escape_key&quot;&gt;http://vim.wikia.com/wiki/Avoid_the_escape_key&lt;/a&gt;
 Comme je suis en bépo (au lieu de azerty) et que je n’écris presque jamais de français avec vim, j’ai utilisé le mot clé &lt;code&gt;éé&lt;/code&gt;. Certains mappent sur &lt;code&gt;ii&lt;/code&gt; mais vim marquera une légère pause à chaque appui sur la touche i qui est assez déstabilisant.&lt;/p&gt;
 
 &lt;div style=&quot;text-align: center;margin:50px;&quot;&gt;
