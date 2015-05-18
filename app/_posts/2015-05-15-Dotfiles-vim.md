@@ -96,7 +96,7 @@ Pour afficher les numéros de ligne on peut taper `:set nu`. La commande est cer
     inoremap éé <esc>
 
 
-Pour sortir du mode **insertion**, il faut appuyer sur la touche échap par défaut. Même pour un pianiste, cette touche est trèèèèès loin sur le clavier. Mais vous pouvez bien évidemment remapper cette action. Si vous voulez des inspirations sur les meilleurs combinaisons, vous pouvez regarder là : [http://vim.wikia.com/wiki/Avoid_the_escape_key](http://vim.wikia.com/wiki/Avoid_the_escape_key)
+Pour sortir du mode **insertion**, il faut appuyer sur la touche échap par défaut. Même pour un pianiste, cette touche est trèèèèès loin sur le clavier. Mais vous pouvez bien évidemment remapper cette action. Si vous voulez des inspirations sur les meilleures combinaisons, vous pouvez regarder là : [http://vim.wikia.com/wiki/Avoid_the_escape_key](http://vim.wikia.com/wiki/Avoid_the_escape_key)
 Comme je suis en bépo (au lieu de azerty) et que je n'écris presque jamais de français avec vim, j'ai utilisé le mot clé `éé`. Certains mappent sur `ii` mais vim marquera une légère pause à chaque appui sur la touche i qui est assez déstabilisant.
 
 <div style="text-align: center;margin:50px;">
