@@ -131,5 +131,10 @@ On interdit de commiter `printStackTrace(` ou `FIXME` ou `TODO` dans les fichier
 
 Oui ça paraît un peu violent d'interdire le commit de TODO et FIXME mais on peut passer outre en commitant avec l'option `--no-verify` et au moins on est au courant donc on n'oublie pas les actions nécessaires selon les équipe de travail (ajout d'un postit, d'une carte trello etc.)
 
+2 petits détails pour que ça marche :
+
+  * Il faut que le script soit exécutable, donc vous pouvez faire `chmod +x ~/.git_template/hooks/pre-commit`
+  * Ce sera actif uniquement sur les nouveaux dépôts, pour activer le hook sur les dépôts existants, vous devez faire un `git init`
+
 Si vous voulez d'autres exemples de hooks, vous pouvez commencer par jeter un œil aux hooks de git-flow https://github.com/petervanderdoes/git-flow-hooks
 
