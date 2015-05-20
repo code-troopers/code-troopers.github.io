@@ -129,7 +129,7 @@ On interdit de commiter `printStackTrace(` ou `FIXME` ou `TODO` dans les fichier
     </a>
 </div>
 
-Oui ça paraît un peu violent d'interdire le commit de TODO et FIXME mais on peut passer outre en commitant avec l'option `--no-verify` et au moins on est au courant donc on n'oublie pas les actions nécessaires selon les équipe de travail (ajout d'un postit, d'une carte trello etc.)
+Oui ça paraît un peu violent d'interdire le commit de TODO et FIXME mais on peut passer outre en commitant avec l'option `--no-verify` et au moins on est au courant donc on n'oublie pas les actions nécessaires selon les équipes de travail (ajout d'un postit, d'une carte trello etc.)
 
 2 petits détails pour que ça marche :
 
