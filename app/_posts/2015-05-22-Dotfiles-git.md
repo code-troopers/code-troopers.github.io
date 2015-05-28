@@ -51,7 +51,7 @@ C'est toujours important d'avoir de la couleur, ça donne bonne mine, ça rend j
 
 gitignore global
 ========================
-Parfois vous arrivez dans un environnement où personne n'utilise intellij, peut-être même que vous voulez cacher le fait que vous utilisez idea. Dans ce cas, pas besoin de commiter un .gitignore qui contient `.idea` et `*.iml` mettez le plutôt dans `~/.gitignore`. Pour que ça marche, vous devrez rajouter dans votre `~/.gitconfig` :
+Parfois vous arrivez dans un environnement où personne n'utilise IntelliJ, peut-être même que vous voulez cacher le fait que vous utilisez IDEA. Dans ce cas, pas besoin de commiter un .gitignore qui contient `.idea` et `*.iml` mettez le plutôt dans `~/.gitignore`. Pour que ça marche, vous devrez rajouter dans votre `~/.gitconfig` :
 
     [core]
         excludesfile = ~/.gitignore
@@ -107,7 +107,7 @@ Je vous laisse essayer celles qui ne sont pas explicite ;)
 
 Les Hooks
 ========
-Il y a beaucoup d'options et de choses à faire mais je terminerai cet article avec les hooks, qui mériteraient peut-être à eux seuls un article. Un hook, qui se traduit par « crochet » va intercepter une commande afin de réaliser une action. Par exemple, quand je lance la commande commit, je veux vérifier que tous les tests passent, ou quand je push, je veux mettre à jour automatiquement le ticket jira associé, on peut vraiment tout faire vu qu'il s'agit juste de scripts à rajouter.
+Il y a beaucoup d'options et de choses à faire mais je terminerai cet article avec les hooks, qui mériteraient peut-être à eux seuls un article. Un hook −qui se traduit par « crochet »− va intercepter une commande afin de réaliser une action. Par exemple, quand je lance la commande commit, je veux vérifier que tous les tests passent, ou quand je push, je veux mettre à jour automatiquement le ticket jira associé, on peut vraiment tout faire vu qu'il s'agit juste de scripts à rajouter.
 
 On a d'abord besoin de définir le répertoire qui va contenir les hooks. Vous pouvez ajouter dans votre `~/.gitconfig` :
 
@@ -129,12 +129,12 @@ On interdit de commiter `printStackTrace(` ou `FIXME` ou `TODO` dans les fichier
     </a>
 </div>
 
-Oui ça paraît un peu violent d'interdire le commit de TODO et FIXME mais on peut passer outre en commitant avec l'option `--no-verify` et au moins on est au courant donc on n'oublie pas les actions nécessaires selon les équipes de travail (ajout d'un postit, d'une carte trello etc.)
+Oui ça paraît un peu violent d'interdire le commit de TODO et FIXME mais on peut passer outre en commitant avec l'option `--no-verify` et au moins on est au courant donc on n'oublie pas les actions nécessaires selon les équipes de travail (ajout d'un post-it, d'une carte trello etc.)
 
 2 petits détails pour que ça marche :
 
   * Il faut que le script soit exécutable, donc vous pouvez faire `chmod +x ~/.git_template/hooks/pre-commit`
   * Ce sera actif uniquement sur les nouveaux dépôts, pour activer le hook sur les dépôts existants, vous devez faire un `git init`
 
-Si vous voulez d'autres exemples de hooks, vous pouvez commencer par jeter un œil aux hooks de git-flow https://github.com/petervanderdoes/git-flow-hooks
+Si vous voulez d'autres exemples de hooks, vous pouvez commencer par jeter un œil aux hooks de [git-flow](https://github.com/petervanderdoes/git-flow-hooks)
 
