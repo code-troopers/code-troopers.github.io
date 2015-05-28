@@ -23,6 +23,7 @@ Ceci a pour but d'écrire dans votre fichier ~/.gitconfig ces simples lignes :
         name = Jango Fett
         email = jango.fett@code-troopers.com
 
+<!--break-->
 
 Un peu de couleurs
 ===================
