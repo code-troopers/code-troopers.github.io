@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html class=no-js lang=fr itemscope itemtype=http://schema.org/Organization>
+    <head>
+        <meta http-equiv=X-UA-Compatible content="IE=edge">
+        <meta charset=utf-8>
+        <title>git : quelques astuces de configuration pour vos dotfiles</title>
+        <meta property=fb:app_id content=432735746865877>
+        <meta property=og:url content=http://code-troopers.com/2015/05/22/Dotfiles-git.html>
+        <meta property=og:title content="git : quelques astuces de configuration pour vos dotfiles">
+        <meta property=twitter:card content=summary>
+        <meta property=twitter:site content=codetroopers>
+        <meta property=twitter:image:src content=http://code-troopers.com/images/banner/ohmyzsh-banner.png>
+        <meta property=og:image content=http://code-troopers.com/images/banner/ohmyzsh-banner.png>
+        <meta property=twitter:title content="git : quelques astuces de configuration pour vos dotfiles">
+        <meta property=twitter:creator content=@codetroopers>
+        <meta property=twitter:domain content=http://code-troopers.com>
+        
+        
+        <meta property=twitter:description content="Création de dotfiles pour git : astuces pour .gitconfig, git hook ">
+        
+        
+        
+        <meta name=description content="Création de dotfiles pour git : astuces pour .gitconfig, git hook ">
+        <meta property=og:description content="Création de dotfiles pour git : astuces pour .gitconfig, git hook ">
+        
+        <meta name=viewport content="width=device-width">
+
+        <link rel=stylesheet href=/styles/2e03639a.main.css>
+
+        <!--[if lt IE 9]><script src="/scripts/1d7b502c.ie8.js"></script><![endif]-->
+        <meta itemprop=name content=CT-CDGT>
+        <meta itemprop=name content=CT-RMLC>
+        <meta itemprop=name content=CT-BNCS>
+        <meta itemprop=name content=CT-JRPT>
+        <meta itemprop=name content=CT-MTBL>
+        <meta itemprop=name content=CT-FLCH>
+        <meta itemprop=name content=CT-VCMB>
+    </head>
+    <body>
+        
+        <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-NWLQD2" height=0 width=0 style=display:none;visibility:hidden></iframe></noscript>
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-NWLQD2');</script>
+        
+        <!--[if lt IE 8]><p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a
+                href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p><![endif]-->
+
+<header data-spy=affix class=affix-top>
+    <div class=container>
+        <div class=navbar-header itemscope itemtype=http://schema.org/Organization>
+            <button type=button class=navbar-toggle data-toggle=collapse data-target=.navbar-collapse>
+                <span><i class="fa fa-bars fa-2x"></i></span>
+            </button>
+            <a class=navbar-brand href="/"><img itemprop=logo class=logo alt="Code-Troopers logo" title="Code-Troopers logo" src=/images/logo.png>
+                <span itemprop=name class=brand>Code-Troopers</span>
+            </a>
+        </div>
+        <nav class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li class=active><a data-scrolltolink=aboutUs>À propos</a></li>
+                <li><a data-scrolltolink=projects>Réalisations</a></li>
+                <li><a data-scrolltolink=skills>Compétences</a></li>
+                <li><a data-scrolltolink=team>L'équipe</a></li>
+                <li><a data-scrolltolink=contact>Contact</a></li>
+                <li><a href=/blog/index.html>Blog</a></li>
+            </ul>
+        </nav>
+        
+    </div>
+</header>
+
+    <section id=post>
+        <div class=header>
+            <div class=container><a href=/blog/index.html>Le <span>blog</span></a></div>
+        </div>
+        <div class=container>
+        <article>
+            <div>
+		<div class=cover style=background-image:url(/images/banner/ohmyzsh-banner-big.png)>
+                    <div class=date>posté le 22/05/2015 par Matthieu</div>
+                </div>
+                <h2><a href=/2015/05/22/Dotfiles-git.html>git : quelques astuces de configuration pour vos dotfiles</a></h2>
+                <ul class=tags>
+                    
+                    <li>git</li>
+                    
+                    <li>gitconfig</li>
+                    
+                    <li>hook</li>
+                    
+                </ul>
+                <div class=content>
+                    <p>Cet article est le deuxième de la série des <em>dotfiles</em>. Voir l’article sur <a href=code-troopers.com/2015/05/15/Dotfiles-vim.html>vimrc</a>. Nous allons ici aborder quelques configurations indispensables de git.</p>
+
+<h1 id=la-base>La base</h1>
+
+<p>Si vous utilisez git, vous avez forcément fait des commandes de base pour rentrer votre nom et votre email (indispensable pour pusher vos commits)</p>
+
+<pre><code>$ git config --global user.name "Jango Fett" 
+$ git config --global user.email "jango.fett@code-troopers.com"
+</code></pre>
+
+<p>Ceci a pour but d’écrire dans votre fichier ~/.gitconfig ces simples lignes :</p>
+
+<pre><code>[user]
+    name = Jango Fett
+    email = jango.fett@code-troopers.com
+</code></pre>
+
+
+
+<h1 id=un-peu-de-couleurs>Un peu de couleurs</h1>
+<p>C’est toujours important d’avoir de la couleur, ça donne bonne mine, ça rend joyeux mais surtout ça aide à la lisibilité. Dans les dernières version de git, la couleur est activée automatiquement, mais vous pouvez toujours la modifier ! Voici un exemple de configuration :</p>
+
+<pre><code>[color "branch"]
+    current = yellow reverse
+    local = yellow
+    remote = green
+[color "diff"]
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
+[color "status"]
+    added = yellow
+    changed = green
+    untracked = cyan
+</code></pre>
+
+<div style=text-align:center;margin-bottom:50px>
+    <a href=/images/postDotfilesGit/gitcolours.png data-lightbox=group-1 title="git avec couleurs personnalisées" class=inlineBoxes>
+        <img class=medium src=/images/postDotfilesGit/gitcolours.png alt="git avec couleurs personnalisées">
+    </a>
+</div>
+
+<h1 id=gitignore-global>gitignore global</h1>
+<p>Parfois vous arrivez dans un environnement où personne n’utilise IntelliJ, peut-être même que vous voulez cacher le fait que vous utilisez IDEA. Dans ce cas, pas besoin de commiter un .gitignore qui contient <code>.idea</code> et <code>*.iml</code> mettez le plutôt dans <code>~/.gitignore</code>. Pour que ça marche, vous devrez rajouter dans votre <code>~/.gitconfig</code> :</p>
+
+<pre><code>[core]
+    excludesfile = ~/.gitignore
+</code></pre>
+
+<h1 id=j3-vim>J’&lt;3 vim</h1>
+<p>J’aime vim, alors je le met partout. Besoin d’un éditeur de texte pour les commits ? vim !</p>
+
+<pre><code>[core]
+    editor = vim
+</code></pre>
+
+<p>Besoin d’un outil pour faire des diff ? vim !</p>
+
+<pre><code>[merge] 
+    tool = vimdiff
+</code></pre>
+
+<h1 id=montre-nous-tes-fichiers>Montre-nous tes fichiers</h1>
+<p>Vous avez créé un nouveau répertoire, ajouté plein de fichiers dedans, et vous revenez en console pour voir ce qu’il y a à commiter. Soit un cas d’utilisation quotidien ou presque. Sauf que quand vous faîtes <code>git status</code> seul le répertoire apparaît et pas les fichiers à l’intérieur ! Pour y remédier :</p>
+
+<pre><code>[status]
+    showUntrackedFiles = all
+</code></pre>
+
+<div style=text-align:center;margin-bottom:50px>
+    <a href=/images/postDotfilesGit/git-status.png data-lightbox=group-1 title="git status coloré" class=inlineBoxes>
+        <img class=medium src=/images/postDotfilesGit/git-status.png alt="git status coloré">
+    </a>
+</div>
+
+<h1 id=alias>Alias</h1>
+<p>Comme pour les shell, on peut créer des alias de commande. Par exemple :</p>
+
+<pre><code>[alias] 
+    cp = cherry-pick
+    co = checkout
+    cl = clone
+    ci = commit 
+    br = branch
+</code></pre>
+
+<p>C’est plus rapide à taper… un peu, et encore faut s’en souvenir que cp ça fait cherry-pick. Mais certaines commandes sont longues et là ça devient encore plus pertinent :</p>
+
+<pre><code>    last = log -1 --stat
+    st = status -sb
+    unstage = reset HEAD --
+    dc = diff --cached
+    pr = pull --rebase
+    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %Cblue&lt;%an&gt;%Creset' --abbrev-commit --date=relative --all
+</code></pre>
+
+<p>Je vous laisse essayer celles qui ne sont pas explicite ;)</p>
+
+<h1 id=les-hooks>Les Hooks</h1>
+<p>Il y a beaucoup d’options et de choses à faire mais je terminerai cet article avec les hooks, qui mériteraient peut-être à eux seuls un article. Un hook −qui se traduit par « crochet »− va intercepter une commande afin de réaliser une action. Par exemple, quand je lance la commande commit, je veux vérifier que tous les tests passent, ou quand je push, je veux mettre à jour automatiquement le ticket jira associé, on peut vraiment tout faire vu qu’il s’agit juste de scripts à rajouter.</p>
+
+<p>On a d’abord besoin de définir le répertoire qui va contenir les hooks. Vous pouvez ajouter dans votre <code>~/.gitconfig</code> :</p>
+
+<pre><code>[init]
+    templatedir = ~/.git_template
+</code></pre>
+
+<p>Par exemple si vous voulez rajouter un script qui interdit de commiter <code>System.out.println</code>, vous pouvez créer ce fichier : <code>~/.git_template/hooks/pre-commit</code>
+J’ai récupéré le mien sur https://github.com/borisguery/git-keywords-checker sur lequel j’ai juste modifié les deux variables KEYWORDS_REGEX et EXTENSIONS_REGEX. Ce qui donne grosso modo dans le fichier :</p>
+
+<pre><code>5 # Add or remove keywords here
+6 KEYWORDS_REGEX="printStackTrace\(|FIXME|TODO"
+7 # Add extensions to check here
+8 EXTENSIONS_REGEX="(.java$|.js$)" On interdit de commiter `printStackTrace(` ou `FIXME` ou `TODO` dans les fichiers `java` ou `js`.
+</code></pre>
+
+<div style=text-align:center;margin-bottom:50px>
+    <a href=/images/postDotfilesGit/git-hooks.png data-lightbox=group-1 title="git hooks pre-commit en action" class=inlineBoxes>
+        <img class=medium src=/images/postDotfilesGit/git-hooks.png alt="git hooks pre-commit en action">
+    </a>
+</div>
+
+<p>Oui ça paraît un peu violent d’interdire le commit de TODO et FIXME mais on peut passer outre en commitant avec l’option <code>--no-verify</code> et au moins on est au courant donc on n’oublie pas les actions nécessaires selon les équipes de travail (ajout d’un post-it, d’une carte trello etc.)</p>
+
+<p>2 petits détails pour que ça marche :</p>
+
+<ul>
+  <li>Il faut que le script soit exécutable, donc vous pouvez faire <code>chmod +x ~/.git_template/hooks/pre-commit</code></li>
+  <li>Ce sera actif uniquement sur les nouveaux dépôts, pour activer le hook sur les dépôts existants, vous devez faire un <code>git init</code></li>
+</ul>
+
+<p>Si vous voulez d’autres exemples de hooks, vous pouvez commencer par jeter un œil aux hooks de <a href=https://github.com/petervanderdoes/git-flow-hooks>git-flow</a></p>
+
+
+                </div>
+<div class=share>
+L'article vous a plu ? Partagez-le :
+    <ul class=socials>
+        <li>
+            <a target=_blank title=Twitter href="https://twitter.com/share?url=http://code-troopers.com/2015/05/22/Dotfiles-git.html&text=git : quelques astuces de configuration pour vos dotfiles&via=codetroopers" rel=nofollow onclick="window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=400,width=700');return false">
+                <i class="fa fa-twitter-square"></i>
+            </a>
+        </li>
+        <li>
+            <a target=_blank title=Facebook href="https://www.facebook.com/sharer.php?u=http://code-troopers.com/2015/05/22/Dotfiles-git.html&t=git : quelques astuces de configuration pour vos dotfiles" class=facebook-button rel=nofollow onclick="window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=500,width=700');return false">
+                <i class="fa fa-facebook-square"></i>
+            </a>
+        </li>
+        <li>
+            <a target=_blank title="Google +" href="https://plus.google.com/share?url=http://code-troopers.com/2015/05/22/Dotfiles-git.html&hl=fr" class=google-button rel=nofollow onclick="window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=650');return false">
+                <i class="fa fa-google-plus-square"></i>
+            </a>
+        </li>
+        <li>
+            <a target=_blank title=Linkedin href="https://www.linkedin.com/shareArticle?mini=true&url=http://code-troopers.com/2015/05/22/Dotfiles-git.html&title=git : quelques astuces de configuration pour vos dotfiles" class=linkedin-button rel=nofollow onclick="window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=650');return false">
+                <i class="fa fa-linkedin-square"></i>
+            </a>
+        </li>
+        <li>
+            <a target=_blank title="Envoyer par mail" href="mailto:?subject=git : quelques astuces de configuration pour vos dotfiles&body=http://code-troopers.com/2015/05/22/Dotfiles-git.html" rel=nofollow>
+                <i class="fa fa-envelope"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+<div style=clear:both></div>
+
+
+
+                <div class=back>
+                    <a href=/blog/index.html><i class="fa fa-arrow-circle-o-up"></i> Retour aux articles</a>
+                    <div class="pull-right paginate">
+                        
+                        <a href=/2015/05/15/Dotfiles-vim.html><i class="fa fa-arrow-circle-o-left"></i> Précédent</a>
+                        
+                        
+                        <span class=disabled><i class="fa fa-arrow-circle-o-right"></i> Suivant</span>
+                        
+                    </div>
+                </div>
+                <div id=disqus_thread></div>
+                <script type=text/javascript>
+                    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+                    var disqus_shortname = 'codetroopers'; // required: replace example with your forum shortname
+		    var disqus_url = window.location.href;
+		    if (window.location.protocol != "http:"){
+			disqus_url = "http:" + window.location.href.substring(window.location.protocol.length);
+		    }
+
+                    /* * * DON'T EDIT BELOW THIS LINE * * */
+                    (function() {
+                        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                    })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href=http://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript>
+                <a href=http://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a>
+
+            </div>
+        </article>
+        </div>
+    </section>
+<footer id=contact>
+    <div class=container>
+        <div class=row>
+            <div class=col-md-6 itemscope itemtype=http://schema.org/Organization>
+                <h3>Contact</h3>
+
+                <p>Vous avez besoin de nous pour un projet, contactez-nous sur les réseaux sociaux, par mail à <a href=mailto:contact@code-troopers.com><meta itemprop=email content=contact@code-troopers.com>contact@code-
+                    troopers.com</a> ou par téléphone au <a href=tel:+33782287216><span itemprop=telephone>0782 287 216</span></a></p>
+            </div>
+            <div class="col-md-6 simple-social-icons">
+                <h3>Réseaux sociaux</h3>
+                <ul class=socials>
+                    <li><a target=_blank href=https://twitter.com/codetroopers><i class="fa fa-twitter-square"></i></a></li>
+                    <li><a target=_blank href=https://www.facebook.com/pages/Code-Troopers/123604307824664><i class="fa fa-facebook-square"></i></a></li>
+                    <li><a target=_blank href=https://plus.google.com/+Code-troopers rel=publisher><i class="fa fa-google-plus-square"></i></a></li>
+                    <li><a target=_blank href=https://github.com/code-troopers><i class="fa fa-github-square"></i></a></li>
+                    <li><a target=_blank href=/feed.xml><i class="fa fa-rss-square"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class=row>
+            <div class=footer-under>
+                Made with <i class="fa fa-heart"></i> in Tours -
+                © 2014 - 2015 Code-Troopers - Tous droits réservés
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src=//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js></script>
+
+<script src=/scripts/aa413edf.plugins.js></script>
+
+<script src=/scripts/32bd55f7.scripts.js></script>
+
+</body>
+</html>

@@ -7,6 +7,148 @@
                 <atom:link href="http://code-troopers.com/feed.xml" rel="self" type="application/rss+xml"/>
                 
                         <item>
+                                <title>git : quelques astuces de configuration pour vos dotfiles</title>
+                                <description>&lt;p&gt;Cet article est le deuxième de la série des &lt;em&gt;dotfiles&lt;/em&gt;. Voir l’article sur &lt;a href=&quot;code-troopers.com/2015/05/15/Dotfiles-vim.html&quot;&gt;vimrc&lt;/a&gt;. Nous allons ici aborder quelques configurations indispensables de git.&lt;/p&gt;
+
+&lt;h1 id=&quot;la-base&quot;&gt;La base&lt;/h1&gt;
+
+&lt;p&gt;Si vous utilisez git, vous avez forcément fait des commandes de base pour rentrer votre nom et votre email (indispensable pour pusher vos commits)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ git config --global user.name &quot;Jango Fett&quot; 
+$ git config --global user.email &quot;jango.fett@code-troopers.com&quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Ceci a pour but d’écrire dans votre fichier ~/.gitconfig ces simples lignes :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[user]
+    name = Jango Fett
+    email = jango.fett@code-troopers.com
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;!--break--&gt;
+
+&lt;h1 id=&quot;un-peu-de-couleurs&quot;&gt;Un peu de couleurs&lt;/h1&gt;
+&lt;p&gt;C’est toujours important d’avoir de la couleur, ça donne bonne mine, ça rend joyeux mais surtout ça aide à la lisibilité. Dans les dernières version de git, la couleur est activée automatiquement, mais vous pouvez toujours la modifier ! Voici un exemple de configuration :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[color &quot;branch&quot;]
+    current = yellow reverse
+    local = yellow
+    remote = green
+[color &quot;diff&quot;]
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
+[color &quot;status&quot;]
+    added = yellow
+    changed = green
+    untracked = cyan
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;div style=&quot;text-align:center;margin-bottom:50px&quot;&gt;
+    &lt;a href=&quot;/images/postDotfilesGit/gitcolours.png&quot; data-lightbox=&quot;group-1&quot; title=&quot;git avec couleurs personnalisées&quot; class=&quot;inlineBoxes&quot;&gt;
+        &lt;img class=&quot;medium&quot; src=&quot;/images/postDotfilesGit/gitcolours.png&quot; alt=&quot;git avec couleurs personnalisées&quot; /&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;h1 id=&quot;gitignore-global&quot;&gt;gitignore global&lt;/h1&gt;
+&lt;p&gt;Parfois vous arrivez dans un environnement où personne n’utilise IntelliJ, peut-être même que vous voulez cacher le fait que vous utilisez IDEA. Dans ce cas, pas besoin de commiter un .gitignore qui contient &lt;code&gt;.idea&lt;/code&gt; et &lt;code&gt;*.iml&lt;/code&gt; mettez le plutôt dans &lt;code&gt;~/.gitignore&lt;/code&gt;. Pour que ça marche, vous devrez rajouter dans votre &lt;code&gt;~/.gitconfig&lt;/code&gt; :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[core]
+    excludesfile = ~/.gitignore
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&quot;j3-vim&quot;&gt;J’&amp;lt;3 vim&lt;/h1&gt;
+&lt;p&gt;J’aime vim, alors je le met partout. Besoin d’un éditeur de texte pour les commits ? vim !&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[core]
+    editor = vim
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Besoin d’un outil pour faire des diff ? vim !&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[merge] 
+    tool = vimdiff
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&quot;montre-nous-tes-fichiers&quot;&gt;Montre-nous tes fichiers&lt;/h1&gt;
+&lt;p&gt;Vous avez créé un nouveau répertoire, ajouté plein de fichiers dedans, et vous revenez en console pour voir ce qu’il y a à commiter. Soit un cas d’utilisation quotidien ou presque. Sauf que quand vous faîtes &lt;code&gt;git status&lt;/code&gt; seul le répertoire apparaît et pas les fichiers à l’intérieur ! Pour y remédier :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[status]
+    showUntrackedFiles = all
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;div style=&quot;text-align:center;margin-bottom:50px&quot;&gt;
+    &lt;a href=&quot;/images/postDotfilesGit/git-status.png&quot; data-lightbox=&quot;group-1&quot; title=&quot;git status coloré&quot; class=&quot;inlineBoxes&quot;&gt;
+        &lt;img class=&quot;medium&quot; src=&quot;/images/postDotfilesGit/git-status.png&quot; alt=&quot;git status coloré&quot; /&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;h1 id=&quot;alias&quot;&gt;Alias&lt;/h1&gt;
+&lt;p&gt;Comme pour les shell, on peut créer des alias de commande. Par exemple :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[alias] 
+    cp = cherry-pick
+    co = checkout
+    cl = clone
+    ci = commit 
+    br = branch
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;C’est plus rapide à taper… un peu, et encore faut s’en souvenir que cp ça fait cherry-pick. Mais certaines commandes sont longues et là ça devient encore plus pertinent :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    last = log -1 --stat
+    st = status -sb
+    unstage = reset HEAD --
+    dc = diff --cached
+    pr = pull --rebase
+    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %Cblue&amp;lt;%an&amp;gt;%Creset' --abbrev-commit --date=relative --all
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Je vous laisse essayer celles qui ne sont pas explicite ;)&lt;/p&gt;
+
+&lt;h1 id=&quot;les-hooks&quot;&gt;Les Hooks&lt;/h1&gt;
+&lt;p&gt;Il y a beaucoup d’options et de choses à faire mais je terminerai cet article avec les hooks, qui mériteraient peut-être à eux seuls un article. Un hook −qui se traduit par « crochet »− va intercepter une commande afin de réaliser une action. Par exemple, quand je lance la commande commit, je veux vérifier que tous les tests passent, ou quand je push, je veux mettre à jour automatiquement le ticket jira associé, on peut vraiment tout faire vu qu’il s’agit juste de scripts à rajouter.&lt;/p&gt;
+
+&lt;p&gt;On a d’abord besoin de définir le répertoire qui va contenir les hooks. Vous pouvez ajouter dans votre &lt;code&gt;~/.gitconfig&lt;/code&gt; :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[init]
+    templatedir = ~/.git_template
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Par exemple si vous voulez rajouter un script qui interdit de commiter &lt;code&gt;System.out.println&lt;/code&gt;, vous pouvez créer ce fichier : &lt;code&gt;~/.git_template/hooks/pre-commit&lt;/code&gt;
+J’ai récupéré le mien sur https://github.com/borisguery/git-keywords-checker sur lequel j’ai juste modifié les deux variables KEYWORDS_REGEX et EXTENSIONS_REGEX. Ce qui donne grosso modo dans le fichier :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;5 # Add or remove keywords here
+6 KEYWORDS_REGEX=&quot;printStackTrace\(|FIXME|TODO&quot;
+7 # Add extensions to check here
+8 EXTENSIONS_REGEX=&quot;(.java$|.js$)&quot; On interdit de commiter `printStackTrace(` ou `FIXME` ou `TODO` dans les fichiers `java` ou `js`.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;div style=&quot;text-align:center;margin-bottom:50px&quot;&gt;
+    &lt;a href=&quot;/images/postDotfilesGit/git-hooks.png&quot; data-lightbox=&quot;group-1&quot; title=&quot;git hooks pre-commit en action&quot; class=&quot;inlineBoxes&quot;&gt;
+        &lt;img class=&quot;medium&quot; src=&quot;/images/postDotfilesGit/git-hooks.png&quot; alt=&quot;git hooks pre-commit en action&quot; /&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Oui ça paraît un peu violent d’interdire le commit de TODO et FIXME mais on peut passer outre en commitant avec l’option &lt;code&gt;--no-verify&lt;/code&gt; et au moins on est au courant donc on n’oublie pas les actions nécessaires selon les équipes de travail (ajout d’un post-it, d’une carte trello etc.)&lt;/p&gt;
+
+&lt;p&gt;2 petits détails pour que ça marche :&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Il faut que le script soit exécutable, donc vous pouvez faire &lt;code&gt;chmod +x ~/.git_template/hooks/pre-commit&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Ce sera actif uniquement sur les nouveaux dépôts, pour activer le hook sur les dépôts existants, vous devez faire un &lt;code&gt;git init&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Si vous voulez d’autres exemples de hooks, vous pouvez commencer par jeter un œil aux hooks de &lt;a href=&quot;https://github.com/petervanderdoes/git-flow-hooks&quot;&gt;git-flow&lt;/a&gt;&lt;/p&gt;
+
+</description>
+                                <pubDate>Fri, 22 May 2015 00:00:00 +0200</pubDate>
+                                <link>http://code-troopers.com/2015/05/22/Dotfiles-git.html</link>
+                                <guid isPermaLink="true">http://code-troopers.com/2015/05/22/Dotfiles-git.html</guid>
+                        </item>
+                
+                        <item>
                                 <title>vim : 10 astuces de configuration pour vos dotfiles</title>
                                 <description>&lt;p&gt;Cet article sera le premier d’une série consacrée aux &lt;em&gt;dotfiles&lt;/em&gt;. Alors les &lt;em&gt;dotfiles&lt;/em&gt;, qu’est-ce que c’est Obi-Wan ? Les &lt;em&gt;dotfiles&lt;/em&gt;, ce sont tous les fichiers texte de configuration que l’on peut retrouver dans son répertoire utilisateur pour sauvegarder ses préférences. De nombreux logiciels utilisent cette méthode. On peut citer gnome, IntelliJ, Maven,  ssh, git, bash et tant d’autres. On les appelle &lt;em&gt;dotfiles&lt;/em&gt; −que l’on peut traduire par fichiers point− parce qu’ils ont un nom qui commence par un point, ce qui correspond aux fichiers cachés sous linux.&lt;/p&gt;
 
@@ -864,45 +1006,6 @@ Et comme hier soir a eu lieu la première soirée bêta-test organisée à la &l
                                 <pubDate>Wed, 22 Oct 2014 00:00:00 +0200</pubDate>
                                 <link>http://code-troopers.com/2014/10/22/Filbleu_Tours_Application_Android.html</link>
                                 <guid isPermaLink="true">http://code-troopers.com/2014/10/22/Filbleu_Tours_Application_Android.html</guid>
-                        </item>
-                
-                        <item>
-                                <title>Babun un shell sous Windows</title>
-                                <description>&lt;h2 id=&quot;oh-non-mon-client-moblige--tre-sous-windows&quot;&gt;Oh non, mon client m’oblige à être sous Windows&lt;/h2&gt;
-&lt;p&gt;Malheureusement, il est fréquent que nous soyons forcés de travailler sous un environnement que nous n’aimons pas. Les raisons sont souvent diverses mais sont presque toujours inflexibles. Le problème est que lorsqu’on est habitué à une ligne de commande puissante, le fait d’être sous Windows devient un réel handicap.
-&lt;!--break--&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;donnez-moi-un-shell-&quot;&gt;Donnez moi un shell !&lt;/h2&gt;
-&lt;p&gt;Bien sûr, la plupart d’entre vous connaîssent Cygwin, qui permet de résoudre bien des problèmes, mais qui en créé aussi un paquet avant d’avoir une installation complète et qui fonctionne comme attendu.&lt;/p&gt;
-
-&lt;p&gt;Heureusement,  &lt;a href=&quot;https://twitter.com/tombujok&quot;&gt;Tom Bujok&lt;/a&gt; s’est penché sur le souci et a pris le temps de faire une configuration aux petits oignons d’un Cygwin complet, avec &lt;code&gt;zsh&lt;/code&gt; et &lt;code&gt;oh-my-zsh&lt;/code&gt; pour avoir une bonne configuration. De plus, pour faire comme si on était sous un unix, on a même un package manager qui permet d’installer les outils nécessaires.&lt;/p&gt;
-
-&lt;h2 id=&quot;installation-et-configuration&quot;&gt;Installation et configuration&lt;/h2&gt;
-&lt;p&gt;Il suffit de récupérer le zip sur le site officiel &lt;a href=&quot;http://babun.github.io/&quot;&gt;http://babun.github.io&lt;/a&gt; de le dézipper et de lancer le script &lt;code&gt;install.bat&lt;/code&gt;. Ce qui est bien, c’est qu’il est possible de lancer le script d’installation et donc d’utiliser babun sans disposer des droits d’administrateur sur sa machine.&lt;/p&gt;
-
-&lt;p&gt;Une fois la &lt;em&gt;longue&lt;/em&gt; installation terminée, vous disposez d’un shell bien configuré avec la plupart des outils nécessaires bien configurés. &lt;/p&gt;
-
-&lt;p&gt;Cependant vous voudrez certainement personnaliser votre environnement avec quelques alias. Pour ceci, il suffit de créer un fichier contenant vos alias dans &lt;code&gt;~/.oh-my-zsh/custom/aliases.zsh&lt;/code&gt; (le nom est libre, le fichier doit porter l’extension  &lt;code&gt;zsh&lt;/code&gt; pour qu’il soit automatiquement chargé). Il ne s’agit ni plus ni moins de la configuration permise par oh-my-zsh (vous pouvez vous référer &lt;a href=&quot;/2014/09/17/ohMyZsh.html&quot;&gt;à cet article&lt;/a&gt; pour plus de détails)&lt;/p&gt;
-
-&lt;div style=&quot;text-align:center;margin:50px&quot;&gt;
- &lt;a style=&quot;display: inline&quot; href=&quot;/images/postBabun/babun.png&quot; data-lightbox=&quot;image-0&quot; title=&quot;Babun et tmux&quot;&gt;
-         &lt;img class=&quot;medium&quot; src=&quot;/images/postBabun/babun.png&quot; alt=&quot;Babun et tmux&quot; /&gt;
- &lt;/a&gt;
-&lt;/div&gt;
-
-&lt;h2 id=&quot;conseils-pratiques&quot;&gt;Conseils pratiques&lt;/h2&gt;
-&lt;p&gt;Depuis quelques temps, nous sommes quelques membres de l’équipe à &lt;strong&gt;devoir&lt;/strong&gt; travailler  sous Windows. Nous avons rapidement ajouté &lt;code&gt;tmux&lt;/code&gt; à la liste des outils indispensables (la gestion des terminaux Windows n’étant pas optimale) ainsi que &lt;code&gt;irssi&lt;/code&gt; en tant que client IRC. &lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ pact install tmux irssi
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Puisque c’est ni plus ni moins qu’une installation de Cygwin, l’accès à vos disque se fera par le montage &lt;code&gt;/cygdrive/c/&lt;/code&gt; pour le disque &lt;code&gt;C:&lt;/code&gt; par exemple. Veuillez noter également que l’emplacement de votre &lt;code&gt;home&lt;/code&gt; sera en fait &lt;code&gt;/cygdrive/c/Users/$USER/.babun/cygwin/home/$USER&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Maintenant, vous serez presque aussi productifs sous Windows que sous un système “agréable” !&lt;/p&gt;
-</description>
-                                <pubDate>Wed, 01 Oct 2014 00:00:00 +0200</pubDate>
-                                <link>http://code-troopers.com/2014/10/01/babun.html</link>
-                                <guid isPermaLink="true">http://code-troopers.com/2014/10/01/babun.html</guid>
                         </item>
                 
         </channel>
