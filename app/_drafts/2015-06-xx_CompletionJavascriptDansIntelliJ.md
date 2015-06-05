@@ -2,7 +2,7 @@
 layout: post
 title: Améliorer la completion JavaScript d'IntelliJ IDEA
 author: Cedric
-cover: banner-intellij
+cover: ct-banner
 tags: [IntelliJ, JavaScript]
 ---
 
@@ -12,7 +12,8 @@ Tout le monde sait que nous adorons utiliser IntelliJ IDEA pour développer.
 Peu importe le langage IntelliJ est vraiment un excellent IDE qui nous permet d'être efficace quasiment instantanément.
 
 Par contre, quand on arrive dans le monde du JavaScript on peut avoir quelques soucis pour être 
-dans un environnement suffisamment typé où l'on sait ce qu'on va faire sans se poser trop de questions.
+dans un environnement suffisamment typé où l'on sait ce qu'on va faire sans se poser trop de questions, 
+ou tout simplement pouvoir bénéficier de l'aide de l'IDE pour savoir de quelles méthodes on dispose.
 
 ## JavaScript dans IntelliJ
 Par défaut, IntelliJ est déjà suffisament malin pour scanner les fichiers du workspace 
@@ -27,7 +28,13 @@ Cependant, ce mécanisme ne marche pas à tous les coups :
 ## Faire comprendre le JavaScript à IntelliJ
 Pour réussir à obtenir une completion correcte vous avez plusieurs solutions :
  * pour les CDN, vous pouvez demander à IntelliJ de récupérer la ressource (il ne la mettra pas dans votre projet pour autant)
- * pour les versions minifiées, vous pouvez ajouter manuellement les bibliothèques dans la fenêtre de paramètres
+ * pour les versions minifiées, vous pouvez ajouter manuellement les bibliothèques dans la fenêtre de paramètres (Languages & Frameworks > JavaScript > Libraries)
+ 
+<div style="text-align:center;margin-bottom:50px">
+    <a href="/images/2015-06-JavaScriptIntelliJ/settings.png" data-lightbox="group-1" title="La fenêtre des paramètres" class="inlineBoxes">
+        <img class="medium" src="/images/2015-06-JavaScriptIntelliJ/settings.png" alt="La fenêtre des paramètres"/>
+    </a>
+</div>
  
 ## LA mega astuce
 IntelliJ est capable de comprendre le TypeScript, et des gens ont eu la bonne idée de regrouper des définitions TypeScript pour
@@ -37,3 +44,9 @@ sélectionnez la source "TypeScript Community Stubs", vous verrez qu'il y a beau
 
 Avec ceci, vous aurez une completion efficace, avec le typage offert par TypeScript (dans la mesure du possible), 
 ainsi qu'une documentation précise (pour la plupart des librairies).
+
+<div style="text-align:center;margin-bottom:50px">
+    <a href="/images/2015-06-JavaScriptIntelliJ/example.png" data-lightbox="group-1" title="Jasmine est bien connu par IntelliJ" class="inlineBoxes">
+        <img class="medium" src="/images/2015-06-JavaScriptIntelliJ/example.png" alt="Jasmine est bien connu par IntelliJ"/>
+    </a>
+</div>
