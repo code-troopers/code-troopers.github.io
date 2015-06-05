@@ -1,3 +1,12 @@
+---
+layout: post
+title: Améliorer la completion JavaScript d'IntelliJ IDEA
+author: Cedric
+cover: banner-intellij
+tags: [IntelliJ, JavaScript]
+---
+
+
 # IntelliJ IDEA
 Tout le monde sait que nous adorons utiliser IntelliJ IDEA pour développer. 
 Peu importe le langage IntelliJ est vraiment un excellent IDE qui nous permet d'être efficace quasiment instantanément.
