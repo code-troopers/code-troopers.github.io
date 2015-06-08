@@ -31,7 +31,8 @@ Pour le moment elle permet d'implémenter les composants Material suivants :
 Je vous laisse consulter les différents articles trouvés sur le sujet pour avoir plus de détails :
 
 * [L'article sur l'Android developers blog](http://android-developers.blogspot.fr/2015/05/android-design-support-library.html)
-* [L'article sur medium.com](https://medium.com/android-bites/first-steps-with-the-design-support-library-8dcf06230ddd) : qui montre les nouveautés grâce à des petites vidéos mais montre aussi les problèmes (sûrement corrigés au moment où vous lirez cet article).
+* [L'article sur medium.com](https://medium.com/android-bites/first-steps-with-the-design-support-library-8dcf06230ddd) : qui montre les nouveautés grâce à des petites vidéos mais montre aussi les problèmes (sûrement corrigés au moment où vous lirez cet article)
+* [Un bout d'exemple avec du code pour le NavigationView](http://antonioleiva.com/navigation-view/)
  
 Enfin, voici le [lien](https://github.com/chrisbanes/cheesesquare) vers le code source de l'application exemple faite par [Chris Banes](https://chris.banes.me/), montrant les principales nouveautés de cette librairie.
 
