@@ -6,7 +6,7 @@ cover: android5-banner
 tags: [Android, Librairie]
 ---
 
-Avez-vous déjà essayé de transformer vos applications Android pour les rendre conformes aux [guidelines Material](http://www.google.com/design/spec/material-design/introduction.html), si oui, vous avez du comme nous, vous retrouver à importer plein de librairies tierces pour implémenter par exemple le `FAB button`, ou même personnaliser le code pour rendre le `NavigationDrawer` conforme (comme ce qui a pu être fait sur le squelette d'un [précédent article](http://code-troopers.com/2014/11/26/SqueletteAndroid5.html). Et bien tout ceci est fini (enfin en partie), grace à la nouvelle librairie Android de Google [Design Support](http://developer.android.com/tools/support-library/features.html#design).
+Avez-vous déjà essayé de transformer vos applications Android pour les rendre conformes aux [guidelines Material](http://www.google.com/design/spec/material-design/introduction.html), si oui, vous avez dû comme nous, vous retrouver à importer plein de librairies tierces pour implémenter par exemple le `FAB button`, ou même personnaliser le code pour rendre le `NavigationDrawer` conforme (comme ce qui a pu être fait sur le squelette d'un [précédent article](http://code-troopers.com/2014/11/26/SqueletteAndroid5.html). Et bien tout ceci est fini (enfin en partie), grâce à la nouvelle librairie Android de Google [Design Support](http://developer.android.com/tools/support-library/features.html#design).
 
 <!--break-->
 
