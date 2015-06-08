@@ -8,7 +8,7 @@
                 
                         <item>
                                 <title>Android Support Design Library</title>
-                                <description>&lt;p&gt;Avez-vous déjà essayé de transformer vos applications Android pour les rendre conformes aux &lt;a href=&quot;http://www.google.com/design/spec/material-design/introduction.html&quot;&gt;guidelines Material&lt;/a&gt;, si oui, vous avez du comme nous, vous retrouver à importer plein de librairies tierces pour implémenter par exemple le &lt;code&gt;FAB button&lt;/code&gt;, ou même personnaliser le code pour rendre le &lt;code&gt;NavigationDrawer&lt;/code&gt; conforme (comme ce qui a pu être fait sur le squelette d’un &lt;a href=&quot;http://code-troopers.com/2014/11/26/SqueletteAndroid5.html&quot;&gt;précédent article&lt;/a&gt;. Et bien tout ceci est fini (enfin en partie), grace à la nouvelle librairie Android de Google &lt;a href=&quot;http://developer.android.com/tools/support-library/features.html#design&quot;&gt;Design Support&lt;/a&gt;.&lt;/p&gt;
+                                <description>&lt;p&gt;Avez-vous déjà essayé de transformer vos applications Android pour les rendre conformes aux &lt;a href=&quot;http://www.google.com/design/spec/material-design/introduction.html&quot;&gt;guidelines Material&lt;/a&gt;, si oui, vous avez dû comme nous, vous retrouver à importer plein de librairies tierces pour implémenter par exemple le &lt;code&gt;FAB button&lt;/code&gt;, ou même personnaliser le code pour rendre le &lt;code&gt;NavigationDrawer&lt;/code&gt; conforme (comme ce qui a pu être fait sur le squelette d’un &lt;a href=&quot;http://code-troopers.com/2014/11/26/SqueletteAndroid5.html&quot;&gt;précédent article&lt;/a&gt;. Et bien tout ceci est fini (enfin en partie), grâce à la nouvelle librairie Android de Google &lt;a href=&quot;http://developer.android.com/tools/support-library/features.html#design&quot;&gt;Design Support&lt;/a&gt;.&lt;/p&gt;
 
 &lt;!--break--&gt;
 
@@ -36,7 +36,7 @@ Your browser does not support the video tag.
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;http://android-developers.blogspot.fr/2015/05/android-design-support-library.html&quot;&gt;L’article sur l’Android developers blog&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://medium.com/android-bites/first-steps-with-the-design-support-library-8dcf06230ddd&quot;&gt;L’article sur medium.com&lt;/a&gt; : qui montre les nouveautés grâce à des petites vidéos mais montre aussi les problèmes (sûrement corrigé au moment où vous lirez cet article).&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://medium.com/android-bites/first-steps-with-the-design-support-library-8dcf06230ddd&quot;&gt;L’article sur medium.com&lt;/a&gt; : qui montre les nouveautés grâce à des petites vidéos mais montre aussi les problèmes (sûrement corrigés au moment où vous lirez cet article).&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;Enfin, voici le &lt;a href=&quot;https://github.com/chrisbanes/cheesesquare&quot;&gt;lien&lt;/a&gt; vers le code source de l’application exemple faite par &lt;a href=&quot;https://chris.banes.me/&quot;&gt;Chris Banes&lt;/a&gt;, montrant les principales nouveautés de cette librairie.&lt;/p&gt;
