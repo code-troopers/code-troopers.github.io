@@ -40,7 +40,7 @@ Pour réussir à obtenir une completion correcte vous avez plusieurs solutions :
 IntelliJ est capable de comprendre le TypeScript, et des gens ont eu la bonne idée de regrouper des définitions TypeScript pour
 la plupart des librairies les plus utilisées dans un dépôt Github : [DefinitelyTyped](http://www.definitelytyped.org).
 Dans la fenêtre de création de librairie JavaScript, dans la partie qui permet le téléchargement d'une librairie, 
-sélectionnez la source "TypeScript Community Stubs", vous verrez qu'il y a beaucoup des librairies que vous utilisez au quotidien.
+sélectionnez la source "TypeScript Community Stubs", vous verrez qu'il y a beaucoup de librairies que vous utilisez au quotidien.
 
 Avec ceci, vous aurez une completion efficace, avec le typage offert par TypeScript (dans la mesure du possible), 
 ainsi qu'une documentation précise (pour la plupart des librairies).
