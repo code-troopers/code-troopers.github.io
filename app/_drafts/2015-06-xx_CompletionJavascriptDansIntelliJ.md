@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Améliorer la completion JavaScript d'IntelliJ IDEA
+title: Améliorer la complétion JavaScript d'IntelliJ IDEA
 author: Cedric
 cover: ct-banner
 tags: [IntelliJ, JavaScript]
@@ -9,7 +9,7 @@ tags: [IntelliJ, JavaScript]
 
 # IntelliJ IDEA
 Tout le monde sait que nous adorons utiliser IntelliJ IDEA pour développer. 
-Peu importe le langage IntelliJ est vraiment un excellent IDE qui nous permet d'être efficace quasiment instantanément.
+Peu importe le langage IntelliJ est vraiment un excellent IDE qui nous permet d'être efficaces quasiment instantanément.
 
 Par contre, quand on arrive dans le monde du JavaScript on peut avoir quelques soucis pour être 
 dans un environnement suffisamment typé où l'on sait ce qu'on va faire sans se poser trop de questions, 
@@ -26,7 +26,7 @@ Cependant, ce mécanisme ne marche pas à tous les coups :
  * vous utilisez des outils qui impliquent certains framework (karma / jasmine / mocha...)
  
 ## Faire comprendre le JavaScript à IntelliJ
-Pour réussir à obtenir une completion correcte vous avez plusieurs solutions :
+Pour réussir à obtenir une complétion correcte vous avez plusieurs solutions :
  * pour les CDN, vous pouvez demander à IntelliJ de récupérer la ressource (il ne la mettra pas dans votre projet pour autant)
  * pour les versions minifiées, vous pouvez ajouter manuellement les bibliothèques dans la fenêtre de paramètres (Languages & Frameworks > JavaScript > Libraries)
  
@@ -42,7 +42,7 @@ la plupart des librairies les plus utilisées dans un dépôt Github : [Definite
 Dans la fenêtre de création de librairie JavaScript, dans la partie qui permet le téléchargement d'une librairie, 
 sélectionnez la source "TypeScript Community Stubs", vous verrez qu'il y a beaucoup de librairies que vous utilisez au quotidien.
 
-Avec ceci, vous aurez une completion efficace, avec le typage offert par TypeScript (dans la mesure du possible), 
+Avec ceci, vous aurez une complétion efficace, avec le typage offert par TypeScript (dans la mesure du possible), 
 ainsi qu'une documentation précise (pour la plupart des librairies).
 
 <div style="text-align:center;margin-bottom:50px">
