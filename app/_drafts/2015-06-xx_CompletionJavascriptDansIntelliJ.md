@@ -34,7 +34,7 @@ Pour réussir à obtenir une complétion correcte vous avez plusieurs solutions 
 
 <div style="text-align:center;margin-bottom:50px">
     <a href="/images/2015-06-JavaScriptIntelliJ/cdndl.png" data-lightbox="group-1" title="Le téléchargement des fichiers sur un CDN [alt+entrée]" class="inlineBoxes">
-        <img class="medium" src="/images/2015-06-JavaScriptIntelliJ/cdnjs.png" alt="Le téléchargement des fichiers sur un CDN [alt+entrée]"/>
+        <img class="medium" src="/images/2015-06-JavaScriptIntelliJ/cdndl.png" alt="Le téléchargement des fichiers sur un CDN [alt+entrée]"/>
     </a>
 </div>
 
