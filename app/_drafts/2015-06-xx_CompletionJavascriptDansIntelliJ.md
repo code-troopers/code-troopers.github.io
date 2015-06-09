@@ -15,6 +15,8 @@ Par contre, quand on arrive dans le monde du JavaScript on peut avoir quelques s
 dans un environnement suffisamment typé où l'on sait ce qu'on va faire sans se poser trop de questions, 
 ou tout simplement pouvoir bénéficier de l'aide de l'IDE pour savoir de quelles méthodes on dispose.
 
+<!-- break -->
+
 ## JavaScript dans IntelliJ
 Par défaut, IntelliJ est déjà suffisament malin pour scanner les fichiers du workspace 
 et trouver de la complétion en automatique (ainsi que la JSDoc).
@@ -27,7 +29,15 @@ Cependant, ce mécanisme ne marche pas à tous les coups :
  
 ## Faire comprendre le JavaScript à IntelliJ
 Pour réussir à obtenir une complétion correcte vous avez plusieurs solutions :
+
  * pour les CDN, vous pouvez demander à IntelliJ de récupérer la ressource (il ne la mettra pas dans votre projet pour autant)
+
+<div style="text-align:center;margin-bottom:50px">
+    <a href="/images/2015-06-JavaScriptIntelliJ/cdndl.png" data-lightbox="group-1" title="Le téléchargement des fichiers sur un CDN [alt+entrée]" class="inlineBoxes">
+        <img class="medium" src="/images/2015-06-JavaScriptIntelliJ/cdnjs.png" alt="Le téléchargement des fichiers sur un CDN [alt+entrée]"/>
+    </a>
+</div>
+
  * pour les versions minifiées, vous pouvez ajouter manuellement les bibliothèques dans la fenêtre de paramètres (Languages & Frameworks > JavaScript > Libraries)
  
 <div style="text-align:center;margin-bottom:50px">
