@@ -3,7 +3,7 @@ layout: post
 title: Améliorer la complétion JavaScript d'IntelliJ IDEA
 author: Cedric
 cover: ct-banner
-tags: [IntelliJ, JavaScript]
+tags: [IntelliJ, JavaScript, tip]
 ---
 
 
