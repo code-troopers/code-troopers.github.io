@@ -7,6 +7,73 @@
                 <atom:link href="http://code-troopers.com/feed.xml" rel="self" type="application/rss+xml"/>
                 
                         <item>
+                                <title>Améliorer la complétion JavaScript d'IntelliJ IDEA</title>
+                                <description>&lt;h1 id=&quot;intellij-idea&quot;&gt;IntelliJ IDEA&lt;/h1&gt;
+&lt;p&gt;Tout le monde sait que nous adorons utiliser IntelliJ IDEA pour développer. 
+Peu importe le langage IntelliJ est vraiment un excellent IDE qui nous permet d’être efficaces quasiment instantanément.&lt;/p&gt;
+
+&lt;p&gt;Par contre, quand on arrive dans le monde du JavaScript on peut avoir quelques soucis pour être 
+dans un environnement suffisamment typé où l’on sait ce qu’on va faire sans se poser trop de questions, 
+ou tout simplement pouvoir bénéficier de l’aide de l’IDE pour savoir de quelles méthodes on dispose.&lt;/p&gt;
+
+&lt;!-- break --&gt;
+
+&lt;h2 id=&quot;javascript-dans-intellij&quot;&gt;JavaScript dans IntelliJ&lt;/h2&gt;
+&lt;p&gt;Par défaut, IntelliJ est déjà suffisament malin pour scanner les fichiers du workspace 
+et trouver de la complétion en automatique (ainsi que la JSDoc).&lt;/p&gt;
+
+&lt;p&gt;Cependant, ce mécanisme ne marche pas à tous les coups : &lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;vous utilisez des versions sur des CDN&lt;/li&gt;
+  &lt;li&gt;vous avez des versions minifiées dans votre workspace&lt;/li&gt;
+  &lt;li&gt;vous utilisez des outils qui impliquent certains framework (karma / jasmine / mocha…)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;faire-comprendre-le-javascript--intellij&quot;&gt;Faire comprendre le JavaScript à IntelliJ&lt;/h2&gt;
+&lt;p&gt;Pour réussir à obtenir une complétion correcte vous avez plusieurs solutions :&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;pour les CDN, vous pouvez demander à IntelliJ de récupérer la ressource (il ne la mettra pas dans votre projet pour autant)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div style=&quot;text-align:center;margin-bottom:50px&quot;&gt;
+    &lt;a href=&quot;/images/2015-06-JavaScriptIntelliJ/cdndl.png&quot; data-lightbox=&quot;group-1&quot; title=&quot;Le téléchargement des fichiers sur un CDN [alt+entrée]&quot; class=&quot;inlineBoxes&quot;&gt;
+        &lt;img class=&quot;medium&quot; src=&quot;/images/2015-06-JavaScriptIntelliJ/cdndl.png&quot; alt=&quot;Le téléchargement des fichiers sur un CDN [alt+entrée]&quot; /&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;pour les versions minifiées, vous pouvez ajouter manuellement les bibliothèques dans la fenêtre de paramètres (Languages &amp;amp; Frameworks &amp;gt; JavaScript &amp;gt; Libraries)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div style=&quot;text-align:center;margin-bottom:50px&quot;&gt;
+    &lt;a href=&quot;/images/2015-06-JavaScriptIntelliJ/settings.png&quot; data-lightbox=&quot;group-1&quot; title=&quot;La fenêtre des paramètres&quot; class=&quot;inlineBoxes&quot;&gt;
+        &lt;img class=&quot;medium&quot; src=&quot;/images/2015-06-JavaScriptIntelliJ/settings.png&quot; alt=&quot;La fenêtre des paramètres&quot; /&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;la-mega-astuce&quot;&gt;LA mega astuce&lt;/h2&gt;
+&lt;p&gt;IntelliJ est capable de comprendre le TypeScript, et des gens ont eu la bonne idée de regrouper des définitions TypeScript pour
+la plupart des librairies les plus utilisées dans un dépôt Github : &lt;a href=&quot;http://www.definitelytyped.org&quot;&gt;DefinitelyTyped&lt;/a&gt;.
+Dans la fenêtre de création de librairie JavaScript, dans la partie qui permet le téléchargement d’une librairie, 
+sélectionnez la source “TypeScript Community Stubs”, vous verrez qu’il y a beaucoup de librairies que vous utilisez au quotidien.&lt;/p&gt;
+
+&lt;p&gt;Avec ceci, vous aurez une complétion efficace, avec le typage offert par TypeScript (dans la mesure du possible), 
+ainsi qu’une documentation précise (pour la plupart des librairies).&lt;/p&gt;
+
+&lt;div style=&quot;text-align:center;margin-bottom:50px&quot;&gt;
+    &lt;a href=&quot;/images/2015-06-JavaScriptIntelliJ/example.png&quot; data-lightbox=&quot;group-1&quot; title=&quot;Jasmine est bien connu par IntelliJ&quot; class=&quot;inlineBoxes&quot;&gt;
+        &lt;img class=&quot;medium&quot; src=&quot;/images/2015-06-JavaScriptIntelliJ/example.png&quot; alt=&quot;Jasmine est bien connu par IntelliJ&quot; /&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+</description>
+                                <pubDate>Wed, 10 Jun 2015 00:00:00 +0200</pubDate>
+                                <link>http://code-troopers.com/2015/06/10/CompletionJavascriptDansIntelliJ.html</link>
+                                <guid isPermaLink="true">http://code-troopers.com/2015/06/10/CompletionJavascriptDansIntelliJ.html</guid>
+                        </item>
+                
+                        <item>
                                 <title>Android Support Design Library</title>
                                 <description>&lt;p&gt;Avez-vous déjà essayé de transformer vos applications Android pour les rendre conformes aux &lt;a href=&quot;http://www.google.com/design/spec/material-design/introduction.html&quot;&gt;guidelines Material&lt;/a&gt;, si oui, vous avez dû comme nous, vous retrouver à importer plein de librairies tierces pour implémenter par exemple le &lt;code&gt;FAB button&lt;/code&gt;, ou même personnaliser le code pour rendre le &lt;code&gt;NavigationDrawer&lt;/code&gt; conforme (comme ce qui a pu être fait sur le squelette d’un &lt;a href=&quot;http://code-troopers.com/2014/11/26/SqueletteAndroid5.html&quot;&gt;précédent article&lt;/a&gt;. Et bien tout ceci est fini (enfin en partie), grâce à la nouvelle librairie Android de Google &lt;a href=&quot;http://developer.android.com/tools/support-library/features.html#design&quot;&gt;Design Support&lt;/a&gt;.&lt;/p&gt;
 
@@ -826,69 +893,6 @@ La seule contrainte étant que les liens soient partagés automatiquement sur le
                                 <pubDate>Fri, 05 Dec 2014 00:00:00 +0100</pubDate>
                                 <link>http://code-troopers.com/2014/12/05/ElCurator2.html</link>
                                 <guid isPermaLink="true">http://code-troopers.com/2014/12/05/ElCurator2.html</guid>
-                        </item>
-                
-                        <item>
-                                <title>Squelette Android 5.0</title>
-                                <description>&lt;h2 id=&quot;pourquoi-&quot;&gt;Pourquoi ?&lt;/h2&gt;
-
-&lt;p&gt;Chez Code-Troopers, nous avons pas mal de projets &lt;strong&gt;Android&lt;/strong&gt;. Au début du projet, on fait toujours la même chose :&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;on lance &lt;strong&gt;Android Studio&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;on créé un nouveau projet&lt;/li&gt;
-  &lt;li&gt;on choisit parmi les templates qu’il nous propose&lt;/li&gt;
-  &lt;li&gt;on ajoute nos librairies favorites&lt;/li&gt;
-  &lt;li&gt;on modifie le thème&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Toutes ces étapes sont répétitives. De plus, avec l’arrivée du &lt;strong&gt;Material Design&lt;/strong&gt; et
-les nouvelles libraires de compatibilités, les templates que propose &lt;strong&gt;Android Studio&lt;/strong&gt; ne sont plus d’actualité. Par exemple si l’on choisit un template avec le &lt;strong&gt;NavigationDrawer&lt;/strong&gt;, il faut presque tout changer pour que celui-ci colle au nouveau standard &lt;strong&gt;Material Design&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;!--break--&gt;
-
-&lt;h2 id=&quot;le-squelette&quot;&gt;Le squelette&lt;/h2&gt;
-
-&lt;p&gt;Afin de faciliter la vie des troopers, j’ai décidé de créer un squelette d’application &lt;strong&gt;Android&lt;/strong&gt; contenant nos librairies favorites et le minimum visuel.&lt;/p&gt;
-
-&lt;div style=&quot;text-align:center;margin:50px&quot;&gt;
-&lt;a href=&quot;/images/postAndroid5/screen1.png&quot; data-lightbox=&quot;group-1&quot; title=&quot;Page d'accueil du squelette&quot; class=&quot;inlineBoxes&quot;&gt;
-&lt;img class=&quot;medium&quot; src=&quot;/images/postAndroid5/screen1.png&quot; alt=&quot;Page d'accueil du squelette&quot; /&gt;
-&lt;/a&gt;
-&lt;a href=&quot;/images/postAndroid5/screen2.png&quot; data-lightbox=&quot;group-1&quot; title=&quot;Navigation drawer&quot; class=&quot;inlineBoxes&quot;&gt;
-&lt;img class=&quot;medium&quot; src=&quot;/images/postAndroid5/screen2.png&quot; alt=&quot;Navigation drawer&quot; /&gt;
-&lt;/a&gt;
-&lt;/div&gt;
-
-&lt;h3 id=&quot;bye-bye-actionbar-hello-toolbar&quot;&gt;Bye bye ActionBar, Hello Toolbar&lt;/h3&gt;
-
-&lt;p&gt;Depuis l’arrivée de &lt;strong&gt;Lollipop&lt;/strong&gt;, un nouvel élément a fait son entrée dans le SDK, la &lt;strong&gt;Toolbar&lt;/strong&gt;. Celle-ci possède quasiment les mêmes fonctionnalités que l’ActionBar. Le principal avantage, c’est qu’elle n’est pas liée magiquement au layout, c’est à nous de l’inclure.&lt;/p&gt;
-
-&lt;h3 id=&quot;navigationdrawer&quot;&gt;NavigationDrawer&lt;/h3&gt;
-
-&lt;p&gt;Si l’on se réfère aux &lt;a href=&quot;http://www.google.com/design/spec/patterns/navigation-drawer.html&quot;&gt;specifications du &lt;strong&gt;Material Design&lt;/strong&gt;&lt;/a&gt;, le menu doit prendre toute la hauteur de l’écran et se placer sous la barre de statut. Ceci n’est pas encore bien implémenté par tout le monde. De plus, l’implémentation n’est pas si simple. J’ai donc décidé de l’inclure dans ce squelette en ajoutant par là même, l’intéraction avec la &lt;strong&gt;Toolbar&lt;/strong&gt; (pour pouvoir avoir l’icône hamburger sans avoir à ajouter de ressources). Je tiens au passage à remercier l’auteur de ce &lt;a href=&quot;http://stackoverflow.com/questions/26745300/navigation-drawer-semi-transparent-over-status-bar-not-working&quot;&gt;post&lt;/a&gt; qui m’a grandement aidé.&lt;/p&gt;
-
-&lt;h3 id=&quot;librairies&quot;&gt;Librairies&lt;/h3&gt;
-
-&lt;p&gt;Pour l’instant, j’ai ajouté seulement trois librairies :&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://jakewharton.github.io/butterknife/&quot;&gt;&lt;strong&gt;ButterKnife&lt;/strong&gt;&lt;/a&gt; pour l’injection de view&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://square.github.io/dagger/&quot;&gt;&lt;strong&gt;Dagger&lt;/strong&gt;&lt;/a&gt; pour l’injection du reste&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://square.github.io/picasso/&quot;&gt;&lt;strong&gt;Picasso&lt;/strong&gt;&lt;/a&gt; pour le chargement et la gestion des images&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;le-thme&quot;&gt;Le thème&lt;/h3&gt;
-
-&lt;p&gt;Je me suis basé sur le thème par défaut de &lt;strong&gt;AppCompat&lt;/strong&gt;, je l’ai ensuite modifié pour changer les couleurs des barres de statut et d’action lorsque le téléphone est sous &lt;strong&gt;Lollipop&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;h2 id=&quot;projet&quot;&gt;Projet&lt;/h2&gt;
-
-&lt;p&gt;Voilà, vous pouvez trouver ce projet sur notre &lt;a href=&quot;https://github.com/code-troopers/material-android-bootstrap&quot;&gt;github&lt;/a&gt;. Il va sûrement évoluer avec le temps pour ajouter d’autres choses afin d’avoir des exemples d’implémentations. Vos commentaires, issues sont les bienvenues, je me ferai un plaisir d’y répondre et si vous avez d’autres idées, vous pouvez toujours forker.&lt;/p&gt;
-</description>
-                                <pubDate>Wed, 26 Nov 2014 00:00:00 +0100</pubDate>
-                                <link>http://code-troopers.com/2014/11/26/SqueletteAndroid5.html</link>
-                                <guid isPermaLink="true">http://code-troopers.com/2014/11/26/SqueletteAndroid5.html</guid>
                         </item>
                 
         </channel>
