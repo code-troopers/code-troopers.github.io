@@ -1,3 +1,10 @@
+---
+layout: post
+title: Installer votre dépot privé Docker 
+author: Cedric 
+cover: docker-banner
+tags: [guide, docker, tips]
+---
 # Installez votre dépot privé Docker
 
 ## Step by step
