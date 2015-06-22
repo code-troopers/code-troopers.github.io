@@ -25,9 +25,9 @@ Pensez à bien renseigner le FQDN DNS lors de la demande de Common Name pour le 
     openssl x509 -req -days 730 -in ia.csr -CA ca.crt -CAkey ca.key -set_serial 01 -out cert.pem
 
 ### Génération des mots de passes basic auth
-Il vous faut une machine avec htpasswd (ou un container docker)
+En utilisant un container docker qui embarque htpasswd vous pourrez générer facilement le fichier nécessaire : 
 
-    htpasswd -c docker-registry.htpasswd $MONUSER
+    docker run --rm -ti -v $(pwd):/tmp dgageot/htpasswd -c /tmp/docker-registry.htpasswd $MONUSER
 
 ## Démarrage du registry
 Les images seront stockées dans le répertoire `/srv/registry`
