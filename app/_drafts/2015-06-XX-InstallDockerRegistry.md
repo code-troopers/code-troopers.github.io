@@ -6,6 +6,14 @@ cover: docker-banner
 tags: [guide, docker, tips]
 ---
 # Installez votre dépot privé Docker
+Petit à petit chez Code-Troopers, nous migrons tous nos développements pour utiliser Docker. 
+Cela fait quelque temps que nous l'utilisons pour des projets "public", auquel cas le registry public Docker est largement suffisant (et immédiat à utiliser).
+
+En revanche, nous commençons à migrer nos applications de production également vers Docker, et nous ne pouvons pas utiliser le mode public du registry public.
+Nous nous sommes donc mis à déployer un dépôt privé, authentifié par utilisateur / mot de passe. 
+
+La procédure n'est pas très complexe, mais cette opération reste une bonne opportunité d'écrire un article à ce sujet (les articles en français n'étant pas légion).
+<!--break-->
 
 ## Step by step
 Il faut créer une entrée DNS pour votre service.
