@@ -5,7 +5,6 @@ author: Cedric
 cover: docker-banner
 tags: [guide, docker, tips]
 ---
-# Installez votre dépot privé Docker
 Petit à petit chez Code-Troopers, nous migrons tous nos développements pour utiliser Docker. 
 Cela fait quelque temps que nous l'utilisons pour des projets "public", auquel cas le registry public Docker est largement suffisant (et immédiat à utiliser).
 
