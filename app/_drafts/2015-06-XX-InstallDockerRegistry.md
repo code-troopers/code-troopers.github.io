@@ -17,7 +17,7 @@ La procédure n'est pas très complexe, mais cette opération reste une bonne op
 ## Step by step
 Il faut créer une entrée DNS pour votre service.
 
-Puis nous allons utiliser l'image Docker avec nginx pour l'authentification https://github.com/MarvAmBass/docker-nginx-registry-proxy.
+Puis nous allons utiliser l'image Docker avec nginx pour l'authentification [docker-nginx-registry-proxy](https://github.com/MarvAmBass/docker-nginx-registry-proxy).
 
 ## Informations d'identification
 Pour les étapes suivantes, placez vous dans le répertoire de votre choix pour stocker les fichiers (dans ce cas nous sommes dans `/srv/registry-config`)
