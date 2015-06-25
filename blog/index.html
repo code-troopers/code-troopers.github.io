@@ -16,12 +16,12 @@
         <meta property=twitter:domain content=http://code-troopers.com>
         
         
-        <meta property=twitter:description content="Le blog posté le 10/06/2015 par Cedric Améliorer la complétion JavaScript d'IntelliJ IDEA IntelliJ JavaScript tip IntelliJ IDEA Tout le...">
+        <meta property=twitter:description content="Le blog posté le 25/06/2015 par Cedric Installer votre dépot privé Docker guide docker tips Petit à petit chez Code-Troopers,...">
         
         
         
-        <meta name=description content="Le blog posté le 10/06/2015 par Cedric Améliorer la complétion JavaScript d'IntelliJ IDEA IntelliJ JavaScript tip IntelliJ IDEA Tout le monde sait que nous adorons utiliser IntelliJ IDEA pour développer. Peu importe le langage IntelliJ est vraiment un excellent IDE qui nous permet d’être efficaces quasiment instantanément. Par contre, quand on arrive dans le monde du JavaScript on peut avoir quelques soucis pour être dans un environnement suffisamment typé où l’on sait ce qu’on va faire sans se poser trop de questions, ou tout simplement pouvoir bénéficier de l’aide de l’IDE pour savoir de quelles méthodes on dispose. JavaScript dans IntelliJ Par défaut, IntelliJ est déjà suffisament malin pour scanner les fichiers du workspace et trouver de la complétion en automatique (ainsi que la JSDoc). Cependant, ce mécanisme ne marche pas à tous les coups : vous utilisez des versions sur des CDN vous avez des versions minifiées dans votre workspace vous utilisez des outils qui impliquent certains framework (karma / jasmine / mocha…) Faire comprendre le JavaScript à IntelliJ Pour réussir à obtenir une complétion correcte vous avez plusieurs solutions : pour les CDN, vous pouvez demander à IntelliJ de récupérer la ressource (il ne la mettra pas dans...">
-        <meta property=og:description content="Le blog posté le 10/06/2015 par Cedric Améliorer la complétion JavaScript d'IntelliJ IDEA IntelliJ JavaScript tip IntelliJ IDEA Tout le monde sait que nous adorons utiliser IntelliJ IDEA pour développer. Peu importe le langage IntelliJ est vraiment un excellent IDE qui nous permet d’être efficaces quasiment instantanément. Par contre, quand on arrive dans le monde du JavaScript on peut avoir quelques soucis pour être dans un environnement suffisamment typé où l’on sait ce qu’on va faire sans se poser trop de questions, ou tout simplement pouvoir bénéficier de l’aide de l’IDE pour savoir de quelles méthodes on dispose. JavaScript dans IntelliJ Par défaut, IntelliJ est déjà suffisament malin pour scanner les fichiers du workspace et trouver de la complétion en automatique (ainsi que la JSDoc). Cependant, ce mécanisme ne marche pas à tous les coups : vous utilisez des versions sur des CDN vous avez des versions minifiées dans votre workspace vous utilisez des outils qui impliquent certains framework (karma / jasmine / mocha…) Faire comprendre le JavaScript à IntelliJ Pour réussir à obtenir une complétion correcte vous avez plusieurs solutions : pour les CDN, vous pouvez demander à IntelliJ de récupérer la ressource (il ne la mettra pas dans...">
+        <meta name=description content="Le blog posté le 25/06/2015 par Cedric Installer votre dépot privé Docker guide docker tips Petit à petit chez Code-Troopers, nous migrons tous nos développements pour utiliser Docker. Cela fait quelque temps que nous l’utilisons pour des projets “public”, auquel cas le registry public Docker est largement suffisant (et immédiat à utiliser). En revanche, nous commençons à migrer nos applications de production également vers Docker, et nous ne pouvons pas utiliser le mode public du registry public. Nous nous sommes donc mis à déployer un dépôt privé, authentifié par utilisateur / mot de passe. La procédure n’est pas très complexe, mais cette opération reste une bonne opportunité d’écrire un article à ce sujet (les articles en français n’étant pas légion). Lire la suite posté le 10/06/2015 par Cedric Améliorer la complétion JavaScript d'IntelliJ IDEA IntelliJ JavaScript tip IntelliJ IDEA Tout le monde sait que nous adorons utiliser IntelliJ IDEA pour développer. Peu importe le langage IntelliJ est vraiment un excellent IDE qui nous permet d’être efficaces quasiment instantanément. Par contre, quand on arrive dans le monde du JavaScript on peut avoir quelques soucis pour être dans un environnement suffisamment typé où l’on sait ce qu’on va faire sans se poser...">
+        <meta property=og:description content="Le blog posté le 25/06/2015 par Cedric Installer votre dépot privé Docker guide docker tips Petit à petit chez Code-Troopers, nous migrons tous nos développements pour utiliser Docker. Cela fait quelque temps que nous l’utilisons pour des projets “public”, auquel cas le registry public Docker est largement suffisant (et immédiat à utiliser). En revanche, nous commençons à migrer nos applications de production également vers Docker, et nous ne pouvons pas utiliser le mode public du registry public. Nous nous sommes donc mis à déployer un dépôt privé, authentifié par utilisateur / mot de passe. La procédure n’est pas très complexe, mais cette opération reste une bonne opportunité d’écrire un article à ce sujet (les articles en français n’étant pas légion). Lire la suite posté le 10/06/2015 par Cedric Améliorer la complétion JavaScript d'IntelliJ IDEA IntelliJ JavaScript tip IntelliJ IDEA Tout le monde sait que nous adorons utiliser IntelliJ IDEA pour développer. Peu importe le langage IntelliJ est vraiment un excellent IDE qui nous permet d’être efficaces quasiment instantanément. Par contre, quand on arrive dans le monde du JavaScript on peut avoir quelques soucis pour être dans un environnement suffisamment typé où l’on sait ce qu’on va faire sans se poser...">
         
         <meta name=viewport content="width=device-width">
 
@@ -81,6 +81,38 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     <div class=container>
         <div class=row>
 
+
+<article class="col-lg-4 col-md-6 col-sm-12">
+    <div onclick="window.location.href='/2015/06/25/InstallDockerRegistry.html' ;  return false" style="cursor: pointer">
+	<div class=cover style=background-image:url(/images/banner/docker-banner.png)>
+            <div class=date>posté le 25/06/2015 par Cedric</div>
+        </div>
+        <h2><a href=/2015/06/25/InstallDockerRegistry.html>Installer votre dépot privé Docker</a></h2><ul class=tags>
+            
+            <li>guide</li>
+            
+            <li>docker</li>
+            
+            <li>tips</li>
+            
+        </ul>
+        <div class=content>
+            <p>Petit à petit chez Code-Troopers, nous migrons tous nos développements pour utiliser Docker. 
+Cela fait quelque temps que nous l’utilisons pour des projets “public”, auquel cas le registry public Docker est largement suffisant (et immédiat à utiliser).</p>
+
+<p>En revanche, nous commençons à migrer nos applications de production également vers Docker, et nous ne pouvons pas utiliser le mode public du registry public.
+Nous nous sommes donc mis à déployer un dépôt privé, authentifié par utilisateur / mot de passe. </p>
+
+<p>La procédure n’est pas très complexe, mais cette opération reste une bonne opportunité d’écrire un article à ce sujet (les articles en français n’étant pas légion).
+
+        </p></div>
+        <div class=fade-content>
+        </div>
+        <div class=more>
+            <a href=/2015/06/25/InstallDockerRegistry.html><i class="fa fa-arrow-circle-o-right"></i> Lire la suite</a>
+        </div>
+    </div>
+</article>
 
 <article class="col-lg-4 col-md-6 col-sm-12">
     <div onclick="window.location.href='/2015/06/10/CompletionJavascriptDansIntelliJ.html' ;  return false" style="cursor: pointer">
@@ -342,36 +374,6 @@ Et parce que pouvoir assister à une conf de <a href=https://twitter.com/briango
         </div>
         <div class=more>
             <a href=/2015/04/15/DevoxxFR-2015.html><i class="fa fa-arrow-circle-o-right"></i> Lire la suite</a>
-        </div>
-    </div>
-</article>
-
-<article class="col-lg-4 col-md-6 col-sm-12">
-    <div onclick="window.location.href='/2015/03/24/StartupWeekend.html' ;  return false" style="cursor: pointer">
-	<div class=cover style=background-image:url(/images/banner/swtours-banner.png)>
-            <div class=date>posté le 24/03/2015 par Florian</div>
-        </div>
-        <h2><a href=/2015/03/24/StartupWeekend.html>Retour sur le Second #SWTours</a></h2><ul class=tags>
-            
-            <li>startup</li>
-            
-            <li>tours</li>
-            
-        </ul>
-        <div class=content>
-            <p>Ce weekend a eu lieu la seconde édition du Startup Weekend Tours, organisé par Palo Altours. 
-Cette année nous avons pris possession du futur lieu emblématique de l’activité numérique tourangelle : le site de l’ancienne imprimerie MAME.</p>
-
-<p>Nous étions 4 Troopers venus pour apporter un soutien technique aux pitchs les plus funs et les plus intéressants du weekend. 
-Premier changement pour nous par rapport à l’an dernier, nous avions décidé de ne pas tous travailler sur le même projet. 
-Un petit challenge en plus car en divisant nos forces on savait qu’on allait perdre en efficacité et en rapidité de développement, ce qui peut être déterminant en 54h.
-Nous n’étions pas non plus venus avec une idée de pitch, ce qui nous a permis de nous concentrer sur la partie technique.
-
-        </p></div>
-        <div class=fade-content>
-        </div>
-        <div class=more>
-            <a href=/2015/03/24/StartupWeekend.html><i class="fa fa-arrow-circle-o-right"></i> Lire la suite</a>
         </div>
     </div>
 </article>
