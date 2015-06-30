@@ -28,8 +28,7 @@ Le cas le plus courant est celui où tout le monde travaille sur le trunk du pro
 Si ce n'est pas le cas, il n'y a pas de gros changement, mais je vous invite à consulter plus en détail [la doc](https://git-scm.com/docs/git-svn)
 
 
-On va partir du principe que tout le monde travaille sur le trunk.
-Dans cette situation, pour récupérer les sources du projet dans un nouveau repertoire vous devrez faire un :
+Donc si on se met dans la situation où tout le monde travaille sur le trunk, pour récupérer les sources du projet dans un nouveau repertoire vous devrez faire un :
 
     git svn clone http://maboite/svn/monBeauProjet/ -s
 
@@ -48,17 +47,18 @@ ainsi il ne crééra l’histo qu’a partir de la révision 4000 du svn. Je vou
 
 
 ##Travailler sur le projet (en local)
-Vous pouvez donc dès à présent commencer à travailler offline ou bien sans vous soucier des commites de vos collègues.
+Vous pouvez donc dès à présent commencer à travailler offline ou bien sans vous soucier des commits de vos collègues.
 Et cela avec tous les avantages qui Git apporte.
 
     git commit -m"Ajout de la modification du mot de passe par l'admin"
-    git stash save “Début du reset de mot de passe, mais je suis encore dérangé par le chef”
+    git stash save “Début de ma tâche prioritaire”
+    ... // un peu de travail urgent
     git stash pop
 
 On peut même faire des branches Git (en local) sans que cela n'impacte le serveur.
 
     git checkout -b myLocalBranch
-    //work avec plein de petits commits
+    ... // du travail avec plein de petits commits
     git checkout master
     git merge myLocalBranch
 
@@ -96,5 +96,6 @@ et par exemple pour recopier un commit d'une branche à une autre sans copier ma
 
 Voilà vous avez maintenant les bases pour utiliser Git alors que de premier abord cela ne semblait pas possible.
 Il ne vous reste plus qu'à forcer un peu plus pour remplacer l'ancien serveur svn par un nouveau sous Git et comme ça toute votre boîte pourra en profiter.
-
-Pour les principales commandes Git, je vous invite à consulter [la page tutoriel de git](http://git-scm.com/docs/gittutorial) ou sinon il y a toujours [internet](http://lmgtfy.com/?q=git+commands).
+<br/>
+<br/>
+Pour les connaître principales commandes Git, je vous invite à consulter [la page tutoriel de Git](http://git-scm.com/docs/gittutorial) ou alors de chercher sur [internet](http://lmgtfy.com/?q=git+commands).
