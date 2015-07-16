@@ -7,6 +7,113 @@
                 <atom:link href="http://code-troopers.com/feed.xml" rel="self" type="application/rss+xml"/>
                 
                         <item>
+                                <title>GIT-SVN comment survivre dans un environnement hostile</title>
+                                <description>&lt;p&gt;Git c’est cool, Git c’est Hype, Git c’est tout récent (&lt;a href=&quot;http://git-scm.com/book/fr/v1/D%C3%A9marrage-rapide-Une-rapide-histoire-de-Git&quot;&gt;enfin presque&lt;/a&gt;) et c’est pour ça qu’on aime bien.
+Mais pour beaucoup Git c’est nouveau, donc c’est le changement, donc c’est compliqué, et c’est pour ça que plein de boîtes préfèrent garder leur serveur svn.&lt;/p&gt;
+
+&lt;p&gt;Je vais tenter ici, de vous donner les principales commandes de &lt;code&gt;Git-SVN&lt;/code&gt;. Ainsi si vous vous trouvez dans une boîte qui ne veut pas changer son scm mais que vous, vous avez envie de changement,
+vous pourrez donc utiliser la puissance de Git. 
+Et ce sans aucun impact sur le gestionnaire de sources de la société dans laquelle vous êtes. C’est génial non ?&lt;/p&gt;
+
+&lt;!--break--&gt;
+
+&lt;h2 id=&quot;prrequis&quot;&gt;Prérequis&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Avoir Git-SVN d’installé ! Et ce qui est bien fait, c’est que Git-SVN fait partie intégrante de Git. C’est donc Git que vous allez installer : &lt;a href=&quot;www.git-scm.com&quot;&gt;www.git-scm.com&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Un accès au svn (l’url du projet qui vous intéresse fera largement l’affaire)&lt;/li&gt;
+  &lt;li&gt;Un terminal&lt;/li&gt;
+  &lt;li&gt;Un tout petit peu de courage&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;init-du-projet&quot;&gt;Init du Projet&lt;/h2&gt;
+&lt;p&gt;Le cas le plus courant est celui où tout le monde travaille sur le trunk du projet, et je vais partir de ce cas pour ce guide. 
+Si ce n’est pas le cas, il n’y a pas de gros changement, mais je vous invite à consulter plus en détail &lt;a href=&quot;https://git-scm.com/docs/git-svn&quot;&gt;la doc&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Donc si on se met dans la situation où tout le monde travaille sur le trunk, pour récupérer les sources du projet dans un nouveau répertoire vous devrez faire un :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git svn clone http://maboite/svn/monBeauProjet/ -s
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Par contre dès que le repo svn et un peu vieux (i.e. avec plein de commits) ça va mettre 3h ! En effet, Git va prendre les révisions une par une afin de créer son historique local.
+Si vous n’avez pas besoin de tout l’historique des révisions ce que vous pouvez faire c’est :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git svn clone http://maboite/svn/monBeauProjet/ -s -r4000:HEAD
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;ainsi il ne crééra l’histo qu’à partir de la révision 4000 du svn. Je vous conseille donc de prendre le 4000 le plus proche de la dernière révision.&lt;/p&gt;
+
+&lt;p&gt;À partir de là c’est bon, vous avez votre projet qui est géré par Git. La preuve vous pouvez tester via ces différentes commandes&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git status
+git branch -a
+git log -n5
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;travailler-sur-le-projet-en-local&quot;&gt;Travailler sur le projet (en local)&lt;/h2&gt;
+&lt;p&gt;Vous pouvez donc dès à présent commencer à travailler offline ou bien sans vous soucier des commits de vos collègues.
+Et cela avec tous les avantages que Git apporte.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git commit -m&quot;Ajout de la modification du mot de passe par l'admin&quot;
+git stash save “Début de ma tâche prioritaire”
+... // un peu de travail urgent
+git stash pop
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;On peut même faire des branches Git (en local) sans que cela n’impacte le serveur.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git checkout -b myLocalBranch
+... // du travail avec plein de petits commits
+git checkout master
+git merge myLocalBranch
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;commiter-sur-le-svn&quot;&gt;Commiter sur le svn&lt;/h2&gt;
+&lt;p&gt;Ensuite pour se synchroniser avec vos collègues (c’est mieux) les deux commandes indispensables sont&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git svn rebase
+git svn dcommit
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Le &lt;code&gt;git svn rebase&lt;/code&gt; va faire l’équivalent d’un svn update quant au &lt;code&gt;git svn dcommit&lt;/code&gt; ça sera un svn commit.&lt;/p&gt;
+
+&lt;h2 id=&quot;bonus--utiliser-des-branches&quot;&gt;Bonus : Utiliser des branches&lt;/h2&gt;
+&lt;p&gt;Bon soyons honnêtes si vous utilisez un svn il y a quand même peu de chances que les branches soient vraiment utilisées (ou alors peut-être que vous aimez la douleur). Mais si ça arrive, voilà comment les utiliser.&lt;/p&gt;
+
+&lt;p&gt;Mettre à jour toutes les branches du svn : &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git svn fetch
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Changer de branche : &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git checkout -b &amp;lt;brancheDistante&amp;gt; &amp;lt;nomDeBrancheLocale&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Et maintenant vous pouvez naviguer entre vos branches normalement via Git  :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git checkout master
+git checkout nomDeBrancheLocale
+git checkout -
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;et par exemple pour recopier un commit d’une branche à une autre sans copier manuellement le fichier.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git cherry-pick
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Voilà vous avez maintenant les bases pour utiliser Git alors que de premier abord cela ne semblait pas possible.
+Il ne vous reste plus qu’à forcer un peu plus pour remplacer l’ancien serveur svn par un nouveau sous Git et comme ça toute votre boîte pourra en profiter.
+&lt;br /&gt;
+&lt;br /&gt;
+Pour connaître les principales commandes Git, je vous invite à consulter &lt;a href=&quot;http://git-scm.com/docs/gittutorial&quot;&gt;la page tutoriel de Git&lt;/a&gt; ou alors de chercher sur &lt;a href=&quot;http://lmgtfy.com/?q=git+commands&quot;&gt;internet&lt;/a&gt;.&lt;/p&gt;
+</description>
+                                <pubDate>Thu, 16 Jul 2015 00:00:00 +0200</pubDate>
+                                <link>http://code-troopers.com/2015/07/16/GITSVN.html</link>
+                                <guid isPermaLink="true">http://code-troopers.com/2015/07/16/GITSVN.html</guid>
+                        </item>
+                
+                        <item>
                                 <title>Installer votre dépot privé Docker</title>
                                 <description>&lt;p&gt;Petit à petit chez Code-Troopers, nous migrons tous nos développements pour utiliser Docker. 
 Cela fait quelque temps que nous l’utilisons pour des projets “public”, auquel cas le registry public Docker est largement suffisant (et immédiat à utiliser).&lt;/p&gt;
@@ -890,60 +997,6 @@ Screencast d'une utilisation quotidienne de ct. Vous n'avez pas de navigateur mo
                                 <pubDate>Mon, 15 Dec 2014 00:00:00 +0100</pubDate>
                                 <link>http://code-troopers.com/2014/12/15/CT_Project_Alias.html</link>
                                 <guid isPermaLink="true">http://code-troopers.com/2014/12/15/CT_Project_Alias.html</guid>
-                        </item>
-                
-                        <item>
-                                <title>Navig'Tours est disponible</title>
-                                <description>&lt;h2 id=&quot;a-y-est-&quot;&gt;Ça y est !&lt;/h2&gt;
-&lt;p&gt;L’application est disponible pour tout le monde sur le Play store.&lt;/p&gt;
-
-&lt;div style=&quot;text-align:center;margin-bottom:50px&quot;&gt;
-    &lt;a href=&quot;https://play.google.com/store/apps/details?id=com.codetroopers.transport.tours&quot;&gt;
-        &lt;img class=&quot;medium&quot; alt=&quot;QRcode application Navig'Tours&quot; src=&quot;/images/postNavigTours2/qrCode_playstore_navigtours.png&quot; /&gt;
-    &lt;/a&gt;
-    &lt;a href=&quot;https://play.google.com/store/apps/details?id=com.codetroopers.transport.tours&quot;&gt;
-        &lt;img alt=&quot;Get it on Google Play&quot; src=&quot;https://developer.android.com/images/brand/fr_generic_rgb_wo_60.png&quot; /&gt;
-    &lt;/a&gt;
-&lt;/div&gt;
-
-&lt;!--break--&gt;
-
-&lt;div style=&quot;text-align:center;margin:50px&quot;&gt;
-    &lt;a href=&quot;/images/postNavigTours2/preview_search.png&quot; data-lightbox=&quot;group-1&quot; title=&quot;Écrans recherche d'itinéraire&quot; class=&quot;inlineBoxes&quot;&gt;
-        &lt;img class=&quot;medium&quot; src=&quot;/images/postNavigTours2/preview_search.png&quot; alt=&quot;Écrans recherche d'itinéraire&quot; /&gt;
-    &lt;/a&gt;
-    &lt;a href=&quot;/images/postNavigTours2/preview_map.png&quot; data-lightbox=&quot;group-1&quot; title=&quot;Écran carte des arrêts&quot; class=&quot;inlineBoxes&quot;&gt;
-        &lt;img class=&quot;medium&quot; src=&quot;/images/postNavigTours2/preview_map.png&quot; alt=&quot;Écran carte des arrêts&quot; /&gt;
-    &lt;/a&gt;
-    &lt;a href=&quot;/images/postNavigTours2/preview_favorite.png&quot; data-lightbox=&quot;group-1&quot; title=&quot;Écrans arrêts favoris&quot; class=&quot;inlineBoxes&quot;&gt;
-        &lt;img class=&quot;medium&quot; src=&quot;/images/postNavigTours2/preview_favorite.png&quot; alt=&quot;Écrans arrêts favoris&quot; /&gt;
-    &lt;/a&gt;
-    &lt;a href=&quot;/images/postNavigTours2/preview_stop_detail.png&quot; data-lightbox=&quot;group-1&quot; title=&quot;Écran arrêt&quot; class=&quot;inlineBoxes&quot;&gt;
-        &lt;img class=&quot;medium&quot; src=&quot;/images/postNavigTours2/preview_stop_detail.png&quot; alt=&quot;Écran arrêt&quot; /&gt;
-    &lt;/a&gt;
-    &lt;a href=&quot;/images/postNavigTours2/preview_notifications.png&quot; data-lightbox=&quot;group-1&quot; title=&quot;Écrans notifications&quot; class=&quot;inlineBoxes&quot;&gt;
-        &lt;img class=&quot;medium&quot; src=&quot;/images/postNavigTours2/preview_notifications.png&quot; alt=&quot;Écrans notifications&quot; /&gt;
-    &lt;/a&gt;
-    &lt;a href=&quot;/images/postNavigTours2/preview_settings.png&quot; data-lightbox=&quot;group-1&quot; title=&quot;Écran paramètre&quot; class=&quot;inlineBoxes&quot;&gt;
-        &lt;img class=&quot;medium&quot; src=&quot;/images/postNavigTours2/preview_settings.png&quot; alt=&quot;Écran paramètre&quot; /&gt;
-    &lt;/a&gt;
-&lt;/div&gt;
-
-&lt;h2 id=&quot;merci-aux-testeurs&quot;&gt;Merci aux testeurs&lt;/h2&gt;
-&lt;p&gt;Nous avions lancé l’application en test lors de la soirée bêta organisée par &lt;a href=&quot;https://twitter.com/paloaltours&quot;&gt;@paloaltours&lt;/a&gt; à la &lt;a href=&quot;https://twitter.com/cantinebtatours&quot;&gt;cantine de Tours&lt;/a&gt; le 21 octobre dernier.
-Grâce à cela, et au retours de plus de 70 testeurs, nous avons amélioré certaines choses et même corrigé quelques (rares) bugs.
-Nous avons aussi pris en compte un certain nombre de remarques quant aux fonctionnalités disponibles à travers l’application.&lt;/p&gt;
-
-&lt;p&gt;Merci donc à tous ceux qui ont testé l’application et surtout continuez à nous faire part de vos remarques et souhaits.&lt;/p&gt;
-
-&lt;h2 id=&quot;la-suite&quot;&gt;La suite&lt;/h2&gt;
-&lt;p&gt;Car ce n’est pas fini (un développement informatique l’est rarement).
-Il y a encore plein de choses que l’on souhaite ajouter dans l’application (par exemple la liste des lignes du réseau Fil Bleu, recevoir des alertes lors des perturbations…).
-Mais nous n’avons pas un temps illimité à consacrer à cette application. Donc des évolutions viendront s’ajouter au fil des mises à jours, mais nous ne pouvons pas donner de dates pour celles-ci.&lt;/p&gt;
-</description>
-                                <pubDate>Fri, 05 Dec 2014 00:00:00 +0100</pubDate>
-                                <link>http://code-troopers.com/2014/12/05/NavigTours_Application_Android_Disponible.html</link>
-                                <guid isPermaLink="true">http://code-troopers.com/2014/12/05/NavigTours_Application_Android_Disponible.html</guid>
                         </item>
                 
         </channel>
