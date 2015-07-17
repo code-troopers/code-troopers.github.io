@@ -20,7 +20,7 @@ Et ce sans aucun impact sur le gestionnaire de sources de la société dans laqu
 &lt;h2 id=&quot;prrequis&quot;&gt;Prérequis&lt;/h2&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Avoir Git-SVN d’installé ! Et ce qui est bien fait, c’est que Git-SVN fait partie intégrante de Git. C’est donc Git que vous allez installer : &lt;a href=&quot;www.git-scm.com&quot;&gt;www.git-scm.com&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Avoir Git-SVN d’installé ! Et ce qui est bien fait, c’est que Git-SVN fait partie intégrante de Git. C’est donc Git que vous allez installer : &lt;a href=&quot;http://www.git-scm.com&quot;&gt;www.git-scm.com&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;Un accès au svn (l’url du projet qui vous intéresse fera largement l’affaire)&lt;/li&gt;
   &lt;li&gt;Un terminal&lt;/li&gt;
   &lt;li&gt;Un tout petit peu de courage&lt;/li&gt;
