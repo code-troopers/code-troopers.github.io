@@ -1,99 +1,89 @@
-<!doctype html >
-<html class="no-js" lang="fr" itemscope="" itemtype="http://schema.org/Organization">
+<!DOCTYPE html>
+<html class=no-js lang=fr itemscope itemtype=http://schema.org/Organization>
     <head>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta charset="utf-8">
+        <meta http-equiv=X-UA-Compatible content="IE=edge">
+        <meta charset=utf-8>
         <title>Play2 accéder à la base de donnée</title>
-        <meta property="fb:app_id" content="432735746865877">
-        <meta property="og:url" content="http://code-troopers.com/2014/05/05/PlayDbBrowser.html">
-        <meta property="og:title" content="Play2 accéder à la base de donnée">
-        <meta property="twitter:card" content="summary">
-        <meta property="twitter:site" content="codetroopers">
-        <meta property="twitter:image:src" content="http://code-troopers.com/images/banner/play.png">
-        <meta property="og:image" content="http://code-troopers.com/images/banner/play.png">
-        <meta property="twitter:title" content="Play2 accéder à la base de donnée">
-        <meta property="twitter:creator" content="@codetroopers">
-        <meta property="twitter:domain" content="http://code-troopers.com">
+        <meta property=fb:app_id content=432735746865877>
+        <meta property=og:url content=http://code-troopers.com/2014/05/05/PlayDbBrowser.html>
+        <meta property=og:title content="Play2 accéder à la base de donnée">
+        <meta property=twitter:card content=summary>
+        <meta property=twitter:site content=codetroopers>
+        <meta property=twitter:image:src content=http://code-troopers.com/images/banner/play.png>
+        <meta property=og:image content=http://code-troopers.com/images/banner/play.png>
+        <meta property=twitter:title content="Play2 accéder à la base de donnée">
+        <meta property=twitter:creator content=@codetroopers>
+        <meta property=twitter:domain content=http://code-troopers.com>
         
         
-        <meta property="twitter:description" content="Play2, c’est fun et c’est rapide ! Il suffit de quelques instants pour avoir une appli qui tourne en local...">
+        <meta property=twitter:description content="Play2, c’est fun et c’est rapide ! Il suffit de quelques instants pour avoir une appli qui tourne en local...">
         
         
         
-        <meta name="description" content="Play2, c’est fun et c’est rapide ! Il suffit de quelques instants pour avoir une appli qui tourne en local sans rien avoir à configurer voir la doc de play. En plus dès que l’on commence un peu à jouer, créer des entités, faire une page de CRUD, tout tourne toujours aussi bien. Il faut dire que c’est agréable, car Ebean s’est occupé de générer les commandes sql dans le fichier 1.sql qui est joué automatiquement par play. Le problème arrive en général un peu après, lorsque l’envie nous prend de visualiser les données qu’on a insérées via les pages pour différents traitements. En effet, pas besoin de monter un serveur sql ou autre, par défaut tout se passe dans une base en mémoire (ce qui signifie aussi, que lorsque le serveur est arrêté les datas disparaissent). Et forcément la question universelle est “Mais comment je peux voir ces ***** de data en base ?”. La solution est simple, elle réside dans une commande h2-browser. Mais pour pouvoir l’utiliser, il va falloir se discipliner un tout petit peu. En effet, si vous aviez l’habitude de faire des play run pour lancer le serveur et des ctrl-D pour l’arrêter, il va...">
-        <meta property="og:description" content="Play2, c’est fun et c’est rapide ! Il suffit de quelques instants pour avoir une appli qui tourne en local sans rien avoir à configurer voir la doc de play. En plus dès que l’on commence un peu à jouer, créer des entités, faire une page de CRUD, tout tourne toujours aussi bien. Il faut dire que c’est agréable, car Ebean s’est occupé de générer les commandes sql dans le fichier 1.sql qui est joué automatiquement par play. Le problème arrive en général un peu après, lorsque l’envie nous prend de visualiser les données qu’on a insérées via les pages pour différents traitements. En effet, pas besoin de monter un serveur sql ou autre, par défaut tout se passe dans une base en mémoire (ce qui signifie aussi, que lorsque le serveur est arrêté les datas disparaissent). Et forcément la question universelle est “Mais comment je peux voir ces ***** de data en base ?”. La solution est simple, elle réside dans une commande h2-browser. Mais pour pouvoir l’utiliser, il va falloir se discipliner un tout petit peu. En effet, si vous aviez l’habitude de faire des play run pour lancer le serveur et des ctrl-D pour l’arrêter, il va...">
+        <meta name=description content="Play2, c’est fun et c’est rapide ! Il suffit de quelques instants pour avoir une appli qui tourne en local sans rien avoir à configurer voir la doc de play. En plus dès que l’on commence un peu à jouer, créer des entités, faire une page de CRUD, tout tourne toujours aussi bien. Il faut dire que c’est agréable, car Ebean s’est occupé de générer les commandes sql dans le fichier 1.sql qui est joué automatiquement par play. Le problème arrive en général un peu après, lorsque l’envie nous prend de visualiser les données qu’on a insérées via les pages pour différents traitements. En effet, pas besoin de monter un serveur sql ou autre, par défaut tout se passe dans une base en mémoire (ce qui signifie aussi, que lorsque le serveur est arrêté les datas disparaissent). Et forcément la question universelle est “Mais comment je peux voir ces ***** de data en base ?”. La solution est simple, elle réside dans une commande h2-browser. Mais pour pouvoir l’utiliser, il va falloir se discipliner un tout petit peu. En effet, si vous aviez l’habitude de faire des play run pour lancer le serveur et des ctrl-D pour l’arrêter, il va...">
+        <meta property=og:description content="Play2, c’est fun et c’est rapide ! Il suffit de quelques instants pour avoir une appli qui tourne en local sans rien avoir à configurer voir la doc de play. En plus dès que l’on commence un peu à jouer, créer des entités, faire une page de CRUD, tout tourne toujours aussi bien. Il faut dire que c’est agréable, car Ebean s’est occupé de générer les commandes sql dans le fichier 1.sql qui est joué automatiquement par play. Le problème arrive en général un peu après, lorsque l’envie nous prend de visualiser les données qu’on a insérées via les pages pour différents traitements. En effet, pas besoin de monter un serveur sql ou autre, par défaut tout se passe dans une base en mémoire (ce qui signifie aussi, que lorsque le serveur est arrêté les datas disparaissent). Et forcément la question universelle est “Mais comment je peux voir ces ***** de data en base ?”. La solution est simple, elle réside dans une commande h2-browser. Mais pour pouvoir l’utiliser, il va falloir se discipliner un tout petit peu. En effet, si vous aviez l’habitude de faire des play run pour lancer le serveur et des ctrl-D pour l’arrêter, il va...">
         
-        <meta name="viewport" content="width=device-width">
+        <meta name=viewport content="width=device-width">
 
-        <!-- build:css(.tmp) /styles/main.css -->
-        <link rel="stylesheet" href="/styles/style.css">
-        <!-- endbuild -->
+        <link rel=stylesheet href=/styles/2e03639a.main.css>
 
-        <!-- build:js /scripts/ie8.js -->
-        <!--[if lt IE 9]>
-                <script src="/bower_components/respond/dest/respond.min.js"></script>
-                <script src="/bower_components/html5shiv/dist/html5shiv.min.js"></script>
-                <script src="/bower_components/es5-shim/es5-shim.js"></script>            
-        <![endif]-->
-        <!-- endbuild -->
-        <meta itemprop="name" content="CT-CDGT">
-        <meta itemprop="name" content="CT-RMLC">
-        <meta itemprop="name" content="CT-BNCS">
-        <meta itemprop="name" content="CT-JRPT">
-        <meta itemprop="name" content="CT-MTBL">
-        <meta itemprop="name" content="CT-FLCH">
-        <meta itemprop="name" content="CT-VCMB">
+        <!--[if lt IE 9]><script src="/scripts/1d7b502c.ie8.js"></script><![endif]-->
+        <meta itemprop=name content=CT-CDGT>
+        <meta itemprop=name content=CT-RMLC>
+        <meta itemprop=name content=CT-BNCS>
+        <meta itemprop=name content=CT-JRPT>
+        <meta itemprop=name content=CT-MTBL>
+        <meta itemprop=name content=CT-FLCH>
+        <meta itemprop=name content=CT-VCMB>
     </head>
     <body>
-        <!-- Google Tag Manager -->
-        <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-NWLQD2" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        
+        <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-NWLQD2" height=0 width=0 style=display:none;visibility:hidden></iframe></noscript>
         <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
             j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
         })(window,document,'script','dataLayer','GTM-NWLQD2');</script>
-        <!-- End Google Tag Manager -->
-        <!--[if lt IE 8]>
-        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a
-                href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
+        
+        <!--[if lt IE 8]><p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a
+                href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p><![endif]-->
 
-<header data-spy="affix" class="affix-top">
-    <div class="container">
-        <div class="navbar-header" itemscope="" itemtype="http://schema.org/Organization">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+<header data-spy=affix class=affix-top>
+    <div class=container>
+        <div class=navbar-header itemscope itemtype=http://schema.org/Organization>
+            <button type=button class=navbar-toggle data-toggle=collapse data-target=.navbar-collapse>
                 <span><i class="fa fa-bars fa-2x"></i></span>
             </button>
-            <a class="navbar-brand" href="/"><img itemprop="logo" class="logo" alt="Code-Troopers logo" title="Code-Troopers logo" src="/images/logo.png">
-                <span itemprop="name" class="brand">Code-Troopers</span>
+            <a class=navbar-brand href="/"><img itemprop=logo class=logo alt="Code-Troopers logo" title="Code-Troopers logo" src=/images/logo.png>
+                <span itemprop=name class=brand>Code-Troopers</span>
             </a>
         </div>
         <nav class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
-                <li class="active"><a data-scrolltolink="aboutUs">À propos</a></li>
-                <li><a data-scrolltolink="projects">Réalisations</a></li>
-                <li><a data-scrolltolink="skills">Compétences</a></li>
-                <li><a data-scrolltolink="team">L'équipe</a></li>
-                <li><a data-scrolltolink="contact">Contact</a></li>
-                <li><a href="/blog/index.html">Blog</a></li>
+                <li class=active><a data-scrolltolink=aboutUs>À propos</a></li>
+                <li><a data-scrolltolink=projects>Réalisations</a></li>
+                <li><a data-scrolltolink=skills>Compétences</a></li>
+                <li><a data-scrolltolink=team>L'équipe</a></li>
+                <li><a data-scrolltolink=contact>Contact</a></li>
+                <li><a href=/blog/index.html>Blog</a></li>
             </ul>
         </nav>
-        <!--/.nav-collapse -->
+        
     </div>
 </header>
 
-    <section id="post">
-        <div class="header">
-            <div class="container"><a href="/blog/index.html">Le <span>blog</span></a></div>
+    <section id=post>
+        <div class=header>
+            <div class=container><a href=/blog/index.html>Le <span>blog</span></a></div>
         </div>
-        <div class="container">
+        <div class=container>
         <article>
             <div>
-		<div class="cover" style="background-image:url(/images/banner/play-big.png)">
-                    <div class="date">posté le 05/05/2014 par Florian</div>
+		<div class=cover style=background-image:url(/images/banner/play-big.png)>
+                    <div class=date>posté le 05/05/2014 par Florian</div>
                 </div>
-                <h2><a href="/2014/05/05/PlayDbBrowser.html">Play2 accéder à la base de donnée</a></h2>
-                <ul class="tags">
+                <h2><a href=/2014/05/05/PlayDbBrowser.html>Play2 accéder à la base de donnée</a></h2>
+                <ul class=tags>
                     
                     <li>Play2</li>
                     
@@ -102,11 +92,11 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
                     <li>h2-browser</li>
                     
                 </ul>
-                <div class="content">
+                <div class=content>
                     <p><a href="http://www.playframework.com/">Play2</a>, c’est fun et c’est rapide !
-Il suffit de quelques instants pour avoir une appli qui tourne en local sans rien avoir à configurer <a href="http://www.playframework.com/documentation/2.2.x/NewApplication">voir la doc de play</a>.
-En plus dès que l’on commence un peu à jouer, créer des entités, faire une page de CRUD, tout tourne toujours aussi bien. Il faut dire que c’est agréable, car <a href="http://www.playframework.com/documentation/2.2.x/JavaEbean">Ebean</a> s’est occupé de générer les commandes sql dans le fichier <em>1.sql</em> qui est joué automatiquement par play.
-<!--break--></p>
+Il suffit de quelques instants pour avoir une appli qui tourne en local sans rien avoir à configurer <a href=http://www.playframework.com/documentation/2.2.x/NewApplication>voir la doc de play</a>.
+En plus dès que l’on commence un peu à jouer, créer des entités, faire une page de CRUD, tout tourne toujours aussi bien. Il faut dire que c’est agréable, car <a href=http://www.playframework.com/documentation/2.2.x/JavaEbean>Ebean</a> s’est occupé de générer les commandes sql dans le fichier <em>1.sql</em> qui est joué automatiquement par play.
+</p>
 
 <p>Le problème arrive en général un peu après, lorsque l’envie nous prend de visualiser les données qu’on a insérées via les pages pour différents traitements.
 En effet, pas besoin de monter un serveur sql ou autre, par défaut tout se passe dans une base en mémoire (ce qui signifie aussi, que lorsque le serveur est arrêté les datas disparaissent).
@@ -121,25 +111,25 @@ Mais pour pouvoir l’utiliser, il va falloir se discipliner un tout petit peu. 
   <li>lancer la console play</li>
 </ul>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>play</code></pre></div>
+<div class=highlight><pre><code class=language-bash data-lang=bash><span class=nv>$ </span>play</code></pre></div>
 
 <ul>
   <li>lancer le visualiseur de bdd (qui ouvre une fenêtre dans votre navigateur web)</li>
 </ul>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>h2-browser</code></pre></div>
+<div class=highlight><pre><code class=language-bash data-lang=bash><span class=nv>$ </span>h2-browser</code></pre></div>
 
 <ul>
   <li>démarrer votre serveur.</li>
 </ul>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>run</code></pre></div>
+<div class=highlight><pre><code class=language-bash data-lang=bash><span class=nv>$ </span>run</code></pre></div>
 
 <p>Lorsqu’il se lance h2-browser devrait vous présenter une fenêtre de connexion comme celle-ci :</p>
 
 <div style="text-align : center">
-    <a style="display: inline" href="/images/postPlayDbBrowser/h2-browser.png" data-lightbox="image-0" title="Fenêtre de connection h2-browser">
-            <img class="medium" src="/images/postPlayDbBrowser/h2-browser.png" alt="Fenêtre de connection h2-browser">
+    <a style="display: inline" href=/images/postPlayDbBrowser/h2-browser.png data-lightbox=image-0 title="Fenêtre de connection h2-browser">
+            <img class=medium src=/images/postPlayDbBrowser/h2-browser.png alt="Fenêtre de connection h2-browser">
     </a>
 </div>
 
@@ -160,53 +150,53 @@ db.default.password=
 <p><em>NB</em> : Il faut absolument faire le <code>run</code> avant de se connecter à la base de donnée, sinon celle-ci sera lockée lors de la connexion par h2-broswer et l’application play ne pourra pas s’y connecter.</p>
 
                 </div>
-<div class="share">
+<div class=share>
 L'article vous a plu ? Partagez-le :
-    <ul class="socials">
+    <ul class=socials>
         <li>
-            <a target="_blank" title="Twitter" href="https://twitter.com/share?url=http://code-troopers.com/2014/05/05/PlayDbBrowser.html&text=Play2 accéder à la base de donnée&via=codetroopers" rel="nofollow" onclick="window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=400,width=700');return false">
+            <a target=_blank title=Twitter href="https://twitter.com/share?url=http://code-troopers.com/2014/05/05/PlayDbBrowser.html&text=Play2 accéder à la base de donnée&via=codetroopers" rel=nofollow onclick="window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=400,width=700');return false">
                 <i class="fa fa-twitter-square"></i>
             </a>
         </li>
         <li>
-            <a target="_blank" title="Facebook" href="https://www.facebook.com/sharer.php?u=http://code-troopers.com/2014/05/05/PlayDbBrowser.html&t=Play2 accéder à la base de donnée" class="facebook-button" rel="nofollow" onclick="window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=500,width=700');return false">
+            <a target=_blank title=Facebook href="https://www.facebook.com/sharer.php?u=http://code-troopers.com/2014/05/05/PlayDbBrowser.html&t=Play2 accéder à la base de donnée" class=facebook-button rel=nofollow onclick="window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=500,width=700');return false">
                 <i class="fa fa-facebook-square"></i>
             </a>
         </li>
         <li>
-            <a target="_blank" title="Google +" href="https://plus.google.com/share?url=http://code-troopers.com/2014/05/05/PlayDbBrowser.html&hl=fr" class="google-button" rel="nofollow" onclick="window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=650');return false">
+            <a target=_blank title="Google +" href="https://plus.google.com/share?url=http://code-troopers.com/2014/05/05/PlayDbBrowser.html&hl=fr" class=google-button rel=nofollow onclick="window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=650');return false">
                 <i class="fa fa-google-plus-square"></i>
             </a>
         </li>
         <li>
-            <a target="_blank" title="Linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=http://code-troopers.com/2014/05/05/PlayDbBrowser.html&title=Play2 accéder à la base de donnée" class="linkedin-button" rel="nofollow" onclick="window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=650');return false">
+            <a target=_blank title=Linkedin href="https://www.linkedin.com/shareArticle?mini=true&url=http://code-troopers.com/2014/05/05/PlayDbBrowser.html&title=Play2 accéder à la base de donnée" class=linkedin-button rel=nofollow onclick="window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=650');return false">
                 <i class="fa fa-linkedin-square"></i>
             </a>
         </li>
         <li>
-            <a target="_blank" title="Envoyer par mail" href="mailto:?subject=Play2 accéder à la base de donnée&body=http://code-troopers.com/2014/05/05/PlayDbBrowser.html" rel="nofollow">
+            <a target=_blank title="Envoyer par mail" href="mailto:?subject=Play2 accéder à la base de donnée&body=http://code-troopers.com/2014/05/05/PlayDbBrowser.html" rel=nofollow>
                 <i class="fa fa-envelope"></i>
             </a>
         </li>
     </ul>
 </div>
-<div style="clear:both"></div>
+<div style=clear:both></div>
 
 
 
-                <div class="back">
-                    <a href="/blog/index.html"><i class="fa fa-arrow-circle-o-up"></i> Retour aux articles</a>
+                <div class=back>
+                    <a href=/blog/index.html><i class="fa fa-arrow-circle-o-up"></i> Retour aux articles</a>
                     <div class="pull-right paginate">
                         
-                        <a href="/2014/04/28/ConcoursAccede.html"><i class="fa fa-arrow-circle-o-left"></i> Précédent</a>
+                        <a href=/2014/04/28/ConcoursAccede.html><i class="fa fa-arrow-circle-o-left"></i> Précédent</a>
                         
                         
-                        <a href="/2014/05/14/kIsTheNewL.html"><i class="fa fa-arrow-circle-o-right"></i> Suivant</a>
+                        <a href=/2014/05/14/kIsTheNewL.html><i class="fa fa-arrow-circle-o-right"></i> Suivant</a>
                         
                     </div>
                 </div>
-                <div id="disqus_thread"></div>
-                <script type="text/javascript">
+                <div id=disqus_thread></div>
+                <script type=text/javascript>
                     /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
                     var disqus_shortname = 'codetroopers'; // required: replace example with your forum shortname
 		    var disqus_url = window.location.href;
@@ -221,35 +211,35 @@ L'article vous a plu ? Partagez-le :
                         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
                     })();
                 </script>
-                <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-                <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+                <noscript>Please enable JavaScript to view the <a href=http://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript>
+                <a href=http://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a>
 
             </div>
         </article>
         </div>
     </section>
-<footer id="contact">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6" itemscope="" itemtype="http://schema.org/Organization">
+<footer id=contact>
+    <div class=container>
+        <div class=row>
+            <div class=col-md-6 itemscope itemtype=http://schema.org/Organization>
                 <h3>Contact</h3>
 
-                <p>Vous avez besoin de nous pour un projet, contactez-nous sur les réseaux sociaux, par mail à <a href="mailto:contact@code-troopers.com"><meta itemprop="email" content="contact@code-troopers.com">contact@code-
-                    troopers.com</a> ou par téléphone au <a href="tel:+33782287216"><span itemprop="telephone">0782 287 216</span></a></p>
+                <p>Vous avez besoin de nous pour un projet, contactez-nous sur les réseaux sociaux, par mail à <a href=mailto:contact@code-troopers.com><meta itemprop=email content=contact@code-troopers.com>contact@code-
+                    troopers.com</a> ou par téléphone au <a href=tel:+33782287216><span itemprop=telephone>0782 287 216</span></a></p>
             </div>
             <div class="col-md-6 simple-social-icons">
                 <h3>Réseaux sociaux</h3>
-                <ul class="socials">
-                    <li><a target="_blank" href="https://twitter.com/codetroopers"><i class="fa fa-twitter-square"></i></a></li>
-                    <li><a target="_blank" href="https://www.facebook.com/pages/Code-Troopers/123604307824664"><i class="fa fa-facebook-square"></i></a></li>
-                    <li><a target="_blank" href="https://plus.google.com/+Code-troopers" rel="publisher"><i class="fa fa-google-plus-square"></i></a></li>
-                    <li><a target="_blank" href="https://github.com/code-troopers"><i class="fa fa-github-square"></i></a></li>
-                    <li><a target="_blank" href="/feed.xml"><i class="fa fa-rss-square"></i></a></li>
+                <ul class=socials>
+                    <li><a target=_blank href=https://twitter.com/codetroopers><i class="fa fa-twitter-square"></i></a></li>
+                    <li><a target=_blank href=https://www.facebook.com/pages/Code-Troopers/123604307824664><i class="fa fa-facebook-square"></i></a></li>
+                    <li><a target=_blank href=https://plus.google.com/+Code-troopers rel=publisher><i class="fa fa-google-plus-square"></i></a></li>
+                    <li><a target=_blank href=https://github.com/code-troopers><i class="fa fa-github-square"></i></a></li>
+                    <li><a target=_blank href=/feed.xml><i class="fa fa-rss-square"></i></a></li>
                 </ul>
             </div>
         </div>
-        <div class="row">
-            <div class="footer-under">
+        <div class=row>
+            <div class=footer-under>
                 Made with <i class="fa fa-heart"></i> in Tours -
                 © 2014 - 2015 Code-Troopers - Tous droits réservés
             </div>
@@ -257,21 +247,11 @@ L'article vous a plu ? Partagez-le :
     </div>
 </footer>
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src=//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js></script>
 
-<!-- build:js /scripts/plugins.js -->
-<script src="/bower_components/bootstrap3-less-js/js/tooltip.js"></script>
-<script src="/bower_components/bootstrap3-less-js/js/modal.js"></script>
-<script src="/bower_components/bootstrap3-less-js/js/collapse.js"></script>
-<script src="/bower_components/bootstrap3-less-js/js/affix.js"></script>
-<script src="/bower_components/jquery.scrollTo/jquery.scrollTo.js"></script>
-<script src="/bower_components/owlcarousel/owl-carousel/owl.carousel.js"></script>
-<script src="/bower_components/lightbox2/js/lightbox.js"></script>
-<!-- endbuild -->
+<script src=/scripts/aa413edf.plugins.js></script>
 
-<!-- build:js({.tmp,app}) /scripts/scripts.js -->
-<script src="/scripts/scripts.js"></script>
-<!-- endbuild -->
+<script src=/scripts/32bd55f7.scripts.js></script>
 
 </body>
 </html>
