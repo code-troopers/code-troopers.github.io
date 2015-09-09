@@ -17,7 +17,7 @@ Nous allons commencer par une petite digression. Avant quand on avait plusieurs 
     docker run --restart=always --name nginx -d -p 80:80 -p 443:443 -v /docker/vhost.d:/etc/nginx/vhost.d:ro -v /var/run/docker.sock:/tmp/docker.sock:ro jwilder/nginx-proxy
 
 <!--break-->
-On pourra alors rajouter la variable d'environnement `VIRTUAL_HOST` à chaque nouvelle image Docker pour qu'elle soit directement accessible. Ce qui est magique aussi c'est que si on expose un seul port de l'image Docker alors il est directement mappé sur le port 80.
+On pourra alors rajouter la variable d'environnement `VIRTUAL_HOST` à chaque nouvelle image Docker pour qu'elle soit directement accessible. Ce qui est magique aussi c'est que si on expose un seul port de l'image Docker alors il est directement mappé sur le port 80, même si le port n'était pas forwardé sur le host. Dernier avantage, si on met deux machines avec le même nom il va s'occuper de faire du load balancing tout seul !
 
 Si jamais la configuration par défaut ne convient pas, il faut rajouter un fichier de configuration dans `/docker/vhost.d/`. Dans notre cas nous en avons eu besoin pour permettre d'uploader des fichiers plus gros (c'est 2 Mo par défaut).
 
