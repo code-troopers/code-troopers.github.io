@@ -16,12 +16,12 @@
         <meta property=twitter:domain content=http://code-troopers.com>
         
         
-        <meta property=twitter:description content="Le blog posté le 16/07/2015 par Florian GIT-SVN comment survivre dans un environnement hostile GIT GIT-SVN Outils Productivité Git c’est...">
+        <meta property=twitter:description content="Le blog posté le 09/09/2015 par Matthieu Owncloud : solution de cloud en 5 min avec Docker Docker Owncloud Que...">
         
         
         
-        <meta name=description content="Le blog posté le 16/07/2015 par Florian GIT-SVN comment survivre dans un environnement hostile GIT GIT-SVN Outils Productivité Git c’est cool, Git c’est Hype, Git c’est tout récent (enfin presque) et c’est pour ça qu’on aime bien. Mais pour beaucoup Git c’est nouveau, donc c’est le changement, donc c’est compliqué, et c’est pour ça que plein de boîtes préfèrent garder leur serveur svn. Je vais tenter ici, de vous donner les principales commandes de Git-SVN. Ainsi si vous vous trouvez dans une boîte qui ne veut pas changer son scm mais que vous, vous avez envie de changement, vous pourrez donc utiliser la puissance de Git. Et ce sans aucun impact sur le gestionnaire de sources de la société dans laquelle vous êtes. C’est génial non ? Lire la suite posté le 25/06/2015 par Cedric Installer votre dépot privé Docker guide docker tips Petit à petit chez Code-Troopers, nous migrons tous nos développements pour utiliser Docker. Cela fait quelque temps que nous l’utilisons pour des projets “public”, auquel cas le registry public Docker est largement suffisant (et immédiat à utiliser). En revanche, nous commençons à migrer nos applications de production également vers Docker, et nous ne pouvons pas utiliser le...">
-        <meta property=og:description content="Le blog posté le 16/07/2015 par Florian GIT-SVN comment survivre dans un environnement hostile GIT GIT-SVN Outils Productivité Git c’est cool, Git c’est Hype, Git c’est tout récent (enfin presque) et c’est pour ça qu’on aime bien. Mais pour beaucoup Git c’est nouveau, donc c’est le changement, donc c’est compliqué, et c’est pour ça que plein de boîtes préfèrent garder leur serveur svn. Je vais tenter ici, de vous donner les principales commandes de Git-SVN. Ainsi si vous vous trouvez dans une boîte qui ne veut pas changer son scm mais que vous, vous avez envie de changement, vous pourrez donc utiliser la puissance de Git. Et ce sans aucun impact sur le gestionnaire de sources de la société dans laquelle vous êtes. C’est génial non ? Lire la suite posté le 25/06/2015 par Cedric Installer votre dépot privé Docker guide docker tips Petit à petit chez Code-Troopers, nous migrons tous nos développements pour utiliser Docker. Cela fait quelque temps que nous l’utilisons pour des projets “public”, auquel cas le registry public Docker est largement suffisant (et immédiat à utiliser). En revanche, nous commençons à migrer nos applications de production également vers Docker, et nous ne pouvons pas utiliser le...">
+        <meta name=description content="Le blog posté le 09/09/2015 par Matthieu Owncloud : solution de cloud en 5 min avec Docker Docker Owncloud Que ce soit pour des raisons politique de confidentialité ou des raisons technique, Owncloud a énormément de qualités comparé à Dropbox ou Google drive. Déjà car la limite de taille des données est celle du serveur, ensuite car des applications sous linux permettent de synchroniser des dossiers et enfin car il existe une multitude d’addons qui permettent de sauvegarder ses mots de passe, jouer de la musique, envoyer des notifs sur Slack etc. La mise en production d’une instance Owncloud se fait en 5 minutes montre en main, à condition de connaître un minimum Docker. Nginx/proxy Nous allons commencer par une petite digression. Avant quand on avait plusieurs “virtual host” qui pointaient sur une machine, on mettait un front-end apache et c’était plus ou moins la galère. Maintenant, il suffit de lancer cette commande une fois : docker run --restart=always --name nginx -d -p 80:80 -p 443:443 -v /docker/vhost.d:/etc/nginx/vhost.d:ro -v /var/run/docker.sock:/tmp/docker.sock:ro jwilder/nginx-proxy Lire la suite posté le 16/07/2015 par Florian GIT-SVN comment survivre dans un environnement hostile GIT GIT-SVN Outils Productivité Git c’est cool, Git c’est Hype, Git c’est tout récent...">
+        <meta property=og:description content="Le blog posté le 09/09/2015 par Matthieu Owncloud : solution de cloud en 5 min avec Docker Docker Owncloud Que ce soit pour des raisons politique de confidentialité ou des raisons technique, Owncloud a énormément de qualités comparé à Dropbox ou Google drive. Déjà car la limite de taille des données est celle du serveur, ensuite car des applications sous linux permettent de synchroniser des dossiers et enfin car il existe une multitude d’addons qui permettent de sauvegarder ses mots de passe, jouer de la musique, envoyer des notifs sur Slack etc. La mise en production d’une instance Owncloud se fait en 5 minutes montre en main, à condition de connaître un minimum Docker. Nginx/proxy Nous allons commencer par une petite digression. Avant quand on avait plusieurs “virtual host” qui pointaient sur une machine, on mettait un front-end apache et c’était plus ou moins la galère. Maintenant, il suffit de lancer cette commande une fois : docker run --restart=always --name nginx -d -p 80:80 -p 443:443 -v /docker/vhost.d:/etc/nginx/vhost.d:ro -v /var/run/docker.sock:/tmp/docker.sock:ro jwilder/nginx-proxy Lire la suite posté le 16/07/2015 par Florian GIT-SVN comment survivre dans un environnement hostile GIT GIT-SVN Outils Productivité Git c’est cool, Git c’est Hype, Git c’est tout récent...">
         
         <meta name=viewport content="width=device-width">
 
@@ -81,6 +81,40 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     <div class=container>
         <div class=row>
 
+
+<article class="col-lg-4 col-md-6 col-sm-12">
+    <div onclick="window.location.href='/2015/09/09/OwncloudDocker.html' ;  return false" style="cursor: pointer">
+	<div class=cover style=background-image:url(/images/banner/docker-banner.png)>
+            <div class=date>posté le 09/09/2015 par Matthieu</div>
+        </div>
+        <h2><a href=/2015/09/09/OwncloudDocker.html>Owncloud : solution de cloud en 5 min avec Docker</a></h2><ul class=tags>
+            
+            <li>Docker</li>
+            
+            <li>Owncloud</li>
+            
+        </ul>
+        <div class=content>
+            <p>Que ce soit pour des raisons politique de confidentialité ou des raisons technique, <a href="https://owncloud.org/">Owncloud</a> a énormément de qualités comparé à Dropbox ou Google drive. Déjà car la limite de taille des données est celle du serveur, ensuite car des applications sous linux permettent de synchroniser des dossiers et enfin car il existe une multitude d’addons qui permettent de sauvegarder ses mots de passe, jouer de la musique, envoyer des notifs sur Slack etc.</p>
+
+<p>La mise en production d’une instance Owncloud se fait en 5 minutes montre en main, à condition de connaître un minimum Docker.</p>
+
+<h2 id=nginxproxy>Nginx/proxy</h2>
+
+<p>Nous allons commencer par une petite digression. Avant quand on avait plusieurs “virtual host” qui pointaient sur une machine, on mettait un front-end apache et c’était plus ou moins la galère. Maintenant, il suffit de lancer cette commande une fois :</p>
+
+<pre><code>docker run --restart=always --name nginx -d -p 80:80 -p 443:443 -v /docker/vhost.d:/etc/nginx/vhost.d:ro -v /var/run/docker.sock:/tmp/docker.sock:ro jwilder/nginx-proxy
+</code></pre>
+
+
+        </div>
+        <div class=fade-content>
+        </div>
+        <div class=more>
+            <a href=/2015/09/09/OwncloudDocker.html><i class="fa fa-arrow-circle-o-right"></i> Lire la suite</a>
+        </div>
+    </div>
+</article>
 
 <article class="col-lg-4 col-md-6 col-sm-12">
     <div onclick="window.location.href='/2015/07/16/GITSVN.html' ;  return false" style="cursor: pointer">
@@ -295,37 +329,6 @@ $ git config --global user.email "jango.fett@code-troopers.com"
         </div>
         <div class=more>
             <a href=/2015/05/22/Dotfiles-git.html><i class="fa fa-arrow-circle-o-right"></i> Lire la suite</a>
-        </div>
-    </div>
-</article>
-
-<article class="col-lg-4 col-md-6 col-sm-12">
-    <div onclick="window.location.href='/2015/05/15/Dotfiles-vim.html' ;  return false" style="cursor: pointer">
-	<div class=cover style=background-image:url(/images/banner/ohmyzsh-banner.png)>
-            <div class=date>posté le 15/05/2015 par Matthieu</div>
-        </div>
-        <h2><a href=/2015/05/15/Dotfiles-vim.html>vim : 10 astuces de configuration pour vos dotfiles</a></h2><ul class=tags>
-            
-            <li>vim</li>
-            
-            <li>vimrc</li>
-            
-            <li>shell</li>
-            
-        </ul>
-        <div class=content>
-            <p>Cet article sera le premier d’une série consacrée aux <em>dotfiles</em>. Alors les <em>dotfiles</em>, qu’est-ce que c’est Obi-Wan ? Les <em>dotfiles</em>, ce sont tous les fichiers texte de configuration que l’on peut retrouver dans son répertoire utilisateur pour sauvegarder ses préférences. De nombreux logiciels utilisent cette méthode. On peut citer gnome, IntelliJ, Maven,  ssh, git, bash et tant d’autres. On les appelle <em>dotfiles</em> −que l’on peut traduire par fichiers point− parce qu’ils ont un nom qui commence par un point, ce qui correspond aux fichiers cachés sous linux.</p>
-
-<h1 id=introduction>Introduction</h1>
-
-<p>Chez les troopers, on est comme beaucoup d’autres constamment alliés à la ligne de commande, cf nos articles sur <a href=http://code-troopers.com/2014/10/01/babun.html>babun</a> et <a href=http://code-troopers.com/2014/09/17/ohMyZsh.html>oh-my-zsh</a>. Un outil indispensable dans un terminal est un éditeur de fichier. Dans notre premier article sur les <em>dotfiles</em> nous parlerons de vim, et plus spécialement de sa configuration avec vimrc. Si vous ne connaissez pas l’un des plus puissants éditeur de texte, commencez par vous renseigner dessus et sur les commandes de base par exemple sur <a href=http://www.openvim.com/tutorial.html>http://www.openvim.com/tutorial.html</a>.
-Pour configurer vim, une seule chose à faire : <code>vim ~/.vimrc</code>
-
-        </p></div>
-        <div class=fade-content>
-        </div>
-        <div class=more>
-            <a href=/2015/05/15/Dotfiles-vim.html><i class="fa fa-arrow-circle-o-right"></i> Lire la suite</a>
         </div>
     </div>
 </article>

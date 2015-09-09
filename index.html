@@ -133,6 +133,40 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
         <div class=row>
     
         <article class="col-lg-4 col-md-6 col-sm-12">
+            <div onclick="window.location.href='/2015/09/09/OwncloudDocker.html' ;  return false" style="cursor: pointer">
+            <div class=cover style=background-image:url(/images/banner/docker-banner.png)>
+                    <div class=date>posté le 09/09/2015 par Matthieu</div>
+                </div>
+                <h2><a href=/2015/09/09/OwncloudDocker.html>Owncloud : solution de cloud en 5 min avec Docker</a></h2><ul class=tags>
+                    
+                    <li>Docker</li>
+                    
+                    <li>Owncloud</li>
+                    
+                </ul>
+                <div class=content>
+                    <p>Que ce soit pour des raisons politique de confidentialité ou des raisons technique, <a href="https://owncloud.org/">Owncloud</a> a énormément de qualités comparé à Dropbox ou Google drive. Déjà car la limite de taille des données est celle du serveur, ensuite car des applications sous linux permettent de synchroniser des dossiers et enfin car il existe une multitude d’addons qui permettent de sauvegarder ses mots de passe, jouer de la musique, envoyer des notifs sur Slack etc.</p>
+
+<p>La mise en production d’une instance Owncloud se fait en 5 minutes montre en main, à condition de connaître un minimum Docker.</p>
+
+<h2 id=nginxproxy>Nginx/proxy</h2>
+
+<p>Nous allons commencer par une petite digression. Avant quand on avait plusieurs “virtual host” qui pointaient sur une machine, on mettait un front-end apache et c’était plus ou moins la galère. Maintenant, il suffit de lancer cette commande une fois :</p>
+
+<pre><code>docker run --restart=always --name nginx -d -p 80:80 -p 443:443 -v /docker/vhost.d:/etc/nginx/vhost.d:ro -v /var/run/docker.sock:/tmp/docker.sock:ro jwilder/nginx-proxy
+</code></pre>
+
+
+                </div>
+                <div class=fade-content>
+                </div>
+                <div class=more>
+                    <a href=/2015/09/09/OwncloudDocker.html><i class="fa fa-arrow-circle-o-right"></i> Lire la suite</a>
+                </div>
+            </div>
+        </article>
+        
+        <article class="col-lg-4 col-md-6 col-sm-12">
             <div onclick="window.location.href='/2015/07/16/GITSVN.html' ;  return false" style="cursor: pointer">
             <div class=cover style=background-image:url(/images/banner/git-banner.png)>
                     <div class=date>posté le 16/07/2015 par Florian</div>
@@ -194,90 +228,6 @@ Nous nous sommes donc mis à déployer un dépôt privé, authentifié par utili
                 </div>
                 <div class=more>
                     <a href=/2015/06/25/InstallDockerRegistry.html><i class="fa fa-arrow-circle-o-right"></i> Lire la suite</a>
-                </div>
-            </div>
-        </article>
-        
-        <article class="col-lg-4 col-md-6 col-sm-12">
-            <div onclick="window.location.href='/2015/06/10/CompletionJavascriptDansIntelliJ.html' ;  return false" style="cursor: pointer">
-            <div class=cover style=background-image:url(/images/banner/ct-banner.png)>
-                    <div class=date>posté le 10/06/2015 par Cedric</div>
-                </div>
-                <h2><a href=/2015/06/10/CompletionJavascriptDansIntelliJ.html>Améliorer la complétion JavaScript d'IntelliJ IDEA</a></h2><ul class=tags>
-                    
-                    <li>IntelliJ</li>
-                    
-                    <li>JavaScript</li>
-                    
-                    <li>tip</li>
-                    
-                </ul>
-                <div class=content>
-                    <h1 id=intellij-idea>IntelliJ IDEA</h1>
-<p>Tout le monde sait que nous adorons utiliser IntelliJ IDEA pour développer. 
-Peu importe le langage IntelliJ est vraiment un excellent IDE qui nous permet d’être efficaces quasiment instantanément.</p>
-
-<p>Par contre, quand on arrive dans le monde du JavaScript on peut avoir quelques soucis pour être 
-dans un environnement suffisamment typé où l’on sait ce qu’on va faire sans se poser trop de questions, 
-ou tout simplement pouvoir bénéficier de l’aide de l’IDE pour savoir de quelles méthodes on dispose.</p>
-
-
-
-<h2 id=javascript-dans-intellij>JavaScript dans IntelliJ</h2>
-<p>Par défaut, IntelliJ est déjà suffisament malin pour scanner les fichiers du workspace 
-et trouver de la complétion en automatique (ainsi que la JSDoc).</p>
-
-<p>Cependant, ce mécanisme ne marche pas à tous les coups : </p>
-
-<ul>
-  <li>vous utilisez des versions sur des CDN</li>
-  <li>vous avez des versions minifiées dans votre workspace</li>
-  <li>vous utilisez des outils qui impliquent certains framework (karma / jasmine / mocha…)</li>
-</ul>
-
-<h2 id=faire-comprendre-le-javascript--intellij>Faire comprendre le JavaScript à IntelliJ</h2>
-<p>Pour réussir à obtenir une complétion correcte vous avez plusieurs solutions :</p>
-
-<ul>
-  <li>pour les CDN, vous pouvez demander à IntelliJ de récupérer la ressource (il ne la mettra pas dans votre projet pour autant)</li>
-</ul>
-
-<div style=text-align:center;margin-bottom:50px>
-    <a href=/images/2015-06-JavaScriptIntelliJ/cdndl.png data-lightbox=group-1 title="Le téléchargement des fichiers sur un CDN [alt+entrée]" class=inlineBoxes>
-        <img class=medium src=/images/2015-06-JavaScriptIntelliJ/cdndl.png alt="Le téléchargement des fichiers sur un CDN [alt+entrée]">
-    </a>
-</div>
-
-<ul>
-  <li>pour les versions minifiées, vous pouvez ajouter manuellement les bibliothèques dans la fenêtre de paramètres (Languages &amp; Frameworks &gt; JavaScript &gt; Libraries)</li>
-</ul>
-
-<div style=text-align:center;margin-bottom:50px>
-    <a href=/images/2015-06-JavaScriptIntelliJ/settings.png data-lightbox=group-1 title="La fenêtre des paramètres" class=inlineBoxes>
-        <img class=medium src=/images/2015-06-JavaScriptIntelliJ/settings.png alt="La fenêtre des paramètres">
-    </a>
-</div>
-
-<h2 id=la-mega-astuce>LA mega astuce</h2>
-<p>IntelliJ est capable de comprendre le TypeScript, et des gens ont eu la bonne idée de regrouper des définitions TypeScript pour
-la plupart des librairies les plus utilisées dans un dépôt Github : <a href=http://www.definitelytyped.org>DefinitelyTyped</a>.
-Dans la fenêtre de création de librairie JavaScript, dans la partie qui permet le téléchargement d’une librairie, 
-sélectionnez la source “TypeScript Community Stubs”, vous verrez qu’il y a beaucoup de librairies que vous utilisez au quotidien.</p>
-
-<p>Avec ceci, vous aurez une complétion efficace, avec le typage offert par TypeScript (dans la mesure du possible), 
-ainsi qu’une documentation précise (pour la plupart des librairies).</p>
-
-<div style=text-align:center;margin-bottom:50px>
-    <a href=/images/2015-06-JavaScriptIntelliJ/example.png data-lightbox=group-1 title="Jasmine est bien connu par IntelliJ" class=inlineBoxes>
-        <img class=medium src=/images/2015-06-JavaScriptIntelliJ/example.png alt="Jasmine est bien connu par IntelliJ">
-    </a>
-</div>
-
-                </div>
-                <div class=fade-content>
-                </div>
-                <div class=more>
-                    <a href=/2015/06/10/CompletionJavascriptDansIntelliJ.html><i class="fa fa-arrow-circle-o-right"></i> Lire la suite</a>
                 </div>
             </div>
         </article>
