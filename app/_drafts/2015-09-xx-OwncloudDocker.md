@@ -68,3 +68,10 @@ Puis une image owncloud avec des volumes pour les fichiers que l'on va sauvegard
 Une fois les variables modifiées selon notre volonté, il faut lancer les commandes `docker-compose build` suivi de `compose-docker up -d` et aller sur owncloud.hostname.com pour finir l'installation.
 
 L'article est déjà fini, comme je le disais, ça se fait en un rien de temps. Mais si cela a été aussi rapide, c'est parce que Owncloud a une image très bien faîtes donc merci Josh de l'avoir mise à disposition [https://github.com/jchaney/owncloud](https://github.com/jchaney/owncloud)
+
+<div style="text-align:center;margin-bottom:50px">
+    <a href="/images/postOwncloudDocker/owncloud.png" data-lightbox="group-1" title="Owncloud site et appli" class="inlineBoxes">
+        <img class="medium" src="/images/postOwncloudDocker/owncloud.png" alt="Owncloud site et appli"/>
+    </a>
+</div>
+
