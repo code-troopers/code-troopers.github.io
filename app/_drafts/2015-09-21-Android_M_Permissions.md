@@ -110,7 +110,7 @@ Puis écouter le choix de l'utilisateur, dans l'activité ou le fragment corresp
 
 ### Demander plusieurs permissions en même temps
 Même si cela est déconseillé, il peut arriver d'avoir besoin de plusieurs permissions lors de la même action utilisateur.
-Pour cela il suffit de passer plusieurs permissions dans le tableau passé en paramètre du resestPermission
+Pour cela il suffit de passer plusieurs permissions dans le tableau passé en paramètre du requestPermission
 
     ActivityCompat.requestPermissions(MainActivity.this,
                                       new String[]{Manifest.permission.READ_CONTACTS, Manifest.permission.ACCESS_FINE_LOCATION},
