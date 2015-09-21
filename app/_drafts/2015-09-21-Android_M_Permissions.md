@@ -2,7 +2,7 @@
 layout: post
 title: "Android M - Nouvelle gestion de permission"
 author: Florian
-cover: android5-banner
+cover: androidPermission-banner
 tags: [Android, Permission]
 ---
 
@@ -30,11 +30,11 @@ Avant de commencer à coder, une dernière chose à garder à l'esprit c'est que
  Il faudra donc adapter la gestion de ces permissions à cette éventualité.
 
 <div style="text-align:center;margin-bottom:50px">
-    <a href="/images/postAndroidPermission/p6.png" data-lightbox="group-1" title="Le téléchargement des fichiers sur un CDN [alt+entrée]" class="inlineBoxes">
-        <img class="medium" src="/images/postAndroidPermission/p6.png" alt="Le téléchargement des fichiers sur un CDN [alt+entrée]"/>
+    <a href="/images/2015-09-AndroidMPermissions/p6.png" data-lightbox="group-1" title="Le téléchargement des fichiers sur un CDN [alt+entrée]" class="inlineBoxes">
+        <img class="medium" src="/images/2015-09-AndroidMPermissions/p6.png" alt="Le téléchargement des fichiers sur un CDN [alt+entrée]"/>
     </a>
-    <a href="/images/postAndroidPermission/p5.png" data-lightbox="group-1" title="Le téléchargement des fichiers sur un CDN [alt+entrée]" class="inlineBoxes">
-            <img class="medium" src="/images/postAndroidPermission/p5.png" alt="Le téléchargement des fichiers sur un CDN [alt+entrée]"/>
+    <a href="/images/2015-09-AndroidMPermissions/p5.png" data-lightbox="group-1" title="Le téléchargement des fichiers sur un CDN [alt+entrée]" class="inlineBoxes">
+            <img class="medium" src="/images/2015-09-AndroidMPermissions/p5.png" alt="Le téléchargement des fichiers sur un CDN [alt+entrée]"/>
     </a>
 </div>
 
@@ -88,8 +88,8 @@ Si la permission n'est pas accordée, il va falloir la demander, de préférence
                                       
                                       
 <div style="text-align:center;margin-bottom:50px">
-    <a href="/images/postAndroidPermission/p1.png" data-lightbox="group-1" title="Le téléchargement des fichiers sur un CDN [alt+entrée]" class="inlineBoxes">
-        <img class="medium" src="/images/postAndroidPermission/p1.png" alt="Le téléchargement des fichiers sur un CDN [alt+entrée]"/>
+    <a href="/images/2015-09-AndroidMPermissions/p1.png" data-lightbox="group-1" title="Le téléchargement des fichiers sur un CDN [alt+entrée]" class="inlineBoxes">
+        <img class="medium" src="/images/2015-09-AndroidMPermissions/p1.png" alt="Le téléchargement des fichiers sur un CDN [alt+entrée]"/>
     </a>
 </div>
 Puis écouter le choix de l'utilisateur, dans l'activité ou le fragment correspondant
@@ -117,11 +117,11 @@ Pour cela il suffit de passer plusieurs permissions dans le tableau passé en pa
                                       REQUEST_CODE_TWO);
 
 <div style="text-align:center;margin-bottom:50px">
-    <a href="/images/postAndroidPermission/p2.png" data-lightbox="group-1" title="Le téléchargement des fichiers sur un CDN [alt+entrée]" class="inlineBoxes">
-        <img class="medium" src="/images/postAndroidPermission/p2.png" alt="Le téléchargement des fichiers sur un CDN [alt+entrée]"/>
+    <a href="/images/2015-09-AndroidMPermissions/p2.png" data-lightbox="group-1" title="Le téléchargement des fichiers sur un CDN [alt+entrée]" class="inlineBoxes">
+        <img class="medium" src="/images/2015-09-AndroidMPermissions/p2.png" alt="Le téléchargement des fichiers sur un CDN [alt+entrée]"/>
     </a>
-<a href="/images/postAndroidPermission/p3.png" data-lightbox="group-1" title="Le téléchargement des fichiers sur un CDN [alt+entrée]" class="inlineBoxes">
-        <img class="medium" src="/images/postAndroidPermission/p3.png" alt="Le téléchargement des fichiers sur un CDN [alt+entrée]"/>
+<a href="/images/2015-09-AndroidMPermissions/p3.png" data-lightbox="group-1" title="Le téléchargement des fichiers sur un CDN [alt+entrée]" class="inlineBoxes">
+        <img class="medium" src="/images/2015-09-AndroidMPermissions/p3.png" alt="Le téléchargement des fichiers sur un CDN [alt+entrée]"/>
     </a>
 </div>
 
@@ -151,8 +151,8 @@ Cela se fera avec la méthode shouldShowRequestPermissionRationale
     
                                       
 <div style="text-align:center;margin-bottom:50px">
-    <a href="/images/postAndroidPermission/p4.png" data-lightbox="group-1" title="Le téléchargement des fichiers sur un CDN [alt+entrée]" class="inlineBoxes">
-        <img class="medium" src="/images/postAndroidPermission/p4.png" alt="Le téléchargement des fichiers sur un CDN [alt+entrée]"/>
+    <a href="/images/2015-09-AndroidMPermissions/p4.png" data-lightbox="group-1" title="Le téléchargement des fichiers sur un CDN [alt+entrée]" class="inlineBoxes">
+        <img class="medium" src="/images/2015-09-AndroidMPermissions/p4.png" alt="Le téléchargement des fichiers sur un CDN [alt+entrée]"/>
     </a>
 </div>
 
