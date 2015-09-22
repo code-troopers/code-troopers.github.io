@@ -30,7 +30,7 @@ Avant de commencer à coder, une dernière chose à garder à l'esprit c'est que
  Il faudra donc adapter la gestion de ces permissions à cette éventualité.
 
 <div style="text-align:center;margin-bottom:50px">
-œ    <a href="/images/2015-09-AndroidMPermissions/p6.png" data-lightbox="group-1" title="Écran App Info" class="inlineBoxes">
+    <a href="/images/2015-09-AndroidMPermissions/p6.png" data-lightbox="group-1" title="Écran App Info" class="inlineBoxes">
         <img class="medium" src="/images/2015-09-AndroidMPermissions/p6.png" alt="Écran App Info"/>
     </a>
     <a href="/images/2015-09-AndroidMPermissions/p5.png" data-lightbox="group-1" title="Écran App Info : détail des permissions"  class="inlineBoxes">
