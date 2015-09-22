@@ -32,7 +32,7 @@ Terminé la popup qui demande les 10 autorisations au moment du téléchargement
  Il faudra donc adapter la gestion de ces permissions à cette éventualité.&lt;/p&gt;
 
 &lt;div style=&quot;text-align:center;margin-bottom:50px&quot;&gt;
-œ    &lt;a href=&quot;/images/2015-09-AndroidMPermissions/p6.png&quot; data-lightbox=&quot;group-1&quot; title=&quot;Écran App Info&quot; class=&quot;inlineBoxes&quot;&gt;
+    &lt;a href=&quot;/images/2015-09-AndroidMPermissions/p6.png&quot; data-lightbox=&quot;group-1&quot; title=&quot;Écran App Info&quot; class=&quot;inlineBoxes&quot;&gt;
         &lt;img class=&quot;medium&quot; src=&quot;/images/2015-09-AndroidMPermissions/p6.png&quot; alt=&quot;Écran App Info&quot; /&gt;
     &lt;/a&gt;
     &lt;a href=&quot;/images/2015-09-AndroidMPermissions/p5.png&quot; data-lightbox=&quot;group-1&quot; title=&quot;Écran App Info : détail des permissions&quot; class=&quot;inlineBoxes&quot;&gt;
