@@ -13,7 +13,7 @@ Terminé la popup qui demande les 10 autorisations au moment du téléchargement
 
 ### Permissions irrévocables
 Puisqu'il va falloir demander à l'utilisateur pour chaque permission, Google a décidé que certaines anciennes permissions n'auront plus besoin d'être demandées,
- ce sont les `Normal Permissions`. Il s'agit des permissions qui n'engendrent pas de risques sur la vie privée ou sur la sécurité de l'utilisateur comme c'est par exemple le cas pour l'accès à internet ou l'accès au vibreur :
+ ce sont les `Normal Permissions`. Il s'agit des permissions qui n'engendrent pas de risque sur la vie privée ou sur la sécurité de l'utilisateur comme c'est par exemple le cas pour l'accès à internet ou l'accès au vibreur :
  la liste complète est disponible [ici](https://developer.android.com/preview/features/runtime-permissions.html#normal).
  
 
