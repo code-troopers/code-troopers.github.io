@@ -7,6 +7,180 @@
                 <atom:link href="http://code-troopers.com/feed.xml" rel="self" type="application/rss+xml"/>
                 
                         <item>
+                                <title>Android M - Nouvelle gestion de permission</title>
+                                <description>&lt;h1 id=&quot;nouvelle-approche&quot;&gt;Nouvelle approche&lt;/h1&gt;
+
+&lt;p&gt;Avec la prochaine release d’&lt;code&gt;Android 6.0 Marshmallow&lt;/code&gt;, il va y avoir du changement au niveau de la gestion des permissions.
+Terminé la popup qui demande les 10 autorisations au moment du téléchargement de l’appli, maintenant les développeurs vont pouvoir demander les permissions au moment où elles seront nécessaires.&lt;/p&gt;
+
+&lt;h3 id=&quot;permissions-irrvocables&quot;&gt;Permissions irrévocables&lt;/h3&gt;
+&lt;p&gt;Puisqu’il va falloir demander à l’utilisateur pour chaque permission, Google à décidé que certaines anciennes permissions n’auront plus besoin d’être demandées,
+ ce sont les &lt;code&gt;Normal Permissions&lt;/code&gt;. Il s’agit des permissions qui n’engendrent pas de risques sur la vie privée ou sur la sécurité de l’utilisateur comme c’est par exemple le cas pour l’accès à internet ou l’accès au vibreur :
+ la liste complète est disponible &lt;a href=&quot;https://developer.android.com/preview/features/runtime-permissions.html#normal&quot;&gt;ici&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;guidelines&quot;&gt;Guidelines&lt;/h3&gt;
+&lt;p&gt;Pour ce qui est de l’UX, Google a fait plusieurs recommandations dont certaines sont plus importantes que d’autre, à mon avis :&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Ne demander une permisission qu’au moment où l’on en a vraiment besoin, ce qui implique de ne pas avoir un popup au lancement qui va demander toutes les permissions ;&lt;/li&gt;
+  &lt;li&gt;Faire le maximum pour ne pas gâcher l’experience utilisateur même s’il refuse une permission : donc prévoir un mode dégradé autant que possible ;&lt;/li&gt;
+  &lt;li&gt;Utiliser les méthodes disponibles dans appcompat plutôt que celles du sdk de base.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;mise-en-pratique&quot;&gt;Mise en pratique&lt;/h1&gt;
+&lt;p&gt;Avant de commencer à coder, une dernière chose à garder à l’esprit c’est que l’utilisateur peut à tout moment révoquer une permission via le détail de l’application (même une fois que l’appli est lancée et tourne en background).
+ Il faudra donc adapter la gestion de ces permissions à cette éventualité.&lt;/p&gt;
+
+&lt;div style=&quot;text-align:center;margin-bottom:50px&quot;&gt;
+    &lt;a href=&quot;/images/2015-09-AndroidMPermissions/p6.png&quot; data-lightbox=&quot;group-1&quot; title=&quot;Le téléchargement des fichiers sur un CDN [alt+entrée]&quot; class=&quot;inlineBoxes&quot;&gt;
+        &lt;img class=&quot;medium&quot; src=&quot;/images/2015-09-AndroidMPermissions/p6.png&quot; alt=&quot;Le téléchargement des fichiers sur un CDN [alt+entrée]&quot; /&gt;
+    &lt;/a&gt;
+    &lt;a href=&quot;/images/2015-09-AndroidMPermissions/p5.png&quot; data-lightbox=&quot;group-1&quot; title=&quot;Le téléchargement des fichiers sur un CDN [alt+entrée]&quot; class=&quot;inlineBoxes&quot;&gt;
+            &lt;img class=&quot;medium&quot; src=&quot;/images/2015-09-AndroidMPermissions/p5.png&quot; alt=&quot;Le téléchargement des fichiers sur un CDN [alt+entrée]&quot; /&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;ne-pas-implmenter-les-nouvelles-permissions&quot;&gt;Ne pas implémenter les nouvelles permissions&lt;/h2&gt;
+&lt;p&gt;Chose importante à savoir, vous n’êtes pas obligés d’implémenter cette nouvelle gestion de permission.
+En effet, puisqu’elle demande du développoment supplémentaire, de nombreuses applis ne seront pas mises à jour et garderont donc l’ancien fonctionnement. 
+Si c’est ce que vous souhaitez, et pour ne pas nuire au bon fonctionnement de votre appli, il vous suffit de ne pas cibler le dernier &lt;code&gt;sdk&lt;/code&gt; dans votre build.gradle et de rester sur le &lt;code&gt;22&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;implmenter-les-nouvelles-permissions&quot;&gt;Implémenter les nouvelles permissions&lt;/h2&gt;
+&lt;p&gt;Pour cela, 3 étapes sont nécessaires, principalement disponibles dans le sdk 23 ainsi que dans la lib appcompat :&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code&gt;requestPermissions()&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;onRequestPermissionsResult()&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;shouldShowRequestPermissionRationale()&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;buildgradle&quot;&gt;Build.gradle&lt;/h3&gt;
+&lt;p&gt;Permière étape, cibler la dernier version du &lt;code&gt;sdk&lt;/code&gt; : &lt;code&gt;23&lt;/code&gt;.
+Et en bonus, importer appcompat pour bénéficier des méthodes helpers de Google.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;compileSdkVersion 23
+defaultConfig {
+    targetSdkVersion 23
+}
+dependencies {
+    compile 'com.android.support:appcompat-v7:23.0.1'
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;androidmanifestxml&quot;&gt;AndroidManifest.xml&lt;/h3&gt;
+&lt;p&gt;Ensuite, déclarer les permissions désirées dans l’application, normalement il n’y a pas de changements par rapport à votre configuration actuelle&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;uses-permission android:name=&quot;android.permission.CAMERA&quot; /&amp;gt;
+&amp;lt;uses-permission android:name=&quot;android.permission.READ_CONTACTS&quot; /&amp;gt;
+&amp;lt;uses-permission android:name=&quot;android.permission.ACCESS_FINE_LOCATION&quot; /&amp;gt;
+&amp;lt;uses-permission android:name=&quot;android.permission.SEND_SMS&quot; /&amp;gt;
+&amp;lt;uses-permission android:name=&quot;android.permission.READ_EXTERNAL_STORAGE&quot; /&amp;gt;
+&amp;lt;uses-permission android:name=&quot;android.permission.CALL_PHONE&quot; /&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;N’oubliez pas d’y déclarer aussi les &lt;code&gt;Normal Permissions&lt;/code&gt; qui, bien qu’elles soient automatiquement accordées, ont toujours besoin d’être déclarées.&lt;/p&gt;
+
+&lt;h3 id=&quot;dans-une-activit&quot;&gt;Dans une activité&lt;/h3&gt;
+&lt;p&gt;Dans un premier temps il faut vérifier si une permission est déjà accordée ou non&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;ContextCompat.checkSelfPermission(context, Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Si la permission n’est pas accordée, il va falloir la demander, de préférence lors d’une action utilisateur, par exemple au click sur un bouton&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;ActivityCompat.requestPermissions(MainActivity.this,
+                                  new String[]{Manifest.permission.CAMERA},
+                                  REQUEST_CODE_ONE);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;div style=&quot;text-align:center;margin-bottom:50px&quot;&gt;
+    &lt;a href=&quot;/images/2015-09-AndroidMPermissions/p1.png&quot; data-lightbox=&quot;group-1&quot; title=&quot;Le téléchargement des fichiers sur un CDN [alt+entrée]&quot; class=&quot;inlineBoxes&quot;&gt;
+        &lt;img class=&quot;medium&quot; src=&quot;/images/2015-09-AndroidMPermissions/p1.png&quot; alt=&quot;Le téléchargement des fichiers sur un CDN [alt+entrée]&quot; /&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;Puis écouter le choix de l’utilisateur, dans l’activité ou le fragment correspondant&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;@Override
+public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
+    switch (requestCode) {
+        case REQUEST_CODE_ONE: {
+            if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                Toast.makeText(this, &quot;Permission granted&quot;, Toast.LENGTH_LONG).show();
+            } else {
+                Toast.makeText(this, &quot;Permission denied&quot;, Toast.LENGTH_LONG).show();
+            }
+            return;
+        }
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;demander-plusieurs-permissions-en-mme-temps&quot;&gt;Demander plusieurs permissions en même temps&lt;/h3&gt;
+&lt;p&gt;Même si cela est déconseillé, il peut arriver d’avoir besoin de plusieurs permissions lors de la même action utilisateur.
+Pour cela il suffit de passer plusieurs permissions dans le tableau passé en paramètre du requestPermission&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;ActivityCompat.requestPermissions(MainActivity.this,
+                                  new String[]{Manifest.permission.READ_CONTACTS, Manifest.permission.ACCESS_FINE_LOCATION},
+                                  REQUEST_CODE_TWO);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;div style=&quot;text-align:center;margin-bottom:50px&quot;&gt;
+    &lt;a href=&quot;/images/2015-09-AndroidMPermissions/p2.png&quot; data-lightbox=&quot;group-1&quot; title=&quot;Le téléchargement des fichiers sur un CDN [alt+entrée]&quot; class=&quot;inlineBoxes&quot;&gt;
+        &lt;img class=&quot;medium&quot; src=&quot;/images/2015-09-AndroidMPermissions/p2.png&quot; alt=&quot;Le téléchargement des fichiers sur un CDN [alt+entrée]&quot; /&gt;
+    &lt;/a&gt;
+&lt;a href=&quot;/images/2015-09-AndroidMPermissions/p3.png&quot; data-lightbox=&quot;group-1&quot; title=&quot;Le téléchargement des fichiers sur un CDN [alt+entrée]&quot; class=&quot;inlineBoxes&quot;&gt;
+        &lt;img class=&quot;medium&quot; src=&quot;/images/2015-09-AndroidMPermissions/p3.png&quot; alt=&quot;Le téléchargement des fichiers sur un CDN [alt+entrée]&quot; /&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;expliquer--lutilisateur-pourquoi-il-doit-autoriser-une-permission&quot;&gt;Expliquer à l’utilisateur pourquoi il doit autoriser une permission&lt;/h3&gt;
+&lt;p&gt;Il arrivera sûrement que certains utilsateurs refusent des permissions et que cela détériore l’expérience utilisateur sur l’application. Pour cela, Google fourni un helper pour savoir ou non s’il faut afficher un message d’information à l’utilisateur (graphique).
+Cela se fera avec la méthode shouldShowRequestPermissionRationale&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;if (shouldShowRequestPermissionRationale(Manifest.permission.CALL_PHONE)) {
+     new AlertDialog.Builder(MainActivity.this)
+                               .setMessage(&quot;Custom message to explain why you need a permission&quot;)
+                               .setPositiveButton(&quot;OK&quot;, new DialogInterface.OnClickListener() {
+                                   @Override
+                                   public void onClick(DialogInterface dialog, int which) {
+                                       ActivityCompat.requestPermissions(MainActivity.this,
+                                               new String[]{Manifest.permission.CALL_PHONE},
+                                               REQUEST_CODE_FIVE);
+                                   }
+                               })
+                               .setNegativeButton(&quot;Cancel&quot;, null)
+                               .create()
+                               .show();
+}
+ActivityCompat.requestPermissions(MainActivity.this,
+                                  new String[]{Manifest.permission.CALL_PHONE},
+                                  REQUEST_CODE_FIVE);
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;div style=&quot;text-align:center;margin-bottom:50px&quot;&gt;
+    &lt;a href=&quot;/images/2015-09-AndroidMPermissions/p4.png&quot; data-lightbox=&quot;group-1&quot; title=&quot;Le téléchargement des fichiers sur un CDN [alt+entrée]&quot; class=&quot;inlineBoxes&quot;&gt;
+        &lt;img class=&quot;medium&quot; src=&quot;/images/2015-09-AndroidMPermissions/p4.png&quot; alt=&quot;Le téléchargement des fichiers sur un CDN [alt+entrée]&quot; /&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;le-pige--viter&quot;&gt;Le piège à éviter&lt;/h3&gt;
+&lt;p&gt;Penser à vérifier régulièrement l’état des permissions dans le &lt;em&gt;onResume()&lt;/em&gt; de vos Activity ou Fragment, étant donné que l’utilsateur peut à tout moment les révoquer cela permettra d’éviter de nombreux crashs.&lt;/p&gt;
+
+&lt;h2 id=&quot;resources&quot;&gt;Resources&lt;/h2&gt;
+&lt;p&gt;Code source d’exemple : &lt;a href=&quot;https://github.com/fchauveau/android-permissions-sample&quot;&gt;https://github.com/fchauveau/android-permissions-sample&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Doc développeur Android : &lt;a href=&quot;https://developer.android.com/preview/features/runtime-permissions.html&quot;&gt;https://developer.android.com/preview/features/runtime-permissions.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Guidelines Android : &lt;a href=&quot;https://developer.android.com/preview/features/runtime-permissions.html&quot;&gt;http://www.google.fr/design/spec/patterns/permissions.html&lt;/a&gt;&lt;/p&gt;
+
+</description>
+                                <pubDate>Tue, 22 Sep 2015 00:00:00 +0200</pubDate>
+                                <link>http://code-troopers.com/2015/09/22/Android_M_Permissions.html</link>
+                                <guid isPermaLink="true">http://code-troopers.com/2015/09/22/Android_M_Permissions.html</guid>
+                        </item>
+                
+                        <item>
                                 <title>Owncloud : solution de cloud en 5 min avec Docker</title>
                                 <description>&lt;p&gt;Que ce soit pour des raisons politique de confidentialité ou des raisons technique, &lt;a href=&quot;https://owncloud.org/&quot;&gt;Owncloud&lt;/a&gt; a énormément de qualités comparé à Dropbox ou Google drive. Déjà car la limite de taille des données est celle du serveur, ensuite car des applications sous linux permettent de synchroniser des dossiers et enfin car il existe une multitude d’addons qui permettent de sauvegarder ses mots de passe, jouer de la musique, envoyer des notifs sur Slack etc.&lt;/p&gt;
 
@@ -925,76 +1099,6 @@ Le site s’est parfaitement prêté à l’exercice avec un grand espace pour l
                                 <pubDate>Tue, 24 Mar 2015 00:00:00 +0100</pubDate>
                                 <link>http://code-troopers.com/2015/03/24/StartupWeekend.html</link>
                                 <guid isPermaLink="true">http://code-troopers.com/2015/03/24/StartupWeekend.html</guid>
-                        </item>
-                
-                        <item>
-                                <title>Suivre l'humeur de son équipe avec TeamMood</title>
-                                <description>&lt;p&gt;Depuis bientôt 6 mois l’équipe des Code-Troopers utilise &lt;a href=&quot;https://www.teammood.com/&quot;&gt;TeamMood&lt;/a&gt; pour suivre son bonheur au quotidien. Retour sur l’utilisation d’un outil fort sympathique. &lt;/p&gt;
-
-&lt;p&gt;Si l’on remonte quelques années en arrière, lorsque nous travaillions encore tous les 7 pour SRMvision, 
-nous avions expérimenté un outil sur un grand tableau blanc pour connaître notre état d’esprit à la fin de chaque journée de travail. 
-Nous l’appelions à l’époque &lt;code&gt;happiness chart&lt;/code&gt; (d’autres l’appellent aussi &lt;code&gt;niko-niko&lt;/code&gt;).
-Toute l’équipe a rapidement adhéré au principe, car, dans la façon dont nous avions établi les règles, nous pouvions dessiner ce que l’on souhaitait dans notre case, seule la couleur importait : &lt;/p&gt;
-
-&lt;!--break--&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Vert = Content ; &lt;/li&gt;
-  &lt;li&gt;Bleu = Neutre ;&lt;/li&gt;
-  &lt;li&gt;Rouge = Pas content.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;On avait régulièrement droit à toutes sortes de dessins, du simple smiley au gribouillis le plus improbable. 
-(Je suis assez déçu de n’avoir retrouvé aucune photo de ces grands moments d’art)&lt;/p&gt;
-
-&lt;p&gt;Le problème que nous avions relevé alors était principalement l’assiduité de remplissage. 
-En effet, même si pour partir le soir on passait dans la salle où se trouvait le tableau à remplir, on n’y pensait pas forcément (trop pressé de rentrer chez soi). 
-Il n’était donc pas rare qu’il y ait des trous, comblés sans conviction le lendemain matin.&lt;/p&gt;
-
-&lt;p&gt;C’est là où &lt;a href=&quot;https://www.teammood.com/&quot;&gt;TeamMood&lt;/a&gt; entre en action avec une grosse valeur ajoutée : l’envoi d’un mail quotidien ! 
-Plus d’excuse pour oublier de voter, il suffit de cliquer sur le lien qui correspond à notre humeur du jour dans le mail reçu, 
-c’est super simple et rapide, ça marche par téléphone, ça peut se faire dans le bus sur le trajet du retour.
-Et si on se plante, parce qu’on a des gros doigts sur un petit écran, on peut revoter dans la foulée, ça permet d’écraser son propre vote du jour.&lt;/p&gt;
-
-&lt;div style=&quot;text-align:center;margin-bottom:50px&quot;&gt;
-    &lt;a href=&quot;/images/postTeammood/mailBig.png&quot; data-lightbox=&quot;group-1&quot; title=&quot;Mail du vote quotidien&quot; class=&quot;inlineBoxes&quot;&gt;
-        &lt;img class=&quot;medium&quot; src=&quot;/images/postTeammood/mailBig.png&quot; alt=&quot;Mail du vote quotidien&quot; /&gt;
-    &lt;/a&gt;
-    &lt;a href=&quot;/images/postTeammood/mailPhone.png&quot; data-lightbox=&quot;group-1&quot; title=&quot;Mail du vote quotidien sur téléphone&quot; class=&quot;inlineBoxes&quot;&gt;
-        &lt;img class=&quot;medium&quot; src=&quot;/images/postTeammood/mailPhone.png&quot; alt=&quot;Mail du vote quotidien sur téléphone&quot; /&gt;
-    &lt;/a&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Ensuite on retombe sur le fonctionnement souhaité : en fonction de son vote, on voit apparaître son &lt;em&gt;mood&lt;/em&gt;  avec une palette de couleurs et de smileys simples à comprendre en un coup d’œil.
-Avec un peu d’historique on peut aussi apprécier via des stats simples l’évolution de l’humeur de l’équipe sur du plus long terme.&lt;/p&gt;
-
-&lt;div style=&quot;text-align:center;margin-bottom:50px&quot;&gt;
-    &lt;a href=&quot;/images/postTeammood/quotidien.png&quot; data-lightbox=&quot;group-2&quot; title=&quot;&quot; class=&quot;inlineBoxes&quot;&gt;
-        &lt;img class=&quot;medium&quot; src=&quot;/images/postTeammood/quotidien.png&quot; alt=&quot;&quot; /&gt;
-    &lt;/a&gt;
-    &lt;a href=&quot;/images/postTeammood/stat.png&quot; data-lightbox=&quot;group-2&quot; title=&quot;&quot; class=&quot;inlineBoxes&quot;&gt;
-        &lt;img class=&quot;medium&quot; src=&quot;/images/postTeammood/stat.png&quot; alt=&quot;&quot; /&gt;
-    &lt;/a&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Finalement il ne reste plus qu’à exploiter ces données. Et là, libre à chacun (et à chaque équipe) de l’interpréter comme il le souhaite. 
-De notre côté nous avons expérimenté plusieurs façons de faire : 
-une revue en rétro de fin de sprint, une alerte au daily le lendemain d’un jour…
-Cela demande plus ou moins de temps afin de trouver une méthode efficace pour tirer bénéfice de ces informations.
-En général, plus on attend plus le souvenir s’estompe et donc le problème est amoindri, ce qui, à mon avis, n’est pas une bonne chose.
-Mais là c’est vraiment chacun ses goûts.&lt;/p&gt;
-
-&lt;p&gt;Que dire de plus ?
-&lt;a href=&quot;https://www.teammood.com/&quot;&gt;TeamMood&lt;/a&gt; est un produit français (un de plus) développé à Toulouse par &lt;a href=&quot;https://twitter.com/ndeverge&quot;&gt;Nicolas Deverge&lt;/a&gt;.
-C’est encore en bêta, mais ça fonctionne parfaitement (aucun problème à signaler depuis qu’on l’utilise).
-Je sais que la roadmap est bien remplie, mais la prochaine fonctionnalité qu’on attend c’est la gestion des congés/absences, histoire de ne pas être dérangé pendant les vacances.&lt;/p&gt;
-
-&lt;p&gt;Conclusion : 
-je le recommande à toutes les équipes qui sont prêtes à se prendre en main pour faire bouger les choses afin d’être heureuses au quotidien.&lt;/p&gt;
-</description>
-                                <pubDate>Wed, 11 Feb 2015 00:00:00 +0100</pubDate>
-                                <link>http://code-troopers.com/2015/02/11/Teammood.html</link>
-                                <guid isPermaLink="true">http://code-troopers.com/2015/02/11/Teammood.html</guid>
                         </item>
                 
         </channel>

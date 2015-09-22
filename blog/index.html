@@ -16,12 +16,12 @@
         <meta property=twitter:domain content=http://code-troopers.com>
         
         
-        <meta property=twitter:description content="Le blog posté le 09/09/2015 par Matthieu Owncloud : solution de cloud en 5 min avec Docker Docker Owncloud Que...">
+        <meta property=twitter:description content="Le blog posté le 22/09/2015 par Florian Android M - Nouvelle gestion de permission Android Permission Nouvelle approche Avec la...">
         
         
         
-        <meta name=description content="Le blog posté le 09/09/2015 par Matthieu Owncloud : solution de cloud en 5 min avec Docker Docker Owncloud Que ce soit pour des raisons politique de confidentialité ou des raisons technique, Owncloud a énormément de qualités comparé à Dropbox ou Google drive. Déjà car la limite de taille des données est celle du serveur, ensuite car des applications sous linux permettent de synchroniser des dossiers et enfin car il existe une multitude d’addons qui permettent de sauvegarder ses mots de passe, jouer de la musique, envoyer des notifs sur Slack etc. La mise en production d’une instance Owncloud se fait en 5 minutes montre en main, à condition de connaître un minimum Docker. Nginx/proxy Nous allons commencer par une petite digression. Avant quand on avait plusieurs “virtual host” qui pointaient sur une machine, on mettait un front-end apache et c’était plus ou moins la galère. Maintenant, il suffit de lancer cette commande une fois : docker run --restart=always --name nginx -d -p 80:80 -p 443:443 -v /docker/vhost.d:/etc/nginx/vhost.d:ro -v /var/run/docker.sock:/tmp/docker.sock:ro jwilder/nginx-proxy Lire la suite posté le 16/07/2015 par Florian GIT-SVN comment survivre dans un environnement hostile GIT GIT-SVN Outils Productivité Git c’est cool, Git c’est Hype, Git c’est tout récent...">
-        <meta property=og:description content="Le blog posté le 09/09/2015 par Matthieu Owncloud : solution de cloud en 5 min avec Docker Docker Owncloud Que ce soit pour des raisons politique de confidentialité ou des raisons technique, Owncloud a énormément de qualités comparé à Dropbox ou Google drive. Déjà car la limite de taille des données est celle du serveur, ensuite car des applications sous linux permettent de synchroniser des dossiers et enfin car il existe une multitude d’addons qui permettent de sauvegarder ses mots de passe, jouer de la musique, envoyer des notifs sur Slack etc. La mise en production d’une instance Owncloud se fait en 5 minutes montre en main, à condition de connaître un minimum Docker. Nginx/proxy Nous allons commencer par une petite digression. Avant quand on avait plusieurs “virtual host” qui pointaient sur une machine, on mettait un front-end apache et c’était plus ou moins la galère. Maintenant, il suffit de lancer cette commande une fois : docker run --restart=always --name nginx -d -p 80:80 -p 443:443 -v /docker/vhost.d:/etc/nginx/vhost.d:ro -v /var/run/docker.sock:/tmp/docker.sock:ro jwilder/nginx-proxy Lire la suite posté le 16/07/2015 par Florian GIT-SVN comment survivre dans un environnement hostile GIT GIT-SVN Outils Productivité Git c’est cool, Git c’est Hype, Git c’est tout récent...">
+        <meta name=description content="Le blog posté le 22/09/2015 par Florian Android M - Nouvelle gestion de permission Android Permission Nouvelle approche Avec la prochaine release d’Android 6.0 Marshmallow, il va y avoir du changement au niveau de la gestion des permissions. Terminé la popup qui demande les 10 autorisations au moment du téléchargement de l’appli, maintenant les développeurs vont pouvoir demander les permissions au moment où elles seront nécessaires. Permissions irrévocables Puisqu’il va falloir demander à l’utilisateur pour chaque permission, Google à décidé que certaines anciennes permissions n’auront plus besoin d’être demandées, ce sont les Normal Permissions. Il s’agit des permissions qui n’engendrent pas de risques sur la vie privée ou sur la sécurité de l’utilisateur comme c’est par exemple le cas pour l’accès à internet ou l’accès au vibreur : la liste complète est disponible ici. Guidelines Pour ce qui est de l’UX, Google a fait plusieurs recommandations dont certaines sont plus importantes que d’autre, à mon avis : Ne demander une permisission qu’au moment où l’on en a vraiment besoin, ce qui implique de ne pas avoir un popup au lancement qui va demander toutes les permissions ; Faire le maximum pour ne pas gâcher l’experience utilisateur même s’il refuse une...">
+        <meta property=og:description content="Le blog posté le 22/09/2015 par Florian Android M - Nouvelle gestion de permission Android Permission Nouvelle approche Avec la prochaine release d’Android 6.0 Marshmallow, il va y avoir du changement au niveau de la gestion des permissions. Terminé la popup qui demande les 10 autorisations au moment du téléchargement de l’appli, maintenant les développeurs vont pouvoir demander les permissions au moment où elles seront nécessaires. Permissions irrévocables Puisqu’il va falloir demander à l’utilisateur pour chaque permission, Google à décidé que certaines anciennes permissions n’auront plus besoin d’être demandées, ce sont les Normal Permissions. Il s’agit des permissions qui n’engendrent pas de risques sur la vie privée ou sur la sécurité de l’utilisateur comme c’est par exemple le cas pour l’accès à internet ou l’accès au vibreur : la liste complète est disponible ici. Guidelines Pour ce qui est de l’UX, Google a fait plusieurs recommandations dont certaines sont plus importantes que d’autre, à mon avis : Ne demander une permisission qu’au moment où l’on en a vraiment besoin, ce qui implique de ne pas avoir un popup au lancement qui va demander toutes les permissions ; Faire le maximum pour ne pas gâcher l’experience utilisateur même s’il refuse une...">
         
         <meta name=viewport content="width=device-width">
 
@@ -81,6 +81,195 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     <div class=container>
         <div class=row>
 
+
+<article class="col-lg-4 col-md-6 col-sm-12">
+    <div onclick="window.location.href='/2015/09/22/Android_M_Permissions.html' ;  return false" style="cursor: pointer">
+	<div class=cover style=background-image:url(/images/banner/androidPermission-banner.png)>
+            <div class=date>posté le 22/09/2015 par Florian</div>
+        </div>
+        <h2><a href=/2015/09/22/Android_M_Permissions.html>Android M - Nouvelle gestion de permission</a></h2><ul class=tags>
+            
+            <li>Android</li>
+            
+            <li>Permission</li>
+            
+        </ul>
+        <div class=content>
+            <h1 id=nouvelle-approche>Nouvelle approche</h1>
+
+<p>Avec la prochaine release d’<code>Android 6.0 Marshmallow</code>, il va y avoir du changement au niveau de la gestion des permissions.
+Terminé la popup qui demande les 10 autorisations au moment du téléchargement de l’appli, maintenant les développeurs vont pouvoir demander les permissions au moment où elles seront nécessaires.</p>
+
+<h3 id=permissions-irrvocables>Permissions irrévocables</h3>
+<p>Puisqu’il va falloir demander à l’utilisateur pour chaque permission, Google à décidé que certaines anciennes permissions n’auront plus besoin d’être demandées,
+ ce sont les <code>Normal Permissions</code>. Il s’agit des permissions qui n’engendrent pas de risques sur la vie privée ou sur la sécurité de l’utilisateur comme c’est par exemple le cas pour l’accès à internet ou l’accès au vibreur :
+ la liste complète est disponible <a href=https://developer.android.com/preview/features/runtime-permissions.html#normal>ici</a>.</p>
+
+<h3 id=guidelines>Guidelines</h3>
+<p>Pour ce qui est de l’UX, Google a fait plusieurs recommandations dont certaines sont plus importantes que d’autre, à mon avis :</p>
+
+<ul>
+  <li>Ne demander une permisission qu’au moment où l’on en a vraiment besoin, ce qui implique de ne pas avoir un popup au lancement qui va demander toutes les permissions ;</li>
+  <li>Faire le maximum pour ne pas gâcher l’experience utilisateur même s’il refuse une permission : donc prévoir un mode dégradé autant que possible ;</li>
+  <li>Utiliser les méthodes disponibles dans appcompat plutôt que celles du sdk de base.</li>
+</ul>
+
+<h1 id=mise-en-pratique>Mise en pratique</h1>
+<p>Avant de commencer à coder, une dernière chose à garder à l’esprit c’est que l’utilisateur peut à tout moment révoquer une permission via le détail de l’application (même une fois que l’appli est lancée et tourne en background).
+ Il faudra donc adapter la gestion de ces permissions à cette éventualité.</p>
+
+<div style=text-align:center;margin-bottom:50px>
+    <a href=/images/2015-09-AndroidMPermissions/p6.png data-lightbox=group-1 title="Le téléchargement des fichiers sur un CDN [alt+entrée]" class=inlineBoxes>
+        <img class=medium src=/images/2015-09-AndroidMPermissions/p6.png alt="Le téléchargement des fichiers sur un CDN [alt+entrée]">
+    </a>
+    <a href=/images/2015-09-AndroidMPermissions/p5.png data-lightbox=group-1 title="Le téléchargement des fichiers sur un CDN [alt+entrée]" class=inlineBoxes>
+            <img class=medium src=/images/2015-09-AndroidMPermissions/p5.png alt="Le téléchargement des fichiers sur un CDN [alt+entrée]">
+    </a>
+</div>
+
+<h2 id=ne-pas-implmenter-les-nouvelles-permissions>Ne pas implémenter les nouvelles permissions</h2>
+<p>Chose importante à savoir, vous n’êtes pas obligés d’implémenter cette nouvelle gestion de permission.
+En effet, puisqu’elle demande du développoment supplémentaire, de nombreuses applis ne seront pas mises à jour et garderont donc l’ancien fonctionnement. 
+Si c’est ce que vous souhaitez, et pour ne pas nuire au bon fonctionnement de votre appli, il vous suffit de ne pas cibler le dernier <code>sdk</code> dans votre build.gradle et de rester sur le <code>22</code>.</p>
+
+<h2 id=implmenter-les-nouvelles-permissions>Implémenter les nouvelles permissions</h2>
+<p>Pour cela, 3 étapes sont nécessaires, principalement disponibles dans le sdk 23 ainsi que dans la lib appcompat :</p>
+
+<ul>
+  <li><code>requestPermissions()</code></li>
+  <li><code>onRequestPermissionsResult()</code></li>
+  <li><code>shouldShowRequestPermissionRationale()</code></li>
+</ul>
+
+<h3 id=buildgradle>Build.gradle</h3>
+<p>Permière étape, cibler la dernier version du <code>sdk</code> : <code>23</code>.
+Et en bonus, importer appcompat pour bénéficier des méthodes helpers de Google.</p>
+
+<pre><code>compileSdkVersion 23
+defaultConfig {
+    targetSdkVersion 23
+}
+dependencies {
+    compile 'com.android.support:appcompat-v7:23.0.1'
+}
+</code></pre>
+
+<h3 id=androidmanifestxml>AndroidManifest.xml</h3>
+<p>Ensuite, déclarer les permissions désirées dans l’application, normalement il n’y a pas de changements par rapport à votre configuration actuelle</p>
+
+<pre><code>&lt;uses-permission android:name="android.permission.CAMERA" /&gt;
+&lt;uses-permission android:name="android.permission.READ_CONTACTS" /&gt;
+&lt;uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /&gt;
+&lt;uses-permission android:name="android.permission.SEND_SMS" /&gt;
+&lt;uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /&gt;
+&lt;uses-permission android:name="android.permission.CALL_PHONE" /&gt;
+</code></pre>
+
+<p>N’oubliez pas d’y déclarer aussi les <code>Normal Permissions</code> qui, bien qu’elles soient automatiquement accordées, ont toujours besoin d’être déclarées.</p>
+
+<h3 id=dans-une-activit>Dans une activité</h3>
+<p>Dans un premier temps il faut vérifier si une permission est déjà accordée ou non</p>
+
+<pre><code>ContextCompat.checkSelfPermission(context, Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED;
+</code></pre>
+
+<p>Si la permission n’est pas accordée, il va falloir la demander, de préférence lors d’une action utilisateur, par exemple au click sur un bouton</p>
+
+<pre><code>ActivityCompat.requestPermissions(MainActivity.this,
+                                  new String[]{Manifest.permission.CAMERA},
+                                  REQUEST_CODE_ONE);
+</code></pre>
+
+<div style=text-align:center;margin-bottom:50px>
+    <a href=/images/2015-09-AndroidMPermissions/p1.png data-lightbox=group-1 title="Le téléchargement des fichiers sur un CDN [alt+entrée]" class=inlineBoxes>
+        <img class=medium src=/images/2015-09-AndroidMPermissions/p1.png alt="Le téléchargement des fichiers sur un CDN [alt+entrée]">
+    </a>
+</div>
+<p>Puis écouter le choix de l’utilisateur, dans l’activité ou le fragment correspondant</p>
+
+<pre><code>@Override
+public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
+    switch (requestCode) {
+        case REQUEST_CODE_ONE: {
+            if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                Toast.makeText(this, "Permission granted", Toast.LENGTH_LONG).show();
+            } else {
+                Toast.makeText(this, "Permission denied", Toast.LENGTH_LONG).show();
+            }
+            return;
+        }
+    }
+}
+</code></pre>
+
+<h3 id=demander-plusieurs-permissions-en-mme-temps>Demander plusieurs permissions en même temps</h3>
+<p>Même si cela est déconseillé, il peut arriver d’avoir besoin de plusieurs permissions lors de la même action utilisateur.
+Pour cela il suffit de passer plusieurs permissions dans le tableau passé en paramètre du requestPermission</p>
+
+<pre><code>ActivityCompat.requestPermissions(MainActivity.this,
+                                  new String[]{Manifest.permission.READ_CONTACTS, Manifest.permission.ACCESS_FINE_LOCATION},
+                                  REQUEST_CODE_TWO);
+</code></pre>
+
+<div style=text-align:center;margin-bottom:50px>
+    <a href=/images/2015-09-AndroidMPermissions/p2.png data-lightbox=group-1 title="Le téléchargement des fichiers sur un CDN [alt+entrée]" class=inlineBoxes>
+        <img class=medium src=/images/2015-09-AndroidMPermissions/p2.png alt="Le téléchargement des fichiers sur un CDN [alt+entrée]">
+    </a>
+<a href=/images/2015-09-AndroidMPermissions/p3.png data-lightbox=group-1 title="Le téléchargement des fichiers sur un CDN [alt+entrée]" class=inlineBoxes>
+        <img class=medium src=/images/2015-09-AndroidMPermissions/p3.png alt="Le téléchargement des fichiers sur un CDN [alt+entrée]">
+    </a>
+</div>
+
+<h3 id=expliquer--lutilisateur-pourquoi-il-doit-autoriser-une-permission>Expliquer à l’utilisateur pourquoi il doit autoriser une permission</h3>
+<p>Il arrivera sûrement que certains utilsateurs refusent des permissions et que cela détériore l’expérience utilisateur sur l’application. Pour cela, Google fourni un helper pour savoir ou non s’il faut afficher un message d’information à l’utilisateur (graphique).
+Cela se fera avec la méthode shouldShowRequestPermissionRationale</p>
+
+<pre><code>if (shouldShowRequestPermissionRationale(Manifest.permission.CALL_PHONE)) {
+     new AlertDialog.Builder(MainActivity.this)
+                               .setMessage("Custom message to explain why you need a permission")
+                               .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                   @Override
+                                   public void onClick(DialogInterface dialog, int which) {
+                                       ActivityCompat.requestPermissions(MainActivity.this,
+                                               new String[]{Manifest.permission.CALL_PHONE},
+                                               REQUEST_CODE_FIVE);
+                                   }
+                               })
+                               .setNegativeButton("Cancel", null)
+                               .create()
+                               .show();
+}
+ActivityCompat.requestPermissions(MainActivity.this,
+                                  new String[]{Manifest.permission.CALL_PHONE},
+                                  REQUEST_CODE_FIVE);
+}
+</code></pre>
+
+<div style=text-align:center;margin-bottom:50px>
+    <a href=/images/2015-09-AndroidMPermissions/p4.png data-lightbox=group-1 title="Le téléchargement des fichiers sur un CDN [alt+entrée]" class=inlineBoxes>
+        <img class=medium src=/images/2015-09-AndroidMPermissions/p4.png alt="Le téléchargement des fichiers sur un CDN [alt+entrée]">
+    </a>
+</div>
+
+<h3 id=le-pige--viter>Le piège à éviter</h3>
+<p>Penser à vérifier régulièrement l’état des permissions dans le <em>onResume()</em> de vos Activity ou Fragment, étant donné que l’utilsateur peut à tout moment les révoquer cela permettra d’éviter de nombreux crashs.</p>
+
+<h2 id=resources>Resources</h2>
+<p>Code source d’exemple : <a href=https://github.com/fchauveau/android-permissions-sample>https://github.com/fchauveau/android-permissions-sample</a></p>
+
+<p>Doc développeur Android : <a href=https://developer.android.com/preview/features/runtime-permissions.html>https://developer.android.com/preview/features/runtime-permissions.html</a></p>
+
+<p>Guidelines Android : <a href=https://developer.android.com/preview/features/runtime-permissions.html>http://www.google.fr/design/spec/patterns/permissions.html</a></p>
+
+
+        </div>
+        <div class=fade-content>
+        </div>
+        <div class=more>
+            <a href=/2015/09/22/Android_M_Permissions.html><i class="fa fa-arrow-circle-o-right"></i> Lire la suite</a>
+        </div>
+    </div>
+</article>
 
 <article class="col-lg-4 col-md-6 col-sm-12">
     <div onclick="window.location.href='/2015/09/09/OwncloudDocker.html' ;  return false" style="cursor: pointer">
@@ -287,48 +476,6 @@ ainsi qu’une documentation précise (pour la plupart des librairies).</p>
         </div>
         <div class=more>
             <a href=/2015/06/06/AndroidDesignLibrary.html><i class="fa fa-arrow-circle-o-right"></i> Lire la suite</a>
-        </div>
-    </div>
-</article>
-
-<article class="col-lg-4 col-md-6 col-sm-12">
-    <div onclick="window.location.href='/2015/05/22/Dotfiles-git.html' ;  return false" style="cursor: pointer">
-	<div class=cover style=background-image:url(/images/banner/ohmyzsh-banner.png)>
-            <div class=date>posté le 22/05/2015 par Matthieu</div>
-        </div>
-        <h2><a href=/2015/05/22/Dotfiles-git.html>git : quelques astuces de configuration pour vos dotfiles</a></h2><ul class=tags>
-            
-            <li>git</li>
-            
-            <li>gitconfig</li>
-            
-            <li>hook</li>
-            
-        </ul>
-        <div class=content>
-            <p>Cet article est le deuxième de la série des <em>dotfiles</em>. Voir l’article sur <a href=code-troopers.com/2015/05/15/Dotfiles-vim.html>vimrc</a>. Nous allons ici aborder quelques configurations indispensables de git.</p>
-
-<h1 id=la-base>La base</h1>
-
-<p>Si vous utilisez git, vous avez forcément fait des commandes de base pour rentrer votre nom et votre email (indispensable pour pusher vos commits)</p>
-
-<pre><code>$ git config --global user.name "Jango Fett" 
-$ git config --global user.email "jango.fett@code-troopers.com"
-</code></pre>
-
-<p>Ceci a pour but d’écrire dans votre fichier ~/.gitconfig ces simples lignes :</p>
-
-<pre><code>[user]
-    name = Jango Fett
-    email = jango.fett@code-troopers.com
-</code></pre>
-
-
-        </div>
-        <div class=fade-content>
-        </div>
-        <div class=more>
-            <a href=/2015/05/22/Dotfiles-git.html><i class="fa fa-arrow-circle-o-right"></i> Lire la suite</a>
         </div>
     </div>
 </article>
