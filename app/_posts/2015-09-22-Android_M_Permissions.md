@@ -18,7 +18,7 @@ Puisqu'il va falloir demander à l'utilisateur pour chaque permission, Google a 
  
 
 ### Guidelines
-Pour ce qui est de l'UX, Google a fait plusieurs recommandations dont certaines sont plus importantes que d'autre, à mon avis :
+Pour ce qui est de l'UX, Google a fait plusieurs recommandations dont certaines sont plus importantes que d'autres, à mon avis :
 
  * Ne demander une permisission qu'au moment où l'on en a vraiment besoin, ce qui implique de ne pas avoir un popup au lancement qui va demander toutes les permissions ;
  * Faire le maximum pour ne pas gâcher l'experience utilisateur même s'il refuse une permission : donc prévoir un mode dégradé autant que possible ;
