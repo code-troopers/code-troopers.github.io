@@ -12,7 +12,7 @@ Avec la prochaine release d'`Android 6.0 Marshmallow`, il va y avoir du changeme
 Terminé la popup qui demande les 10 autorisations au moment du téléchargement de l'appli, maintenant les développeurs vont pouvoir demander les permissions au moment où elles seront nécessaires.
 
 ### Permissions irrévocables
-Puisqu'il va falloir demander à l'utilisateur pour chaque permission, Google à décidé que certaines anciennes permissions n'auront plus besoin d'être demandées,
+Puisqu'il va falloir demander à l'utilisateur pour chaque permission, Google a décidé que certaines anciennes permissions n'auront plus besoin d'être demandées,
  ce sont les `Normal Permissions`. Il s'agit des permissions qui n'engendrent pas de risques sur la vie privée ou sur la sécurité de l'utilisateur comme c'est par exemple le cas pour l'accès à internet ou l'accès au vibreur :
  la liste complète est disponible [ici](https://developer.android.com/preview/features/runtime-permissions.html#normal).
  
