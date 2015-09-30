@@ -40,7 +40,7 @@ Ce qui est encore plus fort avec le service de monitoring des serveurs de New Re
 Avec Docker bien sûr, il faut au préalable s'être créé un compte sur le site New Relic pour obtenir l'accès à l'interface et pouvoir se créer une clé (à remplacer dans la ligne de commande suivante).
 
 	docker run -d \
-		--privileged=true --name newrelic 
+		--privileged=true --name newrelic
 		--pid=host \
 		--net=host \
 		-v /sys:/sys \
