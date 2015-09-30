@@ -16,12 +16,12 @@
         <meta property=twitter:domain content=http://code-troopers.com>
         
         
-        <meta property=twitter:description content="Le blog posté le 22/09/2015 par Florian Android M - Nouvelle gestion de permission Android Permission Nouvelle approche Avec la...">
+        <meta property=twitter:description content="Le blog posté le 30/09/2015 par Benjamin Monitorer ses conteneurs Docker avec New Relic Docker New Relic Monitoring Si vous...">
         
         
         
-        <meta name=description content="Le blog posté le 22/09/2015 par Florian Android M - Nouvelle gestion de permission Android Permission Nouvelle approche Avec la prochaine release d’Android 6.0 Marshmallow, il va y avoir du changement au niveau de la gestion des permissions. Terminé la popup qui demande les 10 autorisations au moment du téléchargement de l’appli, maintenant les développeurs vont pouvoir demander les permissions au moment où elles seront nécessaires. Permissions irrévocables Puisqu’il va falloir demander à l’utilisateur pour chaque permission, Google a décidé que certaines anciennes permissions n’auront plus besoin d’être demandées, ce sont les Normal Permissions. Il s’agit des permissions qui n’engendrent pas de risque sur la vie privée ou sur la sécurité de l’utilisateur comme c’est par exemple le cas pour l’accès à internet ou l’accès au vibreur : la liste complète est disponible ici. Guidelines Pour ce qui est de l’UX, Google a fait plusieurs recommandations dont certaines sont plus importantes que d’autres, à mon avis : Ne demander une permisission qu’au moment où l’on en a vraiment besoin, ce qui implique de ne pas avoir un popup au lancement qui va demander toutes les permissions ; Faire le maximum pour ne pas gâcher l’experience utilisateur même s’il refuse une...">
-        <meta property=og:description content="Le blog posté le 22/09/2015 par Florian Android M - Nouvelle gestion de permission Android Permission Nouvelle approche Avec la prochaine release d’Android 6.0 Marshmallow, il va y avoir du changement au niveau de la gestion des permissions. Terminé la popup qui demande les 10 autorisations au moment du téléchargement de l’appli, maintenant les développeurs vont pouvoir demander les permissions au moment où elles seront nécessaires. Permissions irrévocables Puisqu’il va falloir demander à l’utilisateur pour chaque permission, Google a décidé que certaines anciennes permissions n’auront plus besoin d’être demandées, ce sont les Normal Permissions. Il s’agit des permissions qui n’engendrent pas de risque sur la vie privée ou sur la sécurité de l’utilisateur comme c’est par exemple le cas pour l’accès à internet ou l’accès au vibreur : la liste complète est disponible ici. Guidelines Pour ce qui est de l’UX, Google a fait plusieurs recommandations dont certaines sont plus importantes que d’autres, à mon avis : Ne demander une permisission qu’au moment où l’on en a vraiment besoin, ce qui implique de ne pas avoir un popup au lancement qui va demander toutes les permissions ; Faire le maximum pour ne pas gâcher l’experience utilisateur même s’il refuse une...">
+        <meta name=description content="Le blog posté le 30/09/2015 par Benjamin Monitorer ses conteneurs Docker avec New Relic Docker New Relic Monitoring Si vous ne conaissez pas New Relic, vous loupez quelque chose, c’est le service indispensable pour monitorer vos serveurs et vos applications. Il est capable d’une part de vous remonter les données physiques de vos serveurs (mémoire, cpu, espace disque), et d’autre part d’analyser les performances de vos applications (de nombreux langages sont disponibles). Il dispose aussi d’un système d’alerting, facilement configurable. Tous ces services sont disponibles en version gratuite, avec limitation (nombre de jour limité de rétention des données par exemple). Je vous laisse consulter le site officiel pour plus de détail. Nous allons seulement parler du service de monitoring des serveurs dans cet article. Et Docker dans tout ça Ce qui est encore plus fort avec le service de monitoring des serveurs de New Relic, c’est qu’il est capable de comprendre Docker et donc de vous remonter les données par conteneur. Comment l’installer Avec Docker bien sûr, il faut au préalable s’être créé un compte sur le site New Relic pour obtenir l’accès à l’interface et pouvoir se créer une clé (à remplacer dans la ligne de commande suivante). docker...">
+        <meta property=og:description content="Le blog posté le 30/09/2015 par Benjamin Monitorer ses conteneurs Docker avec New Relic Docker New Relic Monitoring Si vous ne conaissez pas New Relic, vous loupez quelque chose, c’est le service indispensable pour monitorer vos serveurs et vos applications. Il est capable d’une part de vous remonter les données physiques de vos serveurs (mémoire, cpu, espace disque), et d’autre part d’analyser les performances de vos applications (de nombreux langages sont disponibles). Il dispose aussi d’un système d’alerting, facilement configurable. Tous ces services sont disponibles en version gratuite, avec limitation (nombre de jour limité de rétention des données par exemple). Je vous laisse consulter le site officiel pour plus de détail. Nous allons seulement parler du service de monitoring des serveurs dans cet article. Et Docker dans tout ça Ce qui est encore plus fort avec le service de monitoring des serveurs de New Relic, c’est qu’il est capable de comprendre Docker et donc de vous remonter les données par conteneur. Comment l’installer Avec Docker bien sûr, il faut au préalable s’être créé un compte sur le site New Relic pour obtenir l’accès à l’interface et pouvoir se créer une clé (à remplacer dans la ligne de commande suivante). docker...">
         
         <meta name=viewport content="width=device-width">
 
@@ -81,6 +81,79 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     <div class=container>
         <div class=row>
 
+
+<article class="col-lg-4 col-md-6 col-sm-12">
+    <div onclick="window.location.href='/2015/09/30/NewRelicDocker.html' ;  return false" style="cursor: pointer">
+	<div class=cover style=background-image:url(/images/banner/docker-banner.png)>
+            <div class=date>posté le 30/09/2015 par Benjamin</div>
+        </div>
+        <h2><a href=/2015/09/30/NewRelicDocker.html>Monitorer ses conteneurs Docker avec New Relic</a></h2><ul class=tags>
+            
+            <li>Docker</li>
+            
+            <li>New Relic</li>
+            
+            <li>Monitoring</li>
+            
+        </ul>
+        <div class=content>
+            <p>Si vous ne conaissez pas New Relic, vous loupez quelque chose, c’est le service indispensable pour monitorer vos serveurs et vos applications. Il est capable d’une part de vous remonter les données physiques de vos serveurs (mémoire, cpu, espace disque), et d’autre part d’analyser les performances de vos applications (de nombreux langages sont disponibles). Il dispose aussi d’un système d’alerting, facilement configurable. Tous ces services sont disponibles en version gratuite, avec limitation (nombre de jour limité de rétention des données par exemple). Je vous laisse consulter le <a href=http://www.newrelic.com>site officiel</a> pour plus de détail.</p>
+
+<p>Nous allons seulement parler du service de monitoring des serveurs dans cet article.</p>
+
+<div style=float:right;margin:20px>
+    <a href=/images/postNewrelicDocker/new-relic.png data-lightbox=group-1 title="New Relic Logo" class=inlineBoxes>
+        <img class=medium src=/images/postNewrelicDocker/new-relic.png alt="New Relic Logo">
+    </a>
+</div>
+
+<div class=clearfix></div>
+
+
+
+<h2 id=et-docker-dans-tout-a>Et Docker dans tout ça</h2>
+
+<p>Ce qui est encore plus fort avec le service de monitoring des serveurs de New Relic, c’est qu’il est capable de comprendre Docker et donc de vous remonter les données par conteneur.</p>
+
+<div style=text-align:center;margin:50px>
+    <a href=/images/postNewrelicDocker/screen-newrelic-1.png data-lightbox=group-3 title="Screen 1 New Relic" class=inlineBoxes>
+        <img class=medium src=/images/postNewrelicDocker/screen-newrelic-1.png alt="Screen 1 New Relic">
+    </a>
+    <a href=/images/postNewrelicDocker/screen-newrelic-2.png data-lightbox=group-3 title="Screen 2 New Relic" class=inlineBoxes>
+        <img class=medium src=/images/postNewrelicDocker/screen-newrelic-2.png alt="Screen 2 New Relic">
+    </a>
+</div>
+
+<div class=clearfix></div>
+
+<h2 id=comment-linstaller>Comment l’installer</h2>
+
+<p>Avec Docker bien sûr, il faut au préalable s’être créé un compte sur le site New Relic pour obtenir l’accès à l’interface et pouvoir se créer une clé (à remplacer dans la ligne de commande suivante).</p>
+
+<pre><code>docker run -d \
+	--privileged=true --name newrelic
+	--pid=host \
+	--net=host \
+	-v /sys:/sys \
+	-v /dev:/dev \
+	--restart=always \
+	-v /var/run/docker.sock:/var/run/docker.sock \
+	-v /var/log:/var/log:rw \
+	-e NRSYSMOND_license_key=&lt;KEY&gt; \
+	-e NRSYSMOND_logfile=/var/log/nrsysmond.log \
+	newrelic/nrsysmond:latest
+</code></pre>
+
+<p>Vous trouverez toutes les informations <a href="https://hub.docker.com/r/newrelic/nrsysmond/">ici</a>.</p>
+
+        </div>
+        <div class=fade-content>
+        </div>
+        <div class=more>
+            <a href=/2015/09/30/NewRelicDocker.html><i class="fa fa-arrow-circle-o-right"></i> Lire la suite</a>
+        </div>
+    </div>
+</article>
 
 <article class="col-lg-4 col-md-6 col-sm-12">
     <div onclick="window.location.href='/2015/09/22/Android_M_Permissions.html' ;  return false" style="cursor: pointer">
@@ -451,31 +524,6 @@ ainsi qu’une documentation précise (pour la plupart des librairies).</p>
         </div>
         <div class=more>
             <a href=/2015/06/10/CompletionJavascriptDansIntelliJ.html><i class="fa fa-arrow-circle-o-right"></i> Lire la suite</a>
-        </div>
-    </div>
-</article>
-
-<article class="col-lg-4 col-md-6 col-sm-12">
-    <div onclick="window.location.href='/2015/06/06/AndroidDesignLibrary.html' ;  return false" style="cursor: pointer">
-	<div class=cover style=background-image:url(/images/banner/android5-banner.png)>
-            <div class=date>posté le 06/06/2015 par Benjamin</div>
-        </div>
-        <h2><a href=/2015/06/06/AndroidDesignLibrary.html>Android Support Design Library</a></h2><ul class=tags>
-            
-            <li>Android</li>
-            
-            <li>Librairie</li>
-            
-        </ul>
-        <div class=content>
-            <p>Avez-vous déjà essayé de transformer vos applications Android pour les rendre conformes aux <a href=http://www.google.com/design/spec/material-design/introduction.html>guidelines Material</a>, si oui, vous avez dû comme nous, vous retrouver à importer plein de librairies tierces pour implémenter par exemple le <code>FAB button</code>, ou même personnaliser le code pour rendre le <code>NavigationDrawer</code> conforme (comme ce qui a pu être fait sur le squelette d’un <a href=http://code-troopers.com/2014/11/26/SqueletteAndroid5.html>précédent article</a>. Et bien tout ceci est fini (enfin en partie), grâce à la nouvelle librairie Android de Google <a href=http://developer.android.com/tools/support-library/features.html#design>Design Support</a>.</p>
-
-
-        </div>
-        <div class=fade-content>
-        </div>
-        <div class=more>
-            <a href=/2015/06/06/AndroidDesignLibrary.html><i class="fa fa-arrow-circle-o-right"></i> Lire la suite</a>
         </div>
     </div>
 </article>

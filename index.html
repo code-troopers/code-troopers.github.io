@@ -133,6 +133,79 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
         <div class=row>
     
         <article class="col-lg-4 col-md-6 col-sm-12">
+            <div onclick="window.location.href='/2015/09/30/NewRelicDocker.html' ;  return false" style="cursor: pointer">
+            <div class=cover style=background-image:url(/images/banner/docker-banner.png)>
+                    <div class=date>posté le 30/09/2015 par Benjamin</div>
+                </div>
+                <h2><a href=/2015/09/30/NewRelicDocker.html>Monitorer ses conteneurs Docker avec New Relic</a></h2><ul class=tags>
+                    
+                    <li>Docker</li>
+                    
+                    <li>New Relic</li>
+                    
+                    <li>Monitoring</li>
+                    
+                </ul>
+                <div class=content>
+                    <p>Si vous ne conaissez pas New Relic, vous loupez quelque chose, c’est le service indispensable pour monitorer vos serveurs et vos applications. Il est capable d’une part de vous remonter les données physiques de vos serveurs (mémoire, cpu, espace disque), et d’autre part d’analyser les performances de vos applications (de nombreux langages sont disponibles). Il dispose aussi d’un système d’alerting, facilement configurable. Tous ces services sont disponibles en version gratuite, avec limitation (nombre de jour limité de rétention des données par exemple). Je vous laisse consulter le <a href=http://www.newrelic.com>site officiel</a> pour plus de détail.</p>
+
+<p>Nous allons seulement parler du service de monitoring des serveurs dans cet article.</p>
+
+<div style=float:right;margin:20px>
+    <a href=/images/postNewrelicDocker/new-relic.png data-lightbox=group-1 title="New Relic Logo" class=inlineBoxes>
+        <img class=medium src=/images/postNewrelicDocker/new-relic.png alt="New Relic Logo">
+    </a>
+</div>
+
+<div class=clearfix></div>
+
+
+
+<h2 id=et-docker-dans-tout-a>Et Docker dans tout ça</h2>
+
+<p>Ce qui est encore plus fort avec le service de monitoring des serveurs de New Relic, c’est qu’il est capable de comprendre Docker et donc de vous remonter les données par conteneur.</p>
+
+<div style=text-align:center;margin:50px>
+    <a href=/images/postNewrelicDocker/screen-newrelic-1.png data-lightbox=group-3 title="Screen 1 New Relic" class=inlineBoxes>
+        <img class=medium src=/images/postNewrelicDocker/screen-newrelic-1.png alt="Screen 1 New Relic">
+    </a>
+    <a href=/images/postNewrelicDocker/screen-newrelic-2.png data-lightbox=group-3 title="Screen 2 New Relic" class=inlineBoxes>
+        <img class=medium src=/images/postNewrelicDocker/screen-newrelic-2.png alt="Screen 2 New Relic">
+    </a>
+</div>
+
+<div class=clearfix></div>
+
+<h2 id=comment-linstaller>Comment l’installer</h2>
+
+<p>Avec Docker bien sûr, il faut au préalable s’être créé un compte sur le site New Relic pour obtenir l’accès à l’interface et pouvoir se créer une clé (à remplacer dans la ligne de commande suivante).</p>
+
+<pre><code>docker run -d \
+	--privileged=true --name newrelic
+	--pid=host \
+	--net=host \
+	-v /sys:/sys \
+	-v /dev:/dev \
+	--restart=always \
+	-v /var/run/docker.sock:/var/run/docker.sock \
+	-v /var/log:/var/log:rw \
+	-e NRSYSMOND_license_key=&lt;KEY&gt; \
+	-e NRSYSMOND_logfile=/var/log/nrsysmond.log \
+	newrelic/nrsysmond:latest
+</code></pre>
+
+<p>Vous trouverez toutes les informations <a href="https://hub.docker.com/r/newrelic/nrsysmond/">ici</a>.</p>
+
+                </div>
+                <div class=fade-content>
+                </div>
+                <div class=more>
+                    <a href=/2015/09/30/NewRelicDocker.html><i class="fa fa-arrow-circle-o-right"></i> Lire la suite</a>
+                </div>
+            </div>
+        </article>
+        
+        <article class="col-lg-4 col-md-6 col-sm-12">
             <div onclick="window.location.href='/2015/09/22/Android_M_Permissions.html' ;  return false" style="cursor: pointer">
             <div class=cover style=background-image:url(/images/banner/androidPermission-banner.png)>
                     <div class=date>posté le 22/09/2015 par Florian</div>
@@ -351,40 +424,6 @@ ActivityCompat.requestPermissions(MainActivity.this,
                 </div>
                 <div class=more>
                     <a href=/2015/09/09/OwncloudDocker.html><i class="fa fa-arrow-circle-o-right"></i> Lire la suite</a>
-                </div>
-            </div>
-        </article>
-        
-        <article class="col-lg-4 col-md-6 col-sm-12">
-            <div onclick="window.location.href='/2015/07/16/GITSVN.html' ;  return false" style="cursor: pointer">
-            <div class=cover style=background-image:url(/images/banner/git-banner.png)>
-                    <div class=date>posté le 16/07/2015 par Florian</div>
-                </div>
-                <h2><a href=/2015/07/16/GITSVN.html>GIT-SVN comment survivre dans un environnement hostile</a></h2><ul class=tags>
-                    
-                    <li>GIT</li>
-                    
-                    <li>GIT-SVN</li>
-                    
-                    <li>Outils</li>
-                    
-                    <li>Productivité</li>
-                    
-                </ul>
-                <div class=content>
-                    <p>Git c’est cool, Git c’est Hype, Git c’est tout récent (<a href=http://git-scm.com/book/fr/v1/D%C3%A9marrage-rapide-Une-rapide-histoire-de-Git>enfin presque</a>) et c’est pour ça qu’on aime bien.
-Mais pour beaucoup Git c’est nouveau, donc c’est le changement, donc c’est compliqué, et c’est pour ça que plein de boîtes préfèrent garder leur serveur svn.</p>
-
-<p>Je vais tenter ici, de vous donner les principales commandes de <code>Git-SVN</code>. Ainsi si vous vous trouvez dans une boîte qui ne veut pas changer son scm mais que vous, vous avez envie de changement,
-vous pourrez donc utiliser la puissance de Git. 
-Et ce sans aucun impact sur le gestionnaire de sources de la société dans laquelle vous êtes. C’est génial non ?</p>
-
-
-                </div>
-                <div class=fade-content>
-                </div>
-                <div class=more>
-                    <a href=/2015/07/16/GITSVN.html><i class="fa fa-arrow-circle-o-right"></i> Lire la suite</a>
                 </div>
             </div>
         </article>
