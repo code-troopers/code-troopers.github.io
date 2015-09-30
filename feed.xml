@@ -175,7 +175,7 @@ ActivityCompat.requestPermissions(MainActivity.this,
 &lt;p&gt;Guidelines Android : &lt;a href=&quot;https://developer.android.com/preview/features/runtime-permissions.html&quot;&gt;http://www.google.fr/design/spec/patterns/permissions.html&lt;/a&gt;&lt;/p&gt;
 
 </description>
-                                <pubDate>Tue, 22 Sep 2015 00:00:00 +0200</pubDate>
+                                <pubDate>Tue, 22 Sep 2015 00:00:00 +0000</pubDate>
                                 <link>http://code-troopers.com/2015/09/22/Android_M_Permissions.html</link>
                                 <guid isPermaLink="true">http://code-troopers.com/2015/09/22/Android_M_Permissions.html</guid>
                         </item>
@@ -255,7 +255,7 @@ Puis une image owncloud avec des volumes pour les fichiers que l’on va sauvega
 &lt;/div&gt;
 
 </description>
-                                <pubDate>Wed, 09 Sep 2015 00:00:00 +0200</pubDate>
+                                <pubDate>Wed, 09 Sep 2015 00:00:00 +0000</pubDate>
                                 <link>http://code-troopers.com/2015/09/09/OwncloudDocker.html</link>
                                 <guid isPermaLink="true">http://code-troopers.com/2015/09/09/OwncloudDocker.html</guid>
                         </item>
@@ -334,12 +334,12 @@ git svn dcommit
 &lt;h2 id=&quot;bonus--utiliser-des-branches&quot;&gt;Bonus : Utiliser des branches&lt;/h2&gt;
 &lt;p&gt;Bon soyons honnêtes si vous utilisez un svn il y a quand même peu de chances que les branches soient vraiment utilisées (ou alors peut-être que vous aimez la douleur). Mais si ça arrive, voilà comment les utiliser.&lt;/p&gt;
 
-&lt;p&gt;Mettre à jour toutes les branches du svn : &lt;/p&gt;
+&lt;p&gt;Mettre à jour toutes les branches du svn :&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;git svn fetch
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Changer de branche : &lt;/p&gt;
+&lt;p&gt;Changer de branche :&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;git checkout -b &amp;lt;brancheDistante&amp;gt; &amp;lt;nomDeBrancheLocale&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
@@ -362,7 +362,7 @@ Il ne vous reste plus qu’à forcer un peu plus pour remplacer l’ancien serve
 &lt;br /&gt;
 Pour connaître les principales commandes Git, je vous invite à consulter &lt;a href=&quot;http://git-scm.com/docs/gittutorial&quot;&gt;la page tutoriel de Git&lt;/a&gt; ou alors de chercher sur &lt;a href=&quot;http://lmgtfy.com/?q=git+commands&quot;&gt;internet&lt;/a&gt;.&lt;/p&gt;
 </description>
-                                <pubDate>Thu, 16 Jul 2015 00:00:00 +0200</pubDate>
+                                <pubDate>Thu, 16 Jul 2015 00:00:00 +0000</pubDate>
                                 <link>http://code-troopers.com/2015/07/16/GITSVN.html</link>
                                 <guid isPermaLink="true">http://code-troopers.com/2015/07/16/GITSVN.html</guid>
                         </item>
@@ -373,7 +373,7 @@ Pour connaître les principales commandes Git, je vous invite à consulter &lt;a
 Cela fait quelque temps que nous l’utilisons pour des projets “public”, auquel cas le registry public Docker est largement suffisant (et immédiat à utiliser).&lt;/p&gt;
 
 &lt;p&gt;En revanche, nous commençons à migrer nos applications de production également vers Docker, et nous ne pouvons pas utiliser le mode public du registry public.
-Nous nous sommes donc mis à déployer un dépôt privé, authentifié par utilisateur / mot de passe. &lt;/p&gt;
+Nous nous sommes donc mis à déployer un dépôt privé, authentifié par utilisateur / mot de passe.&lt;/p&gt;
 
 &lt;p&gt;La procédure n’est pas très complexe, mais cette opération reste une bonne opportunité d’écrire un article à ce sujet (les articles en français n’étant pas légion).
 &lt;!--break--&gt;&lt;/p&gt;
@@ -397,7 +397,7 @@ openssl x509 -req -days 730 -in ia.csr -CA ca.crt -CAkey ca.key -set_serial 01 -
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;h3 id=&quot;gnration-des-mots-de-passes-basic-auth&quot;&gt;Génération des mots de passes basic auth&lt;/h3&gt;
-&lt;p&gt;En utilisant un container docker qui embarque htpasswd vous pourrez générer facilement le fichier nécessaire : &lt;/p&gt;
+&lt;p&gt;En utilisant un container docker qui embarque htpasswd vous pourrez générer facilement le fichier nécessaire :&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;docker run --rm -ti -v $(pwd):/tmp dgageot/htpasswd -c /tmp/docker-registry.htpasswd $MONUSER
 &lt;/code&gt;&lt;/pre&gt;
@@ -424,7 +424,7 @@ cp ca.crt /usr/local/share/ca-certificates/docker-ct/
 update-ca-certificates-
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Pour vérifier que tout fonctionne comme attendu, vous pouvez voir si votre certificat ressort bien dans la commande suivante : &lt;/p&gt;
+&lt;p&gt;Pour vérifier que tout fonctionne comme attendu, vous pouvez voir si votre certificat ressort bien dans la commande suivante :&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;awk -v cmd='openssl x509 -noout -subject' ' /BEGIN/{close(cmd)};{print | cmd}' &amp;lt; /etc/ssl/certs/ca-certificates.crt | grep $(VOTRE IDENTIFIANT)
 &lt;/code&gt;&lt;/pre&gt;
@@ -436,9 +436,9 @@ systemctl start docker
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;h3 id=&quot;identification-sur-le-dpot&quot;&gt;Identification sur le dépot&lt;/h3&gt;
-&lt;p&gt;Une fois que toutes ces étapes sont effectuées, normalement votre dépot est prêt à être utilisé. &lt;/p&gt;
+&lt;p&gt;Une fois que toutes ces étapes sont effectuées, normalement votre dépot est prêt à être utilisé.&lt;/p&gt;
 
-&lt;p&gt;Il vous faut cependant en première étape vous identifier à l’aide du couple utilisateur / mot de passe créé lors de l’installation : &lt;/p&gt;
+&lt;p&gt;Il vous faut cependant en première étape vous identifier à l’aide du couple utilisateur / mot de passe créé lors de l’installation :&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;docker login https://mondepotdocker.tld
 &lt;/code&gt;&lt;/pre&gt;
@@ -462,7 +462,7 @@ docker pull mondepotdocker.tld/monapplication:v1.0.0
 
 &lt;p&gt;Pour ce qui est de l’authentification, une astuce simple pour contourner les problèmes de ce genre est de faire un &lt;code&gt;docker pull&lt;/code&gt; manuellement au préalable (le scripter depuis le fichier compose.yml n’est pas trop difficile).&lt;/p&gt;
 </description>
-                                <pubDate>Thu, 25 Jun 2015 00:00:00 +0200</pubDate>
+                                <pubDate>Thu, 25 Jun 2015 00:00:00 +0000</pubDate>
                                 <link>http://code-troopers.com/2015/06/25/InstallDockerRegistry.html</link>
                                 <guid isPermaLink="true">http://code-troopers.com/2015/06/25/InstallDockerRegistry.html</guid>
                         </item>
@@ -483,7 +483,7 @@ ou tout simplement pouvoir bénéficier de l’aide de l’IDE pour savoir de qu
 &lt;p&gt;Par défaut, IntelliJ est déjà suffisament malin pour scanner les fichiers du workspace 
 et trouver de la complétion en automatique (ainsi que la JSDoc).&lt;/p&gt;
 
-&lt;p&gt;Cependant, ce mécanisme ne marche pas à tous les coups : &lt;/p&gt;
+&lt;p&gt;Cependant, ce mécanisme ne marche pas à tous les coups :&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;vous utilisez des versions sur des CDN&lt;/li&gt;
@@ -529,7 +529,7 @@ ainsi qu’une documentation précise (pour la plupart des librairies).&lt;/p&gt
     &lt;/a&gt;
 &lt;/div&gt;
 </description>
-                                <pubDate>Wed, 10 Jun 2015 00:00:00 +0200</pubDate>
+                                <pubDate>Wed, 10 Jun 2015 00:00:00 +0000</pubDate>
                                 <link>http://code-troopers.com/2015/06/10/CompletionJavascriptDansIntelliJ.html</link>
                                 <guid isPermaLink="true">http://code-troopers.com/2015/06/10/CompletionJavascriptDansIntelliJ.html</guid>
                         </item>
@@ -573,7 +573,7 @@ Your browser does not support the video tag.
 &lt;p&gt;À vos applications !&lt;/p&gt;
 
 </description>
-                                <pubDate>Sat, 06 Jun 2015 00:00:00 +0200</pubDate>
+                                <pubDate>Sat, 06 Jun 2015 00:00:00 +0000</pubDate>
                                 <link>http://code-troopers.com/2015/06/06/AndroidDesignLibrary.html</link>
                                 <guid isPermaLink="true">http://code-troopers.com/2015/06/06/AndroidDesignLibrary.html</guid>
                         </item>
@@ -715,7 +715,7 @@ J’ai récupéré le mien sur https://github.com/borisguery/git-keywords-checke
 &lt;p&gt;Si vous voulez d’autres exemples de hooks, vous pouvez commencer par jeter un œil aux hooks de &lt;a href=&quot;https://github.com/petervanderdoes/git-flow-hooks&quot;&gt;git-flow&lt;/a&gt;&lt;/p&gt;
 
 </description>
-                                <pubDate>Fri, 22 May 2015 00:00:00 +0200</pubDate>
+                                <pubDate>Fri, 22 May 2015 00:00:00 +0000</pubDate>
                                 <link>http://code-troopers.com/2015/05/22/Dotfiles-git.html</link>
                                 <guid isPermaLink="true">http://code-troopers.com/2015/05/22/Dotfiles-git.html</guid>
                         </item>
@@ -737,7 +737,7 @@ Pour configurer vim, une seule chose à faire : &lt;code&gt;vim ~/.vimrc&lt;/cod
 endif
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;De base sous vim on édite son .vimrc, on quitte et on réouvre un fichier pour voir la modification. Grâce à ces lignes, il suffira de sauvegarder pour voir ses modifications actives dans toutes les instances ouvertes de vim. &lt;/p&gt;
+&lt;p&gt;De base sous vim on édite son .vimrc, on quitte et on réouvre un fichier pour voir la modification. Grâce à ces lignes, il suffira de sauvegarder pour voir ses modifications actives dans toutes les instances ouvertes de vim.&lt;/p&gt;
 
 &lt;div style=&quot;text-align: center;margin:50px;&quot;&gt;
 &lt;video style=&quot;width: 90%; max-width: 600px;&quot; controls=&quot;&quot; src=&quot;/videos/dotfiles-saveactif.webm&quot;&gt;&lt;/video&gt;
@@ -750,7 +750,7 @@ vnoremap &amp;lt;C-Z&amp;gt; &amp;lt;C-C&amp;gt;:update&amp;lt;CR&amp;gt;
 inoremap &amp;lt;C-Z&amp;gt; &amp;lt;C-O&amp;gt;:update&amp;lt;CR&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Pour sauvegarder sous vim, il faut faire &lt;code&gt;:w&lt;/code&gt; Ce serait quand même mieux de faire &lt;code&gt;ctrl-z&lt;/code&gt; un peu à l’image des &lt;code&gt;ctrl-s&lt;/code&gt; que l’on trouve partout ailleurs. &lt;/p&gt;
+&lt;p&gt;Pour sauvegarder sous vim, il faut faire &lt;code&gt;:w&lt;/code&gt; Ce serait quand même mieux de faire &lt;code&gt;ctrl-z&lt;/code&gt; un peu à l’image des &lt;code&gt;ctrl-s&lt;/code&gt; que l’on trouve partout ailleurs.&lt;/p&gt;
 
 &lt;div style=&quot;text-align: center;margin:50px;&quot;&gt;
 &lt;video style=&quot;width: 90%; max-width: 600px;&quot; controls=&quot;&quot; src=&quot;/videos/dotfiles-ctrlz.webm&quot;&gt;&lt;/video&gt;
@@ -776,7 +776,7 @@ Selon la disposition de votre clavier, vous pouvez remplacer &lt;code&gt;c&lt;/c
 &lt;pre&gt;&lt;code&gt;syntax on
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;vim connaît à peu près tous les langages, de Shell à Java, en passant par le XML ou les simples fichiers de configuration. Avec cette commande,  vous aurez donc automatiquement la coloration syntaxique. &lt;/p&gt;
+&lt;p&gt;vim connaît à peu près tous les langages, de Shell à Java, en passant par le XML ou les simples fichiers de configuration. Avec cette commande,  vous aurez donc automatiquement la coloration syntaxique.&lt;/p&gt;
 
 &lt;div style=&quot;text-align: center;margin:50px;&quot;&gt;
 &lt;video style=&quot;width: 90%; max-width: 600px;&quot; controls=&quot;&quot; src=&quot;/videos/dotfiles-syntax.webm&quot;&gt;&lt;/video&gt;
@@ -868,7 +868,7 @@ Si vous vous demandez ce qu’est la touche &lt;code&gt;&amp;lt;Leader&amp;gt;&l
 source ~/.vimrc
 &lt;/code&gt;&lt;/pre&gt;
 </description>
-                                <pubDate>Fri, 15 May 2015 00:00:00 +0200</pubDate>
+                                <pubDate>Fri, 15 May 2015 00:00:00 +0000</pubDate>
                                 <link>http://code-troopers.com/2015/05/15/Dotfiles-vim.html</link>
                                 <guid isPermaLink="true">http://code-troopers.com/2015/05/15/Dotfiles-vim.html</guid>
                         </item>
@@ -887,7 +887,7 @@ seront mises en ligne sur Parleys et accessibles gratuitement (comme les autres 
 Je vous conseille par exemple &lt;a href=&quot;https://www.parleys.com/tutorial/java-8-streams-collectors-patterns-performances-parallelisation&quot;&gt;les streams Java 8 de José Paumard&lt;/a&gt; 
 si vous n’êtes toujours pas familiers de la chose.&lt;/p&gt;
 
-&lt;p&gt;Ce que je vais vous raconter dans cet article, ce sont les &lt;code&gt;mais&lt;/code&gt;, parce que &lt;em&gt;Devoxx c’est bien mais…&lt;/em&gt; &lt;/p&gt;
+&lt;p&gt;Ce que je vais vous raconter dans cet article, ce sont les &lt;code&gt;mais&lt;/code&gt;, parce que &lt;em&gt;Devoxx c’est bien mais…&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;Car finalement assez peu de personnes en parlent. Et comme en France on aime bien se plaindre (et que je suis un bon français), je veux  bien endosser le rôle du râleur.&lt;/p&gt;
 
@@ -920,20 +920,20 @@ et je ne parle pas là d’une ou deux personnes lors d’une ou deux sessions, 
 
 &lt;p&gt;Pour finir j’aimerais aborder un sujet de beaucoup plus subjectif, &lt;strong&gt;le niveau des conférences&lt;/strong&gt;. En effet j’ai (avis personnel, donc) 
 eu le sentiment que, par rapport à l’année dernière, le niveau était en deçà. J’en ai déjà pas mal discuté et plusieurs personnes ne sont pas de cet avis. 
-Il est donc assez probable que ce soit dû aux choix que j’ai fait plutôt qu’à l’ensemble des conférences disponibles. &lt;/p&gt;
+Il est donc assez probable que ce soit dû aux choix que j’ai fait plutôt qu’à l’ensemble des conférences disponibles.&lt;/p&gt;
 
 &lt;p&gt;Mais dans ce cas là, ne faudrait-il pas que le niveau estimé de la conf soit annoncé avant, afin de limiter les déceptions et de mieux cibler le public (par exemple avec des labels &lt;em&gt;débutant, medium, avancé&lt;/em&gt; sur le programme) ?&lt;/p&gt;
 
 &lt;p&gt;Tout cela n’est aucunement une charge contre l’orga qui a, encore une fois, fait un boulot extraordinaire pour réunir &lt;code&gt;2509&lt;/code&gt; &lt;em&gt;développeurs (et développeuses) passionné(e)s&lt;/em&gt; au Palais des Congrès. 
-Et parce que pouvoir assister à une conf de &lt;a href=&quot;https://twitter.com/briangoetz&quot;&gt;Brian Goetz&lt;/a&gt; (architecte de java), ça n’arrive pas tous les jours, je serai présent l’année prochaine. &lt;/p&gt;
+Et parce que pouvoir assister à une conf de &lt;a href=&quot;https://twitter.com/briangoetz&quot;&gt;Brian Goetz&lt;/a&gt; (architecte de java), ça n’arrive pas tous les jours, je serai présent l’année prochaine.&lt;/p&gt;
 
 &lt;p&gt;PS : Pour voir quelques photos, il y a le site de &lt;a href=&quot;http://www.devoxx.fr/2015/04/devoxx-france-2015-en-images/&quot;&gt;Devoxx France&lt;/a&gt; et aussi ce &lt;a href=&quot;https://m.flickr.com/#/photos/123583479@N03/sets/72157651881953421&quot;&gt;compte flickr&lt;/a&gt;. Sinon, vous avez toujours internet.&lt;/p&gt;
 
 &lt;p&gt;&lt;small&gt;¹ : Référence au discours de Charles-Alexandre Sabourdin qui a animé les deux keynotes.&lt;/small&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;small&gt;² : oui oui, carrément !&lt;/small&gt; &lt;/p&gt;
+&lt;p&gt;&lt;small&gt;² : oui oui, carrément !&lt;/small&gt;&lt;/p&gt;
 </description>
-                                <pubDate>Wed, 15 Apr 2015 00:00:00 +0200</pubDate>
+                                <pubDate>Wed, 15 Apr 2015 00:00:00 +0000</pubDate>
                                 <link>http://code-troopers.com/2015/04/15/DevoxxFR-2015.html</link>
                                 <guid isPermaLink="true">http://code-troopers.com/2015/04/15/DevoxxFR-2015.html</guid>
                         </item>
@@ -958,7 +958,7 @@ Nous n’étions pas non plus venus avec une idée de pitch, ce qui nous a permi
 Comme l’année dernière, il n’y a pas énormément de dev et les porteurs de projet (souvent business) ont presque tous besoin de dev dans leur équipe. 
 Et ce n’est pas facile de refuser un appel à l’aide. 
 Mais il faut faire un choix et en plus il faut faire le tri entre les projets qui semblent intéressants et ceux où il y a un minimum de dev à faire, car on est venu pour ça.
-Après avoir pris notre temps pour faire le tour de tous les projets, voici notre verdict : &lt;/p&gt;
+Après avoir pris notre temps pour faire le tour de tous les projets, voici notre verdict :&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Matthieu va travailler sur &lt;em&gt;TIM&lt;/em&gt; : une plate-forme qui permet de prendre rendez-vous chez des professionnels de tous genres (coiffeur, plombier…),&lt;/li&gt;
@@ -988,7 +988,7 @@ Marie, notre super graphiste, a trouvé un lien entre le caméléon et sa vision
 
 &lt;p&gt;Côté business Stéphane, Mélodie, Bénédicte et Alexis ont plein d’idées, et Victor est là pour apporter son expertise, en tant qu’étudiant en droit c’est pile la personne qu’il fallait.&lt;/p&gt;
 
-&lt;p&gt;Il reste Maxime, Joris et moi, on a entammé le dev en partant des vagues concepts métier évoqués : des assurances, des contrats, des mots clés et des assurés. &lt;/p&gt;
+&lt;p&gt;Il reste Maxime, Joris et moi, on a entammé le dev en partant des vagues concepts métier évoqués : des assurances, des contrats, des mots clés et des assurés.&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
@@ -1003,7 +1003,7 @@ C’est une étape indispensable du weekend. Les retours des personnes sondées 
 Ils enchainent sur le &lt;em&gt;Business Model Canevas&lt;/em&gt;, là je suis complètement largué, et aussi admiratif de ce qu’ils arrivent à faire en si peu de temps.&lt;/p&gt;
 
 &lt;p&gt;Sur la partie dev ça se passe bien, à peine quelques conflits de commit, mais c’est normal vu qu’on travaille sur les mêmes fichiers.
-5h30 (oui oui le temps passe vraiment aussi vite) : il est temps d’aller dormir. Je laisse Marie et Maxime qui ont encore des ressources insoupçonnées. &lt;/p&gt;
+5h30 (oui oui le temps passe vraiment aussi vite) : il est temps d’aller dormir. Je laisse Marie et Maxime qui ont encore des ressources insoupçonnées.&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
@@ -1060,7 +1060,7 @@ Finalement ce sera un PC avec un navigateur redimmensionné à la taille d’un 
 &lt;p&gt;C’est la première fois que je pénétrais sur le site de l’ancienne imprimerie MAME et, bien que l’esplanade soit encore en travaux, l’intérieur est vraiment sympa et bien aménagé. 
 Le site s’est parfaitement prêté à l’exercice avec un grand espace pour les discours, une zone où tous les cerveaux étaient réunis mais où il y avait assez de places pour que chaque groupe ait son espace. Il y avait même de quoi se détendre avec billards, tables de ping-pong et un panier de basket pour les plus sportifs.&lt;/p&gt;
 
-&lt;p&gt;Merci l’orga &lt;/p&gt;
+&lt;p&gt;Merci l’orga&lt;/p&gt;
 
 &lt;p&gt;Évidemment (et même si ça fait fayot :p), merci à Marie, Julien et Julien pour l’organisation ainsi que tous les bénévoles car ça fait une sacré logistique à mettre en place et tout s’est déroulé sans accrocs.&lt;/p&gt;
 
@@ -1096,7 +1096,7 @@ Le site s’est parfaitement prêté à l’exercice avec un grand espace pour l
     &lt;/a&gt;
 &lt;/div&gt;
 </description>
-                                <pubDate>Tue, 24 Mar 2015 00:00:00 +0100</pubDate>
+                                <pubDate>Tue, 24 Mar 2015 00:00:00 +0000</pubDate>
                                 <link>http://code-troopers.com/2015/03/24/StartupWeekend.html</link>
                                 <guid isPermaLink="true">http://code-troopers.com/2015/03/24/StartupWeekend.html</guid>
                         </item>
