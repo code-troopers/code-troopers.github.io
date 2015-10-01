@@ -169,3 +169,5 @@ Doc développeur Android : [https://developer.android.com/preview/features/runti
 
 Guidelines Android : [http://www.google.fr/design/spec/patterns/permissions.html](https://developer.android.com/preview/features/runtime-permissions.html)
 
+Explication sur quand demander une permission : [https://www.youtube.com/watch?v=iZqDdvhTZj0](https://www.youtube.com/watch?v=iZqDdvhTZj0)
+
