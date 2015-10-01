@@ -230,6 +230,8 @@ ActivityCompat.requestPermissions(MainActivity.this,
 
 &lt;p&gt;Guidelines Android : &lt;a href=&quot;https://developer.android.com/preview/features/runtime-permissions.html&quot;&gt;http://www.google.fr/design/spec/patterns/permissions.html&lt;/a&gt;&lt;/p&gt;
 
+&lt;p&gt;Explication sur quand demander une permission : &lt;a href=&quot;https://www.youtube.com/watch?v=iZqDdvhTZj0&quot;&gt;https://www.youtube.com/watch?v=iZqDdvhTZj0&lt;/a&gt;&lt;/p&gt;
+
 </description>
                                 <pubDate>Tue, 22 Sep 2015 00:00:00 +0000</pubDate>
                                 <link>http://code-troopers.com/2015/09/22/Android_M_Permissions.html</link>
