@@ -6,15 +6,14 @@ cover: swtours-banner
 tags: [Android, Gradle, Livraison]
 ---
 
-Lors que l’on fait du développement Android et qu’on publie régulièrement des nouvelles version de l'application sur le play store, 
-il est assez fastidieux de devoir se connecter à l’interface de google, de sélectionner le projet et ensuite d’uploader son nouvel apk 
-(en plus, chez nous on n'est pas fan du clic-clic on préfère la ligne de commande).
+Lorsque l’on fait du développement Android on a régulièrement besoin de publier des nouvelles versions de l'application sur le Play Store, 
+il est assez fastidieux de devoir se connecter à l’interface de google, de sélectionner le projet et ensuite d’uploader son nouvel apk.
 
-Heureusement pour nous chez Google ils sont sympa et ils ont prévu le coup avec une API que l’on peut attaquer en ligne de commande.
+Heureusement pour nous chez Google a prévu le coup avec une API que l’on peut attaquer en ligne de commande.
 Et encore plus sympa [Björn Hurling](https://plus.google.com/+Bj%C3%B6rnHurling/posts) a lui publié sur github 
 [un plugin gradle qui utilise cette API](https://github.com/Triple-T/gradle-play-publisher).
 
-Voyons ensemble et en pas à pas comment et quoi configurer afin de livrer ses apk en ligne de commande.
+Voyons ensemble et en pas à pas comment et quoi configurer afin de livrer ses apk en ligne de commande en utilisant gradle.
 
 <!-- break -->
   
@@ -29,8 +28,8 @@ Si c'est n'est pas le cas vous pouvez vous reposer sur la [doc de Google](http:/
 ## Étape 1 : Creation du 'Service Account'
 
 La première étape consite à créer un compte qui peut utilser l'API de google, contrairement à un compte utilisateur classique celui-ci utilisera un ficher de clé pour s'identifier plutôt qu'un mot de passe.
-Pour cela rendez-vous dans un premier temps dans la l'interface developpeur du Play Store, dans la section `Settings > API acces` et cliquez sur `Create Service Account`.
 
+Pour cela rendez-vous dans un premier temps dans la l'interface developpeur du Play Store, dans la section `Settings > API acces` et cliquez sur `Create Service Account`.
 
 <div style="text-align:center;margin:50px">
   <a href="/images/postAndroidGradle/Capture1.png" data-lightbox="group-1" title="" class="inlineBoxes">
@@ -41,27 +40,29 @@ Pour cela rendez-vous dans un premier temps dans la l'interface developpeur du P
   </a>
 </div>
 
-Vous allez être redirigé sur l'interface google developpeur principale ou pour pourrez un nouveau `OAuth > client ID`  de type `service account`.
+En suivant le lien du petit `1` vous allez être redirigé vers la console google developpeur d'ou vous pourrez créer un nouveau `Credential`  de type `Service account`.
 
-Une fois le compte créé pensez a générer une clé p12 qui sera utilisé pour l'authenficication
+Sélectionner le format de clé `JSON` qui est recommandé puis le téléchargement de celle-ci devrait se faire automatiquement.
+
+On peut ensuite voir qu'un nouveau `Service account` est apparu dans la liste des Credentials.
 
 <div style="text-align:center;margin:50px">
-  <a href="/images/postAndroidGradle/Capture3.png" data-lightbox="group-2" title="" class="inlineBoxes">
+  <a href="/images/postAndroidGradle/Capture3.png" data-lightbox="group-1" title="" class="inlineBoxes">
     <img class="medium" src="/images/postAndroidGradle/Capture3.png" alt=""/>
   </a>
-  <a href="/images/postAndroidGradle/Capture4.png" data-lightbox="group-2" title="" class="inlineBoxes">
+  <a href="/images/postAndroidGradle/Capture4.png" data-lightbox="group-1" title="" class="inlineBoxes">
     <img class="medium" src="/images/postAndroidGradle/Capture4.png" alt=""/>
   </a> 
-  <a href="/images/postAndroidGradle/Capture5.png" data-lightbox="group-2" title="" class="inlineBoxes">
+  <a href="/images/postAndroidGradle/Capture5.png" data-lightbox="group-1" title="" class="inlineBoxes">
     <img class="medium" src="/images/postAndroidGradle/Capture5.png" alt=""/>
   </a>
 </div>
 
 
-De retour sur l'interface d'admin du Play Store, on constate que le compte est bien créée est disponible.
+De retour sur l'interface d'admin du Play Store, on constate que le `Service Account` est bien créée est disponible ici.
 
 <div style="text-align:center;margin:50px">
-  <a href="/images/postAndroidGradle/Capture6.png" data-lightbox="group-3" title="" class="inlineBoxes">
+  <a href="/images/postAndroidGradle/Capture6.png" data-lightbox="group-1" title="" class="inlineBoxes">
     <img class="medium" src="/images/postAndroidGradle/Capture6.png" alt=""/>
   </a>
 </div>
@@ -69,68 +70,124 @@ De retour sur l'interface d'admin du Play Store, on constate que le compte est b
 
 ## Étape 2 : Attribution de droits
 Il faut maintenant donner les droits au compte que l'on vient de créer afin qu'il puisse au moins livrer les apk en alpha.
-Les droit minimum à accorder pour que le plugin puisse fonctionnner sont : 
- 
- * Edit 
- * Manage
- * Manage
- * Manage
 
+Pour cela cliquez sur le bouton `Grant access` et dans la popup qui s'ouvre les droits minimum à accorder pour que le plugin puisse fonctionnner sont : 
+
+ * Edit store listing, pricing & distribution
+ * Manage Production APKs
+ * Manage Alpha & Beta APKs
+ * Manage Alpha & Beta users
+
+Ces choix pourront être modifés ultérieurement dans l'écran récapitulatif (mais ce n'est pas recommandé).
 
 <div style="text-align:center;margin:50px">
-  <a href="/images/postAndroidGradle/Capture7.png" data-lightbox="group-4" title="" class="inlineBoxes">
+  <a href="/images/postAndroidGradle/Capture7.png" data-lightbox="group-1" title="" class="inlineBoxes">
     <img class="medium" src="/images/postAndroidGradle/Capture7.png" alt=""/>
   </a>
-  <a href="/images/postAndroidGradle/Capture8.png" data-lightbox="group-4" title="" class="inlineBoxes">
+  <a href="/images/postAndroidGradle/Capture8.png" data-lightbox="group-1" title="" class="inlineBoxes">
     <img class="medium" src="/images/postAndroidGradle/Capture8.png" alt=""/>
   </a>
 </div>
 
 ## Étape 3 : le plugin gradle
-Il faut maintenant configure son build gradle pour ajouter les informations relative au plugin qui effectura la livraison.
+Il faut maintenant configurer son build pour ajouter les informations relative au plugin qui effectura la livraison vers le Play Store.
 
-Ajouter le plugin dans le build, ainsi que l'endroit ou il se trouve
+Dans le fichier `build.gradle` du projet il faut donc rajouter la dépendance au plugin :
+
+
+    buildscript {
+    
+        repositories {
+            mavenCentral()
+        }
+    
+        dependencies {
+            // ...
+            classpath 'com.github.triplet.gradle:play-publisher:1.1.4'
+        }
+    }
+
+
+Et dans le `build.gradle` de l'application (du Module), il faut appliquer le plugin au même niveau que le plugin Android :
+
+    apply plugin: 'com.android.application'
+    apply plugin: 'com.github.triplet.play'
+
+Ensuite toujours dans le build.gradle il ajouter les informations de l'`Account service` précedemennt créér pour qu'il puisse se connecter et faire la livraison 
+(c'est là que l'on va utiliser la clé `JSON` générée)
+
+    play {
+        jsonFile = file('../publishKey/serviceAccountKeys.json')
+    }
+
+
+A partir de là notre build est configuré. Et on peut notamment s'en rendre compte en faisant un `./gradlwe tasks` 
+
+On voit les nouvelles cible gradle qu'on peut appeler
 
 <div style="text-align:center;margin:50px">
-  <a href="/images/postAndroidGradle/Capture71.png" data-lightbox="group-5" title="" class="inlineBoxes">
-    <img class="medium" src="/images/postAndroidGradle/Capture71.png" alt=""/>
+  <a href="/images/postAndroidGradle/GradlewBefore.png" data-lightbox="group-1" title="" class="inlineBoxes">
+    <img class="medium" src="/images/postAndroidGradle/GradlewBefore.png" alt=""/>
   </a>
-  <a href="/images/postAndroidGradle/Capture81.png" data-lightbox="group-5" title="" class="inlineBoxes">
-    <img class="medium" src="/images/postAndroidGradle/Capture81.png" alt=""/>
+  <a href="/images/postAndroidGradle/GradlewAfter.png" data-lightbox="group-1" title="" class="inlineBoxes">
+    <img class="medium" src="/images/postAndroidGradle/GradlewAfter.png" alt=""/>
   </a>
 </div>
- 
-Configuration du plugin = ajouter les informations du compte qui va se connecter pour faire la livraison 
-(c'est là que l'on va utiliser la clé P12 générée précedement)
+
+Mais ce n'est pas suffisant. Car il manque notamment les taches permettant l'upload de l'apk. Pour cela il faut rajouter la `signingConfigs` dans le build.gradle.
+Ce qui peut notamment se faire comme ça
+
+        signingConfigs {
+            release {
+                storeFile file("../keystore.jks")
+                storePassword "123123"
+                keyAlias "release"
+                keyPassword "123123"
+            }
+        }
+        buildTypes {
+            release {
+                //...
+                signingConfig signingConfigs.release
+            }
+        }
+        
+        
+Maintenant on peut voir la présence de la task qui nous intéresse `publishApkRelease`
 
 <div style="text-align:center;margin:50px">
-  <a href="/images/postAndroidGradle/Capture9.png" data-lightbox="group-3" title="" class="inlineBoxes">
-    <img class="medium" src="/images/postAndroidGradle/Capture9.png" alt=""/>
+  <a href="/images/postAndroidGradle/GradlewComplete.png" data-lightbox="group-1" title="" class="inlineBoxes">
+    <img class="medium" src="/images/postAndroidGradle/GradlewComplete.png" alt=""/>
   </a>
-</div>
-
-
-
-./gradlwe taks : on voit les nouvelles cible gradle qu'on peut appeler
-
+</div>        
 
 ## Étape 4 : génération et upload
-le build n'est pas nécessaire car il est fait par la nouvelle task
+
+Pour effectuer un upload de l'apk il suffit maintenant d'appler la task `publishApkRelease` après la génération d'un apk signé.
+
+Si tout se passe bien le build se termine normalement avec un : 
+    
+    BUILD SUCCESSFUL
+
+Si il y a un problème lors de l'updload il est affiché dans la console, par exemple si le version code est déjà utilisé 
+
+<div style="text-align:center;margin:50px">
+  <a href="/images/postAndroidGradle/GradlewUploadKO.png" data-lightbox="group-1" title="" class="inlineBoxes">
+    <img class="medium" src="/images/postAndroidGradle/GradlewUploadKO.png" alt=""/>
+  </a>
+</div>    
 
 
-rapport d'upload : ok
-
-rapport ko : probablement un pb dans le user ou la clé
-
-Attention : ne commiter pas la clé sur github
+Ensuite vous pouvez vous rendre sur l'interface d'admin du Play Store et constater que l'upload d'un nouvel apk a bien eu lieu en alpha et le passer en bêta ou en production.
 
 
+__Attention__ : ne pas commiter la clé sur github, au même titre que le mot de passe du keystore
 
 
 ##Pour allez plus loin 
-* Le plugin permet bien plus de chose que la livraions. En effet il permet de mettre a jour la description les images et le change log.
+
+Le plugin permet bien plus de chose que la livraions. En effet il permet de mettre a jour la description les images et le change log.
 Pour savoir comment configurer tout cela, je vous invite a consulter la page github du projet [https://github.com/Triple-T/gradle-play-publisher](https://github.com/Triple-T/gradle-play-publisher)
 
-L'étape ultime de la livraison continue, c’est de configure un jenkins pour qu’il livre en alpha à chaque nouveau commit, et pour ca rien de plus simple il suffit de rajouter une tache post build qui fera appel a la commande précédente.
-C'est ce que nous verrons dans le prochain article.
+L'étape ultime de la livraison continue, c’est de configure un jenkins pour qu’il livre en alpha à chaque nouveau commit sur master, et pour il suffit de le configurer en rajoutant par exemple une tache post build qui fera appel a la commande gradle que nous vennons de configurer.
 
