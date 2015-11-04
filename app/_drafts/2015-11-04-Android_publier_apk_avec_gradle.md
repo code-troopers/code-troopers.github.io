@@ -9,7 +9,7 @@ tags: [Android, APK, Gradle, Livraison]
 Lorsque l’on fait du développement Android on a régulièrement besoin de publier des nouvelles versions de l'application sur le Play Store, 
 il est assez fastidieux de devoir se connecter à l’interface de google, de sélectionner le projet et ensuite d’uploader son nouvel apk.
 
-Heureusement pour nous chez Google a prévu le coup avec une API que l’on peut attaquer en ligne de commande.
+Heureusement pour nous Google a prévu le coup avec une API que l’on peut attaquer en ligne de commande.
 Et encore plus sympa [Björn Hurling](https://plus.google.com/+Bj%C3%B6rnHurling/posts) a lui publié sur github 
 [un plugin gradle qui utilise cette API](https://github.com/Triple-T/gradle-play-publisher).
 
