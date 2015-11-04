@@ -114,7 +114,9 @@ Et dans le `build.gradle` de l'application (du Module), il faut appliquer le plu
     apply plugin: 'com.github.triplet.play'
 
 Ensuite toujours dans le build.gradle il ajouter les informations de l'`Account service` précedemennt créér pour qu'il puisse se connecter et faire la livraison 
-(c'est là que l'on va utiliser la clé `JSON` générée)
+(c'est là que l'on va utiliser la clé `JSON` générée).
+
+Placez donc la clé dans votre projet et faites-y référence dans la configuration du plugin :
 
     play {
         jsonFile = file('../publishKey/serviceAccountKeys.json')
@@ -123,7 +125,7 @@ Ensuite toujours dans le build.gradle il ajouter les informations de l'`Account 
 
 A partir de là notre build est configuré. Et on peut notamment s'en rendre compte en faisant un `./gradlwe tasks` 
 
-On voit les nouvelles cible gradle qu'on peut appeler
+On y voit toutes les tâches gradle qu'on peut appeler : 
 
 <div style="text-align:center;margin:50px">
   <a href="/images/postAndroidGradle/Android_Gradle_PublishAPK_Gradlew_tasks_config_before.png" data-lightbox="group-1" title="Liste des tasks gradle disponibles sans le plugin" class="inlineBoxes">
@@ -134,15 +136,15 @@ On voit les nouvelles cible gradle qu'on peut appeler
   </a>
 </div>
 
-Mais ce n'est pas suffisant. Car il manque notamment les taches permettant l'upload de l'apk. Pour cela il faut rajouter la `signingConfigs` dans le build.gradle.
+Mais ce n'est pas suffisant. Car il manque notamment les taches permettant l'upload de l'apk. Pour cela il faut rajouter la `signingConfigs` dans le `build.gradle`.
 Ce qui peut notamment se faire comme ça
 
         signingConfigs {
             release {
                 storeFile file("../keystore.jks")
-                storePassword "123123"
+                storePassword "7r00p3r5"
                 keyAlias "release"
-                keyPassword "123123"
+                keyPassword "7r00p3r5"
             }
         }
         buildTypes {
@@ -153,7 +155,7 @@ Ce qui peut notamment se faire comme ça
         }
         
         
-Maintenant on peut voir la présence de la task qui nous intéresse `publishApkRelease`
+Maintenant on peut voir la présence de la tâche qui nous intéresse `publishApkRelease`
 
 <div style="text-align:center;margin:50px">
   <a href="/images/postAndroidGradle/Android_Gradle_PublishAPK_Gradlew_tasks_config_complete.png" data-lightbox="group-1" title="Liste des tasks gradle disponibles avec upload apk" class="inlineBoxes">
@@ -163,13 +165,13 @@ Maintenant on peut voir la présence de la task qui nous intéresse `publishApkR
 
 ## Étape 4 : génération et upload
 
-Pour effectuer un upload de l'apk il suffit maintenant d'appler la task `publishApkRelease` après la génération d'un apk signé.
+Pour effectuer un upload de l'apk il suffit maintenant d'appler la tâche `publishApkRelease`. Et pas besoin de générer l'apk signé via Android Studio puisque maintenant tout est configué, il sera généré dans les tâches précédents à l'uploadApk.
 
-Si tout se passe bien le build se termine normalement avec un : 
+Si tout se passe bien le build se termine avec un : 
     
     BUILD SUCCESSFUL
 
-Si il y a un problème lors de l'updload il est affiché dans la console, par exemple si le version code est déjà utilisé 
+Si il y a un problème lors de l'updload il est affiché dans la console, par exemple si le __version code__ est déjà utilisé 
 
 <div style="text-align:center;margin:50px">
   <a href="/images/postAndroidGradle/Android_Gradle_PublishAPK_Gradlew_upload_ko.png" data-lightbox="group-1" title="Exemple d'upload d'apk en erreur" class="inlineBoxes">
@@ -181,12 +183,12 @@ Si il y a un problème lors de l'updload il est affiché dans la console, par ex
 Ensuite vous pouvez vous rendre sur l'interface d'admin du Play Store et constater que l'upload d'un nouvel apk a bien eu lieu en alpha et le passer en bêta ou en production.
 
 
-__Attention__ : ne pas commiter la clé sur github, au même titre que le mot de passe du keystore
+__Attention__ : ne pas commiter la clé `JSON` sur github, au même titre que le mot de passe du `keystore`.
 
 
 ##Pour allez plus loin 
 
-Le plugin permet bien plus de chose que la livraions. En effet il permet de mettre a jour la description les images et le change log.
+Le plugin permet bien plus de chose que la livraions des apks. En effet il permet de mettre à jour la description, les images et le change log.
 Pour savoir comment configurer tout cela, je vous invite a consulter la page github du projet [https://github.com/Triple-T/gradle-play-publisher](https://github.com/Triple-T/gradle-play-publisher)
 
 L'étape ultime de la livraison continue, c’est de configure un jenkins pour qu’il livre en alpha à chaque nouveau commit sur master, et pour il suffit de le configurer en rajoutant par exemple une tache post build qui fera appel a la commande gradle que nous vennons de configurer.
