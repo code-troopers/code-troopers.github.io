@@ -71,7 +71,7 @@ De retour sur l'interface d'admin du Play Store, on constate que le `Service Acc
 ## Étape 2 : Attribution de droits
 Il faut maintenant donner les droits au compte que l'on vient de créer afin qu'il puisse au moins livrer les apk en alpha.
 
-Pour cela cliquez sur le bouton `Grant access` et dans la popup qui s'ouvre les droits minimum à accorder pour que le plugin puisse fonctionnner sont : 
+Pour cela cliquez sur le bouton `Grant access` et dans la popup qui s'ouvre, les droits minimum à accorder pour que le plugin puisse fonctionnner sont : 
 
  * Edit store listing, pricing & distribution
  * Manage Production APKs
@@ -90,7 +90,7 @@ Ces choix pourront être modifés ultérieurement dans l'écran récapitulatif (
 </div>
 
 ## Étape 3 : le plugin gradle
-Il faut maintenant configurer son build pour ajouter les informations relatives au plugin qui effectura la livraison vers le Play Store.
+Il faut maintenant configurer son build pour ajouter les informations relatives au plugin qui effectuera la livraison vers le Play Store.
 
 Dans le fichier `build.gradle` du projet il faut donc rajouter la dépendance au plugin :
 
