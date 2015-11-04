@@ -136,7 +136,7 @@ On y voit toutes les tâches gradle qu'on peut appeler :
   </a>
 </div>
 
-Mais ce n'est pas suffisant. Car il manque notamment les taches permettant l'upload de l'apk. Pour cela il faut rajouter la `signingConfigs` dans le `build.gradle`.
+Mais ce n'est pas suffisant. Car il manque notamment les tâches permettant l'upload de l'apk. Pour cela il faut rajouter la `signingConfigs` dans le `build.gradle`.
 Ce qui peut notamment se faire comme ça
 
         signingConfigs {
