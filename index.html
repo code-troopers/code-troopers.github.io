@@ -133,6 +133,217 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
         <div class=row>
     
         <article class="col-lg-4 col-md-6 col-sm-12">
+            <div onclick="window.location.href='/2015/11/04/Android_publier_apk_avec_gradle.html' ;  return false" style="cursor: pointer">
+            <div class=cover style=background-image:url(/images/banner/android-banner.png)>
+                    <div class=date>posté le 04/11/2015 par Florian</div>
+                </div>
+                <h2><a href=/2015/11/04/Android_publier_apk_avec_gradle.html>Android : Publier son apk en ligne de commande</a></h2><ul class=tags>
+                    
+                    <li>Android</li>
+                    
+                    <li>APK</li>
+                    
+                    <li>Gradle</li>
+                    
+                    <li>Livraison</li>
+                    
+                </ul>
+                <div class=content>
+                    <p>Lorsque l’on fait du développement Android, on a régulièrement besoin de publier des nouvelles versions de l’application sur le Play Store. 
+Il est assez fastidieux de devoir se connecter à l’interface de Google, de sélectionner le projet et ensuite d’uploader son nouvel apk.</p>
+
+<p>Heureusement pour nous, Google a prévu le coup avec une API que l’on peut attaquer en ligne de commande.
+Et, encore plus sympa, <a href=https://plus.google.com/+Bj%C3%B6rnHurling/posts>Björn Hurling</a> a publié sur github 
+<a href=https://github.com/Triple-T/gradle-play-publisher>un plugin gradle qui utilise cette API</a>.</p>
+
+<p>Voyons ensemble pas à pas comment et quoi configurer afin de livrer ses apk en ligne de commande en utilisant gradle.</p>
+
+
+
+<h2 id=prrequis>Prérequis</h2>
+
+<p>Pour commencer, il faut avoir un build qui fonctionne avec gradle.</p>
+
+<p>Normalement pas de problème si c’est un projet récent puisque c’est ce qu’Android Studio propose maintenant par défaut.
+Si ce n’est pas le cas, vous pouvez vous reposer sur la <a href=http://tools.android.com/tech-docs/new-build-system/intellij_to_gradle>doc de Google</a> à ce sujet.</p>
+
+<h2 id=tape-1--cration-du-service-account>Étape 1 : Création du ‘Service Account’</h2>
+
+<p>La première étape consiste à créer un compte qui peut utilser l’API de Google : contrairement à un compte utilisateur classique, celui-ci utilisera un ficher de clé pour s’identifier plutôt qu’un mot de passe.</p>
+
+<p>Pour cela, rendez-vous dans un premier temps dans l’interface développeur du Play Store, dans la section <code>Settings &gt; API acces</code> et cliquez sur <code>Create Service Account</code>.</p>
+
+<div style=text-align:center;margin:50px>
+  <a href=/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_ConfigureAccount_Screen1.png data-lightbox=group-1 title="Configuration de l'Accout service - 1" class=inlineBoxes>
+    <img class=medium src=/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_ConfigureAccount_Screen1.png alt="Configuration de l'Accout service - 1">
+  </a>
+  <a href=/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_ConfigureAccount_Screen2.png data-lightbox=group-1 title="Configuration de l'Accout service - 2" class=inlineBoxes>
+    <img class=medium src=/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_ConfigureAccount_Screen2.png alt="Configuration de l'Accout service - 2">
+  </a>
+</div>
+
+<p>En suivant le lien du petit <code>1</code> vous allez être redirigé vers la console Google développeur d’où vous pourrez créer un nouveau <code>Credential</code>  de type <code>Service account</code>.</p>
+
+<p>Sélectionnez le format de clé <code>JSON</code> qui est recommandé, le téléchargement de celle-ci devrait alors se faire automatiquement.</p>
+
+<p>On peut ensuite voir qu’un nouveau <code>Service account</code> est apparu dans la liste des Credentials.</p>
+
+<div style=text-align:center;margin:50px>
+  <a href=/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_ConfigureAccount_Screen3.png data-lightbox=group-1 title="Configuration de l'Accout service - 3" class=inlineBoxes>
+    <img class=medium src=/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_ConfigureAccount_Screen3.png alt="Configuration de l'Accout service - 3">
+  </a>
+  <a href=/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_ConfigureAccount_Screen4.png data-lightbox=group-1 title="Configuration de l'Accout service - 4" class=inlineBoxes>
+    <img class=medium src=/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_ConfigureAccount_Screen4.png alt="Configuration de l'Accout service - 4">
+  </a> 
+  <a href=/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_ConfigureAccount_Screen5.png data-lightbox=group-1 title="Configuration de l'Accout service - 5" class=inlineBoxes>
+    <img class=medium src=/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_ConfigureAccount_Screen5.png alt="Configuration de l'Accout service - 5">
+  </a>
+</div>
+
+<p>De retour sur l’interface d’admin du Play Store, on constate que le <code>Service Account</code> est bien créé et disponible ici.</p>
+
+<div style=text-align:center;margin:50px>
+  <a href=/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_ConfigureAccount_Screen6.png data-lightbox=group-1 title="Configuration de l'Accout service - 6" class=inlineBoxes>
+    <img class=medium src=/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_ConfigureAccount_Screen6.png alt="Configuration de l'Accout service - 6">
+  </a>
+</div>
+
+<h2 id=tape-2--attribution-des-droits>Étape 2 : Attribution des droits</h2>
+<p>Il faut maintenant donner les droits au compte que l’on vient de créer afin qu’il puisse au moins livrer les apk en alpha.</p>
+
+<p>Pour cela cliquez sur le bouton <code>Grant access</code>. Dans la popup qui s’ouvre, les droits minimums à accorder pour que le plugin puisse fonctionnner sont :</p>
+
+<ul>
+  <li>Edit store listing, pricing &amp; distribution</li>
+  <li>Manage Production APKs</li>
+  <li>Manage Alpha &amp; Beta APKs</li>
+  <li>Manage Alpha &amp; Beta users</li>
+</ul>
+
+<p>Ces choix pourront être modifés ultérieurement dans l’écran récapitulatif (mais ce n’est pas recommandé).</p>
+
+<div style=text-align:center;margin:50px>
+  <a href=/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_ConfigureAccount_Screen7.png data-lightbox=group-1 title="Configuration de l'Accout service - 7" class=inlineBoxes>
+    <img class=medium src=/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_ConfigureAccount_Screen7.png alt="Configuration de l'Accout service - 7">
+  </a>
+  <a href=/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_ConfigureAccount_Screen8.png data-lightbox=group-1 title="Configuration de l'Accout service - 8" class=inlineBoxes>
+    <img class=medium src=/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_ConfigureAccount_Screen8.png alt="Configuration de l'Accout service - 8">
+  </a>
+</div>
+
+<h2 id=tape-3--le-plugin-gradle>Étape 3 : le plugin gradle</h2>
+<p>Il faut maintenant configurer son build pour ajouter les informations relatives au plugin qui effectuera la livraison vers le Play Store.</p>
+
+<p>Dans le fichier <code>build.gradle</code> du projet il faut donc rajouter la dépendance au plugin :</p>
+
+<pre><code>buildscript {
+
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        // ...
+        classpath 'com.github.triplet.gradle:play-publisher:1.1.4'
+    }
+}
+</code></pre>
+
+<p>Et dans le <code>build.gradle</code> de l’application (du Module), il faut appliquer le plugin au même niveau que le plugin Android :</p>
+
+<pre><code>apply plugin: 'com.android.application'
+apply plugin: 'com.github.triplet.play'
+</code></pre>
+
+<p>Ensuite, toujours dans le <code>build.gradle</code>, il est nécessaire d’ajouter les informations de l’<code>Account service</code> précédemment créé pour qu’il puisse se connecter et faire la livraison 
+(c’est là que l’on va utiliser la clé <code>JSON</code> générée).</p>
+
+<p>Placez donc la clé dans votre projet et faites-y référence dans la configuration du plugin :</p>
+
+<pre><code>play {
+    jsonFile = file('../publishKey/serviceAccountKeys.json')
+}
+</code></pre>
+
+<p>À partir de là, notre build est configuré. On peut notamment s’en rendre compte en faisant un <code>./gradlwe tasks</code></p>
+
+<p>On y voit toutes les tâches gradle qu’on peut appeler :</p>
+
+<div style=text-align:center;margin:50px>
+  <a href=/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_Gradlew_tasks_config_before.png data-lightbox=group-1 title="Liste des tasks gradle disponibles sans le plugin" class=inlineBoxes>
+    <img class=medium src=/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_Gradlew_tasks_config_before.png alt="Liste des tasks gradle disponibles sans le plugin">
+  </a>
+  <a href=/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_Gradlew_tasks_config_after.png data-lightbox=group-1 title="Liste des tasks gradle disponibles avec le plugin" class=inlineBoxes>
+    <img class=medium src=/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_Gradlew_tasks_config_after.png alt="Liste des tasks gradle disponibles avec le plugin">
+  </a>
+</div>
+
+<p>Mais ce n’est pas suffisant car il manque notamment les tâches permettant l’upload de l’apk. Pour cela il faut rajouter la <code>signingConfigs</code> dans le <code>build.gradle</code>.
+Ce qui peut notamment se faire comme ça</p>
+
+<pre><code>    signingConfigs {
+        release {
+            storeFile file("../keystore.jks")
+            storePassword "7r00p3r5"
+            keyAlias "release"
+            keyPassword "7r00p3r5"
+        }
+    }
+    buildTypes {
+        release {
+            //...
+            signingConfig signingConfigs.release
+        }
+    }
+</code></pre>
+
+<p>Maintenant, on peut voir la présence de la tâche qui nous intéresse : <code>publishApkRelease</code></p>
+
+<div style=text-align:center;margin:50px>
+  <a href=/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_Gradlew_tasks_config_complete.png data-lightbox=group-1 title="Liste des tasks gradle disponibles avec upload apk" class=inlineBoxes>
+    <img class=medium src=/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_Gradlew_tasks_config_complete.png alt="Liste des tasks gradle disponibles avec upload apk">
+  </a>
+</div>
+
+<h2 id=tape-4--gnration-et-upload>Étape 4 : génération et upload</h2>
+
+<p>Pour effectuer un upload de l’apk il suffit maintenant d’appeler la tâche <code>publishApkRelease</code>. Et pas besoin de générer l’apk signé via Android Studio puisque comme tout est configué, il sera généré dans les tâches précédents l’uploadApk.</p>
+
+<p>Si tout se passe bien le build se termine avec un :</p>
+
+<pre><code>BUILD SUCCESSFUL
+</code></pre>
+
+<p>Si il y a un problème lors de l’updload, il est affiché dans la console, par exemple si le <strong>version code</strong> est déjà utilisé</p>
+
+<div style=text-align:center;margin:50px>
+  <a href=/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_Gradlew_upload_ko.png data-lightbox=group-1 title="Exemple d'upload d'apk en erreur" class=inlineBoxes>
+    <img class=medium src=/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_Gradlew_upload_ko.png alt="Exemple d'upload d'apk en erreur">
+  </a>
+</div>
+
+<p>Ensuite vous pouvez vous rendre sur l’interface d’admin du Play Store et constater que l’upload d’un nouvel apk a bien eu lieu en alpha et le passer en bêta ou en production.</p>
+
+<p><strong>Attention</strong> : ne pas commiter la clé <code>JSON</code> sur github, au même titre que le mot de passe du <code>keystore</code>.</p>
+
+<h2 id=pour-aller-plus-loin>Pour aller plus loin</h2>
+
+<p>Le plugin permet bien plus de choses que la livraison des apks. En effet, il permet de mettre à jour la description, les images et le changelog.
+Pour savoir comment configurer tout cela, je vous invite à consulter la page github du projet <a href=https://github.com/Triple-T/gradle-play-publisher>https://github.com/Triple-T/gradle-play-publisher</a></p>
+
+<p>L’étape ultime de la livraison continue, c’est de configurer un jenkins pour qu’il livre en alpha à chaque nouveau commit sur master, et pour cela il suffit de le configurer en rajoutant par exemple une tache post build qui fera appel à la commande gradle que nous venons de configurer.</p>
+
+
+                </div>
+                <div class=fade-content>
+                </div>
+                <div class=more>
+                    <a href=/2015/11/04/Android_publier_apk_avec_gradle.html><i class="fa fa-arrow-circle-o-right"></i> Lire la suite</a>
+                </div>
+            </div>
+        </article>
+        
+        <article class="col-lg-4 col-md-6 col-sm-12">
             <div onclick="window.location.href='/2015/09/30/NewRelicDocker.html' ;  return false" style="cursor: pointer">
             <div class=cover style=background-image:url(/images/banner/docker-banner.png)>
                     <div class=date>posté le 30/09/2015 par Benjamin</div>
@@ -392,40 +603,6 @@ ActivityCompat.requestPermissions(MainActivity.this,
                 </div>
                 <div class=more>
                     <a href=/2015/09/22/Android_M_Permissions.html><i class="fa fa-arrow-circle-o-right"></i> Lire la suite</a>
-                </div>
-            </div>
-        </article>
-        
-        <article class="col-lg-4 col-md-6 col-sm-12">
-            <div onclick="window.location.href='/2015/09/09/OwncloudDocker.html' ;  return false" style="cursor: pointer">
-            <div class=cover style=background-image:url(/images/banner/docker-banner.png)>
-                    <div class=date>posté le 09/09/2015 par Matthieu</div>
-                </div>
-                <h2><a href=/2015/09/09/OwncloudDocker.html>Owncloud : solution de cloud en 5 min avec Docker</a></h2><ul class=tags>
-                    
-                    <li>Docker</li>
-                    
-                    <li>Owncloud</li>
-                    
-                </ul>
-                <div class=content>
-                    <p>Que ce soit pour des raisons politique de confidentialité ou des raisons technique, <a href="https://owncloud.org/">Owncloud</a> a énormément de qualités comparé à Dropbox ou Google drive. Déjà car la limite de taille des données est celle du serveur, ensuite car des applications sous linux permettent de synchroniser des dossiers et enfin car il existe une multitude d’addons qui permettent de sauvegarder ses mots de passe, jouer de la musique, envoyer des notifs sur Slack etc.</p>
-
-<p>La mise en production d’une instance Owncloud se fait en 5 minutes montre en main, à condition de connaître un minimum Docker.</p>
-
-<h2 id=nginxproxy>Nginx/proxy</h2>
-
-<p>Nous allons commencer par une petite digression. Avant quand on avait plusieurs “virtual host” qui pointaient sur une machine, on mettait un front-end apache et c’était plus ou moins la galère. Maintenant, il suffit de lancer cette commande une fois :</p>
-
-<pre><code>docker run --restart=always --name nginx -d -p 80:80 -p 443:443 -v /docker/vhost.d:/etc/nginx/vhost.d:ro -v /var/run/docker.sock:/tmp/docker.sock:ro jwilder/nginx-proxy
-</code></pre>
-
-
-                </div>
-                <div class=fade-content>
-                </div>
-                <div class=more>
-                    <a href=/2015/09/09/OwncloudDocker.html><i class="fa fa-arrow-circle-o-right"></i> Lire la suite</a>
                 </div>
             </div>
         </article>
