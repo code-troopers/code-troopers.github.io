@@ -29,7 +29,7 @@ Si ce n'est pas le cas vous pouvez vous reposer sur la [doc de Google](http://to
 
 La première étape consite à créer un compte qui peut utilser l'API de google, contrairement à un compte utilisateur classique celui-ci utilisera un ficher de clé pour s'identifier plutôt qu'un mot de passe.
 
-Pour cela rendez-vous dans un premier temps dans la l'interface developpeur du Play Store, dans la section `Settings > API acces` et cliquez sur `Create Service Account`.
+Pour cela rendez-vous dans un premier temps dans l'interface développeur du Play Store, dans la section `Settings > API acces` et cliquez sur `Create Service Account`.
 
 <div style="text-align:center;margin:50px">
   <a href="/images/postAndroidGradle/Android_Gradle_PublishAPK_ConfigureAccount_Screen1.png" data-lightbox="group-1" title="Configuration de l'Accout service - 1" class="inlineBoxes">
