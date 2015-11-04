@@ -32,11 +32,11 @@ La première étape consite à créer un compte qui peut utilser l'API de google
 Pour cela rendez-vous dans un premier temps dans la l'interface developpeur du Play Store, dans la section `Settings > API acces` et cliquez sur `Create Service Account`.
 
 <div style="text-align:center;margin:50px">
-  <a href="/images/postAndroidGradle/Capture1.png" data-lightbox="group-1" title="" class="inlineBoxes">
-    <img class="medium" src="/images/postAndroidGradle/Capture1.png" alt=""/>
+  <a href="/images/postAndroidGradle/Android_Gradle_PublishAPK_ConfigureAccount_Screen1.png" data-lightbox="group-1" title="" class="inlineBoxes">
+    <img class="medium" src="/images/postAndroidGradle/Android_Gradle_PublishAPK_ConfigureAccount_Screen1.png" alt=""/>
   </a>
-  <a href="/images/postAndroidGradle/Capture2.png" data-lightbox="group-1" title="" class="inlineBoxes">
-    <img class="medium" src="/images/postAndroidGradle/Capture2.png" alt=""/>
+  <a href="/images/postAndroidGradle/Android_Gradle_PublishAPK_ConfigureAccount_Screen2.png" data-lightbox="group-1" title="" class="inlineBoxes">
+    <img class="medium" src="/images/postAndroidGradle/Android_Gradle_PublishAPK_ConfigureAccount_Screen2.png" alt=""/>
   </a>
 </div>
 
@@ -47,14 +47,14 @@ Sélectionner le format de clé `JSON` qui est recommandé puis le téléchargem
 On peut ensuite voir qu'un nouveau `Service account` est apparu dans la liste des Credentials.
 
 <div style="text-align:center;margin:50px">
-  <a href="/images/postAndroidGradle/Capture3.png" data-lightbox="group-1" title="" class="inlineBoxes">
-    <img class="medium" src="/images/postAndroidGradle/Capture3.png" alt=""/>
+  <a href="/images/postAndroidGradle/Android_Gradle_PublishAPK_ConfigureAccount_Screen3.png" data-lightbox="group-1" title="" class="inlineBoxes">
+    <img class="medium" src="/images/postAndroidGradle/Android_Gradle_PublishAPK_ConfigureAccount_Screen3.png" alt=""/>
   </a>
-  <a href="/images/postAndroidGradle/Capture4.png" data-lightbox="group-1" title="" class="inlineBoxes">
-    <img class="medium" src="/images/postAndroidGradle/Capture4.png" alt=""/>
+  <a href="/images/postAndroidGradle/Android_Gradle_PublishAPK_ConfigureAccount_Screen4.png" data-lightbox="group-1" title="" class="inlineBoxes">
+    <img class="medium" src="/images/postAndroidGradle/Android_Gradle_PublishAPK_ConfigureAccount_Screen4.png" alt=""/>
   </a> 
-  <a href="/images/postAndroidGradle/Capture5.png" data-lightbox="group-1" title="" class="inlineBoxes">
-    <img class="medium" src="/images/postAndroidGradle/Capture5.png" alt=""/>
+  <a href="/images/postAndroidGradle/Android_Gradle_PublishAPK_ConfigureAccount_Screen5.png" data-lightbox="group-1" title="" class="inlineBoxes">
+    <img class="medium" src="/images/postAndroidGradle/Android_Gradle_PublishAPK_ConfigureAccount_Screen5.png" alt=""/>
   </a>
 </div>
 
@@ -62,8 +62,8 @@ On peut ensuite voir qu'un nouveau `Service account` est apparu dans la liste de
 De retour sur l'interface d'admin du Play Store, on constate que le `Service Account` est bien créée est disponible ici.
 
 <div style="text-align:center;margin:50px">
-  <a href="/images/postAndroidGradle/Capture6.png" data-lightbox="group-1" title="" class="inlineBoxes">
-    <img class="medium" src="/images/postAndroidGradle/Capture6.png" alt=""/>
+  <a href="/images/postAndroidGradle/Android_Gradle_PublishAPK_ConfigureAccount_Screen6.png" data-lightbox="group-1" title="" class="inlineBoxes">
+    <img class="medium" src="/images/postAndroidGradle/Android_Gradle_PublishAPK_ConfigureAccount_Screen6.png" alt=""/>
   </a>
 </div>
     
@@ -81,11 +81,11 @@ Pour cela cliquez sur le bouton `Grant access` et dans la popup qui s'ouvre les 
 Ces choix pourront être modifés ultérieurement dans l'écran récapitulatif (mais ce n'est pas recommandé).
 
 <div style="text-align:center;margin:50px">
-  <a href="/images/postAndroidGradle/Capture7.png" data-lightbox="group-1" title="" class="inlineBoxes">
-    <img class="medium" src="/images/postAndroidGradle/Capture7.png" alt=""/>
+  <a href="/images/postAndroidGradle/Android_Gradle_PublishAPK_ConfigureAccount_Screen7.png" data-lightbox="group-1" title="" class="inlineBoxes">
+    <img class="medium" src="/images/postAndroidGradle/Android_Gradle_PublishAPK_ConfigureAccount_Screen7.png" alt=""/>
   </a>
-  <a href="/images/postAndroidGradle/Capture8.png" data-lightbox="group-1" title="" class="inlineBoxes">
-    <img class="medium" src="/images/postAndroidGradle/Capture8.png" alt=""/>
+  <a href="/images/postAndroidGradle/Android_Gradle_PublishAPK_ConfigureAccount_Screen8.png" data-lightbox="group-1" title="" class="inlineBoxes">
+    <img class="medium" src="/images/postAndroidGradle/Android_Gradle_PublishAPK_ConfigureAccount_Screen8.png" alt=""/>
   </a>
 </div>
 
@@ -126,11 +126,11 @@ A partir de là notre build est configuré. Et on peut notamment s'en rendre com
 On voit les nouvelles cible gradle qu'on peut appeler
 
 <div style="text-align:center;margin:50px">
-  <a href="/images/postAndroidGradle/GradlewBefore.png" data-lightbox="group-1" title="" class="inlineBoxes">
-    <img class="medium" src="/images/postAndroidGradle/GradlewBefore.png" alt=""/>
+  <a href="/images/postAndroidGradle/Android_Gradle_PublishAPK_Gradlew_tasks_config_before.png" data-lightbox="group-1" title="" class="inlineBoxes">
+    <img class="medium" src="/images/postAndroidGradle/Android_Gradle_PublishAPK_Gradlew_tasks_config_before.png" alt=""/>
   </a>
-  <a href="/images/postAndroidGradle/GradlewAfter.png" data-lightbox="group-1" title="" class="inlineBoxes">
-    <img class="medium" src="/images/postAndroidGradle/GradlewAfter.png" alt=""/>
+  <a href="/images/postAndroidGradle/Android_Gradle_PublishAPK_Gradlew_tasks_config_before.png" data-lightbox="group-1" title="" class="inlineBoxes">
+    <img class="medium" src="/images/postAndroidGradle/Android_Gradle_PublishAPK_Gradlew_tasks_config_before.png" alt=""/>
   </a>
 </div>
 
@@ -156,8 +156,8 @@ Ce qui peut notamment se faire comme ça
 Maintenant on peut voir la présence de la task qui nous intéresse `publishApkRelease`
 
 <div style="text-align:center;margin:50px">
-  <a href="/images/postAndroidGradle/GradlewComplete.png" data-lightbox="group-1" title="" class="inlineBoxes">
-    <img class="medium" src="/images/postAndroidGradle/GradlewComplete.png" alt=""/>
+  <a href="/images/postAndroidGradle/Android_Gradle_PublishAPK_Gradlew_tasks_config_complete.png" data-lightbox="group-1" title="" class="inlineBoxes">
+    <img class="medium" src="/images/postAndroidGradle/Android_Gradle_PublishAPK_Gradlew_tasks_config_complete.png" alt=""/>
   </a>
 </div>        
 
@@ -172,8 +172,8 @@ Si tout se passe bien le build se termine normalement avec un :
 Si il y a un problème lors de l'updload il est affiché dans la console, par exemple si le version code est déjà utilisé 
 
 <div style="text-align:center;margin:50px">
-  <a href="/images/postAndroidGradle/GradlewUploadKO.png" data-lightbox="group-1" title="" class="inlineBoxes">
-    <img class="medium" src="/images/postAndroidGradle/GradlewUploadKO.png" alt=""/>
+  <a href="/images/postAndroidGradle/Android_Gradle_PublishAPK_Gradlew_upload_ko.png" data-lightbox="group-1" title="" class="inlineBoxes">
+    <img class="medium" src="/images/postAndroidGradle/Android_Gradle_PublishAPK_Gradlew_upload_ko.png" alt=""/>
   </a>
 </div>    
 
