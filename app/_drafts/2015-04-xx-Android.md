@@ -2,8 +2,8 @@
 layout: post
 title: "Android : Publier son apk en ligne de commande"
 author: Florian
-cover: swtours-banner
-tags: [Android, Gradle, Livraison]
+cover: android-banner
+tags: [Android, APK, Gradle, Livraison]
 ---
 
 Lorsque l’on fait du développement Android on a régulièrement besoin de publier des nouvelles versions de l'application sur le Play Store, 
