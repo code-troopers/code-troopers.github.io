@@ -165,7 +165,7 @@ Maintenant on peut voir la présence de la tâche qui nous intéresse `publishAp
 
 ## Étape 4 : génération et upload
 
-Pour effectuer un upload de l'apk il suffit maintenant d'appler la tâche `publishApkRelease`. Et pas besoin de générer l'apk signé via Android Studio puisque maintenant tout est configué, il sera généré dans les tâches précédents à l'uploadApk.
+Pour effectuer un upload de l'apk il suffit maintenant d'appeler la tâche `publishApkRelease`. Et pas besoin de générer l'apk signé via Android Studio puisque maintenant tout est configué, il sera généré dans les tâches précédents à l'uploadApk.
 
 Si tout se passe bien le build se termine avec un : 
     
