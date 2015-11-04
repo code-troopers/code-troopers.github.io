@@ -90,7 +90,7 @@ Ces choix pourront être modifés ultérieurement dans l'écran récapitulatif (
 </div>
 
 ## Étape 3 : le plugin gradle
-Il faut maintenant configurer son build pour ajouter les informations relative au plugin qui effectura la livraison vers le Play Store.
+Il faut maintenant configurer son build pour ajouter les informations relatives au plugin qui effectura la livraison vers le Play Store.
 
 Dans le fichier `build.gradle` du projet il faut donc rajouter la dépendance au plugin :
 
