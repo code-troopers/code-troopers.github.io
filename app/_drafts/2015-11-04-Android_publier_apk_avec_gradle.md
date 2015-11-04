@@ -25,7 +25,7 @@ Normalement pas de problème si c'est un projet récent puisque c'est ce qu'Andr
 Si ce n'est pas le cas vous pouvez vous reposer sur la [doc de Google](http://tools.android.com/tech-docs/new-build-system/intellij_to_gradle) à ce sujet.
 
 
-## Étape 1 : Creation du 'Service Account'
+## Étape 1 : Création du 'Service Account'
 
 La première étape consite à créer un compte qui peut utilser l'API de google, contrairement à un compte utilisateur classique celui-ci utilisera un ficher de clé pour s'identifier plutôt qu'un mot de passe.
 
