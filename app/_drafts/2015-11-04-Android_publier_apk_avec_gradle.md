@@ -186,10 +186,10 @@ Ensuite vous pouvez vous rendre sur l'interface d'admin du Play Store et constat
 __Attention__ : ne pas commiter la clé `JSON` sur github, au même titre que le mot de passe du `keystore`.
 
 
-##Pour allez plus loin 
+##Pour aller plus loin 
 
-Le plugin permet bien plus de chose que la livraions des apks. En effet il permet de mettre à jour la description, les images et le change log.
-Pour savoir comment configurer tout cela, je vous invite a consulter la page github du projet [https://github.com/Triple-T/gradle-play-publisher](https://github.com/Triple-T/gradle-play-publisher)
+Le plugin permet bien plus de choses que la livraion des apks. En effet il permet de mettre à jour la description, les images et le changelog.
+Pour savoir comment configurer tout cela, je vous invite à consulter la page github du projet [https://github.com/Triple-T/gradle-play-publisher](https://github.com/Triple-T/gradle-play-publisher)
 
-L'étape ultime de la livraison continue, c’est de configure un jenkins pour qu’il livre en alpha à chaque nouveau commit sur master, et pour il suffit de le configurer en rajoutant par exemple une tache post build qui fera appel a la commande gradle que nous vennons de configurer.
+L'étape ultime de la livraison continue, c’est de configure un jenkins pour qu’il livre en alpha à chaque nouveau commit sur master, et pour cela il suffit de le configurer en rajoutant par exemple une tache post build qui fera appel à la commande gradle que nous venons de configurer.
 
