@@ -42,7 +42,7 @@ Pour cela rendez-vous dans un premier temps dans l'interface développeur du Pla
 
 En suivant le lien du petit `1` vous allez être redirigé vers la console google developpeur d'où vous pourrez créer un nouveau `Credential`  de type `Service account`.
 
-Sélectionner le format de clé `JSON` qui est recommandé puis le téléchargement de celle-ci devrait se faire automatiquement.
+Sélectionnez le format de clé `JSON` qui est recommandé puis le téléchargement de celle-ci devrait se faire automatiquement.
 
 On peut ensuite voir qu'un nouveau `Service account` est apparu dans la liste des Credentials.
 
