@@ -136,7 +136,7 @@ On y voit toutes les tâches gradle qu'on peut appeler :
   </a>
 </div>
 
-Mais ce n'est pas suffisant. Car il manque notamment les tâches permettant l'upload de l'apk. Pour cela il faut rajouter la `signingConfigs` dans le `build.gradle`.
+Mais ce n'est pas suffisant, car il manque notamment les tâches permettant l'upload de l'apk. Pour cela il faut rajouter la `signingConfigs` dans le `build.gradle`.
 Ce qui peut notamment se faire comme ça
 
         signingConfigs {
@@ -188,8 +188,8 @@ __Attention__ : ne pas commiter la clé `JSON` sur github, au même titre que le
 
 ##Pour aller plus loin 
 
-Le plugin permet bien plus de choses que la livraion des apks. En effet il permet de mettre à jour la description, les images et le changelog.
+Le plugin permet bien plus de choses que la livraison des apks. En effet il permet de mettre à jour la description, les images et le changelog.
 Pour savoir comment configurer tout cela, je vous invite à consulter la page github du projet [https://github.com/Triple-T/gradle-play-publisher](https://github.com/Triple-T/gradle-play-publisher)
 
-L'étape ultime de la livraison continue, c’est de configure un jenkins pour qu’il livre en alpha à chaque nouveau commit sur master, et pour cela il suffit de le configurer en rajoutant par exemple une tache post build qui fera appel à la commande gradle que nous venons de configurer.
+L'étape ultime de la livraison continue, c’est de configurer un jenkins pour qu’il livre en alpha à chaque nouveau commit sur master, et pour cela il suffit de le configurer en rajoutant par exemple une tache post build qui fera appel à la commande gradle que nous venons de configurer.
 
