@@ -113,7 +113,7 @@ Et dans le `build.gradle` de l'application (du Module), il faut appliquer le plu
     apply plugin: 'com.android.application'
     apply plugin: 'com.github.triplet.play'
 
-Ensuite toujours dans le build.gradle il ajouter les informations de l'`Account service` précedemennt créér pour qu'il puisse se connecter et faire la livraison 
+Ensuite toujours dans le build.gradle il est nécessaire d'ajouter les informations de l'`Account service` précédemment créé pour qu'il puisse se connecter et faire la livraison 
 (c'est là que l'on va utiliser la clé `JSON` générée).
 
 Placez donc la clé dans votre projet et faites-y référence dans la configuration du plugin :
