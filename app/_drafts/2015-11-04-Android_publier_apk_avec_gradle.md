@@ -59,7 +59,7 @@ On peut ensuite voir qu'un nouveau `Service account` est apparu dans la liste de
 </div>
 
 
-De retour sur l'interface d'admin du Play Store, on constate que le `Service Account` est bien créée est disponible ici.
+De retour sur l'interface d'admin du Play Store, on constate que le `Service Account` est bien créé est disponible ici.
 
 <div style="text-align:center;margin:50px">
   <a href="/images/postAndroidGradle/Android_Gradle_PublishAPK_ConfigureAccount_Screen6.png" data-lightbox="group-1" title="Configuration de l'Accout service - 6" class="inlineBoxes">
