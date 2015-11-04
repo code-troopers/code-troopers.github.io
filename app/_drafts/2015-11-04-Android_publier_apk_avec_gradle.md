@@ -32,11 +32,11 @@ La première étape consiste à créer un compte qui peut utilser l'API de Googl
 Pour cela, rendez-vous dans un premier temps dans l'interface développeur du Play Store, dans la section `Settings > API acces` et cliquez sur `Create Service Account`.
 
 <div style="text-align:center;margin:50px">
-  <a href="/images/postAndroidGradle/Android_Gradle_PublishAPK_ConfigureAccount_Screen1.png" data-lightbox="group-1" title="Configuration de l'Accout service - 1" class="inlineBoxes">
-    <img class="medium" src="/images/postAndroidGradle/Android_Gradle_PublishAPK_ConfigureAccount_Screen1.png" alt="Configuration de l'Accout service - 1"/>
+  <a href="/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_ConfigureAccount_Screen1.png" data-lightbox="group-1" title="Configuration de l'Accout service - 1" class="inlineBoxes">
+    <img class="medium" src="/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_ConfigureAccount_Screen1.png" alt="Configuration de l'Accout service - 1"/>
   </a>
-  <a href="/images/postAndroidGradle/Android_Gradle_PublishAPK_ConfigureAccount_Screen2.png" data-lightbox="group-1" title="Configuration de l'Accout service - 2" class="inlineBoxes">
-    <img class="medium" src="/images/postAndroidGradle/Android_Gradle_PublishAPK_ConfigureAccount_Screen2.png" alt="Configuration de l'Accout service - 2"/>
+  <a href="/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_ConfigureAccount_Screen2.png" data-lightbox="group-1" title="Configuration de l'Accout service - 2" class="inlineBoxes">
+    <img class="medium" src="/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_ConfigureAccount_Screen2.png" alt="Configuration de l'Accout service - 2"/>
   </a>
 </div>
 
@@ -47,14 +47,14 @@ Sélectionnez le format de clé `JSON` qui est recommandé, le téléchargement 
 On peut ensuite voir qu'un nouveau `Service account` est apparu dans la liste des Credentials.
 
 <div style="text-align:center;margin:50px">
-  <a href="/images/postAndroidGradle/Android_Gradle_PublishAPK_ConfigureAccount_Screen3.png" data-lightbox="group-1" title="Configuration de l'Accout service - 3" class="inlineBoxes">
-    <img class="medium" src="/images/postAndroidGradle/Android_Gradle_PublishAPK_ConfigureAccount_Screen3.png" alt="Configuration de l'Accout service - 3"/>
+  <a href="/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_ConfigureAccount_Screen3.png" data-lightbox="group-1" title="Configuration de l'Accout service - 3" class="inlineBoxes">
+    <img class="medium" src="/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_ConfigureAccount_Screen3.png" alt="Configuration de l'Accout service - 3"/>
   </a>
-  <a href="/images/postAndroidGradle/Android_Gradle_PublishAPK_ConfigureAccount_Screen4.png" data-lightbox="group-1" title="Configuration de l'Accout service - 4" class="inlineBoxes">
-    <img class="medium" src="/images/postAndroidGradle/Android_Gradle_PublishAPK_ConfigureAccount_Screen4.png" alt="Configuration de l'Accout service - 4"/>
+  <a href="/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_ConfigureAccount_Screen4.png" data-lightbox="group-1" title="Configuration de l'Accout service - 4" class="inlineBoxes">
+    <img class="medium" src="/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_ConfigureAccount_Screen4.png" alt="Configuration de l'Accout service - 4"/>
   </a> 
-  <a href="/images/postAndroidGradle/Android_Gradle_PublishAPK_ConfigureAccount_Screen5.png" data-lightbox="group-1" title="Configuration de l'Accout service - 5" class="inlineBoxes">
-    <img class="medium" src="/images/postAndroidGradle/Android_Gradle_PublishAPK_ConfigureAccount_Screen5.png" alt="Configuration de l'Accout service - 5"/>
+  <a href="/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_ConfigureAccount_Screen5.png" data-lightbox="group-1" title="Configuration de l'Accout service - 5" class="inlineBoxes">
+    <img class="medium" src="/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_ConfigureAccount_Screen5.png" alt="Configuration de l'Accout service - 5"/>
   </a>
 </div>
 
@@ -62,8 +62,8 @@ On peut ensuite voir qu'un nouveau `Service account` est apparu dans la liste de
 De retour sur l'interface d'admin du Play Store, on constate que le `Service Account` est bien créé et disponible ici.
 
 <div style="text-align:center;margin:50px">
-  <a href="/images/postAndroidGradle/Android_Gradle_PublishAPK_ConfigureAccount_Screen6.png" data-lightbox="group-1" title="Configuration de l'Accout service - 6" class="inlineBoxes">
-    <img class="medium" src="/images/postAndroidGradle/Android_Gradle_PublishAPK_ConfigureAccount_Screen6.png" alt="Configuration de l'Accout service - 6"/>
+  <a href="/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_ConfigureAccount_Screen6.png" data-lightbox="group-1" title="Configuration de l'Accout service - 6" class="inlineBoxes">
+    <img class="medium" src="/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_ConfigureAccount_Screen6.png" alt="Configuration de l'Accout service - 6"/>
   </a>
 </div>
     
@@ -81,11 +81,11 @@ Pour cela cliquez sur le bouton `Grant access`. Dans la popup qui s'ouvre, les d
 Ces choix pourront être modifés ultérieurement dans l'écran récapitulatif (mais ce n'est pas recommandé).
 
 <div style="text-align:center;margin:50px">
-  <a href="/images/postAndroidGradle/Android_Gradle_PublishAPK_ConfigureAccount_Screen7.png" data-lightbox="group-1" title="Configuration de l'Accout service - 7" class="inlineBoxes">
-    <img class="medium" src="/images/postAndroidGradle/Android_Gradle_PublishAPK_ConfigureAccount_Screen7.png" alt="Configuration de l'Accout service - 7"/>
+  <a href="/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_ConfigureAccount_Screen7.png" data-lightbox="group-1" title="Configuration de l'Accout service - 7" class="inlineBoxes">
+    <img class="medium" src="/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_ConfigureAccount_Screen7.png" alt="Configuration de l'Accout service - 7"/>
   </a>
-  <a href="/images/postAndroidGradle/Android_Gradle_PublishAPK_ConfigureAccount_Screen8.png" data-lightbox="group-1" title="Configuration de l'Accout service - 8" class="inlineBoxes">
-    <img class="medium" src="/images/postAndroidGradle/Android_Gradle_PublishAPK_ConfigureAccount_Screen8.png" alt="Configuration de l'Accout service - 8"/>
+  <a href="/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_ConfigureAccount_Screen8.png" data-lightbox="group-1" title="Configuration de l'Accout service - 8" class="inlineBoxes">
+    <img class="medium" src="/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_ConfigureAccount_Screen8.png" alt="Configuration de l'Accout service - 8"/>
   </a>
 </div>
 
@@ -128,11 +128,11 @@ Placez donc la clé dans votre projet et faites-y référence dans la configurat
 On y voit toutes les tâches gradle qu'on peut appeler : 
 
 <div style="text-align:center;margin:50px">
-  <a href="/images/postAndroidGradle/Android_Gradle_PublishAPK_Gradlew_tasks_config_before.png" data-lightbox="group-1" title="Liste des tasks gradle disponibles sans le plugin" class="inlineBoxes">
-    <img class="medium" src="/images/postAndroidGradle/Android_Gradle_PublishAPK_Gradlew_tasks_config_before.png" alt="Liste des tasks gradle disponibles sans le plugin"/>
+  <a href="/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_Gradlew_tasks_config_before.png" data-lightbox="group-1" title="Liste des tasks gradle disponibles sans le plugin" class="inlineBoxes">
+    <img class="medium" src="/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_Gradlew_tasks_config_before.png" alt="Liste des tasks gradle disponibles sans le plugin"/>
   </a>
-  <a href="/images/postAndroidGradle/Android_Gradle_PublishAPK_Gradlew_tasks_config_after.png" data-lightbox="group-1" title="Liste des tasks gradle disponibles avec le plugin" class="inlineBoxes">
-    <img class="medium" src="/images/postAndroidGradle/Android_Gradle_PublishAPK_Gradlew_tasks_config_after.png" alt="Liste des tasks gradle disponibles avec le plugin"/>
+  <a href="/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_Gradlew_tasks_config_after.png" data-lightbox="group-1" title="Liste des tasks gradle disponibles avec le plugin" class="inlineBoxes">
+    <img class="medium" src="/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_Gradlew_tasks_config_after.png" alt="Liste des tasks gradle disponibles avec le plugin"/>
   </a>
 </div>
 
@@ -158,8 +158,8 @@ Ce qui peut notamment se faire comme ça
 Maintenant, on peut voir la présence de la tâche qui nous intéresse : `publishApkRelease`
 
 <div style="text-align:center;margin:50px">
-  <a href="/images/postAndroidGradle/Android_Gradle_PublishAPK_Gradlew_tasks_config_complete.png" data-lightbox="group-1" title="Liste des tasks gradle disponibles avec upload apk" class="inlineBoxes">
-    <img class="medium" src="/images/postAndroidGradle/Android_Gradle_PublishAPK_Gradlew_tasks_config_complete.png" alt="Liste des tasks gradle disponibles avec upload apk"/>
+  <a href="/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_Gradlew_tasks_config_complete.png" data-lightbox="group-1" title="Liste des tasks gradle disponibles avec upload apk" class="inlineBoxes">
+    <img class="medium" src="/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_Gradlew_tasks_config_complete.png" alt="Liste des tasks gradle disponibles avec upload apk"/>
   </a>
 </div>        
 
@@ -174,8 +174,8 @@ Si tout se passe bien le build se termine avec un :
 Si il y a un problème lors de l'updload, il est affiché dans la console, par exemple si le __version code__ est déjà utilisé 
 
 <div style="text-align:center;margin:50px">
-  <a href="/images/postAndroidGradle/Android_Gradle_PublishAPK_Gradlew_upload_ko.png" data-lightbox="group-1" title="Exemple d'upload d'apk en erreur" class="inlineBoxes">
-    <img class="medium" src="/images/postAndroidGradle/Android_Gradle_PublishAPK_Gradlew_upload_ko.png" alt="Exemple d'upload d'apk en erreur"/>
+  <a href="/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_Gradlew_upload_ko.png" data-lightbox="group-1" title="Exemple d'upload d'apk en erreur" class="inlineBoxes">
+    <img class="medium" src="/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_Gradlew_upload_ko.png" alt="Exemple d'upload d'apk en erreur"/>
   </a>
 </div>    
 
