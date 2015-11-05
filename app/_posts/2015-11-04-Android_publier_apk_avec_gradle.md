@@ -123,7 +123,7 @@ Placez donc la clé dans votre projet et faites-y référence dans la configurat
     }
 
 
-À partir de là, notre build est configuré. On peut notamment s'en rendre compte en faisant un `./gradlwe tasks` 
+À partir de là, notre build est configuré. On peut notamment s'en rendre compte en faisant un `./gradlew tasks` 
 
 On y voit toutes les tâches gradle qu'on peut appeler : 
 
@@ -137,7 +137,7 @@ On y voit toutes les tâches gradle qu'on peut appeler :
 </div>
 
 Mais ce n'est pas suffisant car il manque notamment les tâches permettant l'upload de l'apk. Pour cela il faut rajouter la `signingConfigs` dans le `build.gradle`.
-Ce qui peut notamment se faire comme ça
+Ce qui peut notamment se faire comme ça :
 
         signingConfigs {
             release {
@@ -165,7 +165,7 @@ Maintenant, on peut voir la présence de la tâche qui nous intéresse : `publis
 
 ## Étape 4 : génération et upload
 
-Pour effectuer un upload de l'apk il suffit maintenant d'appeler la tâche `publishApkRelease`. Et pas besoin de générer l'apk signé via Android Studio puisque comme tout est configué, il sera généré dans les tâches précédents l'uploadApk.
+Pour effectuer un upload de l'apk il suffit maintenant d'appeler la tâche `publishApkRelease`. Et pas besoin de générer l'apk signé via Android Studio puisque comme tout est configuré, il sera généré dans les tâches précédent l'uploadApk.
 
 Si tout se passe bien le build se termine avec un : 
     
@@ -191,5 +191,5 @@ __Attention__ : ne pas commiter la clé `JSON` sur github, au même titre que le
 Le plugin permet bien plus de choses que la livraison des apks. En effet, il permet de mettre à jour la description, les images et le changelog.
 Pour savoir comment configurer tout cela, je vous invite à consulter la page github du projet [https://github.com/Triple-T/gradle-play-publisher](https://github.com/Triple-T/gradle-play-publisher)
 
-L'étape ultime de la livraison continue, c’est de configurer un jenkins pour qu’il livre en alpha à chaque nouveau commit sur master, et pour cela il suffit de le configurer en rajoutant par exemple une tache post build qui fera appel à la commande gradle que nous venons de configurer.
+L'étape ultime de la livraison continue, c’est de configurer un jenkins pour qu’il livre en alpha à chaque nouveau commit sur master, et pour cela il suffit de le configurer en rajoutant par exemple une tâche post build qui fera appel à la commande gradle que nous venons de configurer.
 
