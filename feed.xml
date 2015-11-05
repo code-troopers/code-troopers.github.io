@@ -124,7 +124,7 @@ apply plugin: 'com.github.triplet.play'
 }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;À partir de là, notre build est configuré. On peut notamment s’en rendre compte en faisant un &lt;code&gt;./gradlwe tasks&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;À partir de là, notre build est configuré. On peut notamment s’en rendre compte en faisant un &lt;code&gt;./gradlew tasks&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;On y voit toutes les tâches gradle qu’on peut appeler :&lt;/p&gt;
 
@@ -138,7 +138,7 @@ apply plugin: 'com.github.triplet.play'
 &lt;/div&gt;
 
 &lt;p&gt;Mais ce n’est pas suffisant car il manque notamment les tâches permettant l’upload de l’apk. Pour cela il faut rajouter la &lt;code&gt;signingConfigs&lt;/code&gt; dans le &lt;code&gt;build.gradle&lt;/code&gt;.
-Ce qui peut notamment se faire comme ça&lt;/p&gt;
+Ce qui peut notamment se faire comme ça :&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;    signingConfigs {
         release {
@@ -166,7 +166,7 @@ Ce qui peut notamment se faire comme ça&lt;/p&gt;
 
 &lt;h2 id=&quot;tape-4--gnration-et-upload&quot;&gt;Étape 4 : génération et upload&lt;/h2&gt;
 
-&lt;p&gt;Pour effectuer un upload de l’apk il suffit maintenant d’appeler la tâche &lt;code&gt;publishApkRelease&lt;/code&gt;. Et pas besoin de générer l’apk signé via Android Studio puisque comme tout est configué, il sera généré dans les tâches précédents l’uploadApk.&lt;/p&gt;
+&lt;p&gt;Pour effectuer un upload de l’apk il suffit maintenant d’appeler la tâche &lt;code&gt;publishApkRelease&lt;/code&gt;. Et pas besoin de générer l’apk signé via Android Studio puisque comme tout est configuré, il sera généré dans les tâches précédent l’uploadApk.&lt;/p&gt;
 
 &lt;p&gt;Si tout se passe bien le build se termine avec un :&lt;/p&gt;
 
@@ -190,7 +190,7 @@ Ce qui peut notamment se faire comme ça&lt;/p&gt;
 &lt;p&gt;Le plugin permet bien plus de choses que la livraison des apks. En effet, il permet de mettre à jour la description, les images et le changelog.
 Pour savoir comment configurer tout cela, je vous invite à consulter la page github du projet &lt;a href=&quot;https://github.com/Triple-T/gradle-play-publisher&quot;&gt;https://github.com/Triple-T/gradle-play-publisher&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;L’étape ultime de la livraison continue, c’est de configurer un jenkins pour qu’il livre en alpha à chaque nouveau commit sur master, et pour cela il suffit de le configurer en rajoutant par exemple une tache post build qui fera appel à la commande gradle que nous venons de configurer.&lt;/p&gt;
+&lt;p&gt;L’étape ultime de la livraison continue, c’est de configurer un jenkins pour qu’il livre en alpha à chaque nouveau commit sur master, et pour cela il suffit de le configurer en rajoutant par exemple une tâche post build qui fera appel à la commande gradle que nous venons de configurer.&lt;/p&gt;
 
 </description>
                                 <pubDate>Wed, 04 Nov 2015 00:00:00 +0000</pubDate>
