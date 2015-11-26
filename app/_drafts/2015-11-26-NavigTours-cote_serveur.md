@@ -52,4 +52,4 @@ Comme toutes les applications d'entreprise, nous déployons vers plusieurs envir
  * prod : version actuelle
 
 À ceci, nous pouvons ajouter plusieurs versions en parallèle pour différentes fonctionnalités et/ou villes (l'info exclusive est cachée ici, Navig'VotreVille arrive…). 
-Pour être capable de gérer des déploiements différents nous avons ajoutés quelques paramètres à nos scripts de lancement de docker-compose nous permettant de disposer de noms différents par projets pous éviter les problèmes.
+Pour être capable de gérer des déploiements différents nous avons ajouté quelques paramètres à nos scripts de lancement de docker-compose nous permettant de disposer de noms différents par projet pous éviter les problèmes.
