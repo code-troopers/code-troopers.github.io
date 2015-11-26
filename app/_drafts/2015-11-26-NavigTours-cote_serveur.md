@@ -7,7 +7,7 @@ tags: [Archi,Docker,NavigTours,Java8,Restx]
 ---
 
 
-Cet article, une fois n'est pas coutume, va rentrer un peu plus dans le fonctionnement de la partie serveur mise en place pour Navig'Tours.
+Cet article, une fois n'est pas coutume, va rentrer un peu plus dans le fonctionnement de la partie serveur mise en place pour [Navig'Tours](http://navigtours.com/).
 Si vous n'êtes pas technique, il risque d'être compliqué de le suivre !
 
 <!-- break -->
@@ -27,7 +27,7 @@ Ensuite, nous utilisons l'excellent framework RestX pour simplifier notre vie da
 Enfin, pour la partie stockage des données, nous utilisons MongoDB qui nous simplifie la gestion de données en manipulant des données principalement au format JSON (et fournit une bonne gestion de la géolocalisation par coordonnées). 
 
 ## Du dev...
-Côté dev, nous utilisons notre petit wrapper (`ct`) pour les tâches classiques qui se charge d'effectuer le build ainsi que le run de l'application avec ces dépendances.
+Côté dev, nous utilisons notre petit wrapper (`[ct](http://code-troopers.com/2014/12/15/CT_Project_Alias.html/)`) pour les tâches classiques qui se charge d'effectuer le build ainsi que le run de l'application avec ces dépendances.
 Le lancement de l'application se limite à mettre à disposition un serveur MongoDB ainsi qu'à effectuer un `java -jar`.
 
 ## À la prod !
