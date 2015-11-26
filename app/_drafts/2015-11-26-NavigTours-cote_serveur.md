@@ -7,7 +7,7 @@ tags: [Archi,Docker,NavigTours,Java8,Restx]
 ---
 
 
-Cet article, une fois n'est pas coutume, va rendrer un peu plus dans le fonctionnement de la partie serveur mise en place pour Navig'Tours.
+Cet article, une fois n'est pas coutume, va rentrer un peu plus dans le fonctionnement de la partie serveur mise en place pour Navig'Tours.
 Si vous n'êtes pas technique, il risque d'être compliqué de le suivre !
 
 <!-- break -->
@@ -30,7 +30,7 @@ Enfin, pour la partie stockage des données, nous utilisons MongoDB qui nous sim
 Côté dev, nous utilisons notre petit wrapper (`ct`) pour les tâches classiques qui se charge d'effectuer le build ainsi que le run de l'application avec ces dépendances.
 Le lancement de l'application se limite à mettre à disposition un serveur MongoDB ainsi qu'à effectuer un `java -jar`.
 
-## à la prod !
+## À la prod !
 Historiquement, l'application a été déployée sur Heroku dans son plan gratuit en utilisant plusieurs services cibles (pour répartir la charge via l'utilisation de plusieurs entrées DNS).
 
 Mais, suite au changement de tarification d'Heroku et notre envie d'utiliser Docker sur un vrai projet, nous avons migré l'environnement pour utiliser exclusivement Docker.
@@ -51,5 +51,5 @@ Comme toutes les applications d'entreprise, nous déployons vers plusieurs envir
  * preprod : version à passer en production
  * prod : version actuelle
 
-A ceci, nous pouvons ajouter plusieurs versions en parallèle pour différentes fonctionnalités et/ou villes (l'info exclusive est cachée ici, Navig'VotreVille arrive,,,). 
+À ceci, nous pouvons ajouter plusieurs versions en parallèle pour différentes fonctionnalités et/ou villes (l'info exclusive est cachée ici, Navig'VotreVille arrive…). 
 Pour être capable de gérer des déploiements différents nous avons ajoutés quelques paramètres à nos scripts de lancement de docker-compose nous permettant de disposer de noms différents par projets pous éviter les problèmes.
