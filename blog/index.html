@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html class=no-js lang=fr itemscope itemtype=http://schema.org/Organization>
+    <head>
+        <meta http-equiv=X-UA-Compatible content="IE=edge">
+        <meta charset=utf-8>
+        <title>Code-Troopers - Le blog</title>
+        <meta property=fb:app_id content=432735746865877>
+        <meta property=og:url content=http://code-troopers.com/blog/index.html>
+        <meta property=og:title content="Code-Troopers - Le blog">
+        <meta property=twitter:card content=summary>
+        <meta property=twitter:site content=codetroopers>
+        <meta property=twitter:image:src content=http://code-troopers.com/images/logo.png>
+        <meta property=og:image content=http://code-troopers.com/images/logo.png>
+        <meta property=twitter:title content="Code-Troopers - Le blog">
+        <meta property=twitter:creator content=@codetroopers>
+        <meta property=twitter:domain content=http://code-troopers.com>
+        
+        
+        <meta property=twitter:description content="Le blog posté le 04/11/2015 par Florian Android : Publier son apk en ligne de commande Android APK Gradle Livraison...">
+        
+        
+        
+        <meta name=description content="Le blog posté le 04/11/2015 par Florian Android : Publier son apk en ligne de commande Android APK Gradle Livraison Lorsque l’on fait du développement Android, on a régulièrement besoin de publier des nouvelles versions de l’application sur le Play Store. Il est assez fastidieux de devoir se connecter à l’interface de Google, de sélectionner le projet et ensuite d’uploader son nouvel apk. Heureusement pour nous, Google a prévu le coup avec une API que l’on peut attaquer en ligne de commande. Et, encore plus sympa, Björn Hurling a publié sur github un plugin gradle qui utilise cette API. Voyons ensemble pas à pas comment et quoi configurer afin de livrer ses apk en ligne de commande en utilisant gradle. Prérequis Pour commencer, il faut avoir un build qui fonctionne avec gradle. Normalement pas de problème si c’est un projet récent puisque c’est ce qu’Android Studio propose maintenant par défaut. Si ce n’est pas le cas, vous pouvez vous reposer sur la doc de Google à ce sujet. Étape 1 : Création du ‘Service Account’ La première étape consiste à créer un compte qui peut utilser l’API de Google : contrairement à un compte utilisateur classique, celui-ci utilisera un ficher...">
+        <meta property=og:description content="Le blog posté le 04/11/2015 par Florian Android : Publier son apk en ligne de commande Android APK Gradle Livraison Lorsque l’on fait du développement Android, on a régulièrement besoin de publier des nouvelles versions de l’application sur le Play Store. Il est assez fastidieux de devoir se connecter à l’interface de Google, de sélectionner le projet et ensuite d’uploader son nouvel apk. Heureusement pour nous, Google a prévu le coup avec une API que l’on peut attaquer en ligne de commande. Et, encore plus sympa, Björn Hurling a publié sur github un plugin gradle qui utilise cette API. Voyons ensemble pas à pas comment et quoi configurer afin de livrer ses apk en ligne de commande en utilisant gradle. Prérequis Pour commencer, il faut avoir un build qui fonctionne avec gradle. Normalement pas de problème si c’est un projet récent puisque c’est ce qu’Android Studio propose maintenant par défaut. Si ce n’est pas le cas, vous pouvez vous reposer sur la doc de Google à ce sujet. Étape 1 : Création du ‘Service Account’ La première étape consiste à créer un compte qui peut utilser l’API de Google : contrairement à un compte utilisateur classique, celui-ci utilisera un ficher...">
+        
+        <meta name=viewport content="width=device-width">
+
+        <link rel=stylesheet href=/styles/2e03639a.main.css>
+
+        <!--[if lt IE 9]><script src="/scripts/19e0b88f.ie8.js"></script><![endif]-->
+        <meta itemprop=name content=CT-CDGT>
+        <meta itemprop=name content=CT-RMLC>
+        <meta itemprop=name content=CT-BNCS>
+        <meta itemprop=name content=CT-JRPT>
+        <meta itemprop=name content=CT-MTBL>
+        <meta itemprop=name content=CT-FLCH>
+        <meta itemprop=name content=CT-VCMB>
+    </head>
+    <body>
+        
+        <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-NWLQD2" height=0 width=0 style=display:none;visibility:hidden></iframe></noscript>
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-NWLQD2');</script>
+        
+        <!--[if lt IE 8]><p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a
+                href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p><![endif]-->
+
+<header data-spy=affix class=affix-top>
+    <div class=container>
+        <div class=navbar-header itemscope itemtype=http://schema.org/Organization>
+            <button type=button class=navbar-toggle data-toggle=collapse data-target=.navbar-collapse>
+                <span><i class="fa fa-bars fa-2x"></i></span>
+            </button>
+            <a class=navbar-brand href="/"><img itemprop=logo class=logo alt="Code-Troopers logo" title="Code-Troopers logo" src=/images/logo.png>
+                <span itemprop=name class=brand>Code-Troopers</span>
+            </a>
+        </div>
+        <nav class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li class=active><a data-scrolltolink=aboutUs>À propos</a></li>
+                <li><a data-scrolltolink=projects>Réalisations</a></li>
+                <li><a data-scrolltolink=skills>Compétences</a></li>
+                <li><a data-scrolltolink=team>L'équipe</a></li>
+                <li><a data-scrolltolink=contact>Contact</a></li>
+                <li><a href=/blog/index.html>Blog</a></li>
+            </ul>
+        </nav>
+        
+    </div>
+</header>
+
+<section id=articles>
+    <div class=header>
+    <h1 class=container>
+        <a href=/blog/index.html>Le <span>blog</span></a>
+    </h1>
+    </div>
+    <div class=container>
+        <div class=row>
+
+
+<article class="col-lg-4 col-md-6 col-sm-12">
+    <div onclick="window.location.href='/2015/11/04/Android_publier_apk_avec_gradle.html' ;  return false" style="cursor: pointer">
+	<div class=cover style=background-image:url(/images/banner/android-banner.png)>
+            <div class=date>posté le 04/11/2015 par Florian</div>
+        </div>
+        <h2><a href=/2015/11/04/Android_publier_apk_avec_gradle.html>Android : Publier son apk en ligne de commande</a></h2><ul class=tags>
+            
+            <li>Android</li>
+            
+            <li>APK</li>
+            
+            <li>Gradle</li>
+            
+            <li>Livraison</li>
+            
+        </ul>
+        <div class=content>
+            <p>Lorsque l’on fait du développement Android, on a régulièrement besoin de publier des nouvelles versions de l’application sur le Play Store. 
+Il est assez fastidieux de devoir se connecter à l’interface de Google, de sélectionner le projet et ensuite d’uploader son nouvel apk.</p>
+
+<p>Heureusement pour nous, Google a prévu le coup avec une API que l’on peut attaquer en ligne de commande.
+Et, encore plus sympa, <a href=https://plus.google.com/+Bj%C3%B6rnHurling/posts>Björn Hurling</a> a publié sur github 
+<a href=https://github.com/Triple-T/gradle-play-publisher>un plugin gradle qui utilise cette API</a>.</p>
+
+<p>Voyons ensemble pas à pas comment et quoi configurer afin de livrer ses apk en ligne de commande en utilisant gradle.</p>
+
+
+
+<h2 id=prrequis>Prérequis</h2>
+
+<p>Pour commencer, il faut avoir un build qui fonctionne avec gradle.</p>
+
+<p>Normalement pas de problème si c’est un projet récent puisque c’est ce qu’Android Studio propose maintenant par défaut.
+Si ce n’est pas le cas, vous pouvez vous reposer sur la <a href=http://tools.android.com/tech-docs/new-build-system/intellij_to_gradle>doc de Google</a> à ce sujet.</p>
+
+<h2 id=tape-1--cration-du-service-account>Étape 1 : Création du ‘Service Account’</h2>
+
+<p>La première étape consiste à créer un compte qui peut utilser l’API de Google : contrairement à un compte utilisateur classique, celui-ci utilisera un ficher de clé pour s’identifier plutôt qu’un mot de passe.</p>
+
+<p>Pour cela, rendez-vous dans un premier temps dans l’interface développeur du Play Store, dans la section <code>Settings &gt; API acces</code> et cliquez sur <code>Create Service Account</code>.</p>
+
+<div style=text-align:center;margin:50px>
+  <a href=/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_ConfigureAccount_Screen1.png data-lightbox=group-1 title="Configuration de l'Accout service - 1" class=inlineBoxes>
+    <img class=medium src=/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_ConfigureAccount_Screen1.png alt="Configuration de l'Accout service - 1">
+  </a>
+  <a href=/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_ConfigureAccount_Screen2.png data-lightbox=group-1 title="Configuration de l'Accout service - 2" class=inlineBoxes>
+    <img class=medium src=/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_ConfigureAccount_Screen2.png alt="Configuration de l'Accout service - 2">
+  </a>
+</div>
+
+<p>En suivant le lien du petit <code>1</code> vous allez être redirigé vers la console Google développeur d’où vous pourrez créer un nouveau <code>Credential</code>  de type <code>Service account</code>.</p>
+
+<p>Sélectionnez le format de clé <code>JSON</code> qui est recommandé, le téléchargement de celle-ci devrait alors se faire automatiquement.</p>
+
+<p>On peut ensuite voir qu’un nouveau <code>Service account</code> est apparu dans la liste des Credentials.</p>
+
+<div style=text-align:center;margin:50px>
+  <a href=/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_ConfigureAccount_Screen3.png data-lightbox=group-1 title="Configuration de l'Accout service - 3" class=inlineBoxes>
+    <img class=medium src=/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_ConfigureAccount_Screen3.png alt="Configuration de l'Accout service - 3">
+  </a>
+  <a href=/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_ConfigureAccount_Screen4.png data-lightbox=group-1 title="Configuration de l'Accout service - 4" class=inlineBoxes>
+    <img class=medium src=/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_ConfigureAccount_Screen4.png alt="Configuration de l'Accout service - 4">
+  </a> 
+  <a href=/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_ConfigureAccount_Screen5.png data-lightbox=group-1 title="Configuration de l'Accout service - 5" class=inlineBoxes>
+    <img class=medium src=/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_ConfigureAccount_Screen5.png alt="Configuration de l'Accout service - 5">
+  </a>
+</div>
+
+<p>De retour sur l’interface d’admin du Play Store, on constate que le <code>Service Account</code> est bien créé et disponible ici.</p>
+
+<div style=text-align:center;margin:50px>
+  <a href=/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_ConfigureAccount_Screen6.png data-lightbox=group-1 title="Configuration de l'Accout service - 6" class=inlineBoxes>
+    <img class=medium src=/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_ConfigureAccount_Screen6.png alt="Configuration de l'Accout service - 6">
+  </a>
+</div>
+
+<h2 id=tape-2--attribution-des-droits>Étape 2 : Attribution des droits</h2>
+<p>Il faut maintenant donner les droits au compte que l’on vient de créer afin qu’il puisse au moins livrer les apk en alpha.</p>
+
+<p>Pour cela cliquez sur le bouton <code>Grant access</code>. Dans la popup qui s’ouvre, les droits minimums à accorder pour que le plugin puisse fonctionnner sont :</p>
+
+<ul>
+  <li>Edit store listing, pricing &amp; distribution</li>
+  <li>Manage Production APKs</li>
+  <li>Manage Alpha &amp; Beta APKs</li>
+  <li>Manage Alpha &amp; Beta users</li>
+</ul>
+
+<p>Ces choix pourront être modifés ultérieurement dans l’écran récapitulatif (mais ce n’est pas recommandé).</p>
+
+<div style=text-align:center;margin:50px>
+  <a href=/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_ConfigureAccount_Screen7.png data-lightbox=group-1 title="Configuration de l'Accout service - 7" class=inlineBoxes>
+    <img class=medium src=/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_ConfigureAccount_Screen7.png alt="Configuration de l'Accout service - 7">
+  </a>
+  <a href=/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_ConfigureAccount_Screen8.png data-lightbox=group-1 title="Configuration de l'Accout service - 8" class=inlineBoxes>
+    <img class=medium src=/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_ConfigureAccount_Screen8.png alt="Configuration de l'Accout service - 8">
+  </a>
+</div>
+
+<h2 id=tape-3--le-plugin-gradle>Étape 3 : le plugin gradle</h2>
+<p>Il faut maintenant configurer son build pour ajouter les informations relatives au plugin qui effectuera la livraison vers le Play Store.</p>
+
+<p>Dans le fichier <code>build.gradle</code> du projet il faut donc rajouter la dépendance au plugin :</p>
+
+<pre><code>buildscript {
+
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        // ...
+        classpath 'com.github.triplet.gradle:play-publisher:1.1.4'
+    }
+}
+</code></pre>
+
+<p>Et dans le <code>build.gradle</code> de l’application (du Module), il faut appliquer le plugin au même niveau que le plugin Android :</p>
+
+<pre><code>apply plugin: 'com.android.application'
+apply plugin: 'com.github.triplet.play'
+</code></pre>
+
+<p>Ensuite, toujours dans le <code>build.gradle</code>, il est nécessaire d’ajouter les informations de l’<code>Account service</code> précédemment créé pour qu’il puisse se connecter et faire la livraison 
+(c’est là que l’on va utiliser la clé <code>JSON</code> générée).</p>
+
+<p>Placez donc la clé dans votre projet et faites-y référence dans la configuration du plugin :</p>
+
+<pre><code>play {
+    jsonFile = file('../publishKey/serviceAccountKeys.json')
+}
+</code></pre>
+
+<p>À partir de là, notre build est configuré. On peut notamment s’en rendre compte en faisant un <code>./gradlew tasks</code></p>
+
+<p>On y voit toutes les tâches gradle qu’on peut appeler :</p>
+
+<div style=text-align:center;margin:50px>
+  <a href=/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_Gradlew_tasks_config_before.png data-lightbox=group-1 title="Liste des tasks gradle disponibles sans le plugin" class=inlineBoxes>
+    <img class=medium src=/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_Gradlew_tasks_config_before.png alt="Liste des tasks gradle disponibles sans le plugin">
+  </a>
+  <a href=/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_Gradlew_tasks_config_after.png data-lightbox=group-1 title="Liste des tasks gradle disponibles avec le plugin" class=inlineBoxes>
+    <img class=medium src=/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_Gradlew_tasks_config_after.png alt="Liste des tasks gradle disponibles avec le plugin">
+  </a>
+</div>
+
+<p>Mais ce n’est pas suffisant car il manque notamment les tâches permettant l’upload de l’apk. Pour cela il faut rajouter la <code>signingConfigs</code> dans le <code>build.gradle</code>.
+Ce qui peut notamment se faire comme ça :</p>
+
+<pre><code>    signingConfigs {
+        release {
+            storeFile file("../keystore.jks")
+            storePassword "7r00p3r5"
+            keyAlias "release"
+            keyPassword "7r00p3r5"
+        }
+    }
+    buildTypes {
+        release {
+            //...
+            signingConfig signingConfigs.release
+        }
+    }
+</code></pre>
+
+<p>Maintenant, on peut voir la présence de la tâche qui nous intéresse : <code>publishApkRelease</code></p>
+
+<div style=text-align:center;margin:50px>
+  <a href=/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_Gradlew_tasks_config_complete.png data-lightbox=group-1 title="Liste des tasks gradle disponibles avec upload apk" class=inlineBoxes>
+    <img class=medium src=/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_Gradlew_tasks_config_complete.png alt="Liste des tasks gradle disponibles avec upload apk">
+  </a>
+</div>
+
+<h2 id=tape-4--gnration-et-upload>Étape 4 : génération et upload</h2>
+
+<p>Pour effectuer un upload de l’apk il suffit maintenant d’appeler la tâche <code>publishApkRelease</code>. Et pas besoin de générer l’apk signé via Android Studio puisque comme tout est configuré, il sera généré dans les tâches précédent l’uploadApk.</p>
+
+<p>Si tout se passe bien le build se termine avec un :</p>
+
+<pre><code>BUILD SUCCESSFUL
+</code></pre>
+
+<p>Si il y a un problème lors de l’updload, il est affiché dans la console, par exemple si le <strong>version code</strong> est déjà utilisé</p>
+
+<div style=text-align:center;margin:50px>
+  <a href=/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_Gradlew_upload_ko.png data-lightbox=group-1 title="Exemple d'upload d'apk en erreur" class=inlineBoxes>
+    <img class=medium src=/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_Gradlew_upload_ko.png alt="Exemple d'upload d'apk en erreur">
+  </a>
+</div>
+
+<p>Ensuite vous pouvez vous rendre sur l’interface d’admin du Play Store et constater que l’upload d’un nouvel apk a bien eu lieu en alpha et le passer en bêta ou en production.</p>
+
+<p><strong>Attention</strong> : ne pas commiter la clé <code>JSON</code> sur github, au même titre que le mot de passe du <code>keystore</code>.</p>
+
+<h2 id=pour-aller-plus-loin>Pour aller plus loin</h2>
+
+<p>Le plugin permet bien plus de choses que la livraison des apks. En effet, il permet de mettre à jour la description, les images et le changelog.
+Pour savoir comment configurer tout cela, je vous invite à consulter la page github du projet <a href=https://github.com/Triple-T/gradle-play-publisher>https://github.com/Triple-T/gradle-play-publisher</a></p>
+
+<p>L’étape ultime de la livraison continue, c’est de configurer un jenkins pour qu’il livre en alpha à chaque nouveau commit sur master, et pour cela il suffit de le configurer en rajoutant par exemple une tâche post build qui fera appel à la commande gradle que nous venons de configurer.</p>
+
+
+        </div>
+        <div class=fade-content>
+        </div>
+        <div class=more>
+            <a href=/2015/11/04/Android_publier_apk_avec_gradle.html><i class="fa fa-arrow-circle-o-right"></i> Lire la suite</a>
+        </div>
+    </div>
+</article>
+
+<article class="col-lg-4 col-md-6 col-sm-12">
+    <div onclick="window.location.href='/2015/09/30/NewRelicDocker.html' ;  return false" style="cursor: pointer">
+	<div class=cover style=background-image:url(/images/banner/docker-banner.png)>
+            <div class=date>posté le 30/09/2015 par Benjamin</div>
+        </div>
+        <h2><a href=/2015/09/30/NewRelicDocker.html>Monitorer ses conteneurs Docker avec New Relic</a></h2><ul class=tags>
+            
+            <li>Docker</li>
+            
+            <li>New Relic</li>
+            
+            <li>Monitoring</li>
+            
+        </ul>
+        <div class=content>
+            <p>Si vous ne conaissez pas New Relic, vous loupez quelque chose, c’est le service indispensable pour monitorer vos serveurs et vos applications. Il est capable d’une part de vous remonter les données physiques de vos serveurs (mémoire, cpu, espace disque), et d’autre part d’analyser les performances de vos applications (de nombreux langages sont disponibles). Il dispose aussi d’un système d’alerting, facilement configurable. Tous ces services sont disponibles en version gratuite, avec limitation (nombre de jour limité de rétention des données par exemple). Je vous laisse consulter le <a href=http://www.newrelic.com>site officiel</a> pour plus de détail.</p>
+
+<p>Nous allons seulement parler du service de monitoring des serveurs dans cet article.</p>
+
+<div style=float:right;margin:20px>
+    <a href=/images/postNewrelicDocker/new-relic.png data-lightbox=group-1 title="New Relic Logo" class=inlineBoxes>
+        <img class=medium src=/images/postNewrelicDocker/new-relic.png alt="New Relic Logo">
+    </a>
+</div>
+
+<div class=clearfix></div>
+
+
+
+<h2 id=et-docker-dans-tout-a>Et Docker dans tout ça</h2>
+
+<p>Ce qui est encore plus fort avec le service de monitoring des serveurs de New Relic, c’est qu’il est capable de comprendre Docker et donc de vous remonter les données par conteneur.</p>
+
+<div style=text-align:center;margin:50px>
+    <a href=/images/postNewrelicDocker/screen-newrelic-1.png data-lightbox=group-3 title="Screen 1 New Relic" class=inlineBoxes>
+        <img class=medium src=/images/postNewrelicDocker/screen-newrelic-1.png alt="Screen 1 New Relic">
+    </a>
+    <a href=/images/postNewrelicDocker/screen-newrelic-2.png data-lightbox=group-3 title="Screen 2 New Relic" class=inlineBoxes>
+        <img class=medium src=/images/postNewrelicDocker/screen-newrelic-2.png alt="Screen 2 New Relic">
+    </a>
+</div>
+
+<div class=clearfix></div>
+
+<h2 id=comment-linstaller>Comment l’installer</h2>
+
+<p>Avec Docker bien sûr, il faut au préalable s’être créé un compte sur le site New Relic pour obtenir l’accès à l’interface et pouvoir se créer une clé (à remplacer dans la ligne de commande suivante).</p>
+
+<pre><code>docker run -d \
+	--privileged=true --name newrelic
+	--pid=host \
+	--net=host \
+	-v /sys:/sys \
+	-v /dev:/dev \
+	--restart=always \
+	-v /var/run/docker.sock:/var/run/docker.sock \
+	-v /var/log:/var/log:rw \
+	-e NRSYSMOND_license_key=&lt;KEY&gt; \
+	-e NRSYSMOND_logfile=/var/log/nrsysmond.log \
+	newrelic/nrsysmond:latest
+</code></pre>
+
+<p>Vous trouverez toutes les informations <a href="https://hub.docker.com/r/newrelic/nrsysmond/">ici</a>.</p>
+
+        </div>
+        <div class=fade-content>
+        </div>
+        <div class=more>
+            <a href=/2015/09/30/NewRelicDocker.html><i class="fa fa-arrow-circle-o-right"></i> Lire la suite</a>
+        </div>
+    </div>
+</article>
+
+<article class="col-lg-4 col-md-6 col-sm-12">
+    <div onclick="window.location.href='/2015/09/22/Android_M_Permissions.html' ;  return false" style="cursor: pointer">
+	<div class=cover style=background-image:url(/images/banner/androidPermission-banner.png)>
+            <div class=date>posté le 22/09/2015 par Florian</div>
+        </div>
+        <h2><a href=/2015/09/22/Android_M_Permissions.html>Android M - Nouvelle gestion de permission</a></h2><ul class=tags>
+            
+            <li>Android</li>
+            
+            <li>Permission</li>
+            
+        </ul>
+        <div class=content>
+            <h1 id=nouvelle-approche>Nouvelle approche</h1>
+
+<p>Avec la prochaine release d’<code>Android 6.0 Marshmallow</code>, il va y avoir du changement au niveau de la gestion des permissions.
+Terminé la popup qui demande les 10 autorisations au moment du téléchargement de l’appli, maintenant les développeurs vont pouvoir demander les permissions au moment où elles seront nécessaires.</p>
+
+<h3 id=permissions-irrvocables>Permissions irrévocables</h3>
+<p>Puisqu’il va falloir demander à l’utilisateur pour chaque permission, Google a décidé que certaines anciennes permissions n’auront plus besoin d’être demandées,
+ ce sont les <code>Normal Permissions</code>. Il s’agit des permissions qui n’engendrent pas de risque sur la vie privée ou sur la sécurité de l’utilisateur comme c’est par exemple le cas pour l’accès à internet ou l’accès au vibreur :
+ la liste complète est disponible <a href=https://developer.android.com/preview/features/runtime-permissions.html#normal>ici</a>.</p>
+
+<h3 id=guidelines>Guidelines</h3>
+<p>Pour ce qui est de l’UX, Google a fait plusieurs recommandations dont certaines sont plus importantes que d’autres, à mon avis :</p>
+
+<ul>
+  <li>Ne demander une permisission qu’au moment où l’on en a vraiment besoin, ce qui implique de ne pas avoir un popup au lancement qui va demander toutes les permissions ;</li>
+  <li>Faire le maximum pour ne pas gâcher l’experience utilisateur même s’il refuse une permission : donc prévoir un mode dégradé autant que possible ;</li>
+  <li>Utiliser les méthodes disponibles dans appcompat plutôt que celles du sdk de base.</li>
+</ul>
+
+<h1 id=mise-en-pratique>Mise en pratique</h1>
+<p>Avant de commencer à coder, une dernière chose à garder à l’esprit c’est que l’utilisateur peut à tout moment révoquer une permission via le détail de l’application (même une fois que l’appli est lancée et tourne en background).
+ Il faudra donc adapter la gestion de ces permissions à cette éventualité.</p>
+
+<div style=text-align:center;margin-bottom:50px>
+    <a href=/images/2015-09-AndroidMPermissions/p6.png data-lightbox=group-1 title="Écran App Info" class=inlineBoxes>
+        <img class=medium src=/images/2015-09-AndroidMPermissions/p6.png alt="Écran App Info">
+    </a>
+    <a href=/images/2015-09-AndroidMPermissions/p5.png data-lightbox=group-1 title="Écran App Info : détail des permissions" class=inlineBoxes>
+            <img class=medium src=/images/2015-09-AndroidMPermissions/p5.png alt="Écran App Info : détail des permissions">
+    </a>
+</div>
+
+<h2 id=ne-pas-implmenter-les-nouvelles-permissions>Ne pas implémenter les nouvelles permissions</h2>
+<p>Chose importante à savoir, vous n’êtes pas obligés d’implémenter cette nouvelle gestion de permission.
+En effet, puisqu’elle demande du développoment supplémentaire, de nombreuses applis ne seront pas mises à jour et garderont donc l’ancien fonctionnement. 
+Si c’est ce que vous souhaitez, et pour ne pas nuire au bon fonctionnement de votre appli, il vous suffit de ne pas cibler le dernier <code>sdk</code> dans votre build.gradle et de rester sur le <code>22</code>.</p>
+
+<h2 id=implmenter-les-nouvelles-permissions>Implémenter les nouvelles permissions</h2>
+<p>Pour cela, 3 étapes sont nécessaires, principalement disponibles dans le sdk 23 ainsi que dans la lib appcompat :</p>
+
+<ul>
+  <li><code>requestPermissions()</code></li>
+  <li><code>onRequestPermissionsResult()</code></li>
+  <li><code>shouldShowRequestPermissionRationale()</code></li>
+</ul>
+
+<h3 id=buildgradle>Build.gradle</h3>
+<p>Permière étape, cibler la dernier version du <code>sdk</code> : <code>23</code>.
+Et en bonus, importer appcompat pour bénéficier des méthodes helpers de Google.</p>
+
+<pre><code>compileSdkVersion 23
+defaultConfig {
+    targetSdkVersion 23
+}
+dependencies {
+    compile 'com.android.support:appcompat-v7:23.0.1'
+}
+</code></pre>
+
+<h3 id=androidmanifestxml>AndroidManifest.xml</h3>
+<p>Ensuite, déclarer les permissions désirées dans l’application, normalement il n’y a pas de changements par rapport à votre configuration actuelle</p>
+
+<pre><code>&lt;uses-permission android:name="android.permission.CAMERA" /&gt;
+&lt;uses-permission android:name="android.permission.READ_CONTACTS" /&gt;
+&lt;uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /&gt;
+&lt;uses-permission android:name="android.permission.SEND_SMS" /&gt;
+&lt;uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /&gt;
+&lt;uses-permission android:name="android.permission.CALL_PHONE" /&gt;
+</code></pre>
+
+<p>N’oubliez pas d’y déclarer aussi les <code>Normal Permissions</code> qui, bien qu’elles soient automatiquement accordées, ont toujours besoin d’être déclarées.</p>
+
+<h3 id=dans-une-activit>Dans une activité</h3>
+<p>Dans un premier temps il faut vérifier si une permission est déjà accordée ou non</p>
+
+<pre><code>ContextCompat.checkSelfPermission(context, Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED;
+</code></pre>
+
+<p>Si la permission n’est pas accordée, il va falloir la demander, de préférence lors d’une action utilisateur, par exemple au click sur un bouton</p>
+
+<pre><code>ActivityCompat.requestPermissions(MainActivity.this,
+                                  new String[]{Manifest.permission.CAMERA},
+                                  REQUEST_CODE_ONE);
+</code></pre>
+
+<div style=text-align:center;margin-bottom:50px>
+    <a href=/images/2015-09-AndroidMPermissions/p1.png data-lightbox=group-1 title="Dialog de demande d'une permission" class=inlineBoxes>
+        <img class=medium src=/images/2015-09-AndroidMPermissions/p1.png alt="Dialog de demande d'une permission">
+    </a>
+</div>
+<p>Puis écouter le choix de l’utilisateur, dans l’activité ou le fragment correspondant</p>
+
+<pre><code>@Override
+public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
+    switch (requestCode) {
+        case REQUEST_CODE_ONE: {
+            if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                Toast.makeText(this, "Permission granted", Toast.LENGTH_LONG).show();
+            } else {
+                Toast.makeText(this, "Permission denied", Toast.LENGTH_LONG).show();
+            }
+            return;
+        }
+    }
+}
+</code></pre>
+
+<h3 id=demander-plusieurs-permissions-en-mme-temps>Demander plusieurs permissions en même temps</h3>
+<p>Même si cela est déconseillé, il peut arriver d’avoir besoin de plusieurs permissions lors de la même action utilisateur.
+Pour cela il suffit de passer plusieurs permissions dans le tableau passé en paramètre du requestPermission</p>
+
+<pre><code>ActivityCompat.requestPermissions(MainActivity.this,
+                                  new String[]{Manifest.permission.READ_CONTACTS, Manifest.permission.ACCESS_FINE_LOCATION},
+                                  REQUEST_CODE_TWO);
+</code></pre>
+
+<div style=text-align:center;margin-bottom:50px>
+    <a href=/images/2015-09-AndroidMPermissions/p2.png data-lightbox=group-1 title="Dialog de demande de plusieurs permissions 1/2" class=inlineBoxes>
+        <img class=medium src=/images/2015-09-AndroidMPermissions/p2.png alt="Dialog de demande de plusieurs permissions 1/2">
+    </a>
+<a href=/images/2015-09-AndroidMPermissions/p3.png data-lightbox=group-1 title="Dialog de demande de plusieurs permissions 2/2" class=inlineBoxes>
+        <img class=medium src=/images/2015-09-AndroidMPermissions/p3.png alt="Dialog de demande de plusieurs permissions 2/2">
+    </a>
+</div>
+
+<h3 id=expliquer--lutilisateur-pourquoi-il-doit-autoriser-une-permission>Expliquer à l’utilisateur pourquoi il doit autoriser une permission</h3>
+<p>Il arrivera sûrement que certains utilsateurs refusent des permissions et que cela détériore l’expérience utilisateur sur l’application. Pour cela, Google fourni un helper pour savoir ou non s’il faut afficher un message d’information à l’utilisateur (graphique).
+Cela se fera avec la méthode shouldShowRequestPermissionRationale</p>
+
+<pre><code>if (shouldShowRequestPermissionRationale(Manifest.permission.CALL_PHONE)) {
+     new AlertDialog.Builder(MainActivity.this)
+                               .setMessage("Custom message to explain why you need a permission")
+                               .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                   @Override
+                                   public void onClick(DialogInterface dialog, int which) {
+                                       ActivityCompat.requestPermissions(MainActivity.this,
+                                               new String[]{Manifest.permission.CALL_PHONE},
+                                               REQUEST_CODE_FIVE);
+                                   }
+                               })
+                               .setNegativeButton("Cancel", null)
+                               .create()
+                               .show();
+}
+ActivityCompat.requestPermissions(MainActivity.this,
+                                  new String[]{Manifest.permission.CALL_PHONE},
+                                  REQUEST_CODE_FIVE);
+}
+</code></pre>
+
+<div style=text-align:center;margin-bottom:50px>
+    <a href=/images/2015-09-AndroidMPermissions/p4.png data-lightbox=group-1 title="Dialog d'explication sur une demande de permissions" class=inlineBoxes>
+        <img class=medium src=/images/2015-09-AndroidMPermissions/p4.png alt="Dialog d'explication sur une demande de permissions">
+    </a>
+</div>
+
+<h3 id=le-pige--viter>Le piège à éviter</h3>
+<p>Penser à vérifier régulièrement l’état des permissions dans le <em>onResume()</em> de vos Activity ou Fragment, étant donné que l’utilsateur peut à tout moment les révoquer cela permettra d’éviter de nombreux crashs.</p>
+
+<h2 id=resources>Resources</h2>
+<p>Code source d’exemple : <a href=https://github.com/fchauveau/android-permissions-sample>https://github.com/fchauveau/android-permissions-sample</a></p>
+
+<p>Doc développeur Android : <a href=https://developer.android.com/preview/features/runtime-permissions.html>https://developer.android.com/preview/features/runtime-permissions.html</a></p>
+
+<p>Guidelines Android : <a href=https://developer.android.com/preview/features/runtime-permissions.html>http://www.google.fr/design/spec/patterns/permissions.html</a></p>
+
+<p>Explication sur quand demander une permission : <a href="https://www.youtube.com/watch?v=iZqDdvhTZj0">https://www.youtube.com/watch?v=iZqDdvhTZj0</a></p>
+
+
+        </div>
+        <div class=fade-content>
+        </div>
+        <div class=more>
+            <a href=/2015/09/22/Android_M_Permissions.html><i class="fa fa-arrow-circle-o-right"></i> Lire la suite</a>
+        </div>
+    </div>
+</article>
+
+<article class="col-lg-4 col-md-6 col-sm-12">
+    <div onclick="window.location.href='/2015/09/09/OwncloudDocker.html' ;  return false" style="cursor: pointer">
+	<div class=cover style=background-image:url(/images/banner/docker-banner.png)>
+            <div class=date>posté le 09/09/2015 par Matthieu</div>
+        </div>
+        <h2><a href=/2015/09/09/OwncloudDocker.html>Owncloud : solution de cloud en 5 min avec Docker</a></h2><ul class=tags>
+            
+            <li>Docker</li>
+            
+            <li>Owncloud</li>
+            
+        </ul>
+        <div class=content>
+            <p>Que ce soit pour des raisons politique de confidentialité ou des raisons technique, <a href="https://owncloud.org/">Owncloud</a> a énormément de qualités comparé à Dropbox ou Google drive. Déjà car la limite de taille des données est celle du serveur, ensuite car des applications sous linux permettent de synchroniser des dossiers et enfin car il existe une multitude d’addons qui permettent de sauvegarder ses mots de passe, jouer de la musique, envoyer des notifs sur Slack etc.</p>
+
+<p>La mise en production d’une instance Owncloud se fait en 5 minutes montre en main, à condition de connaître un minimum Docker.</p>
+
+<h2 id=nginxproxy>Nginx/proxy</h2>
+
+<p>Nous allons commencer par une petite digression. Avant quand on avait plusieurs “virtual host” qui pointaient sur une machine, on mettait un front-end apache et c’était plus ou moins la galère. Maintenant, il suffit de lancer cette commande une fois :</p>
+
+<pre><code>docker run --restart=always --name nginx -d -p 80:80 -p 443:443 -v /docker/vhost.d:/etc/nginx/vhost.d:ro -v /var/run/docker.sock:/tmp/docker.sock:ro jwilder/nginx-proxy
+</code></pre>
+
+
+        </div>
+        <div class=fade-content>
+        </div>
+        <div class=more>
+            <a href=/2015/09/09/OwncloudDocker.html><i class="fa fa-arrow-circle-o-right"></i> Lire la suite</a>
+        </div>
+    </div>
+</article>
+
+<article class="col-lg-4 col-md-6 col-sm-12">
+    <div onclick="window.location.href='/2015/07/16/GITSVN.html' ;  return false" style="cursor: pointer">
+	<div class=cover style=background-image:url(/images/banner/git-banner.png)>
+            <div class=date>posté le 16/07/2015 par Florian</div>
+        </div>
+        <h2><a href=/2015/07/16/GITSVN.html>GIT-SVN comment survivre dans un environnement hostile</a></h2><ul class=tags>
+            
+            <li>GIT</li>
+            
+            <li>GIT-SVN</li>
+            
+            <li>Outils</li>
+            
+            <li>Productivité</li>
+            
+        </ul>
+        <div class=content>
+            <p>Git c’est cool, Git c’est Hype, Git c’est tout récent (<a href=http://git-scm.com/book/fr/v1/D%C3%A9marrage-rapide-Une-rapide-histoire-de-Git>enfin presque</a>) et c’est pour ça qu’on aime bien.
+Mais pour beaucoup Git c’est nouveau, donc c’est le changement, donc c’est compliqué, et c’est pour ça que plein de boîtes préfèrent garder leur serveur svn.</p>
+
+<p>Je vais tenter ici, de vous donner les principales commandes de <code>Git-SVN</code>. Ainsi si vous vous trouvez dans une boîte qui ne veut pas changer son scm mais que vous, vous avez envie de changement,
+vous pourrez donc utiliser la puissance de Git. 
+Et ce sans aucun impact sur le gestionnaire de sources de la société dans laquelle vous êtes. C’est génial non ?</p>
+
+
+        </div>
+        <div class=fade-content>
+        </div>
+        <div class=more>
+            <a href=/2015/07/16/GITSVN.html><i class="fa fa-arrow-circle-o-right"></i> Lire la suite</a>
+        </div>
+    </div>
+</article>
+
+<article class="col-lg-4 col-md-6 col-sm-12">
+    <div onclick="window.location.href='/2015/06/25/InstallDockerRegistry.html' ;  return false" style="cursor: pointer">
+	<div class=cover style=background-image:url(/images/banner/docker-banner.png)>
+            <div class=date>posté le 25/06/2015 par Cedric</div>
+        </div>
+        <h2><a href=/2015/06/25/InstallDockerRegistry.html>Installer votre dépot privé Docker</a></h2><ul class=tags>
+            
+            <li>guide</li>
+            
+            <li>docker</li>
+            
+            <li>tips</li>
+            
+        </ul>
+        <div class=content>
+            <p>Petit à petit chez Code-Troopers, nous migrons tous nos développements pour utiliser Docker. 
+Cela fait quelque temps que nous l’utilisons pour des projets “public”, auquel cas le registry public Docker est largement suffisant (et immédiat à utiliser).</p>
+
+<p>En revanche, nous commençons à migrer nos applications de production également vers Docker, et nous ne pouvons pas utiliser le mode public du registry public.
+Nous nous sommes donc mis à déployer un dépôt privé, authentifié par utilisateur / mot de passe.</p>
+
+<p>La procédure n’est pas très complexe, mais cette opération reste une bonne opportunité d’écrire un article à ce sujet (les articles en français n’étant pas légion).
+
+        </p></div>
+        <div class=fade-content>
+        </div>
+        <div class=more>
+            <a href=/2015/06/25/InstallDockerRegistry.html><i class="fa fa-arrow-circle-o-right"></i> Lire la suite</a>
+        </div>
+    </div>
+</article>
+
+</div>
+
+<div class="row text-center">
+
+    
+    <ul class=pagination>
+        
+        <li class=disabled><span>&laquo;</span></li>
+        
+
+        
+        
+        <li class=active><span>1</span></li>
+        
+        
+        
+        <li><a href=/blog/page2>2</a></li>
+        
+        
+        
+        <li><a href=/blog/page3>3</a></li>
+        
+        
+        
+        <li><a href=/blog/page4>4</a></li>
+        
+        
+        
+        <li><a href=/blog/page5>5</a></li>
+        
+        
+        
+        <li><a href=/blog/page6>6</a></li>
+        
+        
+        
+        <li><a href=/blog/page7>7</a></li>
+        
+        
+
+        
+        <li><a href=/blog/page2>&raquo;</a></li>
+        
+    </ul>
+    
+</div>
+
+    </div>
+
+</section>
+
+<footer id=contact>
+    <div class=container>
+        <div class=row>
+            <div class=col-md-6 itemscope itemtype=http://schema.org/Organization>
+                <h3>Contact</h3>
+
+                <p>Vous avez besoin de nous pour un projet, contactez-nous sur les réseaux sociaux, par mail à <a href=mailto:contact@code-troopers.com><meta itemprop=email content=contact@code-troopers.com>contact@code-
+                    troopers.com</a> ou par téléphone au <a href=tel:+33782287216><span itemprop=telephone>0782 287 216</span></a></p>
+            </div>
+            <div class="col-md-6 simple-social-icons">
+                <h3>Réseaux sociaux</h3>
+                <ul class=socials>
+                    <li><a target=_blank href=https://twitter.com/codetroopers><i class="fa fa-twitter-square"></i></a></li>
+                    <li><a target=_blank href=https://www.facebook.com/pages/Code-Troopers/123604307824664><i class="fa fa-facebook-square"></i></a></li>
+                    <li><a target=_blank href=https://plus.google.com/+Code-troopers rel=publisher><i class="fa fa-google-plus-square"></i></a></li>
+                    <li><a target=_blank href=https://github.com/code-troopers><i class="fa fa-github-square"></i></a></li>
+                    <li><a target=_blank href=/feed.xml><i class="fa fa-rss-square"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class=row>
+            <div class=footer-under>
+                Made with <i class="fa fa-heart"></i> in Tours -
+                © 2014 - 2015 Code-Troopers - Tous droits réservés
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src=//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js></script>
+
+<script src=/scripts/3decf4b2.plugins.js></script>
+
+<script src=/scripts/32bd55f7.scripts.js></script>
+
+</body>
+</html>

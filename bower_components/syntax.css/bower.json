@@ -1,0 +1,23 @@
+{
+  "name": "syntax.css",
+  "version": "1.0.1",
+  "authors": [
+    "Simon Smith <simon@interlopers.net>"
+  ],
+  "description": "GitHub style syntax highlighting for Pygments",
+  "main": "syntax.css",
+  "keywords": [
+    "syntax",
+    "highlight",
+    "code"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "README.md",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
