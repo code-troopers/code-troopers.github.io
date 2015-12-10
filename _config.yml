@@ -7,5 +7,6 @@ source: app
 destination: _site
 exclude: ['bower_components']
 
+gems: [jekyll-paginate]
 paginate: 6
-paginate_path: "blog/page:num"
+paginate_path: "/blog/page:num/"
