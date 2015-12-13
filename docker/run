@@ -4,5 +4,5 @@ set -e
 
 npm install --loglevel verbose
 export CI=true
-bower install
+bower install --allow-root
 grunt server
