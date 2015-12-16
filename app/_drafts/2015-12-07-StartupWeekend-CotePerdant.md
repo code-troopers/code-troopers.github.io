@@ -7,7 +7,7 @@ tags: [Startup, AngularJS, Tech]
 ---
 
 ## Ou : Yo ! AngularJS, le meilleur ami des MVP
-Le week-end du 5 décembre a eu lieu un Startup Weekend édition tourisme à Tours où 6 troopers étaient présents. 3 d'entres nous ont atterri dans l'équipe `We Guide` composée de 3 développeurs, 3 designers et 3 profils business.
+Le week-end du 5 décembre a eu lieu un Startup Weekend édition tourisme à Tours où 6 troopers étaient présents. 3 d'entres nous ont choisi l'équipe `We Guide` composée de 3 développeurs, 3 designers et 3 profils business.
 L'idée de base est de découvrir une région à l'aide d'un guide local, officiel ou non. Quelqu'un qui emmène les touristes aussi bien dans les bars, restaurants, parcs que dans les monuments plus habituels de touraine comme les châteaux, la [basilique Saint-Martin](http://basiliquesaintmartin.fr/) ou le [Grand Aquarium de Touraine](http://www.decouvrez-levaldeloire.com/#grand-aquarium-actualites). Un peu à l'image des [greeters](http://www.tours-greeters.fr/) mais rémunérés pour motiver plus de guides et permettre de promouvoir cette pratique.
 
 <div class="text-center">
