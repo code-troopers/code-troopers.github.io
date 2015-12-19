@@ -53,7 +53,8 @@ $(function () {
         $(d).css("height",maxHeight);
     });
     $(".project-info-button").click(function(e){
-      $(e.target).parent().toggleClass("show-quote");
+      e.preventDefault()
+      $(e.target).parents("figure").toggleClass("show-quote");
     })
 })
 ;
