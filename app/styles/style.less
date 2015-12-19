@@ -420,15 +420,43 @@ article {
     padding: 5px;
     display: flex;
   }
+
+  .project-info {
+    animation-timing-function: cubic-bezier(0.230, 1.000, 0.320, 1.000);
+    overflow: hidden;
+  }
+
+  .detail-container {
+    position:absolute;
+    transition-duration: 1.5s;
+    transform: translateX(0%);
+  }
+
+  .show-quote {
+    .detail-container {
+      transition-duration: 1.5s;
+      transform: translateX(-100%);
+    }
+    .quote-container {
+      transition-duration: 1.5s;
+      transform: translateX(0%);
+    }
+  }
+
   .quote-container{
     position:relative;
     margin-top: 15px;
+
+    transition-duration: 1.5s;
+    transform: translateX(100%);
+
     blockquote {
       border: none;
       p {
         font-size: 0.9em;
         font-weight: 300;
         line-height: 1;
+        text-indent:40px;
         text-align: justify;
         &:before {
           content: '\201C';
@@ -437,12 +465,26 @@ article {
           font-weight: 700;
           position: absolute;
           font-size: 75px;
-          top: -0.15em;
-          left: -0.2em;
+          top: -0.25em;
+          left: -0.3em;
           color: @primary-color;
           text-shadow: 7px 14px 10px rgba(0, 0, 0, 0.1);
         }
       }
+    }
+  }
+  .project-info-button {
+    position: absolute;
+    bottom: 0px;
+    right: -5px;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 5px 15px;
+
+    img {
+      pointer-events: none;
+      border: none;
     }
   }
   figure {
