@@ -343,6 +343,9 @@ module.exports = function (grunt) {
                             jekylldev:{
                                 command: 'rm -rf <%= yeoman.app %>/*; jekyll build --drafts;',
                                 stdout: true
+                            },
+                            pygments:{
+                                command: '$(dirname $(gem which pygments.rb))/../vendor/pygments-main/pygmentize -S monokai -f html -O classprefix=tok- > <%= yeoman.app%>/styles/pygments.css'
                             }
                         },
                          sitemap: {
@@ -361,6 +364,7 @@ module.exports = function (grunt) {
         grunt.task.run([   'shell:jekylldev',
                            'copy:bower',
                            'less',
+                           'shell:pygments',
                            'clean:server',
                            'concurrent:server',
                            'autoprefixer',
@@ -381,6 +385,7 @@ module.exports = function (grunt) {
         'shell:jekyll',
         'copy:bower',
         'less',
+        'shell:pygments',
         'clean:dist',
         'useminPrepare',
         'concurrent:dist',

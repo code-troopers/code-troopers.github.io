@@ -7,6 +7,16 @@ source: app
 destination: _site
 exclude: ['bower_components']
 
-gems: [jekyll-paginate]
+gems: [jekyll-paginate, jekyll-asciidoc]
 paginate: 6
 paginate_path: "/blog/page:num/"
+
+pygments: true
+
+asciidoctor:
+  attributes:
+    - hardbreaks!
+    - source-highlighter=pygments
+    - pygments-css=class
+    - pygments-style=monokai
+    - icons=font

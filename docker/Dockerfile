@@ -22,8 +22,8 @@ RUN npm install -g gulp && \
     npm install -g grunt-cli && \
     npm install -g bower
 
-RUN gem install jekyll rdiscount kramdown jekyll-paginate
-RUN gem install jekyll-paginate
+RUN gem install jekyll -v "2.5.3" \
+    && gem install rdiscount kramdown jekyll-paginate jekyll-asciidoc asciidoctor pygments.rb
 
 VOLUME /src
 EXPOSE 9002
