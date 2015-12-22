@@ -30,6 +30,7 @@ module.exports = function (grunt) {
                                  files: [
                                      // capture all except css
                                      '<%= yeoman.jekyll %>/{,**/}*.html','<%= yeoman.jekyll %>/{,**/}*.md',
+                                     '<%= yeoman.jekyll %>/{,**/}*.adoc',
                                      '!**/bower_components/**',
                                      '<%= yeoman.jekyll %>/{,*/}*.less',
                                      '.tmp/styles/{,*/}*.css',
