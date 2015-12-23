@@ -6,7 +6,60 @@ cover: jenkins-banner
 tags: [Jenkins,Docker]
 ---
 
-# Workflow
+# Jenkins workflow plugin
+
+
+Un des points genant lors de l'utilisation de Jenkins est le coté volatile de la configuration des jobs de builds.
+Il est souvent nécessaire de jouer de click-click pour faire la configuration des jobs sur Jenkins et de se reposer sur un plugin permettant de versionner,
+autant que possible, les configurations utilisées.
+
+Mais, une fois que vous aurez lu cet article, vous vous rendrez compte que c'est le passé.
+Attention toutefois, cet article parle de jenkins, de docker et de groovy, n'ayez pas peur, tout est _presque_ trop simple...
+
+{lt}!-- break --{gt}
+
+## Prérequis Jenkins
+
+
+### Jenkins avec acces a Docker
+
+Nous avons l'habitude d'utiliser un Jenkins lancé dans un container depuis quelques temps. Nous utilisons l'image maintenue par Michael Bitard `agileek/docker-jenkins`.
+
+Nous lançons cette image en lui fournissant de quoi exécuter le binaire docker client sans soucis :
+
+[source,bash]
+-----
+docker run
+       -d --restart="always" --name jenkins
+       -u $(id -u):$(getent group docker | cut -d: -f3) # <1>
+       -p 8080:8080
+       -v /var/jenkins_home:/var/jenkins_home # <2>
+       -v $(which docker):/usr/bin/docker # <3>
+       -v /var/run/docker.sock:/var/run/docker.sock # <4>
+       -v /usr/lib/x86_64-linux-gnu/libapparmor.so.1:/lib/x86_64-linux-gnu/libapparmor.so.1 # <5>
+       agileek/docker-jenkins # <6>
+-----
+
+<1> Le container est lancé avec l'utilisateur courant et le groupe `docker` pour pouvoir accéder au `docker.sock`
+<2> Pour éviter les incohérences de chemin, le chemin racine du jenkins est le meme en dehors et dans le container
+<3> Le binaire docker du systeme est fourni dans l'image
+<4> Le socket docker est également fourni pour que le client puisse "parler" au démon
+<5> La bibliotheque apparmor est nécessaire pour le bon fonctionnement de docker client
+
+### Jenkins workflow plugin
+
+Pour utiliser la suite des éléments, vous aurez besoin des plugins gérant la notion de _workflow_ dans Jenkins :
+
+image::/images/2015-12-JenkinsWorkflow/Workflow-Plugin.png[]
+
+Ensuite, il nous est possible de créer un job de construction de type _workflow_ :
+
+image::/images/2015-12-JenkinsWorkflow/Workflow-Plugin_JobCreation.png[]
+
+## Premier job _Workflow_
+
+Ensuite, c'est la que la magie opere, plutot que de devoir sélectionner les n-items voulus et remplir chaque étape du build, nous pouvons maintenant le décrire en utilisant du code.
+Ainsi, en copiant/collant le script suivant dans la partie idoine, vous devriez avoir un job bien configuré qui marche, du premier coup !
 
 [source,groovy]
 -----
@@ -16,13 +69,14 @@ docker.image("codetroopers/jenkins-slave-jdk8-restx")
     .inside("${m2Repo} ${timezone}"){ //  # <3>
     git branch: 'master', url: 'https://github.com/code-troopers/jenkins-workflow-demo-repo.git' // # <4>
     sh "MAVEN_OPTS=-Dfile.encoding=UTF-8 mvn clean install -B -Ppackage" // # <5>
-    step([$class: 'ArtifactArchiver', artifacts: 'srv/target/dependency/webapp-runner.jar, srv/target/*.war, run.sh') // # <6>
+    step([$class: 'ArtifactArchiver', artifacts: 'srv/target/dependency/webapp-runner.jar, srv/target/*.war, run.sh']) // # <6>
     step([$class: 'JUnitResultArchiver', testResults: '**/target/surefire-reports/TEST-*.xml']) // # <7>
 }
 -----
-<1>
-<2>
-<3> Run in container with shared m2 local repository
+
+<1> Share local maven repository
+<2> Export the timezone
+<3> Run in container with proper timezone and shared repository
 <4> Clone the repo
 <5> Classic run install
 <6> Archive artefacts
@@ -39,7 +93,7 @@ stage 'build' // # <1>
     docker.image("codetroopers/jenkins-slave-jdk8-restx").inside("${m2Repo} ${timezone}"){
         git branch: 'master', url: 'https://github.com/code-troopers/jenkins-workflow-demo-repo.git'
         sh "MAVEN_OPTS=-Dfile.encoding=UTF-8 mvn clean install -B -Ppackage"
-        step([$class: 'ArtifactArchiver', artifacts: 'srv/target/dependency/webapp-runner.jar, srv/target/*.war, run.sh')
+        step([$class: 'ArtifactArchiver', artifacts: 'srv/target/dependency/webapp-runner.jar, srv/target/*.war, run.sh'])
         step([$class: 'JUnitResultArchiver', testResults: '**/target/surefire-reports/TEST-*.xml'])
     }
 -----
@@ -55,7 +109,7 @@ stage 'build'
     docker.image("codetroopers/jenkins-slave-jdk8-restx").inside("${m2Repo} ${timezone}"){
         git branch: 'master', url: 'https://github.com/code-troopers/jenkins-workflow-demo-repo.git'
         sh "MAVEN_OPTS=-Dfile.encoding=UTF-8 mvn clean install -B -Ppackage"
-        step([$class: 'ArtifactArchiver', artifacts: 'srv/target/dependency/webapp-runner.jar, srv/target/*.war, run.sh')
+        step([$class: 'ArtifactArchiver', artifacts: 'srv/target/dependency/webapp-runner.jar, srv/target/*.war, run.sh'])
         step([$class: 'JUnitResultArchiver', testResults: '**/target/surefire-reports/TEST-*.xml'])
         stash includes: 'run.sh,srv/target/dependency/webapp-runner.jar,srv/target/*.war,Dockerfile', name: 'dockerBuild' // # <1>
     }
@@ -96,7 +150,7 @@ stage 'build'
     docker.image("codetroopers/jenkins-slave-jdk8-restx").inside("${m2Repo} ${timezone}"){
         checkout scm // # <1>
         sh "MAVEN_OPTS=-Dfile.encoding=UTF-8 mvn clean install -B -Ppackage"
-        step([$class: 'ArtifactArchiver', artifacts: 'srv/target/dependency/webapp-runner.jar, srv/target/*.war, run.sh')
+        step([$class: 'ArtifactArchiver', artifacts: 'srv/target/dependency/webapp-runner.jar, srv/target/*.war, run.sh'])
         step([$class: 'JUnitResultArchiver', testResults: '**/target/surefire-reports/TEST-*.xml'])
         stash includes: 'run.sh,srv/target/dependency/webapp-runner.jar,srv/target/*.war,Dockerfile', name: 'dockerBuild'
     }
@@ -121,7 +175,7 @@ stage 'build'
     docker.image("codetroopers/jenkins-slave-jdk8-restx").inside("${m2Repo} ${timezone}"){
         git branch: 'master', url: 'https://github.com/code-troopers/jenkins-workflow-demo-repo.git'
         sh "MAVEN_OPTS=-Dfile.encoding=UTF-8 mvn clean install -B -Ppackage"
-        step([$class: 'ArtifactArchiver', artifacts: 'srv/target/dependency/webapp-runner.jar, srv/target/*.war, run.sh')
+        step([$class: 'ArtifactArchiver', artifacts: 'srv/target/dependency/webapp-runner.jar, srv/target/*.war, run.sh'])
         step([$class: 'JUnitResultArchiver', testResults: '**/target/surefire-reports/TEST-*.xml'])
         stash includes: 'run.sh,srv/target/dependency/webapp-runner.jar,srv/target/*.war,Dockerfile', name: 'dockerBuild'
     }
