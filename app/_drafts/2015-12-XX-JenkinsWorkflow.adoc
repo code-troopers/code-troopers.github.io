@@ -10,19 +10,23 @@ tags: [Jenkins,Docker]
 
 [source,groovy]
 -----
+def m2Repo = '-v /var/jenkins_home/.m2:/home/jenkins/.m2' //  # <1>
+def timezone = '-e TZ=Europe/Paris' // # <2>
 docker.image("codetroopers/jenkins-slave-jdk8-restx")
-    .inside('-v /var/jenkins_home/.m2:/home/jenkins/.m2'){ // # <1>
-    git branch: 'master', url: 'https://github.com/code-troopers/jenkins-workflow-demo-repo.git' // # <2>
-    sh "MAVEN_OPTS=-Dfile.encoding=UTF-8 mvn clean install -B -Ppackage" // # <3>
-    step([$class: 'ArtifactArchiver', artifacts: 'srv/target/dependency/webapp-runner.jar, srv/target/*.war, run.sh') // # <4>
-    step([$class: 'JUnitResultArchiver', testResults: '**/target/surefire-reports/TEST-*.xml']) // # <5>
+    .inside("${m2Repo} ${timezone}"){ //  # <3>
+    git branch: 'master', url: 'https://github.com/code-troopers/jenkins-workflow-demo-repo.git' // # <4>
+    sh "MAVEN_OPTS=-Dfile.encoding=UTF-8 mvn clean install -B -Ppackage" // # <5>
+    step([$class: 'ArtifactArchiver', artifacts: 'srv/target/dependency/webapp-runner.jar, srv/target/*.war, run.sh') // # <6>
+    step([$class: 'JUnitResultArchiver', testResults: '**/target/surefire-reports/TEST-*.xml']) // # <7>
 }
 -----
-<1> Run in container with shared m2 local repository
-<2> Clone the repo
-<3> Classic run install
-<4> Archive artefacts
-<5> Archive test results
+<1>
+<2>
+<3> Run in container with shared m2 local repository
+<4> Clone the repo
+<5> Classic run install
+<6> Archive artefacts
+<7> Archive test results
 
 
 ## Group commands in stage
@@ -30,7 +34,9 @@ docker.image("codetroopers/jenkins-slave-jdk8-restx")
 [source,groovy]
 -----
 stage 'build' // # <1>
-    docker.image("codetroopers/jenkins-slave-jdk8-restx").inside('-v /var/jenkins_home/.m2:/home/jenkins/.m2'){
+    def m2Repo = '-v /var/jenkins_home/.m2:/home/jenkins/.m2'
+    def timezone = '-e TZ=Europe/Paris'
+    docker.image("codetroopers/jenkins-slave-jdk8-restx").inside("${m2Repo} ${timezone}"){
         git branch: 'master', url: 'https://github.com/code-troopers/jenkins-workflow-demo-repo.git'
         sh "MAVEN_OPTS=-Dfile.encoding=UTF-8 mvn clean install -B -Ppackage"
         step([$class: 'ArtifactArchiver', artifacts: 'srv/target/dependency/webapp-runner.jar, srv/target/*.war, run.sh')
@@ -44,7 +50,9 @@ stage 'build' // # <1>
 [source,groovy]
 -----
 stage 'build'
-    docker.image("codetroopers/jenkins-slave-jdk8-restx").inside('-v /var/jenkins_home/.m2:/home/jenkins/.m2'){
+    def m2Repo = '-v /var/jenkins_home/.m2:/home/jenkins/.m2'
+    def timezone = '-e TZ=Europe/Paris'
+    docker.image("codetroopers/jenkins-slave-jdk8-restx").inside("${m2Repo} ${timezone}"){
         git branch: 'master', url: 'https://github.com/code-troopers/jenkins-workflow-demo-repo.git'
         sh "MAVEN_OPTS=-Dfile.encoding=UTF-8 mvn clean install -B -Ppackage"
         step([$class: 'ArtifactArchiver', artifacts: 'srv/target/dependency/webapp-runner.jar, srv/target/*.war, run.sh')
@@ -83,7 +91,9 @@ node{ // # <2>
 [source,groovy]
 -----
 stage 'build'
-    docker.image("codetroopers/jenkins-slave-jdk8-restx").inside('-v /var/jenkins_home/.m2:/home/jenkins/.m2'){
+    def m2Repo = '-v /var/jenkins_home/.m2:/home/jenkins/.m2'
+    def timezone = '-e TZ=Europe/Paris'
+    docker.image("codetroopers/jenkins-slave-jdk8-restx").inside("${m2Repo} ${timezone}"){
         checkout scm // # <1>
         sh "MAVEN_OPTS=-Dfile.encoding=UTF-8 mvn clean install -B -Ppackage"
         step([$class: 'ArtifactArchiver', artifacts: 'srv/target/dependency/webapp-runner.jar, srv/target/*.war, run.sh')
@@ -106,7 +116,9 @@ node{
 [source,groovy]
 -----
 stage 'build'
-    docker.image("codetroopers/jenkins-slave-jdk8-restx").inside('-v /var/jenkins_home/.m2:/home/jenkins/.m2'){
+    def m2Repo = '-v /var/jenkins_home/.m2:/home/jenkins/.m2'
+    def timezone = '-e TZ=Europe/Paris'
+    docker.image("codetroopers/jenkins-slave-jdk8-restx").inside("${m2Repo} ${timezone}"){
         git branch: 'master', url: 'https://github.com/code-troopers/jenkins-workflow-demo-repo.git'
         sh "MAVEN_OPTS=-Dfile.encoding=UTF-8 mvn clean install -B -Ppackage"
         step([$class: 'ArtifactArchiver', artifacts: 'srv/target/dependency/webapp-runner.jar, srv/target/*.war, run.sh')
