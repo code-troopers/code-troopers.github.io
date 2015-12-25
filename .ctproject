@@ -1,5 +1,5 @@
-run='grunt server'
-dist='grunt server:dist'
+run='gulp server --drafts'
+dist='grunt server --prod --drafts'
 dbuild='docker build -t ct-website docker/'
-drun='docker run -p 9002:9002 -v $PWD:/src:rw -ti codetroopers/ct-website'
+drun='docker run -p 3000:3000 -v $PWD:/src:rw -ti codetroopers/ct-website'
 dock='ct dbuild && ct drun'

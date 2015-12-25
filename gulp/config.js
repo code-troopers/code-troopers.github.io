@@ -39,13 +39,7 @@ module.exports = {
     'root': 'app',
     'src': ['app/**/*.html','app/**/*.md','app/**/*.adoc'],
     'generatedSrc': [
-      'generated/**/*.html',
-      'generated/audio',
-      'generated/videos',
-      'generated/favicon.ico',
-      'CNAME',
-      'feed.xml',
-      'robots.txt'
+      'generated/**/*'
     ],
     'dest': 'public'
   },
