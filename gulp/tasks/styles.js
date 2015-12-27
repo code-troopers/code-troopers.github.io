@@ -6,7 +6,7 @@ var gulp         = require('gulp');
 var less         = require('gulp-less');
 var gulpif       = require('gulp-if');
 var browserSync  = require('browser-sync');
-var minifycss       = require('gulp-minify-css');	
+var nano       = require('gulp-cssnano');	
 var csslint      = require('gulp-csslint');
 var autoprefixer = require('gulp-autoprefixer');
 var isProd    = require('../util/isProduction');
@@ -16,7 +16,7 @@ gulp.task('styles', function () {
 		gulp.src(config.styles.src),
 		less(),
 		autoprefixer("last 1 version"),
-		gulpif(isProd() , minifycss({compatibility: 'ie8'})),
+		gulpif(isProd() , nano()),
 		gulp.dest(config.styles.dest),
 		//csslint(),
 		//csslint.reporter()

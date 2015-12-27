@@ -26,7 +26,7 @@ RUN gem install jekyll rdiscount kramdown jekyll-paginate
 RUN gem install jekyll-paginate
 
 VOLUME /src
-EXPOSE 9002
+EXPOSE 3000
 
 WORKDIR /src
 #USER ct
