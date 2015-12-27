@@ -5,4 +5,4 @@ set -e
 npm install
 export CI=true
 bower install --allow-root
-gulp server --drafts --prod
+gulp serve --drafts --prod
