@@ -9,7 +9,6 @@ var lessReporter = require('gulp-csslint-less-reporter');
 
 gulp.task('lint', function () {
   return gulp.src(config.styles.src)
-  .pipe(sourcemaps.init())
   	.pipe(less())
   	.pipe(csslint())
     .pipe(lessReporter('app/styles/style.less'))

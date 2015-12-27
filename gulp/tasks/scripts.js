@@ -2,25 +2,37 @@
 
 var config       = require('../config');
 var gulp         = require('gulp');
+var combiner = require('stream-combiner2');
 var concat       = require('gulp-concat');
 var gulpif       = require('gulp-if');
 var browserSync  = require('browser-sync');
 var autoprefixer = require('gulp-autoprefixer');
 var uglify       = require('gulp-uglify');
+var jshint       = require('gulp-jshint');
 var isProd    = require('../util/isProduction');
 
 gulp.task('scripts', ['ie8'], function () {
-  return gulp.src(config.scripts.src)
-    .pipe(concat('scripts.js'))
-    .pipe(gulpif(isProd(), uglify()))
-    .pipe(gulp.dest(config.scripts.dest))
-    .pipe(gulpif(browserSync.active, browserSync.reload({ stream: true })));
+	var combined = combiner.obj([
+			gulp.src(config.scripts.src),
+			concat('scripts.js'),
+			//jshint(),
+			//jshint.reporter(),
+			gulpif(isProd(), uglify()),
+			gulp.dest(config.scripts.dest),
+			gulpif(browserSync.active, browserSync.reload({ stream: true }))	
+		]);
+	combined.on('error', console.error.bind(console));
+	return combined;
 });
 
 gulp.task('ie8', function () {
-  return gulp.src(config.scripts.srcIE8)
-    .pipe(concat('ie8.js'))
-    .pipe(gulpif(isProd(), uglify()))
-    .pipe(gulp.dest(config.scripts.dest))
-    .pipe(gulpif(browserSync.active, browserSync.reload({ stream: true })));
+	var combined = combiner.obj([
+			gulp.src(config.scripts.srcIE8),
+			concat('ie8.js'),
+			gulpif(isProd(), uglify()),
+			gulp.dest(config.scripts.dest),	
+			gulpif(browserSync.active, browserSync.reload({ stream: true }))		
+		]);
+	combined.on('error', console.error.bind(console));
+	return combined;
 });

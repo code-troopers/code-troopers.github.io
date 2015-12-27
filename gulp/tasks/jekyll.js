@@ -8,6 +8,7 @@ var config = require('../config'),
     changed     = require('gulp-changed'),
     isProd = require('../util/isProduction'),
     showDrafts = require('../util/showDrafts'),
+    htmlhint = require('gulp-htmlhint'),
     htmlmin = require('gulp-minify-html');
 
 /**
