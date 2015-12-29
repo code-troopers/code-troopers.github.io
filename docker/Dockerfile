@@ -30,7 +30,6 @@ RUN npm install -g gulp && \
 
 # Install jekyll
 RUN gem install jekyll rdiscount kramdown jekyll-paginate
-RUN gem install jekyll-paginate
 
 VOLUME /src
 EXPOSE 3000
