@@ -1,0 +1,373 @@
+<!doctype html >
+<html class="no-js" lang="fr" itemscope itemtype="http://schema.org/Organization">
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta charset="utf-8">
+        <title>Découverte de Neo4j</title>
+        <meta property="fb:app_id" content="432735746865877"/>
+        <meta property="og:url" content="http://code-troopers.com/2015/12/29/2014-05-xx-Neo4j.html"/>
+        <meta property="og:title" content="Découverte de Neo4j"/>
+        <meta property="twitter:card" content="summary"/>
+        <meta property="twitter:site" content="codetroopers"/>
+        <meta property="twitter:image:src" content="http://code-troopers.com/images/banner/swtours-banner.png"/>
+        <meta property="og:image" content="http://code-troopers.com/images/banner/swtours-banner.png"/>
+        <meta property="twitter:title" content="Découverte de Neo4j"/>
+        <meta property="twitter:creator" content="@codetroopers"/>
+        <meta property="twitter:domain" content="http://code-troopers.com"/>
+        
+        
+        <meta property="twitter:description" content="Vous avez surement déjà entendu parler de base de données orientées graphe, mais est-ce que vous avez déjà eu la...">
+        
+        
+        
+        <meta name="description" content="Vous avez surement déjà entendu parler de base de données orientées graphe, mais est-ce que vous avez déjà eu la curiosité de les tester ? Ces bases de données permettent de répondre à beaucoup de questions en utilisant la théorie des graphes (oui ça fait un peu peur !). Le principe d’un graphe est de créer des liens entre les éléments (noeuds), cette structure est particulièrement adapté à l’exploitation d’arbre par exemple, mais également pour la représentation des réseaux sociaux. Je me suis intéressé à l’une d’entre elle Neo4j. Installation et configuration Vous devez tout d’abord télécharger le serveur ici. Ensuite dans le dossier bin du répertoire téléchargé, lancez le serveur : 1./neo4j start Il y a une interface d’admin accessible à l’adresse suivante : http://localhost:7474. Elle permet de consulter la configuration (sans permettre de la modifier), ainsi que d’executer vos requêtes. Les résultats sont affichés sous la forme d’un graphe dynamique ou bien d’un tableau. Si vous ne souhaitez pas héberger vous même votre serveur, il existe un service GrapheneDb qui vous propose d’héberger votre serveur. Il existe un plan gratuit permettant 1000 noeuds et 10000 liens. Ca peut suffir pour de petit projet. Cypher C’est bien tout ça..." />
+        <meta property="og:description" content="Vous avez surement déjà entendu parler de base de données orientées graphe, mais est-ce que vous avez déjà eu la curiosité de les tester ? Ces bases de données permettent de répondre à beaucoup de questions en utilisant la théorie des graphes (oui ça fait un peu peur !). Le principe d’un graphe est de créer des liens entre les éléments (noeuds), cette structure est particulièrement adapté à l’exploitation d’arbre par exemple, mais également pour la représentation des réseaux sociaux. Je me suis intéressé à l’une d’entre elle Neo4j. Installation et configuration Vous devez tout d’abord télécharger le serveur ici. Ensuite dans le dossier bin du répertoire téléchargé, lancez le serveur : 1./neo4j start Il y a une interface d’admin accessible à l’adresse suivante : http://localhost:7474. Elle permet de consulter la configuration (sans permettre de la modifier), ainsi que d’executer vos requêtes. Les résultats sont affichés sous la forme d’un graphe dynamique ou bien d’un tableau. Si vous ne souhaitez pas héberger vous même votre serveur, il existe un service GrapheneDb qui vous propose d’héberger votre serveur. Il existe un plan gratuit permettant 1000 noeuds et 10000 liens. Ca peut suffir pour de petit projet. Cypher C’est bien tout ça...">
+        
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="stylesheet" href="/styles/style-320a49db9b-320a49db9b.css">
+     
+        <!--[if lt IE 9]>
+                <script src="/js/ie8-0a07727802-0a07727802.js"></script>           
+        <![endif]-->
+        <meta itemprop="name" content="CT-CDGT"/>
+        <meta itemprop="name" content="CT-RMLC"/>
+        <meta itemprop="name" content="CT-BNCS"/>
+        <meta itemprop="name" content="CT-JRPT"/>
+        <meta itemprop="name" content="CT-MTBL"/>
+        <meta itemprop="name" content="CT-FLCH"/>
+        <meta itemprop="name" content="CT-VCMB"/>
+    </head>
+    <body>
+        <!-- Google Tag Manager -->
+        <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-NWLQD2"
+                height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-NWLQD2');</script>
+        <!-- End Google Tag Manager -->
+        <!--[if lt IE 8]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a
+                href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+<header data-spy="affix" class="affix-top">
+    <div class="container">
+        <div class="navbar-header" itemscope itemtype="http://schema.org/Organization">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span><i class="fa fa-bars fa-2x"></i></span>
+            </button>
+            <a class="navbar-brand" href="/"><img itemprop="logo" class="logo" alt="Code-Troopers logo" title="Code-Troopers logo" src="/images/logo_noel.png">
+                <span itemprop="name" class="brand">Code-Troopers</span>
+            </a>
+        </div>
+        <nav class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="active"><a data-scrollToLink="aboutUs">À propos</a></li>
+                <li><a data-scrollToLink="projects">Réalisations</a></li>
+                <li><a data-scrollToLink="skills">Compétences</a></li>
+                <li><a data-scrollToLink="team">L'équipe</a></li>
+                <li><a data-scrollToLink="contact">Contact</a></li>
+                <li><a href="/blog/index.html">Blog</a></li>
+            </ul>
+        </nav>
+        <!--/.nav-collapse -->
+    </div>
+</header>
+
+    <section id="post">
+        <div class="header">
+            <div class="container"><a href="/blog/index.html">Le <span>blog</a></span></div>
+        </div>
+        <div class="container">
+        <article>
+            <div>
+		<div class="cover" style="background-image:url(/images/banner/swtours-banner-big.png)">
+                    <div class="date">posté le 29/12/2015 par Romain</div>
+                </div>
+                <h2><a href="/2015/12/29/2014-05-xx-Neo4j.html">Découverte de Neo4j</a></h2>
+                <ul class="tags">
+                    
+                    <li>Neo4j</li>
+                    
+                    <li>Découverte</li>
+                    
+                </ul>
+                <div class="content">
+                    <p>Vous avez surement déjà entendu parler de base de données orientées graphe, mais est-ce que vous avez déjà eu la curiosité de les tester ?</p>
+
+<p>Ces bases de données permettent de répondre à beaucoup de questions en utilisant la théorie des graphes (oui ça fait un peu peur !).
+Le principe d’un graphe est de créer des liens entre les éléments (noeuds), cette structure est particulièrement adapté à l’exploitation d’arbre par exemple, mais également pour la représentation des réseaux sociaux.</p>
+
+<p>Je me suis intéressé à l’une d’entre elle <a href="http://www.neo4j.org/">Neo4j</a>.</p>
+
+<h2 id="installation-et-configuration">Installation et configuration</h2>
+
+<p>Vous devez tout d’abord télécharger le serveur <a href="http://www.neo4j.org/download_thanks?edition=community&amp;release=2.0.2&amp;platform=unix&amp;packaging=zip&amp;architecture=x32"><strong>ici</strong></a>.
+Ensuite dans le dossier bin du répertoire téléchargé, lancez le serveur :</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre>./neo4j start<span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+
+<p>Il y a une interface d’admin accessible à l’adresse suivante : <a href="http://localhost:7474">http://localhost:7474</a>. Elle permet de consulter la configuration (sans permettre de la modifier), 
+ainsi que d’executer vos requêtes. Les résultats sont affichés sous la forme d’un graphe dynamique ou bien d’un tableau.</p>
+
+<div style="text-align:center;margin:50px">
+    <a href="/images/postNeo4j/admin-page.png" data-lightbox="group-2" title="Interface d'administration" class="inlineBoxes">
+        <img class="medium" src="/images/postNeo4j/admin-page.png" alt="Interface d'admin" />
+    </a>
+</div>
+
+<p>Si vous ne souhaitez pas héberger vous même votre serveur, il existe un service 
+<a href="http://www.graphenedb.com/"><strong>GrapheneDb</strong></a> qui vous propose d’héberger votre serveur. Il existe un plan gratuit permettant 1000 noeuds et 10000 liens. Ca peut suffir pour de petit projet.</p>
+
+<h2 id="cypherhttpdocsneo4jorgrefcard20"><a href="http://docs.neo4j.org/refcard/2.0/">Cypher</a></h2>
+
+<p>C’est bien tout ça mais comment on consulte nos données ! <a href="http://docs.neo4j.org/refcard/2.0/">Cypher</a> est le language utilisé pour le requêtage dans Neo4j. 
+Comme tout language, il y a quelques termes à connaître :</p>
+
+<ul>
+  <li><strong>Node</strong> : correspond à un noeud de mon graph</li>
+  <li><strong>Label</strong> : le label permet de préciser le type de noeud</li>
+  <li><strong>Relationship</strong> : correspond à un lien entre deux noeuds</li>
+</ul>
+
+<p>Pour bien comprendre quoi de mieux qu’un exemple. Nous allons nous placer dans le cas d’un réseau de bus. Nous allons considérer 2 lignes avec chacune 3 arrets.</p>
+
+<p>La ligne 1 possède 3 arrets : Arret 1, Arret 2 et Arret 3 
+<br />
+La ligne 2 possède également 3 arrets : Arret 4, Arret 5 et Arret 6</p>
+
+<p>Chaque arret est représenté par un noeud, et la relation entre chaque noeud porte le nom de la ligne. Nous avons donc le graph suivant :</p>
+
+<div style="text-align:center;margin:50px">
+    <a href="/images/postNeo4j/graph-example.png" data-lightbox="group-2" title="Graph du réseau de bus" class="inlineBoxes">
+        <img class="medium" src="/images/postNeo4j/graph-example.png" alt="Graph du réseau de bus" />
+    </a>
+</div>
+
+<h3 id="gestion-des-noeuds-et-des-relations">Gestion des noeuds et des relations</h3>
+
+<p><strong>Créer un noeud simple :</strong></p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre>CREATE ({name:"Arret 1"})<span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+
+<p><br /></p>
+
+<p><strong>Créer un noeud avec un label :</strong></p>
+
+<p>Vous avez la possibilité de mettre un label sur un noeud, cela permet de les différencier. Dans notre exemple, nous n’avons que des noeuds avec le label ‘Arret’. 
+Par la suite nous aurons la possibilité de requêter que sur un certain type de noeud.
+ <br /></p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre>CREATE (Arret{name:"Arret 1"})<span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+
+<p><strong>Créer un noeud et récupérer des informations du noeud :</strong></p>
+
+<p>Il est possible de récupérer des informations du noeud qui vient d’être créé, comme son id généré par Neo4j et les éléments du noeud.
+ <br /></p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre>CREATE (n:Arret{name:"Arret 1"}) RETURN ID(n),n.name<span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+
+<p><strong>Ajouter une relation entre deux neuds :</strong></p>
+
+<p>Le principe est simple on <code class="highlighter-rouge">MATCH</code> les 2 noeuds concernés, ici sur leur nom. Ensuite on créé la relation avec en premier le premier noeud, ensuite le nom de la relation entre [] et le second noeud. Ici nous avons une relation directionnel, car nous avons utilisé le symbol <code class="highlighter-rouge">&gt;</code> pour préciser le sens. Ce symbol pourrait être placé de l’autre côté <code class="highlighter-rouge">(noeud1)&lt;-[:Ligne1]-(noeud2)</code> afin d’inverser les sens de la relation. On peut aussi avoir une relation non directionnel, pour cela on n’utilise pas le symbole <code class="highlighter-rouge">&gt;</code>.<br />
+ <br /></p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2</pre></td><td class="code"><pre>MATCH (noeud1:Arret{name:'Arret 1'}), (a2:noeud2{name:'Arret 2'})
+CREATE (noeud1)-[:Ligne1]-&gt;(noeud2)<span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+
+<h3 id="requtes">Requêtes</h3>
+
+<p>Maintenant que vous connaissez un petit peu <a href="http://docs.neo4j.org/refcard/2.0/">Cypher</a>, nous allons faire des requêtes de recherche.</p>
+
+<p><strong>Je souhaite récupérer l’ensemble des noms de mes arrets</strong></p>
+
+<p>On peut voir ici l’intéret du label, si on avait eu des noeuds avec un autre label, il ne serait pas sorti dans le résultat.
+ <br /></p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2</pre></td><td class="code"><pre>MATCH (n:Arret) 
+RETURN n.name<span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+
+<p><strong>Je souhaite récupérer le nom des arrets qui sont sur la ligne 1</strong></p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3</pre></td><td class="code"><pre>MATCH (n:Arret) 
+WHERE (n)-[:Ligne1]-() 
+RETURN n.name<span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+
+<p><strong>Je souhaite récupérer le nom des arrets qui sont sur la ligne 1 et la ligne 2</strong></p>
+
+<p>Bon jusque là rien de bien intéressant. Nous allons maintenant jouer un peu plus avec les relations.
+ <br /></p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4</pre></td><td class="code"><pre>MATCH (n:Arret) 
+WHERE (n)-[:Ligne1]-() 
+    AND (n)-[:Ligne2]-() 
+RETURN n.name<span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+
+<p><strong>Je souhaite récupérer le nom des arrets auxquels je peux accéder depuis l’arret 2</strong></p>
+
+<p>Ici, on peut voir qu’au niveau de la relation nous avons mis <code class="highlighter-rouge">*</code>, cela permet de chercher sur toute la profondeur quelque soit le type de relation. Si on veut limiter à un type de relation, on doit mettre <code class="highlighter-rouge">[r:Ligne1*]</code>.</p>
+
+<p>Pour gérer la profondeur, il faut préciser la profondeur de départ, et celle d’arrivée <code class="highlighter-rouge">[r:Ligne1*0..2]</code>, ici on lui dit de commencer à la profondeur 0 et de s’arréter à la profondeur 2.
+ <br /></p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3</pre></td><td class="code"><pre>START (n:Arret{name:"Arret 2"})
+MATCH (n)-[r*]-(child)
+RETURN DISTINCT child.name<span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+
+<p>__Je souhaite trouver le plus court chemin pour aller à l’arret3 depuis l’arret 4 __</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3</pre></td><td class="code"><pre>START (n:Arret{name:"Arret 2"})
+MATCH (n)-[r*]-(child)
+RETURN DISTINCT child.name<span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+
+<h3 id="suppression">Suppression</h3>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>On peut voir que Neo4j et cypher nous offre beaucoup de possibilité. Même si nous venons de voir que le béaba, on voit bien que ce type de base de données nous offre beaucoup de possibilité ! 
+A vous de trouver l’utilisation que vous pourriez en avoir.</p>
+
+                </div>
+<div class="share">
+L'article vous a plu ? Partagez-le :
+    <ul class="socials">
+        <li>
+            <a target="_blank" title="Twitter" href="https://twitter.com/share?url=http://code-troopers.com/2015/12/29/2014-05-xx-Neo4j.html&text=Découverte de Neo4j&via=codetroopers" 
+                rel="nofollow" 
+                onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=400,width=700');return false;">
+                <i class="fa fa-twitter-square"></i>
+            </a>
+        </li>
+        <li>
+            <a target="_blank" title="Facebook" href="https://www.facebook.com/sharer.php?u=http://code-troopers.com/2015/12/29/2014-05-xx-Neo4j.html&t=Découverte de Neo4j" 
+                class="facebook-button" rel="nofollow" 
+                onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=500,width=700');return false;">
+                <i class="fa fa-facebook-square"></i>
+            </a>
+        </li>
+        <li>
+            <a target="_blank" title="Google +" href="https://plus.google.com/share?url=http://code-troopers.com/2015/12/29/2014-05-xx-Neo4j.html&hl=fr" 
+                class="google-button" rel="nofollow" 
+                onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=650');return false;">
+                <i class="fa fa-google-plus-square"></i>
+            </a>
+        </li>
+        <li>
+            <a target="_blank" title="Linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=http://code-troopers.com/2015/12/29/2014-05-xx-Neo4j.html&title=Découverte de Neo4j" 
+                class="linkedin-button" rel="nofollow" 
+                onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=650');return false;">
+                <i class="fa fa-linkedin-square"></i>
+            </a>
+        </li>
+        <li>
+            <a target="_blank" title="Envoyer par mail" href="mailto:?subject=Découverte de Neo4j&body=http://code-troopers.com/2015/12/29/2014-05-xx-Neo4j.html" rel="nofollow">
+                <i class="fa fa-envelope"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+<div style="clear:both"></div>
+
+
+
+                <div class="back">
+                    <a href="/blog/index.html"><i class="fa fa-arrow-circle-o-up"></i> Retour aux articles</a>
+                    <div class="pull-right paginate">
+                        
+                        <a href="/2015/12/07/StartupWeekend-CotePerdant.html"><i class="fa fa-arrow-circle-o-left"></i> Précédent</a>
+                        
+                        
+                        <a href="/2015/12/29/2014-06-xx-Grunt.html"><i class="fa fa-arrow-circle-o-right"></i> Suivant</a>
+                        
+                    </div>
+                </div>
+                <div id="disqus_thread"></div>
+                <script type="text/javascript">
+                    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+                    var disqus_shortname = 'codetroopers'; // required: replace example with your forum shortname
+		    var disqus_url = window.location.href;
+		    if (window.location.protocol != "http:"){
+			disqus_url = "http:" + window.location.href.substring(window.location.protocol.length);
+		    }
+
+                    /* * * DON'T EDIT BELOW THIS LINE * * */
+                    (function() {
+                        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                    })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+            </div>
+        </article>
+        </div>
+    </section>
+<footer id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6" itemscope itemtype="http://schema.org/Organization">
+                <h3>Contact</h3>
+
+                <p>Vous avez besoin de nous pour un projet, contactez-nous sur les réseaux sociaux, par mail à <a
+                    href="mailto:contact@code-troopers.com"><meta itemprop="email" content="contact@code-troopers.com">contact@code-
+                    troopers.com</a> ou par téléphone au <a href="tel:+33782287216"><span itemprop="telephone">0782 287 216</span></a></p>
+            </div>
+            <div class="col-md-6 simple-social-icons">
+                <h3>Réseaux sociaux</h3>
+                <ul class="socials">
+                    <li><a target="_blank" href="https://twitter.com/codetroopers"><i
+                            class="fa fa-twitter-square"></i></a></li>
+                    <li><a target="_blank"
+                           href="https://www.facebook.com/pages/Code-Troopers/123604307824664"><i
+                            class="fa fa-facebook-square"></i></a></li>
+                    <li><a target="_blank" href="https://plus.google.com/+Code-troopers" rel="publisher"><i
+                            class="fa fa-google-plus-square"></i></a></li>
+                    <li><a target="_blank" href="https://github.com/code-troopers"><i
+                            class="fa fa-github-square"></i></a></li>
+                    <li><a target="_blank" href="/feed.xml"><i
+                            class="fa fa-rss-square"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="footer-under">
+                Made with <i class="fa fa-heart"></i> in Tours -
+                © 2014 - 2015 Code-Troopers - Tous droits réservés
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="/js/scripts-a074f2f8cd-a074f2f8cd.js"></script>
+
+</body>
+</html>
+
+
+
