@@ -15,15 +15,15 @@ var config = require('../config'),
  * Task to build jekyll static site.
  */
 gulp.task('jekyll-build', function (done) {
+	var jekyllArgs = ['build'];
 	if(showDrafts()){
 		console.log("Build jekyll pages with drafts");
-    	return cp.spawn('jekyll', ['build','--drafts'], {stdio: 'inherit'})
-    	.on('close', done);
+		jekyllArgs.push('--drafts');
 	}else{
 		console.log("Build jekyll pages without drafts");
-		return cp.spawn('jekyll', ['build'], {stdio: 'inherit'})
-    	.on('close', done);
 	}
+	return cp.spawn('jekyll', jekyllArgs, {stdio: 'inherit'})
+    	.on('close', done);
 });
 
 gulp.task('jekyll', ['jekyll-build'], function(){
