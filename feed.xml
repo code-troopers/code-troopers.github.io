@@ -17,7 +17,7 @@ Et, encore plus sympa, &lt;a href=&quot;https://plus.google.com/+Bj%C3%B6rnHurli
 
 &lt;p&gt;Voyons ensemble pas à pas comment et quoi configurer afin de livrer ses apk en ligne de commande en utilisant gradle.&lt;/p&gt;
 
-&lt;!-- break --&gt;
+&lt;!--break--&gt;
 
 &lt;h2 id=&quot;prrequis&quot;&gt;Prérequis&lt;/h2&gt;
 
@@ -212,7 +212,7 @@ Pour savoir comment configurer tout cela, je vous invite à consulter la page gi
 
 &lt;div class=&quot;clearfix&quot;&gt;&lt;/div&gt;
 
-&lt;!-- break --&gt;
+&lt;!--break--&gt;
 
 &lt;h2 id=&quot;et-docker-dans-tout-a&quot;&gt;Et Docker dans tout ça&lt;/h2&gt;
 
@@ -727,7 +727,7 @@ Peu importe le langage IntelliJ est vraiment un excellent IDE qui nous permet d�
 dans un environnement suffisamment typé où l’on sait ce qu’on va faire sans se poser trop de questions, 
 ou tout simplement pouvoir bénéficier de l’aide de l’IDE pour savoir de quelles méthodes on dispose.&lt;/p&gt;
 
-&lt;!-- break --&gt;
+&lt;!--break--&gt;
 
 &lt;h2 id=&quot;javascript-dans-intellij&quot;&gt;JavaScript dans IntelliJ&lt;/h2&gt;
 &lt;p&gt;Par défaut, IntelliJ est déjà suffisament malin pour scanner les fichiers du workspace 

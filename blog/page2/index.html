@@ -20,8 +20,8 @@
         
         
         
-        <meta name=description content="Le blog posté le 10/06/2015 par Cedric Améliorer la complétion JavaScript d'IntelliJ IDEA IntelliJ JavaScript tip IntelliJ IDEA Tout le monde sait que nous adorons utiliser IntelliJ IDEA pour développer. Peu importe le langage IntelliJ est vraiment un excellent IDE qui nous permet d’être efficaces quasiment instantanément. Par contre, quand on arrive dans le monde du JavaScript on peut avoir quelques soucis pour être dans un environnement suffisamment typé où l’on sait ce qu’on va faire sans se poser trop de questions, ou tout simplement pouvoir bénéficier de l’aide de l’IDE pour savoir de quelles méthodes on dispose. JavaScript dans IntelliJ Par défaut, IntelliJ est déjà suffisament malin pour scanner les fichiers du workspace et trouver de la complétion en automatique (ainsi que la JSDoc). Cependant, ce mécanisme ne marche pas à tous les coups : vous utilisez des versions sur des CDN vous avez des versions minifiées dans votre workspace vous utilisez des outils qui impliquent certains framework (karma / jasmine / mocha…) Faire comprendre le JavaScript à IntelliJ Pour réussir à obtenir une complétion correcte vous avez plusieurs solutions : pour les CDN, vous pouvez demander à IntelliJ de récupérer la ressource (il ne la mettra pas dans...">
-        <meta property=og:description content="Le blog posté le 10/06/2015 par Cedric Améliorer la complétion JavaScript d'IntelliJ IDEA IntelliJ JavaScript tip IntelliJ IDEA Tout le monde sait que nous adorons utiliser IntelliJ IDEA pour développer. Peu importe le langage IntelliJ est vraiment un excellent IDE qui nous permet d’être efficaces quasiment instantanément. Par contre, quand on arrive dans le monde du JavaScript on peut avoir quelques soucis pour être dans un environnement suffisamment typé où l’on sait ce qu’on va faire sans se poser trop de questions, ou tout simplement pouvoir bénéficier de l’aide de l’IDE pour savoir de quelles méthodes on dispose. JavaScript dans IntelliJ Par défaut, IntelliJ est déjà suffisament malin pour scanner les fichiers du workspace et trouver de la complétion en automatique (ainsi que la JSDoc). Cependant, ce mécanisme ne marche pas à tous les coups : vous utilisez des versions sur des CDN vous avez des versions minifiées dans votre workspace vous utilisez des outils qui impliquent certains framework (karma / jasmine / mocha…) Faire comprendre le JavaScript à IntelliJ Pour réussir à obtenir une complétion correcte vous avez plusieurs solutions : pour les CDN, vous pouvez demander à IntelliJ de récupérer la ressource (il ne la mettra pas dans...">
+        <meta name=description content="Le blog posté le 10/06/2015 par Cedric Améliorer la complétion JavaScript d'IntelliJ IDEA IntelliJ JavaScript tip IntelliJ IDEA Tout le monde sait que nous adorons utiliser IntelliJ IDEA pour développer. Peu importe le langage IntelliJ est vraiment un excellent IDE qui nous permet d’être efficaces quasiment instantanément. Par contre, quand on arrive dans le monde du JavaScript on peut avoir quelques soucis pour être dans un environnement suffisamment typé où l’on sait ce qu’on va faire sans se poser trop de questions, ou tout simplement pouvoir bénéficier de l’aide de l’IDE pour savoir de quelles méthodes on dispose. Lire la suite posté le 06/06/2015 par Benjamin Android Support Design Library Android Librairie Avez-vous déjà essayé de transformer vos applications Android pour les rendre conformes aux guidelines Material, si oui, vous avez dû comme nous, vous retrouver à importer plein de librairies tierces pour implémenter par exemple le FAB button, ou même personnaliser le code pour rendre le NavigationDrawer conforme (comme ce qui a pu être fait sur le squelette d’un précédent article. Et bien tout ceci est fini (enfin en partie), grâce à la nouvelle librairie Android de Google Design Support. Lire la suite posté le 22/05/2015 par Matthieu git...">
+        <meta property=og:description content="Le blog posté le 10/06/2015 par Cedric Améliorer la complétion JavaScript d'IntelliJ IDEA IntelliJ JavaScript tip IntelliJ IDEA Tout le monde sait que nous adorons utiliser IntelliJ IDEA pour développer. Peu importe le langage IntelliJ est vraiment un excellent IDE qui nous permet d’être efficaces quasiment instantanément. Par contre, quand on arrive dans le monde du JavaScript on peut avoir quelques soucis pour être dans un environnement suffisamment typé où l’on sait ce qu’on va faire sans se poser trop de questions, ou tout simplement pouvoir bénéficier de l’aide de l’IDE pour savoir de quelles méthodes on dispose. Lire la suite posté le 06/06/2015 par Benjamin Android Support Design Library Android Librairie Avez-vous déjà essayé de transformer vos applications Android pour les rendre conformes aux guidelines Material, si oui, vous avez dû comme nous, vous retrouver à importer plein de librairies tierces pour implémenter par exemple le FAB button, ou même personnaliser le code pour rendre le NavigationDrawer conforme (comme ce qui a pu être fait sur le squelette d’un précédent article. Et bien tout ceci est fini (enfin en partie), grâce à la nouvelle librairie Android de Google Design Support. Lire la suite posté le 22/05/2015 par Matthieu git...">
         
         <meta name=viewport content="width=device-width">
 
@@ -105,57 +105,6 @@ Peu importe le langage IntelliJ est vraiment un excellent IDE qui nous permet d�
 dans un environnement suffisamment typé où l’on sait ce qu’on va faire sans se poser trop de questions, 
 ou tout simplement pouvoir bénéficier de l’aide de l’IDE pour savoir de quelles méthodes on dispose.</p>
 
-
-
-<h2 id=javascript-dans-intellij>JavaScript dans IntelliJ</h2>
-<p>Par défaut, IntelliJ est déjà suffisament malin pour scanner les fichiers du workspace 
-et trouver de la complétion en automatique (ainsi que la JSDoc).</p>
-
-<p>Cependant, ce mécanisme ne marche pas à tous les coups :</p>
-
-<ul>
-  <li>vous utilisez des versions sur des CDN</li>
-  <li>vous avez des versions minifiées dans votre workspace</li>
-  <li>vous utilisez des outils qui impliquent certains framework (karma / jasmine / mocha…)</li>
-</ul>
-
-<h2 id=faire-comprendre-le-javascript--intellij>Faire comprendre le JavaScript à IntelliJ</h2>
-<p>Pour réussir à obtenir une complétion correcte vous avez plusieurs solutions :</p>
-
-<ul>
-  <li>pour les CDN, vous pouvez demander à IntelliJ de récupérer la ressource (il ne la mettra pas dans votre projet pour autant)</li>
-</ul>
-
-<div style=text-align:center;margin-bottom:50px>
-    <a href=/images/2015-06-JavaScriptIntelliJ/cdndl.png data-lightbox=group-1 title="Le téléchargement des fichiers sur un CDN [alt+entrée]" class=inlineBoxes>
-        <img class=medium src=/images/2015-06-JavaScriptIntelliJ/cdndl.png alt="Le téléchargement des fichiers sur un CDN [alt+entrée]">
-    </a>
-</div>
-
-<ul>
-  <li>pour les versions minifiées, vous pouvez ajouter manuellement les bibliothèques dans la fenêtre de paramètres (Languages &amp; Frameworks &gt; JavaScript &gt; Libraries)</li>
-</ul>
-
-<div style=text-align:center;margin-bottom:50px>
-    <a href=/images/2015-06-JavaScriptIntelliJ/settings.png data-lightbox=group-1 title="La fenêtre des paramètres" class=inlineBoxes>
-        <img class=medium src=/images/2015-06-JavaScriptIntelliJ/settings.png alt="La fenêtre des paramètres">
-    </a>
-</div>
-
-<h2 id=la-mega-astuce>LA mega astuce</h2>
-<p>IntelliJ est capable de comprendre le TypeScript, et des gens ont eu la bonne idée de regrouper des définitions TypeScript pour
-la plupart des librairies les plus utilisées dans un dépôt Github : <a href=http://www.definitelytyped.org>DefinitelyTyped</a>.
-Dans la fenêtre de création de librairie JavaScript, dans la partie qui permet le téléchargement d’une librairie, 
-sélectionnez la source “TypeScript Community Stubs”, vous verrez qu’il y a beaucoup de librairies que vous utilisez au quotidien.</p>
-
-<p>Avec ceci, vous aurez une complétion efficace, avec le typage offert par TypeScript (dans la mesure du possible), 
-ainsi qu’une documentation précise (pour la plupart des librairies).</p>
-
-<div style=text-align:center;margin-bottom:50px>
-    <a href=/images/2015-06-JavaScriptIntelliJ/example.png data-lightbox=group-1 title="Jasmine est bien connu par IntelliJ" class=inlineBoxes>
-        <img class=medium src=/images/2015-06-JavaScriptIntelliJ/example.png alt="Jasmine est bien connu par IntelliJ">
-    </a>
-</div>
 
         </div>
         <div class=fade-content>
@@ -283,59 +232,6 @@ Pour configurer vim, une seule chose à faire : <code>vim ~/.vimrc</code>
 
 <p>Pour ceux qui n’auraient pas vu l’info sur <a href="https://twitter.com/search?q=%23DevoxxFR&amp;src=tyah">Twitter</a> ou ailleurs, pour la première fois nous étions au Palais des Congrès, et ça on peut dire que c’est la classe.</p>
 
-
-
-<p>Mais, dans cet article, je ne vais pas vous faire un résumé des conférences que j’ai vues, d’abord parce que je n’ai pas pris de notes, 
-ensuite parce que beaucoup d’autres le font déjà, par exemple <a href="http://agileek.github.io/">là</a> et <a href="http://javamind-fr.blogspot.fr/">là</a>, et surtout parce que toutes les sessions étaient filmées et 
-seront mises en ligne sur Parleys et accessibles gratuitement (comme les autres années). 
-Je vous conseille par exemple <a href=https://www.parleys.com/tutorial/java-8-streams-collectors-patterns-performances-parallelisation>les streams Java 8 de José Paumard</a> 
-si vous n’êtes toujours pas familiers de la chose.</p>
-
-<p>Ce que je vais vous raconter dans cet article, ce sont les <code>mais</code>, parce que <em>Devoxx c’est bien mais…</em></p>
-
-<p>Car finalement assez peu de personnes en parlent. Et comme en France on aime bien se plaindre (et que je suis un bon français), je veux  bien endosser le rôle du râleur.</p>
-
-<p>Première chose, sûrement la plus flagrante (et déjà discutée) <strong>les paniers repas</strong>. 
-En effet je trouve tout simplement aberrante l’utilisation de ces petites sacoches pour la distribution des repas. 
-Car si elles sont dites réutilisables, 90% d’entre elles ont dû finir à la poubelle. 
-J’ai pu lire qu’elles sont faites en fibres biodégradables, ce qui est bien, mais un produit créé pour finir dans la poubelle 5 min après son utilisation ça reste un gaspillage totalement inutile. 
-D’après ce que j’ai compris d’un rapide échange avec une personne de l’orga, ce n’est pas ce qui avait été prévu/commandé. Dans tous les cas, 
-je ne vois pas comment la société en face peut se dire écolo (ou tenter de le faire croire) en proposant une prestation qui consiste à fournir 3 jours de suite aux mêmes personnes le même mini sac réutilisable. 
-Il ne faut pas lire l’avenir dans les foies de mouton¹ pour se douter qu’au moins deux tiers vont finir à la poubelle.</p>
-
-<div style=text-align:center;margin:50px>
-  <a href=/images/postDevoxx2015/devoxx2015_1.jpg data-lightbox=group-2 title="Les sac pour les sandwichs..." class=inlineBoxes>
-    <img class=medium src=/images/postDevoxx2015/devoxx2015_1.jpg alt="Les sac pour les sandwichs...">
-  </a>
-  <a href=/images/postDevoxx2015/devoxx2015_2.jpg data-lightbox=group-2 title="... qui finissent à la poubelle" class=inlineBoxes>
-    <img class=medium src=/images/postDevoxx2015/devoxx2015_2.jpg alt="... qui finissent à la poubelle">
-  </a>
-</div>
-
-<p>Et en parlant de poubelles, on peut aussi vivement critiquer le Palais des Congrès lui même qui ne propose aucune solution de tri sélectif, tous les déchets finissant au même endroit…
-C’est d’ailleurs bien dommage car plusieurs personnes ont tenté de trier les sacoches des autres déchets en les mettant de côté dans des cartons vides, mais à chaque fois le personnel du Palais des Congrès récupérait tout dans leurs grandes poubelles. Peut-être parce qu’ils facturent une partie de leur prestation au volume de déchets…</p>
-
-<p>Ensuite j’aimerais vous faire part de mon indignation² envers <strong>le comportement des participants</strong> lors des confs, quickies et autres sessions. 
-Je trouve qu’un très grand nombre de personnes a fait preuve d’irrespect, d’incivisme ou tout autre adjectif de ce genre par bien des manières. 
-La principale étant de quitter la salle avant la fin de la présentation elle même, souvent au début des questions, pour se rendre le plus vite possible ailleurs (au buffet ou dans une autre salle je suppose) 
-et je ne parle pas là d’une ou deux personnes lors d’une ou deux sessions, mais d’au moins une quinzaine et à chaque session. Les questions font partie intégrante d’une session et même si le sujet ne nous a finalement pas intéressés, ce n’est pas un gros effort que de rester assis 5 minutes de plus et ainsi permettre aux autres personnes, qui elles étaient intéressées, de pouvoir entendre dans le calme les questions/réponses.</p>
-
-<p>Toujours sur le thème de l’incivilité, je trouve scandaleux la quantité de déchets laissés par terre les deux premiers jours. Sachant qu’il y avait des poubelles quasiment à chaque sortie de salle. Je ne comprends pas ces comportements (les gens font ça aussi chez eux et sur leur lieu de travail ?)</p>
-
-<p>Pour finir j’aimerais aborder un sujet de beaucoup plus subjectif, <strong>le niveau des conférences</strong>. En effet j’ai (avis personnel, donc) 
-eu le sentiment que, par rapport à l’année dernière, le niveau était en deçà. J’en ai déjà pas mal discuté et plusieurs personnes ne sont pas de cet avis. 
-Il est donc assez probable que ce soit dû aux choix que j’ai fait plutôt qu’à l’ensemble des conférences disponibles.</p>
-
-<p>Mais dans ce cas là, ne faudrait-il pas que le niveau estimé de la conf soit annoncé avant, afin de limiter les déceptions et de mieux cibler le public (par exemple avec des labels <em>débutant, medium, avancé</em> sur le programme) ?</p>
-
-<p>Tout cela n’est aucunement une charge contre l’orga qui a, encore une fois, fait un boulot extraordinaire pour réunir <code>2509</code> <em>développeurs (et développeuses) passionné(e)s</em> au Palais des Congrès. 
-Et parce que pouvoir assister à une conf de <a href=https://twitter.com/briangoetz>Brian Goetz</a> (architecte de java), ça n’arrive pas tous les jours, je serai présent l’année prochaine.</p>
-
-<p>PS : Pour voir quelques photos, il y a le site de <a href="http://www.devoxx.fr/2015/04/devoxx-france-2015-en-images/">Devoxx France</a> et aussi ce <a href=https://m.flickr.com/#/photos/123583479@N03/sets/72157651881953421>compte flickr</a>. Sinon, vous avez toujours internet.</p>
-
-<p><small>¹ : Référence au discours de Charles-Alexandre Sabourdin qui a animé les deux keynotes.</small></p>
-
-<p><small>² : oui oui, carrément !</small></p>
 
         </div>
         <div class=fade-content>
