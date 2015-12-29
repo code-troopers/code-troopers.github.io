@@ -6,12 +6,12 @@ RUN apt-get update && \
     apt-get clean
 
 # ADD USER ct
-#RUN export user=ct && mkdir -p /home/ct && \
-    #echo "${user}:x:${UID}:${GID}:${user},,,:/home/${user}:/bin/bash" >> /etc/passwd && \
-    #echo "${user}:x:${UID}:" >> /etc/group && \
-    #echo "${user} ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/${user} && \
-    #chmod 0440 /etc/sudoers.d/${user} && \
-    #chown ${UID}:${GID} -R /home/${user}
+RUN mkdir -p /home/ct && \
+    groupadd -r ct -g 1000 && \
+    useradd -u 1000 -r -g ct -d /home/ct -s /sbin/nologin -c "Docker image user" ct && \
+    echo "ct ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/ct && \
+    chmod 0440 /etc/sudoers.d/ct && \
+    chown -R ct:ct /home/ct
 
 RUN apt-get update && \
     apt-get install -y nodejs-legacy npm && \
@@ -29,6 +29,6 @@ VOLUME /src
 EXPOSE 9002
 
 WORKDIR /src
-#USER ct
+USER ct
 ADD run /run.sh
 CMD ["/run.sh"]
