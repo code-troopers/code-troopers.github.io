@@ -1,94 +1,89 @@
-<!doctype html >
-<html class="no-js" lang="fr" itemscope itemtype="http://schema.org/Organization">
+<!DOCTYPE html>
+<html class=no-js lang=fr itemscope itemtype=http://schema.org/Organization>
     <head>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta charset="utf-8">
+        <meta http-equiv=X-UA-Compatible content="IE=edge">
+        <meta charset=utf-8>
         <title>oh-my-zsh : l'outil indispensable pour avoir un zsh bien configuré.</title>
-        <meta property="fb:app_id" content="432735746865877"/>
-        <meta property="og:url" content="http://code-troopers.com/2014/09/17/ohMyZsh.html"/>
-        <meta property="og:title" content="oh-my-zsh : l'outil indispensable pour avoir un zsh bien configuré."/>
-        <meta property="twitter:card" content="summary"/>
-        <meta property="twitter:site" content="codetroopers"/>
-        <meta property="twitter:image:src" content="http://code-troopers.com/images/banner/ohmyzsh-banner.png"/>
-        <meta property="og:image" content="http://code-troopers.com/images/banner/ohmyzsh-banner.png"/>
-        <meta property="twitter:title" content="oh-my-zsh : l'outil indispensable pour avoir un zsh bien configuré."/>
-        <meta property="twitter:creator" content="@codetroopers"/>
-        <meta property="twitter:domain" content="http://code-troopers.com"/>
+        <meta property=fb:app_id content=432735746865877>
+        <meta property=og:url content=http://code-troopers.com/2014/09/17/ohMyZsh.html>
+        <meta property=og:title content="oh-my-zsh : l'outil indispensable pour avoir un zsh bien configuré.">
+        <meta property=twitter:card content=summary>
+        <meta property=twitter:site content=codetroopers>
+        <meta property=twitter:image:src content=http://code-troopers.com/images/banner/ohmyzsh-banner.png>
+        <meta property=og:image content=http://code-troopers.com/images/banner/ohmyzsh-banner.png>
+        <meta property=twitter:title content="oh-my-zsh : l'outil indispensable pour avoir un zsh bien configuré.">
+        <meta property=twitter:creator content=@codetroopers>
+        <meta property=twitter:domain content=http://code-troopers.com>
         
         
-        <meta property="twitter:description" content="Présentation de oh-my-zsh l&#39;outil qui facilite la configuration du shell zsh">
+        <meta property=twitter:description content="Présentation de oh-my-zsh l'outil qui facilite la configuration du shell zsh">
         
         
         
-        <meta name="description" content="Présentation de oh-my-zsh l&#39;outil qui facilite la configuration du shell zsh" />
-        <meta property="og:description" content="Présentation de oh-my-zsh l&#39;outil qui facilite la configuration du shell zsh">
+        <meta name=description content="Présentation de oh-my-zsh l'outil qui facilite la configuration du shell zsh">
+        <meta property=og:description content="Présentation de oh-my-zsh l'outil qui facilite la configuration du shell zsh">
         
-        <meta name="viewport" content="width=device-width">
+        <meta name=viewport content="width=device-width">
 
-        <link rel="stylesheet" href="/styles/style-320a49db9b.css">
-     
-        <!--[if lt IE 9]>
-                <script src="/js/ie8-0a07727802.js"></script>           
-        <![endif]-->
-        <meta itemprop="name" content="CT-CDGT"/>
-        <meta itemprop="name" content="CT-RMLC"/>
-        <meta itemprop="name" content="CT-BNCS"/>
-        <meta itemprop="name" content="CT-JRPT"/>
-        <meta itemprop="name" content="CT-MTBL"/>
-        <meta itemprop="name" content="CT-FLCH"/>
-        <meta itemprop="name" content="CT-VCMB"/>
+        <link rel=stylesheet href=/styles/2e03639a.main.css>
+
+        <!--[if lt IE 9]><script src="/scripts/19e0b88f.ie8.js"></script><![endif]-->
+        <meta itemprop=name content=CT-CDGT>
+        <meta itemprop=name content=CT-RMLC>
+        <meta itemprop=name content=CT-BNCS>
+        <meta itemprop=name content=CT-JRPT>
+        <meta itemprop=name content=CT-MTBL>
+        <meta itemprop=name content=CT-FLCH>
+        <meta itemprop=name content=CT-VCMB>
     </head>
     <body>
-        <!-- Google Tag Manager -->
-        <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-NWLQD2"
-                height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        
+        <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-NWLQD2" height=0 width=0 style=display:none;visibility:hidden></iframe></noscript>
         <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
             j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
         })(window,document,'script','dataLayer','GTM-NWLQD2');</script>
-        <!-- End Google Tag Manager -->
-        <!--[if lt IE 8]>
-        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a
-                href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
+        
+        <!--[if lt IE 8]><p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a
+                href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p><![endif]-->
 
-<header data-spy="affix" class="affix-top">
-    <div class="container">
-        <div class="navbar-header" itemscope itemtype="http://schema.org/Organization">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+<header data-spy=affix class=affix-top>
+    <div class=container>
+        <div class=navbar-header itemscope itemtype=http://schema.org/Organization>
+            <button type=button class=navbar-toggle data-toggle=collapse data-target=.navbar-collapse>
                 <span><i class="fa fa-bars fa-2x"></i></span>
             </button>
-            <a class="navbar-brand" href="/"><img itemprop="logo" class="logo" alt="Code-Troopers logo" title="Code-Troopers logo" src="/images/logo_noel.png">
-                <span itemprop="name" class="brand">Code-Troopers</span>
+            <a class=navbar-brand href="/"><img itemprop=logo class=logo alt="Code-Troopers logo" title="Code-Troopers logo" src=/images/logo_noel.png>
+                <span itemprop=name class=brand>Code-Troopers</span>
             </a>
         </div>
         <nav class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
-                <li class="active"><a data-scrollToLink="aboutUs">À propos</a></li>
-                <li><a data-scrollToLink="projects">Réalisations</a></li>
-                <li><a data-scrollToLink="skills">Compétences</a></li>
-                <li><a data-scrollToLink="team">L'équipe</a></li>
-                <li><a data-scrollToLink="contact">Contact</a></li>
-                <li><a href="/blog/index.html">Blog</a></li>
+                <li class=active><a data-scrolltolink=aboutUs>À propos</a></li>
+                <li><a data-scrolltolink=projects>Réalisations</a></li>
+                <li><a data-scrolltolink=skills>Compétences</a></li>
+                <li><a data-scrolltolink=team>L'équipe</a></li>
+                <li><a data-scrolltolink=contact>Contact</a></li>
+                <li><a href=/blog/index.html>Blog</a></li>
             </ul>
         </nav>
-        <!--/.nav-collapse -->
+        
     </div>
 </header>
 
-    <section id="post">
-        <div class="header">
-            <div class="container"><a href="/blog/index.html">Le <span>blog</a></span></div>
+    <section id=post>
+        <div class=header>
+            <div class=container><a href=/blog/index.html>Le <span>blog</span></a></div>
         </div>
-        <div class="container">
+        <div class=container>
         <article>
             <div>
-		<div class="cover" style="background-image:url(/images/banner/ohmyzsh-banner-big.png)">
-                    <div class="date">posté le 17/09/2014 par Matthieu</div>
+		<div class=cover style=background-image:url(/images/banner/ohmyzsh-banner-big.png)>
+                    <div class=date>posté le 17/09/2014 par Matthieu</div>
                 </div>
-                <h2><a href="/2014/09/17/ohMyZsh.html">oh-my-zsh : l'outil indispensable pour avoir un zsh bien configuré.</a></h2>
-                <ul class="tags">
+                <h2><a href=/2014/09/17/ohMyZsh.html>oh-my-zsh : l'outil indispensable pour avoir un zsh bien configuré.</a></h2>
+                <ul class=tags>
                     
                     <li>zsh</li>
                     
@@ -97,116 +92,108 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
                     <li>oh-my-zsh</li>
                     
                 </ul>
-                <div class="content">
-                    <h2 id="introduction">Introduction</h2>
+                <div class=content>
+                    <h2 id=introduction>Introduction</h2>
 <p>Que l’on soit dev, ops, sysadmin ou autre pour effectuer nos tâches répétitives et quotidiennes on a généralement deux possibilités : une première communément appelée “clic-clic” qui consiste à utiliser les interfaces graphiques aussi souvent que possible (afin de perdre un maximum de temps) ; et une seconde qualifiée de “barbue” qui elle est orientée ligne de commande, scripting et automatisation.
 Nous les Code-Troopers, on est plutôt technique de barbus ! Et donc peut importe l’OS qu’on utilise on cherche toujours à avoir le meilleur terminal possible.
 Par défaut sous linux ou mac OS on trouvera souvent <em>bash</em>, sous windows ce sera <em>powershell</em> mais il en existe d’autres comme <em>csh</em>, <em>ksh</em> ou dans le cas qui nous intéresse <em>zsh</em>.
 <em>zsh</em> est puissant mais ce n’est pas le sujet du jour de dire pourquoi il serait mieux qu’un autre. En revanche, qui dit puissance dit difficultés de paramétrage ;
 d’ailleurs à la première utilisation lorsque l’on n’a pas de fichier de configuration il commence par dire qu’il peut en créer un pour nous mais qu’il faudra le modifier à la main.
 Ce sera inutile grâce à <em>oh-my-zsh</em>.
-<!--break--></p>
+</p>
 
-<h2 id="installation">Installation</h2>
+<h2 id=installation>Installation</h2>
 <p>C’est très simple, il suffit de cloner le dépôt
-<code class="highlighter-rouge">git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh</code>
+<code>git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh</code>
 Et de mettre le fichier de configuration dans son home
-<code class="highlighter-rouge">cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc</code></p>
+<code>cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc</code></p>
 
-<h2 id="les-thmes">Les thèmes</h2>
+<h2 id=les-thmes>Les thèmes</h2>
 <p>Premièrement, les couleurs. Chacun ses goûts mais comme tout  informaticien fan de  matrix on a tendance à configurer son terminal pour obtenir du vert sur fond noir donc on choisira un thème en conséquence pour avoir des couleurs claires (ce qui est le cas de presque tous les thèmes) Vous pouvez voir un aperçu des thèmes ici : <a href="http://zshthem.es/all/">http://zshthem.es/all/</a></p>
 
-<p>Deuxièmement le prompt. Toujours sur le site <a href="http://zshthem.es">http://zshthem.es</a>, vous pouvez voir qu’en plus des couleurs, chaque thème a un prompt différent. C’est ce qui s’affiche à chaque ligne donc il doit être beau, rapide et fonctionnel.
-J’utilisais <a href="https://github.com/nojhan/liquidprompt">https://github.com/nojhan/liquidprompt</a> pendant un temps, j’ai donc fait un thème qui ressemble pour les fonctionnalités qui me manquaient. Les fonctionnalités que je trouve pratique :</p>
+<p>Deuxièmement le prompt. Toujours sur le site <a href=http://zshthem.es>http://zshthem.es</a>, vous pouvez voir qu’en plus des couleurs, chaque thème a un prompt différent. C’est ce qui s’affiche à chaque ligne donc il doit être beau, rapide et fonctionnel.
+J’utilisais <a href=https://github.com/nojhan/liquidprompt>https://github.com/nojhan/liquidprompt</a> pendant un temps, j’ai donc fait un thème qui ressemble pour les fonctionnalités qui me manquaient. Les fonctionnalités que je trouve pratique :</p>
 
 <ul>
   <li>l’heure à droite : je veux savoir à quelle heure j’ai lancé une commande et à quelle heure elle s’est finie. C’est utile de temps en temps.</li>
   <li>l’utilisateur courant : je veux savoir avec quel utilisateur je suis connecté, simplement parce que je veux que ça crie si je suis en root pour éviter de faire des bêtises</li>
   <li>le hostname : je veux savoir sur quelle machine je suis connecté, de préférence uniquement lorsque je suis en ssh sinon c’est pas utile, toujours dans le but d’éviter les bêtises.</li>
-  <li>un path de taille limitée : pas besoin d’afficher <code class="highlighter-rouge">/home/mattboll/workspace/projetSecret/java/com/codetroopers/projetxx/machin/bean</code> il me suffit de lire <code class="highlighter-rouge">~/.../machin/bean</code> pour savoir où je suis et ça permet de toujours avoir un prompt de taille raisonnable, c’est plus agréable.</li>
+  <li>un path de taille limitée : pas besoin d’afficher <code>/home/mattboll/workspace/projetSecret/java/com/codetroopers/projetxx/machin/bean</code> il me suffit de lire <code>~/.../machin/bean</code> pour savoir où je suis et ça permet de toujours avoir un prompt de taille raisonnable, c’est plus agréable.</li>
   <li>des infos git : sur quelle branche je suis, est-ce que je suis synchro, est-ce que je dois merger, combien j’ai de commits en attente d’être pushé etc.</li>
   <li>le code retour de la commande : parfois des commandes sont en erreur mais on n’a pas de message, donc on ne sait pas si la commande s’est bien exécutée, et en supposant qu’elle soit mal exécutée on ne sait pas quelle était l’erreur (l’équivalent des erreurs 404, 503 etc. des erreurs http)</li>
 </ul>
 
-<p>Pour choisir le thème il faut éditer le fichier <code class="highlighter-rouge">~/.zshrc</code> et modifier la ligne 
-<code class="highlighter-rouge">ZSH_THEME=”nom_du_theme”</code> où nom du thème correspond au nom de fichier que l’on peut trouver dans <code class="highlighter-rouge">~/.oh-my-zsh/themes</code>. Du coup, pour réaliser un thème personnel c’est simple il suffit de créer un fichier qui s’appelle nom.zsh-theme et de le mettre dans le même répertoire que les autres.
-Voici ce que cela donne avec mon thème (adapté du thème sunrise), que vous pouvez trouver  sur <a href="https://raw.githubusercontent.com/mattboll/zshrc/master/mattboll.zsh-theme">GitHub</a> :</p>
+<p>Pour choisir le thème il faut éditer le fichier <code>~/.zshrc</code> et modifier la ligne 
+<code>ZSH_THEME=”nom_du_theme”</code> où nom du thème correspond au nom de fichier que l’on peut trouver dans <code>~/.oh-my-zsh/themes</code>. Du coup, pour réaliser un thème personnel c’est simple il suffit de créer un fichier qui s’appelle nom.zsh-theme et de le mettre dans le même répertoire que les autres.
+Voici ce que cela donne avec mon thème (adapté du thème sunrise), que vous pouvez trouver  sur <a href=https://raw.githubusercontent.com/mattboll/zshrc/master/mattboll.zsh-theme>GitHub</a> :</p>
 
-<div style="text-align:center;margin:50px">
-<a style="display: inline" href="/images/postOhMyZsh/oh-my-zsh-theme.png" data-lightbox="image-0" title="Thème oh-my-zsh">
-        <img class="medium" src="/images/postOhMyZsh/oh-my-zsh-theme.png" alt="Thème oh-my-zsh" />
+<div style=text-align:center;margin:50px>
+<a style="display: inline" href=/images/postOhMyZsh/oh-my-zsh-theme.png data-lightbox=image-0 title="Thème oh-my-zsh">
+        <img class=medium src=/images/postOhMyZsh/oh-my-zsh-theme.png alt="Thème oh-my-zsh">
 </a>
 </div>
 
-<h2 id="les-plugins">Les plugins</h2>
-<p>Les plugins permettent d’incorporer des fonctions spécifiques. Ce sont en général de simples alias mais il arrive aussi de tomber sur des fonctions utiles auxquelles on ne pense pas, par exemple en activant le plugin GitHub, on accède à la commande <code class="highlighter-rouge">empty_gh</code> qui prend en paramètre le nom du dépôt et qui va créer le répertoire, faire un git init, ajouter un readme vide et faire le premier commit.
-Pour ajouter des plugins, il faut évidemment éditer le fichier <code class="highlighter-rouge">~/.zshrc</code> et modifier la ligne <code class="highlighter-rouge">plugins=(liste des plugins)</code>
-Vous trouverez la liste des plugins dans <code class="highlighter-rouge">~/.oh-my-zsh/plugins</code> À l’heure où j’écris il y en a 172, de git à symfony en passant par heroku. Pour savoir à quoi ça correspond, le plus simple est de lire le code source, en général il y a un fichier par plugin et les noms sont assez explicites pour savoir ceux qui nous seront utiles ou pas.</p>
+<h2 id=les-plugins>Les plugins</h2>
+<p>Les plugins permettent d’incorporer des fonctions spécifiques. Ce sont en général de simples alias mais il arrive aussi de tomber sur des fonctions utiles auxquelles on ne pense pas, par exemple en activant le plugin GitHub, on accède à la commande <code>empty_gh</code> qui prend en paramètre le nom du dépôt et qui va créer le répertoire, faire un git init, ajouter un readme vide et faire le premier commit.
+Pour ajouter des plugins, il faut évidemment éditer le fichier <code>~/.zshrc</code> et modifier la ligne <code>plugins=(liste des plugins)</code>
+Vous trouverez la liste des plugins dans <code>~/.oh-my-zsh/plugins</code> À l’heure où j’écris il y en a 172, de git à symfony en passant par heroku. Pour savoir à quoi ça correspond, le plus simple est de lire le code source, en général il y a un fichier par plugin et les noms sont assez explicites pour savoir ceux qui nous seront utiles ou pas.</p>
 
-<h2 id="les-libs">Les libs</h2>
-<p>Si vous voulez créer un plugin ou que vous voulez voir un peu plus les fonctionnalités de oh-my-zsh, vous pouvez parcourir le répertoire lib, ne serait-ce que pour le fichier aliases.zsh qui définit des alias de base, par exemple <code class="highlighter-rouge">“…”=”cd ../..”</code> ou les habituels <code class="highlighter-rouge">la</code>, <code class="highlighter-rouge">ll</code> etc. C’est aussi dans ce répertoire que sont définies des fonctions génériques comme celle qui permet de savoir si le dépôt git est “dirty” et qui est utilisée dans certains prompts.</p>
+<h2 id=les-libs>Les libs</h2>
+<p>Si vous voulez créer un plugin ou que vous voulez voir un peu plus les fonctionnalités de oh-my-zsh, vous pouvez parcourir le répertoire lib, ne serait-ce que pour le fichier aliases.zsh qui définit des alias de base, par exemple <code>“…”=”cd ../..”</code> ou les habituels <code>la</code>, <code>ll</code> etc. C’est aussi dans ce répertoire que sont définies des fonctions génériques comme celle qui permet de savoir si le dépôt git est “dirty” et qui est utilisée dans certains prompts.</p>
 
-<p>Si vous voulez plus d’informations sur zsh je vous invite à commencer par l’article de <a href="http://wiki.gcu.info/doku.php?id=unix:zsh_le_z_shell">gcu-squad</a>. Pour oh-my-zsh vous pouvez allez voir le projet sur <a href="https://github.com/robbyrussell/oh-my-zsh">GitHub</a>. Enfin, si vous avez d’autres questions, n’hésitez pas à poster un commentaire ou à en parler sur twitter <a href="http://twitter.com/codetroopers">@codetroopers</a> ou <a href="http://twitter.com/mattboll">@mattboll</a></p>
+<p>Si vous voulez plus d’informations sur zsh je vous invite à commencer par l’article de <a href="http://wiki.gcu.info/doku.php?id=unix:zsh_le_z_shell">gcu-squad</a>. Pour oh-my-zsh vous pouvez allez voir le projet sur <a href=https://github.com/robbyrussell/oh-my-zsh>GitHub</a>. Enfin, si vous avez d’autres questions, n’hésitez pas à poster un commentaire ou à en parler sur twitter <a href=http://twitter.com/codetroopers>@codetroopers</a> ou <a href=http://twitter.com/mattboll>@mattboll</a></p>
 
-<hr />
+<hr>
 
 
                 </div>
-<div class="share">
+<div class=share>
 L'article vous a plu ? Partagez-le :
-    <ul class="socials">
+    <ul class=socials>
         <li>
-            <a target="_blank" title="Twitter" href="https://twitter.com/share?url=http://code-troopers.com/2014/09/17/ohMyZsh.html&text=oh-my-zsh : l'outil indispensable pour avoir un zsh bien configuré.&via=codetroopers" 
-                rel="nofollow" 
-                onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=400,width=700');return false;">
+            <a target=_blank title=Twitter href="https://twitter.com/share?url=http://code-troopers.com/2014/09/17/ohMyZsh.html&text=oh-my-zsh : l'outil indispensable pour avoir un zsh bien configuré.&via=codetroopers" rel=nofollow onclick="window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=400,width=700');return false">
                 <i class="fa fa-twitter-square"></i>
             </a>
         </li>
         <li>
-            <a target="_blank" title="Facebook" href="https://www.facebook.com/sharer.php?u=http://code-troopers.com/2014/09/17/ohMyZsh.html&t=oh-my-zsh : l'outil indispensable pour avoir un zsh bien configuré." 
-                class="facebook-button" rel="nofollow" 
-                onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=500,width=700');return false;">
+            <a target=_blank title=Facebook href="https://www.facebook.com/sharer.php?u=http://code-troopers.com/2014/09/17/ohMyZsh.html&t=oh-my-zsh : l'outil indispensable pour avoir un zsh bien configuré." class=facebook-button rel=nofollow onclick="window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=500,width=700');return false">
                 <i class="fa fa-facebook-square"></i>
             </a>
         </li>
         <li>
-            <a target="_blank" title="Google +" href="https://plus.google.com/share?url=http://code-troopers.com/2014/09/17/ohMyZsh.html&hl=fr" 
-                class="google-button" rel="nofollow" 
-                onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=650');return false;">
+            <a target=_blank title="Google +" href="https://plus.google.com/share?url=http://code-troopers.com/2014/09/17/ohMyZsh.html&hl=fr" class=google-button rel=nofollow onclick="window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=650');return false">
                 <i class="fa fa-google-plus-square"></i>
             </a>
         </li>
         <li>
-            <a target="_blank" title="Linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=http://code-troopers.com/2014/09/17/ohMyZsh.html&title=oh-my-zsh : l'outil indispensable pour avoir un zsh bien configuré." 
-                class="linkedin-button" rel="nofollow" 
-                onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=650');return false;">
+            <a target=_blank title=Linkedin href="https://www.linkedin.com/shareArticle?mini=true&url=http://code-troopers.com/2014/09/17/ohMyZsh.html&title=oh-my-zsh : l'outil indispensable pour avoir un zsh bien configuré." class=linkedin-button rel=nofollow onclick="window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=650');return false">
                 <i class="fa fa-linkedin-square"></i>
             </a>
         </li>
         <li>
-            <a target="_blank" title="Envoyer par mail" href="mailto:?subject=oh-my-zsh : l'outil indispensable pour avoir un zsh bien configuré.&body=http://code-troopers.com/2014/09/17/ohMyZsh.html" rel="nofollow">
+            <a target=_blank title="Envoyer par mail" href="mailto:?subject=oh-my-zsh : l'outil indispensable pour avoir un zsh bien configuré.&body=http://code-troopers.com/2014/09/17/ohMyZsh.html" rel=nofollow>
                 <i class="fa fa-envelope"></i>
             </a>
         </li>
     </ul>
 </div>
-<div style="clear:both"></div>
+<div style=clear:both></div>
 
 
 
-                <div class="back">
-                    <a href="/blog/index.html"><i class="fa fa-arrow-circle-o-up"></i> Retour aux articles</a>
+                <div class=back>
+                    <a href=/blog/index.html><i class="fa fa-arrow-circle-o-up"></i> Retour aux articles</a>
                     <div class="pull-right paginate">
                         
-                        <a href="/2014/09/04/AddonsHeroku.html"><i class="fa fa-arrow-circle-o-left"></i> Précédent</a>
+                        <a href=/2014/09/04/AddonsHeroku.html><i class="fa fa-arrow-circle-o-left"></i> Précédent</a>
                         
                         
-                        <a href="/2014/09/23/agile_paloaltech_tours.html"><i class="fa fa-arrow-circle-o-right"></i> Suivant</a>
+                        <a href=/2014/09/23/agile_paloaltech_tours.html><i class="fa fa-arrow-circle-o-right"></i> Suivant</a>
                         
                     </div>
                 </div>
-                <div id="disqus_thread"></div>
-                <script type="text/javascript">
+                <div id=disqus_thread></div>
+                <script type=text/javascript>
                     /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
                     var disqus_shortname = 'codetroopers'; // required: replace example with your forum shortname
 		    var disqus_url = window.location.href;
@@ -221,42 +208,35 @@ L'article vous a plu ? Partagez-le :
                         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
                     })();
                 </script>
-                <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-                <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+                <noscript>Please enable JavaScript to view the <a href=http://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript>
+                <a href=http://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a>
 
             </div>
         </article>
         </div>
     </section>
-<footer id="contact">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6" itemscope itemtype="http://schema.org/Organization">
+<footer id=contact>
+    <div class=container>
+        <div class=row>
+            <div class=col-md-6 itemscope itemtype=http://schema.org/Organization>
                 <h3>Contact</h3>
 
-                <p>Vous avez besoin de nous pour un projet, contactez-nous sur les réseaux sociaux, par mail à <a
-                    href="mailto:contact@code-troopers.com"><meta itemprop="email" content="contact@code-troopers.com">contact@code-
-                    troopers.com</a> ou par téléphone au <a href="tel:+33782287216"><span itemprop="telephone">0782 287 216</span></a></p>
+                <p>Vous avez besoin de nous pour un projet, contactez-nous sur les réseaux sociaux, par mail à <a href=mailto:contact@code-troopers.com><meta itemprop=email content=contact@code-troopers.com>contact@code-
+                    troopers.com</a> ou par téléphone au <a href=tel:+33782287216><span itemprop=telephone>0782 287 216</span></a></p>
             </div>
             <div class="col-md-6 simple-social-icons">
                 <h3>Réseaux sociaux</h3>
-                <ul class="socials">
-                    <li><a target="_blank" href="https://twitter.com/codetroopers"><i
-                            class="fa fa-twitter-square"></i></a></li>
-                    <li><a target="_blank"
-                           href="https://www.facebook.com/pages/Code-Troopers/123604307824664"><i
-                            class="fa fa-facebook-square"></i></a></li>
-                    <li><a target="_blank" href="https://plus.google.com/+Code-troopers" rel="publisher"><i
-                            class="fa fa-google-plus-square"></i></a></li>
-                    <li><a target="_blank" href="https://github.com/code-troopers"><i
-                            class="fa fa-github-square"></i></a></li>
-                    <li><a target="_blank" href="/feed.xml"><i
-                            class="fa fa-rss-square"></i></a></li>
+                <ul class=socials>
+                    <li><a target=_blank href=https://twitter.com/codetroopers><i class="fa fa-twitter-square"></i></a></li>
+                    <li><a target=_blank href=https://www.facebook.com/pages/Code-Troopers/123604307824664><i class="fa fa-facebook-square"></i></a></li>
+                    <li><a target=_blank href=https://plus.google.com/+Code-troopers rel=publisher><i class="fa fa-google-plus-square"></i></a></li>
+                    <li><a target=_blank href=https://github.com/code-troopers><i class="fa fa-github-square"></i></a></li>
+                    <li><a target=_blank href=/feed.xml><i class="fa fa-rss-square"></i></a></li>
                 </ul>
             </div>
         </div>
-        <div class="row">
-            <div class="footer-under">
+        <div class=row>
+            <div class=footer-under>
                 Made with <i class="fa fa-heart"></i> in Tours -
                 © 2014 - 2015 Code-Troopers - Tous droits réservés
             </div>
@@ -264,10 +244,11 @@ L'article vous a plu ? Partagez-le :
     </div>
 </footer>
 
-<script src="/js/scripts-a074f2f8cd.js"></script>
+<script src=//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js></script>
+
+<script src=/scripts/894288da.plugins.js></script>
+
+<script src=/scripts/32bd55f7.scripts.js></script>
 
 </body>
 </html>
-
-
-

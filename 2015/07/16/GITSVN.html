@@ -1,94 +1,89 @@
-<!doctype html >
-<html class="no-js" lang="fr" itemscope itemtype="http://schema.org/Organization">
+<!DOCTYPE html>
+<html class=no-js lang=fr itemscope itemtype=http://schema.org/Organization>
     <head>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta charset="utf-8">
+        <meta http-equiv=X-UA-Compatible content="IE=edge">
+        <meta charset=utf-8>
         <title>GIT-SVN comment survivre dans un environnement hostile</title>
-        <meta property="fb:app_id" content="432735746865877"/>
-        <meta property="og:url" content="http://code-troopers.com/2015/07/16/GITSVN.html"/>
-        <meta property="og:title" content="GIT-SVN comment survivre dans un environnement hostile"/>
-        <meta property="twitter:card" content="summary"/>
-        <meta property="twitter:site" content="codetroopers"/>
-        <meta property="twitter:image:src" content="http://code-troopers.com/images/banner/git-banner.png"/>
-        <meta property="og:image" content="http://code-troopers.com/images/banner/git-banner.png"/>
-        <meta property="twitter:title" content="GIT-SVN comment survivre dans un environnement hostile"/>
-        <meta property="twitter:creator" content="@codetroopers"/>
-        <meta property="twitter:domain" content="http://code-troopers.com"/>
+        <meta property=fb:app_id content=432735746865877>
+        <meta property=og:url content=http://code-troopers.com/2015/07/16/GITSVN.html>
+        <meta property=og:title content="GIT-SVN comment survivre dans un environnement hostile">
+        <meta property=twitter:card content=summary>
+        <meta property=twitter:site content=codetroopers>
+        <meta property=twitter:image:src content=http://code-troopers.com/images/banner/git-banner.png>
+        <meta property=og:image content=http://code-troopers.com/images/banner/git-banner.png>
+        <meta property=twitter:title content="GIT-SVN comment survivre dans un environnement hostile">
+        <meta property=twitter:creator content=@codetroopers>
+        <meta property=twitter:domain content=http://code-troopers.com>
         
         
-        <meta property="twitter:description" content="Git c’est cool, Git c’est Hype, Git c’est tout récent (enfin presque) et c’est pour ça qu’on aime bien. Mais...">
+        <meta property=twitter:description content="Git c’est cool, Git c’est Hype, Git c’est tout récent (enfin presque) et c’est pour ça qu’on aime bien. Mais...">
         
         
         
-        <meta name="description" content="Git c’est cool, Git c’est Hype, Git c’est tout récent (enfin presque) et c’est pour ça qu’on aime bien. Mais pour beaucoup Git c’est nouveau, donc c’est le changement, donc c’est compliqué, et c’est pour ça que plein de boîtes préfèrent garder leur serveur svn. Je vais tenter ici, de vous donner les principales commandes de Git-SVN. Ainsi si vous vous trouvez dans une boîte qui ne veut pas changer son scm mais que vous, vous avez envie de changement, vous pourrez donc utiliser la puissance de Git. Et ce sans aucun impact sur le gestionnaire de sources de la société dans laquelle vous êtes. C’est génial non ? Prérequis Avoir Git-SVN d’installé ! Et ce qui est bien fait, c’est que Git-SVN fait partie intégrante de Git. C’est donc Git que vous allez installer : www.git-scm.com Un accès au svn (l’url du projet qui vous intéresse fera largement l’affaire) Un terminal Un tout petit peu de courage Init du Projet Le cas le plus courant est celui où tout le monde travaille sur le trunk du projet, et je vais partir de ce cas pour ce guide. Si ce n’est pas le cas, il n’y a pas de gros..." />
-        <meta property="og:description" content="Git c’est cool, Git c’est Hype, Git c’est tout récent (enfin presque) et c’est pour ça qu’on aime bien. Mais pour beaucoup Git c’est nouveau, donc c’est le changement, donc c’est compliqué, et c’est pour ça que plein de boîtes préfèrent garder leur serveur svn. Je vais tenter ici, de vous donner les principales commandes de Git-SVN. Ainsi si vous vous trouvez dans une boîte qui ne veut pas changer son scm mais que vous, vous avez envie de changement, vous pourrez donc utiliser la puissance de Git. Et ce sans aucun impact sur le gestionnaire de sources de la société dans laquelle vous êtes. C’est génial non ? Prérequis Avoir Git-SVN d’installé ! Et ce qui est bien fait, c’est que Git-SVN fait partie intégrante de Git. C’est donc Git que vous allez installer : www.git-scm.com Un accès au svn (l’url du projet qui vous intéresse fera largement l’affaire) Un terminal Un tout petit peu de courage Init du Projet Le cas le plus courant est celui où tout le monde travaille sur le trunk du projet, et je vais partir de ce cas pour ce guide. Si ce n’est pas le cas, il n’y a pas de gros...">
+        <meta name=description content="Git c’est cool, Git c’est Hype, Git c’est tout récent (enfin presque) et c’est pour ça qu’on aime bien. Mais pour beaucoup Git c’est nouveau, donc c’est le changement, donc c’est compliqué, et c’est pour ça que plein de boîtes préfèrent garder leur serveur svn. Je vais tenter ici, de vous donner les principales commandes de Git-SVN. Ainsi si vous vous trouvez dans une boîte qui ne veut pas changer son scm mais que vous, vous avez envie de changement, vous pourrez donc utiliser la puissance de Git. Et ce sans aucun impact sur le gestionnaire de sources de la société dans laquelle vous êtes. C’est génial non ? Prérequis Avoir Git-SVN d’installé ! Et ce qui est bien fait, c’est que Git-SVN fait partie intégrante de Git. C’est donc Git que vous allez installer : www.git-scm.com Un accès au svn (l’url du projet qui vous intéresse fera largement l’affaire) Un terminal Un tout petit peu de courage Init du Projet Le cas le plus courant est celui où tout le monde travaille sur le trunk du projet, et je vais partir de ce cas pour ce guide. Si ce n’est pas le cas, il n’y a pas de gros...">
+        <meta property=og:description content="Git c’est cool, Git c’est Hype, Git c’est tout récent (enfin presque) et c’est pour ça qu’on aime bien. Mais pour beaucoup Git c’est nouveau, donc c’est le changement, donc c’est compliqué, et c’est pour ça que plein de boîtes préfèrent garder leur serveur svn. Je vais tenter ici, de vous donner les principales commandes de Git-SVN. Ainsi si vous vous trouvez dans une boîte qui ne veut pas changer son scm mais que vous, vous avez envie de changement, vous pourrez donc utiliser la puissance de Git. Et ce sans aucun impact sur le gestionnaire de sources de la société dans laquelle vous êtes. C’est génial non ? Prérequis Avoir Git-SVN d’installé ! Et ce qui est bien fait, c’est que Git-SVN fait partie intégrante de Git. C’est donc Git que vous allez installer : www.git-scm.com Un accès au svn (l’url du projet qui vous intéresse fera largement l’affaire) Un terminal Un tout petit peu de courage Init du Projet Le cas le plus courant est celui où tout le monde travaille sur le trunk du projet, et je vais partir de ce cas pour ce guide. Si ce n’est pas le cas, il n’y a pas de gros...">
         
-        <meta name="viewport" content="width=device-width">
+        <meta name=viewport content="width=device-width">
 
-        <link rel="stylesheet" href="/styles/style-320a49db9b.css">
-     
-        <!--[if lt IE 9]>
-                <script src="/js/ie8-0a07727802.js"></script>           
-        <![endif]-->
-        <meta itemprop="name" content="CT-CDGT"/>
-        <meta itemprop="name" content="CT-RMLC"/>
-        <meta itemprop="name" content="CT-BNCS"/>
-        <meta itemprop="name" content="CT-JRPT"/>
-        <meta itemprop="name" content="CT-MTBL"/>
-        <meta itemprop="name" content="CT-FLCH"/>
-        <meta itemprop="name" content="CT-VCMB"/>
+        <link rel=stylesheet href=/styles/2e03639a.main.css>
+
+        <!--[if lt IE 9]><script src="/scripts/19e0b88f.ie8.js"></script><![endif]-->
+        <meta itemprop=name content=CT-CDGT>
+        <meta itemprop=name content=CT-RMLC>
+        <meta itemprop=name content=CT-BNCS>
+        <meta itemprop=name content=CT-JRPT>
+        <meta itemprop=name content=CT-MTBL>
+        <meta itemprop=name content=CT-FLCH>
+        <meta itemprop=name content=CT-VCMB>
     </head>
     <body>
-        <!-- Google Tag Manager -->
-        <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-NWLQD2"
-                height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        
+        <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-NWLQD2" height=0 width=0 style=display:none;visibility:hidden></iframe></noscript>
         <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
             j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
         })(window,document,'script','dataLayer','GTM-NWLQD2');</script>
-        <!-- End Google Tag Manager -->
-        <!--[if lt IE 8]>
-        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a
-                href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
+        
+        <!--[if lt IE 8]><p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a
+                href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p><![endif]-->
 
-<header data-spy="affix" class="affix-top">
-    <div class="container">
-        <div class="navbar-header" itemscope itemtype="http://schema.org/Organization">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+<header data-spy=affix class=affix-top>
+    <div class=container>
+        <div class=navbar-header itemscope itemtype=http://schema.org/Organization>
+            <button type=button class=navbar-toggle data-toggle=collapse data-target=.navbar-collapse>
                 <span><i class="fa fa-bars fa-2x"></i></span>
             </button>
-            <a class="navbar-brand" href="/"><img itemprop="logo" class="logo" alt="Code-Troopers logo" title="Code-Troopers logo" src="/images/logo_noel.png">
-                <span itemprop="name" class="brand">Code-Troopers</span>
+            <a class=navbar-brand href="/"><img itemprop=logo class=logo alt="Code-Troopers logo" title="Code-Troopers logo" src=/images/logo_noel.png>
+                <span itemprop=name class=brand>Code-Troopers</span>
             </a>
         </div>
         <nav class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
-                <li class="active"><a data-scrollToLink="aboutUs">À propos</a></li>
-                <li><a data-scrollToLink="projects">Réalisations</a></li>
-                <li><a data-scrollToLink="skills">Compétences</a></li>
-                <li><a data-scrollToLink="team">L'équipe</a></li>
-                <li><a data-scrollToLink="contact">Contact</a></li>
-                <li><a href="/blog/index.html">Blog</a></li>
+                <li class=active><a data-scrolltolink=aboutUs>À propos</a></li>
+                <li><a data-scrolltolink=projects>Réalisations</a></li>
+                <li><a data-scrolltolink=skills>Compétences</a></li>
+                <li><a data-scrolltolink=team>L'équipe</a></li>
+                <li><a data-scrolltolink=contact>Contact</a></li>
+                <li><a href=/blog/index.html>Blog</a></li>
             </ul>
         </nav>
-        <!--/.nav-collapse -->
+        
     </div>
 </header>
 
-    <section id="post">
-        <div class="header">
-            <div class="container"><a href="/blog/index.html">Le <span>blog</a></span></div>
+    <section id=post>
+        <div class=header>
+            <div class=container><a href=/blog/index.html>Le <span>blog</span></a></div>
         </div>
-        <div class="container">
+        <div class=container>
         <article>
             <div>
-		<div class="cover" style="background-image:url(/images/banner/git-banner-big.png)">
-                    <div class="date">posté le 16/07/2015 par Florian</div>
+		<div class=cover style=background-image:url(/images/banner/git-banner-big.png)>
+                    <div class=date>posté le 16/07/2015 par Florian</div>
                 </div>
-                <h2><a href="/2015/07/16/GITSVN.html">GIT-SVN comment survivre dans un environnement hostile</a></h2>
-                <ul class="tags">
+                <h2><a href=/2015/07/16/GITSVN.html>GIT-SVN comment survivre dans un environnement hostile</a></h2>
+                <ul class=tags>
                     
                     <li>GIT</li>
                     
@@ -99,173 +94,155 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
                     <li>Productivité</li>
                     
                 </ul>
-                <div class="content">
-                    <p>Git c’est cool, Git c’est Hype, Git c’est tout récent (<a href="http://git-scm.com/book/fr/v1/D%C3%A9marrage-rapide-Une-rapide-histoire-de-Git">enfin presque</a>) et c’est pour ça qu’on aime bien.
+                <div class=content>
+                    <p>Git c’est cool, Git c’est Hype, Git c’est tout récent (<a href=http://git-scm.com/book/fr/v1/D%C3%A9marrage-rapide-Une-rapide-histoire-de-Git>enfin presque</a>) et c’est pour ça qu’on aime bien.
 Mais pour beaucoup Git c’est nouveau, donc c’est le changement, donc c’est compliqué, et c’est pour ça que plein de boîtes préfèrent garder leur serveur svn.</p>
 
-<p>Je vais tenter ici, de vous donner les principales commandes de <code class="highlighter-rouge">Git-SVN</code>. Ainsi si vous vous trouvez dans une boîte qui ne veut pas changer son scm mais que vous, vous avez envie de changement,
+<p>Je vais tenter ici, de vous donner les principales commandes de <code>Git-SVN</code>. Ainsi si vous vous trouvez dans une boîte qui ne veut pas changer son scm mais que vous, vous avez envie de changement,
 vous pourrez donc utiliser la puissance de Git. 
 Et ce sans aucun impact sur le gestionnaire de sources de la société dans laquelle vous êtes. C’est génial non ?</p>
 
-<!--break-->
 
-<h2 id="prrequis">Prérequis</h2>
+
+<h2 id=prrequis>Prérequis</h2>
 
 <ul>
-  <li>Avoir Git-SVN d’installé ! Et ce qui est bien fait, c’est que Git-SVN fait partie intégrante de Git. C’est donc Git que vous allez installer : <a href="http://www.git-scm.com">www.git-scm.com</a></li>
+  <li>Avoir Git-SVN d’installé ! Et ce qui est bien fait, c’est que Git-SVN fait partie intégrante de Git. C’est donc Git que vous allez installer : <a href=http://www.git-scm.com>www.git-scm.com</a></li>
   <li>Un accès au svn (l’url du projet qui vous intéresse fera largement l’affaire)</li>
   <li>Un terminal</li>
   <li>Un tout petit peu de courage</li>
 </ul>
 
-<h2 id="init-du-projet">Init du Projet</h2>
+<h2 id=init-du-projet>Init du Projet</h2>
 <p>Le cas le plus courant est celui où tout le monde travaille sur le trunk du projet, et je vais partir de ce cas pour ce guide. 
-Si ce n’est pas le cas, il n’y a pas de gros changement, mais je vous invite à consulter plus en détail <a href="https://git-scm.com/docs/git-svn">la doc</a></p>
+Si ce n’est pas le cas, il n’y a pas de gros changement, mais je vous invite à consulter plus en détail <a href=https://git-scm.com/docs/git-svn>la doc</a></p>
 
 <p>Donc si on se met dans la situation où tout le monde travaille sur le trunk, pour récupérer les sources du projet dans un nouveau répertoire vous devrez faire un :</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>git svn clone http://maboite/svn/monBeauProjet/ -s
+<pre><code>git svn clone http://maboite/svn/monBeauProjet/ -s
 </code></pre>
-</div>
 
 <p>Par contre dès que le repo svn et un peu vieux (i.e. avec plein de commits) ça va mettre 3h ! En effet, Git va prendre les révisions une par une afin de créer son historique local.
 Si vous n’avez pas besoin de tout l’historique des révisions ce que vous pouvez faire c’est :</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>git svn clone http://maboite/svn/monBeauProjet/ -s -r4000:HEAD
+<pre><code>git svn clone http://maboite/svn/monBeauProjet/ -s -r4000:HEAD
 </code></pre>
-</div>
 
 <p>ainsi il ne crééra l’histo qu’à partir de la révision 4000 du svn. Je vous conseille donc de prendre le 4000 le plus proche de la dernière révision.</p>
 
 <p>À partir de là c’est bon, vous avez votre projet qui est géré par Git. La preuve vous pouvez tester via ces différentes commandes</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>git status
+<pre><code>git status
 git branch -a
 git log -n5
 </code></pre>
-</div>
 
-<h2 id="travailler-sur-le-projet-en-local">Travailler sur le projet (en local)</h2>
+<h2 id=travailler-sur-le-projet-en-local>Travailler sur le projet (en local)</h2>
 <p>Vous pouvez donc dès à présent commencer à travailler offline ou bien sans vous soucier des commits de vos collègues.
 Et cela avec tous les avantages que Git apporte.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>git commit -m"Ajout de la modification du mot de passe par l'admin"
+<pre><code>git commit -m"Ajout de la modification du mot de passe par l'admin"
 git stash save “Début de ma tâche prioritaire”
 ... // un peu de travail urgent
 git stash pop
 </code></pre>
-</div>
 
 <p>On peut même faire des branches Git (en local) sans que cela n’impacte le serveur.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>git checkout -b myLocalBranch
+<pre><code>git checkout -b myLocalBranch
 ... // du travail avec plein de petits commits
 git checkout master
 git merge myLocalBranch
 </code></pre>
-</div>
 
-<h2 id="commiter-sur-le-svn">Commiter sur le svn</h2>
+<h2 id=commiter-sur-le-svn>Commiter sur le svn</h2>
 <p>Ensuite pour se synchroniser avec vos collègues (c’est mieux) les deux commandes indispensables sont</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>git svn rebase
+<pre><code>git svn rebase
 git svn dcommit
 </code></pre>
-</div>
 
-<p>Le <code class="highlighter-rouge">git svn rebase</code> va faire l’équivalent d’un svn update quant au <code class="highlighter-rouge">git svn dcommit</code> ça sera un svn commit.</p>
+<p>Le <code>git svn rebase</code> va faire l’équivalent d’un svn update quant au <code>git svn dcommit</code> ça sera un svn commit.</p>
 
-<h2 id="bonus--utiliser-des-branches">Bonus : Utiliser des branches</h2>
+<h2 id=bonus--utiliser-des-branches>Bonus : Utiliser des branches</h2>
 <p>Bon soyons honnêtes si vous utilisez un svn il y a quand même peu de chances que les branches soient vraiment utilisées (ou alors peut-être que vous aimez la douleur). Mais si ça arrive, voilà comment les utiliser.</p>
 
 <p>Mettre à jour toutes les branches du svn :</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>git svn fetch
+<pre><code>git svn fetch
 </code></pre>
-</div>
 
 <p>Changer de branche :</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>git checkout -b &lt;brancheDistante&gt; &lt;nomDeBrancheLocale&gt;
+<pre><code>git checkout -b &lt;brancheDistante&gt; &lt;nomDeBrancheLocale&gt;
 </code></pre>
-</div>
 
 <p>Et maintenant vous pouvez naviguer entre vos branches normalement via Git  :</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>git checkout master
+<pre><code>git checkout master
 git checkout nomDeBrancheLocale
 git checkout -
 </code></pre>
-</div>
 
 <p>et par exemple pour recopier un commit d’une branche à une autre sans copier manuellement le fichier.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>git cherry-pick
+<pre><code>git cherry-pick
 </code></pre>
-</div>
 
 <p>Voilà vous avez maintenant les bases pour utiliser Git alors que de premier abord cela ne semblait pas possible.
 Il ne vous reste plus qu’à forcer un peu plus pour remplacer l’ancien serveur svn par un nouveau sous Git et comme ça toute votre boîte pourra en profiter.
-<br />
-<br />
-Pour connaître les principales commandes Git, je vous invite à consulter <a href="http://git-scm.com/docs/gittutorial">la page tutoriel de Git</a> ou alors de chercher sur <a href="http://lmgtfy.com/?q=git+commands">internet</a>.</p>
+<br>
+<br>
+Pour connaître les principales commandes Git, je vous invite à consulter <a href=http://git-scm.com/docs/gittutorial>la page tutoriel de Git</a> ou alors de chercher sur <a href="http://lmgtfy.com/?q=git+commands">internet</a>.</p>
 
                 </div>
-<div class="share">
+<div class=share>
 L'article vous a plu ? Partagez-le :
-    <ul class="socials">
+    <ul class=socials>
         <li>
-            <a target="_blank" title="Twitter" href="https://twitter.com/share?url=http://code-troopers.com/2015/07/16/GITSVN.html&text=GIT-SVN comment survivre dans un environnement hostile&via=codetroopers" 
-                rel="nofollow" 
-                onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=400,width=700');return false;">
+            <a target=_blank title=Twitter href="https://twitter.com/share?url=http://code-troopers.com/2015/07/16/GITSVN.html&text=GIT-SVN comment survivre dans un environnement hostile&via=codetroopers" rel=nofollow onclick="window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=400,width=700');return false">
                 <i class="fa fa-twitter-square"></i>
             </a>
         </li>
         <li>
-            <a target="_blank" title="Facebook" href="https://www.facebook.com/sharer.php?u=http://code-troopers.com/2015/07/16/GITSVN.html&t=GIT-SVN comment survivre dans un environnement hostile" 
-                class="facebook-button" rel="nofollow" 
-                onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=500,width=700');return false;">
+            <a target=_blank title=Facebook href="https://www.facebook.com/sharer.php?u=http://code-troopers.com/2015/07/16/GITSVN.html&t=GIT-SVN comment survivre dans un environnement hostile" class=facebook-button rel=nofollow onclick="window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=500,width=700');return false">
                 <i class="fa fa-facebook-square"></i>
             </a>
         </li>
         <li>
-            <a target="_blank" title="Google +" href="https://plus.google.com/share?url=http://code-troopers.com/2015/07/16/GITSVN.html&hl=fr" 
-                class="google-button" rel="nofollow" 
-                onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=650');return false;">
+            <a target=_blank title="Google +" href="https://plus.google.com/share?url=http://code-troopers.com/2015/07/16/GITSVN.html&hl=fr" class=google-button rel=nofollow onclick="window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=650');return false">
                 <i class="fa fa-google-plus-square"></i>
             </a>
         </li>
         <li>
-            <a target="_blank" title="Linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=http://code-troopers.com/2015/07/16/GITSVN.html&title=GIT-SVN comment survivre dans un environnement hostile" 
-                class="linkedin-button" rel="nofollow" 
-                onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=650');return false;">
+            <a target=_blank title=Linkedin href="https://www.linkedin.com/shareArticle?mini=true&url=http://code-troopers.com/2015/07/16/GITSVN.html&title=GIT-SVN comment survivre dans un environnement hostile" class=linkedin-button rel=nofollow onclick="window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=650');return false">
                 <i class="fa fa-linkedin-square"></i>
             </a>
         </li>
         <li>
-            <a target="_blank" title="Envoyer par mail" href="mailto:?subject=GIT-SVN comment survivre dans un environnement hostile&body=http://code-troopers.com/2015/07/16/GITSVN.html" rel="nofollow">
+            <a target=_blank title="Envoyer par mail" href="mailto:?subject=GIT-SVN comment survivre dans un environnement hostile&body=http://code-troopers.com/2015/07/16/GITSVN.html" rel=nofollow>
                 <i class="fa fa-envelope"></i>
             </a>
         </li>
     </ul>
 </div>
-<div style="clear:both"></div>
+<div style=clear:both></div>
 
 
 
-                <div class="back">
-                    <a href="/blog/index.html"><i class="fa fa-arrow-circle-o-up"></i> Retour aux articles</a>
+                <div class=back>
+                    <a href=/blog/index.html><i class="fa fa-arrow-circle-o-up"></i> Retour aux articles</a>
                     <div class="pull-right paginate">
                         
-                        <a href="/2015/06/25/InstallDockerRegistry.html"><i class="fa fa-arrow-circle-o-left"></i> Précédent</a>
+                        <a href=/2015/06/25/InstallDockerRegistry.html><i class="fa fa-arrow-circle-o-left"></i> Précédent</a>
                         
                         
-                        <a href="/2015/09/09/OwncloudDocker.html"><i class="fa fa-arrow-circle-o-right"></i> Suivant</a>
+                        <a href=/2015/09/09/OwncloudDocker.html><i class="fa fa-arrow-circle-o-right"></i> Suivant</a>
                         
                     </div>
                 </div>
-                <div id="disqus_thread"></div>
-                <script type="text/javascript">
+                <div id=disqus_thread></div>
+                <script type=text/javascript>
                     /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
                     var disqus_shortname = 'codetroopers'; // required: replace example with your forum shortname
 		    var disqus_url = window.location.href;
@@ -280,42 +257,35 @@ L'article vous a plu ? Partagez-le :
                         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
                     })();
                 </script>
-                <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-                <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+                <noscript>Please enable JavaScript to view the <a href=http://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript>
+                <a href=http://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a>
 
             </div>
         </article>
         </div>
     </section>
-<footer id="contact">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6" itemscope itemtype="http://schema.org/Organization">
+<footer id=contact>
+    <div class=container>
+        <div class=row>
+            <div class=col-md-6 itemscope itemtype=http://schema.org/Organization>
                 <h3>Contact</h3>
 
-                <p>Vous avez besoin de nous pour un projet, contactez-nous sur les réseaux sociaux, par mail à <a
-                    href="mailto:contact@code-troopers.com"><meta itemprop="email" content="contact@code-troopers.com">contact@code-
-                    troopers.com</a> ou par téléphone au <a href="tel:+33782287216"><span itemprop="telephone">0782 287 216</span></a></p>
+                <p>Vous avez besoin de nous pour un projet, contactez-nous sur les réseaux sociaux, par mail à <a href=mailto:contact@code-troopers.com><meta itemprop=email content=contact@code-troopers.com>contact@code-
+                    troopers.com</a> ou par téléphone au <a href=tel:+33782287216><span itemprop=telephone>0782 287 216</span></a></p>
             </div>
             <div class="col-md-6 simple-social-icons">
                 <h3>Réseaux sociaux</h3>
-                <ul class="socials">
-                    <li><a target="_blank" href="https://twitter.com/codetroopers"><i
-                            class="fa fa-twitter-square"></i></a></li>
-                    <li><a target="_blank"
-                           href="https://www.facebook.com/pages/Code-Troopers/123604307824664"><i
-                            class="fa fa-facebook-square"></i></a></li>
-                    <li><a target="_blank" href="https://plus.google.com/+Code-troopers" rel="publisher"><i
-                            class="fa fa-google-plus-square"></i></a></li>
-                    <li><a target="_blank" href="https://github.com/code-troopers"><i
-                            class="fa fa-github-square"></i></a></li>
-                    <li><a target="_blank" href="/feed.xml"><i
-                            class="fa fa-rss-square"></i></a></li>
+                <ul class=socials>
+                    <li><a target=_blank href=https://twitter.com/codetroopers><i class="fa fa-twitter-square"></i></a></li>
+                    <li><a target=_blank href=https://www.facebook.com/pages/Code-Troopers/123604307824664><i class="fa fa-facebook-square"></i></a></li>
+                    <li><a target=_blank href=https://plus.google.com/+Code-troopers rel=publisher><i class="fa fa-google-plus-square"></i></a></li>
+                    <li><a target=_blank href=https://github.com/code-troopers><i class="fa fa-github-square"></i></a></li>
+                    <li><a target=_blank href=/feed.xml><i class="fa fa-rss-square"></i></a></li>
                 </ul>
             </div>
         </div>
-        <div class="row">
-            <div class="footer-under">
+        <div class=row>
+            <div class=footer-under>
                 Made with <i class="fa fa-heart"></i> in Tours -
                 © 2014 - 2015 Code-Troopers - Tous droits réservés
             </div>
@@ -323,10 +293,11 @@ L'article vous a plu ? Partagez-le :
     </div>
 </footer>
 
-<script src="/js/scripts-a074f2f8cd.js"></script>
+<script src=//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js></script>
+
+<script src=/scripts/894288da.plugins.js></script>
+
+<script src=/scripts/32bd55f7.scripts.js></script>
 
 </body>
 </html>
-
-
-

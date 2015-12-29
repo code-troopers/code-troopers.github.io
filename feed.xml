@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
         <channel>
                 <title>Code-Troopers blog</title>
-                <description>Le blog de l&#39;équipe Code-Troopers</description>                
+                <description>Le blog de l'équipe Code-Troopers</description>                
                 <link>http://code-troopers.com</link>
                 <atom:link href="http://code-troopers.com/feed.xml" rel="self" type="application/rss+xml"/>
                 
@@ -30,47 +30,47 @@ Si ce n’est pas le cas, vous pouvez vous reposer sur la &lt;a href=&quot;http:
 
 &lt;p&gt;La première étape consiste à créer un compte qui peut utilser l’API de Google : contrairement à un compte utilisateur classique, celui-ci utilisera un ficher de clé pour s’identifier plutôt qu’un mot de passe.&lt;/p&gt;
 
-&lt;p&gt;Pour cela, rendez-vous dans un premier temps dans l’interface développeur du Play Store, dans la section &lt;code class=&quot;highlighter-rouge&quot;&gt;Settings &amp;gt; API acces&lt;/code&gt; et cliquez sur &lt;code class=&quot;highlighter-rouge&quot;&gt;Create Service Account&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Pour cela, rendez-vous dans un premier temps dans l’interface développeur du Play Store, dans la section &lt;code&gt;Settings &amp;gt; API acces&lt;/code&gt; et cliquez sur &lt;code&gt;Create Service Account&lt;/code&gt;.&lt;/p&gt;
 
 &lt;div style=&quot;text-align:center;margin:50px&quot;&gt;
-  &lt;a href=&quot;/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_ConfigureAccount_Screen1.png&quot; data-lightbox=&quot;group-1&quot; title=&quot;Configuration de l&#39;Accout service - 1&quot; class=&quot;inlineBoxes&quot;&gt;
-    &lt;img class=&quot;medium&quot; src=&quot;/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_ConfigureAccount_Screen1.png&quot; alt=&quot;Configuration de l&#39;Accout service - 1&quot; /&gt;
+  &lt;a href=&quot;/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_ConfigureAccount_Screen1.png&quot; data-lightbox=&quot;group-1&quot; title=&quot;Configuration de l'Accout service - 1&quot; class=&quot;inlineBoxes&quot;&gt;
+    &lt;img class=&quot;medium&quot; src=&quot;/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_ConfigureAccount_Screen1.png&quot; alt=&quot;Configuration de l'Accout service - 1&quot; /&gt;
   &lt;/a&gt;
-  &lt;a href=&quot;/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_ConfigureAccount_Screen2.png&quot; data-lightbox=&quot;group-1&quot; title=&quot;Configuration de l&#39;Accout service - 2&quot; class=&quot;inlineBoxes&quot;&gt;
-    &lt;img class=&quot;medium&quot; src=&quot;/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_ConfigureAccount_Screen2.png&quot; alt=&quot;Configuration de l&#39;Accout service - 2&quot; /&gt;
+  &lt;a href=&quot;/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_ConfigureAccount_Screen2.png&quot; data-lightbox=&quot;group-1&quot; title=&quot;Configuration de l'Accout service - 2&quot; class=&quot;inlineBoxes&quot;&gt;
+    &lt;img class=&quot;medium&quot; src=&quot;/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_ConfigureAccount_Screen2.png&quot; alt=&quot;Configuration de l'Accout service - 2&quot; /&gt;
   &lt;/a&gt;
 &lt;/div&gt;
 
-&lt;p&gt;En suivant le lien du petit &lt;code class=&quot;highlighter-rouge&quot;&gt;1&lt;/code&gt; vous allez être redirigé vers la console Google développeur d’où vous pourrez créer un nouveau &lt;code class=&quot;highlighter-rouge&quot;&gt;Credential&lt;/code&gt;  de type &lt;code class=&quot;highlighter-rouge&quot;&gt;Service account&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;En suivant le lien du petit &lt;code&gt;1&lt;/code&gt; vous allez être redirigé vers la console Google développeur d’où vous pourrez créer un nouveau &lt;code&gt;Credential&lt;/code&gt;  de type &lt;code&gt;Service account&lt;/code&gt;.&lt;/p&gt;
 
-&lt;p&gt;Sélectionnez le format de clé &lt;code class=&quot;highlighter-rouge&quot;&gt;JSON&lt;/code&gt; qui est recommandé, le téléchargement de celle-ci devrait alors se faire automatiquement.&lt;/p&gt;
+&lt;p&gt;Sélectionnez le format de clé &lt;code&gt;JSON&lt;/code&gt; qui est recommandé, le téléchargement de celle-ci devrait alors se faire automatiquement.&lt;/p&gt;
 
-&lt;p&gt;On peut ensuite voir qu’un nouveau &lt;code class=&quot;highlighter-rouge&quot;&gt;Service account&lt;/code&gt; est apparu dans la liste des Credentials.&lt;/p&gt;
+&lt;p&gt;On peut ensuite voir qu’un nouveau &lt;code&gt;Service account&lt;/code&gt; est apparu dans la liste des Credentials.&lt;/p&gt;
 
 &lt;div style=&quot;text-align:center;margin:50px&quot;&gt;
-  &lt;a href=&quot;/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_ConfigureAccount_Screen3.png&quot; data-lightbox=&quot;group-1&quot; title=&quot;Configuration de l&#39;Accout service - 3&quot; class=&quot;inlineBoxes&quot;&gt;
-    &lt;img class=&quot;medium&quot; src=&quot;/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_ConfigureAccount_Screen3.png&quot; alt=&quot;Configuration de l&#39;Accout service - 3&quot; /&gt;
+  &lt;a href=&quot;/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_ConfigureAccount_Screen3.png&quot; data-lightbox=&quot;group-1&quot; title=&quot;Configuration de l'Accout service - 3&quot; class=&quot;inlineBoxes&quot;&gt;
+    &lt;img class=&quot;medium&quot; src=&quot;/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_ConfigureAccount_Screen3.png&quot; alt=&quot;Configuration de l'Accout service - 3&quot; /&gt;
   &lt;/a&gt;
-  &lt;a href=&quot;/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_ConfigureAccount_Screen4.png&quot; data-lightbox=&quot;group-1&quot; title=&quot;Configuration de l&#39;Accout service - 4&quot; class=&quot;inlineBoxes&quot;&gt;
-    &lt;img class=&quot;medium&quot; src=&quot;/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_ConfigureAccount_Screen4.png&quot; alt=&quot;Configuration de l&#39;Accout service - 4&quot; /&gt;
+  &lt;a href=&quot;/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_ConfigureAccount_Screen4.png&quot; data-lightbox=&quot;group-1&quot; title=&quot;Configuration de l'Accout service - 4&quot; class=&quot;inlineBoxes&quot;&gt;
+    &lt;img class=&quot;medium&quot; src=&quot;/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_ConfigureAccount_Screen4.png&quot; alt=&quot;Configuration de l'Accout service - 4&quot; /&gt;
   &lt;/a&gt; 
-  &lt;a href=&quot;/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_ConfigureAccount_Screen5.png&quot; data-lightbox=&quot;group-1&quot; title=&quot;Configuration de l&#39;Accout service - 5&quot; class=&quot;inlineBoxes&quot;&gt;
-    &lt;img class=&quot;medium&quot; src=&quot;/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_ConfigureAccount_Screen5.png&quot; alt=&quot;Configuration de l&#39;Accout service - 5&quot; /&gt;
+  &lt;a href=&quot;/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_ConfigureAccount_Screen5.png&quot; data-lightbox=&quot;group-1&quot; title=&quot;Configuration de l'Accout service - 5&quot; class=&quot;inlineBoxes&quot;&gt;
+    &lt;img class=&quot;medium&quot; src=&quot;/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_ConfigureAccount_Screen5.png&quot; alt=&quot;Configuration de l'Accout service - 5&quot; /&gt;
   &lt;/a&gt;
 &lt;/div&gt;
 
-&lt;p&gt;De retour sur l’interface d’admin du Play Store, on constate que le &lt;code class=&quot;highlighter-rouge&quot;&gt;Service Account&lt;/code&gt; est bien créé et disponible ici.&lt;/p&gt;
+&lt;p&gt;De retour sur l’interface d’admin du Play Store, on constate que le &lt;code&gt;Service Account&lt;/code&gt; est bien créé et disponible ici.&lt;/p&gt;
 
 &lt;div style=&quot;text-align:center;margin:50px&quot;&gt;
-  &lt;a href=&quot;/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_ConfigureAccount_Screen6.png&quot; data-lightbox=&quot;group-1&quot; title=&quot;Configuration de l&#39;Accout service - 6&quot; class=&quot;inlineBoxes&quot;&gt;
-    &lt;img class=&quot;medium&quot; src=&quot;/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_ConfigureAccount_Screen6.png&quot; alt=&quot;Configuration de l&#39;Accout service - 6&quot; /&gt;
+  &lt;a href=&quot;/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_ConfigureAccount_Screen6.png&quot; data-lightbox=&quot;group-1&quot; title=&quot;Configuration de l'Accout service - 6&quot; class=&quot;inlineBoxes&quot;&gt;
+    &lt;img class=&quot;medium&quot; src=&quot;/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_ConfigureAccount_Screen6.png&quot; alt=&quot;Configuration de l'Accout service - 6&quot; /&gt;
   &lt;/a&gt;
 &lt;/div&gt;
 
 &lt;h2 id=&quot;tape-2--attribution-des-droits&quot;&gt;Étape 2 : Attribution des droits&lt;/h2&gt;
 &lt;p&gt;Il faut maintenant donner les droits au compte que l’on vient de créer afin qu’il puisse au moins livrer les apk en alpha.&lt;/p&gt;
 
-&lt;p&gt;Pour cela cliquez sur le bouton &lt;code class=&quot;highlighter-rouge&quot;&gt;Grant access&lt;/code&gt;. Dans la popup qui s’ouvre, les droits minimums à accorder pour que le plugin puisse fonctionnner sont :&lt;/p&gt;
+&lt;p&gt;Pour cela cliquez sur le bouton &lt;code&gt;Grant access&lt;/code&gt;. Dans la popup qui s’ouvre, les droits minimums à accorder pour que le plugin puisse fonctionnner sont :&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Edit store listing, pricing &amp;amp; distribution&lt;/li&gt;
@@ -82,20 +82,20 @@ Si ce n’est pas le cas, vous pouvez vous reposer sur la &lt;a href=&quot;http:
 &lt;p&gt;Ces choix pourront être modifés ultérieurement dans l’écran récapitulatif (mais ce n’est pas recommandé).&lt;/p&gt;
 
 &lt;div style=&quot;text-align:center;margin:50px&quot;&gt;
-  &lt;a href=&quot;/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_ConfigureAccount_Screen7.png&quot; data-lightbox=&quot;group-1&quot; title=&quot;Configuration de l&#39;Accout service - 7&quot; class=&quot;inlineBoxes&quot;&gt;
-    &lt;img class=&quot;medium&quot; src=&quot;/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_ConfigureAccount_Screen7.png&quot; alt=&quot;Configuration de l&#39;Accout service - 7&quot; /&gt;
+  &lt;a href=&quot;/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_ConfigureAccount_Screen7.png&quot; data-lightbox=&quot;group-1&quot; title=&quot;Configuration de l'Accout service - 7&quot; class=&quot;inlineBoxes&quot;&gt;
+    &lt;img class=&quot;medium&quot; src=&quot;/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_ConfigureAccount_Screen7.png&quot; alt=&quot;Configuration de l'Accout service - 7&quot; /&gt;
   &lt;/a&gt;
-  &lt;a href=&quot;/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_ConfigureAccount_Screen8.png&quot; data-lightbox=&quot;group-1&quot; title=&quot;Configuration de l&#39;Accout service - 8&quot; class=&quot;inlineBoxes&quot;&gt;
-    &lt;img class=&quot;medium&quot; src=&quot;/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_ConfigureAccount_Screen8.png&quot; alt=&quot;Configuration de l&#39;Accout service - 8&quot; /&gt;
+  &lt;a href=&quot;/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_ConfigureAccount_Screen8.png&quot; data-lightbox=&quot;group-1&quot; title=&quot;Configuration de l'Accout service - 8&quot; class=&quot;inlineBoxes&quot;&gt;
+    &lt;img class=&quot;medium&quot; src=&quot;/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_ConfigureAccount_Screen8.png&quot; alt=&quot;Configuration de l'Accout service - 8&quot; /&gt;
   &lt;/a&gt;
 &lt;/div&gt;
 
 &lt;h2 id=&quot;tape-3--le-plugin-gradle&quot;&gt;Étape 3 : le plugin gradle&lt;/h2&gt;
 &lt;p&gt;Il faut maintenant configurer son build pour ajouter les informations relatives au plugin qui effectuera la livraison vers le Play Store.&lt;/p&gt;
 
-&lt;p&gt;Dans le fichier &lt;code class=&quot;highlighter-rouge&quot;&gt;build.gradle&lt;/code&gt; du projet il faut donc rajouter la dépendance au plugin :&lt;/p&gt;
+&lt;p&gt;Dans le fichier &lt;code&gt;build.gradle&lt;/code&gt; du projet il faut donc rajouter la dépendance au plugin :&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;buildscript {
+&lt;pre&gt;&lt;code&gt;buildscript {
 
     repositories {
         mavenCentral()
@@ -103,31 +103,28 @@ Si ce n’est pas le cas, vous pouvez vous reposer sur la &lt;a href=&quot;http:
 
     dependencies {
         // ...
-        classpath &#39;com.github.triplet.gradle:play-publisher:1.1.4&#39;
+        classpath 'com.github.triplet.gradle:play-publisher:1.1.4'
     }
 }
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
-&lt;p&gt;Et dans le &lt;code class=&quot;highlighter-rouge&quot;&gt;build.gradle&lt;/code&gt; de l’application (du Module), il faut appliquer le plugin au même niveau que le plugin Android :&lt;/p&gt;
+&lt;p&gt;Et dans le &lt;code&gt;build.gradle&lt;/code&gt; de l’application (du Module), il faut appliquer le plugin au même niveau que le plugin Android :&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;apply plugin: &#39;com.android.application&#39;
-apply plugin: &#39;com.github.triplet.play&#39;
+&lt;pre&gt;&lt;code&gt;apply plugin: 'com.android.application'
+apply plugin: 'com.github.triplet.play'
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
-&lt;p&gt;Ensuite, toujours dans le &lt;code class=&quot;highlighter-rouge&quot;&gt;build.gradle&lt;/code&gt;, il est nécessaire d’ajouter les informations de l’&lt;code class=&quot;highlighter-rouge&quot;&gt;Account service&lt;/code&gt; précédemment créé pour qu’il puisse se connecter et faire la livraison 
-(c’est là que l’on va utiliser la clé &lt;code class=&quot;highlighter-rouge&quot;&gt;JSON&lt;/code&gt; générée).&lt;/p&gt;
+&lt;p&gt;Ensuite, toujours dans le &lt;code&gt;build.gradle&lt;/code&gt;, il est nécessaire d’ajouter les informations de l’&lt;code&gt;Account service&lt;/code&gt; précédemment créé pour qu’il puisse se connecter et faire la livraison 
+(c’est là que l’on va utiliser la clé &lt;code&gt;JSON&lt;/code&gt; générée).&lt;/p&gt;
 
 &lt;p&gt;Placez donc la clé dans votre projet et faites-y référence dans la configuration du plugin :&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;play {
-    jsonFile = file(&#39;../publishKey/serviceAccountKeys.json&#39;)
+&lt;pre&gt;&lt;code&gt;play {
+    jsonFile = file('../publishKey/serviceAccountKeys.json')
 }
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
-&lt;p&gt;À partir de là, notre build est configuré. On peut notamment s’en rendre compte en faisant un &lt;code class=&quot;highlighter-rouge&quot;&gt;./gradlew tasks&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;À partir de là, notre build est configuré. On peut notamment s’en rendre compte en faisant un &lt;code&gt;./gradlew tasks&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;On y voit toutes les tâches gradle qu’on peut appeler :&lt;/p&gt;
 
@@ -140,10 +137,10 @@ apply plugin: &#39;com.github.triplet.play&#39;
   &lt;/a&gt;
 &lt;/div&gt;
 
-&lt;p&gt;Mais ce n’est pas suffisant car il manque notamment les tâches permettant l’upload de l’apk. Pour cela il faut rajouter la &lt;code class=&quot;highlighter-rouge&quot;&gt;signingConfigs&lt;/code&gt; dans le &lt;code class=&quot;highlighter-rouge&quot;&gt;build.gradle&lt;/code&gt;.
+&lt;p&gt;Mais ce n’est pas suffisant car il manque notamment les tâches permettant l’upload de l’apk. Pour cela il faut rajouter la &lt;code&gt;signingConfigs&lt;/code&gt; dans le &lt;code&gt;build.gradle&lt;/code&gt;.
 Ce qui peut notamment se faire comme ça :&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    signingConfigs {
+&lt;pre&gt;&lt;code&gt;    signingConfigs {
         release {
             storeFile file(&quot;../keystore.jks&quot;)
             storePassword &quot;7r00p3r5&quot;
@@ -158,9 +155,8 @@ Ce qui peut notamment se faire comme ça :&lt;/p&gt;
         }
     }
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
-&lt;p&gt;Maintenant, on peut voir la présence de la tâche qui nous intéresse : &lt;code class=&quot;highlighter-rouge&quot;&gt;publishApkRelease&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Maintenant, on peut voir la présence de la tâche qui nous intéresse : &lt;code&gt;publishApkRelease&lt;/code&gt;&lt;/p&gt;
 
 &lt;div style=&quot;text-align:center;margin:50px&quot;&gt;
   &lt;a href=&quot;/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_Gradlew_tasks_config_complete.png&quot; data-lightbox=&quot;group-1&quot; title=&quot;Liste des tasks gradle disponibles avec upload apk&quot; class=&quot;inlineBoxes&quot;&gt;
@@ -170,25 +166,24 @@ Ce qui peut notamment se faire comme ça :&lt;/p&gt;
 
 &lt;h2 id=&quot;tape-4--gnration-et-upload&quot;&gt;Étape 4 : génération et upload&lt;/h2&gt;
 
-&lt;p&gt;Pour effectuer un upload de l’apk il suffit maintenant d’appeler la tâche &lt;code class=&quot;highlighter-rouge&quot;&gt;publishApkRelease&lt;/code&gt;. Et pas besoin de générer l’apk signé via Android Studio puisque comme tout est configuré, il sera généré dans les tâches précédent l’uploadApk.&lt;/p&gt;
+&lt;p&gt;Pour effectuer un upload de l’apk il suffit maintenant d’appeler la tâche &lt;code&gt;publishApkRelease&lt;/code&gt;. Et pas besoin de générer l’apk signé via Android Studio puisque comme tout est configuré, il sera généré dans les tâches précédent l’uploadApk.&lt;/p&gt;
 
 &lt;p&gt;Si tout se passe bien le build se termine avec un :&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;BUILD SUCCESSFUL
+&lt;pre&gt;&lt;code&gt;BUILD SUCCESSFUL
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
 &lt;p&gt;Si il y a un problème lors de l’updload, il est affiché dans la console, par exemple si le &lt;strong&gt;version code&lt;/strong&gt; est déjà utilisé&lt;/p&gt;
 
 &lt;div style=&quot;text-align:center;margin:50px&quot;&gt;
-  &lt;a href=&quot;/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_Gradlew_upload_ko.png&quot; data-lightbox=&quot;group-1&quot; title=&quot;Exemple d&#39;upload d&#39;apk en erreur&quot; class=&quot;inlineBoxes&quot;&gt;
-    &lt;img class=&quot;medium&quot; src=&quot;/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_Gradlew_upload_ko.png&quot; alt=&quot;Exemple d&#39;upload d&#39;apk en erreur&quot; /&gt;
+  &lt;a href=&quot;/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_Gradlew_upload_ko.png&quot; data-lightbox=&quot;group-1&quot; title=&quot;Exemple d'upload d'apk en erreur&quot; class=&quot;inlineBoxes&quot;&gt;
+    &lt;img class=&quot;medium&quot; src=&quot;/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_Gradlew_upload_ko.png&quot; alt=&quot;Exemple d'upload d'apk en erreur&quot; /&gt;
   &lt;/a&gt;
 &lt;/div&gt;
 
 &lt;p&gt;Ensuite vous pouvez vous rendre sur l’interface d’admin du Play Store et constater que l’upload d’un nouvel apk a bien eu lieu en alpha et le passer en bêta ou en production.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Attention&lt;/strong&gt; : ne pas commiter la clé &lt;code class=&quot;highlighter-rouge&quot;&gt;JSON&lt;/code&gt; sur github, au même titre que le mot de passe du &lt;code class=&quot;highlighter-rouge&quot;&gt;keystore&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Attention&lt;/strong&gt; : ne pas commiter la clé &lt;code&gt;JSON&lt;/code&gt; sur github, au même titre que le mot de passe du &lt;code&gt;keystore&lt;/code&gt;.&lt;/p&gt;
 
 &lt;h2 id=&quot;pour-aller-plus-loin&quot;&gt;Pour aller plus loin&lt;/h2&gt;
 
@@ -238,7 +233,7 @@ Pour savoir comment configurer tout cela, je vous invite à consulter la page gi
 
 &lt;p&gt;Avec Docker bien sûr, il faut au préalable s’être créé un compte sur le site New Relic pour obtenir l’accès à l’interface et pouvoir se créer une clé (à remplacer dans la ligne de commande suivante).&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker run -d \
+&lt;pre&gt;&lt;code&gt;docker run -d \
 	--privileged=true --name newrelic
 	--pid=host \
 	--net=host \
@@ -251,7 +246,6 @@ Pour savoir comment configurer tout cela, je vous invite à consulter la page gi
 	-e NRSYSMOND_logfile=/var/log/nrsysmond.log \
 	newrelic/nrsysmond:latest
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
 &lt;p&gt;Vous trouverez toutes les informations &lt;a href=&quot;https://hub.docker.com/r/newrelic/nrsysmond/&quot;&gt;ici&lt;/a&gt;.&lt;/p&gt;
 </description>
@@ -264,12 +258,12 @@ Pour savoir comment configurer tout cela, je vous invite à consulter la page gi
                                 <title>Android M - Nouvelle gestion de permission</title>
                                 <description>&lt;h1 id=&quot;nouvelle-approche&quot;&gt;Nouvelle approche&lt;/h1&gt;
 
-&lt;p&gt;Avec la prochaine release d’&lt;code class=&quot;highlighter-rouge&quot;&gt;Android 6.0 Marshmallow&lt;/code&gt;, il va y avoir du changement au niveau de la gestion des permissions.
+&lt;p&gt;Avec la prochaine release d’&lt;code&gt;Android 6.0 Marshmallow&lt;/code&gt;, il va y avoir du changement au niveau de la gestion des permissions.
 Terminé la popup qui demande les 10 autorisations au moment du téléchargement de l’appli, maintenant les développeurs vont pouvoir demander les permissions au moment où elles seront nécessaires.&lt;/p&gt;
 
 &lt;h3 id=&quot;permissions-irrvocables&quot;&gt;Permissions irrévocables&lt;/h3&gt;
 &lt;p&gt;Puisqu’il va falloir demander à l’utilisateur pour chaque permission, Google a décidé que certaines anciennes permissions n’auront plus besoin d’être demandées,
- ce sont les &lt;code class=&quot;highlighter-rouge&quot;&gt;Normal Permissions&lt;/code&gt;. Il s’agit des permissions qui n’engendrent pas de risque sur la vie privée ou sur la sécurité de l’utilisateur comme c’est par exemple le cas pour l’accès à internet ou l’accès au vibreur :
+ ce sont les &lt;code&gt;Normal Permissions&lt;/code&gt;. Il s’agit des permissions qui n’engendrent pas de risque sur la vie privée ou sur la sécurité de l’utilisateur comme c’est par exemple le cas pour l’accès à internet ou l’accès au vibreur :
  la liste complète est disponible &lt;a href=&quot;https://developer.android.com/preview/features/runtime-permissions.html#normal&quot;&gt;ici&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h3 id=&quot;guidelines&quot;&gt;Guidelines&lt;/h3&gt;
@@ -297,68 +291,64 @@ Terminé la popup qui demande les 10 autorisations au moment du téléchargement
 &lt;h2 id=&quot;ne-pas-implmenter-les-nouvelles-permissions&quot;&gt;Ne pas implémenter les nouvelles permissions&lt;/h2&gt;
 &lt;p&gt;Chose importante à savoir, vous n’êtes pas obligés d’implémenter cette nouvelle gestion de permission.
 En effet, puisqu’elle demande du développoment supplémentaire, de nombreuses applis ne seront pas mises à jour et garderont donc l’ancien fonctionnement. 
-Si c’est ce que vous souhaitez, et pour ne pas nuire au bon fonctionnement de votre appli, il vous suffit de ne pas cibler le dernier &lt;code class=&quot;highlighter-rouge&quot;&gt;sdk&lt;/code&gt; dans votre build.gradle et de rester sur le &lt;code class=&quot;highlighter-rouge&quot;&gt;22&lt;/code&gt;.&lt;/p&gt;
+Si c’est ce que vous souhaitez, et pour ne pas nuire au bon fonctionnement de votre appli, il vous suffit de ne pas cibler le dernier &lt;code&gt;sdk&lt;/code&gt; dans votre build.gradle et de rester sur le &lt;code&gt;22&lt;/code&gt;.&lt;/p&gt;
 
 &lt;h2 id=&quot;implmenter-les-nouvelles-permissions&quot;&gt;Implémenter les nouvelles permissions&lt;/h2&gt;
 &lt;p&gt;Pour cela, 3 étapes sont nécessaires, principalement disponibles dans le sdk 23 ainsi que dans la lib appcompat :&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;requestPermissions()&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;onRequestPermissionsResult()&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;shouldShowRequestPermissionRationale()&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;requestPermissions()&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;onRequestPermissionsResult()&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;shouldShowRequestPermissionRationale()&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&quot;buildgradle&quot;&gt;Build.gradle&lt;/h3&gt;
-&lt;p&gt;Permière étape, cibler la dernier version du &lt;code class=&quot;highlighter-rouge&quot;&gt;sdk&lt;/code&gt; : &lt;code class=&quot;highlighter-rouge&quot;&gt;23&lt;/code&gt;.
+&lt;p&gt;Permière étape, cibler la dernier version du &lt;code&gt;sdk&lt;/code&gt; : &lt;code&gt;23&lt;/code&gt;.
 Et en bonus, importer appcompat pour bénéficier des méthodes helpers de Google.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;compileSdkVersion 23
+&lt;pre&gt;&lt;code&gt;compileSdkVersion 23
 defaultConfig {
     targetSdkVersion 23
 }
 dependencies {
-    compile &#39;com.android.support:appcompat-v7:23.0.1&#39;
+    compile 'com.android.support:appcompat-v7:23.0.1'
 }
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
 &lt;h3 id=&quot;androidmanifestxml&quot;&gt;AndroidManifest.xml&lt;/h3&gt;
 &lt;p&gt;Ensuite, déclarer les permissions désirées dans l’application, normalement il n’y a pas de changements par rapport à votre configuration actuelle&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;uses-permission android:name=&quot;android.permission.CAMERA&quot; /&amp;gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;uses-permission android:name=&quot;android.permission.CAMERA&quot; /&amp;gt;
 &amp;lt;uses-permission android:name=&quot;android.permission.READ_CONTACTS&quot; /&amp;gt;
 &amp;lt;uses-permission android:name=&quot;android.permission.ACCESS_FINE_LOCATION&quot; /&amp;gt;
 &amp;lt;uses-permission android:name=&quot;android.permission.SEND_SMS&quot; /&amp;gt;
 &amp;lt;uses-permission android:name=&quot;android.permission.READ_EXTERNAL_STORAGE&quot; /&amp;gt;
 &amp;lt;uses-permission android:name=&quot;android.permission.CALL_PHONE&quot; /&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
-&lt;p&gt;N’oubliez pas d’y déclarer aussi les &lt;code class=&quot;highlighter-rouge&quot;&gt;Normal Permissions&lt;/code&gt; qui, bien qu’elles soient automatiquement accordées, ont toujours besoin d’être déclarées.&lt;/p&gt;
+&lt;p&gt;N’oubliez pas d’y déclarer aussi les &lt;code&gt;Normal Permissions&lt;/code&gt; qui, bien qu’elles soient automatiquement accordées, ont toujours besoin d’être déclarées.&lt;/p&gt;
 
 &lt;h3 id=&quot;dans-une-activit&quot;&gt;Dans une activité&lt;/h3&gt;
 &lt;p&gt;Dans un premier temps il faut vérifier si une permission est déjà accordée ou non&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ContextCompat.checkSelfPermission(context, Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED;
+&lt;pre&gt;&lt;code&gt;ContextCompat.checkSelfPermission(context, Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED;
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
 &lt;p&gt;Si la permission n’est pas accordée, il va falloir la demander, de préférence lors d’une action utilisateur, par exemple au click sur un bouton&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ActivityCompat.requestPermissions(MainActivity.this,
+&lt;pre&gt;&lt;code&gt;ActivityCompat.requestPermissions(MainActivity.this,
                                   new String[]{Manifest.permission.CAMERA},
                                   REQUEST_CODE_ONE);
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
 &lt;div style=&quot;text-align:center;margin-bottom:50px&quot;&gt;
-    &lt;a href=&quot;/images/2015-09-AndroidMPermissions/p1.png&quot; data-lightbox=&quot;group-1&quot; title=&quot;Dialog de demande d&#39;une permission&quot; class=&quot;inlineBoxes&quot;&gt;
-        &lt;img class=&quot;medium&quot; src=&quot;/images/2015-09-AndroidMPermissions/p1.png&quot; alt=&quot;Dialog de demande d&#39;une permission&quot; /&gt;
+    &lt;a href=&quot;/images/2015-09-AndroidMPermissions/p1.png&quot; data-lightbox=&quot;group-1&quot; title=&quot;Dialog de demande d'une permission&quot; class=&quot;inlineBoxes&quot;&gt;
+        &lt;img class=&quot;medium&quot; src=&quot;/images/2015-09-AndroidMPermissions/p1.png&quot; alt=&quot;Dialog de demande d'une permission&quot; /&gt;
     &lt;/a&gt;
 &lt;/div&gt;
 &lt;p&gt;Puis écouter le choix de l’utilisateur, dans l’activité ou le fragment correspondant&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;@Override
+&lt;pre&gt;&lt;code&gt;@Override
 public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
     switch (requestCode) {
         case REQUEST_CODE_ONE: {
@@ -372,17 +362,15 @@ public void onRequestPermissionsResult(int requestCode, String permissions[], in
     }
 }
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
 &lt;h3 id=&quot;demander-plusieurs-permissions-en-mme-temps&quot;&gt;Demander plusieurs permissions en même temps&lt;/h3&gt;
 &lt;p&gt;Même si cela est déconseillé, il peut arriver d’avoir besoin de plusieurs permissions lors de la même action utilisateur.
 Pour cela il suffit de passer plusieurs permissions dans le tableau passé en paramètre du requestPermission&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ActivityCompat.requestPermissions(MainActivity.this,
+&lt;pre&gt;&lt;code&gt;ActivityCompat.requestPermissions(MainActivity.this,
                                   new String[]{Manifest.permission.READ_CONTACTS, Manifest.permission.ACCESS_FINE_LOCATION},
                                   REQUEST_CODE_TWO);
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
 &lt;div style=&quot;text-align:center;margin-bottom:50px&quot;&gt;
     &lt;a href=&quot;/images/2015-09-AndroidMPermissions/p2.png&quot; data-lightbox=&quot;group-1&quot; title=&quot;Dialog de demande de plusieurs permissions 1/2&quot; class=&quot;inlineBoxes&quot;&gt;
@@ -397,7 +385,7 @@ Pour cela il suffit de passer plusieurs permissions dans le tableau passé en pa
 &lt;p&gt;Il arrivera sûrement que certains utilsateurs refusent des permissions et que cela détériore l’expérience utilisateur sur l’application. Pour cela, Google fourni un helper pour savoir ou non s’il faut afficher un message d’information à l’utilisateur (graphique).
 Cela se fera avec la méthode shouldShowRequestPermissionRationale&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;if (shouldShowRequestPermissionRationale(Manifest.permission.CALL_PHONE)) {
+&lt;pre&gt;&lt;code&gt;if (shouldShowRequestPermissionRationale(Manifest.permission.CALL_PHONE)) {
      new AlertDialog.Builder(MainActivity.this)
                                .setMessage(&quot;Custom message to explain why you need a permission&quot;)
                                .setPositiveButton(&quot;OK&quot;, new DialogInterface.OnClickListener() {
@@ -417,11 +405,10 @@ ActivityCompat.requestPermissions(MainActivity.this,
                                   REQUEST_CODE_FIVE);
 }
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
 &lt;div style=&quot;text-align:center;margin-bottom:50px&quot;&gt;
-    &lt;a href=&quot;/images/2015-09-AndroidMPermissions/p4.png&quot; data-lightbox=&quot;group-1&quot; title=&quot;Dialog d&#39;explication sur une demande de permissions&quot; class=&quot;inlineBoxes&quot;&gt;
-        &lt;img class=&quot;medium&quot; src=&quot;/images/2015-09-AndroidMPermissions/p4.png&quot; alt=&quot;Dialog d&#39;explication sur une demande de permissions&quot; /&gt;
+    &lt;a href=&quot;/images/2015-09-AndroidMPermissions/p4.png&quot; data-lightbox=&quot;group-1&quot; title=&quot;Dialog d'explication sur une demande de permissions&quot; class=&quot;inlineBoxes&quot;&gt;
+        &lt;img class=&quot;medium&quot; src=&quot;/images/2015-09-AndroidMPermissions/p4.png&quot; alt=&quot;Dialog d'explication sur une demande de permissions&quot; /&gt;
     &lt;/a&gt;
 &lt;/div&gt;
 
@@ -453,19 +440,17 @@ ActivityCompat.requestPermissions(MainActivity.this,
 
 &lt;p&gt;Nous allons commencer par une petite digression. Avant quand on avait plusieurs “virtual host” qui pointaient sur une machine, on mettait un front-end apache et c’était plus ou moins la galère. Maintenant, il suffit de lancer cette commande une fois :&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker run --restart=always --name nginx -d -p 80:80 -p 443:443 -v /docker/vhost.d:/etc/nginx/vhost.d:ro -v /var/run/docker.sock:/tmp/docker.sock:ro jwilder/nginx-proxy
+&lt;pre&gt;&lt;code&gt;docker run --restart=always --name nginx -d -p 80:80 -p 443:443 -v /docker/vhost.d:/etc/nginx/vhost.d:ro -v /var/run/docker.sock:/tmp/docker.sock:ro jwilder/nginx-proxy
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
 &lt;!--break--&gt;
-&lt;p&gt;On pourra alors rajouter la variable d’environnement &lt;code class=&quot;highlighter-rouge&quot;&gt;VIRTUAL_HOST&lt;/code&gt; à chaque nouvelle image Docker pour qu’elle soit directement accessible. Ce qui est magique aussi c’est que si on expose un seul port de l’image Docker alors il est directement mappé sur le port 80, même si le port n’était pas forwardé sur le host. Dernier avantage, si on met deux machines avec le même nom il va s’occuper de faire du load balancing tout seul !&lt;/p&gt;
+&lt;p&gt;On pourra alors rajouter la variable d’environnement &lt;code&gt;VIRTUAL_HOST&lt;/code&gt; à chaque nouvelle image Docker pour qu’elle soit directement accessible. Ce qui est magique aussi c’est que si on expose un seul port de l’image Docker alors il est directement mappé sur le port 80, même si le port n’était pas forwardé sur le host. Dernier avantage, si on met deux machines avec le même nom il va s’occuper de faire du load balancing tout seul !&lt;/p&gt;
 
-&lt;p&gt;Si jamais la configuration par défaut ne convient pas, il faut rajouter un fichier de configuration dans &lt;code class=&quot;highlighter-rouge&quot;&gt;/docker/vhost.d/&lt;/code&gt;. Dans notre cas nous en avons eu besoin pour permettre d’uploader des fichiers plus gros (c’est 2 Mo par défaut).&lt;/p&gt;
+&lt;p&gt;Si jamais la configuration par défaut ne convient pas, il faut rajouter un fichier de configuration dans &lt;code&gt;/docker/vhost.d/&lt;/code&gt;. Dans notre cas nous en avons eu besoin pour permettre d’uploader des fichiers plus gros (c’est 2 Mo par défaut).&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ cat /docker/vhost.d/owncloud.hostname.com
+&lt;pre&gt;&lt;code&gt;$ cat /docker/vhost.d/owncloud.hostname.com
 client_max_body_size 100m;
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
 &lt;h2 id=&quot;docker-compose&quot;&gt;Docker-compose&lt;/h2&gt;
 
@@ -473,7 +458,7 @@ client_max_body_size 100m;
 
 &lt;p&gt;Rentrons dans le vif du sujet :&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;mariaOC:
+&lt;pre&gt;&lt;code&gt;mariaOC:
   image: mariadb
   volumes:
    - /home/owncloud/db:/var/lib/mysql
@@ -505,12 +490,11 @@ owncloud:
   links:
     - mariaOC:db
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
 &lt;p&gt;Voici le fichier docker-compose.yml utilisé. On définit une image de &lt;a href=&quot;https://mariadb.org/&quot;&gt;MariaDB&lt;/a&gt; pour laquelle on spécifie un volume qui va recevoir les données et différentes variables d’environnements dont les noms sont assez explicite.
 Puis une image owncloud avec des volumes pour les fichiers que l’on va sauvegarder, les logs et la clé SSL. Un lien avec la base de donnée MariaDB et quelques variables d’environnements, là encore les noms sont suffisamment explicite.&lt;/p&gt;
 
-&lt;p&gt;Une fois les variables modifiées selon notre volonté, il faut lancer les commandes &lt;code class=&quot;highlighter-rouge&quot;&gt;docker-compose build&lt;/code&gt; suivi de &lt;code class=&quot;highlighter-rouge&quot;&gt;compose-docker up -d&lt;/code&gt; et aller sur owncloud.hostname.com pour finir l’installation.&lt;/p&gt;
+&lt;p&gt;Une fois les variables modifiées selon notre volonté, il faut lancer les commandes &lt;code&gt;docker-compose build&lt;/code&gt; suivi de &lt;code&gt;compose-docker up -d&lt;/code&gt; et aller sur owncloud.hostname.com pour finir l’installation.&lt;/p&gt;
 
 &lt;p&gt;L’article est déjà fini, comme je le disais, ça se fait en un rien de temps. Mais si cela a été aussi rapide, c’est parce que Owncloud a une image très bien faîtes donc merci Josh de l’avoir mise à disposition &lt;a href=&quot;https://github.com/jchaney/owncloud&quot;&gt;https://github.com/jchaney/owncloud&lt;/a&gt;&lt;/p&gt;
 
@@ -531,7 +515,7 @@ Puis une image owncloud avec des volumes pour les fichiers que l’on va sauvega
                                 <description>&lt;p&gt;Git c’est cool, Git c’est Hype, Git c’est tout récent (&lt;a href=&quot;http://git-scm.com/book/fr/v1/D%C3%A9marrage-rapide-Une-rapide-histoire-de-Git&quot;&gt;enfin presque&lt;/a&gt;) et c’est pour ça qu’on aime bien.
 Mais pour beaucoup Git c’est nouveau, donc c’est le changement, donc c’est compliqué, et c’est pour ça que plein de boîtes préfèrent garder leur serveur svn.&lt;/p&gt;
 
-&lt;p&gt;Je vais tenter ici, de vous donner les principales commandes de &lt;code class=&quot;highlighter-rouge&quot;&gt;Git-SVN&lt;/code&gt;. Ainsi si vous vous trouvez dans une boîte qui ne veut pas changer son scm mais que vous, vous avez envie de changement,
+&lt;p&gt;Je vais tenter ici, de vous donner les principales commandes de &lt;code&gt;Git-SVN&lt;/code&gt;. Ainsi si vous vous trouvez dans une boîte qui ne veut pas changer son scm mais que vous, vous avez envie de changement,
 vous pourrez donc utiliser la puissance de Git. 
 Et ce sans aucun impact sur le gestionnaire de sources de la société dans laquelle vous êtes. C’est génial non ?&lt;/p&gt;
 
@@ -552,85 +536,75 @@ Si ce n’est pas le cas, il n’y a pas de gros changement, mais je vous invite
 
 &lt;p&gt;Donc si on se met dans la situation où tout le monde travaille sur le trunk, pour récupérer les sources du projet dans un nouveau répertoire vous devrez faire un :&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git svn clone http://maboite/svn/monBeauProjet/ -s
+&lt;pre&gt;&lt;code&gt;git svn clone http://maboite/svn/monBeauProjet/ -s
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
 &lt;p&gt;Par contre dès que le repo svn et un peu vieux (i.e. avec plein de commits) ça va mettre 3h ! En effet, Git va prendre les révisions une par une afin de créer son historique local.
 Si vous n’avez pas besoin de tout l’historique des révisions ce que vous pouvez faire c’est :&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git svn clone http://maboite/svn/monBeauProjet/ -s -r4000:HEAD
+&lt;pre&gt;&lt;code&gt;git svn clone http://maboite/svn/monBeauProjet/ -s -r4000:HEAD
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
 &lt;p&gt;ainsi il ne crééra l’histo qu’à partir de la révision 4000 du svn. Je vous conseille donc de prendre le 4000 le plus proche de la dernière révision.&lt;/p&gt;
 
 &lt;p&gt;À partir de là c’est bon, vous avez votre projet qui est géré par Git. La preuve vous pouvez tester via ces différentes commandes&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git status
+&lt;pre&gt;&lt;code&gt;git status
 git branch -a
 git log -n5
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
 &lt;h2 id=&quot;travailler-sur-le-projet-en-local&quot;&gt;Travailler sur le projet (en local)&lt;/h2&gt;
 &lt;p&gt;Vous pouvez donc dès à présent commencer à travailler offline ou bien sans vous soucier des commits de vos collègues.
 Et cela avec tous les avantages que Git apporte.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git commit -m&quot;Ajout de la modification du mot de passe par l&#39;admin&quot;
+&lt;pre&gt;&lt;code&gt;git commit -m&quot;Ajout de la modification du mot de passe par l'admin&quot;
 git stash save “Début de ma tâche prioritaire”
 ... // un peu de travail urgent
 git stash pop
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
 &lt;p&gt;On peut même faire des branches Git (en local) sans que cela n’impacte le serveur.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git checkout -b myLocalBranch
+&lt;pre&gt;&lt;code&gt;git checkout -b myLocalBranch
 ... // du travail avec plein de petits commits
 git checkout master
 git merge myLocalBranch
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
 &lt;h2 id=&quot;commiter-sur-le-svn&quot;&gt;Commiter sur le svn&lt;/h2&gt;
 &lt;p&gt;Ensuite pour se synchroniser avec vos collègues (c’est mieux) les deux commandes indispensables sont&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git svn rebase
+&lt;pre&gt;&lt;code&gt;git svn rebase
 git svn dcommit
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
-&lt;p&gt;Le &lt;code class=&quot;highlighter-rouge&quot;&gt;git svn rebase&lt;/code&gt; va faire l’équivalent d’un svn update quant au &lt;code class=&quot;highlighter-rouge&quot;&gt;git svn dcommit&lt;/code&gt; ça sera un svn commit.&lt;/p&gt;
+&lt;p&gt;Le &lt;code&gt;git svn rebase&lt;/code&gt; va faire l’équivalent d’un svn update quant au &lt;code&gt;git svn dcommit&lt;/code&gt; ça sera un svn commit.&lt;/p&gt;
 
 &lt;h2 id=&quot;bonus--utiliser-des-branches&quot;&gt;Bonus : Utiliser des branches&lt;/h2&gt;
 &lt;p&gt;Bon soyons honnêtes si vous utilisez un svn il y a quand même peu de chances que les branches soient vraiment utilisées (ou alors peut-être que vous aimez la douleur). Mais si ça arrive, voilà comment les utiliser.&lt;/p&gt;
 
 &lt;p&gt;Mettre à jour toutes les branches du svn :&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git svn fetch
+&lt;pre&gt;&lt;code&gt;git svn fetch
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
 &lt;p&gt;Changer de branche :&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git checkout -b &amp;lt;brancheDistante&amp;gt; &amp;lt;nomDeBrancheLocale&amp;gt;
+&lt;pre&gt;&lt;code&gt;git checkout -b &amp;lt;brancheDistante&amp;gt; &amp;lt;nomDeBrancheLocale&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
 &lt;p&gt;Et maintenant vous pouvez naviguer entre vos branches normalement via Git  :&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git checkout master
+&lt;pre&gt;&lt;code&gt;git checkout master
 git checkout nomDeBrancheLocale
 git checkout -
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
 &lt;p&gt;et par exemple pour recopier un commit d’une branche à une autre sans copier manuellement le fichier.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git cherry-pick
+&lt;pre&gt;&lt;code&gt;git cherry-pick
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
 &lt;p&gt;Voilà vous avez maintenant les bases pour utiliser Git alors que de premier abord cela ne semblait pas possible.
 Il ne vous reste plus qu’à forcer un peu plus pour remplacer l’ancien serveur svn par un nouveau sous Git et comme ça toute votre boîte pourra en profiter.
@@ -660,41 +634,38 @@ Nous nous sommes donc mis à déployer un dépôt privé, authentifié par utili
 &lt;p&gt;Puis nous allons utiliser l’image Docker avec nginx pour l’authentification &lt;a href=&quot;https://github.com/MarvAmBass/docker-nginx-registry-proxy&quot;&gt;docker-nginx-registry-proxy&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h2 id=&quot;informations-didentification&quot;&gt;Informations d’identification&lt;/h2&gt;
-&lt;p&gt;Pour les étapes suivantes, placez vous dans le répertoire de votre choix pour stocker les fichiers (dans ce cas nous sommes dans &lt;code class=&quot;highlighter-rouge&quot;&gt;/srv/registry-config&lt;/code&gt;)&lt;/p&gt;
+&lt;p&gt;Pour les étapes suivantes, placez vous dans le répertoire de votre choix pour stocker les fichiers (dans ce cas nous sommes dans &lt;code&gt;/srv/registry-config&lt;/code&gt;)&lt;/p&gt;
 
 &lt;h3 id=&quot;gnration-du-certificat&quot;&gt;Génération du certificat&lt;/h3&gt;
 &lt;p&gt;Pensez à bien renseigner le FQDN DNS lors de la demande de Common Name pour le certificat.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;openssl genrsa -out ca.key 4096
+&lt;pre&gt;&lt;code&gt;openssl genrsa -out ca.key 4096
 openssl req -new -x509 -days 1826 -key ca.key -out ca.crt
 openssl genrsa -out ia.key 4096
 openssl req -new -key key.pem -out ia.csr #this is where you need to fill your FQDN
 openssl x509 -req -days 730 -in ia.csr -CA ca.crt -CAkey ca.key -set_serial 01 -out cert.pem
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
 &lt;h3 id=&quot;gnration-des-mots-de-passes-basic-auth&quot;&gt;Génération des mots de passes basic auth&lt;/h3&gt;
 &lt;p&gt;En utilisant un container docker qui embarque htpasswd vous pourrez générer facilement le fichier nécessaire :&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker run --rm -ti -v $(pwd):/tmp dgageot/htpasswd -c /tmp/docker-registry.htpasswd $MONUSER
+&lt;pre&gt;&lt;code&gt;docker run --rm -ti -v $(pwd):/tmp dgageot/htpasswd -c /tmp/docker-registry.htpasswd $MONUSER
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
 &lt;h2 id=&quot;dmarrage-du-registry&quot;&gt;Démarrage du registry&lt;/h2&gt;
-&lt;p&gt;Les images seront stockées dans le répertoire &lt;code class=&quot;highlighter-rouge&quot;&gt;/srv/registry&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Les images seront stockées dans le répertoire &lt;code&gt;/srv/registry&lt;/code&gt;&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;mkdir /srv/registry
+&lt;pre&gt;&lt;code&gt;mkdir /srv/registry
 docker run -d --restart=always --name registry -v /srv/docker-registry:/registry -e &quot;SETTINGS_FLAVOR=local&quot; -e &quot;STORAGE_PATH=/registry&quot; registry
 docker run -d --restart=always -p 443:443 -v /srv/registry-config:/etc/nginx/external --link registry:registry --name nginx-registry-proxy marvambass/nginx-registry-proxy
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
 &lt;h2 id=&quot;configuration-dune-machine-cliente&quot;&gt;Configuration d’une machine cliente&lt;/h2&gt;
 
 &lt;h3 id=&quot;importer-le-certificat-racine&quot;&gt;Importer le certificat racine&lt;/h3&gt;
 &lt;p&gt;Il faut importer le certificat racine dans la liste des certificats reconnus&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo -s
+&lt;pre&gt;&lt;code&gt;sudo -s
 mkdir -p /etc/docker/certs.d/$FQDN
 cp ca.crt /etc/docker/certs.d/$FQDN/
 
@@ -702,49 +673,44 @@ mkdir -p /usr/local/share/ca-certificates/docker-ct
 cp ca.crt /usr/local/share/ca-certificates/docker-ct/
 update-ca-certificates-
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
 &lt;p&gt;Pour vérifier que tout fonctionne comme attendu, vous pouvez voir si votre certificat ressort bien dans la commande suivante :&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;awk -v cmd=&#39;openssl x509 -noout -subject&#39; &#39; /BEGIN/{close(cmd)};{print | cmd}&#39; &amp;lt; /etc/ssl/certs/ca-certificates.crt | grep $(VOTRE IDENTIFIANT)
+&lt;pre&gt;&lt;code&gt;awk -v cmd='openssl x509 -noout -subject' ' /BEGIN/{close(cmd)};{print | cmd}' &amp;lt; /etc/ssl/certs/ca-certificates.crt | grep $(VOTRE IDENTIFIANT)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
 &lt;p&gt;Vous serez également certainement amené à redémarrer vos daemon docker (de chacune des machines)&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;systemctl stop docker
+&lt;pre&gt;&lt;code&gt;systemctl stop docker
 systemctl start docker
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
 &lt;h3 id=&quot;identification-sur-le-dpot&quot;&gt;Identification sur le dépot&lt;/h3&gt;
 &lt;p&gt;Une fois que toutes ces étapes sont effectuées, normalement votre dépot est prêt à être utilisé.&lt;/p&gt;
 
 &lt;p&gt;Il vous faut cependant en première étape vous identifier à l’aide du couple utilisateur / mot de passe créé lors de l’installation :&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker login https://mondepotdocker.tld
+&lt;pre&gt;&lt;code&gt;docker login https://mondepotdocker.tld
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
-&lt;p&gt;Ceci aura pour effet de créer un fichier &lt;code class=&quot;highlighter-rouge&quot;&gt;~/.dockercfg&lt;/code&gt; vous permettant d’accéder aux commandes suivantes sans avoir besoin de retaper vos identifiants.&lt;/p&gt;
+&lt;p&gt;Ceci aura pour effet de créer un fichier &lt;code&gt;~/.dockercfg&lt;/code&gt; vous permettant d’accéder aux commandes suivantes sans avoir besoin de retaper vos identifiants.&lt;/p&gt;
 
 &lt;h2 id=&quot;utilisation-du-dpt&quot;&gt;Utilisation du dépôt&lt;/h2&gt;
 
 &lt;p&gt;Une fois la machine cliente configurée, vous pouvez simplement utiliser le dépot en préfixant les noms de vos images par l’URL du dépôt.
 Par exemple, pour push/pull l’image de monapplication la commande suivante fera l’affaire :&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker push mondepotdocker.tld/monapplication:v1.0.0
+&lt;pre&gt;&lt;code&gt;docker push mondepotdocker.tld/monapplication:v1.0.0
 docker pull mondepotdocker.tld/monapplication:v1.0.0
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
 &lt;h3 id=&quot;utilisation-avec-docker-compose&quot;&gt;Utilisation avec docker-compose&lt;/h3&gt;
 
 &lt;p&gt;Si vous utilisez docker-compose, il se peut que vous ayiez des soucis avec le certificat autosigné et/ou avec l’authentification.&lt;/p&gt;
 
-&lt;p&gt;Pour contourner la vérification du certificat, vous pouvez simplement lancer &lt;code class=&quot;highlighter-rouge&quot;&gt;docker-compose&lt;/code&gt; avec le flag &lt;code class=&quot;highlighter-rouge&quot;&gt;--allow-insecure-ssl&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Pour contourner la vérification du certificat, vous pouvez simplement lancer &lt;code&gt;docker-compose&lt;/code&gt; avec le flag &lt;code&gt;--allow-insecure-ssl&lt;/code&gt;.&lt;/p&gt;
 
-&lt;p&gt;Pour ce qui est de l’authentification, une astuce simple pour contourner les problèmes de ce genre est de faire un &lt;code class=&quot;highlighter-rouge&quot;&gt;docker pull&lt;/code&gt; manuellement au préalable (le scripter depuis le fichier compose.yml n’est pas trop difficile).&lt;/p&gt;
+&lt;p&gt;Pour ce qui est de l’authentification, une astuce simple pour contourner les problèmes de ce genre est de faire un &lt;code&gt;docker pull&lt;/code&gt; manuellement au préalable (le scripter depuis le fichier compose.yml n’est pas trop difficile).&lt;/p&gt;
 </description>
                                 <pubDate>Thu, 25 Jun 2015 00:00:00 +0000</pubDate>
                                 <link>http://code-troopers.com/2015/06/25/InstallDockerRegistry.html</link>
@@ -752,7 +718,7 @@ docker pull mondepotdocker.tld/monapplication:v1.0.0
                         </item>
                 
                         <item>
-                                <title>Améliorer la complétion JavaScript d&#39;IntelliJ IDEA</title>
+                                <title>Améliorer la complétion JavaScript d'IntelliJ IDEA</title>
                                 <description>&lt;h1 id=&quot;intellij-idea&quot;&gt;IntelliJ IDEA&lt;/h1&gt;
 &lt;p&gt;Tout le monde sait que nous adorons utiliser IntelliJ IDEA pour développer. 
 Peu importe le langage IntelliJ est vraiment un excellent IDE qui nous permet d’être efficaces quasiment instantanément.&lt;/p&gt;
@@ -820,7 +786,7 @@ ainsi qu’une documentation précise (pour la plupart des librairies).&lt;/p&gt
                 
                         <item>
                                 <title>Android Support Design Library</title>
-                                <description>&lt;p&gt;Avez-vous déjà essayé de transformer vos applications Android pour les rendre conformes aux &lt;a href=&quot;http://www.google.com/design/spec/material-design/introduction.html&quot;&gt;guidelines Material&lt;/a&gt;, si oui, vous avez dû comme nous, vous retrouver à importer plein de librairies tierces pour implémenter par exemple le &lt;code class=&quot;highlighter-rouge&quot;&gt;FAB button&lt;/code&gt;, ou même personnaliser le code pour rendre le &lt;code class=&quot;highlighter-rouge&quot;&gt;NavigationDrawer&lt;/code&gt; conforme (comme ce qui a pu être fait sur le squelette d’un &lt;a href=&quot;http://code-troopers.com/2014/11/26/SqueletteAndroid5.html&quot;&gt;précédent article&lt;/a&gt;. Et bien tout ceci est fini (enfin en partie), grâce à la nouvelle librairie Android de Google &lt;a href=&quot;http://developer.android.com/tools/support-library/features.html#design&quot;&gt;Design Support&lt;/a&gt;.&lt;/p&gt;
+                                <description>&lt;p&gt;Avez-vous déjà essayé de transformer vos applications Android pour les rendre conformes aux &lt;a href=&quot;http://www.google.com/design/spec/material-design/introduction.html&quot;&gt;guidelines Material&lt;/a&gt;, si oui, vous avez dû comme nous, vous retrouver à importer plein de librairies tierces pour implémenter par exemple le &lt;code&gt;FAB button&lt;/code&gt;, ou même personnaliser le code pour rendre le &lt;code&gt;NavigationDrawer&lt;/code&gt; conforme (comme ce qui a pu être fait sur le squelette d’un &lt;a href=&quot;http://code-troopers.com/2014/11/26/SqueletteAndroid5.html&quot;&gt;précédent article&lt;/a&gt;. Et bien tout ceci est fini (enfin en partie), grâce à la nouvelle librairie Android de Google &lt;a href=&quot;http://developer.android.com/tools/support-library/features.html#design&quot;&gt;Design Support&lt;/a&gt;.&lt;/p&gt;
 
 &lt;!--break--&gt;
 
@@ -870,25 +836,23 @@ Your browser does not support the video tag.
 
 &lt;p&gt;Si vous utilisez git, vous avez forcément fait des commandes de base pour rentrer votre nom et votre email (indispensable pour pusher vos commits)&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git config --global user.name &quot;Jango Fett&quot; 
+&lt;pre&gt;&lt;code&gt;$ git config --global user.name &quot;Jango Fett&quot; 
 $ git config --global user.email &quot;jango.fett@code-troopers.com&quot;
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
 &lt;p&gt;Ceci a pour but d’écrire dans votre fichier ~/.gitconfig ces simples lignes :&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[user]
+&lt;pre&gt;&lt;code&gt;[user]
     name = Jango Fett
     email = jango.fett@code-troopers.com
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
 &lt;!--break--&gt;
 
 &lt;h1 id=&quot;un-peu-de-couleurs&quot;&gt;Un peu de couleurs&lt;/h1&gt;
 &lt;p&gt;C’est toujours important d’avoir de la couleur, ça donne bonne mine, ça rend joyeux mais surtout ça aide à la lisibilité. Dans les dernières version de git, la couleur est activée automatiquement, mais vous pouvez toujours la modifier ! Voici un exemple de configuration :&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[color &quot;branch&quot;]
+&lt;pre&gt;&lt;code&gt;[color &quot;branch&quot;]
     current = yellow reverse
     local = yellow
     remote = green
@@ -902,7 +866,6 @@ $ git config --global user.email &quot;jango.fett@code-troopers.com&quot;
     changed = green
     untracked = cyan
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
 &lt;div style=&quot;text-align:center;margin-bottom:50px&quot;&gt;
     &lt;a href=&quot;/images/postDotfilesGit/gitcolours.png&quot; data-lightbox=&quot;group-1&quot; title=&quot;git avec couleurs personnalisées&quot; class=&quot;inlineBoxes&quot;&gt;
@@ -911,35 +874,31 @@ $ git config --global user.email &quot;jango.fett@code-troopers.com&quot;
 &lt;/div&gt;
 
 &lt;h1 id=&quot;gitignore-global&quot;&gt;gitignore global&lt;/h1&gt;
-&lt;p&gt;Parfois vous arrivez dans un environnement où personne n’utilise IntelliJ, peut-être même que vous voulez cacher le fait que vous utilisez IDEA. Dans ce cas, pas besoin de commiter un .gitignore qui contient &lt;code class=&quot;highlighter-rouge&quot;&gt;.idea&lt;/code&gt; et &lt;code class=&quot;highlighter-rouge&quot;&gt;*.iml&lt;/code&gt; mettez le plutôt dans &lt;code class=&quot;highlighter-rouge&quot;&gt;~/.gitignore&lt;/code&gt;. Pour que ça marche, vous devrez rajouter dans votre &lt;code class=&quot;highlighter-rouge&quot;&gt;~/.gitconfig&lt;/code&gt; :&lt;/p&gt;
+&lt;p&gt;Parfois vous arrivez dans un environnement où personne n’utilise IntelliJ, peut-être même que vous voulez cacher le fait que vous utilisez IDEA. Dans ce cas, pas besoin de commiter un .gitignore qui contient &lt;code&gt;.idea&lt;/code&gt; et &lt;code&gt;*.iml&lt;/code&gt; mettez le plutôt dans &lt;code&gt;~/.gitignore&lt;/code&gt;. Pour que ça marche, vous devrez rajouter dans votre &lt;code&gt;~/.gitconfig&lt;/code&gt; :&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[core]
+&lt;pre&gt;&lt;code&gt;[core]
     excludesfile = ~/.gitignore
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
 &lt;h1 id=&quot;j3-vim&quot;&gt;J’&amp;lt;3 vim&lt;/h1&gt;
 &lt;p&gt;J’aime vim, alors je le met partout. Besoin d’un éditeur de texte pour les commits ? vim !&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[core]
+&lt;pre&gt;&lt;code&gt;[core]
     editor = vim
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
 &lt;p&gt;Besoin d’un outil pour faire des diff ? vim !&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[merge] 
+&lt;pre&gt;&lt;code&gt;[merge] 
     tool = vimdiff
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
 &lt;h1 id=&quot;montre-nous-tes-fichiers&quot;&gt;Montre-nous tes fichiers&lt;/h1&gt;
-&lt;p&gt;Vous avez créé un nouveau répertoire, ajouté plein de fichiers dedans, et vous revenez en console pour voir ce qu’il y a à commiter. Soit un cas d’utilisation quotidien ou presque. Sauf que quand vous faîtes &lt;code class=&quot;highlighter-rouge&quot;&gt;git status&lt;/code&gt; seul le répertoire apparaît et pas les fichiers à l’intérieur ! Pour y remédier :&lt;/p&gt;
+&lt;p&gt;Vous avez créé un nouveau répertoire, ajouté plein de fichiers dedans, et vous revenez en console pour voir ce qu’il y a à commiter. Soit un cas d’utilisation quotidien ou presque. Sauf que quand vous faîtes &lt;code&gt;git status&lt;/code&gt; seul le répertoire apparaît et pas les fichiers à l’intérieur ! Pour y remédier :&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[status]
+&lt;pre&gt;&lt;code&gt;[status]
     showUntrackedFiles = all
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
 &lt;div style=&quot;text-align:center;margin-bottom:50px&quot;&gt;
     &lt;a href=&quot;/images/postDotfilesGit/git-status.png&quot; data-lightbox=&quot;group-1&quot; title=&quot;git status coloré&quot; class=&quot;inlineBoxes&quot;&gt;
@@ -950,47 +909,43 @@ $ git config --global user.email &quot;jango.fett@code-troopers.com&quot;
 &lt;h1 id=&quot;alias&quot;&gt;Alias&lt;/h1&gt;
 &lt;p&gt;Comme pour les shell, on peut créer des alias de commande. Par exemple :&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[alias] 
+&lt;pre&gt;&lt;code&gt;[alias] 
     cp = cherry-pick
     co = checkout
     cl = clone
     ci = commit 
     br = branch
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
 &lt;p&gt;C’est plus rapide à taper… un peu, et encore faut s’en souvenir que cp ça fait cherry-pick. Mais certaines commandes sont longues et là ça devient encore plus pertinent :&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    last = log -1 --stat
+&lt;pre&gt;&lt;code&gt;    last = log -1 --stat
     st = status -sb
     unstage = reset HEAD --
     dc = diff --cached
     pr = pull --rebase
-    lg = log --graph --pretty=format:&#39;%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %Cblue&amp;lt;%an&amp;gt;%Creset&#39; --abbrev-commit --date=relative --all
+    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %Cblue&amp;lt;%an&amp;gt;%Creset' --abbrev-commit --date=relative --all
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
 &lt;p&gt;Je vous laisse essayer celles qui ne sont pas explicite ;)&lt;/p&gt;
 
 &lt;h1 id=&quot;les-hooks&quot;&gt;Les Hooks&lt;/h1&gt;
 &lt;p&gt;Il y a beaucoup d’options et de choses à faire mais je terminerai cet article avec les hooks, qui mériteraient peut-être à eux seuls un article. Un hook −qui se traduit par « crochet »− va intercepter une commande afin de réaliser une action. Par exemple, quand je lance la commande commit, je veux vérifier que tous les tests passent, ou quand je push, je veux mettre à jour automatiquement le ticket jira associé, on peut vraiment tout faire vu qu’il s’agit juste de scripts à rajouter.&lt;/p&gt;
 
-&lt;p&gt;On a d’abord besoin de définir le répertoire qui va contenir les hooks. Vous pouvez ajouter dans votre &lt;code class=&quot;highlighter-rouge&quot;&gt;~/.gitconfig&lt;/code&gt; :&lt;/p&gt;
+&lt;p&gt;On a d’abord besoin de définir le répertoire qui va contenir les hooks. Vous pouvez ajouter dans votre &lt;code&gt;~/.gitconfig&lt;/code&gt; :&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[init]
+&lt;pre&gt;&lt;code&gt;[init]
     templatedir = ~/.git_template
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
-&lt;p&gt;Par exemple si vous voulez rajouter un script qui interdit de commiter &lt;code class=&quot;highlighter-rouge&quot;&gt;System.out.println&lt;/code&gt;, vous pouvez créer ce fichier : &lt;code class=&quot;highlighter-rouge&quot;&gt;~/.git_template/hooks/pre-commit&lt;/code&gt;
+&lt;p&gt;Par exemple si vous voulez rajouter un script qui interdit de commiter &lt;code&gt;System.out.println&lt;/code&gt;, vous pouvez créer ce fichier : &lt;code&gt;~/.git_template/hooks/pre-commit&lt;/code&gt;
 J’ai récupéré le mien sur https://github.com/borisguery/git-keywords-checker sur lequel j’ai juste modifié les deux variables KEYWORDS_REGEX et EXTENSIONS_REGEX. Ce qui donne grosso modo dans le fichier :&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;5 # Add or remove keywords here
+&lt;pre&gt;&lt;code&gt;5 # Add or remove keywords here
 6 KEYWORDS_REGEX=&quot;printStackTrace\(|FIXME|TODO&quot;
 7 # Add extensions to check here
 8 EXTENSIONS_REGEX=&quot;(.java$|.js$)&quot; On interdit de commiter `printStackTrace(` ou `FIXME` ou `TODO` dans les fichiers `java` ou `js`.
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
 &lt;div style=&quot;text-align:center;margin-bottom:50px&quot;&gt;
     &lt;a href=&quot;/images/postDotfilesGit/git-hooks.png&quot; data-lightbox=&quot;group-1&quot; title=&quot;git hooks pre-commit en action&quot; class=&quot;inlineBoxes&quot;&gt;
@@ -998,13 +953,13 @@ J’ai récupéré le mien sur https://github.com/borisguery/git-keywords-checke
     &lt;/a&gt;
 &lt;/div&gt;
 
-&lt;p&gt;Oui ça paraît un peu violent d’interdire le commit de TODO et FIXME mais on peut passer outre en commitant avec l’option &lt;code class=&quot;highlighter-rouge&quot;&gt;--no-verify&lt;/code&gt; et au moins on est au courant donc on n’oublie pas les actions nécessaires selon les équipes de travail (ajout d’un post-it, d’une carte trello etc.)&lt;/p&gt;
+&lt;p&gt;Oui ça paraît un peu violent d’interdire le commit de TODO et FIXME mais on peut passer outre en commitant avec l’option &lt;code&gt;--no-verify&lt;/code&gt; et au moins on est au courant donc on n’oublie pas les actions nécessaires selon les équipes de travail (ajout d’un post-it, d’une carte trello etc.)&lt;/p&gt;
 
 &lt;p&gt;2 petits détails pour que ça marche :&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Il faut que le script soit exécutable, donc vous pouvez faire &lt;code class=&quot;highlighter-rouge&quot;&gt;chmod +x ~/.git_template/hooks/pre-commit&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;Ce sera actif uniquement sur les nouveaux dépôts, pour activer le hook sur les dépôts existants, vous devez faire un &lt;code class=&quot;highlighter-rouge&quot;&gt;git init&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Il faut que le script soit exécutable, donc vous pouvez faire &lt;code&gt;chmod +x ~/.git_template/hooks/pre-commit&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Ce sera actif uniquement sur les nouveaux dépôts, pour activer le hook sur les dépôts existants, vous devez faire un &lt;code&gt;git init&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;Si vous voulez d’autres exemples de hooks, vous pouvez commencer par jeter un œil aux hooks de &lt;a href=&quot;https://github.com/petervanderdoes/git-flow-hooks&quot;&gt;git-flow&lt;/a&gt;&lt;/p&gt;
@@ -1022,16 +977,15 @@ J’ai récupéré le mien sur https://github.com/borisguery/git-keywords-checke
 &lt;h1 id=&quot;introduction&quot;&gt;Introduction&lt;/h1&gt;
 
 &lt;p&gt;Chez les troopers, on est comme beaucoup d’autres constamment alliés à la ligne de commande, cf nos articles sur &lt;a href=&quot;http://code-troopers.com/2014/10/01/babun.html&quot;&gt;babun&lt;/a&gt; et &lt;a href=&quot;http://code-troopers.com/2014/09/17/ohMyZsh.html&quot;&gt;oh-my-zsh&lt;/a&gt;. Un outil indispensable dans un terminal est un éditeur de fichier. Dans notre premier article sur les &lt;em&gt;dotfiles&lt;/em&gt; nous parlerons de vim, et plus spécialement de sa configuration avec vimrc. Si vous ne connaissez pas l’un des plus puissants éditeur de texte, commencez par vous renseigner dessus et sur les commandes de base par exemple sur &lt;a href=&quot;http://www.openvim.com/tutorial.html&quot;&gt;http://www.openvim.com/tutorial.html&lt;/a&gt;.
-Pour configurer vim, une seule chose à faire : &lt;code class=&quot;highlighter-rouge&quot;&gt;vim ~/.vimrc&lt;/code&gt;
+Pour configurer vim, une seule chose à faire : &lt;code&gt;vim ~/.vimrc&lt;/code&gt;
 &lt;!--break--&gt;&lt;/p&gt;
 
 &lt;h1 id=&quot;sauvez-cest-activ&quot;&gt;Sauvez c’est activé&lt;/h1&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;if has(&quot;autocmd&quot;)
+&lt;pre&gt;&lt;code&gt;if has(&quot;autocmd&quot;)
     autocmd! bufwritepost .vimrc source ~/.vimrc
 endif
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
 &lt;p&gt;De base sous vim on édite son .vimrc, on quitte et on réouvre un fichier pour voir la modification. Grâce à ces lignes, il suffira de sauvegarder pour voir ses modifications actives dans toutes les instances ouvertes de vim.&lt;/p&gt;
 
@@ -1041,13 +995,12 @@ endif
 
 &lt;h1 id=&quot;en-parlant-de-sauvegarde&quot;&gt;En parlant de sauvegarde&lt;/h1&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;noremap &amp;lt;C-Z&amp;gt; :update&amp;lt;CR&amp;gt;
+&lt;pre&gt;&lt;code&gt;noremap &amp;lt;C-Z&amp;gt; :update&amp;lt;CR&amp;gt;
 vnoremap &amp;lt;C-Z&amp;gt; &amp;lt;C-C&amp;gt;:update&amp;lt;CR&amp;gt;
 inoremap &amp;lt;C-Z&amp;gt; &amp;lt;C-O&amp;gt;:update&amp;lt;CR&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
-&lt;p&gt;Pour sauvegarder sous vim, il faut faire &lt;code class=&quot;highlighter-rouge&quot;&gt;:w&lt;/code&gt; Ce serait quand même mieux de faire &lt;code class=&quot;highlighter-rouge&quot;&gt;ctrl-z&lt;/code&gt; un peu à l’image des &lt;code class=&quot;highlighter-rouge&quot;&gt;ctrl-s&lt;/code&gt; que l’on trouve partout ailleurs.&lt;/p&gt;
+&lt;p&gt;Pour sauvegarder sous vim, il faut faire &lt;code&gt;:w&lt;/code&gt; Ce serait quand même mieux de faire &lt;code&gt;ctrl-z&lt;/code&gt; un peu à l’image des &lt;code&gt;ctrl-s&lt;/code&gt; que l’on trouve partout ailleurs.&lt;/p&gt;
 
 &lt;div style=&quot;text-align: center;margin:50px;&quot;&gt;
 &lt;video style=&quot;width: 90%; max-width: 600px;&quot; controls=&quot;&quot; src=&quot;/videos/dotfiles-ctrlz.webm&quot;&gt;&lt;/video&gt;
@@ -1055,15 +1008,14 @@ inoremap &amp;lt;C-Z&amp;gt; &amp;lt;C-O&amp;gt;:update&amp;lt;CR&amp;gt;
 
 &lt;h1 id=&quot;et-pourquoi-pas-ctrl-s&quot;&gt;Et pourquoi pas ctrl-s&lt;/h1&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;inoremap &amp;lt;C-c&amp;gt; &amp;lt;Left&amp;gt;
+&lt;pre&gt;&lt;code&gt;inoremap &amp;lt;C-c&amp;gt; &amp;lt;Left&amp;gt;
 inoremap &amp;lt;C-t&amp;gt; &amp;lt;Down&amp;gt;
 inoremap &amp;lt;C-s&amp;gt; &amp;lt;Up&amp;gt;
 inoremap &amp;lt;C-r&amp;gt; &amp;lt;Right&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
 &lt;p&gt;Ça pose un problème car ctrl-s me permet de me déplacer vers le haut dans vim en mode &lt;strong&gt;insertion&lt;/strong&gt;.
-Selon la disposition de votre clavier, vous pouvez remplacer &lt;code class=&quot;highlighter-rouge&quot;&gt;c&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;t&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;s&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;r&lt;/code&gt; par &lt;code class=&quot;highlighter-rouge&quot;&gt;h&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;j&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;k&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;l&lt;/code&gt; si vous avez un clavier azerty. Ainsi les touches &lt;code class=&quot;highlighter-rouge&quot;&gt;hjkl&lt;/code&gt; permettent de se déplacer en mode &lt;strong&gt;visuel&lt;/strong&gt; et &lt;code class=&quot;highlighter-rouge&quot;&gt;ctrl + hjkl&lt;/code&gt; permettent de se déplacer en mode &lt;strong&gt;insertion&lt;/strong&gt;. Plus aucune raison d’utiliser les flèches sous vim !&lt;/p&gt;
+Selon la disposition de votre clavier, vous pouvez remplacer &lt;code&gt;c&lt;/code&gt;, &lt;code&gt;t&lt;/code&gt;, &lt;code&gt;s&lt;/code&gt;, &lt;code&gt;r&lt;/code&gt; par &lt;code&gt;h&lt;/code&gt;, &lt;code&gt;j&lt;/code&gt;, &lt;code&gt;k&lt;/code&gt;, &lt;code&gt;l&lt;/code&gt; si vous avez un clavier azerty. Ainsi les touches &lt;code&gt;hjkl&lt;/code&gt; permettent de se déplacer en mode &lt;strong&gt;visuel&lt;/strong&gt; et &lt;code&gt;ctrl + hjkl&lt;/code&gt; permettent de se déplacer en mode &lt;strong&gt;insertion&lt;/strong&gt;. Plus aucune raison d’utiliser les flèches sous vim !&lt;/p&gt;
 
 &lt;div style=&quot;text-align: center;margin:50px;&quot;&gt;
 &lt;video style=&quot;width: 90%; max-width: 600px;&quot; controls=&quot;&quot; src=&quot;/videos/dotfiles-ctrlctsr.webm&quot;&gt;&lt;/video&gt;
@@ -1071,9 +1023,8 @@ Selon la disposition de votre clavier, vous pouvez remplacer &lt;code class=&quo
 
 &lt;h1 id=&quot;un-peu-de-couleurs&quot;&gt;un peu de couleurs&lt;/h1&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;syntax on
+&lt;pre&gt;&lt;code&gt;syntax on
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
 &lt;p&gt;vim connaît à peu près tous les langages, de Shell à Java, en passant par le XML ou les simples fichiers de configuration. Avec cette commande,  vous aurez donc automatiquement la coloration syntaxique.&lt;/p&gt;
 
@@ -1083,11 +1034,10 @@ Selon la disposition de votre clavier, vous pouvez remplacer &lt;code class=&quo
 
 &lt;h1 id=&quot;set-nu&quot;&gt;set nu&lt;/h1&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;set number
+&lt;pre&gt;&lt;code&gt;set number
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
-&lt;p&gt;Pour afficher les numéros de ligne on peut taper &lt;code class=&quot;highlighter-rouge&quot;&gt;:set nu&lt;/code&gt;. La commande est certes rigolote à écrire (comprenne qui pourra) mais ça ne suffit pas pour se retenir de l’automatiser.&lt;/p&gt;
+&lt;p&gt;Pour afficher les numéros de ligne on peut taper &lt;code&gt;:set nu&lt;/code&gt;. La commande est certes rigolote à écrire (comprenne qui pourra) mais ça ne suffit pas pour se retenir de l’automatiser.&lt;/p&gt;
 
 &lt;div style=&quot;text-align: center;margin:50px;&quot;&gt;
 &lt;video style=&quot;width: 90%; max-width: 600px;&quot; controls=&quot;&quot; src=&quot;/videos/dotfiles-setnu.webm&quot;&gt;&lt;/video&gt;
@@ -1095,12 +1045,11 @@ Selon la disposition de votre clavier, vous pouvez remplacer &lt;code class=&quo
 
 &lt;h1 id=&quot;viter-la-touche-chap&quot;&gt;Éviter la touche échap&lt;/h1&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;inoremap éé &amp;lt;esc&amp;gt;
+&lt;pre&gt;&lt;code&gt;inoremap éé &amp;lt;esc&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
 &lt;p&gt;Pour sortir du mode &lt;strong&gt;insertion&lt;/strong&gt;, il faut appuyer sur la touche échap par défaut. Même pour un pianiste, cette touche est trèèèèès loin sur le clavier. Mais vous pouvez bien évidemment remapper cette action. Si vous voulez des inspirations sur les meilleures combinaisons, vous pouvez regarder là : &lt;a href=&quot;http://vim.wikia.com/wiki/Avoid_the_escape_key&quot;&gt;http://vim.wikia.com/wiki/Avoid_the_escape_key&lt;/a&gt;
-Comme je suis en bépo (au lieu de azerty) et que je n’écris presque jamais de français avec vim, j’ai utilisé le mot clé &lt;code class=&quot;highlighter-rouge&quot;&gt;éé&lt;/code&gt;. Certains mappent sur &lt;code class=&quot;highlighter-rouge&quot;&gt;ii&lt;/code&gt; mais vim marquera une légère pause à chaque appui sur la touche i qui est assez déstabilisant.&lt;/p&gt;
+Comme je suis en bépo (au lieu de azerty) et que je n’écris presque jamais de français avec vim, j’ai utilisé le mot clé &lt;code&gt;éé&lt;/code&gt;. Certains mappent sur &lt;code&gt;ii&lt;/code&gt; mais vim marquera une légère pause à chaque appui sur la touche i qui est assez déstabilisant.&lt;/p&gt;
 
 &lt;div style=&quot;text-align: center;margin:50px;&quot;&gt;
 &lt;video style=&quot;width: 90%; max-width: 600px;&quot; controls=&quot;&quot; src=&quot;/videos/dotfiles-exitee.webm&quot;&gt;&lt;/video&gt;
@@ -1111,22 +1060,20 @@ Comme je suis en bépo (au lieu de azerty) et que je n’écris presque jamais d
 &lt;p&gt;On peut faire tellement de choses, ça prendrait des semaines pour tout configurer. Pour avoir d’autres features super cool en 2 secondes,  on peut ajouter des plugins. Le gestionnaire de plugin le plus connu pour vim est sans doute pathogen.
 Pour l’installation, il suffit de faire :&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;mkdir -p ~/.vim/autoload ~/.vim/bundle &amp;amp;&amp;amp; \
+&lt;pre&gt;&lt;code&gt;mkdir -p ~/.vim/autoload ~/.vim/bundle &amp;amp;&amp;amp; \
 curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
 &lt;p&gt;Maintenant, passons à quelques plugins.&lt;/p&gt;
 
 &lt;h2 id=&quot;colorscheme-couleurs&quot;&gt;Colorscheme couleurs&lt;/h2&gt;
 &lt;p&gt;Les couleurs sont ternes ? le bleu sur noir des commentaires est illisible ? Alors changez les couleurs.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cd ~/.vim/bundle
+&lt;pre&gt;&lt;code&gt;cd ~/.vim/bundle
 git clone https://github.com/flazz/vim-colorschemes.git
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
-&lt;p&gt;Ajoutez ensuite &lt;code class=&quot;highlighter-rouge&quot;&gt;colors matrix&lt;/code&gt; dans votre &lt;code class=&quot;highlighter-rouge&quot;&gt;.vimrc&lt;/code&gt;. La liste des template de couleurs utilisables se trouvent dans &lt;code class=&quot;highlighter-rouge&quot;&gt;~/.vim/bundle/colorschemes/colors&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Ajoutez ensuite &lt;code&gt;colors matrix&lt;/code&gt; dans votre &lt;code&gt;.vimrc&lt;/code&gt;. La liste des template de couleurs utilisables se trouvent dans &lt;code&gt;~/.vim/bundle/colorschemes/colors&lt;/code&gt;.&lt;/p&gt;
 
 &lt;div style=&quot;text-align: center;margin:50px;&quot;&gt;
 &lt;video style=&quot;width: 90%; max-width: 600px;&quot; controls=&quot;&quot; src=&quot;/videos/dotfiles-colormatrix.webm&quot;&gt;&lt;/video&gt;
@@ -1134,12 +1081,11 @@ git clone https://github.com/flazz/vim-colorschemes.git
 
 &lt;h2 id=&quot;nerdtree&quot;&gt;nerdtree&lt;/h2&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cd ~/.vim/bundle
+&lt;pre&gt;&lt;code&gt;cd ~/.vim/bundle
 git clone https://github.com/scrooloose/nerdtree.git
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
-&lt;p&gt;Et ajoutez dans votre &lt;code class=&quot;highlighter-rouge&quot;&gt;.vimrc&lt;/code&gt; : &lt;code class=&quot;highlighter-rouge&quot;&gt;map &amp;lt;C-n&amp;gt; :NERDTreeToggle&amp;lt;CR&amp;gt;&lt;/code&gt;
+&lt;p&gt;Et ajoutez dans votre &lt;code&gt;.vimrc&lt;/code&gt; : &lt;code&gt;map &amp;lt;C-n&amp;gt; :NERDTreeToggle&amp;lt;CR&amp;gt;&lt;/code&gt;
 Dorénavant, il vous suffira de faire ctrl-n pour avoir votre répertoire de travail comme dans n’importe quel autre IDE.&lt;/p&gt;
 
 &lt;div style=&quot;text-align: center;margin:50px;&quot;&gt;
@@ -1148,14 +1094,13 @@ Dorénavant, il vous suffira de faire ctrl-n pour avoir votre répertoire de tra
 
 &lt;h2 id=&quot;nerdcommenter&quot;&gt;nerdcommenter&lt;/h2&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cd ~/.vim/bundle
+&lt;pre&gt;&lt;code&gt;cd ~/.vim/bundle
 git clone https://github.com/scrooloose/nerdcommenter.git
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
-&lt;p&gt;Et dans votre &lt;code class=&quot;highlighter-rouge&quot;&gt;.vimrc&lt;/code&gt; : &lt;code class=&quot;highlighter-rouge&quot;&gt;filetype plugin on&lt;/code&gt;
-aintenant, en faisant &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;Leader&amp;gt;cc&lt;/code&gt; que ce soit dans un fichier html, java, python, shell etc. la ligne se mettra en commentaire. Vous pouvez aussi le faire après avoir sélectionné plusieurs lignes.
-Si vous vous demandez ce qu’est la touche &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;Leader&amp;gt;&lt;/code&gt; c’est une touche définie pour faire certaines actions. Par défaut il s’agit de la touche &lt;code class=&quot;highlighter-rouge&quot;&gt;\&lt;/code&gt;mais vous pouvez évidemment la remapper. J’utilise la touche &lt;code class=&quot;highlighter-rouge&quot;&gt;,&lt;/code&gt; pour ma part grâce à : &lt;code class=&quot;highlighter-rouge&quot;&gt;let mapleader=&quot;,&quot;&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Et dans votre &lt;code&gt;.vimrc&lt;/code&gt; : &lt;code&gt;filetype plugin on&lt;/code&gt;
+aintenant, en faisant &lt;code&gt;&amp;lt;Leader&amp;gt;cc&lt;/code&gt; que ce soit dans un fichier html, java, python, shell etc. la ligne se mettra en commentaire. Vous pouvez aussi le faire après avoir sélectionné plusieurs lignes.
+Si vous vous demandez ce qu’est la touche &lt;code&gt;&amp;lt;Leader&amp;gt;&lt;/code&gt; c’est une touche définie pour faire certaines actions. Par défaut il s’agit de la touche &lt;code&gt;\&lt;/code&gt;mais vous pouvez évidemment la remapper. J’utilise la touche &lt;code&gt;,&lt;/code&gt; pour ma part grâce à : &lt;code&gt;let mapleader=&quot;,&quot;&lt;/code&gt;.&lt;/p&gt;
 
 &lt;div style=&quot;text-align: center;margin:50px;&quot;&gt;
 &lt;video style=&quot;width: 90%; max-width: 600px;&quot; controls=&quot;&quot; src=&quot;/videos/dotfiles-comment.webm&quot;&gt;&lt;/video&gt;
@@ -1169,10 +1114,9 @@ Si vous vous demandez ce qu’est la touche &lt;code class=&quot;highlighter-rou
 
 &lt;p&gt;Si vous aimez vim et IntelliJ, vous pouvez installer le plugin ideavim qui permet d’avoir vim comme éditeur de texte et depuis quelques mois vous pouvez même importer vos settings vim dans le plugin :&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ cat ~/.ideavimrc
+&lt;pre&gt;&lt;code&gt;$ cat ~/.ideavimrc
 source ~/.vimrc
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 </description>
                                 <pubDate>Fri, 15 May 2015 00:00:00 +0000</pubDate>
                                 <link>http://code-troopers.com/2015/05/15/Dotfiles-vim.html</link>
