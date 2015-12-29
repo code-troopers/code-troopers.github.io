@@ -18,6 +18,6 @@ gulp.task('images', function() {
 
 gulp.task('compress-images', function(){
 	return gulp.src(config.images.src)
-	.pipe(imagemin())
+	.pipe(imagemin({progressive: true}))
 	.pipe(gulp.dest(config.images.destSrc))
 });
