@@ -13,15 +13,22 @@ RUN apt-get update && \
     #chmod 0440 /etc/sudoers.d/${user} && \
     #chown ${UID}:${GID} -R /home/${user}
 
-RUN apt-get update && \
-    apt-get install -y nodejs-legacy npm && \
-    apt-get clean
+
+# Install Node
+
+ENV NPM_CONFIG_LOGLEVEL info
+ENV NODE_VERSION 5.3.0
+
+RUN curl -SLO "https://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux-x64.tar.gz" \
+  && curl -SLO "https://nodejs.org/dist/v$NODE_VERSION/SHASUMS256.txt.asc" \
+  && grep " node-v$NODE_VERSION-linux-x64.tar.gz\$" SHASUMS256.txt.asc | sha256sum -c - \
+  && tar -xzf "node-v$NODE_VERSION-linux-x64.tar.gz" -C /usr/local --strip-components=1 \
+  && rm "node-v$NODE_VERSION-linux-x64.tar.gz" SHASUMS256.txt.asc
 
 RUN npm install -g gulp && \
-    npm install -g grunt && \
-    npm install -g grunt-cli && \
     npm install -g bower
 
+# Install jekyll
 RUN gem install jekyll rdiscount kramdown jekyll-paginate
 RUN gem install jekyll-paginate
 

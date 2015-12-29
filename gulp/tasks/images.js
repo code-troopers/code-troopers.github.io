@@ -10,7 +10,8 @@ var browserSync = require('browser-sync');
 gulp.task('images', function() {
   return gulp.src(config.images.src)
     .pipe(changed(config.images.dest))
-    .pipe(imagemin())
+   // Images are now compress on repo (see task below)
+   // .pipe(imagemin())
     .pipe(gulp.dest(config.images.dest))
     .pipe(gulpif(browserSync.active, browserSync.reload({ stream: true, once: true })));
 });
