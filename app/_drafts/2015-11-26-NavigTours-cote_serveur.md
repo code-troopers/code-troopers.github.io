@@ -10,7 +10,7 @@ tags: [Archi,Docker,NavigTours,Java8,Restx]
 Cet article, une fois n'est pas coutume, va rentrer un peu plus dans le fonctionnement de la partie serveur mise en place pour [Navig'Tours](http://navigtours.com/).
 Si vous n'êtes pas technique, il risque d'être compliqué de le suivre !
 
-<!-- break -->
+<!--break-->
   
 ## Architecture
 La partie serveur de Navig'Tours est en réalité assez simple. Comme dit lors de différentes présentations des membres de Code-Troopers, ce projet est pour nous un moyen de nous amuser lorsque nous nous retrouvons tous les septs,
