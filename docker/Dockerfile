@@ -26,7 +26,7 @@ RUN gem install jekyll -v "2.5.3" \
     && gem install rdiscount kramdown jekyll-paginate jekyll-asciidoc asciidoctor pygments.rb
 
 VOLUME /src
-EXPOSE 9002
+EXPOSE 3000
 
 WORKDIR /src
 USER ct
