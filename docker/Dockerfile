@@ -37,7 +37,7 @@ EXPOSE 3000
 WORKDIR /src
 USER ct
 
-RUN gulp generate_pygments_css
+RUN pygmentize -S monokai -f html -O classprefix=tok- > /home/ct/pygments.css
 
 ADD run /run.sh
 CMD ["/run.sh"]
