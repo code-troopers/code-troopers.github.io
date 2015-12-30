@@ -1,6 +1,7 @@
 node_modules
-dist
-_site
+generated
+public
+.publish
 .grunt
 .tmp
 app/bower_components

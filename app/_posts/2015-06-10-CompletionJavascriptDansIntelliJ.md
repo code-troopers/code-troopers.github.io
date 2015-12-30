@@ -15,7 +15,7 @@ Par contre, quand on arrive dans le monde du JavaScript on peut avoir quelques s
 dans un environnement suffisamment typé où l'on sait ce qu'on va faire sans se poser trop de questions, 
 ou tout simplement pouvoir bénéficier de l'aide de l'IDE pour savoir de quelles méthodes on dispose.
 
-<!-- break -->
+<!--break-->
 
 ## JavaScript dans IntelliJ
 Par défaut, IntelliJ est déjà suffisament malin pour scanner les fichiers du workspace 
