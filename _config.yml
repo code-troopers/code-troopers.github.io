@@ -10,12 +10,11 @@ gems: [jekyll-paginate, jekyll-asciidoc]
 paginate: 6
 paginate_path: "/blog/page:num/"
 
-pygments: true
+highlights: pygments
 
 asciidoctor:
   attributes:
     - hardbreaks!
     - source-highlighter=pygments
     - pygments-css=class
-    - pygments-style=monokai
     - icons=font

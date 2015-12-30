@@ -5,7 +5,7 @@ module.exports = {
   'serverport'     : 9000,
 
   'styles': {
-    'src' : 'app/styles/**/*.less',
+    'src' : ['app/styles/**/*.less', 'app/styles/**/*.css', '/home/ct/*.css'],
     'dest': 'public/styles'
   },
 

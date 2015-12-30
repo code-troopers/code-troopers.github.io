@@ -29,12 +29,15 @@ RUN npm install -g gulp && \
     npm install -g bower
 
 RUN gem install jekyll -v "2.5.3" \
-    && gem install rdiscount kramdown jekyll-paginate jekyll-asciidoc asciidoctor pygments.rb
+    && gem install rdiscount kramdown jekyll-paginate jekyll-asciidoc asciidoctor pygments.rb pygmentize
 
 VOLUME /src
 EXPOSE 3000
 
 WORKDIR /src
 USER ct
+
+RUN gulp generate_pygments_css
+
 ADD run /run.sh
 CMD ["/run.sh"]
