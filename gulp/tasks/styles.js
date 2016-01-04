@@ -10,8 +10,10 @@ var nano       = require('gulp-cssnano');
 var csslint      = require('gulp-csslint');
 var autoprefixer = require('gulp-autoprefixer');
 var isProd    = require('../util/isProduction');
+var del       = require('del');
 
 gulp.task('styles', function () {
+	del(['public/styles/**/*']);
   var combined = combiner.obj([
 		gulp.src(config.styles.src),
 		less(),

@@ -10,6 +10,7 @@ var autoprefixer = require('gulp-autoprefixer');
 var uglify       = require('gulp-uglify');
 var jshint       = require('gulp-jshint');
 var isProd    = require('../util/isProduction');
+var del          = require('del');
 
 gulp.task('scripts', ['ie8'], function () {
 	var combined = combiner.obj([
@@ -26,6 +27,7 @@ gulp.task('scripts', ['ie8'], function () {
 });
 
 gulp.task('ie8', function () {
+	del(config.scripts.dest)
 	var combined = combiner.obj([
 			gulp.src(config.scripts.srcIE8),
 			concat('ie8.js'),
