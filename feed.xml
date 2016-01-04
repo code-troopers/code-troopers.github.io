@@ -7,6 +7,66 @@
                 <atom:link href="http://code-troopers.com/feed.xml" rel="self" type="application/rss+xml"/>
                 
                         <item>
+                                <title>Navig'Tours : côté serveur</title>
+                                <description>&lt;p&gt;Cet article, une fois n’est pas coutume, va rentrer un peu plus dans le fonctionnement de la partie serveur mise en place pour &lt;a href=&quot;http://navigtours.com/&quot;&gt;Navig’Tours&lt;/a&gt;.
+Si vous n’êtes pas technique, il risque d’être compliqué de le suivre !&lt;/p&gt;
+
+&lt;!--break--&gt;
+
+&lt;h2 id=&quot;architecture&quot;&gt;Architecture&lt;/h2&gt;
+&lt;p&gt;La partie serveur de Navig’Tours est en réalité assez simple. Comme dit lors de différentes présentations des membres de Code-Troopers, ce projet est pour nous un moyen de nous amuser lorsque nous nous retrouvons tous les septs,
+C’est également le projet que nous utilisons pour tester certaines technologies et approches.&lt;/p&gt;
+
+&lt;p&gt;Ainsi, Navig’Tours est une application développée en utilisant Java 8, mais rien de forcément très étonnant maintenant. Le côté le plus intéressant est qu’elle est en production depuis plus d’un an maintenant avec Java 8 !&lt;/p&gt;
+
+&lt;p&gt;Ensuite, nous utilisons l’excellent framework RestX pour simplifier notre vie dans la gestion des appels REST, ce qu’il nous apporte, entre autres :&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;de l’injection de dépendances lors de la compilation&lt;/li&gt;
+  &lt;li&gt;un outillage d’administration complet&lt;/li&gt;
+  &lt;li&gt;une plateforme de test intégrée et de specs nous permettant de documenter facilement l’API&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Enfin, pour la partie stockage des données, nous utilisons MongoDB qui nous simplifie la gestion de données en manipulant des données principalement au format JSON (et fournit une bonne gestion de la géolocalisation par coordonnées).&lt;/p&gt;
+
+&lt;h2 id=&quot;du-dev&quot;&gt;Du dev…&lt;/h2&gt;
+&lt;p&gt;Côté dev, nous utilisons notre petit wrapper (&lt;a href=&quot;http://code-troopers.com/2014/12/15/CT_Project_Alias.html&quot;&gt;ct&lt;/a&gt;) pour les tâches classiques qui se charge d’effectuer le build ainsi que le run de l’application avec ces dépendances.
+Le lancement de l’application se limite à mettre à disposition un serveur MongoDB ainsi qu’à effectuer un &lt;code&gt;java -jar&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;la-prod-&quot;&gt;À la prod !&lt;/h2&gt;
+&lt;p&gt;Historiquement, l’application a été déployée sur Heroku dans son plan gratuit en utilisant plusieurs services cibles (pour répartir la charge via l’utilisation de plusieurs entrées DNS).&lt;/p&gt;
+
+&lt;p&gt;Mais, suite au changement de tarification d’Heroku et notre envie d’utiliser Docker sur un vrai projet, nous avons migré l’environnement pour utiliser exclusivement Docker.&lt;/p&gt;
+
+&lt;p&gt;Un des intérêts de la transformation que nous avons opéré est que nous sommes également capable de lancer l’application très simplement à l’aide de descripteurs Docker ainsi que du docker-compose qui décrit les interactions entre nos services.&lt;/p&gt;
+
+&lt;h2 id=&quot;process-de-livraison&quot;&gt;Process de livraison&lt;/h2&gt;
+&lt;p&gt;Pour effectuer la livraison de l’application, nous sommes passés d’un &lt;code&gt;git push&lt;/code&gt; vers heroku à un process impliquant Jenkins dans 3 étapes successives (mais qui s’enchaînent automatiquement) :&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;construction de l’application et archivage dans un &lt;code&gt;tgz&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;copie du tgz produit pour la construction d’une image Docker poussée vers notre dépôt interne&lt;/li&gt;
+  &lt;li&gt;lancement de l’application via un &lt;code&gt;docker-compose run -d&lt;/code&gt; sur les machines cibles&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;gestion-du-multi-environnement&quot;&gt;Gestion du multi-environnement&lt;/h2&gt;
+&lt;p&gt;Comme toutes les applications d’entreprise, nous déployons vers plusieurs environnement afin de valider la bonne tenue de l’application et la qualité de nos développements :&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;dev / local : poste du développeur&lt;/li&gt;
+  &lt;li&gt;preprod : version à passer en production&lt;/li&gt;
+  &lt;li&gt;prod : version actuelle&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;À ceci, nous pouvons ajouter plusieurs versions en parallèle pour différentes fonctionnalités et/ou villes (l’info exclusive est cachée ici, Navig’VotreVille arrive…). 
+Pour être capable de gérer des déploiements différents nous avons ajouté quelques paramètres à nos scripts de lancement de docker-compose nous permettant de disposer de noms différents par projet pous éviter les problèmes.&lt;/p&gt;
+</description>
+                                <pubDate>Mon, 04 Jan 2016 00:00:00 +0000</pubDate>
+                                <link>http://code-troopers.com/2016/01/04/NavigTours-cote_serveur.html</link>
+                                <guid isPermaLink="true">http://code-troopers.com/2016/01/04/NavigTours-cote_serveur.html</guid>
+                        </item>
+                
+                        <item>
                                 <title>Android : Publier son apk en ligne de commande</title>
                                 <description>&lt;p&gt;Lorsque l’on fait du développement Android, on a régulièrement besoin de publier des nouvelles versions de l’application sur le Play Store. 
 Il est assez fastidieux de devoir se connecter à l’interface de Google, de sélectionner le projet et ensuite d’uploader son nouvel apk.&lt;/p&gt;
@@ -968,159 +1028,6 @@ J’ai récupéré le mien sur https://github.com/borisguery/git-keywords-checke
                                 <pubDate>Fri, 22 May 2015 00:00:00 +0000</pubDate>
                                 <link>http://code-troopers.com/2015/05/22/Dotfiles-git.html</link>
                                 <guid isPermaLink="true">http://code-troopers.com/2015/05/22/Dotfiles-git.html</guid>
-                        </item>
-                
-                        <item>
-                                <title>vim : 10 astuces de configuration pour vos dotfiles</title>
-                                <description>&lt;p&gt;Cet article sera le premier d’une série consacrée aux &lt;em&gt;dotfiles&lt;/em&gt;. Alors les &lt;em&gt;dotfiles&lt;/em&gt;, qu’est-ce que c’est Obi-Wan ? Les &lt;em&gt;dotfiles&lt;/em&gt;, ce sont tous les fichiers texte de configuration que l’on peut retrouver dans son répertoire utilisateur pour sauvegarder ses préférences. De nombreux logiciels utilisent cette méthode. On peut citer gnome, IntelliJ, Maven,  ssh, git, bash et tant d’autres. On les appelle &lt;em&gt;dotfiles&lt;/em&gt; −que l’on peut traduire par fichiers point− parce qu’ils ont un nom qui commence par un point, ce qui correspond aux fichiers cachés sous linux.&lt;/p&gt;
-
-&lt;h1 id=&quot;introduction&quot;&gt;Introduction&lt;/h1&gt;
-
-&lt;p&gt;Chez les troopers, on est comme beaucoup d’autres constamment alliés à la ligne de commande, cf nos articles sur &lt;a href=&quot;http://code-troopers.com/2014/10/01/babun.html&quot;&gt;babun&lt;/a&gt; et &lt;a href=&quot;http://code-troopers.com/2014/09/17/ohMyZsh.html&quot;&gt;oh-my-zsh&lt;/a&gt;. Un outil indispensable dans un terminal est un éditeur de fichier. Dans notre premier article sur les &lt;em&gt;dotfiles&lt;/em&gt; nous parlerons de vim, et plus spécialement de sa configuration avec vimrc. Si vous ne connaissez pas l’un des plus puissants éditeur de texte, commencez par vous renseigner dessus et sur les commandes de base par exemple sur &lt;a href=&quot;http://www.openvim.com/tutorial.html&quot;&gt;http://www.openvim.com/tutorial.html&lt;/a&gt;.
-Pour configurer vim, une seule chose à faire : &lt;code&gt;vim ~/.vimrc&lt;/code&gt;
-&lt;!--break--&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;sauvez-cest-activ&quot;&gt;Sauvez c’est activé&lt;/h1&gt;
-
-&lt;pre&gt;&lt;code&gt;if has(&quot;autocmd&quot;)
-    autocmd! bufwritepost .vimrc source ~/.vimrc
-endif
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;De base sous vim on édite son .vimrc, on quitte et on réouvre un fichier pour voir la modification. Grâce à ces lignes, il suffira de sauvegarder pour voir ses modifications actives dans toutes les instances ouvertes de vim.&lt;/p&gt;
-
-&lt;div style=&quot;text-align: center;margin:50px;&quot;&gt;
-&lt;video style=&quot;width: 90%; max-width: 600px;&quot; controls=&quot;&quot; src=&quot;/videos/dotfiles-saveactif.webm&quot;&gt;&lt;/video&gt;
-&lt;/div&gt;
-
-&lt;h1 id=&quot;en-parlant-de-sauvegarde&quot;&gt;En parlant de sauvegarde&lt;/h1&gt;
-
-&lt;pre&gt;&lt;code&gt;noremap &amp;lt;C-Z&amp;gt; :update&amp;lt;CR&amp;gt;
-vnoremap &amp;lt;C-Z&amp;gt; &amp;lt;C-C&amp;gt;:update&amp;lt;CR&amp;gt;
-inoremap &amp;lt;C-Z&amp;gt; &amp;lt;C-O&amp;gt;:update&amp;lt;CR&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Pour sauvegarder sous vim, il faut faire &lt;code&gt;:w&lt;/code&gt; Ce serait quand même mieux de faire &lt;code&gt;ctrl-z&lt;/code&gt; un peu à l’image des &lt;code&gt;ctrl-s&lt;/code&gt; que l’on trouve partout ailleurs.&lt;/p&gt;
-
-&lt;div style=&quot;text-align: center;margin:50px;&quot;&gt;
-&lt;video style=&quot;width: 90%; max-width: 600px;&quot; controls=&quot;&quot; src=&quot;/videos/dotfiles-ctrlz.webm&quot;&gt;&lt;/video&gt;
-&lt;/div&gt;
-
-&lt;h1 id=&quot;et-pourquoi-pas-ctrl-s&quot;&gt;Et pourquoi pas ctrl-s&lt;/h1&gt;
-
-&lt;pre&gt;&lt;code&gt;inoremap &amp;lt;C-c&amp;gt; &amp;lt;Left&amp;gt;
-inoremap &amp;lt;C-t&amp;gt; &amp;lt;Down&amp;gt;
-inoremap &amp;lt;C-s&amp;gt; &amp;lt;Up&amp;gt;
-inoremap &amp;lt;C-r&amp;gt; &amp;lt;Right&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Ça pose un problème car ctrl-s me permet de me déplacer vers le haut dans vim en mode &lt;strong&gt;insertion&lt;/strong&gt;.
-Selon la disposition de votre clavier, vous pouvez remplacer &lt;code&gt;c&lt;/code&gt;, &lt;code&gt;t&lt;/code&gt;, &lt;code&gt;s&lt;/code&gt;, &lt;code&gt;r&lt;/code&gt; par &lt;code&gt;h&lt;/code&gt;, &lt;code&gt;j&lt;/code&gt;, &lt;code&gt;k&lt;/code&gt;, &lt;code&gt;l&lt;/code&gt; si vous avez un clavier azerty. Ainsi les touches &lt;code&gt;hjkl&lt;/code&gt; permettent de se déplacer en mode &lt;strong&gt;visuel&lt;/strong&gt; et &lt;code&gt;ctrl + hjkl&lt;/code&gt; permettent de se déplacer en mode &lt;strong&gt;insertion&lt;/strong&gt;. Plus aucune raison d’utiliser les flèches sous vim !&lt;/p&gt;
-
-&lt;div style=&quot;text-align: center;margin:50px;&quot;&gt;
-&lt;video style=&quot;width: 90%; max-width: 600px;&quot; controls=&quot;&quot; src=&quot;/videos/dotfiles-ctrlctsr.webm&quot;&gt;&lt;/video&gt;
-&lt;/div&gt;
-
-&lt;h1 id=&quot;un-peu-de-couleurs&quot;&gt;un peu de couleurs&lt;/h1&gt;
-
-&lt;pre&gt;&lt;code&gt;syntax on
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;vim connaît à peu près tous les langages, de Shell à Java, en passant par le XML ou les simples fichiers de configuration. Avec cette commande,  vous aurez donc automatiquement la coloration syntaxique.&lt;/p&gt;
-
-&lt;div style=&quot;text-align: center;margin:50px;&quot;&gt;
-&lt;video style=&quot;width: 90%; max-width: 600px;&quot; controls=&quot;&quot; src=&quot;/videos/dotfiles-syntax.webm&quot;&gt;&lt;/video&gt;
-&lt;/div&gt;
-
-&lt;h1 id=&quot;set-nu&quot;&gt;set nu&lt;/h1&gt;
-
-&lt;pre&gt;&lt;code&gt;set number
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Pour afficher les numéros de ligne on peut taper &lt;code&gt;:set nu&lt;/code&gt;. La commande est certes rigolote à écrire (comprenne qui pourra) mais ça ne suffit pas pour se retenir de l’automatiser.&lt;/p&gt;
-
-&lt;div style=&quot;text-align: center;margin:50px;&quot;&gt;
-&lt;video style=&quot;width: 90%; max-width: 600px;&quot; controls=&quot;&quot; src=&quot;/videos/dotfiles-setnu.webm&quot;&gt;&lt;/video&gt;
-&lt;/div&gt;
-
-&lt;h1 id=&quot;viter-la-touche-chap&quot;&gt;Éviter la touche échap&lt;/h1&gt;
-
-&lt;pre&gt;&lt;code&gt;inoremap éé &amp;lt;esc&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Pour sortir du mode &lt;strong&gt;insertion&lt;/strong&gt;, il faut appuyer sur la touche échap par défaut. Même pour un pianiste, cette touche est trèèèèès loin sur le clavier. Mais vous pouvez bien évidemment remapper cette action. Si vous voulez des inspirations sur les meilleures combinaisons, vous pouvez regarder là : &lt;a href=&quot;http://vim.wikia.com/wiki/Avoid_the_escape_key&quot;&gt;http://vim.wikia.com/wiki/Avoid_the_escape_key&lt;/a&gt;
-Comme je suis en bépo (au lieu de azerty) et que je n’écris presque jamais de français avec vim, j’ai utilisé le mot clé &lt;code&gt;éé&lt;/code&gt;. Certains mappent sur &lt;code&gt;ii&lt;/code&gt; mais vim marquera une légère pause à chaque appui sur la touche i qui est assez déstabilisant.&lt;/p&gt;
-
-&lt;div style=&quot;text-align: center;margin:50px;&quot;&gt;
-&lt;video style=&quot;width: 90%; max-width: 600px;&quot; controls=&quot;&quot; src=&quot;/videos/dotfiles-exitee.webm&quot;&gt;&lt;/video&gt;
-&lt;/div&gt;
-
-&lt;h1 id=&quot;pathogenhttpsgithubcomtpopevim-pathogen&quot;&gt;&lt;a href=&quot;https://github.com/tpope/vim-pathogen&quot;&gt;pathogen&lt;/a&gt;&lt;/h1&gt;
-
-&lt;p&gt;On peut faire tellement de choses, ça prendrait des semaines pour tout configurer. Pour avoir d’autres features super cool en 2 secondes,  on peut ajouter des plugins. Le gestionnaire de plugin le plus connu pour vim est sans doute pathogen.
-Pour l’installation, il suffit de faire :&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;mkdir -p ~/.vim/autoload ~/.vim/bundle &amp;amp;&amp;amp; \
-curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Maintenant, passons à quelques plugins.&lt;/p&gt;
-
-&lt;h2 id=&quot;colorscheme-couleurs&quot;&gt;Colorscheme couleurs&lt;/h2&gt;
-&lt;p&gt;Les couleurs sont ternes ? le bleu sur noir des commentaires est illisible ? Alors changez les couleurs.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;cd ~/.vim/bundle
-git clone https://github.com/flazz/vim-colorschemes.git
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Ajoutez ensuite &lt;code&gt;colors matrix&lt;/code&gt; dans votre &lt;code&gt;.vimrc&lt;/code&gt;. La liste des template de couleurs utilisables se trouvent dans &lt;code&gt;~/.vim/bundle/colorschemes/colors&lt;/code&gt;.&lt;/p&gt;
-
-&lt;div style=&quot;text-align: center;margin:50px;&quot;&gt;
-&lt;video style=&quot;width: 90%; max-width: 600px;&quot; controls=&quot;&quot; src=&quot;/videos/dotfiles-colormatrix.webm&quot;&gt;&lt;/video&gt;
-&lt;/div&gt;
-
-&lt;h2 id=&quot;nerdtree&quot;&gt;nerdtree&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code&gt;cd ~/.vim/bundle
-git clone https://github.com/scrooloose/nerdtree.git
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Et ajoutez dans votre &lt;code&gt;.vimrc&lt;/code&gt; : &lt;code&gt;map &amp;lt;C-n&amp;gt; :NERDTreeToggle&amp;lt;CR&amp;gt;&lt;/code&gt;
-Dorénavant, il vous suffira de faire ctrl-n pour avoir votre répertoire de travail comme dans n’importe quel autre IDE.&lt;/p&gt;
-
-&lt;div style=&quot;text-align: center;margin:50px;&quot;&gt;
-&lt;video style=&quot;width: 90%; max-width: 600px;&quot; controls=&quot;&quot; src=&quot;/videos/dotfiles-nerttree.webm&quot;&gt;&lt;/video&gt;
-&lt;/div&gt;
-
-&lt;h2 id=&quot;nerdcommenter&quot;&gt;nerdcommenter&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code&gt;cd ~/.vim/bundle
-git clone https://github.com/scrooloose/nerdcommenter.git
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Et dans votre &lt;code&gt;.vimrc&lt;/code&gt; : &lt;code&gt;filetype plugin on&lt;/code&gt;
-aintenant, en faisant &lt;code&gt;&amp;lt;Leader&amp;gt;cc&lt;/code&gt; que ce soit dans un fichier html, java, python, shell etc. la ligne se mettra en commentaire. Vous pouvez aussi le faire après avoir sélectionné plusieurs lignes.
-Si vous vous demandez ce qu’est la touche &lt;code&gt;&amp;lt;Leader&amp;gt;&lt;/code&gt; c’est une touche définie pour faire certaines actions. Par défaut il s’agit de la touche &lt;code&gt;\&lt;/code&gt;mais vous pouvez évidemment la remapper. J’utilise la touche &lt;code&gt;,&lt;/code&gt; pour ma part grâce à : &lt;code&gt;let mapleader=&quot;,&quot;&lt;/code&gt;.&lt;/p&gt;
-
-&lt;div style=&quot;text-align: center;margin:50px;&quot;&gt;
-&lt;video style=&quot;width: 90%; max-width: 600px;&quot; controls=&quot;&quot; src=&quot;/videos/dotfiles-comment.webm&quot;&gt;&lt;/video&gt;
-&lt;/div&gt;
-
-&lt;h1 id=&quot;aller-plus-loin&quot;&gt;Aller plus loin&lt;/h1&gt;
-
-&lt;p&gt;En attendant d’autres articles sur les &lt;em&gt;dotfiles&lt;/em&gt;, ou pour aller plus loin dans la configuration de vim, vous pouvez aller faire un tour sur github qui regorge de &lt;em&gt;dotfiles&lt;/em&gt; pour quasiment tous les softs.&lt;/p&gt;
-
-&lt;h1 id=&quot;bonus&quot;&gt;Bonus&lt;/h1&gt;
-
-&lt;p&gt;Si vous aimez vim et IntelliJ, vous pouvez installer le plugin ideavim qui permet d’avoir vim comme éditeur de texte et depuis quelques mois vous pouvez même importer vos settings vim dans le plugin :&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ cat ~/.ideavimrc
-source ~/.vimrc
-&lt;/code&gt;&lt;/pre&gt;
-</description>
-                                <pubDate>Fri, 15 May 2015 00:00:00 +0000</pubDate>
-                                <link>http://code-troopers.com/2015/05/15/Dotfiles-vim.html</link>
-                                <guid isPermaLink="true">http://code-troopers.com/2015/05/15/Dotfiles-vim.html</guid>
                         </item>
                 
         </channel>
