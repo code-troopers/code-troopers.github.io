@@ -14,7 +14,7 @@ Si vous n’êtes pas technique, il risque d’être compliqué de le suivre !&l
 &lt;!--break--&gt;
 
 &lt;h2 id=&quot;architecture&quot;&gt;Architecture&lt;/h2&gt;
-&lt;p&gt;La partie serveur de Navig’Tours est en réalité assez simple. Comme dit lors de différentes présentations des membres de Code-Troopers, ce projet est pour nous un moyen de nous amuser lorsque nous nous retrouvons tous les septs,
+&lt;p&gt;La partie serveur de Navig’Tours est en réalité assez simple. Comme dit lors de différentes présentations des membres de Code-Troopers, ce projet est pour nous un moyen de nous amuser lorsque nous nous retrouvons tous les septs.
 C’est également le projet que nous utilisons pour tester certaines technologies et approches.&lt;/p&gt;
 
 &lt;p&gt;Ainsi, Navig’Tours est une application développée en utilisant Java 8, mais rien de forcément très étonnant maintenant. Le côté le plus intéressant est qu’elle est en production depuis plus d’un an maintenant avec Java 8 !&lt;/p&gt;
@@ -30,7 +30,7 @@ C’est également le projet que nous utilisons pour tester certaines technologi
 &lt;p&gt;Enfin, pour la partie stockage des données, nous utilisons MongoDB qui nous simplifie la gestion de données en manipulant des données principalement au format JSON (et fournit une bonne gestion de la géolocalisation par coordonnées).&lt;/p&gt;
 
 &lt;h2 id=&quot;du-dev&quot;&gt;Du dev…&lt;/h2&gt;
-&lt;p&gt;Côté dev, nous utilisons notre petit wrapper (&lt;a href=&quot;http://code-troopers.com/2014/12/15/CT_Project_Alias.html&quot;&gt;ct&lt;/a&gt;) pour les tâches classiques qui se charge d’effectuer le build ainsi que le run de l’application avec ces dépendances.
+&lt;p&gt;Côté dev, nous utilisons notre petit wrapper (&lt;a href=&quot;http://code-troopers.com/2014/12/15/CT_Project_Alias.html&quot;&gt;ct&lt;/a&gt;) pour les tâches classiques qui se charge d’effectuer le build ainsi que le run de l’application avec ses dépendances.
 Le lancement de l’application se limite à mettre à disposition un serveur MongoDB ainsi qu’à effectuer un &lt;code&gt;java -jar&lt;/code&gt;.&lt;/p&gt;
 
 &lt;h2 id=&quot;la-prod-&quot;&gt;À la prod !&lt;/h2&gt;
