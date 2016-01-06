@@ -7,21 +7,21 @@ var less = require('gulp-less');
 var gulpif = require('gulp-if');
 var browserSync = require('browser-sync');
 var nano = require('gulp-cssnano');
-var csslint = require('gulp-csslint');
 var autoprefixer = require('gulp-autoprefixer');
 var isProd = require('../util/isProduction');
 var del = require('del');
+var sourcemaps = require('gulp-sourcemaps');
 
 gulp.task('styles', function () {
     del(['public/styles/**/*']);
     var combined = combiner.obj([
         gulp.src(config.styles.src),
+        gulpif(!isProd(), sourcemaps.init()),
         less(),
         autoprefixer("last 1 version"),
         gulpif(isProd(), nano()),
+        gulpif(!isProd(), sourcemaps.write()),
         gulp.dest(config.styles.dest),
-        //csslint(),
-        //csslint.reporter()
         gulpif(browserSync.active, browserSync.reload({stream: true}))
     ]);
     combined.on('error', console.error.bind(console));

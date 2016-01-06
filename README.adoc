@@ -29,10 +29,11 @@ Usage
 +++++
 ```bash
 Example usage:
-    gulp serve [options]    Build and serve website on 3000 with livereload
-    gulp build [options]    Build website on /public
-    gulp deploy [options]   Build and deploy website on github/ghpages
-    gulp compress-images    Compress all images in app/images
+    gulp serve [options]            Build and serve website on 3000 with livereload
+    gulp build [options]            Build website on /public
+    gulp deploy [options]           Build and deploy website on github/ghpages
+    gulp compress-images            Compress all images in app/images
+    gulp lint-[styles|scripts|html] Lint files
 
 Options:
     --prod      Minify, uglify, rev styles and scripts files
@@ -55,5 +56,3 @@ TODO
 ++++
 
 . Check Jenkins job
-. Sourcemaps
-. Lint tasks
