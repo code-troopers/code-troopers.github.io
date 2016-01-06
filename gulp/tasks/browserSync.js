@@ -1,13 +1,11 @@
 'use strict';
 
-var config      = require('../config');
+var config = require('../config');
 var browserSync = require('browser-sync');
-var gulp        = require('gulp');
+var gulp = require('gulp');
 
-gulp.task('browserSync', function() {
-
+gulp.task('browserSync', function () {
     browserSync.init({
         server: "./public"
     });
-
 });
