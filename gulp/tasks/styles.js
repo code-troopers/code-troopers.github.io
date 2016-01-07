@@ -16,11 +16,11 @@ gulp.task('styles', function () {
     del(['public/styles/**/*']);
     var combined = combiner.obj([
         gulp.src(config.styles.src),
-        gulpif(!isProd(), sourcemaps.init()),
+        sourcemaps.init(),
         less(),
         autoprefixer("last 1 version"),
         gulpif(isProd(), nano()),
-        gulpif(!isProd(), sourcemaps.write()),
+        sourcemaps.write(),
         gulp.dest(config.styles.dest),
         gulpif(browserSync.active, browserSync.reload({stream: true}))
     ]);
