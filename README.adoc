@@ -1,0 +1,58 @@
+jekyll-website
+===============
+
+New version of the website using Jekyll, gulp, font-awesome and bootstrap
+
+Prerequisites
++++++++++++++
+
+* node (http://richardhsu.net/2013/10/19/installing-nodejs-npm-on-ubuntu-13-10/)
+* bower
+* gulp
+* jekyll
+
+OR use Docker®
+
+link:.ctproject[See .ctproject]
+
+WARNING: Livereload is slower on Mac
+
+Install
++++++++
+
+```bash
+npm install
+bower install
+```
+
+Usage
++++++
+```bash
+Example usage:
+    gulp serve [options]            Build and serve website on 3000 with livereload
+    gulp build [options]            Build website on /public
+    gulp deploy [options]           Build and deploy website on github/ghpages
+    gulp compress-images            Compress all images in app/images
+    gulp lint-[styles|scripts|html] Lint files
+
+Options:
+    --prod      Minify, uglify, rev styles and scripts files
+    --drafts    Show drafts
+```
+
+Tips
+++++
+
+TIP: Run jekyll bin with docker
+
+.usr/local/bin/jekyll
+```bash
+#!/bin/bash
+
+docker run --rm -it -v $PWD:/src grahamc/jekyll $1 $2 $3
+```
+
+TODO
+++++
+
+. Check Jenkins job

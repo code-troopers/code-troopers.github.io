@@ -4,7 +4,7 @@ url: http://code-troopers.com
 baseurl: /
 
 source: app
-destination: generated
+destination: .generated
 exclude: ['bower_components','styles','images','scripts']
 gems: [jekyll-paginate, jekyll-asciidoc]
 paginate: 6
