@@ -11,6 +11,7 @@ var autoprefixer = require('gulp-autoprefixer');
 var isProd = require('../util/isProduction');
 var del = require('del');
 var sourcemaps = require('gulp-sourcemaps');
+var concatCss = require('gulp-concat-css');
 
 gulp.task('styles', function () {
     del(['public/styles/**/*']);
