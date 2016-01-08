@@ -50,10 +50,18 @@ ENV NPM_CONFIG_LOGLEVEL info
 RUN npm install -g gulp && \
     npm install -g bower
 
-VOLUME /src
+VOLUME /src/app
 WORKDIR /src
 
+ADD package.json /tmp/package.json
+RUN cd /tmp && npm install
+RUN mkdir -p /src && cp -a /tmp/node_modules /src/
+
+ADD . /src
+RUN chown -R ct /src
+
 USER ct
+RUN bower install
 
 RUN pygmentize -S monokai -f html -O classprefix=tok- > /home/ct/pygments.css
 
