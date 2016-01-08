@@ -1,2 +1,4 @@
+.generated/
+.git/
 public/
 node_modules/
