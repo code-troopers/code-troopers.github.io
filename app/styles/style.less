@@ -7,7 +7,7 @@
 
 @fa-font-path: "//netdna.bootstrapcdn.com/font-awesome/4.0.3/fonts";
 
-@primary-color : #004353;
+@primary-color: #004353;
 @text-color: @primary-color;
 @secondary-color: #729E51;
 @link-color: @text-color;
@@ -46,13 +46,13 @@ footer, section {
       color: darken(@secondary-color, 20%);
       border-color: darken(@secondary-color, 20%);
     }
-    &[data-lightbox]{
+    &[data-lightbox] {
       width: 100%;
       display: block;
       text-align: center;
       border: 0;
     }
-    &.inlineBoxes{
+    &.inlineBoxes {
       display: inline;
     }
   }
@@ -128,7 +128,7 @@ section {
     @media (min-width: @screen-xs) {
       font-size: 40px;
     }
-    font-size:30px;
+    font-size: 30px;
     span {
       color: @secondary-color;
       &.label {
@@ -140,8 +140,8 @@ section {
       }
     }
     a {
-        color: inherit;
-        border: none;
+      color: inherit;
+      border: none;
     }
   }
 
@@ -192,11 +192,15 @@ section {
         &:hover .arrow {
           left: -40px;
         }
-        img {
-          border: 20px solid @white;
-        }
       }
-
+    }
+    .previews {
+      padding-left: 15px;
+      padding-right: 15px;
+      padding-bottom: 15px;
+      img.preview {
+        width: 100px;
+      }
     }
   }
 }
@@ -226,7 +230,7 @@ ul.socials {
 
 }
 
-footer {
+body > footer {
   background-color: @primary-color;
   background-image: url('../images/codetroopers-footer.png');
   background-repeat: repeat-x;
@@ -331,13 +335,13 @@ article {
 #articles {
   article {
     .content {
-    max-height: 200px;
-    overflow: hidden;
-    width: 100%;
-    h1,h2,h3{
-      display: none;
+      max-height: 200px;
+      overflow: hidden;
+      width: 100%;
+      h1, h2, h3 {
+        display: none;
+      }
     }
-  }
   }
 }
 
@@ -349,18 +353,18 @@ article {
       font-size: 1.1em;
     }
     .mini {
-        max-width:500px;
-        max-height:100px;
+      max-width: 500px;
+      max-height: 100px;
     }
     .medium {
-        max-width:500px;
-        max-height:200px;
+      max-width: 500px;
+      max-height: 200px;
     }
     ul {
-        list-style: square outside none;
-        padding: 0 25px;
+      list-style: square outside none;
+      padding: 0 25px;
     }
-    .share{
+    .share {
       margin-left: -20px;
       margin-right: -20px;
       background-color: @secondary-color;
@@ -368,7 +372,7 @@ article {
       padding-left: 20px;
       .pull-left;
       ul.socials {
-        display:inline-block;
+        display: inline-block;
         margin-bottom: 0;
         li {
           display: inline-block;
@@ -394,17 +398,101 @@ article {
   span {
     color: #d3d3d3;
   }
-  span, a{
+  span, a {
     margin: 0 10px;
   }
-  span:last-child, a:last-child{
+  span:last-child, a:last-child {
     margin-right: 0;
   }
 }
 
 .browsehappy {
-    margin: 0.2em 0;
-    background: #ccc;
-    color: #000;
-    padding: 0.2em 0;
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+.projects {
+  flex-wrap: wrap;
+  display: flex;
+  > li {
+    padding: 5px;
+    display: flex;
+  }
+
+  .project-title{
+    font-weight: bold;
+    font-size: 1.2em;
+    color: @secondary-color;
+    margin-bottom: 7px;
+  }
+
+  .project-info {
+    animation-timing-function: cubic-bezier(0.230, 1.000, 0.320, 1.000);
+    overflow: hidden;
+  }
+
+  .detail-container {
+    position:absolute;
+    transition-duration: 1.5s;
+    transform: translateX(0%);
+  }
+
+  .show-quote {
+    .detail-container {
+      transition-duration: 1.5s;
+      transform: translateX(-100%);
+    }
+    .quote-container {
+      transition-duration: 1.5s;
+      transform: translateX(0%);
+    }
+  }
+
+  .quote-container{
+    position:relative;
+    margin-top: 15px;
+
+    transition-duration: 1.5s;
+    transform: translateX(100%);
+
+    blockquote {
+      border: none;
+      p {
+        font-size: 0.9em;
+        font-weight: 300;
+        line-height: 1;
+        text-indent:40px;
+        text-align: justify;
+        &:before {
+          content: '\201C';
+          font-family: serif;
+          font-style: normal;
+          font-weight: 700;
+          position: absolute;
+          font-size: 75px;
+          top: -0.25em;
+          left: -0.3em;
+          color: @primary-color;
+          text-shadow: 7px 14px 10px rgba(0, 0, 0, 0.1);
+        }
+      }
+    }
+  }
+  figure {
+    border: 1px solid @primary-color;
+    border-radius: 2px;
+    .box-shadow(0 0 1px @primary-color);
+    padding: 10px;
+    a{
+      border:none;
+      i.fa{
+        font-size:3em;
+      }
+    }
+  }
+  .padding15 {
+    padding: 15px;
+  }
 }

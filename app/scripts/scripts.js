@@ -31,7 +31,7 @@ $(function () {
                                             autoPlay: 3000,
                                             stopOnHover: true,
                                             lazyLoad: true,
-                                            
+
                                         });
     if (window.addEventListener) {
         var a = [];
@@ -52,5 +52,9 @@ $(function () {
     $('#articles article > div').each(function (i, d) {
         $(d).css('height', maxHeight);
     });
+    $(".project-info-button").click(function(e){
+      e.preventDefault()
+      $(e.target).parents("figure").toggleClass("show-quote");
+    })
 })
 ;
