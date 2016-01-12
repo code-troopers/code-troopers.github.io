@@ -486,9 +486,14 @@ article {
     .box-shadow(0 0 1px @primary-color);
     padding: 10px;
     a{
-      border:none;
-      i.fa{
-        font-size:3em;
+      background-color: @secondary-color;
+      transition: background-color 300ms;
+      border: none;
+      &.soon {
+        background-color: lightgrey;
+      }
+      &:hover {
+        background-color: darken(@secondary-color, 10);
       }
     }
   }
