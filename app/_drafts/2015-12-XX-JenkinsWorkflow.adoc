@@ -74,16 +74,21 @@ docker.image("codetroopers/jenkins-slave-jdk8-restx")
 }
 -----
 
-<1> Share local maven repository
-<2> Export the timezone
-<3> Run in container with proper timezone and shared repository
-<4> Clone the repo
-<5> Classic run install
-<6> Archive artefacts
-<7> Archive test results
+<1> Partage du dépot Maven local (pour gagner en temps de build)
+<2> Exporter la timezone (pour les tests unitaires de l'exemple)
+<3> Démarrage du conteneur avec la bonne timezone ainsi que le dépot partagé
+<4> Cloner les sources
+<5> Lancement du build (en forçant l'UTF-8)
+<6> Archivage des produits du build
+<7> Archivage des résultats des tests
+
+Comme vous pouvez le voir, le script est relativement parlant et permet en plus de s'affranchir du clickodrome de configuration dans l'interface de Jenkins !
 
 
-## Group commands in stage
+## Grouper les étapes
+
+Le plugin workflow permet en plus de grouper les différentes étapes d'un build pour permettre, par exemple, de le lancer sur plusieurs environnement différents.
+Ici nous ajoutons simplement un nom de groupe pour notre étape de build.
 
 [source,groovy]
 -----
@@ -97,9 +102,13 @@ stage 'build' // # <1>
         step([$class: 'JUnitResultArchiver', testResults: '**/target/surefire-reports/TEST-*.xml'])
     }
 -----
-<1> Name step to allow grouping execution
+<1> Étape nommée pour l'exécution de la construction de l'application
 
-## Stash files for a later stage
+## Mettre de cóté les fichiers pour plus tard
+
+La notion de _stash_ bien connue des utilisateurs de git est également présente.
+Elle permet de mettre de cóté des fichiers pour les réutiliser a une étape ultérieure du workflow de build.
+Ceci permet d'éviter l'archivage de produits du build pour des raisons "techniques".
 
 [source,groovy]
 -----
@@ -114,9 +123,9 @@ stage 'build'
         stash includes: 'run.sh,srv/target/dependency/webapp-runner.jar,srv/target/*.war,Dockerfile', name: 'dockerBuild' // # <1>
     }
 -----
-<1> Stash the files to reuse in a later stage
+<1> Enregistrement d'une liste de fichier associée a un nom pour une utilisation ultérieure
 
-## Stage to build a docker image
+## Étape de construction d'une image Docker
 
 
 [source,groovy]
@@ -129,18 +138,19 @@ node{ // # <2>
   }
 }
 -----
-<1> Create a new stage
-<2> Node is a build runner
-<3> Requires a new workspace
-<4> Unstash previously stashed files under name 'dockerBuild'
-<5> Build a docker image with the current $BUILD_ID
+<1> Creation d'une nouvelle étape
+<2> Permet de distinguer un ensemble d'opération de build (peut accepter les labels pour restreindre sur des noeuds)
+<3> Déclenche la création d'un nouveau workspace
+<4> Récupere les fichiers mis de cóté sous le nom `dockerbuild`
+<5> Construction d'une image docker avec pour tag le numéro de build en cours (`$BUILD_ID`)
 
-## Multibranch
+## Workflow et gestion multibranche
 
-* put build script in SCM
-* make branches build automatically (without history mix)
+Dans nos façons de fonctionner qui sont maintenant devenues habituelles, nous utilisons de façon intensives les branches pour isoler nos développements.
+Un des points fastidieux est de configurer un nouveau job jenkins pour chaque branche afin de valider son bon fonctionnement et ne pas se rendre compte trop tard d'un build au rouge.
 
-=> Jenkinsfile
+Le plugin 'Workflow Multibranch' simplifie de façon drastique ce genre de cas, il suffit de rajouter un descripteur de build dans les sources.
+Le fichier correspondant est tout simplement appelé `Jenkinsfile`.
 
 [source,groovy]
 -----
@@ -163,7 +173,12 @@ node{
   }
 }
 -----
-<1> Replace `git clone` with `checkout scm` to ensure we are on the proper repo/branch
+<1> Il faut bien entendu remplacer l'endroit ou nous faisions le git clone pour qu'il soit dynamique par rapport a ce qu'on
+construit. Le terme `checkout scm` permet de s'assurer de ce fonctionnement.
+
+L'intéret est que chaque branche qui sera buildée n'aura pas son historique mélangé avec une autre (la oú les jobs de validation de Pull Request ont tendance a mélanger).
+De plus, un changement dans le process de build sera directement versionné.
+Il n'y aura donc pas besoin de penser a éditer le job lors du merge sur master (on a tous vécu ce genre de situation énervante) !
 
 ## Wait for user interaction
 
