@@ -6,15 +6,17 @@ var gulp = require('gulp');
 var runSequence = require('run-sequence');
 
 gulp.task('watch', ['browserSync'], function () {
-    gulp.watch(config.images.src, ['images']);
     if (isProd()) {
-        gulp.watch(config.styles.src, function (event) {
-            runSequence(['styles', 'jekyll'], 'rev');
-        });
-        gulp.watch(config.scripts.src, ['scripts', 'rev']);
+        gulp.watch([
+            config.images.src,
+            config.styles.src,
+            config.scripts.src,
+            config.jekyll.src
+        ], ['build']);
     } else {
+        gulp.watch(config.images.src, ['images']);
         gulp.watch(config.styles.src, ['styles']);
         gulp.watch(config.scripts.src, ['scripts']);
+        gulp.watch(config.jekyll.src, ['jekyll']);
     }
-    gulp.watch(config.jekyll.src, ['jekyll']);
 });
