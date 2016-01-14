@@ -74,9 +74,9 @@ docker.image("codetroopers/jenkins-slave-jdk8-restx")
 }
 -----
 
-<1> Partage du dépot Maven local (pour gagner en temps de build)
+<1> Partage du dépôt Maven local (pour gagner en temps de build)
 <2> Exporter la timezone (pour les tests unitaires de l'exemple)
-<3> Démarrage du conteneur avec la bonne timezone ainsi que le dépot partagé
+<3> Démarrage du conteneur avec la bonne timezone ainsi que le dépôt partagé
 <4> Cloner les sources
 <5> Lancement du build (en forçant l'UTF-8)
 <6> Archivage des produits du build
@@ -104,10 +104,10 @@ stage 'build' // # <1>
 -----
 <1> Étape nommée pour l'exécution de la construction de l'application
 
-## Mettre de cóté les fichiers pour plus tard
+## Mettre de côté les fichiers pour plus tard
 
 La notion de _stash_ bien connue des utilisateurs de git est également présente.
-Elle permet de mettre de cóté des fichiers pour les réutiliser a une étape ultérieure du workflow de build.
+Elle permet de mettre de côté des fichiers pour les réutiliser à une étape ultérieure du workflow de build.
 Ceci permet d'éviter l'archivage de produits du build pour des raisons "techniques".
 
 [source,groovy]
@@ -123,7 +123,7 @@ stage 'build'
         stash includes: 'run.sh,srv/target/dependency/webapp-runner.jar,srv/target/*.war,Dockerfile', name: 'dockerBuild' // # <1>
     }
 -----
-<1> Enregistrement d'une liste de fichier associée a un nom pour une utilisation ultérieure
+<1> Enregistrement d'une liste de fichiers associée a un nom pour une utilisation ultérieure
 
 ## Étape de construction d'une image Docker
 
@@ -138,10 +138,10 @@ node{ // # <2>
   }
 }
 -----
-<1> Creation d'une nouvelle étape
+<1> Création d'une nouvelle étape
 <2> Permet de distinguer un ensemble d'opération de build (peut accepter les labels pour restreindre sur des noeuds)
 <3> Déclenche la création d'un nouveau workspace
-<4> Récupere les fichiers mis de cóté sous le nom `dockerbuild`
+<4> Récupère les fichiers mis de côté sous le nom `dockerbuild`
 <5> Construction d'une image docker avec pour tag le numéro de build en cours (`$BUILD_ID`)
 
 ## Workflow et gestion multibranche
@@ -173,14 +173,14 @@ node{
   }
 }
 -----
-<1> Il faut bien entendu remplacer l'endroit ou nous faisions le git clone pour qu'il soit dynamique par rapport a ce qu'on
+<1> Il faut bien entendu remplacer l'endroit où nous faisions le git clone pour qu'il soit dynamique par rapport à ce qu'on
 construit. Le terme `checkout scm` permet de s'assurer de ce fonctionnement.
 
-L'intéret est que chaque branche qui sera buildée n'aura pas son historique mélangé avec une autre (la oú les jobs de validation de Pull Request ont tendance a mélanger).
+L'intéret est que chaque branche qui sera buildée n'aura pas son historique mélangé avec une autre (là où les jobs de validation de Pull Request ont tendance à tout mélanger).
 De plus, un changement dans le process de build sera directement versionné.
 Il n'y aura donc pas besoin de penser a éditer le job lors du merge sur master (on a tous vécu ce genre de situation énervante) !
 
-## Wait for user interaction
+## Attendre une confirmation utilisateur
 
 [source,groovy]
 -----
@@ -209,6 +209,6 @@ node{
     }
 }
 -----
-<1> Input pauses the build and allows to go on or abort the build
-<2> It can also ask for input with parameters (pauses and allows reusing the value)
-<3> Answer from previous input is reused in printed message
+<1> `input` met en pause la construction et permet de continuer ou interrompre celle-ci
+<2> Il est également possible de permettre à l'utilisateur de faire un choix
+<3> Ici la valeur sélectionnée par l'utilisateur est écrit dans la sortie du build.
