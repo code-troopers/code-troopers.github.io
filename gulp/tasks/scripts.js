@@ -15,10 +15,10 @@ var sourcemaps = require('gulp-sourcemaps');
 gulp.task('scripts', ['ie8'], function () {
     var combined = combiner.obj([
         gulp.src(config.scripts.src),
-        sourcemaps.init(),
+        gulpif(!global.isDeploy, sourcemaps.init()),
         concat('scripts.js'),
         gulpif(isProd(), uglify()),
-        sourcemaps.write(),
+        gulpif(!global.isDeploy, sourcemaps.write()),
         gulp.dest(config.scripts.dest),
         gulpif(browserSync.active, browserSync.reload({stream: true}))
     ]);
@@ -30,10 +30,10 @@ gulp.task('ie8', function () {
     del(config.scripts.dest);
     var combined = combiner.obj([
         gulp.src(config.scripts.srcIE8),
-        sourcemaps.init(),
+        gulpif(!global.isDeploy, sourcemaps.init()),
         concat('ie8.js'),
         gulpif(isProd(), uglify()),
-        sourcemaps.write(),
+        gulpif(!global.isDeploy, sourcemaps.write()),
         gulp.dest(config.scripts.dest),
         gulpif(browserSync.active, browserSync.reload({stream: true}))
     ]);
