@@ -14,7 +14,7 @@ L'idée de base est de découvrir une région à l'aide d'un guide local, offici
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Tours,_Saint_Martin.JPG/280px-Tours,_Saint_Martin.JPG"/>
 </div>
 
-<!-- break -->
+<!--break-->
   
 ## Init : L'attaque des clones
 Fort de nos précédentes expériences de Startup Weekend, nous avions tout prévu. En hard, batteries pleines et câbles. En soft, des images docker diverses de jdk8 à postgresql en passant par jenkins (oui c'était large et optimiste) mais aussi IntelliJ et Android Studio à jour, ainsi que diverses images de genymotion. 

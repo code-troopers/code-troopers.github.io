@@ -15,7 +15,7 @@ Et, encore plus sympa, [Björn Hurling](https://plus.google.com/+Bj%C3%B6rnHurli
 
 Voyons ensemble pas à pas comment et quoi configurer afin de livrer ses apk en ligne de commande en utilisant gradle.
 
-<!-- break -->
+<!--break-->
   
 ## Prérequis
 

@@ -2,7 +2,7 @@
 
 set -e
 
-npm install --loglevel verbose
+npm install
 export CI=true
 bower install --allow-root
 grunt server
