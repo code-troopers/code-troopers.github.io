@@ -11,9 +11,10 @@ description: Code-Troopers est une équipe de développeurs située à Tours, r�
 
     <div class="container resume">
         <div class="row">
-                <p class="text-justify text-center">Code-Troopers est une équipe de développeurs située à <a target="_blank"
-                                                                            href="https://www.google.fr/maps/preview#!q=37000+Tours&amp;data=!4m15!2m14!1m13!1s0x47fcd435f74c86ff%3A0x1c0dc8da880a03e0!3m8!1m3!1d3208!2d0.6895144!3d47.38979!3m2!1i1267!2i912!4f13.1!4m2!3d47.3832745!4d0.6897966"><i
-                        class="fa fa-map-marker"></i> Tours</a>, réalisant des projets aux environs de la Touraine et sur la région parisienne. Vous avez une idée, nous la réalisons !</p>
+            <p class="text-justify text-center">Code-Troopers est une équipe de développeurs située à <a target="_blank"
+                                                                                                         href="https://www.google.fr/maps/preview#!q=37000+Tours&amp;data=!4m15!2m14!1m13!1s0x47fcd435f74c86ff%3A0x1c0dc8da880a03e0!3m8!1m3!1d3208!2d0.6895144!3d47.38979!3m2!1i1267!2i912!4f13.1!4m2!3d47.3832745!4d0.6897966"><i
+                    class="fa fa-map-marker"></i> Tours</a>, réalisant des projets aux environs de la Touraine et sur la
+                région parisienne. Vous avez une idée, nous la réalisons !</p>
         </div>
         <hr/>
         <div class="row">
@@ -24,9 +25,13 @@ description: Code-Troopers est une équipe de développeurs située à Tours, r�
                 </span>
 
                 <p>
-                    Notre activité principale est le développement logiciel. Nos différents profils nous permettent d'être complets sur les différentes phases de réalisation de vos projets informatiques (analyse, architecture, design, …).
-                    Notre structure à taille humaine permet néanmoins de développer des logiciels ou des sites web d'envergure très rapidement.
-                    De plus, notre engagement qualité vous permet d'obtenir un suivi complet et rigoureux de l'avancement des projets que vous nous confiez.
+                    Notre activité principale est le développement logiciel. Nos différents profils nous permettent
+                    d'être complets sur les différentes phases de réalisation de vos projets informatiques (analyse,
+                    architecture, design, …).
+                    Notre structure à taille humaine permet néanmoins de développer des logiciels ou des sites web
+                    d'envergure très rapidement.
+                    De plus, notre engagement qualité vous permet d'obtenir un suivi complet et rigoureux de
+                    l'avancement des projets que vous nous confiez.
                 </p>
             </div>
             <div class="bloc col-md-4">
@@ -36,9 +41,12 @@ description: Code-Troopers est une équipe de développeurs située à Tours, r�
                 </span>
 
                 <p>
-                    Les connaissances que nous avons acquises lors de nos précédentes missions nous permettent de comprendre et de vous guider au mieux tout au long de la vie de vos projets informatiques.<br/>
-                    Nous pratiquons les <a href="http://fr.wikipedia.org/wiki/M%C3%A9thode_agile">méthodes agiles</a> notamment à travers Scrum qui est à ce jour la méthode la plus efficace pour réussir vos projets.
-                    Nous pouvons ainsi vous aider à mieux répartir vos développements en différentes phases, à les architecturer mais aussi à assurer leur mise en production.
+                    Les connaissances que nous avons acquises lors de nos précédentes missions nous permettent de
+                    comprendre et de vous guider au mieux tout au long de la vie de vos projets informatiques.<br/>
+                    Nous pratiquons les <a href="http://fr.wikipedia.org/wiki/M%C3%A9thode_agile">méthodes agiles</a>
+                    notamment à travers Scrum qui est à ce jour la méthode la plus efficace pour réussir vos projets.
+                    Nous pouvons ainsi vous aider à mieux répartir vos développements en différentes phases, à les
+                    architecturer mais aussi à assurer leur mise en production.
                 </p>
             </div>
             <div class="bloc col-md-4">
@@ -48,9 +56,12 @@ description: Code-Troopers est une équipe de développeurs située à Tours, r�
                 </span>
 
                 <p>
-                    Au cours de toute la vie de vos projets, nous mettons en œuvre nos connaissances et nos compétences pour vous permettre d'en obtenir la meilleure vision possible.<br/>
-                    Dans une démarche d'amélioration continue, nous pouvons vous accompagner pour adopter nos méthodes à d'autres projets dans et en-dehors de votre structure.<br/>
-                    Notre motivation principale est la qualité du travail accompli, et ceci passe par une totale transparence dans les méthodes que nous mettons en place.
+                    Au cours de toute la vie de vos projets, nous mettons en œuvre nos connaissances et nos compétences
+                    pour vous permettre d'en obtenir la meilleure vision possible.<br/>
+                    Dans une démarche d'amélioration continue, nous pouvons vous accompagner pour adopter nos méthodes à
+                    d'autres projets dans et en-dehors de votre structure.<br/>
+                    Notre motivation principale est la qualité du travail accompli, et ceci passe par une totale
+                    transparence dans les méthodes que nous mettons en place.
                 </p>
             </div>
         </div>
@@ -60,849 +71,937 @@ description: Code-Troopers est une équipe de développeurs située à Tours, r�
 
 <section id="articles">
     <h2 class="header">
-            Les derniers articles du <span>blog</span>
+        Les derniers articles du <span>blog</span>
     </h2>
 
     <div class="container">
         <div class="row">
-    {% for post in site.posts limit:3  %}
-        <article class="col-lg-4 col-md-6 col-sm-12">
-            <div onclick="window.location.href='{{post.url}}' ;  return false" style="cursor: pointer;">
-            <div class="cover" style="background-image:url(/images/banner/{{ post.cover }}.png)">
-                    <div class="date">posté le {{ post.date | date: "%d/%m/%Y"}} par {{ post.author }}</div>
+            {% for post in site.posts limit:3 %}
+            <article class="col-lg-4 col-md-6 col-sm-12">
+                <div onclick="window.location.href='{{post.url}}' ;  return false" style="cursor: pointer;">
+                    <div class="cover" style="background-image:url(/images/banner/{{ post.cover }}.png)">
+                        <div class="date">posté le {{ post.date | date: "%d/%m/%Y"}} par {{ post.author }}</div>
+                    </div>
+                    <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+                    <ul class="tags">
+                        {% for tag in post.tags %}
+                        <li>{{ tag }}</li>
+                        {% endfor %}
+                    </ul>
+                    <div class="content">
+                        {{ post.content | split:'<!--break-->' | split:'<!-- break -->' | first }}
+                    </div>
+                    <div class="fade-content">
+                    </div>
+                    <div class="more">
+                        <a href="{{ post.url }}"><i class="fa fa-arrow-circle-o-right"></i> Lire la suite</a>
+                    </div>
                 </div>
-                <h2><a href="{{ post.url }}">{{ post.title }}</a></h2><ul class="tags">
-                    {% for tag in post.tags %}
-                    <li>{{ tag }}</li>
-                    {% endfor %}
-                </ul>
-                <div class="content">
-                    {{ post.content | split:'<!--break-->' | split:'<!-- break -->' | first }}
-                </div>
-                <div class="fade-content">
-                </div>
-                <div class="more">
-                    <a  href="{{ post.url }}"><i class="fa fa-arrow-circle-o-right"></i> Lire la suite</a>
-                </div>
-            </div>
-        </article>
-        {% endfor %}
+            </article>
+            {% endfor %}
         </div>
     </div>
 
 </section>
 
 <section id="projects">
-<h2 class="header">
-    Nos derniers <span>projets</span>
-</h2>
-<div class="container">
-<ul class="margin-none projects">
+    <h2 class="header">
+        Nos derniers <span>projets</span>
+    </h2>
+    <div class="container">
+        <ul class="margin-none projects">
 
-  <!-- Project block -->
-  <li class="col-md-6 col-xs-12">
-    <figure>
-      <div class="col-xs-4">
-        <div>
-          <img class="img-responsive" src="images/projects/navigtours-logo.png" alt="logo Navig'Tours"
-               title="Navig'Tours">
-        </div>
-      </div>
-      <div class="col-xs-8">
-        <div class="row">
-          <div class="project-title col-lg-12">
-              Navig'Tours&nbsp;
-              <a target="_blank" href="https://play.google.com/store/apps/details?id=com.codetroopers.transport.tours"
-                 class="label">Android&nbsp;<i class="fa fa-android"></i></a>&nbsp;
-              <a target="_blank" href="https://itunes.apple.com/fr/app/navigtours/id1055138264?l=fr&ls=1&mt=8"
-                 class="label">iOS&nbsp;<i class="fa fa-apple"></i></a>
-          </div>
-          <p class="col-lg-12 text-justify">
-            Les applications gratuites natives Android et iOS.
-            <br/>
-            Navig'Tours permet de consulter les horaires, lignes et arrêts des bus et tram de Tours (réseau Fil Bleu).
-          </p>
-        </div>
-      </div>
-    </figure>
-  </li>
-  <!-- End Project block -->
-  <!-- Project block -->
-  <li class="col-md-6 col-xs-12">
-    <figure>
-      <div class="col-xs-4">
-        <div>
-          <img class="img-responsive" src="images/projects/certifoot-logo.png" alt="logo certifoot" title="Certifoot">
-        </div>
-      </div>
-      <div class="col-xs-8 project-info">
-        <div class="row">
-          <div class="project-title col-lg-12">
-              Certifoot&nbsp;
-              <a target="_blank" href="http://www.certifoot.com" class="label"><i class="fa fa-globe"></i></a>
-          </div>
-          <p class="col-lg-12 text-justify">
-            Le réseau social de détection des nouveaux talents du football amateur.
-            Certifoot aide à la détection des meilleurs joueurs en mettant en avant leur profil.
-          </p>
-        </div>
-      </div>
-    </figure>
-  </li>
-  <!-- End Project block -->
-  <!-- Project block -->
-  <li class="col-md-6 col-xs-12">
-    <figure>
-      <div class="col-xs-4">
-        <div>
-          <img class="img-responsive" src="images/projects/aucard-logo.png" alt="logo Aucard de Tours"
-               title="Aucard de Tours">
-        </div>
-      </div>
-      <div class="col-xs-8">
-        <div class="row">
-          <div class="project-title col-lg-12">
-              Aucard de Tours&nbsp;
-              <a target="_blank" href="https://play.google.com/store/apps/details?id=com.codetroopers.aucard"
-                 class="label">Android&nbsp;<i class="fa fa-android"></i></a>&nbsp;
-              <a target="_blank" class="label soon">iOS (bientôt)&nbsp;<i class="fa fa-apple"></i></a>
-          </div>
-          <p class="col-lg-12 text-justify">
-            Application officielle Android (et bientôt iOS) du festival Tourangeau Aucard de Tours en 2014, 2015 et
-            2016.
-            <br/>
-            Avec l’appli Aucard de Tours vous avez accès au programme et à toutes les infos pratiques du festival.
-          </p>
-        </div>
-      </div>
-    </figure>
-  </li>
-  <!-- End Project block -->
-  <!-- Project block -->
-  <li class="col-md-6 col-xs-12">
-    <figure>
-      <div class="col-xs-4">
-        <div>
-          <img class="img-responsive" src="images/projects/nowly-logo.png" alt="logo Nowly" title="Nowly">
-        </div>
-      </div>
-      <div class="col-xs-8">
-        <div class="row">
-          <div class="project-title col-lg-12">
-              Nowly&nbsp;
-              <a target="_blank" href="http://www.nowly.co/" class="label">Android&nbsp;<i
-                      class="fa fa-android"></i></a>
-          </div>
-          <p class="col-lg-12 text-justify">
-            Conversion de l'application iPhone existante vers une application native Android.
-            <br/>
-            Nowly vous permet de savoir qui est disponible à proximité.
-          </p>
-        </div>
-      </div>
-    </figure>
-  </li>
-  <!-- End Project block -->
-  <!-- Project block -->
-  <li class="col-md-6 col-xs-12">
-    <figure>
-      <div class="col-xs-4">
-        <div data-toggle="modal" data-target="#sammygo">
-          <img class="img-responsive" src="images/projects/sammygo-logo.png" alt="logo sammygo" title="SammyGo">
-        </div>
-      </div>
-      <div class="col-xs-8">
-        <div class="row">
-          <div class="project-title col-lg-12">
-            SammyGo
-          </div>
-          <p class="col-lg-12 text-justify">
-            Application web de gestion de méta-données de films pour les fournisseurs de VOD.
-            <br/>
-            L'application référence les différentes dates d'exploitation de tous les films. Les fournisseurs VOD
-            l’utilisent pour savoir quand un film peut-être accessible aux spectateurs.
-          </p>
-        </div>
-      </div>
-    </figure>
-  </li>
-  <!-- End Project block -->
-  <!-- Project block -->
-  <li class="col-md-6 col-xs-12">
-    <figure>
-      <div class="col-xs-4">
-        <div>
-          <img class="img-responsive" src="images/projects/srmvision-logo.png" alt="logo SRMvision" title="SRMvision">
-        </div>
-      </div>
-      <div class="col-xs-8">
-        <div class="row">
-          <div class="project-title col-lg-12">
-              SRMvision&nbsp;
-              <a target="_blank" href="http://www.srmvision.com" class="label"><i class="fa fa-globe"></i></a>
-          </div>
-          <p class="col-lg-12 text-justify">
-            Le site, créé de toute pièce, est un outil de gestion de la relation fournisseur.
-            De la gestion du parc informatique, du HelpDesk, en passant par la gestion de projet, profitez d'une
-            solution complète et intégrée sans installation !
-          </p>
-        </div>
-      </div>
-    </figure>
-  </li>
-  <!-- End Project block -->
-</ul>
-</div>
+            <!-- Project block -->
+            <li class="col-md-6 col-xs-12">
+                <figure>
+                    <div class="col-xs-4">
+                        <div>
+                            <img class="img-responsive" src="images/projects/navigtours-logo.png" alt="logo Navig'Tours"
+                                 title="Navig'Tours">
+                        </div>
+                    </div>
+                    <div class="col-xs-8">
+                        <div class="row">
+                            <div class="project-title col-lg-12">
+                                Navig'Tours&nbsp;
+                                </div>
+                            <div class="col-lg-12">
+                                <a target="_blank"
+                                   href="https://play.google.com/store/apps/details?id=com.codetroopers.transport.tours"
+                                   class="label">Android&nbsp;<i class="fa fa-android"></i></a>&nbsp;
+                                <a target="_blank"
+                                   href="https://itunes.apple.com/fr/app/navigtours/id1055138264?l=fr&ls=1&mt=8"
+                                   class="label">iOS&nbsp;<i class="fa fa-apple"></i></a>
+                            </div>
+                            <p class="description col-lg-12 text-justify">
+                                Les applications gratuites natives Android et iOS.
+                                <br/>
+                                Navig'Tours permet de consulter les horaires, lignes et arrêts des bus et tram de Tours
+                                (réseau Fil Bleu).
+                            </p>
+                        </div>
+                    </div>
+                </figure>
+            </li>
+            <!-- End Project block -->
+            <!-- Project block -->
+            <li class="col-md-6 col-xs-12">
+                <figure>
+                    <div class="col-xs-4">
+                        <div>
+                            <img class="img-responsive" src="images/projects/certifoot-logo.png" alt="logo certifoot"
+                                 title="Certifoot">
+                        </div>
+                    </div>
+                    <div class="col-xs-8 project-info">
+                        <div class="row">
+                            <div class="project-title col-lg-12">
+                                Certifoot&nbsp;
+                                </div>
+                                <div class="col-lg-12">
+                                    <a target="_blank" href="http://www.certifoot.com" class="label">Site&nbsp;<i
+                                        class="fa fa-globe"></i></a>
+                            </div>
+                            <p class="description col-lg-12 text-justify">
+                                Le réseau social de détection des nouveaux talents du football amateur.
+                                Certifoot aide à la détection des meilleurs joueurs en mettant en avant leur profil.
+                            </p>
+                        </div>
+                    </div>
+                </figure>
+            </li>
+            <!-- End Project block -->
+            <!-- Project block -->
+            <li class="col-md-6 col-xs-12">
+                <figure>
+                    <div class="col-xs-4">
+                        <div>
+                            <img class="img-responsive" src="images/projects/aucard-logo.png" alt="logo Aucard de Tours"
+                                 title="Aucard de Tours">
+                        </div>
+                    </div>
+                    <div class="col-xs-8">
+                        <div class="row">
+                            <div class="project-title col-lg-12">
+                                Aucard de Tours&nbsp;
+                            </div>
+                            <div class="col-lg-12">
+                                <a target="_blank"
+                                   href="https://play.google.com/store/apps/details?id=com.codetroopers.aucard"
+                                   class="label">Android&nbsp;<i class="fa fa-android"></i></a>&nbsp;
+                                <div class="label soon">iOS (bientôt)&nbsp;<i class="fa fa-apple"></i></div>
+                            </div>
+                            <p class="description col-lg-12 text-justify">
+                                Application officielle Android (et bientôt iOS) du festival Tourangeau Aucard de Tours
+                                en 2014, 2015 et
+                                2016.
+                                <br/>
+                                Avec l’appli Aucard de Tours vous avez accès au programme et à toutes les infos
+                                pratiques du festival.
+                            </p>
+                        </div>
+                    </div>
+                </figure>
+            </li>
+            <!-- End Project block -->
+            <!-- Project block -->
+            <li class="col-md-6 col-xs-12">
+                <figure>
+                    <div class="col-xs-4">
+                        <div>
+                            <img class="img-responsive" src="images/projects/nowly-logo.png" alt="logo Nowly"
+                                 title="Nowly">
+                        </div>
+                    </div>
+                    <div class="col-xs-8">
+                        <div class="row">
+                            <div class="project-title col-lg-12">
+                                Nowly&nbsp;
+                                </div>
+                            <div class="col-lg-12">
+                                <a target="_blank" href="http://www.nowly.co/" class="label">Android&nbsp;<i
+                                        class="fa fa-android"></i></a>
+                            </div>
+                            <p class="description col-lg-12 text-justify">
+                                Conversion de l'application iPhone existante vers une application native Android.
+                                <br/>
+                                Nowly vous permet de savoir qui est disponible à proximité.
+                            </p>
+                        </div>
+                    </div>
+                </figure>
+            </li>
+            <!-- End Project block -->
+            <!-- Project block -->
+            <li class="col-md-6 col-xs-12">
+                <figure>
+                    <div class="col-xs-4">
+                        <div data-toggle="modal" data-target="#sammygo">
+                            <img class="img-responsive" src="images/projects/sammygo-logo.png" alt="logo sammygo"
+                                 title="SammyGo">
+                        </div>
+                    </div>
+                    <div class="col-xs-8">
+                        <div class="row">
+                            <div class="project-title col-lg-12">
+                                SammyGo
+                            </div>
+                            <p class="col-lg-12 text-justify">
+                                Application web de gestion de méta-données de films pour les fournisseurs de VOD.
+                                <br/>
+                                L'application référence les différentes dates d'exploitation de tous les films. Les
+                                fournisseurs VOD
+                                l’utilisent pour savoir quand un film peut-être accessible aux spectateurs.
+                            </p>
+                        </div>
+                    </div>
+                </figure>
+            </li>
+            <!-- End Project block -->
+            <!-- Project block -->
+            <li class="col-md-6 col-xs-12">
+                <figure>
+                    <div class="col-xs-4">
+                        <div>
+                            <img class="img-responsive" src="images/projects/srmvision-logo.png" alt="logo SRMvision"
+                                 title="SRMvision">
+                        </div>
+                    </div>
+                    <div class="col-xs-8">
+                        <div class="row">
+                            <div class="project-title col-lg-12">
+                                SRMvision&nbsp;
+                                </div>
+                            <div class="col-lg-12">
+                                <a target="_blank" href="http://www.srmvision.com" class="label">Site&nbsp;<i
+                                        class="fa fa-globe"></i></a>
+                            </div>
+                            <p class="description col-lg-12 text-justify">
+                                Le site, créé de toute pièce, est un outil de gestion de la relation fournisseur.
+                                De la gestion du parc informatique, du HelpDesk, en passant par la gestion de projet,
+                                profitez d'une
+                                solution complète et intégrée sans installation !
+                            </p>
+                        </div>
+                    </div>
+                </figure>
+            </li>
+            <!-- End Project block -->
+        </ul>
+    </div>
 </section>
 
 <section id="skills">
-<h2 class="header">
+    <h2 class="header">
         <span><i class="fa fa-heart"></i></span> Ce que nous <span>aimons</span> faire
-</h2>
-<div class="container resume">
-<div class="row">
-<p class="text-center text-justify">
-    Bien qu'étant flexibles, nous avons des technologies et
-    <em>frameworks</em> avec lesquels nous aimons travailler.
-</p>
-</div>
-<hr/>
+    </h2>
+    <div class="container resume">
+        <div class="row">
+            <p class="text-center text-justify">
+                Bien qu'étant flexibles, nous avons des technologies et
+                <em>frameworks</em> avec lesquels nous aimons travailler.
+            </p>
+        </div>
+        <hr/>
 
-<div class="row">
-    <ul class="skills owl-carousel" id="main-skills-carousel">
-        <!-- Skill block -->
-        <li>
-            <figure title="Java">
-                <img class="" src="images/skills/java.png" alt="logo Java" title="Java">
-                <figcaption>
-                    <h3>Java</h3>
-                </figcaption>
-            </figure>
-        </li>
-        <!-- End skill block -->
-        <!-- Skill block -->
-        <li>
-            <figure title="AngularJS">
-                <img class="" src="images/skills/angularjs.png" alt="logo AngularJS" title="AngularJS">
-                <figcaption>
-                    <h3>AngularJS</h3>
-                </figcaption>
-            </figure>
-        </li>
-        <!-- End skill block -->
-        <!-- Skill block -->
-        <li>
-            <figure title="JavaScript">
-                <img class="" src="images/skills/javascript.png" alt="logo JavaScript" title="JavaScript">
-                <figcaption>
-                    <h3>JavaScript</h3>
-                </figcaption>
-            </figure>
-        </li>
-        <!-- End skill block -->
-        <!-- Skill block -->
-        <li>
-            <figure title="Apache Wicket">
-                <img class="" src="images/skills/wicket.png" alt="logo Apache Wicket" title="Apache Wicket">
-                <figcaption>
-                    <h3>Apache Wicket</h3>
-                </figcaption>
-            </figure>
-        </li>
-        <!-- End skill block -->
-        <!-- Skill block -->
-        <li>
-            <figure title="JBoss Arquillian">
-                <img class="" src="images/skills/arquillian.png" alt="logo JBoss Arquillian" title="JBoss Arquillian">
-                <figcaption>
-                    <h3>JBoss Arquillian</h3>
-                </figcaption>
-            </figure>
-        </li>
-        <!-- End skill block -->
-        <!-- Skill block -->
-        <li>
-            <figure title="Play2">
-                <img class="" src="images/skills/play2.png" alt="logo Play2" title="Play2">
-                <figcaption>
-                    <h3>Play2</h3>
-                </figcaption>
-            </figure>
-        </li>
-        <!-- End skill block -->
-        <!-- Skill block -->
-        <li>
-            <figure title="JBoss Hibernate">
-                <img class="" src="images/skills/hibernate.png" alt="logo JBoss Hibernate" title="JBoss Hibernate">
-                <figcaption>
-                    <h3>JBoss Hibernate</h3>
-                </figcaption>
-            </figure>
-        </li>
-        <!-- End skill block -->
-        <!-- Skill block -->
-        <li>
-            <figure title="Groovy">
-                <img class="" src="images/skills/groovy.png" alt="logo Groovy" title="Groovy">
-                <figcaption>
-                    <h3>Groovy</h3>
-                </figcaption>
-            </figure>
-        </li>
-        <!-- End skill block -->
-        <!-- Skill block -->
-        <li>
-            <figure title="Apache Maven">
-                <img class="" src="images/skills/maven.png" alt="logo Apache Maven" title="Apache Maven">
-                <figcaption>
-                    <h3>Apache Maven</h3>
-                </figcaption>
-            </figure>
-        </li>
-        <!-- End skill block -->
-        <!-- Skill block -->
-        <li>
-          <figure title="Docker">
-            <img class="" src="images/skills/docker.png" alt="logo Docker" title="Docker">
-            <figcaption>
-              <h3>Docker</h3>
-            </figcaption>
-          </figure>
-        </li>
-        <!-- End skill block -->
-        <!-- Skill block -->
-        <li>
-            <figure title="Oracle Glassfish">
-                <img class="" src="images/skills/glassfish.png" alt="logo Oracle Glassfish" title="Oracle Glassfish">
-                <figcaption>
-                    <h3>Oracle Glassfish</h3>
-                </figcaption>
-            </figure>
-        </li>
-        <!-- End skill block -->
-        <!-- Skill block -->
-        <li>
-            <figure title="Scala">
-                <img class="" src="images/skills/scala.png" alt="logo Scala" title="Scala">
-                <figcaption>
-                    <h3>Scala</h3>
-                </figcaption>
-            </figure>
-        </li>
-        <!-- End skill block -->
-        <!-- Skill block -->
-        <li>
-            <figure title="Twitter Bootstrap">
-                <img class="" src="images/skills/twitterbootstrap.png" alt="logo Twitter Bootstrap" title="Twitter Bootstrap">
-                <figcaption>
-                    <h3>Twitter Bootstrap</h3>
-                </figcaption>
-            </figure>
-        </li>
-        <!-- End skill block -->
-        <!-- Skill block -->
-        <li>
-            <figure title="QueryDSL">
-                <img class="" src="images/skills/querydsl.png" alt="logo QueryDSL" title="QueryDSL">
-                <figcaption>
-                    <h3>QueryDSL</h3>
-                </figcaption>
-            </figure>
-        </li>
-        <!-- End skill block -->
-        <!-- Skill block -->
-        <li>
-            <figure title="HTML5/CSS3">
-                <img class="" src="images/skills/html-css.png" alt="logo HTML5/CSS3" title="HTML5/CSS3">
-                <figcaption>
-                    <h3>HTML5/CSS3</h3>
-                </figcaption>
-            </figure>
-        </li>
-        <!-- End skill block -->
-        <!-- Skill block -->
-        <li>
-            <figure title="Less">
-                <img class="" src="images/skills/less.png" alt="logo Less" title="Less">
-                <figcaption>
-                    <h3>Less</h3>
-                </figcaption>
-            </figure>
-        </li>
-        <!-- End skill block -->
-        <!-- Skill block -->
-        <li>
-            <figure title="Git">
-                <img class="" src="images/skills/git.png" alt="logo Git" title="Git">
-                <figcaption>
-                    <h3>Git</h3>
-                </figcaption>
-            </figure>
-        </li>
-        <!-- End skill block -->
-        <!-- Skill block -->
-        <li>
-            <figure title="Android">
-                <img class="" src="images/skills/android.png" alt="logo Android" title="Android">
-                <figcaption>
-                    <h3>Android.</h3>
-                </figcaption>
-            </figure>
-        </li>
-        <!-- End skill block -->
-        <!-- Skill block -->
-        <li>
-            <figure title="Liquibase">
-                <img class="" src="images/skills/liquibase.png" alt="logo Liquibase" title="Liquibase">
-                <figcaption>
-                    <h3>Liquibase</h3>
-                </figcaption>
-            </figure>
-        </li>
-        <!-- End skill block -->
-        <!-- Skill block -->
-        <li>
-            <figure title="Selenium">
-                <img class="" src="images/skills/selenium.png" alt="logo Selenium" title="Selenium">
-                <figcaption>
-                    <h3>Selenium</h3>
-                </figcaption>
-            </figure>
-        </li>
-        <!-- End skill block -->
-        <!-- Skill block -->
-        <li>
-            <figure title="MongoDB">
-                <img class="" src="images/skills/mongodb.png" alt="logo MongoDB" title="MongoDB">
-                <figcaption>
-                    <h3>MongoDB</h3>
-                </figcaption>
-            </figure>
-        </li>
-        <!-- End skill block -->
-        <!-- Skill block -->
-        <li>
-            <figure title="Redis">
-                <img class="" src="images/skills/redis.png" alt="logo Redis" title="Redis">
-                <figcaption>
-                    <h3>Redis</h3>
-                </figcaption>
-            </figure>
-        </li>
-        <!-- End skill block -->
-        <!-- Skill block -->
-        <li>
-            <figure title="Android Bootstrap">
-                <img class="" src="images/skills/androidbootstrap.png" alt="logo Android Bootstrap" title="Android Bootstrap">
-                <figcaption>
-                    <h3>Android Bootstrap</h3>
-                </figcaption>
-            </figure>
-        </li>
-        <!-- End skill block -->
-        <!-- Skill block -->
-        <li>
-            <figure title="Elastic Search">
-                <img class="" src="images/skills/elasticsearch.png" alt="logo Elastic Search" title="Elastic Search">
-                <figcaption>
-                    <h3>Elastic Search</h3>
-                </figcaption>
-            </figure>
-        </li>
-        <!-- End skill block -->
-        <!-- Skill block -->
-        <li>
-            <figure title="Neo4j">
-            <img class="" src="images/skills/neo4j.jpeg" alt="logo Neo4j" title="Neo4j">
-            <figcaption>
-                <h3>Neo4j</h3>
-            </figcaption>
-            </figure>
-        </li>
-        <!-- End skill block -->
-        <!-- Skill block -->
-        <li>
-            <figure title="Spring-boot">
-              <img class="" src="images/skills/spring-boot.png" alt="logo spring-boot" title="Spring-boot">
-              <figcaption>
-                <h3>Spring-boot</h3>
-              </figcaption>
-            </figure>
-        </li>
-        <!-- End skill block -->
-    </ul>
-</div>
-</div>
+        <div class="row">
+            <ul class="skills owl-carousel" id="main-skills-carousel">
+                <!-- Skill block -->
+                <li>
+                    <figure title="Java">
+                        <img class="" src="images/skills/java.png" alt="logo Java" title="Java">
+                        <figcaption>
+                            <h3>Java</h3>
+                        </figcaption>
+                    </figure>
+                </li>
+                <!-- End skill block -->
+                <!-- Skill block -->
+                <li>
+                    <figure title="AngularJS">
+                        <img class="" src="images/skills/angularjs.png" alt="logo AngularJS" title="AngularJS">
+                        <figcaption>
+                            <h3>AngularJS</h3>
+                        </figcaption>
+                    </figure>
+                </li>
+                <!-- End skill block -->
+                <!-- Skill block -->
+                <li>
+                    <figure title="JavaScript">
+                        <img class="" src="images/skills/javascript.png" alt="logo JavaScript" title="JavaScript">
+                        <figcaption>
+                            <h3>JavaScript</h3>
+                        </figcaption>
+                    </figure>
+                </li>
+                <!-- End skill block -->
+                <!-- Skill block -->
+                <li>
+                    <figure title="Apache Wicket">
+                        <img class="" src="images/skills/wicket.png" alt="logo Apache Wicket" title="Apache Wicket">
+                        <figcaption>
+                            <h3>Apache Wicket</h3>
+                        </figcaption>
+                    </figure>
+                </li>
+                <!-- End skill block -->
+                <!-- Skill block -->
+                <li>
+                    <figure title="JBoss Arquillian">
+                        <img class="" src="images/skills/arquillian.png" alt="logo JBoss Arquillian"
+                             title="JBoss Arquillian">
+                        <figcaption>
+                            <h3>JBoss Arquillian</h3>
+                        </figcaption>
+                    </figure>
+                </li>
+                <!-- End skill block -->
+                <!-- Skill block -->
+                <li>
+                    <figure title="Play2">
+                        <img class="" src="images/skills/play2.png" alt="logo Play2" title="Play2">
+                        <figcaption>
+                            <h3>Play2</h3>
+                        </figcaption>
+                    </figure>
+                </li>
+                <!-- End skill block -->
+                <!-- Skill block -->
+                <li>
+                    <figure title="JBoss Hibernate">
+                        <img class="" src="images/skills/hibernate.png" alt="logo JBoss Hibernate"
+                             title="JBoss Hibernate">
+                        <figcaption>
+                            <h3>JBoss Hibernate</h3>
+                        </figcaption>
+                    </figure>
+                </li>
+                <!-- End skill block -->
+                <!-- Skill block -->
+                <li>
+                    <figure title="Groovy">
+                        <img class="" src="images/skills/groovy.png" alt="logo Groovy" title="Groovy">
+                        <figcaption>
+                            <h3>Groovy</h3>
+                        </figcaption>
+                    </figure>
+                </li>
+                <!-- End skill block -->
+                <!-- Skill block -->
+                <li>
+                    <figure title="Apache Maven">
+                        <img class="" src="images/skills/maven.png" alt="logo Apache Maven" title="Apache Maven">
+                        <figcaption>
+                            <h3>Apache Maven</h3>
+                        </figcaption>
+                    </figure>
+                </li>
+                <!-- End skill block -->
+                <!-- Skill block -->
+                <li>
+                    <figure title="Docker">
+                        <img class="" src="images/skills/docker.png" alt="logo Docker" title="Docker">
+                        <figcaption>
+                            <h3>Docker</h3>
+                        </figcaption>
+                    </figure>
+                </li>
+                <!-- End skill block -->
+                <!-- Skill block -->
+                <li>
+                    <figure title="Oracle Glassfish">
+                        <img class="" src="images/skills/glassfish.png" alt="logo Oracle Glassfish"
+                             title="Oracle Glassfish">
+                        <figcaption>
+                            <h3>Oracle Glassfish</h3>
+                        </figcaption>
+                    </figure>
+                </li>
+                <!-- End skill block -->
+                <!-- Skill block -->
+                <li>
+                    <figure title="Scala">
+                        <img class="" src="images/skills/scala.png" alt="logo Scala" title="Scala">
+                        <figcaption>
+                            <h3>Scala</h3>
+                        </figcaption>
+                    </figure>
+                </li>
+                <!-- End skill block -->
+                <!-- Skill block -->
+                <li>
+                    <figure title="Twitter Bootstrap">
+                        <img class="" src="images/skills/twitterbootstrap.png" alt="logo Twitter Bootstrap"
+                             title="Twitter Bootstrap">
+                        <figcaption>
+                            <h3>Twitter Bootstrap</h3>
+                        </figcaption>
+                    </figure>
+                </li>
+                <!-- End skill block -->
+                <!-- Skill block -->
+                <li>
+                    <figure title="QueryDSL">
+                        <img class="" src="images/skills/querydsl.png" alt="logo QueryDSL" title="QueryDSL">
+                        <figcaption>
+                            <h3>QueryDSL</h3>
+                        </figcaption>
+                    </figure>
+                </li>
+                <!-- End skill block -->
+                <!-- Skill block -->
+                <li>
+                    <figure title="HTML5/CSS3">
+                        <img class="" src="images/skills/html-css.png" alt="logo HTML5/CSS3" title="HTML5/CSS3">
+                        <figcaption>
+                            <h3>HTML5/CSS3</h3>
+                        </figcaption>
+                    </figure>
+                </li>
+                <!-- End skill block -->
+                <!-- Skill block -->
+                <li>
+                    <figure title="Less">
+                        <img class="" src="images/skills/less.png" alt="logo Less" title="Less">
+                        <figcaption>
+                            <h3>Less</h3>
+                        </figcaption>
+                    </figure>
+                </li>
+                <!-- End skill block -->
+                <!-- Skill block -->
+                <li>
+                    <figure title="Git">
+                        <img class="" src="images/skills/git.png" alt="logo Git" title="Git">
+                        <figcaption>
+                            <h3>Git</h3>
+                        </figcaption>
+                    </figure>
+                </li>
+                <!-- End skill block -->
+                <!-- Skill block -->
+                <li>
+                    <figure title="Android">
+                        <img class="" src="images/skills/android.png" alt="logo Android" title="Android">
+                        <figcaption>
+                            <h3>Android.</h3>
+                        </figcaption>
+                    </figure>
+                </li>
+                <!-- End skill block -->
+                <!-- Skill block -->
+                <li>
+                    <figure title="Liquibase">
+                        <img class="" src="images/skills/liquibase.png" alt="logo Liquibase" title="Liquibase">
+                        <figcaption>
+                            <h3>Liquibase</h3>
+                        </figcaption>
+                    </figure>
+                </li>
+                <!-- End skill block -->
+                <!-- Skill block -->
+                <li>
+                    <figure title="Selenium">
+                        <img class="" src="images/skills/selenium.png" alt="logo Selenium" title="Selenium">
+                        <figcaption>
+                            <h3>Selenium</h3>
+                        </figcaption>
+                    </figure>
+                </li>
+                <!-- End skill block -->
+                <!-- Skill block -->
+                <li>
+                    <figure title="MongoDB">
+                        <img class="" src="images/skills/mongodb.png" alt="logo MongoDB" title="MongoDB">
+                        <figcaption>
+                            <h3>MongoDB</h3>
+                        </figcaption>
+                    </figure>
+                </li>
+                <!-- End skill block -->
+                <!-- Skill block -->
+                <li>
+                    <figure title="Redis">
+                        <img class="" src="images/skills/redis.png" alt="logo Redis" title="Redis">
+                        <figcaption>
+                            <h3>Redis</h3>
+                        </figcaption>
+                    </figure>
+                </li>
+                <!-- End skill block -->
+                <!-- Skill block -->
+                <li>
+                    <figure title="Android Bootstrap">
+                        <img class="" src="images/skills/androidbootstrap.png" alt="logo Android Bootstrap"
+                             title="Android Bootstrap">
+                        <figcaption>
+                            <h3>Android Bootstrap</h3>
+                        </figcaption>
+                    </figure>
+                </li>
+                <!-- End skill block -->
+                <!-- Skill block -->
+                <li>
+                    <figure title="Elastic Search">
+                        <img class="" src="images/skills/elasticsearch.png" alt="logo Elastic Search"
+                             title="Elastic Search">
+                        <figcaption>
+                            <h3>Elastic Search</h3>
+                        </figcaption>
+                    </figure>
+                </li>
+                <!-- End skill block -->
+                <!-- Skill block -->
+                <li>
+                    <figure title="Neo4j">
+                        <img class="" src="images/skills/neo4j.jpeg" alt="logo Neo4j" title="Neo4j">
+                        <figcaption>
+                            <h3>Neo4j</h3>
+                        </figcaption>
+                    </figure>
+                </li>
+                <!-- End skill block -->
+                <!-- Skill block -->
+                <li>
+                    <figure title="Spring-boot">
+                        <img class="" src="images/skills/spring-boot.png" alt="logo spring-boot" title="Spring-boot">
+                        <figcaption>
+                            <h3>Spring-boot</h3>
+                        </figcaption>
+                    </figure>
+                </li>
+                <!-- End skill block -->
+            </ul>
+        </div>
+    </div>
 </section>
 
 <section id="team">
-<h2 class="header">
+    <h2 class="header">
         <span class="label">7</span> développeurs motivés
-</h2>
-<div class="container">
-<ul class="margin-none troopers">
-<!-- Trooper block -->
-<li class="padding-none col-sm-3 col-xs-6">
-    <figure>
-        <a data-toggle="modal" data-target="#samva">
-            <img class="img-responsive" src="//www.gravatar.com/avatar/9600dc1bda25e979e656559914e00021.png?s=320" alt="Avatar Cedric" title="Cedric" data-container="body">
-        </a>
-    </figure>
+    </h2>
+    <div class="container">
+        <ul class="margin-none troopers">
+            <!-- Trooper block -->
+            <li class="padding-none col-sm-3 col-xs-6">
+                <figure>
+                    <a data-toggle="modal" data-target="#samva">
+                        <img class="img-responsive"
+                             src="//www.gravatar.com/avatar/9600dc1bda25e979e656559914e00021.png?s=320"
+                             alt="Avatar Cedric" title="Cedric" data-container="body">
+                    </a>
+                </figure>
 
-    <!-- Modal -->
-    <div class="modal fade" id="samva" tabindex="-1" role="dialog" aria-hidden="true" itemscope itemtype="http://schema.org/Organization">
-        <meta itemprop="name" class="brand">CT-CDGT</meta>
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h4 class="modal-title" >Cedric</h4>
-                </div>
-                <div class="modal-body">
-                    <div class="row">
-                        <p class="col-lg-12 text-justify">
-                            Très impliqué dans la qualité du code, Cédric s'intéresse de très près à tout ce qui peut rendre les développeurs plus efficaces et consciencieux lors de leur activité quotidienne. Son périmètre d'action s'étend de la mise en place d'architectures à l'optimisation du processus de mise en production. Convaincu de la puissance de l'Open Source, il participe autant que possible aux projets qu'il utilise et conseille.
-                        </p>
+                <!-- Modal -->
+                <div class="modal fade" id="samva" tabindex="-1" role="dialog" aria-hidden="true" itemscope
+                     itemtype="http://schema.org/Organization">
+                    <meta itemprop="name" class="brand">
+                    CT-CDGT</meta>
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal"
+                                        aria-hidden="true">&times;</button>
+                                <h4 class="modal-title">Cedric</h4>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <p class="col-lg-12 text-justify">
+                                        Très impliqué dans la qualité du code, Cédric s'intéresse de très près à tout ce
+                                        qui peut rendre les développeurs plus efficaces et consciencieux lors de leur
+                                        activité quotidienne. Son périmètre d'action s'étend de la mise en place
+                                        d'architectures à l'optimisation du processus de mise en production. Convaincu
+                                        de la puissance de l'Open Source, il participe autant que possible aux projets
+                                        qu'il utilise et conseille.
+                                    </p>
+                                </div>
+                                <div class="row">
+                                    <ul class="col-lg-12 socials">
+                                        <li>
+                                            <a target="_blank" href="https://twitter.com/Cedric_Gatay"><i
+                                                    class="fa fa-twitter-square"></i></a>
+                                        </li>
+                                        <li>
+                                            <a target="_blank" href="https://www.facebook.com/cedric.gatay"><i
+                                                    class="fa fa-facebook-square"></i></a>
+                                        </li>
+                                        <li>
+                                            <a target="_blank"
+                                               href="https://plus.google.com/u/0/113710438893677910356/about"><i
+                                                    class="fa fa-google-plus-square"></i></a>
+                                        </li>
+                                        <li>
+                                            <a target="_blank" href="https://github.com/CedricGatay"><i
+                                                    class="fa fa-github-square"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+                            </div>
+                        </div>
+                        <!-- /.modal-content -->
                     </div>
-                    <div class="row">
-                        <ul class="col-lg-12 socials">
-                            <li>
-                                <a target="_blank" href="https://twitter.com/Cedric_Gatay"><i
-                                        class="fa fa-twitter-square"></i></a>
-                            </li>
-                            <li>
-                                <a target="_blank" href="https://www.facebook.com/cedric.gatay"><i
-                                        class="fa fa-facebook-square"></i></a>
-                            </li>
-                            <li>
-                                <a target="_blank"
-                                   href="https://plus.google.com/u/0/113710438893677910356/about"><i
-                                        class="fa fa-google-plus-square"></i></a>
-                            </li>
-                            <li>
-                                <a target="_blank" href="https://github.com/CedricGatay"><i
-                                        class="fa fa-github-square"></i></a>
-                            </li>
-                        </ul>
-                    </div>
+                    <!-- /.modal-dialog -->
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
-                </div>
-            </div>
-            <!-- /.modal-content -->
-        </div>
-        <!-- /.modal-dialog -->
-    </div>
-    <!-- /.modal -->
-</li>
-<!-- End Trooper block -->
-<!-- Trooper block -->
-<li class="padding-none col-sm-3 col-xs-6">
-    <figure>
-        <a data-toggle="modal" data-target="#lulu">
-            <img class="img-responsive" src="//www.gravatar.com/avatar/6143902a36fe080f7e1717880c194c9f?s=320" alt="avatar Romain" title="Romain" data-container="body">
-        </a>
-    </figure>
+                <!-- /.modal -->
+            </li>
+            <!-- End Trooper block -->
+            <!-- Trooper block -->
+            <li class="padding-none col-sm-3 col-xs-6">
+                <figure>
+                    <a data-toggle="modal" data-target="#lulu">
+                        <img class="img-responsive"
+                             src="//www.gravatar.com/avatar/6143902a36fe080f7e1717880c194c9f?s=320" alt="avatar Romain"
+                             title="Romain" data-container="body">
+                    </a>
+                </figure>
 
-    <!-- Modal -->
-    <div class="modal fade" id="lulu" tabindex="-1" role="dialog" aria-hidden="true" itemscope itemtype="http://schema.org/Organization">
-        <meta itemprop="name" class="brand">CT-RMLC</meta>
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h4 class="modal-title" >Romain</h4>
-                </div>
-                <div class="modal-body">
-                    <div class="row">
-                        <p class="col-lg-12 text-justify">
-                            Soucieux de la qualité du code et du résultat, Romain est très impliqué dans les développements. Toujours à l'écoute des besoins clients, il les synthétise de manière à offrir un produit correspondant à leurs attentes.
-                        </p>
+                <!-- Modal -->
+                <div class="modal fade" id="lulu" tabindex="-1" role="dialog" aria-hidden="true" itemscope
+                     itemtype="http://schema.org/Organization">
+                    <meta itemprop="name" class="brand">
+                    CT-RMLC</meta>
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal"
+                                        aria-hidden="true">&times;</button>
+                                <h4 class="modal-title">Romain</h4>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <p class="col-lg-12 text-justify">
+                                        Soucieux de la qualité du code et du résultat, Romain est très impliqué dans les
+                                        développements. Toujours à l'écoute des besoins clients, il les synthétise de
+                                        manière à offrir un produit correspondant à leurs attentes.
+                                    </p>
+                                </div>
+                                <div class="row">
+                                    <ul class="col-lg-12 socials">
+                                        <li>
+                                            <a target="_blank" href="https://twitter.com/Rom1_Lucas"><i
+                                                    class="fa fa-twitter-square"></i></a>
+                                        </li>
+                                        <li>
+                                            <a target="_blank"
+                                               href="https://plus.google.com/115636387758486507485/about"><i
+                                                    class="fa fa-google-plus-square"></i></a>
+                                        </li>
+                                        <li>
+                                            <a target="_blank" href="https://github.com/rlucas1"><i
+                                                    class="fa fa-github-square"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+                            </div>
+                        </div>
+                        <!-- /.modal-content -->
                     </div>
-                    <div class="row">
-                        <ul class="col-lg-12 socials">
-                            <li>
-                                <a target="_blank" href="https://twitter.com/Rom1_Lucas"><i
-                                        class="fa fa-twitter-square"></i></a>
-                            </li>
-                            <li>
-                                <a target="_blank"
-                                   href="https://plus.google.com/115636387758486507485/about"><i
-                                        class="fa fa-google-plus-square"></i></a>
-                            </li>
-                            <li>
-                                <a target="_blank" href="https://github.com/rlucas1"><i
-                                        class="fa fa-github-square"></i></a>
-                            </li>
-                        </ul>
-                    </div>
+                    <!-- /.modal-dialog -->
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
-                </div>
-            </div>
-            <!-- /.modal-content -->
-        </div>
-        <!-- /.modal-dialog -->
-    </div>
-    <!-- /.modal -->
-</li>
-<!-- End Trooper block -->
-<!-- Trooper block -->
-<li class="padding-none col-sm-3 col-xs-6">
-    <figure>
-        <a data-toggle="modal" data-target="#benou">
-            <img class="img-responsive" src="//www.gravatar.com/avatar/3e4eeb6684192c7667363e34e888a581.png?s=320" alt="avatar Benjamin" title="Benjamin"  data-container="body">
-        </a>
-    </figure>
+                <!-- /.modal -->
+            </li>
+            <!-- End Trooper block -->
+            <!-- Trooper block -->
+            <li class="padding-none col-sm-3 col-xs-6">
+                <figure>
+                    <a data-toggle="modal" data-target="#benou">
+                        <img class="img-responsive"
+                             src="//www.gravatar.com/avatar/3e4eeb6684192c7667363e34e888a581.png?s=320"
+                             alt="avatar Benjamin" title="Benjamin" data-container="body">
+                    </a>
+                </figure>
 
-    <!-- Modal -->
-    <div class="modal fade" id="benou" tabindex="-1" role="dialog" aria-hidden="true" itemscope itemtype="http://schema.org/Organization">
-        <meta itemprop="name" class="brand">CT-BNCS</meta>
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h4 class="modal-title" >Benjamin</h4>
-                </div>
-                <div class="modal-body">
-                    <div class="row">
-                        <p class="col-lg-12 text-justify">
-                            Passioné de musique, d'informatique et de design, Benjamin aime tout ce qui touche à l'expérience utilisateur (UX) et aux interfaces (UI). Il en a fait sa spécialité au sein de l'équipe en alliant ses connaissances en développement avec celles en webdesign.
-                        </p>
+                <!-- Modal -->
+                <div class="modal fade" id="benou" tabindex="-1" role="dialog" aria-hidden="true" itemscope
+                     itemtype="http://schema.org/Organization">
+                    <meta itemprop="name" class="brand">
+                    CT-BNCS</meta>
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal"
+                                        aria-hidden="true">&times;</button>
+                                <h4 class="modal-title">Benjamin</h4>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <p class="col-lg-12 text-justify">
+                                        Passioné de musique, d'informatique et de design, Benjamin aime tout ce qui
+                                        touche à l'expérience utilisateur (UX) et aux interfaces (UI). Il en a fait sa
+                                        spécialité au sein de l'équipe en alliant ses connaissances en développement
+                                        avec celles en webdesign.
+                                    </p>
+                                </div>
+                                <div class="row">
+                                    <ul class="col-lg-12 socials">
+                                        <li>
+                                            <a target="_blank" href="https://twitter.com/bbbenja"><i
+                                                    class="fa fa-twitter-square"></i></a>
+                                        </li>
+                                        <li>
+                                            <a target="_blank" href="https://www.facebook.com/benjamin.cousin"><i
+                                                    class="fa fa-facebook-square"></i></a>
+                                        </li>
+                                        <li>
+                                            <a target="_blank"
+                                               href="https://plus.google.com/u/0/101896655570412948733/about"><i
+                                                    class="fa fa-google-plus-square"></i></a>
+                                        </li>
+                                        <li>
+                                            <a target="_blank" href="https://github.com/bbbenja"><i
+                                                    class="fa fa-github-square"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+                            </div>
+                        </div>
+                        <!-- /.modal-content -->
                     </div>
-                    <div class="row">
-                        <ul class="col-lg-12 socials">
-                            <li>
-                                <a target="_blank" href="https://twitter.com/bbbenja"><i
-                                        class="fa fa-twitter-square"></i></a>
-                            </li>
-                            <li>
-                                <a target="_blank" href="https://www.facebook.com/benjamin.cousin"><i
-                                        class="fa fa-facebook-square"></i></a>
-                            </li>
-                            <li>
-                                <a target="_blank"
-                                   href="https://plus.google.com/u/0/101896655570412948733/about"><i
-                                        class="fa fa-google-plus-square"></i></a>
-                            </li>
-                            <li>
-                                <a target="_blank" href="https://github.com/bbbenja"><i
-                                        class="fa fa-github-square"></i></a>
-                            </li>
-                        </ul>
-                    </div>
+                    <!-- /.modal-dialog -->
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
-                </div>
-            </div>
-            <!-- /.modal-content -->
-        </div>
-        <!-- /.modal-dialog -->
-    </div>
-    <!-- /.modal -->
-</li>
-<!-- End Trooper block -->
-<!-- Trooper block -->
-<li class="padding-none col-sm-3 col-xs-6">
-    <figure>
-        <a data-toggle="modal" data-target="#jojo">
-            <img class="img-responsive" src="//www.gravatar.com/avatar/2ad07cafd4c4dfdec15308a727ead330.png?s=320" alt="avatar Joris" title="Joris"  data-container="body">
-        </a>
-    </figure>
+                <!-- /.modal -->
+            </li>
+            <!-- End Trooper block -->
+            <!-- Trooper block -->
+            <li class="padding-none col-sm-3 col-xs-6">
+                <figure>
+                    <a data-toggle="modal" data-target="#jojo">
+                        <img class="img-responsive"
+                             src="//www.gravatar.com/avatar/2ad07cafd4c4dfdec15308a727ead330.png?s=320"
+                             alt="avatar Joris" title="Joris" data-container="body">
+                    </a>
+                </figure>
 
-    <!-- Modal -->
-    <div class="modal fade" id="jojo" tabindex="-1" role="dialog" aria-hidden="true" itemscope itemtype="http://schema.org/Organization">
-        <meta itemprop="name" class="brand">CT-JRPT</meta>
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h4 class="modal-title" >Joris</h4>
-                </div>
-                <div class="modal-body">
-                    <div class="row">
-                        <p class="col-lg-12 text-justify">
-                            Joris accorde une importance particulière au code simple, propre et efficace. De nature curieuse, il essaie de favoriser la polyvalence afin de répondre au mieux aux besoins des clients et aime se challenger pour élargir ses connaissances.
-                        </p>
+                <!-- Modal -->
+                <div class="modal fade" id="jojo" tabindex="-1" role="dialog" aria-hidden="true" itemscope
+                     itemtype="http://schema.org/Organization">
+                    <meta itemprop="name" class="brand">
+                    CT-JRPT</meta>
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal"
+                                        aria-hidden="true">&times;</button>
+                                <h4 class="modal-title">Joris</h4>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <p class="col-lg-12 text-justify">
+                                        Joris accorde une importance particulière au code simple, propre et efficace. De
+                                        nature curieuse, il essaie de favoriser la polyvalence afin de répondre au mieux
+                                        aux besoins des clients et aime se challenger pour élargir ses connaissances.
+                                    </p>
+                                </div>
+                                <div class="row">
+                                    <ul class="col-lg-12 socials">
+                                        <li>
+                                            <a target="_blank" href="https://twitter.com/Joris_Potier"><i
+                                                    class="fa fa-twitter-square"></i></a>
+                                        </li>
+                                        <li>
+                                            <a target="_blank" href="https://www.facebook.com/joris.potier"><i
+                                                    class="fa fa-facebook-square"></i></a>
+                                        </li>
+                                        <li>
+                                            <a target="_blank"
+                                               href="https://plus.google.com/u/0/105135988277405540956/about"><i
+                                                    class="fa fa-google-plus-square"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+                            </div>
+                        </div>
+                        <!-- /.modal-content -->
                     </div>
-                    <div class="row">
-                        <ul class="col-lg-12 socials">
-                            <li>
-                                <a target="_blank" href="https://twitter.com/Joris_Potier"><i
-                                        class="fa fa-twitter-square"></i></a>
-                            </li>
-                            <li>
-                                <a target="_blank" href="https://www.facebook.com/joris.potier"><i
-                                        class="fa fa-facebook-square"></i></a>
-                            </li>
-                            <li>
-                                <a target="_blank"
-                                   href="https://plus.google.com/u/0/105135988277405540956/about"><i
-                                        class="fa fa-google-plus-square"></i></a>
-                            </li>
-                        </ul>
-                    </div>
+                    <!-- /.modal-dialog -->
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
-                </div>
-            </div>
-            <!-- /.modal-content -->
-        </div>
-        <!-- /.modal-dialog -->
-    </div>
-    <!-- /.modal -->
-</li>
-<!-- End Trooper block -->
-<!-- Trooper block -->
-<li class="padding-none col-sm-3 col-xs-6">
-    <figure>
-        <a data-toggle="modal" data-target="#nanak">
-            <img class="img-responsive" src="//www.gravatar.com/avatar/962a60aa8554d933233ae2de56224d06.png?s=320" alt="avatar Florian" title="Florian">
-        </a>
-    </figure>
+                <!-- /.modal -->
+            </li>
+            <!-- End Trooper block -->
+            <!-- Trooper block -->
+            <li class="padding-none col-sm-3 col-xs-6">
+                <figure>
+                    <a data-toggle="modal" data-target="#nanak">
+                        <img class="img-responsive"
+                             src="//www.gravatar.com/avatar/962a60aa8554d933233ae2de56224d06.png?s=320"
+                             alt="avatar Florian" title="Florian">
+                    </a>
+                </figure>
 
-    <!-- Modal -->
-    <div class="modal fade" id="nanak" tabindex="-1" role="dialog" aria-hidden="true" itemscope itemtype="http://schema.org/Organization">
-        <meta itemprop="name" class="brand">CT-FLCH</meta>
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h4 class="modal-title" >Florian</h4>
-                </div>
-                <div class="modal-body">
-                    <div class="row">
-                        <p class="col-lg-12 text-justify">
-                            Très attaché aux pratiques agiles, Florian n'hésite pas à remettre en cause les processus pour trouver les meilleurs moyens de fonctionner en équipe. Formé trés tôt au TDD, il s'attache à ce que le code reste le plus clair possible et veille à ce que les compétences soient toujours le mieux partagées.
-                        </p>
+                <!-- Modal -->
+                <div class="modal fade" id="nanak" tabindex="-1" role="dialog" aria-hidden="true" itemscope
+                     itemtype="http://schema.org/Organization">
+                    <meta itemprop="name" class="brand">
+                    CT-FLCH</meta>
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal"
+                                        aria-hidden="true">&times;</button>
+                                <h4 class="modal-title">Florian</h4>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <p class="col-lg-12 text-justify">
+                                        Très attaché aux pratiques agiles, Florian n'hésite pas à remettre en cause les
+                                        processus pour trouver les meilleurs moyens de fonctionner en équipe. Formé trés
+                                        tôt au TDD, il s'attache à ce que le code reste le plus clair possible et veille
+                                        à ce que les compétences soient toujours le mieux partagées.
+                                    </p>
+                                </div>
+                                <div class="row">
+                                    <ul class="col-lg-12 socials">
+                                        <li>
+                                            <a target="_blank" href="https://twitter.com/florianchauveau"><i
+                                                    class="fa fa-twitter-square"></i></a>
+                                        </li>
+                                        <li>
+                                            <a target="_blank"
+                                               href="https://plus.google.com/u/0/+FlorianChauveau/about"><i
+                                                    class="fa fa-google-plus-square"></i></a>
+                                        </li>
+                                        <li>
+                                            <a target="_blank" href="https://github.com/fchauveau"><i
+                                                    class="fa fa-github-square"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+                            </div>
+                        </div>
+                        <!-- /.modal-content -->
                     </div>
-                    <div class="row">
-                        <ul class="col-lg-12 socials">
-                            <li>
-                                <a target="_blank" href="https://twitter.com/florianchauveau"><i
-                                        class="fa fa-twitter-square"></i></a>
-                            </li>
-                            <li>
-                                <a target="_blank"
-                                   href="https://plus.google.com/u/0/+FlorianChauveau/about"><i
-                                        class="fa fa-google-plus-square"></i></a>
-                            </li>
-                            <li>
-                                <a target="_blank" href="https://github.com/fchauveau"><i
-                                        class="fa fa-github-square"></i></a>
-                            </li>
-                        </ul>
-                    </div>
+                    <!-- /.modal-dialog -->
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
-                </div>
-            </div>
-            <!-- /.modal-content -->
-        </div>
-        <!-- /.modal-dialog -->
-    </div>
-    <!-- /.modal -->
-</li>
-<!-- End Trooper block -->
-<!-- Trooper block -->
-<li class="padding-none col-sm-3 col-xs-6">
-    <figure>
-        <a data-toggle="modal" data-target="#mattboll">
-            <img class="img-responsive" src="//www.gravatar.com/avatar/bab2dd65cb76ae736b45c13c65e1e816.png?s=320" alt="avatar Matthieu" title="Matthieu">
-        </a>
-    </figure>
+                <!-- /.modal -->
+            </li>
+            <!-- End Trooper block -->
+            <!-- Trooper block -->
+            <li class="padding-none col-sm-3 col-xs-6">
+                <figure>
+                    <a data-toggle="modal" data-target="#mattboll">
+                        <img class="img-responsive"
+                             src="//www.gravatar.com/avatar/bab2dd65cb76ae736b45c13c65e1e816.png?s=320"
+                             alt="avatar Matthieu" title="Matthieu">
+                    </a>
+                </figure>
 
-    <!-- Modal -->
-    <div class="modal fade" id="mattboll" tabindex="-1" role="dialog" aria-hidden="true" itemscope itemtype="http://schema.org/Organization">
-        <meta itemprop="name" class="brand">CT-MTBL</meta>
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h4 class="modal-title" >Matthieu</h4>
-                </div>
-                <div class="modal-body">
-                    <div class="row">
-                        <p class="col-lg-12 text-justify">
-                            Matthieu aime la simplicité et l'optimisation, amateur de l'administration système, il pense qu'un shell et vim sont les outils primaires pour travailler. Ainsi qu'un clavier en bépo, qui court beaucoup plus vite qu'en azerty !
-                        </p>
+                <!-- Modal -->
+                <div class="modal fade" id="mattboll" tabindex="-1" role="dialog" aria-hidden="true" itemscope
+                     itemtype="http://schema.org/Organization">
+                    <meta itemprop="name" class="brand">
+                    CT-MTBL</meta>
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal"
+                                        aria-hidden="true">&times;</button>
+                                <h4 class="modal-title">Matthieu</h4>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <p class="col-lg-12 text-justify">
+                                        Matthieu aime la simplicité et l'optimisation, amateur de l'administration
+                                        système, il pense qu'un shell et vim sont les outils primaires pour travailler.
+                                        Ainsi qu'un clavier en bépo, qui court beaucoup plus vite qu'en azerty !
+                                    </p>
+                                </div>
+                                <div class="row">
+                                    <ul class="col-lg-12 socials">
+                                        <li>
+                                            <a target="_blank" href="https://twitter.com/mattboll"><i
+                                                    class="fa fa-twitter-square"></i></a>
+                                        </li>
+                                        <li>
+                                            <a target="_blank" href="https://github.com/mattboll"><i
+                                                    class="fa fa-github-square"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+                            </div>
+                        </div>
+                        <!-- /.modal-content -->
                     </div>
-                    <div class="row">
-                        <ul class="col-lg-12 socials">
-                            <li>
-                                <a target="_blank" href="https://twitter.com/mattboll"><i
-                                        class="fa fa-twitter-square"></i></a>
-                            </li>
-                            <li>
-                                <a target="_blank" href="https://github.com/mattboll"><i
-                                        class="fa fa-github-square"></i></a>
-                            </li>
-                        </ul>
-                    </div>
+                    <!-- /.modal-dialog -->
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
-                </div>
-            </div>
-            <!-- /.modal-content -->
-        </div>
-        <!-- /.modal-dialog -->
-    </div>
-    <!-- /.modal -->
-</li>
-<!-- End Trooper block -->
-<!-- Trooper block -->
-<li class="padding-none col-sm-3 col-xs-6">
-    <figure>
-        <a data-toggle="modal" data-target="#20100">
-            <img class="img-responsive" src="//www.gravatar.com/avatar/7ccf31b0bb2c1cfbfffb55c3e155f81d.png?s=320" alt="avatar Vincent" title="Vincent">
-        </a>
-    </figure>
+                <!-- /.modal -->
+            </li>
+            <!-- End Trooper block -->
+            <!-- Trooper block -->
+            <li class="padding-none col-sm-3 col-xs-6">
+                <figure>
+                    <a data-toggle="modal" data-target="#20100">
+                        <img class="img-responsive"
+                             src="//www.gravatar.com/avatar/7ccf31b0bb2c1cfbfffb55c3e155f81d.png?s=320"
+                             alt="avatar Vincent" title="Vincent">
+                    </a>
+                </figure>
 
-    <!-- Modal -->
-    <div class="modal fade" id="20100" tabindex="-1" role="dialog" aria-hidden="true" itemscope itemtype="http://schema.org/Organization">
-        <meta itemprop="name" class="brand">CT-VCMB</meta>
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h4 class="modal-title" >Vincent</h4>
-                </div>
-                <div class="modal-body">
-                    <div class="row">
-                        <p class="col-lg-12 text-justify">
-                            De nature impatient, Vincent aime les applications très réactives. Dés qu'il voit une page lente, il fait des recherches pour l'optimiser et fait part de ses résultats à l'équipe pour éviter d'avoir le même problème à l'avenir. De plus il n'aime pas trouver deux fois le même bug, ce qui implique qu'il déteste le copier/coller. Il aime générifier le code pour que les traitements soient optimaux et pour avoir une seule source potentielle de bugs.
-                        </p>
+                <!-- Modal -->
+                <div class="modal fade" id="20100" tabindex="-1" role="dialog" aria-hidden="true" itemscope
+                     itemtype="http://schema.org/Organization">
+                    <meta itemprop="name" class="brand">
+                    CT-VCMB</meta>
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal"
+                                        aria-hidden="true">&times;</button>
+                                <h4 class="modal-title">Vincent</h4>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <p class="col-lg-12 text-justify">
+                                        De nature impatient, Vincent aime les applications très réactives. Dés qu'il
+                                        voit une page lente, il fait des recherches pour l'optimiser et fait part de ses
+                                        résultats à l'équipe pour éviter d'avoir le même problème à l'avenir. De plus il
+                                        n'aime pas trouver deux fois le même bug, ce qui implique qu'il déteste le
+                                        copier/coller. Il aime générifier le code pour que les traitements soient
+                                        optimaux et pour avoir une seule source potentielle de bugs.
+                                    </p>
+                                </div>
+                                <div class="row">
+                                    <ul class="col-lg-12 socials">
+                                        <li>
+                                            <a target="_blank" href="https://twitter.com/VincentMaubert"><i
+                                                    class="fa fa-twitter-square"></i></a>
+                                        </li>
+                                        <li>
+                                            <a target="_blank" href="https://github.com/vmaubert"><i
+                                                    class="fa fa-github-square"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+                            </div>
+                        </div>
+                        <!-- /.modal-content -->
                     </div>
-		    <div class="row">
-                        <ul class="col-lg-12 socials">
-                            <li>
-                                <a target="_blank" href="https://twitter.com/VincentMaubert"><i
-                                        class="fa fa-twitter-square"></i></a>
-                            </li>
-                            <li>
-                                <a target="_blank" href="https://github.com/vmaubert"><i
-                                        class="fa fa-github-square"></i></a>
-                            </li>
-                        </ul>
-                    </div>
+                    <!-- /.modal-dialog -->
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
-                </div>
-            </div>
-            <!-- /.modal-content -->
-        </div>
-        <!-- /.modal-dialog -->
+                <!-- /.modal -->
+            </li>
+            <!-- End Trooper block -->
+        </ul>
     </div>
-    <!-- /.modal -->
-</li>
-<!-- End Trooper block -->
-</ul>
-</div>
 </section>

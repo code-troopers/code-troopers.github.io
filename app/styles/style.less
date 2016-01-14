@@ -431,7 +431,6 @@ article {
     font-weight: bold;
     font-size: 1.2em;
     color: @secondary-color;
-    margin-bottom: 7px;
   }
 
   .project-info {
@@ -491,13 +490,17 @@ article {
     border-radius: 2px;
     .box-shadow(0 0 1px @primary-color);
     padding: 10px;
+    .description{
+      margin-top: 10px;
+    }
+    .soon{
+      background-color: lightgrey;
+      border: none;
+    }
     a{
       background-color: @secondary-color;
       transition: background-color 300ms;
       border: none;
-      &.soon {
-        background-color: lightgrey;
-      }
       &:hover {
         background-color: darken(@secondary-color, 10);
       }

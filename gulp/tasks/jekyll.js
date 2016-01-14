@@ -27,7 +27,7 @@ gulp.task('jekyll-build', function (cb) {
 gulp.task('jekyll', ['jekyll-build'], function () {
     return gulp.src(config.jekyll.generatedSrc)
         .pipe(changed(config.jekyll.dest))
-        .pipe(gulpif(isProd(), gulpif('*.html', htmlmin({collapseWhitespace: true}))))
+        //.pipe(gulpif(isProd(), gulpif('*.html', htmlmin({collapseWhitespace: true}))))
         .pipe(gulp.dest(config.jekyll.dest))
         .pipe(gulpif(browserSync.active, browserSync.reload({stream: true})));
 })
