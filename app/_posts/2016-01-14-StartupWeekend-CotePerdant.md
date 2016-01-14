@@ -11,7 +11,9 @@ Le week-end du 5 décembre a eu lieu un Startup Weekend édition tourisme à Tou
 L'idée de base est de découvrir une région à l'aide d'un guide local, officiel ou non. Quelqu'un qui emmène les touristes aussi bien dans les bars, restaurants, parcs que dans les monuments plus habituels de touraine comme les châteaux, la [basilique Saint-Martin](http://basiliquesaintmartin.fr/) ou le [Grand Aquarium de Touraine](http://www.decouvrez-levaldeloire.com/#grand-aquarium-actualites). Un peu à l'image des [greeters](http://www.tours-greeters.fr/) mais rémunérés pour motiver plus de guides et permettre de promouvoir cette pratique.
 
 <div class="text-center">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Tours,_Saint_Martin.JPG/280px-Tours,_Saint_Martin.JPG"/>
+    <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Tours,_Saint_Martin.JPG/280px-Tours,_Saint_Martin.JPG" data-lightbox="group-1" title="saint martin de tours" class="inlineBoxes">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Tours,_Saint_Martin.JPG/280px-Tours,_Saint_Martin.JPG"/>
+    </a>
 </div>
 
 <!--break-->
@@ -32,15 +34,21 @@ Ensuite nous commençons à intégrer ce que l'on aura besoin. Du beau et des pe
 Le samedi soir, on est dans la vibe. Plus trop besoin de réseau, on a des visuels et nos bibliothèques de base. Pas besoin de s'occuper des ravitaillements, on se concentre juste sur le code et c'est ça qu'on aime.
 Nous avons donc une navbar avec notre logo et les différentes actions de navigation fonctionnelles.
 <div style="text-align:center;margin-bottom:50px">
+    <a href="/images/postWeGuide/navbar1.png" data-lightbox="group-2" title="navbar weguide" class="inlineBoxes">
 <img class="medium" src="/images/postWeGuide/navbar1.png" alt="navbar"/><br/>
+    </a>
 <br/>
+    <a href="/images/postWeGuide/navbar2.png" data-lightbox="group-2" title="navbar connected weguide" class="inlineBoxes">
 <img class="medium" src="/images/postWeGuide/navbar2.png" alt="navbar connecté"/>
+    </a>
 </div>
 
 
 Un logo, une phrase d'accroche sur un fond de page avec transition d'images en background animé par css (ici en accéléré dans le gif).
 <div style="text-align:center;margin-bottom:50px">
+    <a href="/images/postWeGuide/logo.gif" data-lightbox="group-3" title="Logo weguide" class="inlineBoxes">
 <img class="medium" src="/images/postWeGuide/logo.gif" alt="logo"/>
+    </a>
 </div>
 
 Un footer avec nos liens twitter et facebook, et le premier formulaire de recherche.
@@ -52,12 +60,16 @@ Ah oui, sur le bouton de recherche, en plus du ripple effect il y a un petit eff
 
 On arrive alors sur la page de résultats. Sur cette page au design épuré, nous avons la barre de recherche avec la ville et les dates saisies précédemment.
 <div style="text-align:center;margin-bottom:50px">
+    <a href="/images/postWeGuide/searchbar.png" data-lightbox="group-4" title="Searchbar weguide" class="inlineBoxes">
 <img class="medium" src="/images/postWeGuide/searchbar.png" alt="searchbar"/>
+    </a>
 </div>
 
 S'en suit des paramètres par défaut. Des checkbox pour les activités, des doubles sliders pour sélectionner la distance et le prix souhaité.
 <div style="text-align:center;margin-bottom:50px">
+    <a href="/images/postWeGuide/params.gif" data-lightbox="group-5" title="search parameters weguide" class="inlineBoxes">
 <img class="medium" src="/images/postWeGuide/params.gif" alt="params"/>
+    </a>
 </div>
 
 Au centre, une description du guide, "effet zoom pour plus d'infos" et la possibilité de lui envoyer un message.
