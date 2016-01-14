@@ -77,7 +77,7 @@ description: Code-Troopers est une équipe de développeurs située à Tours, r�
                     {% endfor %}
                 </ul>
                 <div class="content">
-                    {{ post.content | split:'<!--break-->' | first }}
+                    {{ post.content | split:'<!--break-->' | split:'<!-- break -->' | first }}
                 </div>
                 <div class="fade-content">
                 </div>
