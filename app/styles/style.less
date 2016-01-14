@@ -355,10 +355,16 @@ article {
     .mini {
       max-width: 500px;
       max-height: 100px;
+      @media (max-width: @screen-xs-max) {
+        max-width: 100%;
+      }
     }
     .medium {
       max-width: 500px;
       max-height: 200px;
+      @media (max-width: @screen-xs-max) {
+        max-width: 100%;
+      }
     }
     ul {
       list-style: square outside none;
