@@ -49,7 +49,7 @@ TIP: Run jekyll bin with docker
 ```bash
 #!/bin/bash
 
-docker run --rm -it -v $PWD:/src grahamc/jekyll $1 $2 $3
+docker run --rm -it -v $PWD:/src grahamc/jekyll $@
 ```
 
 TODO

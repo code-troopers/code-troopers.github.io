@@ -6,10 +6,11 @@ var gulp = require('gulp');
 var gulpif = require('gulp-if');
 var imagemin = require('gulp-imagemin');
 var browserSync = require('browser-sync');
+var isProd = require('../util/isProduction');
 
 gulp.task('images', function () {
     return gulp.src(config.images.src)
-        .pipe(changed(config.images.dest))
+        .pipe(gulpif(!isProd(), changed(config.images.dest)))
         // Images are now compress on repo (see task below)
         // .pipe(imagemin())
         .pipe(gulp.dest(config.images.dest))

@@ -355,10 +355,16 @@ article {
     .mini {
       max-width: 500px;
       max-height: 100px;
+      @media (max-width: @screen-xs-max) {
+        max-width: 100%;
+      }
     }
     .medium {
       max-width: 500px;
       max-height: 200px;
+      @media (max-width: @screen-xs-max) {
+        max-width: 100%;
+      }
     }
     ul {
       list-style: square outside none;
@@ -425,7 +431,6 @@ article {
     font-weight: bold;
     font-size: 1.2em;
     color: @secondary-color;
-    margin-bottom: 7px;
   }
 
   .project-info {
@@ -484,14 +489,18 @@ article {
     border: 1px solid @primary-color;
     border-radius: 2px;
     .box-shadow(0 0 1px @primary-color);
-    padding: 10px;
+    padding: 15px;
+    .description{
+      margin-top: 10px;
+    }
+    .soon{
+      background-color: lightgrey;
+      border: none;
+    }
     a{
       background-color: @secondary-color;
       transition: background-color 300ms;
       border: none;
-      &.soon {
-        background-color: lightgrey;
-      }
       &:hover {
         background-color: darken(@secondary-color, 10);
       }
