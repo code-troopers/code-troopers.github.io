@@ -4,5 +4,5 @@ set -e
 
 npm install
 export CI=true
-bower install --allow-root
+bower install
 gulp serve --drafts --prod

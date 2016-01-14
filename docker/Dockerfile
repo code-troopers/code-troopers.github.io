@@ -6,12 +6,7 @@ RUN apt-get update && \
     apt-get clean
 
 # ADD USER ct
-#RUN export user=ct && mkdir -p /home/ct && \
-    #echo "${user}:x:${UID}:${GID}:${user},,,:/home/${user}:/bin/bash" >> /etc/passwd && \
-    #echo "${user}:x:${UID}:" >> /etc/group && \
-    #echo "${user} ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/${user} && \
-    #chmod 0440 /etc/sudoers.d/${user} && \
-    #chown ${UID}:${GID} -R /home/${user}
+RUN adduser --system --uid 1000 ct
 
 
 # Install Node
@@ -31,10 +26,10 @@ RUN npm install -g gulp && \
 # Install jekyll
 RUN gem install jekyll rdiscount kramdown jekyll-paginate
 
-VOLUME /src
+VOLUME /home/ct/src
 EXPOSE 3000
 
-WORKDIR /src
-#USER ct
+USER ct
+WORKDIR /home/ct/src
 ADD run /run.sh
 CMD ["/run.sh"]

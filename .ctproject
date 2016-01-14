@@ -1,6 +1,6 @@
 run='gulp serve --drafts'
 dist='gulp serve --prod --drafts'
 dbuild='docker build -t ct-website docker/'
-drun='docker run -p 3000:3000 -v $PWD:/src:rw -ti codetroopers/ct-website'
-ddev='docker run -p 3000:3000 -v $PWD:/src:rw -ti codetroopers/ct-website gulp serve --drafts'
+drun='docker run -p 3000:3000 -v $PWD:/home/ct/src:rw -ti ct-website'
+ddev='docker run -p 3000:3000 -v $PWD:/home/ct/src:rw -ti ct-website gulp serve --drafts'
 dock='ct dbuild && ct drun'
