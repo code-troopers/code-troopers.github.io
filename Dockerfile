@@ -39,7 +39,11 @@ RUN apk add --update curl make gcc g++ binutils-gold python linux-headers paxctl
     /usr/lib/node_modules/npm/man /usr/lib/node_modules/npm/doc /usr/lib/node_modules/npm/html
 
 
-EXPOSE 3000
+ENV TINI_VERSION v0.8.4
+ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini-static /tini
+RUN chmod +x /tini
+
+ENTRYPOINT ["/tini", "--"]
 
 RUN adduser -S -u 1000 -h /home/ct ct
 
@@ -50,7 +54,6 @@ ENV NPM_CONFIG_LOGLEVEL info
 RUN npm install -g gulp && \
     npm install -g bower
 
-VOLUME /src/app
 WORKDIR /src
 
 ADD package.json /tmp/package.json
@@ -65,5 +68,7 @@ RUN bower install
 
 RUN pygmentize -S monokai -f html -O classprefix=tok- > /home/ct/pygments.css
 
-ADD run /run.sh
-CMD ["/run.sh"]
+EXPOSE 3000
+VOLUME /src/app
+
+CMD ["gulp", "serve", "--drafts", "--prod"]
