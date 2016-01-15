@@ -6,6 +6,7 @@ cover: jenkins-banner
 tags: [Jenkins,Docker]
 ---
 
+
 # Jenkins workflow plugin
 
 
@@ -16,7 +17,7 @@ autant que possible, les configurations utilisées.
 Mais, une fois que vous aurez lu cet article, vous vous rendrez compte que c'est le passé.
 Attention toutefois, cet article parle de jenkins, de docker et de groovy, n'ayez pas peur, tout est _presque_ trop simple...
 
-{lt}!-- break --{gt}
+{break}
 
 ## Prérequis Jenkins
 

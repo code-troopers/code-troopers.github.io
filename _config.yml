@@ -18,3 +18,4 @@ asciidoctor:
     - source-highlighter=pygments
     - pygments-css=class
     - icons=font
+    - break=<!-- break -->
