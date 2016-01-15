@@ -32,7 +32,8 @@ Example usage:
     gulp serve [options]            Build and serve website on 3000 with livereload
     gulp build [options]            Build website on /public
     gulp deploy [options]           Build and deploy website on github/ghpages
-    gulp compress-images            Compress all images in app/images
+    gulp thumbnail-images           Generate thumbnails for images in `app/images/posts`
+    gulp compress-images            Generate thumbnails and compress all images in app/images
     gulp lint-[styles|scripts|html] Lint files
 
 Options:
