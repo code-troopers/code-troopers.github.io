@@ -19,15 +19,14 @@ gulp.task('images', function () {
         .pipe(gulpif(browserSync.active, browserSync.reload({stream: true, once: true})));
 });
 
-gulp.task('compress-images', function () {
+gulp.task('compress-images', ['thumbnail-images'], function () {
     return gulp.src(config.images.src)
         .pipe(imagemin({progressive: true}))
         .pipe(gulp.dest(config.images.destSrc))
 });
-gulp.task('thumbnails-images', function () {
+gulp.task('thumbnail-images', function () {
     return gulp.src(config.images.posts.src)
-	.pipe(imageResize({ height : 200, format: 'png'}))
-	.pipe(rename(function (path) { path.basename += "_min"; }))
-        .pipe(imagemin({progressive: true}))
-        .pipe(gulp.dest(config.images.posts.destSrc))
+         .pipe(imageResize({ height : 200, format: 'png', imageMagick: true}))
+         .pipe(rename(function (path) { path.basename += "_min"; }))
+         .pipe(gulp.dest(config.images.posts.destSrc))
 });
