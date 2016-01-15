@@ -51,11 +51,20 @@ docker run
 
 Pour utiliser la suite des éléments, vous aurez besoin des plugins gérant la notion de _workflow_ dans Jenkins :
 
-image::/images/2015-12-JenkinsWorkflow/Workflow-Plugin.png[]
+:lightboxImage: 2015-12-JenkinsWorkflow/Workflow-Plugin
+:lightboxImageTitle: Plugin workflow
+
+include::app/_includes/lightbox.adoc[]
+
 
 Ensuite, il nous est possible de créer un job de construction de type _workflow_ :
 
-image::/images/2015-12-JenkinsWorkflow/Workflow-Plugin_JobCreation.png[]
+:lightboxImage: 2015-12-JenkinsWorkflow/Workflow-Plugin_JobCreation
+:lightboxImageTitle: Création de job
+
+include::app/_includes/lightbox.adoc[]
+
+
 
 ## Premier job _Workflow_
 

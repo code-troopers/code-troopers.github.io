@@ -30,6 +30,10 @@ module.exports = {
     },
 
     'images': {
+    		 'posts': {
+					'src': 'app/images/posts/**/*.png',
+	        'destSrc': 'app/images/posts',
+				 },
         'src': 'app/images/**/*',
         'destSrc': 'app/images',
         'dest': 'public/images'

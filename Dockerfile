@@ -7,7 +7,7 @@ RUN apk upgrade --update \
         libxslt libxslt-dev zlib-dev zlib \
         ruby ruby-dev yaml yaml-dev \
         libffi-dev build-base git curl \
-        ruby-io-console ruby-irb ruby-json ruby-rake \
+        ruby-io-console ruby-irb ruby-json ruby-rake imagemagick \
  && gem install --no-document --no-ri redcarpet kramdown maruku rdiscount RedCloth liquid pygments.rb \
  && gem install --no-document --no-ri sass safe_yaml \
  && gem install --no-document --no-ri jekyll -v 2.5 \

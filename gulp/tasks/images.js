@@ -7,6 +7,8 @@ var gulpif = require('gulp-if');
 var imagemin = require('gulp-imagemin');
 var browserSync = require('browser-sync');
 var isProd = require('../util/isProduction');
+var imageResize = require('gulp-image-resize');
+var rename = require("gulp-rename");
 
 gulp.task('images', function () {
     return gulp.src(config.images.src)
@@ -21,4 +23,11 @@ gulp.task('compress-images', function () {
     return gulp.src(config.images.src)
         .pipe(imagemin({progressive: true}))
         .pipe(gulp.dest(config.images.destSrc))
+});
+gulp.task('thumbnails-images', function () {
+    return gulp.src(config.images.posts.src)
+	.pipe(imageResize({ height : 200, format: 'png'}))
+	.pipe(rename(function (path) { path.basename += "_min"; }))
+        .pipe(imagemin({progressive: true}))
+        .pipe(gulp.dest(config.images.posts.destSrc))
 });
