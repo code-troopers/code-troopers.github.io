@@ -55,10 +55,10 @@ RUN npm install -g gulp && \
     npm install -g bower
 
 WORKDIR /src
-
-ADD . /src
 ADD package.json /tmp/package.json
 RUN cd /tmp && npm install
+
+ADD . /src
 RUN mkdir -p /src && cp -a /tmp/node_modules /src/
 
 RUN chown -R ct /src
