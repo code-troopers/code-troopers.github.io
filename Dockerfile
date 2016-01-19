@@ -56,11 +56,11 @@ RUN npm install -g gulp && \
 
 WORKDIR /src
 
+ADD . /src
 ADD package.json /tmp/package.json
 RUN cd /tmp && npm install
 RUN mkdir -p /src && cp -a /tmp/node_modules /src/
 
-ADD . /src
 RUN chown -R ct /src
 
 USER ct
