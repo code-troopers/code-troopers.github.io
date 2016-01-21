@@ -166,7 +166,7 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
                         
                     </ul>
                     <div class="content">
-                        <h2 id="ou--yo--angularjs-le-meilleur-ami-des-mvp">Ou : Yo ! AngularJS, le meilleur ami des MVP</h2>
+                      <h2 id="ou--yo--angularjs-le-meilleur-ami-des-mvp">Ou : Yo ! AngularJS, le meilleur ami des MVP</h2>
 <p>Le week-end du 5 décembre a eu lieu un Startup Weekend édition tourisme à Tours où 6 troopers étaient présents. 3 d’entres nous ont choisi l’équipe <code class="highlighter-rouge">We Guide</code> composée de 3 développeurs, 3 designers et 3 profils business (les 3 autres ont choisi <a href="https://twitter.com/shakemytours">@shakemytours</a> et ont gagné le Startup Weekend).
 L’idée de base est de découvrir une région à l’aide d’un guide local, officiel ou non. Quelqu’un qui emmène les touristes aussi bien dans les bars, restaurants, parcs que dans les monuments plus habituels de touraine comme les châteaux, la <a href="http://basiliquesaintmartin.fr/">basilique Saint-Martin</a> ou le <a href="http://www.decouvrez-levaldeloire.com/#grand-aquarium-actualites">Grand Aquarium de Touraine</a>. Un peu à l’image des <a href="http://www.tours-greeters.fr/">greeters</a> mais rémunérés pour motiver plus de guides et permettre de promouvoir cette pratique.</p>
 
@@ -206,58 +206,9 @@ L’idée de base est de découvrir une région à l’aide d’un guide local, 
                         
                     </ul>
                     <div class="content">
-                        <p>Cet article, une fois n’est pas coutume, va rentrer un peu plus dans le fonctionnement de la partie serveur mise en place pour <a href="http://navigtours.com/">Navig’Tours</a>.
+                      <p>Cet article, une fois n’est pas coutume, va rentrer un peu plus dans le fonctionnement de la partie serveur mise en place pour <a href="http://navigtours.com/">Navig’Tours</a>.
 Si vous n’êtes pas technique, il risque d’être compliqué de le suivre !</p>
 
-<!-- break -->
-
-<h2 id="architecture">Architecture</h2>
-<p>La partie serveur de Navig’Tours est en réalité assez simple. Comme dit lors de différentes présentations des membres de Code-Troopers, ce projet est pour nous un moyen de nous amuser lorsque nous nous retrouvons tous les septs.
-C’est également le projet que nous utilisons pour tester certaines technologies et approches.</p>
-
-<p>Ainsi, Navig’Tours est une application développée en utilisant Java 8, mais rien de forcément très étonnant maintenant. Le côté le plus intéressant est qu’elle est en production depuis plus d’un an maintenant avec Java 8 !</p>
-
-<p>Ensuite, nous utilisons l’excellent framework RestX pour simplifier notre vie dans la gestion des appels REST, ce qu’il nous apporte, entre autres :</p>
-
-<ul>
-  <li>de l’injection de dépendances lors de la compilation</li>
-  <li>un outillage d’administration complet</li>
-  <li>une plateforme de test intégrée et de specs nous permettant de documenter facilement l’API</li>
-</ul>
-
-<p>Enfin, pour la partie stockage des données, nous utilisons MongoDB qui nous simplifie la gestion de données en manipulant des données principalement au format JSON (et fournit une bonne gestion de la géolocalisation par coordonnées).</p>
-
-<h2 id="du-dev">Du dev…</h2>
-<p>Côté dev, nous utilisons notre petit wrapper (<a href="http://code-troopers.com/2014/12/15/CT_Project_Alias.html">ct</a>) pour les tâches classiques qui se charge d’effectuer le build ainsi que le run de l’application avec ses dépendances.
-Le lancement de l’application se limite à mettre à disposition un serveur MongoDB ainsi qu’à effectuer un <code class="highlighter-rouge">java -jar</code>.</p>
-
-<h2 id="la-prod-">À la prod !</h2>
-<p>Historiquement, l’application a été déployée sur Heroku dans son plan gratuit en utilisant plusieurs services cibles (pour répartir la charge via l’utilisation de plusieurs entrées DNS).</p>
-
-<p>Mais, suite au changement de tarification d’Heroku et notre envie d’utiliser Docker sur un vrai projet, nous avons migré l’environnement pour utiliser exclusivement Docker.</p>
-
-<p>Un des intérêts de la transformation que nous avons opéré est que nous sommes également capable de lancer l’application très simplement à l’aide de descripteurs Docker ainsi que du docker-compose qui décrit les interactions entre nos services.</p>
-
-<h2 id="process-de-livraison">Process de livraison</h2>
-<p>Pour effectuer la livraison de l’application, nous sommes passés d’un <code class="highlighter-rouge">git push</code> vers heroku à un process impliquant Jenkins dans 3 étapes successives (mais qui s’enchaînent automatiquement) :</p>
-
-<ul>
-  <li>construction de l’application et archivage dans un <code class="highlighter-rouge">tgz</code></li>
-  <li>copie du tgz produit pour la construction d’une image Docker poussée vers notre dépôt interne</li>
-  <li>lancement de l’application via un <code class="highlighter-rouge">docker-compose run -d</code> sur les machines cibles</li>
-</ul>
-
-<h2 id="gestion-du-multi-environnement">Gestion du multi-environnement</h2>
-<p>Comme toutes les applications d’entreprise, nous déployons vers plusieurs environnement afin de valider la bonne tenue de l’application et la qualité de nos développements :</p>
-
-<ul>
-  <li>dev / local : poste du développeur</li>
-  <li>preprod : version à passer en production</li>
-  <li>prod : version actuelle</li>
-</ul>
-
-<p>À ceci, nous pouvons ajouter plusieurs versions en parallèle pour différentes fonctionnalités et/ou villes (l’info exclusive est cachée ici, Navig’VotreVille arrive…). 
-Pour être capable de gérer des déploiements différents nous avons ajouté quelques paramètres à nos scripts de lancement de docker-compose nous permettant de disposer de noms différents par projet pous éviter les problèmes.</p>
 
                     </div>
                     <div class="fade-content">
@@ -286,7 +237,7 @@ Pour être capable de gérer des déploiements différents nous avons ajouté qu
                         
                     </ul>
                     <div class="content">
-                        <p>Lorsque l’on fait du développement Android, on a régulièrement besoin de publier des nouvelles versions de l’application sur le Play Store. 
+                      <p>Lorsque l’on fait du développement Android, on a régulièrement besoin de publier des nouvelles versions de l’application sur le Play Store. 
 Il est assez fastidieux de devoir se connecter à l’interface de Google, de sélectionner le projet et ensuite d’uploader son nouvel apk.</p>
 
 <p>Heureusement pour nous, Google a prévu le coup avec une API que l’on peut attaquer en ligne de commande.
