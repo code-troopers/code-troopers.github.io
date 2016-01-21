@@ -4,6 +4,7 @@ var config = require('../config');
 var changed = require('gulp-changed');
 var gulp = require('gulp');
 var gulpif = require('gulp-if');
+var filter = require('gulp-filter');
 var imagemin = require('gulp-imagemin');
 var browserSync = require('browser-sync');
 var isProd = require('../util/isProduction');
@@ -26,6 +27,7 @@ gulp.task('compress-images', ['thumbnail-images'], function () {
 });
 gulp.task('thumbnail-images', function () {
     return gulp.src(config.images.posts.src)
+         .pipe(filter(config.images.posts.src))
          .pipe(imageResize({ height : 200, format: 'png', imageMagick: true}))
          .pipe(rename(function (path) { path.basename += "_min"; }))
          .pipe(gulp.dest(config.images.posts.destSrc))

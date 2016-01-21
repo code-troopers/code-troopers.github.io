@@ -21,7 +21,7 @@ Attention toutefois, cet article parle de Jenkins, de Docker et de Groovy, n'aye
 
 ### Jenkins avec accès à Docker
 
-Nous avons l'habitude d'utiliser un Jenkins lancé dans un container depuis quelques temps. 
+Nous avons l'habitude d'utiliser un Jenkins lancé dans un container depuis quelques temps.
 
 Nous utilisons l'image maintenue par https://agileek.github.io/[Michael Bitard] https://hub.docker.com/r/agileek/docker-jenkins/[`agileek/docker-jenkins`].
 
@@ -50,6 +50,7 @@ docker run
 
 Pour utiliser la suite des éléments, vous aurez besoin des plugins gérant la notion de _workflow_ dans Jenkins :
 
+:lightboxGroup: 0
 :lightboxImage: 2016-01-JenkinsWorkflow/Workflow-Plugin
 :lightboxImageTitle: Plugin workflow
 
@@ -194,7 +195,7 @@ Il n'y aura donc pas besoin de penser à éditer le job lors du merge sur `maste
 
 ## Attendre une confirmation utilisateur
 
-Un des points intéressant de ce plugin est qu'il permet la mise en pause des constructions. 
+Un des points intéressant de ce plugin est qu'il permet la mise en pause des constructions.
 Ainsi, il est possible de mettre en pause une construction correspondant à une livraison et de lui faire attendre une validation manuelle par exemple.
 
 [source,groovy]
