@@ -12,7 +12,7 @@
             {% endfor %}
         </ul>
         <div class="content">
-            {{ post.content | split:'<!--break-->' | first }}
+          {{ post.content | split:'<!--break-->' | first | split:'<!-- break -->' | first}}
         </div>
         <div class="fade-content">
         </div>
