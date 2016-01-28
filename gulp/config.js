@@ -5,7 +5,7 @@ module.exports = {
     'serverport': 9000,
 
     'styles': {
-        'src': 'app/styles/**/*.less',
+        'src' : ['app/styles/**/*.less', 'app/styles/**/*.css', '/home/ct/*.css'],
         'dest': 'public/styles'
     },
 
@@ -30,6 +30,11 @@ module.exports = {
     },
 
     'images': {
+    		 'posts': {
+					'src': 'app/images/posts/**/*.png',
+           'srcToExclude': '!app/images/posts/**/*_min.png',
+	        'destSrc': 'app/images/posts',
+				 },
         'src': 'app/images/**/*',
         'destSrc': 'app/images',
         'dest': 'public/images'
