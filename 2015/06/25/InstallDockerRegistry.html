@@ -25,10 +25,10 @@
         
         <meta name="viewport" content="width=device-width">
 
-        <link rel="stylesheet" href="/styles/style-df692d982e.css">
-     
+        <link rel="stylesheet" href="/styles/style-9089a70539.css">
+
         <!--[if lt IE 9]>
-                <script src="/js/ie8-0a07727802.js"></script>           
+                <script src="/js/ie8-0a07727802.js"></script>
         <![endif]-->
         <meta itemprop="name" content="CT-CDGT"/>
         <meta itemprop="name" content="CT-RMLC"/>
@@ -113,41 +113,38 @@ Nous nous sommes donc mis à déployer un dépôt privé, authentifié par utili
 <p>Puis nous allons utiliser l’image Docker avec nginx pour l’authentification <a href="https://github.com/MarvAmBass/docker-nginx-registry-proxy">docker-nginx-registry-proxy</a>.</p>
 
 <h2 id="informations-didentification">Informations d’identification</h2>
-<p>Pour les étapes suivantes, placez vous dans le répertoire de votre choix pour stocker les fichiers (dans ce cas nous sommes dans <code class="highlighter-rouge">/srv/registry-config</code>)</p>
+<p>Pour les étapes suivantes, placez vous dans le répertoire de votre choix pour stocker les fichiers (dans ce cas nous sommes dans <code>/srv/registry-config</code>)</p>
 
 <h3 id="gnration-du-certificat">Génération du certificat</h3>
 <p>Pensez à bien renseigner le FQDN DNS lors de la demande de Common Name pour le certificat.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>openssl genrsa -out ca.key 4096
+<pre><code>openssl genrsa -out ca.key 4096
 openssl req -new -x509 -days 1826 -key ca.key -out ca.crt
 openssl genrsa -out ia.key 4096
 openssl req -new -key key.pem -out ia.csr #this is where you need to fill your FQDN
 openssl x509 -req -days 730 -in ia.csr -CA ca.crt -CAkey ca.key -set_serial 01 -out cert.pem
 </code></pre>
-</div>
 
 <h3 id="gnration-des-mots-de-passes-basic-auth">Génération des mots de passes basic auth</h3>
 <p>En utilisant un container docker qui embarque htpasswd vous pourrez générer facilement le fichier nécessaire :</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>docker run --rm -ti -v $(pwd):/tmp dgageot/htpasswd -c /tmp/docker-registry.htpasswd $MONUSER
+<pre><code>docker run --rm -ti -v $(pwd):/tmp dgageot/htpasswd -c /tmp/docker-registry.htpasswd $MONUSER
 </code></pre>
-</div>
 
 <h2 id="dmarrage-du-registry">Démarrage du registry</h2>
-<p>Les images seront stockées dans le répertoire <code class="highlighter-rouge">/srv/registry</code></p>
+<p>Les images seront stockées dans le répertoire <code>/srv/registry</code></p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>mkdir /srv/registry
+<pre><code>mkdir /srv/registry
 docker run -d --restart=always --name registry -v /srv/docker-registry:/registry -e "SETTINGS_FLAVOR=local" -e "STORAGE_PATH=/registry" registry
 docker run -d --restart=always -p 443:443 -v /srv/registry-config:/etc/nginx/external --link registry:registry --name nginx-registry-proxy marvambass/nginx-registry-proxy
 </code></pre>
-</div>
 
 <h2 id="configuration-dune-machine-cliente">Configuration d’une machine cliente</h2>
 
 <h3 id="importer-le-certificat-racine">Importer le certificat racine</h3>
 <p>Il faut importer le certificat racine dans la liste des certificats reconnus</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>sudo -s
+<pre><code>sudo -s
 mkdir -p /etc/docker/certs.d/$FQDN
 cp ca.crt /etc/docker/certs.d/$FQDN/
 
@@ -155,49 +152,44 @@ mkdir -p /usr/local/share/ca-certificates/docker-ct
 cp ca.crt /usr/local/share/ca-certificates/docker-ct/
 update-ca-certificates-
 </code></pre>
-</div>
 
 <p>Pour vérifier que tout fonctionne comme attendu, vous pouvez voir si votre certificat ressort bien dans la commande suivante :</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>awk -v cmd='openssl x509 -noout -subject' ' /BEGIN/{close(cmd)};{print | cmd}' &lt; /etc/ssl/certs/ca-certificates.crt | grep $(VOTRE IDENTIFIANT)
+<pre><code>awk -v cmd='openssl x509 -noout -subject' ' /BEGIN/{close(cmd)};{print | cmd}' &lt; /etc/ssl/certs/ca-certificates.crt | grep $(VOTRE IDENTIFIANT)
 </code></pre>
-</div>
 
 <p>Vous serez également certainement amené à redémarrer vos daemon docker (de chacune des machines)</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>systemctl stop docker
+<pre><code>systemctl stop docker
 systemctl start docker
 </code></pre>
-</div>
 
 <h3 id="identification-sur-le-dpot">Identification sur le dépot</h3>
 <p>Une fois que toutes ces étapes sont effectuées, normalement votre dépot est prêt à être utilisé.</p>
 
 <p>Il vous faut cependant en première étape vous identifier à l’aide du couple utilisateur / mot de passe créé lors de l’installation :</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>docker login https://mondepotdocker.tld
+<pre><code>docker login https://mondepotdocker.tld
 </code></pre>
-</div>
 
-<p>Ceci aura pour effet de créer un fichier <code class="highlighter-rouge">~/.dockercfg</code> vous permettant d’accéder aux commandes suivantes sans avoir besoin de retaper vos identifiants.</p>
+<p>Ceci aura pour effet de créer un fichier <code>~/.dockercfg</code> vous permettant d’accéder aux commandes suivantes sans avoir besoin de retaper vos identifiants.</p>
 
 <h2 id="utilisation-du-dpt">Utilisation du dépôt</h2>
 
 <p>Une fois la machine cliente configurée, vous pouvez simplement utiliser le dépot en préfixant les noms de vos images par l’URL du dépôt.
 Par exemple, pour push/pull l’image de monapplication la commande suivante fera l’affaire :</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>docker push mondepotdocker.tld/monapplication:v1.0.0
+<pre><code>docker push mondepotdocker.tld/monapplication:v1.0.0
 docker pull mondepotdocker.tld/monapplication:v1.0.0
 </code></pre>
-</div>
 
 <h3 id="utilisation-avec-docker-compose">Utilisation avec docker-compose</h3>
 
 <p>Si vous utilisez docker-compose, il se peut que vous ayiez des soucis avec le certificat autosigné et/ou avec l’authentification.</p>
 
-<p>Pour contourner la vérification du certificat, vous pouvez simplement lancer <code class="highlighter-rouge">docker-compose</code> avec le flag <code class="highlighter-rouge">--allow-insecure-ssl</code>.</p>
+<p>Pour contourner la vérification du certificat, vous pouvez simplement lancer <code>docker-compose</code> avec le flag <code>--allow-insecure-ssl</code>.</p>
 
-<p>Pour ce qui est de l’authentification, une astuce simple pour contourner les problèmes de ce genre est de faire un <code class="highlighter-rouge">docker pull</code> manuellement au préalable (le scripter depuis le fichier compose.yml n’est pas trop difficile).</p>
+<p>Pour ce qui est de l’authentification, une astuce simple pour contourner les problèmes de ce genre est de faire un <code>docker pull</code> manuellement au préalable (le scripter depuis le fichier compose.yml n’est pas trop difficile).</p>
 
                 </div>
 <div class="share">
@@ -306,7 +298,7 @@ L'article vous a plu ? Partagez-le :
         <div class="row">
             <div class="footer-under">
                 Made with <i class="fa fa-heart"></i> in Tours -
-                © 2016 Code-Troopers - Tous droits réservés
+              © 2016 Code-Troopers - Tous droits réservés
             </div>
         </div>
     </div>

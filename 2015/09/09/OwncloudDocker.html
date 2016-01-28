@@ -25,10 +25,10 @@
         
         <meta name="viewport" content="width=device-width">
 
-        <link rel="stylesheet" href="/styles/style-df692d982e.css">
-     
+        <link rel="stylesheet" href="/styles/style-9089a70539.css">
+
         <!--[if lt IE 9]>
-                <script src="/js/ie8-0a07727802.js"></script>           
+                <script src="/js/ie8-0a07727802.js"></script>
         <![endif]-->
         <meta itemprop="name" content="CT-CDGT"/>
         <meta itemprop="name" content="CT-RMLC"/>
@@ -104,19 +104,17 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 
 <p>Nous allons commencer par une petite digression. Avant quand on avait plusieurs “virtual host” qui pointaient sur une machine, on mettait un front-end apache et c’était plus ou moins la galère. Maintenant, il suffit de lancer cette commande une fois :</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>docker run --restart=always --name nginx -d -p 80:80 -p 443:443 -v /docker/vhost.d:/etc/nginx/vhost.d:ro -v /var/run/docker.sock:/tmp/docker.sock:ro jwilder/nginx-proxy
+<pre><code>docker run --restart=always --name nginx -d -p 80:80 -p 443:443 -v /docker/vhost.d:/etc/nginx/vhost.d:ro -v /var/run/docker.sock:/tmp/docker.sock:ro jwilder/nginx-proxy
 </code></pre>
-</div>
 
 <!--break-->
-<p>On pourra alors rajouter la variable d’environnement <code class="highlighter-rouge">VIRTUAL_HOST</code> à chaque nouvelle image Docker pour qu’elle soit directement accessible. Ce qui est magique aussi c’est que si on expose un seul port de l’image Docker alors il est directement mappé sur le port 80, même si le port n’était pas forwardé sur le host. Dernier avantage, si on met deux machines avec le même nom il va s’occuper de faire du load balancing tout seul !</p>
+<p>On pourra alors rajouter la variable d’environnement <code>VIRTUAL_HOST</code> à chaque nouvelle image Docker pour qu’elle soit directement accessible. Ce qui est magique aussi c’est que si on expose un seul port de l’image Docker alors il est directement mappé sur le port 80, même si le port n’était pas forwardé sur le host. Dernier avantage, si on met deux machines avec le même nom il va s’occuper de faire du load balancing tout seul !</p>
 
-<p>Si jamais la configuration par défaut ne convient pas, il faut rajouter un fichier de configuration dans <code class="highlighter-rouge">/docker/vhost.d/</code>. Dans notre cas nous en avons eu besoin pour permettre d’uploader des fichiers plus gros (c’est 2 Mo par défaut).</p>
+<p>Si jamais la configuration par défaut ne convient pas, il faut rajouter un fichier de configuration dans <code>/docker/vhost.d/</code>. Dans notre cas nous en avons eu besoin pour permettre d’uploader des fichiers plus gros (c’est 2 Mo par défaut).</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$ cat /docker/vhost.d/owncloud.hostname.com
+<pre><code>$ cat /docker/vhost.d/owncloud.hostname.com
 client_max_body_size 100m;
 </code></pre>
-</div>
 
 <h2 id="docker-compose">Docker-compose</h2>
 
@@ -124,7 +122,7 @@ client_max_body_size 100m;
 
 <p>Rentrons dans le vif du sujet :</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>mariaOC:
+<pre><code>mariaOC:
   image: mariadb
   volumes:
    - /home/owncloud/db:/var/lib/mysql
@@ -156,12 +154,11 @@ owncloud:
   links:
     - mariaOC:db
 </code></pre>
-</div>
 
 <p>Voici le fichier docker-compose.yml utilisé. On définit une image de <a href="https://mariadb.org/">MariaDB</a> pour laquelle on spécifie un volume qui va recevoir les données et différentes variables d’environnements dont les noms sont assez explicite.
 Puis une image owncloud avec des volumes pour les fichiers que l’on va sauvegarder, les logs et la clé SSL. Un lien avec la base de donnée MariaDB et quelques variables d’environnements, là encore les noms sont suffisamment explicite.</p>
 
-<p>Une fois les variables modifiées selon notre volonté, il faut lancer les commandes <code class="highlighter-rouge">docker-compose build</code> suivi de <code class="highlighter-rouge">compose-docker up -d</code> et aller sur owncloud.hostname.com pour finir l’installation.</p>
+<p>Une fois les variables modifiées selon notre volonté, il faut lancer les commandes <code>docker-compose build</code> suivi de <code>compose-docker up -d</code> et aller sur owncloud.hostname.com pour finir l’installation.</p>
 
 <p>L’article est déjà fini, comme je le disais, ça se fait en un rien de temps. Mais si cela a été aussi rapide, c’est parce que Owncloud a une image très bien faîtes donc merci Josh de l’avoir mise à disposition <a href="https://github.com/jchaney/owncloud">https://github.com/jchaney/owncloud</a></p>
 
@@ -279,7 +276,7 @@ L'article vous a plu ? Partagez-le :
         <div class="row">
             <div class="footer-under">
                 Made with <i class="fa fa-heart"></i> in Tours -
-                © 2016 Code-Troopers - Tous droits réservés
+              © 2016 Code-Troopers - Tous droits réservés
             </div>
         </div>
     </div>

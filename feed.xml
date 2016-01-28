@@ -7,9 +7,375 @@
                 <atom:link href="http://code-troopers.com/feed.xml" rel="self" type="application/rss+xml"/>
                 
                         <item>
+                                <title>Jenkins Workflow Plugin</title>
+                                <description>&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Un des points génants lors de l&amp;#8217;utilisation de Jenkins est le coté volatile de la configuration des jobs de builds.
+Il est souvent nécessaire de jouer de click-click pour faire la configuration des jobs sur Jenkins et de se reposer sur un plugin permettant de versionner,
+autant que possible, les configurations utilisées.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Mais, une fois que vous aurez lu cet article, vous vous rendrez compte que c&amp;#8217;est le passé.
+Attention toutefois, cet article parle de Jenkins, de Docker et de Groovy, n&amp;#8217;ayez pas peur, tout est &lt;em&gt;presque&lt;/em&gt; trop simple&amp;#8230;&amp;#8203;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;&lt;!--break--&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect1&quot;&gt;
+&lt;h2 id=&quot;prérequis-jenkins&quot;&gt;Prérequis Jenkins&lt;/h2&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;sect2&quot;&gt;
+&lt;h3 id=&quot;jenkins-avec-accès-à-docker&quot;&gt;Jenkins avec accès à Docker&lt;/h3&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Nous avons l&amp;#8217;habitude d&amp;#8217;utiliser un Jenkins lancé dans un container depuis quelques temps.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Nous utilisons l&amp;#8217;image maintenue par &lt;a href=&quot;https://agileek.github.io/&quot;&gt;Michael Bitard&lt;/a&gt; &lt;a href=&quot;https://hub.docker.com/r/agileek/docker-jenkins/&quot;&gt;&lt;code&gt;agileek/docker-jenkins&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Nous lançons cette image en lui fournissant de quoi exécuter le binaire docker client sans soucis :&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;pygments highlight&quot;&gt;&lt;code data-lang=&quot;bash&quot;&gt;docker run
+       -d --restart&lt;span class=&quot;tok-o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;tok-s2&quot;&gt;&amp;quot;always&amp;quot;&lt;/span&gt; --name jenkins
+       -u &lt;span class=&quot;tok-k&quot;&gt;$(&lt;/span&gt;id -u&lt;span class=&quot;tok-k&quot;&gt;)&lt;/span&gt;:&lt;span class=&quot;tok-k&quot;&gt;$(&lt;/span&gt;getent group docker &lt;span class=&quot;tok-p&quot;&gt;|&lt;/span&gt; cut -d: -f3&lt;span class=&quot;tok-k&quot;&gt;)&lt;/span&gt; &lt;i class=&quot;conum&quot; data-value=&quot;1&quot;&gt;&lt;/i&gt;&lt;b&gt;(1)&lt;/b&gt;
+       -p 8080:8080
+       -v /var/jenkins_home:/var/jenkins_home &lt;i class=&quot;conum&quot; data-value=&quot;2&quot;&gt;&lt;/i&gt;&lt;b&gt;(2)&lt;/b&gt;
+       -v &lt;span class=&quot;tok-k&quot;&gt;$(&lt;/span&gt;which docker&lt;span class=&quot;tok-k&quot;&gt;)&lt;/span&gt;:/usr/bin/docker &lt;i class=&quot;conum&quot; data-value=&quot;3&quot;&gt;&lt;/i&gt;&lt;b&gt;(3)&lt;/b&gt;
+       -v /var/run/docker.sock:/var/run/docker.sock &lt;i class=&quot;conum&quot; data-value=&quot;4&quot;&gt;&lt;/i&gt;&lt;b&gt;(4)&lt;/b&gt;
+       -v /usr/lib/x86_64-linux-gnu/libapparmor.so.1:/lib/x86_64-linux-gnu/libapparmor.so.1 &lt;i class=&quot;conum&quot; data-value=&quot;5&quot;&gt;&lt;/i&gt;&lt;b&gt;(5)&lt;/b&gt;
+       agileek/docker-jenkins &lt;i class=&quot;conum&quot; data-value=&quot;6&quot;&gt;&lt;/i&gt;&lt;b&gt;(6)&lt;/b&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;colist arabic&quot;&gt;
+&lt;table&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;i class=&quot;conum&quot; data-value=&quot;1&quot;&gt;&lt;/i&gt;&lt;b&gt;1&lt;/b&gt;&lt;/td&gt;
+&lt;td&gt;Le container est lancé avec l&amp;#8217;utilisateur courant et le groupe &lt;code&gt;docker&lt;/code&gt; pour pouvoir accéder au &lt;code&gt;docker.sock&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;i class=&quot;conum&quot; data-value=&quot;2&quot;&gt;&lt;/i&gt;&lt;b&gt;2&lt;/b&gt;&lt;/td&gt;
+&lt;td&gt;Pour éviter les incohérences de chemin, le chemin racine du jenkins est le même en dehors et dans le container&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;i class=&quot;conum&quot; data-value=&quot;3&quot;&gt;&lt;/i&gt;&lt;b&gt;3&lt;/b&gt;&lt;/td&gt;
+&lt;td&gt;Le binaire docker du système est fourni dans l&amp;#8217;image&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;i class=&quot;conum&quot; data-value=&quot;4&quot;&gt;&lt;/i&gt;&lt;b&gt;4&lt;/b&gt;&lt;/td&gt;
+&lt;td&gt;Le socket docker est également fourni pour que le client puisse &quot;parler&quot; au démon&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;i class=&quot;conum&quot; data-value=&quot;5&quot;&gt;&lt;/i&gt;&lt;b&gt;5&lt;/b&gt;&lt;/td&gt;
+&lt;td&gt;La bibliotheque apparmor est nécessaire pour le bon fonctionnement de docker client&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect2&quot;&gt;
+&lt;h3 id=&quot;jenkins-workflow-plugin&quot;&gt;Jenkins workflow plugin&lt;/h3&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Pour utiliser la suite des éléments, vous aurez besoin des plugins gérant la notion de &lt;em&gt;workflow&lt;/em&gt; dans Jenkins :&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;&lt;div style=&quot;text-align : center&quot;&gt;
+&lt;a style=&quot;display: inline&quot; href=&quot;/images/posts/2016-01-JenkinsWorkflow/Workflow-Plugin.png&quot; data-lightbox=&quot;0&quot; title=&quot;Plugin workflow&quot;&gt;
+        &lt;img class=&quot;medium&quot; src=&quot;/images/posts/2016-01-JenkinsWorkflow/Workflow-Plugin_min.png&quot; alt=&quot;Plugin workflow&quot;/&gt;
+&lt;/a&gt;
+&lt;/div&gt;
+&lt;br/&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Ensuite, il nous est possible de créer un job de construction de type &lt;em&gt;workflow&lt;/em&gt; :&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;&lt;div style=&quot;text-align : center&quot;&gt;
+&lt;a style=&quot;display: inline&quot; href=&quot;/images/posts/2016-01-JenkinsWorkflow/Workflow-Plugin_JobCreation.png&quot; data-lightbox=&quot;0&quot; title=&quot;Création de job&quot;&gt;
+        &lt;img class=&quot;medium&quot; src=&quot;/images/posts/2016-01-JenkinsWorkflow/Workflow-Plugin_JobCreation_min.png&quot; alt=&quot;Création de job&quot;/&gt;
+&lt;/a&gt;
+&lt;/div&gt;
+&lt;br/&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect1&quot;&gt;
+&lt;h2 id=&quot;premier-job-em-workflow-em&quot;&gt;Premier job &lt;em&gt;Workflow&lt;/em&gt;&lt;/h2&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Ensuite, c&amp;#8217;est là que la magie opère, plutôt que de devoir sélectionner les n-items voulus et remplir chaque étape du build, nous pouvons maintenant le décrire en utilisant du code !
+Ainsi, en copiant/collant le script suivant dans la partie idoine, vous devriez avoir un job bien configuré qui marche, du premier coup !&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;pygments highlight&quot;&gt;&lt;code data-lang=&quot;groovy&quot;&gt;&lt;span class=&quot;tok-kt&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;tok-n&quot;&gt;m2Repo&lt;/span&gt; &lt;span class=&quot;tok-o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;tok-s1&quot;&gt;&amp;#39;-v /var/jenkins_home/.m2:/home/jenkins/.m2&amp;#39;&lt;/span&gt; &lt;span class=&quot;tok-c1&quot;&gt;//  &lt;/span&gt;&lt;i class=&quot;conum&quot; data-value=&quot;1&quot;&gt;&lt;/i&gt;&lt;b&gt;(1)&lt;/b&gt;
+&lt;span class=&quot;tok-kt&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;tok-n&quot;&gt;timezone&lt;/span&gt; &lt;span class=&quot;tok-o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;tok-s1&quot;&gt;&amp;#39;-e TZ=Europe/Paris&amp;#39;&lt;/span&gt; &lt;span class=&quot;tok-c1&quot;&gt;// &lt;/span&gt;&lt;i class=&quot;conum&quot; data-value=&quot;2&quot;&gt;&lt;/i&gt;&lt;b&gt;(2)&lt;/b&gt;
+&lt;span class=&quot;tok-n&quot;&gt;docker&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;tok-na&quot;&gt;image&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;tok-s2&quot;&gt;&amp;quot;codetroopers/jenkins-slave-jdk8-restx&amp;quot;&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;tok-o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;tok-na&quot;&gt;inside&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;tok-s2&quot;&gt;&amp;quot;${m2Repo} ${timezone}&amp;quot;&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;){&lt;/span&gt; &lt;span class=&quot;tok-c1&quot;&gt;//  &lt;/span&gt;&lt;i class=&quot;conum&quot; data-value=&quot;3&quot;&gt;&lt;/i&gt;&lt;b&gt;(3)&lt;/b&gt;
+    &lt;span class=&quot;tok-n&quot;&gt;git&lt;/span&gt; &lt;span class=&quot;tok-nl&quot;&gt;branch:&lt;/span&gt; &lt;span class=&quot;tok-s1&quot;&gt;&amp;#39;master&amp;#39;&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;tok-nl&quot;&gt;url:&lt;/span&gt; &lt;span class=&quot;tok-s1&quot;&gt;&amp;#39;https://github.com/code-troopers/jenkins-workflow-demo-repo.git&amp;#39;&lt;/span&gt; &lt;span class=&quot;tok-c1&quot;&gt;// &lt;/span&gt;&lt;i class=&quot;conum&quot; data-value=&quot;4&quot;&gt;&lt;/i&gt;&lt;b&gt;(4)&lt;/b&gt;
+    &lt;span class=&quot;tok-n&quot;&gt;sh&lt;/span&gt; &lt;span class=&quot;tok-s2&quot;&gt;&amp;quot;MAVEN_OPTS=-Dfile.encoding=UTF-8 mvn clean install -B -Ppackage&amp;quot;&lt;/span&gt; &lt;span class=&quot;tok-c1&quot;&gt;// &lt;/span&gt;&lt;i class=&quot;conum&quot; data-value=&quot;5&quot;&gt;&lt;/i&gt;&lt;b&gt;(5)&lt;/b&gt;
+    &lt;span class=&quot;tok-n&quot;&gt;step&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;tok-n&quot;&gt;$class&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;tok-s1&quot;&gt;&amp;#39;ArtifactArchiver&amp;#39;&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;tok-nl&quot;&gt;artifacts:&lt;/span&gt; &lt;span class=&quot;tok-s1&quot;&gt;&amp;#39;srv/target/dependency/webapp-runner.jar, srv/target/*.war, run.sh&amp;#39;&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;])&lt;/span&gt; &lt;span class=&quot;tok-c1&quot;&gt;// &lt;/span&gt;&lt;i class=&quot;conum&quot; data-value=&quot;6&quot;&gt;&lt;/i&gt;&lt;b&gt;(6)&lt;/b&gt;
+    &lt;span class=&quot;tok-n&quot;&gt;step&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;tok-n&quot;&gt;$class&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;tok-s1&quot;&gt;&amp;#39;JUnitResultArchiver&amp;#39;&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;tok-nl&quot;&gt;testResults:&lt;/span&gt; &lt;span class=&quot;tok-s1&quot;&gt;&amp;#39;**/target/surefire-reports/TEST-*.xml&amp;#39;&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;])&lt;/span&gt; &lt;span class=&quot;tok-c1&quot;&gt;// &lt;/span&gt;&lt;i class=&quot;conum&quot; data-value=&quot;7&quot;&gt;&lt;/i&gt;&lt;b&gt;(7)&lt;/b&gt;
+&lt;span class=&quot;tok-o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;colist arabic&quot;&gt;
+&lt;table&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;i class=&quot;conum&quot; data-value=&quot;1&quot;&gt;&lt;/i&gt;&lt;b&gt;1&lt;/b&gt;&lt;/td&gt;
+&lt;td&gt;Partage du dépôt Maven local (pour gagner en temps de build)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;i class=&quot;conum&quot; data-value=&quot;2&quot;&gt;&lt;/i&gt;&lt;b&gt;2&lt;/b&gt;&lt;/td&gt;
+&lt;td&gt;Export de la timezone (pour les tests unitaires de l&amp;#8217;exemple)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;i class=&quot;conum&quot; data-value=&quot;3&quot;&gt;&lt;/i&gt;&lt;b&gt;3&lt;/b&gt;&lt;/td&gt;
+&lt;td&gt;Démarrage du conteneur de build avec la bonne timezone ainsi que le dépôt partagé&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;i class=&quot;conum&quot; data-value=&quot;4&quot;&gt;&lt;/i&gt;&lt;b&gt;4&lt;/b&gt;&lt;/td&gt;
+&lt;td&gt;Clonage des sources&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;i class=&quot;conum&quot; data-value=&quot;5&quot;&gt;&lt;/i&gt;&lt;b&gt;5&lt;/b&gt;&lt;/td&gt;
+&lt;td&gt;Lancement du build (en forçant l&amp;#8217;UTF-8)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;i class=&quot;conum&quot; data-value=&quot;6&quot;&gt;&lt;/i&gt;&lt;b&gt;6&lt;/b&gt;&lt;/td&gt;
+&lt;td&gt;Archivage des produits du build&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;i class=&quot;conum&quot; data-value=&quot;7&quot;&gt;&lt;/i&gt;&lt;b&gt;7&lt;/b&gt;&lt;/td&gt;
+&lt;td&gt;Archivage des résultats des tests&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Comme vous pouvez le voir, le script est relativement parlant et permet en plus de s&amp;#8217;affranchir du clickodrome de configuration dans l&amp;#8217;interface de Jenkins !&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Il est intéressant de noter que l&amp;#8217;image Docker qui sert au build est une image personnalisée. Ce n&amp;#8217;est pas parce qu&amp;#8217;elle inclut un quelconque fonctionnement permettant de builder
+en utilisant le plugin Workflow. Elle sert de base uniquement car elle met à disposition la partie &lt;code&gt;npm&lt;/code&gt; nécessaire au build de la partie &lt;em&gt;frontend&lt;/em&gt; de l&amp;#8217;application RestX.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect1&quot;&gt;
+&lt;h2 id=&quot;grouper-les-étapes&quot;&gt;Grouper les étapes&lt;/h2&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Le plugin workflow permet en plus de grouper les différentes étapes d&amp;#8217;un build pour permettre, par exemple, de le lancer sur plusieurs environnement différents.
+Ici nous ajoutons simplement un nom de groupe pour notre étape de build.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;pygments highlight&quot;&gt;&lt;code data-lang=&quot;groovy&quot;&gt;&lt;span class=&quot;tok-n&quot;&gt;stage&lt;/span&gt; &lt;span class=&quot;tok-s1&quot;&gt;&amp;#39;build&amp;#39;&lt;/span&gt; &lt;span class=&quot;tok-c1&quot;&gt;// &lt;/span&gt;&lt;i class=&quot;conum&quot; data-value=&quot;1&quot;&gt;&lt;/i&gt;&lt;b&gt;(1)&lt;/b&gt;
+    &lt;span class=&quot;tok-kt&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;tok-n&quot;&gt;m2Repo&lt;/span&gt; &lt;span class=&quot;tok-o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;tok-s1&quot;&gt;&amp;#39;-v /var/jenkins_home/.m2:/home/jenkins/.m2&amp;#39;&lt;/span&gt;
+    &lt;span class=&quot;tok-kt&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;tok-n&quot;&gt;timezone&lt;/span&gt; &lt;span class=&quot;tok-o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;tok-s1&quot;&gt;&amp;#39;-e TZ=Europe/Paris&amp;#39;&lt;/span&gt;
+    &lt;span class=&quot;tok-n&quot;&gt;docker&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;tok-na&quot;&gt;image&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;tok-s2&quot;&gt;&amp;quot;codetroopers/jenkins-slave-jdk8-restx&amp;quot;&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;tok-na&quot;&gt;inside&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;tok-s2&quot;&gt;&amp;quot;${m2Repo} ${timezone}&amp;quot;&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;){&lt;/span&gt;
+        &lt;span class=&quot;tok-n&quot;&gt;git&lt;/span&gt; &lt;span class=&quot;tok-nl&quot;&gt;branch:&lt;/span&gt; &lt;span class=&quot;tok-s1&quot;&gt;&amp;#39;master&amp;#39;&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;tok-nl&quot;&gt;url:&lt;/span&gt; &lt;span class=&quot;tok-s1&quot;&gt;&amp;#39;https://github.com/code-troopers/jenkins-workflow-demo-repo.git&amp;#39;&lt;/span&gt;
+        &lt;span class=&quot;tok-n&quot;&gt;sh&lt;/span&gt; &lt;span class=&quot;tok-s2&quot;&gt;&amp;quot;MAVEN_OPTS=-Dfile.encoding=UTF-8 mvn clean install -B -Ppackage&amp;quot;&lt;/span&gt;
+        &lt;span class=&quot;tok-n&quot;&gt;step&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;tok-n&quot;&gt;$class&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;tok-s1&quot;&gt;&amp;#39;ArtifactArchiver&amp;#39;&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;tok-nl&quot;&gt;artifacts:&lt;/span&gt; &lt;span class=&quot;tok-s1&quot;&gt;&amp;#39;srv/target/dependency/webapp-runner.jar, srv/target/*.war, run.sh&amp;#39;&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;])&lt;/span&gt;
+        &lt;span class=&quot;tok-n&quot;&gt;step&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;tok-n&quot;&gt;$class&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;tok-s1&quot;&gt;&amp;#39;JUnitResultArchiver&amp;#39;&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;tok-nl&quot;&gt;testResults:&lt;/span&gt; &lt;span class=&quot;tok-s1&quot;&gt;&amp;#39;**/target/surefire-reports/TEST-*.xml&amp;#39;&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;])&lt;/span&gt;
+    &lt;span class=&quot;tok-o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;colist arabic&quot;&gt;
+&lt;table&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;i class=&quot;conum&quot; data-value=&quot;1&quot;&gt;&lt;/i&gt;&lt;b&gt;1&lt;/b&gt;&lt;/td&gt;
+&lt;td&gt;Étape nommée pour l&amp;#8217;exécution de la construction de l&amp;#8217;application&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect1&quot;&gt;
+&lt;h2 id=&quot;mettre-de-côté-les-fichiers-pour-plus-tard&quot;&gt;Mettre de côté les fichiers pour plus tard&lt;/h2&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;La notion de &lt;em&gt;stash&lt;/em&gt; bien connue des utilisateurs de git est également présente.
+Elle permet de mettre de côté des fichiers pour les réutiliser à une étape ultérieure du &lt;em&gt;workflow&lt;/em&gt; de build.
+Ceci permet d&amp;#8217;éviter l&amp;#8217;archivage de produits du build pour des raisons &quot;techniques&quot;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;pygments highlight&quot;&gt;&lt;code data-lang=&quot;groovy&quot;&gt;&lt;span class=&quot;tok-n&quot;&gt;stage&lt;/span&gt; &lt;span class=&quot;tok-s1&quot;&gt;&amp;#39;build&amp;#39;&lt;/span&gt;
+    &lt;span class=&quot;tok-kt&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;tok-n&quot;&gt;m2Repo&lt;/span&gt; &lt;span class=&quot;tok-o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;tok-s1&quot;&gt;&amp;#39;-v /var/jenkins_home/.m2:/home/jenkins/.m2&amp;#39;&lt;/span&gt;
+    &lt;span class=&quot;tok-kt&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;tok-n&quot;&gt;timezone&lt;/span&gt; &lt;span class=&quot;tok-o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;tok-s1&quot;&gt;&amp;#39;-e TZ=Europe/Paris&amp;#39;&lt;/span&gt;
+    &lt;span class=&quot;tok-n&quot;&gt;docker&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;tok-na&quot;&gt;image&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;tok-s2&quot;&gt;&amp;quot;codetroopers/jenkins-slave-jdk8-restx&amp;quot;&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;tok-na&quot;&gt;inside&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;tok-s2&quot;&gt;&amp;quot;${m2Repo} ${timezone}&amp;quot;&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;){&lt;/span&gt;
+        &lt;span class=&quot;tok-n&quot;&gt;git&lt;/span&gt; &lt;span class=&quot;tok-nl&quot;&gt;branch:&lt;/span&gt; &lt;span class=&quot;tok-s1&quot;&gt;&amp;#39;master&amp;#39;&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;tok-nl&quot;&gt;url:&lt;/span&gt; &lt;span class=&quot;tok-s1&quot;&gt;&amp;#39;https://github.com/code-troopers/jenkins-workflow-demo-repo.git&amp;#39;&lt;/span&gt;
+        &lt;span class=&quot;tok-n&quot;&gt;sh&lt;/span&gt; &lt;span class=&quot;tok-s2&quot;&gt;&amp;quot;MAVEN_OPTS=-Dfile.encoding=UTF-8 mvn clean install -B -Ppackage&amp;quot;&lt;/span&gt;
+        &lt;span class=&quot;tok-n&quot;&gt;step&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;tok-n&quot;&gt;$class&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;tok-s1&quot;&gt;&amp;#39;ArtifactArchiver&amp;#39;&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;tok-nl&quot;&gt;artifacts:&lt;/span&gt; &lt;span class=&quot;tok-s1&quot;&gt;&amp;#39;srv/target/dependency/webapp-runner.jar, srv/target/*.war, run.sh&amp;#39;&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;])&lt;/span&gt;
+        &lt;span class=&quot;tok-n&quot;&gt;step&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;tok-n&quot;&gt;$class&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;tok-s1&quot;&gt;&amp;#39;JUnitResultArchiver&amp;#39;&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;tok-nl&quot;&gt;testResults:&lt;/span&gt; &lt;span class=&quot;tok-s1&quot;&gt;&amp;#39;**/target/surefire-reports/TEST-*.xml&amp;#39;&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;])&lt;/span&gt;
+        &lt;span class=&quot;tok-n&quot;&gt;stash&lt;/span&gt; &lt;span class=&quot;tok-nl&quot;&gt;includes:&lt;/span&gt; &lt;span class=&quot;tok-s1&quot;&gt;&amp;#39;run.sh,srv/target/dependency/webapp-runner.jar,srv/target/*.war,Dockerfile&amp;#39;&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;tok-nl&quot;&gt;name:&lt;/span&gt; &lt;span class=&quot;tok-s1&quot;&gt;&amp;#39;dockerBuild&amp;#39;&lt;/span&gt; &lt;span class=&quot;tok-c1&quot;&gt;// &lt;/span&gt;&lt;i class=&quot;conum&quot; data-value=&quot;1&quot;&gt;&lt;/i&gt;&lt;b&gt;(1)&lt;/b&gt;
+    &lt;span class=&quot;tok-o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;colist arabic&quot;&gt;
+&lt;table&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;i class=&quot;conum&quot; data-value=&quot;1&quot;&gt;&lt;/i&gt;&lt;b&gt;1&lt;/b&gt;&lt;/td&gt;
+&lt;td&gt;Enregistrement d&amp;#8217;une liste de fichiers associée à un nom pour une utilisation ultérieure&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect1&quot;&gt;
+&lt;h2 id=&quot;Étape-de-construction-d-une-image-docker&quot;&gt;Étape de construction d&amp;#8217;une image Docker&lt;/h2&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;pygments highlight&quot;&gt;&lt;code data-lang=&quot;groovy&quot;&gt;&lt;span class=&quot;tok-n&quot;&gt;stage&lt;/span&gt; &lt;span class=&quot;tok-s1&quot;&gt;&amp;#39;docker&amp;#39;&lt;/span&gt; &lt;span class=&quot;tok-c1&quot;&gt;// &lt;/span&gt;&lt;i class=&quot;conum&quot; data-value=&quot;1&quot;&gt;&lt;/i&gt;&lt;b&gt;(1)&lt;/b&gt;
+&lt;span class=&quot;tok-n&quot;&gt;node&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;tok-c1&quot;&gt;// &lt;/span&gt;&lt;i class=&quot;conum&quot; data-value=&quot;2&quot;&gt;&lt;/i&gt;&lt;b&gt;(2)&lt;/b&gt;
+  &lt;span class=&quot;tok-n&quot;&gt;ws&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;tok-c1&quot;&gt;// &lt;/span&gt;&lt;i class=&quot;conum&quot; data-value=&quot;3&quot;&gt;&lt;/i&gt;&lt;b&gt;(3)&lt;/b&gt;
+    &lt;span class=&quot;tok-n&quot;&gt;unstash&lt;/span&gt; &lt;span class=&quot;tok-s1&quot;&gt;&amp;#39;dockerBuild&amp;#39;&lt;/span&gt; &lt;span class=&quot;tok-c1&quot;&gt;// &lt;/span&gt;&lt;i class=&quot;conum&quot; data-value=&quot;4&quot;&gt;&lt;/i&gt;&lt;b&gt;(4)&lt;/b&gt;
+    &lt;span class=&quot;tok-n&quot;&gt;docker&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;tok-na&quot;&gt;build&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;tok-s2&quot;&gt;&amp;quot;codetroopers/jenkins-workflow-demo:${env.BUILD_ID}&amp;quot;&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;tok-c1&quot;&gt;// &lt;/span&gt;&lt;i class=&quot;conum&quot; data-value=&quot;5&quot;&gt;&lt;/i&gt;&lt;b&gt;(5)&lt;/b&gt;
+  &lt;span class=&quot;tok-o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;tok-o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;colist arabic&quot;&gt;
+&lt;table&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;i class=&quot;conum&quot; data-value=&quot;1&quot;&gt;&lt;/i&gt;&lt;b&gt;1&lt;/b&gt;&lt;/td&gt;
+&lt;td&gt;Création d&amp;#8217;une nouvelle étape&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;i class=&quot;conum&quot; data-value=&quot;2&quot;&gt;&lt;/i&gt;&lt;b&gt;2&lt;/b&gt;&lt;/td&gt;
+&lt;td&gt;Permet de distinguer un ensemble d&amp;#8217;opération de build (peut accepter les labels pour restreindre sur des noeuds)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;i class=&quot;conum&quot; data-value=&quot;3&quot;&gt;&lt;/i&gt;&lt;b&gt;3&lt;/b&gt;&lt;/td&gt;
+&lt;td&gt;Déclenche la création d&amp;#8217;un nouveau &lt;em&gt;workspace&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;i class=&quot;conum&quot; data-value=&quot;4&quot;&gt;&lt;/i&gt;&lt;b&gt;4&lt;/b&gt;&lt;/td&gt;
+&lt;td&gt;Récupère les fichiers mis de côté sous le nom &lt;code&gt;dockerBuild&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;i class=&quot;conum&quot; data-value=&quot;5&quot;&gt;&lt;/i&gt;&lt;b&gt;5&lt;/b&gt;&lt;/td&gt;
+&lt;td&gt;Construction d&amp;#8217;une image docker avec pour tag le numéro de build en cours (&lt;code&gt;$BUILD_ID&lt;/code&gt;)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect1&quot;&gt;
+&lt;h2 id=&quot;workflow-et-gestion-multibranche&quot;&gt;Workflow et gestion multibranche&lt;/h2&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Dans nos façons de fonctionner qui sont maintenant devenues habituelles, nous utilisons de façon intensives les branches pour isoler nos développements.
+Un des points fastidieux est de configurer un nouveau job Jenkins pour chaque branche afin de valider son bon fonctionnement et ne pas se rendre compte trop tard d&amp;#8217;un build au rouge.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Le plugin &#39;Workflow Multibranch&#39; simplifie de façon drastique ce genre de cas, il suffit de rajouter un descripteur de build dans les sources.
+Le fichier correspondant est tout simplement appelé &lt;code&gt;Jenkinsfile&lt;/code&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;pygments highlight&quot;&gt;&lt;code data-lang=&quot;groovy&quot;&gt;&lt;span class=&quot;tok-n&quot;&gt;stage&lt;/span&gt; &lt;span class=&quot;tok-s1&quot;&gt;&amp;#39;build&amp;#39;&lt;/span&gt;
+    &lt;span class=&quot;tok-kt&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;tok-n&quot;&gt;m2Repo&lt;/span&gt; &lt;span class=&quot;tok-o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;tok-s1&quot;&gt;&amp;#39;-v /var/jenkins_home/.m2:/home/jenkins/.m2&amp;#39;&lt;/span&gt;
+    &lt;span class=&quot;tok-kt&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;tok-n&quot;&gt;timezone&lt;/span&gt; &lt;span class=&quot;tok-o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;tok-s1&quot;&gt;&amp;#39;-e TZ=Europe/Paris&amp;#39;&lt;/span&gt;
+    &lt;span class=&quot;tok-n&quot;&gt;docker&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;tok-na&quot;&gt;image&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;tok-s2&quot;&gt;&amp;quot;codetroopers/jenkins-slave-jdk8-restx&amp;quot;&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;tok-na&quot;&gt;inside&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;tok-s2&quot;&gt;&amp;quot;${m2Repo} ${timezone}&amp;quot;&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;){&lt;/span&gt;
+        &lt;span class=&quot;tok-n&quot;&gt;checkout&lt;/span&gt; &lt;span class=&quot;tok-n&quot;&gt;scm&lt;/span&gt; &lt;span class=&quot;tok-c1&quot;&gt;// &lt;/span&gt;&lt;i class=&quot;conum&quot; data-value=&quot;1&quot;&gt;&lt;/i&gt;&lt;b&gt;(1)&lt;/b&gt;
+        &lt;span class=&quot;tok-n&quot;&gt;sh&lt;/span&gt; &lt;span class=&quot;tok-s2&quot;&gt;&amp;quot;MAVEN_OPTS=-Dfile.encoding=UTF-8 mvn clean install -B -Ppackage&amp;quot;&lt;/span&gt;
+        &lt;span class=&quot;tok-n&quot;&gt;step&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;tok-n&quot;&gt;$class&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;tok-s1&quot;&gt;&amp;#39;ArtifactArchiver&amp;#39;&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;tok-nl&quot;&gt;artifacts:&lt;/span&gt; &lt;span class=&quot;tok-s1&quot;&gt;&amp;#39;srv/target/dependency/webapp-runner.jar, srv/target/*.war, run.sh&amp;#39;&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;])&lt;/span&gt;
+        &lt;span class=&quot;tok-n&quot;&gt;step&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;tok-n&quot;&gt;$class&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;tok-s1&quot;&gt;&amp;#39;JUnitResultArchiver&amp;#39;&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;tok-nl&quot;&gt;testResults:&lt;/span&gt; &lt;span class=&quot;tok-s1&quot;&gt;&amp;#39;**/target/surefire-reports/TEST-*.xml&amp;#39;&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;])&lt;/span&gt;
+        &lt;span class=&quot;tok-n&quot;&gt;stash&lt;/span&gt; &lt;span class=&quot;tok-nl&quot;&gt;includes:&lt;/span&gt; &lt;span class=&quot;tok-s1&quot;&gt;&amp;#39;run.sh,srv/target/dependency/webapp-runner.jar,srv/target/*.war,Dockerfile&amp;#39;&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;tok-nl&quot;&gt;name:&lt;/span&gt; &lt;span class=&quot;tok-s1&quot;&gt;&amp;#39;dockerBuild&amp;#39;&lt;/span&gt;
+    &lt;span class=&quot;tok-o&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;tok-n&quot;&gt;stage&lt;/span&gt; &lt;span class=&quot;tok-s1&quot;&gt;&amp;#39;docker&amp;#39;&lt;/span&gt;
+&lt;span class=&quot;tok-n&quot;&gt;node&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;tok-n&quot;&gt;ws&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;tok-n&quot;&gt;unstash&lt;/span&gt; &lt;span class=&quot;tok-s1&quot;&gt;&amp;#39;dockerBuild&amp;#39;&lt;/span&gt;
+    &lt;span class=&quot;tok-n&quot;&gt;docker&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;tok-na&quot;&gt;build&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;tok-s2&quot;&gt;&amp;quot;codetroopers/jenkins-workflow-demo:${env.BUILD_ID}&amp;quot;&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;tok-o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;tok-o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;colist arabic&quot;&gt;
+&lt;table&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;i class=&quot;conum&quot; data-value=&quot;1&quot;&gt;&lt;/i&gt;&lt;b&gt;1&lt;/b&gt;&lt;/td&gt;
+&lt;td&gt;Il faut bien entendu remplacer l&amp;#8217;endroit où nous faisions le git clone pour qu&amp;#8217;il soit dynamique par rapport à ce qu&amp;#8217;on
+construit. Le terme &lt;code&gt;checkout scm&lt;/code&gt; permet de s&amp;#8217;assurer de ce fonctionnement.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;L&amp;#8217;intérêt est que chaque branche qui sera buildée n&amp;#8217;aura pas son historique mélangé avec une autre (là où les jobs de validation de Pull Request ont tendance à tout mélanger).
+De plus, un changement dans le process de build sera directement versionné.
+Il n&amp;#8217;y aura donc pas besoin de penser à éditer le job lors du merge sur &lt;code&gt;master&lt;/code&gt; (on a tous vécu ce genre de situation énervante) !&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect1&quot;&gt;
+&lt;h2 id=&quot;attendre-une-confirmation-utilisateur&quot;&gt;Attendre une confirmation utilisateur&lt;/h2&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Un des points intéressant de ce plugin est qu&amp;#8217;il permet la mise en pause des constructions.
+Ainsi, il est possible de mettre en pause une construction correspondant à une livraison et de lui faire attendre une validation manuelle par exemple.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;pygments highlight&quot;&gt;&lt;code data-lang=&quot;groovy&quot;&gt;&lt;span class=&quot;tok-n&quot;&gt;stage&lt;/span&gt; &lt;span class=&quot;tok-s1&quot;&gt;&amp;#39;build&amp;#39;&lt;/span&gt;
+    &lt;span class=&quot;tok-kt&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;tok-n&quot;&gt;m2Repo&lt;/span&gt; &lt;span class=&quot;tok-o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;tok-s1&quot;&gt;&amp;#39;-v /var/jenkins_home/.m2:/home/jenkins/.m2&amp;#39;&lt;/span&gt;
+    &lt;span class=&quot;tok-kt&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;tok-n&quot;&gt;timezone&lt;/span&gt; &lt;span class=&quot;tok-o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;tok-s1&quot;&gt;&amp;#39;-e TZ=Europe/Paris&amp;#39;&lt;/span&gt;
+    &lt;span class=&quot;tok-n&quot;&gt;docker&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;tok-na&quot;&gt;image&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;tok-s2&quot;&gt;&amp;quot;codetroopers/jenkins-slave-jdk8-restx&amp;quot;&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;tok-na&quot;&gt;inside&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;tok-s2&quot;&gt;&amp;quot;${m2Repo} ${timezone}&amp;quot;&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;){&lt;/span&gt;
+        &lt;span class=&quot;tok-n&quot;&gt;git&lt;/span&gt; &lt;span class=&quot;tok-nl&quot;&gt;branch:&lt;/span&gt; &lt;span class=&quot;tok-s1&quot;&gt;&amp;#39;master&amp;#39;&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;tok-nl&quot;&gt;url:&lt;/span&gt; &lt;span class=&quot;tok-s1&quot;&gt;&amp;#39;https://github.com/code-troopers/jenkins-workflow-demo-repo.git&amp;#39;&lt;/span&gt;
+        &lt;span class=&quot;tok-n&quot;&gt;sh&lt;/span&gt; &lt;span class=&quot;tok-s2&quot;&gt;&amp;quot;MAVEN_OPTS=-Dfile.encoding=UTF-8 mvn clean install -B -Ppackage&amp;quot;&lt;/span&gt;
+        &lt;span class=&quot;tok-n&quot;&gt;step&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;tok-n&quot;&gt;$class&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;tok-s1&quot;&gt;&amp;#39;ArtifactArchiver&amp;#39;&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;tok-nl&quot;&gt;artifacts:&lt;/span&gt; &lt;span class=&quot;tok-s1&quot;&gt;&amp;#39;srv/target/dependency/webapp-runner.jar, srv/target/*.war, run.sh&amp;#39;&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;])&lt;/span&gt;
+        &lt;span class=&quot;tok-n&quot;&gt;step&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;tok-n&quot;&gt;$class&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;tok-s1&quot;&gt;&amp;#39;JUnitResultArchiver&amp;#39;&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;tok-nl&quot;&gt;testResults:&lt;/span&gt; &lt;span class=&quot;tok-s1&quot;&gt;&amp;#39;**/target/surefire-reports/TEST-*.xml&amp;#39;&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;])&lt;/span&gt;
+        &lt;span class=&quot;tok-n&quot;&gt;stash&lt;/span&gt; &lt;span class=&quot;tok-nl&quot;&gt;includes:&lt;/span&gt; &lt;span class=&quot;tok-s1&quot;&gt;&amp;#39;run.sh,srv/target/dependency/webapp-runner.jar,srv/target/*.war,Dockerfile&amp;#39;&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;tok-nl&quot;&gt;name:&lt;/span&gt; &lt;span class=&quot;tok-s1&quot;&gt;&amp;#39;dockerBuild&amp;#39;&lt;/span&gt;
+    &lt;span class=&quot;tok-o&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;tok-n&quot;&gt;stage&lt;/span&gt; &lt;span class=&quot;tok-s1&quot;&gt;&amp;#39;docker&amp;#39;&lt;/span&gt;
+&lt;span class=&quot;tok-n&quot;&gt;node&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;tok-n&quot;&gt;ws&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;tok-n&quot;&gt;unstash&lt;/span&gt; &lt;span class=&quot;tok-s1&quot;&gt;&amp;#39;dockerBuild&amp;#39;&lt;/span&gt;
+        &lt;span class=&quot;tok-kt&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;tok-n&quot;&gt;built&lt;/span&gt; &lt;span class=&quot;tok-o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;tok-n&quot;&gt;docker&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;tok-na&quot;&gt;build&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;tok-s2&quot;&gt;&amp;quot;codetroopers/jenkins-workflow-demo:${env.BUILD_ID}&amp;quot;&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;tok-n&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;tok-s1&quot;&gt;&amp;#39;Is everything ok ? Run app ?&amp;#39;&lt;/span&gt; &lt;span class=&quot;tok-c1&quot;&gt;// &lt;/span&gt;&lt;i class=&quot;conum&quot; data-value=&quot;1&quot;&gt;&lt;/i&gt;&lt;b&gt;(1)&lt;/b&gt;
+        &lt;span class=&quot;tok-n&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;tok-s2&quot;&gt;&amp;quot;We can run the docker-compose up here&amp;quot;&lt;/span&gt;
+        &lt;span class=&quot;tok-kt&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;tok-n&quot;&gt;outcome&lt;/span&gt; &lt;span class=&quot;tok-o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;tok-n&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;tok-nl&quot;&gt;message:&lt;/span&gt; &lt;span class=&quot;tok-s1&quot;&gt;&amp;#39;We can even have parameters to answer this question&amp;#39;&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;tok-nl&quot;&gt;parameters:&lt;/span&gt; &lt;span class=&quot;tok-o&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;tok-c1&quot;&gt;// &lt;/span&gt;&lt;i class=&quot;conum&quot; data-value=&quot;2&quot;&gt;&lt;/i&gt;&lt;b&gt;(2)&lt;/b&gt;
+            &lt;span class=&quot;tok-o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;tok-nl&quot;&gt;name:&lt;/span&gt; &lt;span class=&quot;tok-s1&quot;&gt;&amp;#39;myChoice&amp;#39;&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;tok-nl&quot;&gt;description:&lt;/span&gt; &lt;span class=&quot;tok-s1&quot;&gt;&amp;#39;My choice&amp;#39;&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;tok-nl&quot;&gt;choices:&lt;/span&gt; &lt;span class=&quot;tok-s1&quot;&gt;&amp;#39;Choice 1\nChoice 2\nChoice 3&amp;#39;&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;tok-n&quot;&gt;$class&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;tok-s1&quot;&gt;&amp;#39;ChoiceParameterDefinition&amp;#39;&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;]&lt;/span&gt;
+        &lt;span class=&quot;tok-o&quot;&gt;]&lt;/span&gt;
+        &lt;span class=&quot;tok-n&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;tok-s2&quot;&gt;&amp;quot;You have chosen ${outcome}&amp;quot;&lt;/span&gt; &lt;span class=&quot;tok-c1&quot;&gt;// &lt;/span&gt;&lt;i class=&quot;conum&quot; data-value=&quot;3&quot;&gt;&lt;/i&gt;&lt;b&gt;(3)&lt;/b&gt;
+    &lt;span class=&quot;tok-o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;tok-o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;colist arabic&quot;&gt;
+&lt;table&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;i class=&quot;conum&quot; data-value=&quot;1&quot;&gt;&lt;/i&gt;&lt;b&gt;1&lt;/b&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;input&lt;/code&gt; met en pause la construction et permet de continuer ou interrompre celle-ci&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;i class=&quot;conum&quot; data-value=&quot;2&quot;&gt;&lt;/i&gt;&lt;b&gt;2&lt;/b&gt;&lt;/td&gt;
+&lt;td&gt;Il est également possible de permettre à l&amp;#8217;utilisateur de faire un choix&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;i class=&quot;conum&quot; data-value=&quot;3&quot;&gt;&lt;/i&gt;&lt;b&gt;3&lt;/b&gt;&lt;/td&gt;
+&lt;td&gt;Ici la valeur sélectionnée par l&amp;#8217;utilisateur est écrite dans la sortie du build.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;&lt;em&gt;J&amp;#8217;espère que cet article vous donnera l&amp;#8217;envie d&amp;#8217;essayer de rationnaliser un peu plus la configuration de vos job Jenkins en les stockant dans votre SCM&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
+                                <pubDate>Wed, 20 Jan 2016 00:00:00 +0000</pubDate>
+                                <link>http://code-troopers.com/2016/01/20/JenkinsWorkflow.html</link>
+                                <guid isPermaLink="true">http://code-troopers.com/2016/01/20/JenkinsWorkflow.html</guid>
+                        </item>
+                
+                        <item>
                                 <title>Startup Weekend : côté perdant</title>
                                 <description>&lt;h2 id=&quot;ou--yo--angularjs-le-meilleur-ami-des-mvp&quot;&gt;Ou : Yo ! AngularJS, le meilleur ami des MVP&lt;/h2&gt;
-&lt;p&gt;Le week-end du 5 décembre a eu lieu un Startup Weekend édition tourisme à Tours où 6 troopers étaient présents. 3 d’entres nous ont choisi l’équipe &lt;code class=&quot;highlighter-rouge&quot;&gt;We Guide&lt;/code&gt; composée de 3 développeurs, 3 designers et 3 profils business (les 3 autres ont choisi &lt;a href=&quot;https://twitter.com/shakemytours&quot;&gt;@shakemytours&lt;/a&gt; et ont gagné le Startup Weekend).
+&lt;p&gt;Le week-end du 5 décembre a eu lieu un Startup Weekend édition tourisme à Tours où 6 troopers étaient présents. 3 d’entres nous ont choisi l’équipe &lt;code&gt;We Guide&lt;/code&gt; composée de 3 développeurs, 3 designers et 3 profils business (les 3 autres ont choisi &lt;a href=&quot;https://twitter.com/shakemytours&quot;&gt;@shakemytours&lt;/a&gt; et ont gagné le Startup Weekend).
 L’idée de base est de découvrir une région à l’aide d’un guide local, officiel ou non. Quelqu’un qui emmène les touristes aussi bien dans les bars, restaurants, parcs que dans les monuments plus habituels de touraine comme les châteaux, la &lt;a href=&quot;http://basiliquesaintmartin.fr/&quot;&gt;basilique Saint-Martin&lt;/a&gt; ou le &lt;a href=&quot;http://www.decouvrez-levaldeloire.com/#grand-aquarium-actualites&quot;&gt;Grand Aquarium de Touraine&lt;/a&gt;. Un peu à l’image des &lt;a href=&quot;http://www.tours-greeters.fr/&quot;&gt;greeters&lt;/a&gt; mais rémunérés pour motiver plus de guides et permettre de promouvoir cette pratique.&lt;/p&gt;
 
 &lt;div class=&quot;text-center&quot;&gt;
@@ -27,7 +393,7 @@ Faire un site complet en 54h, qui soit à peu près beau, c’est un peu mission
 
 &lt;p&gt;Nous avons donc choisi de nous concentrer uniquement sur un front AngularJS en mockant les appels du back. Bon, dans la liste des choses préparées à l’avance on n’avait pas pensé à faire un “yo angular”.
 &lt;a href=&quot;http://yeoman.io/&quot;&gt;Yeoman&lt;/a&gt; est un générateur de projet, ça permet d’initialiser un nouveau projet avec un certains nombre de bibliothèques, les connexions aux bases de données nécéssaires, la gestion des utilisateurs etc. Dans notre cas nous avions surtout besoin de npm/bower/gulp. 
-Le téléchargement est un peu long, le répertoire &lt;code class=&quot;highlighter-rouge&quot;&gt;node_modules&lt;/code&gt; fait 380Mo, alors oui en fibre chez soit c’est rapide, mais quand on est des dizaines à tirer sur un réseau pas forcément dessiné pour, c’est un peu lent. En plus on a eu un bug dans gulp que l’on a remplacé par grunt faute de temps pour débugger, donc re-téléchargement.
+Le téléchargement est un peu long, le répertoire &lt;code&gt;node_modules&lt;/code&gt; fait 380Mo, alors oui en fibre chez soit c’est rapide, mais quand on est des dizaines à tirer sur un réseau pas forcément dessiné pour, c’est un peu lent. En plus on a eu un bug dans gulp que l’on a remplacé par grunt faute de temps pour débugger, donc re-téléchargement.
 Au final, on a pu commencer à tous faire nos git clone vers 10h le samedi matin.&lt;/p&gt;
 
 &lt;p&gt;Ensuite nous commençons à intégrer ce que l’on aura besoin. Du beau et des petits effets, donc &lt;a href=&quot;https://material.angularjs.org/latest/&quot;&gt;Angular Material&lt;/a&gt;. On prépare nos composants, autocomplete, sliders, buttons… et les routes, page principale, page de création/édition de compte, recherche de guides. Les informations sur les couleurs, les pictos, logo et maquettes arrivent au fil de l’eau. C’est toujours un peu spécial de commencer à travailler et d’avoir toutes les informations &lt;em&gt;après&lt;/em&gt; mais on commence à être des habitués des Startup Weekend (et de certains clients ;) )&lt;/p&gt;
@@ -126,7 +492,7 @@ C’est également le projet que nous utilisons pour tester certaines technologi
 
 &lt;h2 id=&quot;du-dev&quot;&gt;Du dev…&lt;/h2&gt;
 &lt;p&gt;Côté dev, nous utilisons notre petit wrapper (&lt;a href=&quot;http://code-troopers.com/2014/12/15/CT_Project_Alias.html&quot;&gt;ct&lt;/a&gt;) pour les tâches classiques qui se charge d’effectuer le build ainsi que le run de l’application avec ses dépendances.
-Le lancement de l’application se limite à mettre à disposition un serveur MongoDB ainsi qu’à effectuer un &lt;code class=&quot;highlighter-rouge&quot;&gt;java -jar&lt;/code&gt;.&lt;/p&gt;
+Le lancement de l’application se limite à mettre à disposition un serveur MongoDB ainsi qu’à effectuer un &lt;code&gt;java -jar&lt;/code&gt;.&lt;/p&gt;
 
 &lt;h2 id=&quot;la-prod-&quot;&gt;À la prod !&lt;/h2&gt;
 &lt;p&gt;Historiquement, l’application a été déployée sur Heroku dans son plan gratuit en utilisant plusieurs services cibles (pour répartir la charge via l’utilisation de plusieurs entrées DNS).&lt;/p&gt;
@@ -136,12 +502,12 @@ Le lancement de l’application se limite à mettre à disposition un serveur Mo
 &lt;p&gt;Un des intérêts de la transformation que nous avons opéré est que nous sommes également capable de lancer l’application très simplement à l’aide de descripteurs Docker ainsi que du docker-compose qui décrit les interactions entre nos services.&lt;/p&gt;
 
 &lt;h2 id=&quot;process-de-livraison&quot;&gt;Process de livraison&lt;/h2&gt;
-&lt;p&gt;Pour effectuer la livraison de l’application, nous sommes passés d’un &lt;code class=&quot;highlighter-rouge&quot;&gt;git push&lt;/code&gt; vers heroku à un process impliquant Jenkins dans 3 étapes successives (mais qui s’enchaînent automatiquement) :&lt;/p&gt;
+&lt;p&gt;Pour effectuer la livraison de l’application, nous sommes passés d’un &lt;code&gt;git push&lt;/code&gt; vers heroku à un process impliquant Jenkins dans 3 étapes successives (mais qui s’enchaînent automatiquement) :&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;construction de l’application et archivage dans un &lt;code class=&quot;highlighter-rouge&quot;&gt;tgz&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;construction de l’application et archivage dans un &lt;code&gt;tgz&lt;/code&gt;&lt;/li&gt;
   &lt;li&gt;copie du tgz produit pour la construction d’une image Docker poussée vers notre dépôt interne&lt;/li&gt;
-  &lt;li&gt;lancement de l’application via un &lt;code class=&quot;highlighter-rouge&quot;&gt;docker-compose run -d&lt;/code&gt; sur les machines cibles&lt;/li&gt;
+  &lt;li&gt;lancement de l’application via un &lt;code&gt;docker-compose run -d&lt;/code&gt; sur les machines cibles&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;gestion-du-multi-environnement&quot;&gt;Gestion du multi-environnement&lt;/h2&gt;
@@ -185,7 +551,7 @@ Si ce n’est pas le cas, vous pouvez vous reposer sur la &lt;a href=&quot;http:
 
 &lt;p&gt;La première étape consiste à créer un compte qui peut utilser l’API de Google : contrairement à un compte utilisateur classique, celui-ci utilisera un ficher de clé pour s’identifier plutôt qu’un mot de passe.&lt;/p&gt;
 
-&lt;p&gt;Pour cela, rendez-vous dans un premier temps dans l’interface développeur du Play Store, dans la section &lt;code class=&quot;highlighter-rouge&quot;&gt;Settings &amp;gt; API acces&lt;/code&gt; et cliquez sur &lt;code class=&quot;highlighter-rouge&quot;&gt;Create Service Account&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Pour cela, rendez-vous dans un premier temps dans l’interface développeur du Play Store, dans la section &lt;code&gt;Settings &amp;gt; API acces&lt;/code&gt; et cliquez sur &lt;code&gt;Create Service Account&lt;/code&gt;.&lt;/p&gt;
 
 &lt;div style=&quot;text-align:center;margin:50px&quot;&gt;
   &lt;a href=&quot;/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_ConfigureAccount_Screen1.png&quot; data-lightbox=&quot;group-1&quot; title=&quot;Configuration de l&#39;Accout service - 1&quot; class=&quot;inlineBoxes&quot;&gt;
@@ -196,11 +562,11 @@ Si ce n’est pas le cas, vous pouvez vous reposer sur la &lt;a href=&quot;http:
   &lt;/a&gt;
 &lt;/div&gt;
 
-&lt;p&gt;En suivant le lien du petit &lt;code class=&quot;highlighter-rouge&quot;&gt;1&lt;/code&gt; vous allez être redirigé vers la console Google développeur d’où vous pourrez créer un nouveau &lt;code class=&quot;highlighter-rouge&quot;&gt;Credential&lt;/code&gt;  de type &lt;code class=&quot;highlighter-rouge&quot;&gt;Service account&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;En suivant le lien du petit &lt;code&gt;1&lt;/code&gt; vous allez être redirigé vers la console Google développeur d’où vous pourrez créer un nouveau &lt;code&gt;Credential&lt;/code&gt;  de type &lt;code&gt;Service account&lt;/code&gt;.&lt;/p&gt;
 
-&lt;p&gt;Sélectionnez le format de clé &lt;code class=&quot;highlighter-rouge&quot;&gt;JSON&lt;/code&gt; qui est recommandé, le téléchargement de celle-ci devrait alors se faire automatiquement.&lt;/p&gt;
+&lt;p&gt;Sélectionnez le format de clé &lt;code&gt;JSON&lt;/code&gt; qui est recommandé, le téléchargement de celle-ci devrait alors se faire automatiquement.&lt;/p&gt;
 
-&lt;p&gt;On peut ensuite voir qu’un nouveau &lt;code class=&quot;highlighter-rouge&quot;&gt;Service account&lt;/code&gt; est apparu dans la liste des Credentials.&lt;/p&gt;
+&lt;p&gt;On peut ensuite voir qu’un nouveau &lt;code&gt;Service account&lt;/code&gt; est apparu dans la liste des Credentials.&lt;/p&gt;
 
 &lt;div style=&quot;text-align:center;margin:50px&quot;&gt;
   &lt;a href=&quot;/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_ConfigureAccount_Screen3.png&quot; data-lightbox=&quot;group-1&quot; title=&quot;Configuration de l&#39;Accout service - 3&quot; class=&quot;inlineBoxes&quot;&gt;
@@ -214,7 +580,7 @@ Si ce n’est pas le cas, vous pouvez vous reposer sur la &lt;a href=&quot;http:
   &lt;/a&gt;
 &lt;/div&gt;
 
-&lt;p&gt;De retour sur l’interface d’admin du Play Store, on constate que le &lt;code class=&quot;highlighter-rouge&quot;&gt;Service Account&lt;/code&gt; est bien créé et disponible ici.&lt;/p&gt;
+&lt;p&gt;De retour sur l’interface d’admin du Play Store, on constate que le &lt;code&gt;Service Account&lt;/code&gt; est bien créé et disponible ici.&lt;/p&gt;
 
 &lt;div style=&quot;text-align:center;margin:50px&quot;&gt;
   &lt;a href=&quot;/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_ConfigureAccount_Screen6.png&quot; data-lightbox=&quot;group-1&quot; title=&quot;Configuration de l&#39;Accout service - 6&quot; class=&quot;inlineBoxes&quot;&gt;
@@ -225,7 +591,7 @@ Si ce n’est pas le cas, vous pouvez vous reposer sur la &lt;a href=&quot;http:
 &lt;h2 id=&quot;tape-2--attribution-des-droits&quot;&gt;Étape 2 : Attribution des droits&lt;/h2&gt;
 &lt;p&gt;Il faut maintenant donner les droits au compte que l’on vient de créer afin qu’il puisse au moins livrer les apk en alpha.&lt;/p&gt;
 
-&lt;p&gt;Pour cela cliquez sur le bouton &lt;code class=&quot;highlighter-rouge&quot;&gt;Grant access&lt;/code&gt;. Dans la popup qui s’ouvre, les droits minimums à accorder pour que le plugin puisse fonctionnner sont :&lt;/p&gt;
+&lt;p&gt;Pour cela cliquez sur le bouton &lt;code&gt;Grant access&lt;/code&gt;. Dans la popup qui s’ouvre, les droits minimums à accorder pour que le plugin puisse fonctionnner sont :&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Edit store listing, pricing &amp;amp; distribution&lt;/li&gt;
@@ -248,9 +614,9 @@ Si ce n’est pas le cas, vous pouvez vous reposer sur la &lt;a href=&quot;http:
 &lt;h2 id=&quot;tape-3--le-plugin-gradle&quot;&gt;Étape 3 : le plugin gradle&lt;/h2&gt;
 &lt;p&gt;Il faut maintenant configurer son build pour ajouter les informations relatives au plugin qui effectuera la livraison vers le Play Store.&lt;/p&gt;
 
-&lt;p&gt;Dans le fichier &lt;code class=&quot;highlighter-rouge&quot;&gt;build.gradle&lt;/code&gt; du projet il faut donc rajouter la dépendance au plugin :&lt;/p&gt;
+&lt;p&gt;Dans le fichier &lt;code&gt;build.gradle&lt;/code&gt; du projet il faut donc rajouter la dépendance au plugin :&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;buildscript {
+&lt;pre&gt;&lt;code&gt;buildscript {
 
     repositories {
         mavenCentral()
@@ -262,27 +628,24 @@ Si ce n’est pas le cas, vous pouvez vous reposer sur la &lt;a href=&quot;http:
     }
 }
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
-&lt;p&gt;Et dans le &lt;code class=&quot;highlighter-rouge&quot;&gt;build.gradle&lt;/code&gt; de l’application (du Module), il faut appliquer le plugin au même niveau que le plugin Android :&lt;/p&gt;
+&lt;p&gt;Et dans le &lt;code&gt;build.gradle&lt;/code&gt; de l’application (du Module), il faut appliquer le plugin au même niveau que le plugin Android :&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;apply plugin: &#39;com.android.application&#39;
+&lt;pre&gt;&lt;code&gt;apply plugin: &#39;com.android.application&#39;
 apply plugin: &#39;com.github.triplet.play&#39;
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
-&lt;p&gt;Ensuite, toujours dans le &lt;code class=&quot;highlighter-rouge&quot;&gt;build.gradle&lt;/code&gt;, il est nécessaire d’ajouter les informations de l’&lt;code class=&quot;highlighter-rouge&quot;&gt;Account service&lt;/code&gt; précédemment créé pour qu’il puisse se connecter et faire la livraison 
-(c’est là que l’on va utiliser la clé &lt;code class=&quot;highlighter-rouge&quot;&gt;JSON&lt;/code&gt; générée).&lt;/p&gt;
+&lt;p&gt;Ensuite, toujours dans le &lt;code&gt;build.gradle&lt;/code&gt;, il est nécessaire d’ajouter les informations de l’&lt;code&gt;Account service&lt;/code&gt; précédemment créé pour qu’il puisse se connecter et faire la livraison 
+(c’est là que l’on va utiliser la clé &lt;code&gt;JSON&lt;/code&gt; générée).&lt;/p&gt;
 
 &lt;p&gt;Placez donc la clé dans votre projet et faites-y référence dans la configuration du plugin :&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;play {
+&lt;pre&gt;&lt;code&gt;play {
     jsonFile = file(&#39;../publishKey/serviceAccountKeys.json&#39;)
 }
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
-&lt;p&gt;À partir de là, notre build est configuré. On peut notamment s’en rendre compte en faisant un &lt;code class=&quot;highlighter-rouge&quot;&gt;./gradlew tasks&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;À partir de là, notre build est configuré. On peut notamment s’en rendre compte en faisant un &lt;code&gt;./gradlew tasks&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;On y voit toutes les tâches gradle qu’on peut appeler :&lt;/p&gt;
 
@@ -295,10 +658,10 @@ apply plugin: &#39;com.github.triplet.play&#39;
   &lt;/a&gt;
 &lt;/div&gt;
 
-&lt;p&gt;Mais ce n’est pas suffisant car il manque notamment les tâches permettant l’upload de l’apk. Pour cela il faut rajouter la &lt;code class=&quot;highlighter-rouge&quot;&gt;signingConfigs&lt;/code&gt; dans le &lt;code class=&quot;highlighter-rouge&quot;&gt;build.gradle&lt;/code&gt;.
+&lt;p&gt;Mais ce n’est pas suffisant car il manque notamment les tâches permettant l’upload de l’apk. Pour cela il faut rajouter la &lt;code&gt;signingConfigs&lt;/code&gt; dans le &lt;code&gt;build.gradle&lt;/code&gt;.
 Ce qui peut notamment se faire comme ça :&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    signingConfigs {
+&lt;pre&gt;&lt;code&gt;    signingConfigs {
         release {
             storeFile file(&quot;../keystore.jks&quot;)
             storePassword &quot;7r00p3r5&quot;
@@ -313,9 +676,8 @@ Ce qui peut notamment se faire comme ça :&lt;/p&gt;
         }
     }
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
-&lt;p&gt;Maintenant, on peut voir la présence de la tâche qui nous intéresse : &lt;code class=&quot;highlighter-rouge&quot;&gt;publishApkRelease&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Maintenant, on peut voir la présence de la tâche qui nous intéresse : &lt;code&gt;publishApkRelease&lt;/code&gt;&lt;/p&gt;
 
 &lt;div style=&quot;text-align:center;margin:50px&quot;&gt;
   &lt;a href=&quot;/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_Gradlew_tasks_config_complete.png&quot; data-lightbox=&quot;group-1&quot; title=&quot;Liste des tasks gradle disponibles avec upload apk&quot; class=&quot;inlineBoxes&quot;&gt;
@@ -325,13 +687,12 @@ Ce qui peut notamment se faire comme ça :&lt;/p&gt;
 
 &lt;h2 id=&quot;tape-4--gnration-et-upload&quot;&gt;Étape 4 : génération et upload&lt;/h2&gt;
 
-&lt;p&gt;Pour effectuer un upload de l’apk il suffit maintenant d’appeler la tâche &lt;code class=&quot;highlighter-rouge&quot;&gt;publishApkRelease&lt;/code&gt;. Et pas besoin de générer l’apk signé via Android Studio puisque comme tout est configuré, il sera généré dans les tâches précédent l’uploadApk.&lt;/p&gt;
+&lt;p&gt;Pour effectuer un upload de l’apk il suffit maintenant d’appeler la tâche &lt;code&gt;publishApkRelease&lt;/code&gt;. Et pas besoin de générer l’apk signé via Android Studio puisque comme tout est configuré, il sera généré dans les tâches précédent l’uploadApk.&lt;/p&gt;
 
 &lt;p&gt;Si tout se passe bien le build se termine avec un :&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;BUILD SUCCESSFUL
+&lt;pre&gt;&lt;code&gt;BUILD SUCCESSFUL
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
 &lt;p&gt;Si il y a un problème lors de l’updload, il est affiché dans la console, par exemple si le &lt;strong&gt;version code&lt;/strong&gt; est déjà utilisé&lt;/p&gt;
 
@@ -343,7 +704,7 @@ Ce qui peut notamment se faire comme ça :&lt;/p&gt;
 
 &lt;p&gt;Ensuite vous pouvez vous rendre sur l’interface d’admin du Play Store et constater que l’upload d’un nouvel apk a bien eu lieu en alpha et le passer en bêta ou en production.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Attention&lt;/strong&gt; : ne pas commiter la clé &lt;code class=&quot;highlighter-rouge&quot;&gt;JSON&lt;/code&gt; sur github, au même titre que le mot de passe du &lt;code class=&quot;highlighter-rouge&quot;&gt;keystore&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Attention&lt;/strong&gt; : ne pas commiter la clé &lt;code&gt;JSON&lt;/code&gt; sur github, au même titre que le mot de passe du &lt;code&gt;keystore&lt;/code&gt;.&lt;/p&gt;
 
 &lt;h2 id=&quot;pour-aller-plus-loin&quot;&gt;Pour aller plus loin&lt;/h2&gt;
 
@@ -393,7 +754,7 @@ Pour savoir comment configurer tout cela, je vous invite à consulter la page gi
 
 &lt;p&gt;Avec Docker bien sûr, il faut au préalable s’être créé un compte sur le site New Relic pour obtenir l’accès à l’interface et pouvoir se créer une clé (à remplacer dans la ligne de commande suivante).&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker run -d \
+&lt;pre&gt;&lt;code&gt;docker run -d \
 	--privileged=true --name newrelic
 	--pid=host \
 	--net=host \
@@ -406,7 +767,6 @@ Pour savoir comment configurer tout cela, je vous invite à consulter la page gi
 	-e NRSYSMOND_logfile=/var/log/nrsysmond.log \
 	newrelic/nrsysmond:latest
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
 &lt;p&gt;Vous trouverez toutes les informations &lt;a href=&quot;https://hub.docker.com/r/newrelic/nrsysmond/&quot;&gt;ici&lt;/a&gt;.&lt;/p&gt;
 </description>
@@ -419,12 +779,12 @@ Pour savoir comment configurer tout cela, je vous invite à consulter la page gi
                                 <title>Android M - Nouvelle gestion de permission</title>
                                 <description>&lt;h1 id=&quot;nouvelle-approche&quot;&gt;Nouvelle approche&lt;/h1&gt;
 
-&lt;p&gt;Avec la prochaine release d’&lt;code class=&quot;highlighter-rouge&quot;&gt;Android 6.0 Marshmallow&lt;/code&gt;, il va y avoir du changement au niveau de la gestion des permissions.
+&lt;p&gt;Avec la prochaine release d’&lt;code&gt;Android 6.0 Marshmallow&lt;/code&gt;, il va y avoir du changement au niveau de la gestion des permissions.
 Terminé la popup qui demande les 10 autorisations au moment du téléchargement de l’appli, maintenant les développeurs vont pouvoir demander les permissions au moment où elles seront nécessaires.&lt;/p&gt;
 
 &lt;h3 id=&quot;permissions-irrvocables&quot;&gt;Permissions irrévocables&lt;/h3&gt;
 &lt;p&gt;Puisqu’il va falloir demander à l’utilisateur pour chaque permission, Google a décidé que certaines anciennes permissions n’auront plus besoin d’être demandées,
- ce sont les &lt;code class=&quot;highlighter-rouge&quot;&gt;Normal Permissions&lt;/code&gt;. Il s’agit des permissions qui n’engendrent pas de risque sur la vie privée ou sur la sécurité de l’utilisateur comme c’est par exemple le cas pour l’accès à internet ou l’accès au vibreur :
+ ce sont les &lt;code&gt;Normal Permissions&lt;/code&gt;. Il s’agit des permissions qui n’engendrent pas de risque sur la vie privée ou sur la sécurité de l’utilisateur comme c’est par exemple le cas pour l’accès à internet ou l’accès au vibreur :
  la liste complète est disponible &lt;a href=&quot;https://developer.android.com/preview/features/runtime-permissions.html#normal&quot;&gt;ici&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h3 id=&quot;guidelines&quot;&gt;Guidelines&lt;/h3&gt;
@@ -452,22 +812,22 @@ Terminé la popup qui demande les 10 autorisations au moment du téléchargement
 &lt;h2 id=&quot;ne-pas-implmenter-les-nouvelles-permissions&quot;&gt;Ne pas implémenter les nouvelles permissions&lt;/h2&gt;
 &lt;p&gt;Chose importante à savoir, vous n’êtes pas obligés d’implémenter cette nouvelle gestion de permission.
 En effet, puisqu’elle demande du développoment supplémentaire, de nombreuses applis ne seront pas mises à jour et garderont donc l’ancien fonctionnement. 
-Si c’est ce que vous souhaitez, et pour ne pas nuire au bon fonctionnement de votre appli, il vous suffit de ne pas cibler le dernier &lt;code class=&quot;highlighter-rouge&quot;&gt;sdk&lt;/code&gt; dans votre build.gradle et de rester sur le &lt;code class=&quot;highlighter-rouge&quot;&gt;22&lt;/code&gt;.&lt;/p&gt;
+Si c’est ce que vous souhaitez, et pour ne pas nuire au bon fonctionnement de votre appli, il vous suffit de ne pas cibler le dernier &lt;code&gt;sdk&lt;/code&gt; dans votre build.gradle et de rester sur le &lt;code&gt;22&lt;/code&gt;.&lt;/p&gt;
 
 &lt;h2 id=&quot;implmenter-les-nouvelles-permissions&quot;&gt;Implémenter les nouvelles permissions&lt;/h2&gt;
 &lt;p&gt;Pour cela, 3 étapes sont nécessaires, principalement disponibles dans le sdk 23 ainsi que dans la lib appcompat :&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;requestPermissions()&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;onRequestPermissionsResult()&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;shouldShowRequestPermissionRationale()&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;requestPermissions()&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;onRequestPermissionsResult()&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;shouldShowRequestPermissionRationale()&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&quot;buildgradle&quot;&gt;Build.gradle&lt;/h3&gt;
-&lt;p&gt;Permière étape, cibler la dernier version du &lt;code class=&quot;highlighter-rouge&quot;&gt;sdk&lt;/code&gt; : &lt;code class=&quot;highlighter-rouge&quot;&gt;23&lt;/code&gt;.
+&lt;p&gt;Permière étape, cibler la dernier version du &lt;code&gt;sdk&lt;/code&gt; : &lt;code&gt;23&lt;/code&gt;.
 Et en bonus, importer appcompat pour bénéficier des méthodes helpers de Google.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;compileSdkVersion 23
+&lt;pre&gt;&lt;code&gt;compileSdkVersion 23
 defaultConfig {
     targetSdkVersion 23
 }
@@ -475,36 +835,32 @@ dependencies {
     compile &#39;com.android.support:appcompat-v7:23.0.1&#39;
 }
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
 &lt;h3 id=&quot;androidmanifestxml&quot;&gt;AndroidManifest.xml&lt;/h3&gt;
 &lt;p&gt;Ensuite, déclarer les permissions désirées dans l’application, normalement il n’y a pas de changements par rapport à votre configuration actuelle&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;uses-permission android:name=&quot;android.permission.CAMERA&quot; /&amp;gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;uses-permission android:name=&quot;android.permission.CAMERA&quot; /&amp;gt;
 &amp;lt;uses-permission android:name=&quot;android.permission.READ_CONTACTS&quot; /&amp;gt;
 &amp;lt;uses-permission android:name=&quot;android.permission.ACCESS_FINE_LOCATION&quot; /&amp;gt;
 &amp;lt;uses-permission android:name=&quot;android.permission.SEND_SMS&quot; /&amp;gt;
 &amp;lt;uses-permission android:name=&quot;android.permission.READ_EXTERNAL_STORAGE&quot; /&amp;gt;
 &amp;lt;uses-permission android:name=&quot;android.permission.CALL_PHONE&quot; /&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
-&lt;p&gt;N’oubliez pas d’y déclarer aussi les &lt;code class=&quot;highlighter-rouge&quot;&gt;Normal Permissions&lt;/code&gt; qui, bien qu’elles soient automatiquement accordées, ont toujours besoin d’être déclarées.&lt;/p&gt;
+&lt;p&gt;N’oubliez pas d’y déclarer aussi les &lt;code&gt;Normal Permissions&lt;/code&gt; qui, bien qu’elles soient automatiquement accordées, ont toujours besoin d’être déclarées.&lt;/p&gt;
 
 &lt;h3 id=&quot;dans-une-activit&quot;&gt;Dans une activité&lt;/h3&gt;
 &lt;p&gt;Dans un premier temps il faut vérifier si une permission est déjà accordée ou non&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ContextCompat.checkSelfPermission(context, Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED;
+&lt;pre&gt;&lt;code&gt;ContextCompat.checkSelfPermission(context, Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED;
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
 &lt;p&gt;Si la permission n’est pas accordée, il va falloir la demander, de préférence lors d’une action utilisateur, par exemple au click sur un bouton&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ActivityCompat.requestPermissions(MainActivity.this,
+&lt;pre&gt;&lt;code&gt;ActivityCompat.requestPermissions(MainActivity.this,
                                   new String[]{Manifest.permission.CAMERA},
                                   REQUEST_CODE_ONE);
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
 &lt;div style=&quot;text-align:center;margin-bottom:50px&quot;&gt;
     &lt;a href=&quot;/images/2015-09-AndroidMPermissions/p1.png&quot; data-lightbox=&quot;group-1&quot; title=&quot;Dialog de demande d&#39;une permission&quot; class=&quot;inlineBoxes&quot;&gt;
@@ -513,7 +869,7 @@ dependencies {
 &lt;/div&gt;
 &lt;p&gt;Puis écouter le choix de l’utilisateur, dans l’activité ou le fragment correspondant&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;@Override
+&lt;pre&gt;&lt;code&gt;@Override
 public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
     switch (requestCode) {
         case REQUEST_CODE_ONE: {
@@ -527,17 +883,15 @@ public void onRequestPermissionsResult(int requestCode, String permissions[], in
     }
 }
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
 &lt;h3 id=&quot;demander-plusieurs-permissions-en-mme-temps&quot;&gt;Demander plusieurs permissions en même temps&lt;/h3&gt;
 &lt;p&gt;Même si cela est déconseillé, il peut arriver d’avoir besoin de plusieurs permissions lors de la même action utilisateur.
 Pour cela il suffit de passer plusieurs permissions dans le tableau passé en paramètre du requestPermission&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ActivityCompat.requestPermissions(MainActivity.this,
+&lt;pre&gt;&lt;code&gt;ActivityCompat.requestPermissions(MainActivity.this,
                                   new String[]{Manifest.permission.READ_CONTACTS, Manifest.permission.ACCESS_FINE_LOCATION},
                                   REQUEST_CODE_TWO);
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
 &lt;div style=&quot;text-align:center;margin-bottom:50px&quot;&gt;
     &lt;a href=&quot;/images/2015-09-AndroidMPermissions/p2.png&quot; data-lightbox=&quot;group-1&quot; title=&quot;Dialog de demande de plusieurs permissions 1/2&quot; class=&quot;inlineBoxes&quot;&gt;
@@ -552,7 +906,7 @@ Pour cela il suffit de passer plusieurs permissions dans le tableau passé en pa
 &lt;p&gt;Il arrivera sûrement que certains utilsateurs refusent des permissions et que cela détériore l’expérience utilisateur sur l’application. Pour cela, Google fourni un helper pour savoir ou non s’il faut afficher un message d’information à l’utilisateur (graphique).
 Cela se fera avec la méthode shouldShowRequestPermissionRationale&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;if (shouldShowRequestPermissionRationale(Manifest.permission.CALL_PHONE)) {
+&lt;pre&gt;&lt;code&gt;if (shouldShowRequestPermissionRationale(Manifest.permission.CALL_PHONE)) {
      new AlertDialog.Builder(MainActivity.this)
                                .setMessage(&quot;Custom message to explain why you need a permission&quot;)
                                .setPositiveButton(&quot;OK&quot;, new DialogInterface.OnClickListener() {
@@ -572,7 +926,6 @@ ActivityCompat.requestPermissions(MainActivity.this,
                                   REQUEST_CODE_FIVE);
 }
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
 &lt;div style=&quot;text-align:center;margin-bottom:50px&quot;&gt;
     &lt;a href=&quot;/images/2015-09-AndroidMPermissions/p4.png&quot; data-lightbox=&quot;group-1&quot; title=&quot;Dialog d&#39;explication sur une demande de permissions&quot; class=&quot;inlineBoxes&quot;&gt;
@@ -608,19 +961,17 @@ ActivityCompat.requestPermissions(MainActivity.this,
 
 &lt;p&gt;Nous allons commencer par une petite digression. Avant quand on avait plusieurs “virtual host” qui pointaient sur une machine, on mettait un front-end apache et c’était plus ou moins la galère. Maintenant, il suffit de lancer cette commande une fois :&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker run --restart=always --name nginx -d -p 80:80 -p 443:443 -v /docker/vhost.d:/etc/nginx/vhost.d:ro -v /var/run/docker.sock:/tmp/docker.sock:ro jwilder/nginx-proxy
+&lt;pre&gt;&lt;code&gt;docker run --restart=always --name nginx -d -p 80:80 -p 443:443 -v /docker/vhost.d:/etc/nginx/vhost.d:ro -v /var/run/docker.sock:/tmp/docker.sock:ro jwilder/nginx-proxy
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
 &lt;!--break--&gt;
-&lt;p&gt;On pourra alors rajouter la variable d’environnement &lt;code class=&quot;highlighter-rouge&quot;&gt;VIRTUAL_HOST&lt;/code&gt; à chaque nouvelle image Docker pour qu’elle soit directement accessible. Ce qui est magique aussi c’est que si on expose un seul port de l’image Docker alors il est directement mappé sur le port 80, même si le port n’était pas forwardé sur le host. Dernier avantage, si on met deux machines avec le même nom il va s’occuper de faire du load balancing tout seul !&lt;/p&gt;
+&lt;p&gt;On pourra alors rajouter la variable d’environnement &lt;code&gt;VIRTUAL_HOST&lt;/code&gt; à chaque nouvelle image Docker pour qu’elle soit directement accessible. Ce qui est magique aussi c’est que si on expose un seul port de l’image Docker alors il est directement mappé sur le port 80, même si le port n’était pas forwardé sur le host. Dernier avantage, si on met deux machines avec le même nom il va s’occuper de faire du load balancing tout seul !&lt;/p&gt;
 
-&lt;p&gt;Si jamais la configuration par défaut ne convient pas, il faut rajouter un fichier de configuration dans &lt;code class=&quot;highlighter-rouge&quot;&gt;/docker/vhost.d/&lt;/code&gt;. Dans notre cas nous en avons eu besoin pour permettre d’uploader des fichiers plus gros (c’est 2 Mo par défaut).&lt;/p&gt;
+&lt;p&gt;Si jamais la configuration par défaut ne convient pas, il faut rajouter un fichier de configuration dans &lt;code&gt;/docker/vhost.d/&lt;/code&gt;. Dans notre cas nous en avons eu besoin pour permettre d’uploader des fichiers plus gros (c’est 2 Mo par défaut).&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ cat /docker/vhost.d/owncloud.hostname.com
+&lt;pre&gt;&lt;code&gt;$ cat /docker/vhost.d/owncloud.hostname.com
 client_max_body_size 100m;
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
 &lt;h2 id=&quot;docker-compose&quot;&gt;Docker-compose&lt;/h2&gt;
 
@@ -628,7 +979,7 @@ client_max_body_size 100m;
 
 &lt;p&gt;Rentrons dans le vif du sujet :&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;mariaOC:
+&lt;pre&gt;&lt;code&gt;mariaOC:
   image: mariadb
   volumes:
    - /home/owncloud/db:/var/lib/mysql
@@ -660,12 +1011,11 @@ owncloud:
   links:
     - mariaOC:db
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
 &lt;p&gt;Voici le fichier docker-compose.yml utilisé. On définit une image de &lt;a href=&quot;https://mariadb.org/&quot;&gt;MariaDB&lt;/a&gt; pour laquelle on spécifie un volume qui va recevoir les données et différentes variables d’environnements dont les noms sont assez explicite.
 Puis une image owncloud avec des volumes pour les fichiers que l’on va sauvegarder, les logs et la clé SSL. Un lien avec la base de donnée MariaDB et quelques variables d’environnements, là encore les noms sont suffisamment explicite.&lt;/p&gt;
 
-&lt;p&gt;Une fois les variables modifiées selon notre volonté, il faut lancer les commandes &lt;code class=&quot;highlighter-rouge&quot;&gt;docker-compose build&lt;/code&gt; suivi de &lt;code class=&quot;highlighter-rouge&quot;&gt;compose-docker up -d&lt;/code&gt; et aller sur owncloud.hostname.com pour finir l’installation.&lt;/p&gt;
+&lt;p&gt;Une fois les variables modifiées selon notre volonté, il faut lancer les commandes &lt;code&gt;docker-compose build&lt;/code&gt; suivi de &lt;code&gt;compose-docker up -d&lt;/code&gt; et aller sur owncloud.hostname.com pour finir l’installation.&lt;/p&gt;
 
 &lt;p&gt;L’article est déjà fini, comme je le disais, ça se fait en un rien de temps. Mais si cela a été aussi rapide, c’est parce que Owncloud a une image très bien faîtes donc merci Josh de l’avoir mise à disposition &lt;a href=&quot;https://github.com/jchaney/owncloud&quot;&gt;https://github.com/jchaney/owncloud&lt;/a&gt;&lt;/p&gt;
 
@@ -686,7 +1036,7 @@ Puis une image owncloud avec des volumes pour les fichiers que l’on va sauvega
                                 <description>&lt;p&gt;Git c’est cool, Git c’est Hype, Git c’est tout récent (&lt;a href=&quot;http://git-scm.com/book/fr/v1/D%C3%A9marrage-rapide-Une-rapide-histoire-de-Git&quot;&gt;enfin presque&lt;/a&gt;) et c’est pour ça qu’on aime bien.
 Mais pour beaucoup Git c’est nouveau, donc c’est le changement, donc c’est compliqué, et c’est pour ça que plein de boîtes préfèrent garder leur serveur svn.&lt;/p&gt;
 
-&lt;p&gt;Je vais tenter ici, de vous donner les principales commandes de &lt;code class=&quot;highlighter-rouge&quot;&gt;Git-SVN&lt;/code&gt;. Ainsi si vous vous trouvez dans une boîte qui ne veut pas changer son scm mais que vous, vous avez envie de changement,
+&lt;p&gt;Je vais tenter ici, de vous donner les principales commandes de &lt;code&gt;Git-SVN&lt;/code&gt;. Ainsi si vous vous trouvez dans une boîte qui ne veut pas changer son scm mais que vous, vous avez envie de changement,
 vous pourrez donc utiliser la puissance de Git. 
 Et ce sans aucun impact sur le gestionnaire de sources de la société dans laquelle vous êtes. C’est génial non ?&lt;/p&gt;
 
@@ -707,85 +1057,75 @@ Si ce n’est pas le cas, il n’y a pas de gros changement, mais je vous invite
 
 &lt;p&gt;Donc si on se met dans la situation où tout le monde travaille sur le trunk, pour récupérer les sources du projet dans un nouveau répertoire vous devrez faire un :&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git svn clone http://maboite/svn/monBeauProjet/ -s
+&lt;pre&gt;&lt;code&gt;git svn clone http://maboite/svn/monBeauProjet/ -s
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
 &lt;p&gt;Par contre dès que le repo svn et un peu vieux (i.e. avec plein de commits) ça va mettre 3h ! En effet, Git va prendre les révisions une par une afin de créer son historique local.
 Si vous n’avez pas besoin de tout l’historique des révisions ce que vous pouvez faire c’est :&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git svn clone http://maboite/svn/monBeauProjet/ -s -r4000:HEAD
+&lt;pre&gt;&lt;code&gt;git svn clone http://maboite/svn/monBeauProjet/ -s -r4000:HEAD
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
 &lt;p&gt;ainsi il ne crééra l’histo qu’à partir de la révision 4000 du svn. Je vous conseille donc de prendre le 4000 le plus proche de la dernière révision.&lt;/p&gt;
 
 &lt;p&gt;À partir de là c’est bon, vous avez votre projet qui est géré par Git. La preuve vous pouvez tester via ces différentes commandes&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git status
+&lt;pre&gt;&lt;code&gt;git status
 git branch -a
 git log -n5
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
 &lt;h2 id=&quot;travailler-sur-le-projet-en-local&quot;&gt;Travailler sur le projet (en local)&lt;/h2&gt;
 &lt;p&gt;Vous pouvez donc dès à présent commencer à travailler offline ou bien sans vous soucier des commits de vos collègues.
 Et cela avec tous les avantages que Git apporte.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git commit -m&quot;Ajout de la modification du mot de passe par l&#39;admin&quot;
+&lt;pre&gt;&lt;code&gt;git commit -m&quot;Ajout de la modification du mot de passe par l&#39;admin&quot;
 git stash save “Début de ma tâche prioritaire”
 ... // un peu de travail urgent
 git stash pop
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
 &lt;p&gt;On peut même faire des branches Git (en local) sans que cela n’impacte le serveur.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git checkout -b myLocalBranch
+&lt;pre&gt;&lt;code&gt;git checkout -b myLocalBranch
 ... // du travail avec plein de petits commits
 git checkout master
 git merge myLocalBranch
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
 &lt;h2 id=&quot;commiter-sur-le-svn&quot;&gt;Commiter sur le svn&lt;/h2&gt;
 &lt;p&gt;Ensuite pour se synchroniser avec vos collègues (c’est mieux) les deux commandes indispensables sont&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git svn rebase
+&lt;pre&gt;&lt;code&gt;git svn rebase
 git svn dcommit
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
-&lt;p&gt;Le &lt;code class=&quot;highlighter-rouge&quot;&gt;git svn rebase&lt;/code&gt; va faire l’équivalent d’un svn update quant au &lt;code class=&quot;highlighter-rouge&quot;&gt;git svn dcommit&lt;/code&gt; ça sera un svn commit.&lt;/p&gt;
+&lt;p&gt;Le &lt;code&gt;git svn rebase&lt;/code&gt; va faire l’équivalent d’un svn update quant au &lt;code&gt;git svn dcommit&lt;/code&gt; ça sera un svn commit.&lt;/p&gt;
 
 &lt;h2 id=&quot;bonus--utiliser-des-branches&quot;&gt;Bonus : Utiliser des branches&lt;/h2&gt;
 &lt;p&gt;Bon soyons honnêtes si vous utilisez un svn il y a quand même peu de chances que les branches soient vraiment utilisées (ou alors peut-être que vous aimez la douleur). Mais si ça arrive, voilà comment les utiliser.&lt;/p&gt;
 
 &lt;p&gt;Mettre à jour toutes les branches du svn :&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git svn fetch
+&lt;pre&gt;&lt;code&gt;git svn fetch
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
 &lt;p&gt;Changer de branche :&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git checkout -b &amp;lt;brancheDistante&amp;gt; &amp;lt;nomDeBrancheLocale&amp;gt;
+&lt;pre&gt;&lt;code&gt;git checkout -b &amp;lt;brancheDistante&amp;gt; &amp;lt;nomDeBrancheLocale&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
 &lt;p&gt;Et maintenant vous pouvez naviguer entre vos branches normalement via Git  :&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git checkout master
+&lt;pre&gt;&lt;code&gt;git checkout master
 git checkout nomDeBrancheLocale
 git checkout -
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
 &lt;p&gt;et par exemple pour recopier un commit d’une branche à une autre sans copier manuellement le fichier.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git cherry-pick
+&lt;pre&gt;&lt;code&gt;git cherry-pick
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
 &lt;p&gt;Voilà vous avez maintenant les bases pour utiliser Git alors que de premier abord cela ne semblait pas possible.
 Il ne vous reste plus qu’à forcer un peu plus pour remplacer l’ancien serveur svn par un nouveau sous Git et comme ça toute votre boîte pourra en profiter.
@@ -815,41 +1155,38 @@ Nous nous sommes donc mis à déployer un dépôt privé, authentifié par utili
 &lt;p&gt;Puis nous allons utiliser l’image Docker avec nginx pour l’authentification &lt;a href=&quot;https://github.com/MarvAmBass/docker-nginx-registry-proxy&quot;&gt;docker-nginx-registry-proxy&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h2 id=&quot;informations-didentification&quot;&gt;Informations d’identification&lt;/h2&gt;
-&lt;p&gt;Pour les étapes suivantes, placez vous dans le répertoire de votre choix pour stocker les fichiers (dans ce cas nous sommes dans &lt;code class=&quot;highlighter-rouge&quot;&gt;/srv/registry-config&lt;/code&gt;)&lt;/p&gt;
+&lt;p&gt;Pour les étapes suivantes, placez vous dans le répertoire de votre choix pour stocker les fichiers (dans ce cas nous sommes dans &lt;code&gt;/srv/registry-config&lt;/code&gt;)&lt;/p&gt;
 
 &lt;h3 id=&quot;gnration-du-certificat&quot;&gt;Génération du certificat&lt;/h3&gt;
 &lt;p&gt;Pensez à bien renseigner le FQDN DNS lors de la demande de Common Name pour le certificat.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;openssl genrsa -out ca.key 4096
+&lt;pre&gt;&lt;code&gt;openssl genrsa -out ca.key 4096
 openssl req -new -x509 -days 1826 -key ca.key -out ca.crt
 openssl genrsa -out ia.key 4096
 openssl req -new -key key.pem -out ia.csr #this is where you need to fill your FQDN
 openssl x509 -req -days 730 -in ia.csr -CA ca.crt -CAkey ca.key -set_serial 01 -out cert.pem
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
 &lt;h3 id=&quot;gnration-des-mots-de-passes-basic-auth&quot;&gt;Génération des mots de passes basic auth&lt;/h3&gt;
 &lt;p&gt;En utilisant un container docker qui embarque htpasswd vous pourrez générer facilement le fichier nécessaire :&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker run --rm -ti -v $(pwd):/tmp dgageot/htpasswd -c /tmp/docker-registry.htpasswd $MONUSER
+&lt;pre&gt;&lt;code&gt;docker run --rm -ti -v $(pwd):/tmp dgageot/htpasswd -c /tmp/docker-registry.htpasswd $MONUSER
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
 &lt;h2 id=&quot;dmarrage-du-registry&quot;&gt;Démarrage du registry&lt;/h2&gt;
-&lt;p&gt;Les images seront stockées dans le répertoire &lt;code class=&quot;highlighter-rouge&quot;&gt;/srv/registry&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Les images seront stockées dans le répertoire &lt;code&gt;/srv/registry&lt;/code&gt;&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;mkdir /srv/registry
+&lt;pre&gt;&lt;code&gt;mkdir /srv/registry
 docker run -d --restart=always --name registry -v /srv/docker-registry:/registry -e &quot;SETTINGS_FLAVOR=local&quot; -e &quot;STORAGE_PATH=/registry&quot; registry
 docker run -d --restart=always -p 443:443 -v /srv/registry-config:/etc/nginx/external --link registry:registry --name nginx-registry-proxy marvambass/nginx-registry-proxy
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
 &lt;h2 id=&quot;configuration-dune-machine-cliente&quot;&gt;Configuration d’une machine cliente&lt;/h2&gt;
 
 &lt;h3 id=&quot;importer-le-certificat-racine&quot;&gt;Importer le certificat racine&lt;/h3&gt;
 &lt;p&gt;Il faut importer le certificat racine dans la liste des certificats reconnus&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo -s
+&lt;pre&gt;&lt;code&gt;sudo -s
 mkdir -p /etc/docker/certs.d/$FQDN
 cp ca.crt /etc/docker/certs.d/$FQDN/
 
@@ -857,49 +1194,44 @@ mkdir -p /usr/local/share/ca-certificates/docker-ct
 cp ca.crt /usr/local/share/ca-certificates/docker-ct/
 update-ca-certificates-
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
 &lt;p&gt;Pour vérifier que tout fonctionne comme attendu, vous pouvez voir si votre certificat ressort bien dans la commande suivante :&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;awk -v cmd=&#39;openssl x509 -noout -subject&#39; &#39; /BEGIN/{close(cmd)};{print | cmd}&#39; &amp;lt; /etc/ssl/certs/ca-certificates.crt | grep $(VOTRE IDENTIFIANT)
+&lt;pre&gt;&lt;code&gt;awk -v cmd=&#39;openssl x509 -noout -subject&#39; &#39; /BEGIN/{close(cmd)};{print | cmd}&#39; &amp;lt; /etc/ssl/certs/ca-certificates.crt | grep $(VOTRE IDENTIFIANT)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
 &lt;p&gt;Vous serez également certainement amené à redémarrer vos daemon docker (de chacune des machines)&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;systemctl stop docker
+&lt;pre&gt;&lt;code&gt;systemctl stop docker
 systemctl start docker
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
 &lt;h3 id=&quot;identification-sur-le-dpot&quot;&gt;Identification sur le dépot&lt;/h3&gt;
 &lt;p&gt;Une fois que toutes ces étapes sont effectuées, normalement votre dépot est prêt à être utilisé.&lt;/p&gt;
 
 &lt;p&gt;Il vous faut cependant en première étape vous identifier à l’aide du couple utilisateur / mot de passe créé lors de l’installation :&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker login https://mondepotdocker.tld
+&lt;pre&gt;&lt;code&gt;docker login https://mondepotdocker.tld
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
-&lt;p&gt;Ceci aura pour effet de créer un fichier &lt;code class=&quot;highlighter-rouge&quot;&gt;~/.dockercfg&lt;/code&gt; vous permettant d’accéder aux commandes suivantes sans avoir besoin de retaper vos identifiants.&lt;/p&gt;
+&lt;p&gt;Ceci aura pour effet de créer un fichier &lt;code&gt;~/.dockercfg&lt;/code&gt; vous permettant d’accéder aux commandes suivantes sans avoir besoin de retaper vos identifiants.&lt;/p&gt;
 
 &lt;h2 id=&quot;utilisation-du-dpt&quot;&gt;Utilisation du dépôt&lt;/h2&gt;
 
 &lt;p&gt;Une fois la machine cliente configurée, vous pouvez simplement utiliser le dépot en préfixant les noms de vos images par l’URL du dépôt.
 Par exemple, pour push/pull l’image de monapplication la commande suivante fera l’affaire :&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker push mondepotdocker.tld/monapplication:v1.0.0
+&lt;pre&gt;&lt;code&gt;docker push mondepotdocker.tld/monapplication:v1.0.0
 docker pull mondepotdocker.tld/monapplication:v1.0.0
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
 &lt;h3 id=&quot;utilisation-avec-docker-compose&quot;&gt;Utilisation avec docker-compose&lt;/h3&gt;
 
 &lt;p&gt;Si vous utilisez docker-compose, il se peut que vous ayiez des soucis avec le certificat autosigné et/ou avec l’authentification.&lt;/p&gt;
 
-&lt;p&gt;Pour contourner la vérification du certificat, vous pouvez simplement lancer &lt;code class=&quot;highlighter-rouge&quot;&gt;docker-compose&lt;/code&gt; avec le flag &lt;code class=&quot;highlighter-rouge&quot;&gt;--allow-insecure-ssl&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Pour contourner la vérification du certificat, vous pouvez simplement lancer &lt;code&gt;docker-compose&lt;/code&gt; avec le flag &lt;code&gt;--allow-insecure-ssl&lt;/code&gt;.&lt;/p&gt;
 
-&lt;p&gt;Pour ce qui est de l’authentification, une astuce simple pour contourner les problèmes de ce genre est de faire un &lt;code class=&quot;highlighter-rouge&quot;&gt;docker pull&lt;/code&gt; manuellement au préalable (le scripter depuis le fichier compose.yml n’est pas trop difficile).&lt;/p&gt;
+&lt;p&gt;Pour ce qui est de l’authentification, une astuce simple pour contourner les problèmes de ce genre est de faire un &lt;code&gt;docker pull&lt;/code&gt; manuellement au préalable (le scripter depuis le fichier compose.yml n’est pas trop difficile).&lt;/p&gt;
 </description>
                                 <pubDate>Thu, 25 Jun 2015 00:00:00 +0000</pubDate>
                                 <link>http://code-troopers.com/2015/06/25/InstallDockerRegistry.html</link>
@@ -971,50 +1303,6 @@ ainsi qu’une documentation précise (pour la plupart des librairies).&lt;/p&gt
                                 <pubDate>Wed, 10 Jun 2015 00:00:00 +0000</pubDate>
                                 <link>http://code-troopers.com/2015/06/10/CompletionJavascriptDansIntelliJ.html</link>
                                 <guid isPermaLink="true">http://code-troopers.com/2015/06/10/CompletionJavascriptDansIntelliJ.html</guid>
-                        </item>
-                
-                        <item>
-                                <title>Android Support Design Library</title>
-                                <description>&lt;p&gt;Avez-vous déjà essayé de transformer vos applications Android pour les rendre conformes aux &lt;a href=&quot;http://www.google.com/design/spec/material-design/introduction.html&quot;&gt;guidelines Material&lt;/a&gt;, si oui, vous avez dû comme nous, vous retrouver à importer plein de librairies tierces pour implémenter par exemple le &lt;code class=&quot;highlighter-rouge&quot;&gt;FAB button&lt;/code&gt;, ou même personnaliser le code pour rendre le &lt;code class=&quot;highlighter-rouge&quot;&gt;NavigationDrawer&lt;/code&gt; conforme (comme ce qui a pu être fait sur le squelette d’un &lt;a href=&quot;http://code-troopers.com/2014/11/26/SqueletteAndroid5.html&quot;&gt;précédent article&lt;/a&gt;. Et bien tout ceci est fini (enfin en partie), grâce à la nouvelle librairie Android de Google &lt;a href=&quot;http://developer.android.com/tools/support-library/features.html#design&quot;&gt;Design Support&lt;/a&gt;.&lt;/p&gt;
-
-&lt;!--break--&gt;
-
-&lt;div style=&quot;text-align:center&quot;&gt;
-&lt;video width=&quot;270&quot; height=&quot;444&quot; controls=&quot;&quot;&gt;
-  &lt;source src=&quot;/videos/designlibrary-cheesesquare.mp4&quot; type=&quot;video/mp4&quot; /&gt;
-Your browser does not support the video tag.
-&lt;/video&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Pour le moment elle permet d’implémenter les composants Material suivants :&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;TextInputLayout&lt;/li&gt;
-  &lt;li&gt;FloatingActionButton&lt;/li&gt;
-  &lt;li&gt;Snackbar&lt;/li&gt;
-  &lt;li&gt;TabLayout&lt;/li&gt;
-  &lt;li&gt;NavigationView&lt;/li&gt;
-  &lt;li&gt;CoordinatorLayout&lt;/li&gt;
-  &lt;li&gt;AppBarLayout&lt;/li&gt;
-  &lt;li&gt;CollapsingToolbarLayout&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Je vous laisse consulter les différents articles trouvés sur le sujet pour avoir plus de détails :&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://android-developers.blogspot.fr/2015/05/android-design-support-library.html&quot;&gt;L’article sur l’Android developers blog&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://medium.com/android-bites/first-steps-with-the-design-support-library-8dcf06230ddd&quot;&gt;L’article sur medium.com&lt;/a&gt; : qui montre les nouveautés grâce à des petites vidéos mais montre aussi les problèmes (sûrement corrigés au moment où vous lirez cet article)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://antonioleiva.com/navigation-view/&quot;&gt;Un bout d’exemple avec du code pour le NavigationView&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Enfin, voici le &lt;a href=&quot;https://github.com/chrisbanes/cheesesquare&quot;&gt;lien&lt;/a&gt; vers le code source de l’application exemple faite par &lt;a href=&quot;https://chris.banes.me/&quot;&gt;Chris Banes&lt;/a&gt;, montrant les principales nouveautés de cette librairie.&lt;/p&gt;
-
-&lt;p&gt;À vos applications !&lt;/p&gt;
-
-</description>
-                                <pubDate>Sat, 06 Jun 2015 00:00:00 +0000</pubDate>
-                                <link>http://code-troopers.com/2015/06/06/AndroidDesignLibrary.html</link>
-                                <guid isPermaLink="true">http://code-troopers.com/2015/06/06/AndroidDesignLibrary.html</guid>
                         </item>
                 
         </channel>

@@ -25,10 +25,10 @@
         
         <meta name="viewport" content="width=device-width">
 
-        <link rel="stylesheet" href="/styles/style-df692d982e.css">
-     
+        <link rel="stylesheet" href="/styles/style-9089a70539.css">
+
         <!--[if lt IE 9]>
-                <script src="/js/ie8-0a07727802.js"></script>           
+                <script src="/js/ie8-0a07727802.js"></script>
         <![endif]-->
         <meta itemprop="name" content="CT-CDGT"/>
         <meta itemprop="name" content="CT-RMLC"/>
@@ -113,12 +113,12 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 <p>Ainsi il va être nécessaire de signer tous les binaires que vous allez produire, ceci passe par l’utilisation de <a href="http://www.gnupg.org/">GnuPG</a> et de la mise à disposition de votre clef publique.</p>
 
 <h3 id="installation-de-gnupg">Installation de GnuPG</h3>
-<p>L’installation passe par votre gestionnaire de package classique (<code class="highlighter-rouge">apt-get install gpg</code>, <code class="highlighter-rouge">brew install gpg</code>, <code class="highlighter-rouge">install-gpg-on-my-os.exe</code>…). De là, vous pourrez vérifier dans un <em>shell</em> que vous avez une version d’accessible en tapant par exemple la commande suivante:</p>
+<p>L’installation passe par votre gestionnaire de package classique (<code>apt-get install gpg</code>, <code>brew install gpg</code>, <code>install-gpg-on-my-os.exe</code>…). De là, vous pourrez vérifier dans un <em>shell</em> que vous avez une version d’accessible en tapant par exemple la commande suivante:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>gpg --version
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>gpg --version
 gpg <span class="o">(</span>GnuPG<span class="o">)</span> 1.4.16
-Copyright <span class="o">(</span>C<span class="o">)</span> 2013 Free Software Foundation, Inc.
-License GPLv3+: GNU GPL version 3 or later &lt;http://gnu.org/licenses/gpl.html&gt;
+Copyright <span class="o">(</span>C<span class="o">)</span> <span class="m">2013</span> Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version <span class="m">3</span> or later &lt;http://gnu.org/licenses/gpl.html&gt;
 This is free software: you are free to change and redistribute it.
 There is NO WARRANTY, to the extent permitted by law.
 
@@ -128,46 +128,46 @@ Pubkey: RSA, RSA-E, RSA-S, ELG-E, DSA
 Cipher: IDEA, 3DES, CAST5, BLOWFISH, AES, AES192, AES256, TWOFISH,
         CAMELLIA128, CAMELLIA192, CAMELLIA256
 Hash: MD5, SHA1, RIPEMD160, SHA256, SHA384, SHA512, SHA224
-Compression: Uncompressed, ZIP, ZLIB, BZIP2</code></pre></figure>
+Compression: Uncompressed, ZIP, ZLIB, BZIP2</code></pre></div>
 
 <h3 id="gnration-de-la-clef">Génération de la clef</h3>
 <p>GnuPG est un mécanisme de chiffrement impliquant une clef publique (distribuée librement) associée à une clef privée (à garder précieusement). Avant de pouvoir prétendre distribuer des binaires chiffrés, il convient donc de générer le couple clef privée/publique et de distribuer la clef publique sur les serveurs appropriés.
 Ainsi, après avoir fourni nom, email et commentaire pour votre clef, vous serez prêt à la distribuer au plus grand nombre :</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>gpg --gen-key</code></pre></figure>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>gpg --gen-key</code></pre></div>
 
 <p>Dans les écrans qui apparaissent, vous pouvez conserver les valeurs par défaut pour la plupart des éléments (type, taille et durée de validité). Enfin, vous allez devoir spécifier la <em>passphrase</em> de votre clef. N’hésitez pas à utiliser une phrase : elle sera plus difficilement “cassable” et vous vous en rappelerez certainement mieux qu’un mot de passe complexe.</p>
 
 <h3 id="vrification-de-la-clef">Vérification de la clef</h3>
 <p>Pour vérifier que votre clef est correctement installée, vous pouvez récupérer la liste des clefs connues par votre système. Ainsi pour connaître les clefs publiques vous pouvez taper :</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>gpg --list-keys
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>gpg --list-keys
 /Users/cgatay/.gnupg/pubring.gpg
 --------------------------------
 pub   2048R/CE236D5E 2013-04-28
 uid                  Cedric Gatay &lt;cedric@gatay.fr&gt;
-sub   2048R/08130909 2013-04-28</code></pre></figure>
+sub   2048R/08130909 2013-04-28</code></pre></div>
 
 <p>Et pour les clefs privées :</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>gpg --list-secret-keys
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>gpg --list-secret-keys
 /Users/cgatay/.gnupg/secring.gpg
 --------------------------------
 sec   2048R/CE236D5E 2013-04-28
 uid                  Cedric Gatay &lt;cedric@gatay.fr&gt;
-ssb   2048R/08130909 2013-04-28</code></pre></figure>
+ssb   2048R/08130909 2013-04-28</code></pre></div>
 
 <p>Si la génération s’est déroulée comme prévu, la seule différence résidera dans l’emplacement du fichier correspondant au stockage de la clef publique et privée.</p>
 
 <h3 id="distribution-de-la-clef-publique">Distribution de la clef publique</h3>
-<p>Pour que tout le monde soit à même de vérifier votre “identité”, il faut distribuer votre clef publique sur les dépôts reconnus. L’un d’eux est <code class="highlighter-rouge">hkp://pool.sks-keyservers.net</code> qui fera la distribution auprès des différents serveurs OpenPGP.
-Pour se faire, il suffit de lancer la synchronisation vers ce serveur, en remplaçant <code class="highlighter-rouge">${KEY_ID}</code> par l’id de votre clef publique tel que récupéré lors de la commande précédente (dans mon cas il s’agit de <code class="highlighter-rouge">CE236D5E</code>):</p>
+<p>Pour que tout le monde soit à même de vérifier votre “identité”, il faut distribuer votre clef publique sur les dépôts reconnus. L’un d’eux est <code>hkp://pool.sks-keyservers.net</code> qui fera la distribution auprès des différents serveurs OpenPGP.
+Pour se faire, il suffit de lancer la synchronisation vers ce serveur, en remplaçant <code>${KEY_ID}</code> par l’id de votre clef publique tel que récupéré lors de la commande précédente (dans mon cas il s’agit de <code>CE236D5E</code>):</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">    <span class="nv">$ </span>gpg --keyserver hkp://pool.sks-keyservers.net --send-keys <span class="k">${</span><span class="nv">KEY_ID</span><span class="k">}</span></code></pre></figure>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>gpg --keyserver hkp://pool.sks-keyservers.net --send-keys <span class="k">${</span><span class="nv">KEY_ID</span><span class="k">}</span></code></pre></div>
 
 <p>Pour vérifier que l’envoi s’est fait comme attendu, vous pouvez demander à récupérer la clef par la commande suivante :</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">    <span class="nv">$ </span>gpg --keyserver hkp://pool.sks-keyservers.net --recv-keys <span class="k">${</span><span class="nv">KEY_ID</span><span class="k">}</span></code></pre></figure>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>gpg --keyserver hkp://pool.sks-keyservers.net --recv-keys <span class="k">${</span><span class="nv">KEY_ID</span><span class="k">}</span></code></pre></div>
 
 <h2 id="cration-dun-compte-sur-sonatype">Création d’un compte sur Sonatype</h2>
 <p>La distribution de binaires passe par la création d’un compte sur le <a href="https://issues.sonatype.org">JIRA de Sonatype</a>. La procédure est assez simple, elle ne vaut pas la peine d’être détaillée plus avant.
@@ -176,7 +176,7 @@ Il vous faudra ensuite remplir les champs suivants :</p>
 
 <ul>
   <li>summary : Descriptif de votre projet</li>
-  <li>groupId : le groupId de votre projet (généralement votre nom de domaine, <code class="highlighter-rouge">com.code-troopers</code> dans notre cas)</li>
+  <li>groupId : le groupId de votre projet (généralement votre nom de domaine, <code>com.code-troopers</code> dans notre cas)</li>
   <li>Project URL : URL vers le site du projet</li>
   <li>SCM URL : URL vers les sources du projet</li>
   <li>Nexus Username : votre nom d’utilisateur actuel (et les éventuels noms d’utilisateurs à autoriser)</li>
@@ -187,24 +187,24 @@ Il vous faudra ensuite remplir les champs suivants :</p>
 <p>Par exemple, le ticket correspondant à la mise à disposition de l’intégration entre <a href="http://wicket.apache.org">Apache Wicket</a> et <a href="http://www.parsleyjs.org">ParsleyJS</a> est <a href="https://issues.sonatype.org/browse/OSSRH-6026">OSSRH-6026</a></p>
 
 <h2 id="prparation-du-projet-pour-la-distribution">Préparation du projet pour la distribution</h2>
-<p>Pour que vous puissiez distribuer votre projet, il est nécessaire d’ajuster légèrement le descripteur de votre projet (le fameux <code class="highlighter-rouge">pom.xml</code> dans notre cas traitant de Maven).</p>
+<p>Pour que vous puissiez distribuer votre projet, il est nécessaire d’ajuster légèrement le descripteur de votre projet (le fameux <code>pom.xml</code> dans notre cas traitant de Maven).</p>
 
 <h3 id="informations-indispensables">Informations indispensables</h3>
-<p>Il est nécessaire que le <code class="highlighter-rouge">pom.xml</code> contienne les informations suivantes :</p>
+<p>Il est nécessaire que le <code>pom.xml</code> contienne les informations suivantes :</p>
 
 <ul>
-  <li><code class="highlighter-rouge">modelVersion</code></li>
-  <li><code class="highlighter-rouge">groupId</code></li>
-  <li><code class="highlighter-rouge">artifactId</code></li>
-  <li><code class="highlighter-rouge">version</code></li>
-  <li><code class="highlighter-rouge">packaging</code></li>
-  <li><code class="highlighter-rouge">name</code></li>
-  <li><code class="highlighter-rouge">description</code></li>
-  <li><code class="highlighter-rouge">url</code></li>
-  <li><code class="highlighter-rouge">licenses</code></li>
-  <li><code class="highlighter-rouge">scm.url</code></li>
-  <li><code class="highlighter-rouge">scm.connection</code></li>
-  <li><code class="highlighter-rouge">developers</code></li>
+  <li><code>modelVersion</code></li>
+  <li><code>groupId</code></li>
+  <li><code>artifactId</code></li>
+  <li><code>version</code></li>
+  <li><code>packaging</code></li>
+  <li><code>name</code></li>
+  <li><code>description</code></li>
+  <li><code>url</code></li>
+  <li><code>licenses</code></li>
+  <li><code>scm.url</code></li>
+  <li><code>scm.connection</code></li>
+  <li><code>developers</code></li>
 </ul>
 
 <h3 id="modification-de-votre-projet">Modification de votre projet</h3>
@@ -213,31 +213,31 @@ Il vous faudra ensuite remplir les champs suivants :</p>
 
 <p>Vous devez donc ajouter dans votre descripteur le lien avec le parent Sonatype :</p>
 
-<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;project&gt;</span>
+<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;project&gt;</span>
   <span class="nt">&lt;parent&gt;</span>
     <span class="nt">&lt;groupId&gt;</span>org.sonatype.oss<span class="nt">&lt;/groupId&gt;</span>
     <span class="nt">&lt;artifactId&gt;</span>oss-parent<span class="nt">&lt;/artifactId&gt;</span>
     <span class="nt">&lt;version&gt;</span>7<span class="nt">&lt;/version&gt;</span>
   <span class="nt">&lt;/parent&gt;</span>
   <span class="c">&lt;!-- le reste de votre descripteur --&gt;</span>
-<span class="nt">&lt;/project&gt;</span></code></pre></figure>
+<span class="nt">&lt;/project&gt;</span></code></pre></div>
 
-<p>Pour le remplissage des informations de votre dépôt de sources, plusieurs façon de les remplir s’offrent à vous en fonction du type de dépôt que vous utilisez, dans la majorité des cas pour les projets récents, le système de gestion de version utilisé est Git, la partie correspondant dans le <code class="highlighter-rouge">pom.xml</code>sera donc de la forme suivante (en ajustant <code class="highlighter-rouge">${USER}</code> et <code class="highlighter-rouge">${PROJECT}</code> bien entendu) :</p>
+<p>Pour le remplissage des informations de votre dépôt de sources, plusieurs façon de les remplir s’offrent à vous en fonction du type de dépôt que vous utilisez, dans la majorité des cas pour les projets récents, le système de gestion de version utilisé est Git, la partie correspondant dans le <code>pom.xml</code>sera donc de la forme suivante (en ajustant <code>${USER}</code> et <code>${PROJECT}</code> bien entendu) :</p>
 
-<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;scm&gt;</span>
+<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;scm&gt;</span>
   <span class="nt">&lt;connection&gt;</span>scm:git:git@github.com:${USER}/${PROJECT}.git<span class="nt">&lt;/connection&gt;</span>
   <span class="nt">&lt;developerConnection&gt;</span>scm:git:git@github.com:${USER}/${PROJECT}.git<span class="nt">&lt;/developerConnection&gt;</span>
   <span class="nt">&lt;url&gt;</span>git@github.com:${USER}/${PROJECT}.git<span class="nt">&lt;/url&gt;</span>
-<span class="nt">&lt;/scm&gt;</span></code></pre></figure>
+<span class="nt">&lt;/scm&gt;</span></code></pre></div>
 
 <h2 id="prparation-de-votre-poste-pour-la-distribution">Préparation de votre poste pour la distribution</h2>
 <p>Pour déployer sur les dépôts gérés par Sonatype, vous allez devoir vous identifier pour gérer l’upload, bien entendu, il n’est pas concevable de stocker vos informations d’identification au sein du descripteur de votre projet :
  * vous ne voulez pas publier vos identifiants au grand public
  * vous ne voulez pas passer sur chacun des projets si vous les changez</p>
 
-<p>La technique est donc d’utiliser le fichier de configuration global de Maven en définissant des paramètres. Ainsi, en éditant le fichier <code class="highlighter-rouge">~/.m2/settings.xml</code> vous allez ajouter vos identifiants (encore une fois, en ajustant <code class="highlighter-rouge">${USER}</code> et <code class="highlighter-rouge">${PASSWORD}</code>):</p>
+<p>La technique est donc d’utiliser le fichier de configuration global de Maven en définissant des paramètres. Ainsi, en éditant le fichier <code>~/.m2/settings.xml</code> vous allez ajouter vos identifiants (encore une fois, en ajustant <code>${USER}</code> et <code>${PASSWORD}</code>):</p>
 
-<figure class="highlight"><pre><code class="language-xml" data-lang="xml">  <span class="nt">&lt;servers&gt;</span>
+<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;servers&gt;</span>
     <span class="nt">&lt;server&gt;</span>
       <span class="nt">&lt;id&gt;</span>sonatype-nexus-snapshots<span class="nt">&lt;/id&gt;</span>
       <span class="nt">&lt;username&gt;</span>${USER}<span class="nt">&lt;/username&gt;</span>
@@ -248,30 +248,30 @@ Il vous faudra ensuite remplir les champs suivants :</p>
       <span class="nt">&lt;username&gt;</span>${USER}<span class="nt">&lt;/username&gt;</span>
       <span class="nt">&lt;password&gt;</span>${PASSWORD}<span class="nt">&lt;/password&gt;</span>
     <span class="nt">&lt;/server&gt;</span>
-  <span class="nt">&lt;/servers&gt;</span></code></pre></figure>
+  <span class="nt">&lt;/servers&gt;</span></code></pre></div>
 
-<h2 id="distribution-dune-version-snapshot">Distribution d’une version <code class="highlighter-rouge">SNAPSHOT</code></h2>
-<p>Si vous désirez distribuer vos bibliothèques sur des dépôts centraux, vous devez connaître les notions de <code class="highlighter-rouge">SNAPSHOT</code> et <em>release</em> propres à Maven. Pour faire un bref rappel, les versions <code class="highlighter-rouge">SNAPSHOT</code> sont des versions en développement alors que les versions <em>release</em> sont les versions finales. Ainsi, dépendre d’une version <code class="highlighter-rouge">SNAPSHOT</code> déclenchera des vérifications régulières par l’outil de construction pour récupérer toujours la dernière version alors qu’une version <em>release</em> ne sera rapatriée qu’une et une seule fois (en assurant la stabilité de la construction).</p>
+<h2 id="distribution-dune-version-snapshot">Distribution d’une version <code>SNAPSHOT</code></h2>
+<p>Si vous désirez distribuer vos bibliothèques sur des dépôts centraux, vous devez connaître les notions de <code>SNAPSHOT</code> et <em>release</em> propres à Maven. Pour faire un bref rappel, les versions <code>SNAPSHOT</code> sont des versions en développement alors que les versions <em>release</em> sont les versions finales. Ainsi, dépendre d’une version <code>SNAPSHOT</code> déclenchera des vérifications régulières par l’outil de construction pour récupérer toujours la dernière version alors qu’une version <em>release</em> ne sera rapatriée qu’une et une seule fois (en assurant la stabilité de la construction).</p>
 
-<p>Sonatype fourni un dépôt pour de telles versions de développement ainsi qu’un dépôt pour les versions stables. Dans un premier temps et pour tester que votre système est correctement configuré, vous allez déployer une version <code class="highlighter-rouge">SNAPSHOT</code> de votre librairie :</p>
+<p>Sonatype fourni un dépôt pour de telles versions de développement ainsi qu’un dépôt pour les versions stables. Dans un premier temps et pour tester que votre système est correctement configuré, vous allez déployer une version <code>SNAPSHOT</code> de votre librairie :</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>mvn clean deploy</code></pre></figure>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>mvn clean deploy</code></pre></div>
 
 <p>Si tout se passe comme prévu, votre livrable sera visible et disponible sur le dépôt SNAPSHOT de Sonatype : <a href="https://oss.sonatype.org/content/repositories/snapshots">https://oss.sonatype.org/content/repositories/snapshots</a>
-En cas d’erreur <code class="highlighter-rouge">401 Unauthorized</code>, vérifiez que vos identifiants JIRA sont corrects (en vous connectant sur <a href="https://issues.sonatype.org">https://issues.sonatype.org</a>).</p>
+En cas d’erreur <code>401 Unauthorized</code>, vérifiez que vos identifiants JIRA sont corrects (en vous connectant sur <a href="https://issues.sonatype.org">https://issues.sonatype.org</a>).</p>
 
 <h2 id="prparation-et-distribution-dune-release">Préparation et distribution d’une <em>release</em></h2>
 <p>Le <em>plugin</em> Maven <em>release</em> est préconfiguré grace à l’intégration du descripteur parent de Sonatype, il suffit donc de l’utiliser pour construire votre projet, il va s’occuper de construire les livrables nécessaires, de les signer et de les déployer en tant que <em>staging</em>.</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>mvn release:clean
-<span class="gp">$ </span>mvn release:prepare
-<span class="gp">$ </span>mvn release:perform</code></pre></figure>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>mvn release:clean
+<span class="nv">$ </span>mvn release:prepare
+<span class="nv">$ </span>mvn release:perform</code></pre></div>
 
-<p>Lors de la procédure, le plugin <em>release</em> va s’occuper de changer le numéro de version <code class="highlighter-rouge">SNAPSHOT</code> vers un numéro <em>release</em>, de préparer la version <code class="highlighter-rouge">SNAPSHOT</code>suivante, de <em>tagguer</em> le tout sur le système de gestion de sources. Un de ses atouts est de préparer la construction à partir d’une version propre provenant du système de gestion de sources, de cette façon vous pourrez vous assurer de la reproductibilité des constructions.</p>
+<p>Lors de la procédure, le plugin <em>release</em> va s’occuper de changer le numéro de version <code>SNAPSHOT</code> vers un numéro <em>release</em>, de préparer la version <code>SNAPSHOT</code>suivante, de <em>tagguer</em> le tout sur le système de gestion de sources. Un de ses atouts est de préparer la construction à partir d’une version propre provenant du système de gestion de sources, de cette façon vous pourrez vous assurer de la reproductibilité des constructions.</p>
 
 <p>Vous aurez donc besoin de saisir la <em>passphrase</em> de votre clef <em>GnuPG</em> lors du processus, pour effectuer la signature des livrables.</p>
 
-<p><em>Vous pouvez également distribuer votre livrable avec la commande <code class="highlighter-rouge">deploy</code> comme dans le cas d’une livraison <code class="highlighter-rouge">SNAPSHOT</code>.</em></p>
+<p><em>Vous pouvez également distribuer votre livrable avec la commande <code>deploy</code> comme dans le cas d’une livraison <code>SNAPSHOT</code>.</em></p>
 
 <h2 id="publication-de-vos-livrables">Publication de vos livrables</h2>
 <p>Pour finir la publication de votre livrable, il faut passer par l’interface de Sonatype https://oss.sonatype.org
@@ -287,7 +287,7 @@ Dans la partie <em>Staging Repositories</em>, vous verrez une ligne correspondan
 <h2 id="livraison-dun-nouveau-projet">Livraison d’un nouveau projet</h2>
 <p>Tant que votre projet respecte le <em>groupId</em> dont vous avez revendiqué la paternité, vous pourrez livrer et distribuer à votre convenance sans avoir besoin de créer de nouvelles demandes sur le JIRA de Sonatype.</p>
 
-<p>Dans notre cas, nous avons enregistré <code class="highlighter-rouge">com.code-troopers</code> en tant que <em>groupId</em> parent de nos réalisations.</p>
+<p>Dans notre cas, nous avons enregistré <code>com.code-troopers</code> en tant que <em>groupId</em> parent de nos réalisations.</p>
 
                 </div>
 <div class="share">
@@ -396,7 +396,7 @@ L'article vous a plu ? Partagez-le :
         <div class="row">
             <div class="footer-under">
                 Made with <i class="fa fa-heart"></i> in Tours -
-                © 2016 Code-Troopers - Tous droits réservés
+              © 2016 Code-Troopers - Tous droits réservés
             </div>
         </div>
     </div>

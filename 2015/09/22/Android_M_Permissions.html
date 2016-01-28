@@ -25,10 +25,10 @@
         
         <meta name="viewport" content="width=device-width">
 
-        <link rel="stylesheet" href="/styles/style-df692d982e.css">
-     
+        <link rel="stylesheet" href="/styles/style-9089a70539.css">
+
         <!--[if lt IE 9]>
-                <script src="/js/ie8-0a07727802.js"></script>           
+                <script src="/js/ie8-0a07727802.js"></script>
         <![endif]-->
         <meta itemprop="name" content="CT-CDGT"/>
         <meta itemprop="name" content="CT-RMLC"/>
@@ -98,12 +98,12 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
                 <div class="content">
                     <h1 id="nouvelle-approche">Nouvelle approche</h1>
 
-<p>Avec la prochaine release d’<code class="highlighter-rouge">Android 6.0 Marshmallow</code>, il va y avoir du changement au niveau de la gestion des permissions.
+<p>Avec la prochaine release d’<code>Android 6.0 Marshmallow</code>, il va y avoir du changement au niveau de la gestion des permissions.
 Terminé la popup qui demande les 10 autorisations au moment du téléchargement de l’appli, maintenant les développeurs vont pouvoir demander les permissions au moment où elles seront nécessaires.</p>
 
 <h3 id="permissions-irrvocables">Permissions irrévocables</h3>
 <p>Puisqu’il va falloir demander à l’utilisateur pour chaque permission, Google a décidé que certaines anciennes permissions n’auront plus besoin d’être demandées,
- ce sont les <code class="highlighter-rouge">Normal Permissions</code>. Il s’agit des permissions qui n’engendrent pas de risque sur la vie privée ou sur la sécurité de l’utilisateur comme c’est par exemple le cas pour l’accès à internet ou l’accès au vibreur :
+ ce sont les <code>Normal Permissions</code>. Il s’agit des permissions qui n’engendrent pas de risque sur la vie privée ou sur la sécurité de l’utilisateur comme c’est par exemple le cas pour l’accès à internet ou l’accès au vibreur :
  la liste complète est disponible <a href="https://developer.android.com/preview/features/runtime-permissions.html#normal">ici</a>.</p>
 
 <h3 id="guidelines">Guidelines</h3>
@@ -131,22 +131,22 @@ Terminé la popup qui demande les 10 autorisations au moment du téléchargement
 <h2 id="ne-pas-implmenter-les-nouvelles-permissions">Ne pas implémenter les nouvelles permissions</h2>
 <p>Chose importante à savoir, vous n’êtes pas obligés d’implémenter cette nouvelle gestion de permission.
 En effet, puisqu’elle demande du développoment supplémentaire, de nombreuses applis ne seront pas mises à jour et garderont donc l’ancien fonctionnement. 
-Si c’est ce que vous souhaitez, et pour ne pas nuire au bon fonctionnement de votre appli, il vous suffit de ne pas cibler le dernier <code class="highlighter-rouge">sdk</code> dans votre build.gradle et de rester sur le <code class="highlighter-rouge">22</code>.</p>
+Si c’est ce que vous souhaitez, et pour ne pas nuire au bon fonctionnement de votre appli, il vous suffit de ne pas cibler le dernier <code>sdk</code> dans votre build.gradle et de rester sur le <code>22</code>.</p>
 
 <h2 id="implmenter-les-nouvelles-permissions">Implémenter les nouvelles permissions</h2>
 <p>Pour cela, 3 étapes sont nécessaires, principalement disponibles dans le sdk 23 ainsi que dans la lib appcompat :</p>
 
 <ul>
-  <li><code class="highlighter-rouge">requestPermissions()</code></li>
-  <li><code class="highlighter-rouge">onRequestPermissionsResult()</code></li>
-  <li><code class="highlighter-rouge">shouldShowRequestPermissionRationale()</code></li>
+  <li><code>requestPermissions()</code></li>
+  <li><code>onRequestPermissionsResult()</code></li>
+  <li><code>shouldShowRequestPermissionRationale()</code></li>
 </ul>
 
 <h3 id="buildgradle">Build.gradle</h3>
-<p>Permière étape, cibler la dernier version du <code class="highlighter-rouge">sdk</code> : <code class="highlighter-rouge">23</code>.
+<p>Permière étape, cibler la dernier version du <code>sdk</code> : <code>23</code>.
 Et en bonus, importer appcompat pour bénéficier des méthodes helpers de Google.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>compileSdkVersion 23
+<pre><code>compileSdkVersion 23
 defaultConfig {
     targetSdkVersion 23
 }
@@ -154,36 +154,32 @@ dependencies {
     compile 'com.android.support:appcompat-v7:23.0.1'
 }
 </code></pre>
-</div>
 
 <h3 id="androidmanifestxml">AndroidManifest.xml</h3>
 <p>Ensuite, déclarer les permissions désirées dans l’application, normalement il n’y a pas de changements par rapport à votre configuration actuelle</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>&lt;uses-permission android:name="android.permission.CAMERA" /&gt;
+<pre><code>&lt;uses-permission android:name="android.permission.CAMERA" /&gt;
 &lt;uses-permission android:name="android.permission.READ_CONTACTS" /&gt;
 &lt;uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /&gt;
 &lt;uses-permission android:name="android.permission.SEND_SMS" /&gt;
 &lt;uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /&gt;
 &lt;uses-permission android:name="android.permission.CALL_PHONE" /&gt;
 </code></pre>
-</div>
 
-<p>N’oubliez pas d’y déclarer aussi les <code class="highlighter-rouge">Normal Permissions</code> qui, bien qu’elles soient automatiquement accordées, ont toujours besoin d’être déclarées.</p>
+<p>N’oubliez pas d’y déclarer aussi les <code>Normal Permissions</code> qui, bien qu’elles soient automatiquement accordées, ont toujours besoin d’être déclarées.</p>
 
 <h3 id="dans-une-activit">Dans une activité</h3>
 <p>Dans un premier temps il faut vérifier si une permission est déjà accordée ou non</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>ContextCompat.checkSelfPermission(context, Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED;
+<pre><code>ContextCompat.checkSelfPermission(context, Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED;
 </code></pre>
-</div>
 
 <p>Si la permission n’est pas accordée, il va falloir la demander, de préférence lors d’une action utilisateur, par exemple au click sur un bouton</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>ActivityCompat.requestPermissions(MainActivity.this,
+<pre><code>ActivityCompat.requestPermissions(MainActivity.this,
                                   new String[]{Manifest.permission.CAMERA},
                                   REQUEST_CODE_ONE);
 </code></pre>
-</div>
 
 <div style="text-align:center;margin-bottom:50px">
     <a href="/images/2015-09-AndroidMPermissions/p1.png" data-lightbox="group-1" title="Dialog de demande d'une permission" class="inlineBoxes">
@@ -192,7 +188,7 @@ dependencies {
 </div>
 <p>Puis écouter le choix de l’utilisateur, dans l’activité ou le fragment correspondant</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>@Override
+<pre><code>@Override
 public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
     switch (requestCode) {
         case REQUEST_CODE_ONE: {
@@ -206,17 +202,15 @@ public void onRequestPermissionsResult(int requestCode, String permissions[], in
     }
 }
 </code></pre>
-</div>
 
 <h3 id="demander-plusieurs-permissions-en-mme-temps">Demander plusieurs permissions en même temps</h3>
 <p>Même si cela est déconseillé, il peut arriver d’avoir besoin de plusieurs permissions lors de la même action utilisateur.
 Pour cela il suffit de passer plusieurs permissions dans le tableau passé en paramètre du requestPermission</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>ActivityCompat.requestPermissions(MainActivity.this,
+<pre><code>ActivityCompat.requestPermissions(MainActivity.this,
                                   new String[]{Manifest.permission.READ_CONTACTS, Manifest.permission.ACCESS_FINE_LOCATION},
                                   REQUEST_CODE_TWO);
 </code></pre>
-</div>
 
 <div style="text-align:center;margin-bottom:50px">
     <a href="/images/2015-09-AndroidMPermissions/p2.png" data-lightbox="group-1" title="Dialog de demande de plusieurs permissions 1/2" class="inlineBoxes">
@@ -231,7 +225,7 @@ Pour cela il suffit de passer plusieurs permissions dans le tableau passé en pa
 <p>Il arrivera sûrement que certains utilsateurs refusent des permissions et que cela détériore l’expérience utilisateur sur l’application. Pour cela, Google fourni un helper pour savoir ou non s’il faut afficher un message d’information à l’utilisateur (graphique).
 Cela se fera avec la méthode shouldShowRequestPermissionRationale</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>if (shouldShowRequestPermissionRationale(Manifest.permission.CALL_PHONE)) {
+<pre><code>if (shouldShowRequestPermissionRationale(Manifest.permission.CALL_PHONE)) {
      new AlertDialog.Builder(MainActivity.this)
                                .setMessage("Custom message to explain why you need a permission")
                                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
@@ -251,7 +245,6 @@ ActivityCompat.requestPermissions(MainActivity.this,
                                   REQUEST_CODE_FIVE);
 }
 </code></pre>
-</div>
 
 <div style="text-align:center;margin-bottom:50px">
     <a href="/images/2015-09-AndroidMPermissions/p4.png" data-lightbox="group-1" title="Dialog d'explication sur une demande de permissions" class="inlineBoxes">
@@ -379,7 +372,7 @@ L'article vous a plu ? Partagez-le :
         <div class="row">
             <div class="footer-under">
                 Made with <i class="fa fa-heart"></i> in Tours -
-                © 2016 Code-Troopers - Tous droits réservés
+              © 2016 Code-Troopers - Tous droits réservés
             </div>
         </div>
     </div>

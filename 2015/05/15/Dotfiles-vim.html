@@ -25,10 +25,10 @@
         
         <meta name="viewport" content="width=device-width">
 
-        <link rel="stylesheet" href="/styles/style-df692d982e.css">
-     
+        <link rel="stylesheet" href="/styles/style-9089a70539.css">
+
         <!--[if lt IE 9]>
-                <script src="/js/ie8-0a07727802.js"></script>           
+                <script src="/js/ie8-0a07727802.js"></script>
         <![endif]-->
         <meta itemprop="name" content="CT-CDGT"/>
         <meta itemprop="name" content="CT-RMLC"/>
@@ -103,16 +103,15 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 <h1 id="introduction">Introduction</h1>
 
 <p>Chez les troopers, on est comme beaucoup d’autres constamment alliés à la ligne de commande, cf nos articles sur <a href="http://code-troopers.com/2014/10/01/babun.html">babun</a> et <a href="http://code-troopers.com/2014/09/17/ohMyZsh.html">oh-my-zsh</a>. Un outil indispensable dans un terminal est un éditeur de fichier. Dans notre premier article sur les <em>dotfiles</em> nous parlerons de vim, et plus spécialement de sa configuration avec vimrc. Si vous ne connaissez pas l’un des plus puissants éditeur de texte, commencez par vous renseigner dessus et sur les commandes de base par exemple sur <a href="http://www.openvim.com/tutorial.html">http://www.openvim.com/tutorial.html</a>.
-Pour configurer vim, une seule chose à faire : <code class="highlighter-rouge">vim ~/.vimrc</code>
+Pour configurer vim, une seule chose à faire : <code>vim ~/.vimrc</code>
 <!--break--></p>
 
 <h1 id="sauvez-cest-activ">Sauvez c’est activé</h1>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>if has("autocmd")
+<pre><code>if has("autocmd")
     autocmd! bufwritepost .vimrc source ~/.vimrc
 endif
 </code></pre>
-</div>
 
 <p>De base sous vim on édite son .vimrc, on quitte et on réouvre un fichier pour voir la modification. Grâce à ces lignes, il suffira de sauvegarder pour voir ses modifications actives dans toutes les instances ouvertes de vim.</p>
 
@@ -122,13 +121,12 @@ endif
 
 <h1 id="en-parlant-de-sauvegarde">En parlant de sauvegarde</h1>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>noremap &lt;C-Z&gt; :update&lt;CR&gt;
+<pre><code>noremap &lt;C-Z&gt; :update&lt;CR&gt;
 vnoremap &lt;C-Z&gt; &lt;C-C&gt;:update&lt;CR&gt;
 inoremap &lt;C-Z&gt; &lt;C-O&gt;:update&lt;CR&gt;
 </code></pre>
-</div>
 
-<p>Pour sauvegarder sous vim, il faut faire <code class="highlighter-rouge">:w</code> Ce serait quand même mieux de faire <code class="highlighter-rouge">ctrl-z</code> un peu à l’image des <code class="highlighter-rouge">ctrl-s</code> que l’on trouve partout ailleurs.</p>
+<p>Pour sauvegarder sous vim, il faut faire <code>:w</code> Ce serait quand même mieux de faire <code>ctrl-z</code> un peu à l’image des <code>ctrl-s</code> que l’on trouve partout ailleurs.</p>
 
 <div style="text-align: center;margin:50px;">
 <video style="width: 90%; max-width: 600px;" controls="" src="/videos/dotfiles-ctrlz.webm"></video>
@@ -136,15 +134,14 @@ inoremap &lt;C-Z&gt; &lt;C-O&gt;:update&lt;CR&gt;
 
 <h1 id="et-pourquoi-pas-ctrl-s">Et pourquoi pas ctrl-s</h1>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>inoremap &lt;C-c&gt; &lt;Left&gt;
+<pre><code>inoremap &lt;C-c&gt; &lt;Left&gt;
 inoremap &lt;C-t&gt; &lt;Down&gt;
 inoremap &lt;C-s&gt; &lt;Up&gt;
 inoremap &lt;C-r&gt; &lt;Right&gt;
 </code></pre>
-</div>
 
 <p>Ça pose un problème car ctrl-s me permet de me déplacer vers le haut dans vim en mode <strong>insertion</strong>.
-Selon la disposition de votre clavier, vous pouvez remplacer <code class="highlighter-rouge">c</code>, <code class="highlighter-rouge">t</code>, <code class="highlighter-rouge">s</code>, <code class="highlighter-rouge">r</code> par <code class="highlighter-rouge">h</code>, <code class="highlighter-rouge">j</code>, <code class="highlighter-rouge">k</code>, <code class="highlighter-rouge">l</code> si vous avez un clavier azerty. Ainsi les touches <code class="highlighter-rouge">hjkl</code> permettent de se déplacer en mode <strong>visuel</strong> et <code class="highlighter-rouge">ctrl + hjkl</code> permettent de se déplacer en mode <strong>insertion</strong>. Plus aucune raison d’utiliser les flèches sous vim !</p>
+Selon la disposition de votre clavier, vous pouvez remplacer <code>c</code>, <code>t</code>, <code>s</code>, <code>r</code> par <code>h</code>, <code>j</code>, <code>k</code>, <code>l</code> si vous avez un clavier azerty. Ainsi les touches <code>hjkl</code> permettent de se déplacer en mode <strong>visuel</strong> et <code>ctrl + hjkl</code> permettent de se déplacer en mode <strong>insertion</strong>. Plus aucune raison d’utiliser les flèches sous vim !</p>
 
 <div style="text-align: center;margin:50px;">
 <video style="width: 90%; max-width: 600px;" controls="" src="/videos/dotfiles-ctrlctsr.webm"></video>
@@ -152,9 +149,8 @@ Selon la disposition de votre clavier, vous pouvez remplacer <code class="highli
 
 <h1 id="un-peu-de-couleurs">un peu de couleurs</h1>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>syntax on
+<pre><code>syntax on
 </code></pre>
-</div>
 
 <p>vim connaît à peu près tous les langages, de Shell à Java, en passant par le XML ou les simples fichiers de configuration. Avec cette commande,  vous aurez donc automatiquement la coloration syntaxique.</p>
 
@@ -164,11 +160,10 @@ Selon la disposition de votre clavier, vous pouvez remplacer <code class="highli
 
 <h1 id="set-nu">set nu</h1>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>set number
+<pre><code>set number
 </code></pre>
-</div>
 
-<p>Pour afficher les numéros de ligne on peut taper <code class="highlighter-rouge">:set nu</code>. La commande est certes rigolote à écrire (comprenne qui pourra) mais ça ne suffit pas pour se retenir de l’automatiser.</p>
+<p>Pour afficher les numéros de ligne on peut taper <code>:set nu</code>. La commande est certes rigolote à écrire (comprenne qui pourra) mais ça ne suffit pas pour se retenir de l’automatiser.</p>
 
 <div style="text-align: center;margin:50px;">
 <video style="width: 90%; max-width: 600px;" controls="" src="/videos/dotfiles-setnu.webm"></video>
@@ -176,12 +171,11 @@ Selon la disposition de votre clavier, vous pouvez remplacer <code class="highli
 
 <h1 id="viter-la-touche-chap">Éviter la touche échap</h1>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>inoremap éé &lt;esc&gt;
+<pre><code>inoremap éé &lt;esc&gt;
 </code></pre>
-</div>
 
 <p>Pour sortir du mode <strong>insertion</strong>, il faut appuyer sur la touche échap par défaut. Même pour un pianiste, cette touche est trèèèèès loin sur le clavier. Mais vous pouvez bien évidemment remapper cette action. Si vous voulez des inspirations sur les meilleures combinaisons, vous pouvez regarder là : <a href="http://vim.wikia.com/wiki/Avoid_the_escape_key">http://vim.wikia.com/wiki/Avoid_the_escape_key</a>
-Comme je suis en bépo (au lieu de azerty) et que je n’écris presque jamais de français avec vim, j’ai utilisé le mot clé <code class="highlighter-rouge">éé</code>. Certains mappent sur <code class="highlighter-rouge">ii</code> mais vim marquera une légère pause à chaque appui sur la touche i qui est assez déstabilisant.</p>
+Comme je suis en bépo (au lieu de azerty) et que je n’écris presque jamais de français avec vim, j’ai utilisé le mot clé <code>éé</code>. Certains mappent sur <code>ii</code> mais vim marquera une légère pause à chaque appui sur la touche i qui est assez déstabilisant.</p>
 
 <div style="text-align: center;margin:50px;">
 <video style="width: 90%; max-width: 600px;" controls="" src="/videos/dotfiles-exitee.webm"></video>
@@ -192,22 +186,20 @@ Comme je suis en bépo (au lieu de azerty) et que je n’écris presque jamais d
 <p>On peut faire tellement de choses, ça prendrait des semaines pour tout configurer. Pour avoir d’autres features super cool en 2 secondes,  on peut ajouter des plugins. Le gestionnaire de plugin le plus connu pour vim est sans doute pathogen.
 Pour l’installation, il suffit de faire :</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>mkdir -p ~/.vim/autoload ~/.vim/bundle &amp;&amp; \
+<pre><code>mkdir -p ~/.vim/autoload ~/.vim/bundle &amp;&amp; \
 curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 </code></pre>
-</div>
 
 <p>Maintenant, passons à quelques plugins.</p>
 
 <h2 id="colorscheme-couleurs">Colorscheme couleurs</h2>
 <p>Les couleurs sont ternes ? le bleu sur noir des commentaires est illisible ? Alors changez les couleurs.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>cd ~/.vim/bundle
+<pre><code>cd ~/.vim/bundle
 git clone https://github.com/flazz/vim-colorschemes.git
 </code></pre>
-</div>
 
-<p>Ajoutez ensuite <code class="highlighter-rouge">colors matrix</code> dans votre <code class="highlighter-rouge">.vimrc</code>. La liste des template de couleurs utilisables se trouvent dans <code class="highlighter-rouge">~/.vim/bundle/colorschemes/colors</code>.</p>
+<p>Ajoutez ensuite <code>colors matrix</code> dans votre <code>.vimrc</code>. La liste des template de couleurs utilisables se trouvent dans <code>~/.vim/bundle/colorschemes/colors</code>.</p>
 
 <div style="text-align: center;margin:50px;">
 <video style="width: 90%; max-width: 600px;" controls="" src="/videos/dotfiles-colormatrix.webm"></video>
@@ -215,12 +207,11 @@ git clone https://github.com/flazz/vim-colorschemes.git
 
 <h2 id="nerdtree">nerdtree</h2>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>cd ~/.vim/bundle
+<pre><code>cd ~/.vim/bundle
 git clone https://github.com/scrooloose/nerdtree.git
 </code></pre>
-</div>
 
-<p>Et ajoutez dans votre <code class="highlighter-rouge">.vimrc</code> : <code class="highlighter-rouge">map &lt;C-n&gt; :NERDTreeToggle&lt;CR&gt;</code>
+<p>Et ajoutez dans votre <code>.vimrc</code> : <code>map &lt;C-n&gt; :NERDTreeToggle&lt;CR&gt;</code>
 Dorénavant, il vous suffira de faire ctrl-n pour avoir votre répertoire de travail comme dans n’importe quel autre IDE.</p>
 
 <div style="text-align: center;margin:50px;">
@@ -229,14 +220,13 @@ Dorénavant, il vous suffira de faire ctrl-n pour avoir votre répertoire de tra
 
 <h2 id="nerdcommenter">nerdcommenter</h2>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>cd ~/.vim/bundle
+<pre><code>cd ~/.vim/bundle
 git clone https://github.com/scrooloose/nerdcommenter.git
 </code></pre>
-</div>
 
-<p>Et dans votre <code class="highlighter-rouge">.vimrc</code> : <code class="highlighter-rouge">filetype plugin on</code>
-aintenant, en faisant <code class="highlighter-rouge">&lt;Leader&gt;cc</code> que ce soit dans un fichier html, java, python, shell etc. la ligne se mettra en commentaire. Vous pouvez aussi le faire après avoir sélectionné plusieurs lignes.
-Si vous vous demandez ce qu’est la touche <code class="highlighter-rouge">&lt;Leader&gt;</code> c’est une touche définie pour faire certaines actions. Par défaut il s’agit de la touche <code class="highlighter-rouge">\</code>mais vous pouvez évidemment la remapper. J’utilise la touche <code class="highlighter-rouge">,</code> pour ma part grâce à : <code class="highlighter-rouge">let mapleader=","</code>.</p>
+<p>Et dans votre <code>.vimrc</code> : <code>filetype plugin on</code>
+aintenant, en faisant <code>&lt;Leader&gt;cc</code> que ce soit dans un fichier html, java, python, shell etc. la ligne se mettra en commentaire. Vous pouvez aussi le faire après avoir sélectionné plusieurs lignes.
+Si vous vous demandez ce qu’est la touche <code>&lt;Leader&gt;</code> c’est une touche définie pour faire certaines actions. Par défaut il s’agit de la touche <code>\</code>mais vous pouvez évidemment la remapper. J’utilise la touche <code>,</code> pour ma part grâce à : <code>let mapleader=","</code>.</p>
 
 <div style="text-align: center;margin:50px;">
 <video style="width: 90%; max-width: 600px;" controls="" src="/videos/dotfiles-comment.webm"></video>
@@ -250,10 +240,9 @@ Si vous vous demandez ce qu’est la touche <code class="highlighter-rouge">&lt;
 
 <p>Si vous aimez vim et IntelliJ, vous pouvez installer le plugin ideavim qui permet d’avoir vim comme éditeur de texte et depuis quelques mois vous pouvez même importer vos settings vim dans le plugin :</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$ cat ~/.ideavimrc
+<pre><code>$ cat ~/.ideavimrc
 source ~/.vimrc
 </code></pre>
-</div>
 
                 </div>
 <div class="share">
@@ -362,7 +351,7 @@ L'article vous a plu ? Partagez-le :
         <div class="row">
             <div class="footer-under">
                 Made with <i class="fa fa-heart"></i> in Tours -
-                © 2016 Code-Troopers - Tous droits réservés
+              © 2016 Code-Troopers - Tous droits réservés
             </div>
         </div>
     </div>

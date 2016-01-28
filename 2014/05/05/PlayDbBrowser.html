@@ -25,10 +25,10 @@
         
         <meta name="viewport" content="width=device-width">
 
-        <link rel="stylesheet" href="/styles/style-df692d982e.css">
-     
+        <link rel="stylesheet" href="/styles/style-9089a70539.css">
+
         <!--[if lt IE 9]>
-                <script src="/js/ie8-0a07727802.js"></script>           
+                <script src="/js/ie8-0a07727802.js"></script>
         <![endif]-->
         <meta itemprop="name" content="CT-CDGT"/>
         <meta itemprop="name" content="CT-RMLC"/>
@@ -107,8 +107,8 @@ En plus dès que l’on commence un peu à jouer, créer des entités, faire une
 En effet, pas besoin de monter un serveur sql ou autre, par défaut tout se passe dans une base en mémoire (ce qui signifie aussi, que lorsque le serveur est arrêté les datas disparaissent).
 Et forcément la question universelle est “Mais comment je peux voir ces ***** de data en base ?”.</p>
 
-<p>La solution est simple, elle réside dans une commande <code class="highlighter-rouge">h2-browser</code>.
-Mais pour pouvoir l’utiliser, il va falloir se discipliner un tout petit peu. En effet, si vous aviez l’habitude de faire des <code class="highlighter-rouge">play run</code> pour lancer le serveur et des <code class="highlighter-rouge">ctrl-D</code> pour l’arrêter, il va falloir changer de méthode.</p>
+<p>La solution est simple, elle réside dans une commande <code>h2-browser</code>.
+Mais pour pouvoir l’utiliser, il va falloir se discipliner un tout petit peu. En effet, si vous aviez l’habitude de faire des <code>play run</code> pour lancer le serveur et des <code>ctrl-D</code> pour l’arrêter, il va falloir changer de méthode.</p>
 
 <p>La procédure miracle est donc la suivante :</p>
 
@@ -116,19 +116,19 @@ Mais pour pouvoir l’utiliser, il va falloir se discipliner un tout petit peu. 
   <li>lancer la console play</li>
 </ul>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">    <span class="nv">$ </span>play</code></pre></figure>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>play</code></pre></div>
 
 <ul>
   <li>lancer le visualiseur de bdd (qui ouvre une fenêtre dans votre navigateur web)</li>
 </ul>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">    <span class="nv">$ </span>h2-browser</code></pre></figure>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>h2-browser</code></pre></div>
 
 <ul>
   <li>démarrer votre serveur.</li>
 </ul>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">    <span class="nv">$ </span>run</code></pre></figure>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>run</code></pre></div>
 
 <p>Lorsqu’il se lance h2-browser devrait vous présenter une fenêtre de connexion comme celle-ci :</p>
 
@@ -143,17 +143,16 @@ Mais pour pouvoir l’utiliser, il va falloir se discipliner un tout petit peu. 
 <p>Il faut donc modifier les champs <em>jdbc</em>, <em>login</em>, <em>password</em>.
 Pour cela allez chercher dans <strong>application.conf</strong> (normalement situé dans le répertoire <em>/conf/</em> de votre projet) et trouvez les champs suivants</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>db.default.url="jdbc:h2:mem:play"
+<pre><code>db.default.url="jdbc:h2:mem:play"
 db.default.user=sa
 db.default.password=
 </code></pre>
-</div>
 
 <p>ce sont les 3 valeurs à recopier dans la fenêtre de connexion.</p>
 
 <p>Et voilà le tour est joué, c’est tout de même sympa d’être sûr de ce que l’on a en base.</p>
 
-<p><em>NB</em> : Il faut absolument faire le <code class="highlighter-rouge">run</code> avant de se connecter à la base de donnée, sinon celle-ci sera lockée lors de la connexion par h2-broswer et l’application play ne pourra pas s’y connecter.</p>
+<p><em>NB</em> : Il faut absolument faire le <code>run</code> avant de se connecter à la base de donnée, sinon celle-ci sera lockée lors de la connexion par h2-broswer et l’application play ne pourra pas s’y connecter.</p>
 
                 </div>
 <div class="share">
@@ -262,7 +261,7 @@ L'article vous a plu ? Partagez-le :
         <div class="row">
             <div class="footer-under">
                 Made with <i class="fa fa-heart"></i> in Tours -
-                © 2016 Code-Troopers - Tous droits réservés
+              © 2016 Code-Troopers - Tous droits réservés
             </div>
         </div>
     </div>

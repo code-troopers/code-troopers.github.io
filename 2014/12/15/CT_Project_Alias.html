@@ -25,10 +25,10 @@
         
         <meta name="viewport" content="width=device-width">
 
-        <link rel="stylesheet" href="/styles/style-df692d982e.css">
-     
+        <link rel="stylesheet" href="/styles/style-9089a70539.css">
+
         <!--[if lt IE 9]>
-                <script src="/js/ie8-0a07727802.js"></script>           
+                <script src="/js/ie8-0a07727802.js"></script>
         <![endif]-->
         <meta itemprop="name" content="CT-CDGT"/>
         <meta itemprop="name" content="CT-RMLC"/>
@@ -97,7 +97,7 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
                 </ul>
                 <div class="content">
                     <p>Dans l’équipe Code-Troopers, nous manipulons des technos qui sont assez différentes et qui possèdent chacune un vocabulaire différent qui leur permet de fonctionner en ligne de commande.
-Du coup, un de nos problèmes récurrents est de se rappeler quelle commande dois-je lancer lorsque je veux travailler sur tel projet (<code class="highlighter-rouge">mvn jetty:run</code>, <code class="highlighter-rouge">gradle assemble</code>, <code class="highlighter-rouge">grunt serve</code>…).</p>
+Du coup, un de nos problèmes récurrents est de se rappeler quelle commande dois-je lancer lorsque je veux travailler sur tel projet (<code>mvn jetty:run</code>, <code>gradle assemble</code>, <code>grunt serve</code>…).</p>
 
 <p>Un autre aspect pénible à avoir plein de façons différentes de fonctionner est qu’il est quasiment impossible d’avoir des alias pertinents dans son shell préféré.</p>
 
@@ -105,9 +105,9 @@ Du coup, un de nos problèmes récurrents est de se rappeler quelle commande doi
 <!--break--></p>
 
 <h2 id="quest-ce-que-cest-">Qu’est ce que c’est ?</h2>
-<p>Imaginez que pour chaque projet vous n’ayiez qu’à remplir un fichier (à la façon de votre <code class="highlighter-rouge">.gitignore</code>) pour définir les différentes tâches disponibles. Une fois ceci fait, les autres développeurs n’ont plus à se soucier des tâches à lancer, ils peuvent se contenter d’utiliser le vocabulaire commun, de se placer dans le répertoire du projet et de lancer la commande <code class="highlighter-rouge">ct run</code> au lieu de <code class="highlighter-rouge">mvn jetty:run</code> (et s’ils veulent connaître la liste des tâches disponibles ils le peuvent via un <code class="highlighter-rouge">ct help</code>).</p>
+<p>Imaginez que pour chaque projet vous n’ayiez qu’à remplir un fichier (à la façon de votre <code>.gitignore</code>) pour définir les différentes tâches disponibles. Une fois ceci fait, les autres développeurs n’ont plus à se soucier des tâches à lancer, ils peuvent se contenter d’utiliser le vocabulaire commun, de se placer dans le répertoire du projet et de lancer la commande <code>ct run</code> au lieu de <code>mvn jetty:run</code> (et s’ils veulent connaître la liste des tâches disponibles ils le peuvent via un <code>ct help</code>).</p>
 
-<p>Encore mieux, puisque les commandes sont normalisées, vous pouvez directement exporter vos alias qui accélèrent encore l’utilisation (<code class="highlighter-rouge">run</code> pour <code class="highlighter-rouge">ct run</code>), et bingo, c’est transverse pour tous vos projets.</p>
+<p>Encore mieux, puisque les commandes sont normalisées, vous pouvez directement exporter vos alias qui accélèrent encore l’utilisation (<code>run</code> pour <code>ct run</code>), et bingo, c’est transverse pour tous vos projets.</p>
 
 <h2 id="comment-a-marche-">Comment ça marche ?</h2>
 <p>Le tout est un bête script shell qui utilise quelques commandes de base et quelques outils indispensables à tout développeur.</p>
@@ -126,35 +126,33 @@ Du coup, un de nos problèmes récurrents est de se rappeler quelle commande doi
 
 <p>Référez-vous au <a href="https://github.com/code-troopers/ct/blob/master/README.md">README</a> présent sur le dépôt <a href="https://github.com/code-troopers/ct/">Github</a>.</p>
 
-<p>Pour résumer il est juste nécessaire de placer une copie du script dans votre <code class="highlighter-rouge">$PATH</code>.</p>
+<p>Pour résumer il est juste nécessaire de placer une copie du script dans votre <code>$PATH</code>.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>CT_TARGET=~/bin;mkdir $CT_TARGET; wget -O $CT_TARGET/ct https://raw.githubusercontent.com/code-troopers/ct/master/ct &amp;&amp; chmod +x $CT_TARGET/ct
+<pre><code>CT_TARGET=~/bin;mkdir $CT_TARGET; wget -O $CT_TARGET/ct https://raw.githubusercontent.com/code-troopers/ct/master/ct &amp;&amp; chmod +x $CT_TARGET/ct
 </code></pre>
-</div>
 
 <h3 id="intgration-dans-un-projet">Intégration dans un projet</h3>
-<p>Créez à la racine un fichier nommé <code class="highlighter-rouge">.ctproject</code> qui va contenir vos alias</p>
+<p>Créez à la racine un fichier nommé <code>.ctproject</code> qui va contenir vos alias</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>run=’mvn jetty:run’
+<pre><code>run=’mvn jetty:run’
 debug=’mvn jetty:dbg’
 test=’mvn test’
 </code></pre>
-</div>
 
 <p>L’idéal étant de le faire au démarrage du projet, plus de questions à se poser ultérieurement</p>
 
 <h3 id="utilisation-dans-un-projet">Utilisation dans un projet</h3>
 
-<p>Il suffit de lancer la commande qui correspond à un alias (par exemple ici : <code class="highlighter-rouge">ct run</code>, <code class="highlighter-rouge">ct debug</code> ou <code class="highlighter-rouge">ct test</code>, ou d’exécuter <code class="highlighter-rouge">ct help</code> pour avoir la liste des alias disponibles).</p>
+<p>Il suffit de lancer la commande qui correspond à un alias (par exemple ici : <code>ct run</code>, <code>ct debug</code> ou <code>ct test</code>, ou d’exécuter <code>ct help</code> pour avoir la liste des alias disponibles).</p>
 
 <h3 id="tuning-sur-plusieurs-projets">Tuning sur plusieurs projets</h3>
 
-<p>En définissant votre nomenclature d’alias par projet, vous pourrez vous permettre d’exporter des alias globaux sur vos machines pour appeler <code class="highlighter-rouge">ct</code>.</p>
+<p>En définissant votre nomenclature d’alias par projet, vous pourrez vous permettre d’exporter des alias globaux sur vos machines pour appeler <code>ct</code>.</p>
 
 <h2 id="bonus--lister-les-ports-ouverts">Bonus : lister les ports ouverts</h2>
 <p>Puisque nous jonglons souvent entre projets, un autres soucis que nous avons est que nous oublions les ports ouverts pour chacun des projets. En plus, nous avons souvent plusieurs projets de démarrés sans même nous rappeler qu’ils le sont (surtout avec les projets légers REST/AngularJS).</p>
 
-<p>Nous avons donc rajouté la commande <code class="highlighter-rouge">ct ports</code> qui démarre un micro serveur http et permet de récupérer la liste des ports qui attendent des connexions sur nos machines, ainsi que le dossier de travail associé (ce qui est souvent suffisant pour savoir de quel projet il s’agit).</p>
+<p>Nous avons donc rajouté la commande <code>ct ports</code> qui démarre un micro serveur http et permet de récupérer la liste des ports qui attendent des connexions sur nos machines, ainsi que le dossier de travail associé (ce qui est souvent suffisant pour savoir de quel projet il s’agit).</p>
 
 <div style="text-align:center;">
     <a href="/images/postCT/listen.png" title="Exemple de listing des ports" data-lightbox="group1">
@@ -280,7 +278,7 @@ L'article vous a plu ? Partagez-le :
         <div class="row">
             <div class="footer-under">
                 Made with <i class="fa fa-heart"></i> in Tours -
-                © 2016 Code-Troopers - Tous droits réservés
+              © 2016 Code-Troopers - Tous droits réservés
             </div>
         </div>
     </div>

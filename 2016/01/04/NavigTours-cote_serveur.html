@@ -25,10 +25,10 @@
         
         <meta name="viewport" content="width=device-width">
 
-        <link rel="stylesheet" href="/styles/style-df692d982e.css">
-     
+        <link rel="stylesheet" href="/styles/style-9089a70539.css">
+
         <!--[if lt IE 9]>
-                <script src="/js/ie8-0a07727802.js"></script>           
+                <script src="/js/ie8-0a07727802.js"></script>
         <![endif]-->
         <meta itemprop="name" content="CT-CDGT"/>
         <meta itemprop="name" content="CT-RMLC"/>
@@ -125,7 +125,7 @@ C’est également le projet que nous utilisons pour tester certaines technologi
 
 <h2 id="du-dev">Du dev…</h2>
 <p>Côté dev, nous utilisons notre petit wrapper (<a href="http://code-troopers.com/2014/12/15/CT_Project_Alias.html">ct</a>) pour les tâches classiques qui se charge d’effectuer le build ainsi que le run de l’application avec ses dépendances.
-Le lancement de l’application se limite à mettre à disposition un serveur MongoDB ainsi qu’à effectuer un <code class="highlighter-rouge">java -jar</code>.</p>
+Le lancement de l’application se limite à mettre à disposition un serveur MongoDB ainsi qu’à effectuer un <code>java -jar</code>.</p>
 
 <h2 id="la-prod-">À la prod !</h2>
 <p>Historiquement, l’application a été déployée sur Heroku dans son plan gratuit en utilisant plusieurs services cibles (pour répartir la charge via l’utilisation de plusieurs entrées DNS).</p>
@@ -135,12 +135,12 @@ Le lancement de l’application se limite à mettre à disposition un serveur Mo
 <p>Un des intérêts de la transformation que nous avons opéré est que nous sommes également capable de lancer l’application très simplement à l’aide de descripteurs Docker ainsi que du docker-compose qui décrit les interactions entre nos services.</p>
 
 <h2 id="process-de-livraison">Process de livraison</h2>
-<p>Pour effectuer la livraison de l’application, nous sommes passés d’un <code class="highlighter-rouge">git push</code> vers heroku à un process impliquant Jenkins dans 3 étapes successives (mais qui s’enchaînent automatiquement) :</p>
+<p>Pour effectuer la livraison de l’application, nous sommes passés d’un <code>git push</code> vers heroku à un process impliquant Jenkins dans 3 étapes successives (mais qui s’enchaînent automatiquement) :</p>
 
 <ul>
-  <li>construction de l’application et archivage dans un <code class="highlighter-rouge">tgz</code></li>
+  <li>construction de l’application et archivage dans un <code>tgz</code></li>
   <li>copie du tgz produit pour la construction d’une image Docker poussée vers notre dépôt interne</li>
-  <li>lancement de l’application via un <code class="highlighter-rouge">docker-compose run -d</code> sur les machines cibles</li>
+  <li>lancement de l’application via un <code>docker-compose run -d</code> sur les machines cibles</li>
 </ul>
 
 <h2 id="gestion-du-multi-environnement">Gestion du multi-environnement</h2>
@@ -262,7 +262,7 @@ L'article vous a plu ? Partagez-le :
         <div class="row">
             <div class="footer-under">
                 Made with <i class="fa fa-heart"></i> in Tours -
-                © 2016 Code-Troopers - Tous droits réservés
+              © 2016 Code-Troopers - Tous droits réservés
             </div>
         </div>
     </div>

@@ -25,10 +25,10 @@
         
         <meta name="viewport" content="width=device-width">
 
-        <link rel="stylesheet" href="/styles/style-df692d982e.css">
-     
+        <link rel="stylesheet" href="/styles/style-9089a70539.css">
+
         <!--[if lt IE 9]>
-                <script src="/js/ie8-0a07727802.js"></script>           
+                <script src="/js/ie8-0a07727802.js"></script>
         <![endif]-->
         <meta itemprop="name" content="CT-CDGT"/>
         <meta itemprop="name" content="CT-RMLC"/>
@@ -105,14 +105,14 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 <h2 id="donnez-moi-un-shell-">Donnez moi un shell !</h2>
 <p>Bien sûr, la plupart d’entre vous connaîssent Cygwin, qui permet de résoudre bien des problèmes, mais qui en créé aussi un paquet avant d’avoir une installation complète et qui fonctionne comme attendu.</p>
 
-<p>Heureusement,  <a href="https://twitter.com/tombujok">Tom Bujok</a> s’est penché sur le souci et a pris le temps de faire une configuration aux petits oignons d’un Cygwin complet, avec <code class="highlighter-rouge">zsh</code> et <code class="highlighter-rouge">oh-my-zsh</code> pour avoir une bonne configuration. De plus, pour faire comme si on était sous un unix, on a même un package manager qui permet d’installer les outils nécessaires.</p>
+<p>Heureusement,  <a href="https://twitter.com/tombujok">Tom Bujok</a> s’est penché sur le souci et a pris le temps de faire une configuration aux petits oignons d’un Cygwin complet, avec <code>zsh</code> et <code>oh-my-zsh</code> pour avoir une bonne configuration. De plus, pour faire comme si on était sous un unix, on a même un package manager qui permet d’installer les outils nécessaires.</p>
 
 <h2 id="installation-et-configuration">Installation et configuration</h2>
-<p>Il suffit de récupérer le zip sur le site officiel <a href="http://babun.github.io/">http://babun.github.io</a> de le dézipper et de lancer le script <code class="highlighter-rouge">install.bat</code>. Ce qui est bien, c’est qu’il est possible de lancer le script d’installation et donc d’utiliser babun sans disposer des droits d’administrateur sur sa machine.</p>
+<p>Il suffit de récupérer le zip sur le site officiel <a href="http://babun.github.io/">http://babun.github.io</a> de le dézipper et de lancer le script <code>install.bat</code>. Ce qui est bien, c’est qu’il est possible de lancer le script d’installation et donc d’utiliser babun sans disposer des droits d’administrateur sur sa machine.</p>
 
 <p>Une fois la <em>longue</em> installation terminée, vous disposez d’un shell bien configuré avec la plupart des outils nécessaires bien configurés.</p>
 
-<p>Cependant vous voudrez certainement personnaliser votre environnement avec quelques alias. Pour ceci, il suffit de créer un fichier contenant vos alias dans <code class="highlighter-rouge">~/.oh-my-zsh/custom/aliases.zsh</code> (le nom est libre, le fichier doit porter l’extension  <code class="highlighter-rouge">zsh</code> pour qu’il soit automatiquement chargé). Il ne s’agit ni plus ni moins de la configuration permise par oh-my-zsh (vous pouvez vous référer <a href="/2014/09/17/ohMyZsh.html">à cet article</a> pour plus de détails)</p>
+<p>Cependant vous voudrez certainement personnaliser votre environnement avec quelques alias. Pour ceci, il suffit de créer un fichier contenant vos alias dans <code>~/.oh-my-zsh/custom/aliases.zsh</code> (le nom est libre, le fichier doit porter l’extension  <code>zsh</code> pour qu’il soit automatiquement chargé). Il ne s’agit ni plus ni moins de la configuration permise par oh-my-zsh (vous pouvez vous référer <a href="/2014/09/17/ohMyZsh.html">à cet article</a> pour plus de détails)</p>
 
 <div style="text-align:center;margin:50px">
  <a style="display: inline" href="/images/postBabun/babun.png" data-lightbox="image-0" title="Babun et tmux">
@@ -121,13 +121,12 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 </div>
 
 <h2 id="conseils-pratiques">Conseils pratiques</h2>
-<p>Depuis quelques temps, nous sommes quelques membres de l’équipe à <strong>devoir</strong> travailler  sous Windows. Nous avons rapidement ajouté <code class="highlighter-rouge">tmux</code> à la liste des outils indispensables (la gestion des terminaux Windows n’étant pas optimale) ainsi que <code class="highlighter-rouge">irssi</code> en tant que client IRC.</p>
+<p>Depuis quelques temps, nous sommes quelques membres de l’équipe à <strong>devoir</strong> travailler  sous Windows. Nous avons rapidement ajouté <code>tmux</code> à la liste des outils indispensables (la gestion des terminaux Windows n’étant pas optimale) ainsi que <code>irssi</code> en tant que client IRC.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$ pact install tmux irssi
+<pre><code>$ pact install tmux irssi
 </code></pre>
-</div>
 
-<p>Puisque c’est ni plus ni moins qu’une installation de Cygwin, l’accès à vos disque se fera par le montage <code class="highlighter-rouge">/cygdrive/c/</code> pour le disque <code class="highlighter-rouge">C:</code> par exemple. Veuillez noter également que l’emplacement de votre <code class="highlighter-rouge">home</code> sera en fait <code class="highlighter-rouge">/cygdrive/c/Users/$USER/.babun/cygwin/home/$USER</code></p>
+<p>Puisque c’est ni plus ni moins qu’une installation de Cygwin, l’accès à vos disque se fera par le montage <code>/cygdrive/c/</code> pour le disque <code>C:</code> par exemple. Veuillez noter également que l’emplacement de votre <code>home</code> sera en fait <code>/cygdrive/c/Users/$USER/.babun/cygwin/home/$USER</code></p>
 
 <p>Maintenant, vous serez presque aussi productifs sous Windows que sous un système “agréable” !</p>
 
@@ -238,7 +237,7 @@ L'article vous a plu ? Partagez-le :
         <div class="row">
             <div class="footer-under">
                 Made with <i class="fa fa-heart"></i> in Tours -
-                © 2016 Code-Troopers - Tous droits réservés
+              © 2016 Code-Troopers - Tous droits réservés
             </div>
         </div>
     </div>

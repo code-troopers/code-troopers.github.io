@@ -25,10 +25,10 @@
         
         <meta name="viewport" content="width=device-width">
 
-        <link rel="stylesheet" href="/styles/style-df692d982e.css">
-     
+        <link rel="stylesheet" href="/styles/style-9089a70539.css">
+
         <!--[if lt IE 9]>
-                <script src="/js/ie8-0a07727802.js"></script>           
+                <script src="/js/ie8-0a07727802.js"></script>
         <![endif]-->
         <meta itemprop="name" content="CT-CDGT"/>
         <meta itemprop="name" content="CT-RMLC"/>
@@ -131,7 +131,7 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 
 <p>Avec Docker bien sûr, il faut au préalable s’être créé un compte sur le site New Relic pour obtenir l’accès à l’interface et pouvoir se créer une clé (à remplacer dans la ligne de commande suivante).</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>docker run -d \
+<pre><code>docker run -d \
 	--privileged=true --name newrelic
 	--pid=host \
 	--net=host \
@@ -144,7 +144,6 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 	-e NRSYSMOND_logfile=/var/log/nrsysmond.log \
 	newrelic/nrsysmond:latest
 </code></pre>
-</div>
 
 <p>Vous trouverez toutes les informations <a href="https://hub.docker.com/r/newrelic/nrsysmond/">ici</a>.</p>
 
@@ -255,7 +254,7 @@ L'article vous a plu ? Partagez-le :
         <div class="row">
             <div class="footer-under">
                 Made with <i class="fa fa-heart"></i> in Tours -
-                © 2016 Code-Troopers - Tous droits réservés
+              © 2016 Code-Troopers - Tous droits réservés
             </div>
         </div>
     </div>

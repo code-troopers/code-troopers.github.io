@@ -25,10 +25,10 @@
         
         <meta name="viewport" content="width=device-width">
 
-        <link rel="stylesheet" href="/styles/style-df692d982e.css">
-     
+        <link rel="stylesheet" href="/styles/style-9089a70539.css">
+
         <!--[if lt IE 9]>
-                <script src="/js/ie8-0a07727802.js"></script>           
+                <script src="/js/ie8-0a07727802.js"></script>
         <![endif]-->
         <meta itemprop="name" content="CT-CDGT"/>
         <meta itemprop="name" content="CT-RMLC"/>
@@ -122,7 +122,7 @@ Si ce n’est pas le cas, vous pouvez vous reposer sur la <a href="http://tools.
 
 <p>La première étape consiste à créer un compte qui peut utilser l’API de Google : contrairement à un compte utilisateur classique, celui-ci utilisera un ficher de clé pour s’identifier plutôt qu’un mot de passe.</p>
 
-<p>Pour cela, rendez-vous dans un premier temps dans l’interface développeur du Play Store, dans la section <code class="highlighter-rouge">Settings &gt; API acces</code> et cliquez sur <code class="highlighter-rouge">Create Service Account</code>.</p>
+<p>Pour cela, rendez-vous dans un premier temps dans l’interface développeur du Play Store, dans la section <code>Settings &gt; API acces</code> et cliquez sur <code>Create Service Account</code>.</p>
 
 <div style="text-align:center;margin:50px">
   <a href="/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_ConfigureAccount_Screen1.png" data-lightbox="group-1" title="Configuration de l'Accout service - 1" class="inlineBoxes">
@@ -133,11 +133,11 @@ Si ce n’est pas le cas, vous pouvez vous reposer sur la <a href="http://tools.
   </a>
 </div>
 
-<p>En suivant le lien du petit <code class="highlighter-rouge">1</code> vous allez être redirigé vers la console Google développeur d’où vous pourrez créer un nouveau <code class="highlighter-rouge">Credential</code>  de type <code class="highlighter-rouge">Service account</code>.</p>
+<p>En suivant le lien du petit <code>1</code> vous allez être redirigé vers la console Google développeur d’où vous pourrez créer un nouveau <code>Credential</code>  de type <code>Service account</code>.</p>
 
-<p>Sélectionnez le format de clé <code class="highlighter-rouge">JSON</code> qui est recommandé, le téléchargement de celle-ci devrait alors se faire automatiquement.</p>
+<p>Sélectionnez le format de clé <code>JSON</code> qui est recommandé, le téléchargement de celle-ci devrait alors se faire automatiquement.</p>
 
-<p>On peut ensuite voir qu’un nouveau <code class="highlighter-rouge">Service account</code> est apparu dans la liste des Credentials.</p>
+<p>On peut ensuite voir qu’un nouveau <code>Service account</code> est apparu dans la liste des Credentials.</p>
 
 <div style="text-align:center;margin:50px">
   <a href="/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_ConfigureAccount_Screen3.png" data-lightbox="group-1" title="Configuration de l'Accout service - 3" class="inlineBoxes">
@@ -151,7 +151,7 @@ Si ce n’est pas le cas, vous pouvez vous reposer sur la <a href="http://tools.
   </a>
 </div>
 
-<p>De retour sur l’interface d’admin du Play Store, on constate que le <code class="highlighter-rouge">Service Account</code> est bien créé et disponible ici.</p>
+<p>De retour sur l’interface d’admin du Play Store, on constate que le <code>Service Account</code> est bien créé et disponible ici.</p>
 
 <div style="text-align:center;margin:50px">
   <a href="/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_ConfigureAccount_Screen6.png" data-lightbox="group-1" title="Configuration de l'Accout service - 6" class="inlineBoxes">
@@ -162,7 +162,7 @@ Si ce n’est pas le cas, vous pouvez vous reposer sur la <a href="http://tools.
 <h2 id="tape-2--attribution-des-droits">Étape 2 : Attribution des droits</h2>
 <p>Il faut maintenant donner les droits au compte que l’on vient de créer afin qu’il puisse au moins livrer les apk en alpha.</p>
 
-<p>Pour cela cliquez sur le bouton <code class="highlighter-rouge">Grant access</code>. Dans la popup qui s’ouvre, les droits minimums à accorder pour que le plugin puisse fonctionnner sont :</p>
+<p>Pour cela cliquez sur le bouton <code>Grant access</code>. Dans la popup qui s’ouvre, les droits minimums à accorder pour que le plugin puisse fonctionnner sont :</p>
 
 <ul>
   <li>Edit store listing, pricing &amp; distribution</li>
@@ -185,9 +185,9 @@ Si ce n’est pas le cas, vous pouvez vous reposer sur la <a href="http://tools.
 <h2 id="tape-3--le-plugin-gradle">Étape 3 : le plugin gradle</h2>
 <p>Il faut maintenant configurer son build pour ajouter les informations relatives au plugin qui effectuera la livraison vers le Play Store.</p>
 
-<p>Dans le fichier <code class="highlighter-rouge">build.gradle</code> du projet il faut donc rajouter la dépendance au plugin :</p>
+<p>Dans le fichier <code>build.gradle</code> du projet il faut donc rajouter la dépendance au plugin :</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>buildscript {
+<pre><code>buildscript {
 
     repositories {
         mavenCentral()
@@ -199,27 +199,24 @@ Si ce n’est pas le cas, vous pouvez vous reposer sur la <a href="http://tools.
     }
 }
 </code></pre>
-</div>
 
-<p>Et dans le <code class="highlighter-rouge">build.gradle</code> de l’application (du Module), il faut appliquer le plugin au même niveau que le plugin Android :</p>
+<p>Et dans le <code>build.gradle</code> de l’application (du Module), il faut appliquer le plugin au même niveau que le plugin Android :</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>apply plugin: 'com.android.application'
+<pre><code>apply plugin: 'com.android.application'
 apply plugin: 'com.github.triplet.play'
 </code></pre>
-</div>
 
-<p>Ensuite, toujours dans le <code class="highlighter-rouge">build.gradle</code>, il est nécessaire d’ajouter les informations de l’<code class="highlighter-rouge">Account service</code> précédemment créé pour qu’il puisse se connecter et faire la livraison 
-(c’est là que l’on va utiliser la clé <code class="highlighter-rouge">JSON</code> générée).</p>
+<p>Ensuite, toujours dans le <code>build.gradle</code>, il est nécessaire d’ajouter les informations de l’<code>Account service</code> précédemment créé pour qu’il puisse se connecter et faire la livraison 
+(c’est là que l’on va utiliser la clé <code>JSON</code> générée).</p>
 
 <p>Placez donc la clé dans votre projet et faites-y référence dans la configuration du plugin :</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>play {
+<pre><code>play {
     jsonFile = file('../publishKey/serviceAccountKeys.json')
 }
 </code></pre>
-</div>
 
-<p>À partir de là, notre build est configuré. On peut notamment s’en rendre compte en faisant un <code class="highlighter-rouge">./gradlew tasks</code></p>
+<p>À partir de là, notre build est configuré. On peut notamment s’en rendre compte en faisant un <code>./gradlew tasks</code></p>
 
 <p>On y voit toutes les tâches gradle qu’on peut appeler :</p>
 
@@ -232,10 +229,10 @@ apply plugin: 'com.github.triplet.play'
   </a>
 </div>
 
-<p>Mais ce n’est pas suffisant car il manque notamment les tâches permettant l’upload de l’apk. Pour cela il faut rajouter la <code class="highlighter-rouge">signingConfigs</code> dans le <code class="highlighter-rouge">build.gradle</code>.
+<p>Mais ce n’est pas suffisant car il manque notamment les tâches permettant l’upload de l’apk. Pour cela il faut rajouter la <code>signingConfigs</code> dans le <code>build.gradle</code>.
 Ce qui peut notamment se faire comme ça :</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>    signingConfigs {
+<pre><code>    signingConfigs {
         release {
             storeFile file("../keystore.jks")
             storePassword "7r00p3r5"
@@ -250,9 +247,8 @@ Ce qui peut notamment se faire comme ça :</p>
         }
     }
 </code></pre>
-</div>
 
-<p>Maintenant, on peut voir la présence de la tâche qui nous intéresse : <code class="highlighter-rouge">publishApkRelease</code></p>
+<p>Maintenant, on peut voir la présence de la tâche qui nous intéresse : <code>publishApkRelease</code></p>
 
 <div style="text-align:center;margin:50px">
   <a href="/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_Gradlew_tasks_config_complete.png" data-lightbox="group-1" title="Liste des tasks gradle disponibles avec upload apk" class="inlineBoxes">
@@ -262,13 +258,12 @@ Ce qui peut notamment se faire comme ça :</p>
 
 <h2 id="tape-4--gnration-et-upload">Étape 4 : génération et upload</h2>
 
-<p>Pour effectuer un upload de l’apk il suffit maintenant d’appeler la tâche <code class="highlighter-rouge">publishApkRelease</code>. Et pas besoin de générer l’apk signé via Android Studio puisque comme tout est configuré, il sera généré dans les tâches précédent l’uploadApk.</p>
+<p>Pour effectuer un upload de l’apk il suffit maintenant d’appeler la tâche <code>publishApkRelease</code>. Et pas besoin de générer l’apk signé via Android Studio puisque comme tout est configuré, il sera généré dans les tâches précédent l’uploadApk.</p>
 
 <p>Si tout se passe bien le build se termine avec un :</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>BUILD SUCCESSFUL
+<pre><code>BUILD SUCCESSFUL
 </code></pre>
-</div>
 
 <p>Si il y a un problème lors de l’updload, il est affiché dans la console, par exemple si le <strong>version code</strong> est déjà utilisé</p>
 
@@ -280,7 +275,7 @@ Ce qui peut notamment se faire comme ça :</p>
 
 <p>Ensuite vous pouvez vous rendre sur l’interface d’admin du Play Store et constater que l’upload d’un nouvel apk a bien eu lieu en alpha et le passer en bêta ou en production.</p>
 
-<p><strong>Attention</strong> : ne pas commiter la clé <code class="highlighter-rouge">JSON</code> sur github, au même titre que le mot de passe du <code class="highlighter-rouge">keystore</code>.</p>
+<p><strong>Attention</strong> : ne pas commiter la clé <code>JSON</code> sur github, au même titre que le mot de passe du <code>keystore</code>.</p>
 
 <h2 id="pour-aller-plus-loin">Pour aller plus loin</h2>
 
@@ -397,7 +392,7 @@ L'article vous a plu ? Partagez-le :
         <div class="row">
             <div class="footer-under">
                 Made with <i class="fa fa-heart"></i> in Tours -
-                © 2016 Code-Troopers - Tous droits réservés
+              © 2016 Code-Troopers - Tous droits réservés
             </div>
         </div>
     </div>

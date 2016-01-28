@@ -25,10 +25,10 @@
         
         <meta name="viewport" content="width=device-width">
 
-        <link rel="stylesheet" href="/styles/style-df692d982e.css">
-     
+        <link rel="stylesheet" href="/styles/style-9089a70539.css">
+
         <!--[if lt IE 9]>
-                <script src="/js/ie8-0a07727802.js"></script>           
+                <script src="/js/ie8-0a07727802.js"></script>
         <![endif]-->
         <meta itemprop="name" content="CT-CDGT"/>
         <meta itemprop="name" content="CT-RMLC"/>
@@ -104,25 +104,23 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 
 <p>Si vous utilisez git, vous avez forcément fait des commandes de base pour rentrer votre nom et votre email (indispensable pour pusher vos commits)</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$ git config --global user.name "Jango Fett" 
+<pre><code>$ git config --global user.name "Jango Fett" 
 $ git config --global user.email "jango.fett@code-troopers.com"
 </code></pre>
-</div>
 
 <p>Ceci a pour but d’écrire dans votre fichier ~/.gitconfig ces simples lignes :</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>[user]
+<pre><code>[user]
     name = Jango Fett
     email = jango.fett@code-troopers.com
 </code></pre>
-</div>
 
 <!--break-->
 
 <h1 id="un-peu-de-couleurs">Un peu de couleurs</h1>
 <p>C’est toujours important d’avoir de la couleur, ça donne bonne mine, ça rend joyeux mais surtout ça aide à la lisibilité. Dans les dernières version de git, la couleur est activée automatiquement, mais vous pouvez toujours la modifier ! Voici un exemple de configuration :</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>[color "branch"]
+<pre><code>[color "branch"]
     current = yellow reverse
     local = yellow
     remote = green
@@ -136,7 +134,6 @@ $ git config --global user.email "jango.fett@code-troopers.com"
     changed = green
     untracked = cyan
 </code></pre>
-</div>
 
 <div style="text-align:center;margin-bottom:50px">
     <a href="/images/postDotfilesGit/gitcolours.png" data-lightbox="group-1" title="git avec couleurs personnalisées" class="inlineBoxes">
@@ -145,35 +142,31 @@ $ git config --global user.email "jango.fett@code-troopers.com"
 </div>
 
 <h1 id="gitignore-global">gitignore global</h1>
-<p>Parfois vous arrivez dans un environnement où personne n’utilise IntelliJ, peut-être même que vous voulez cacher le fait que vous utilisez IDEA. Dans ce cas, pas besoin de commiter un .gitignore qui contient <code class="highlighter-rouge">.idea</code> et <code class="highlighter-rouge">*.iml</code> mettez le plutôt dans <code class="highlighter-rouge">~/.gitignore</code>. Pour que ça marche, vous devrez rajouter dans votre <code class="highlighter-rouge">~/.gitconfig</code> :</p>
+<p>Parfois vous arrivez dans un environnement où personne n’utilise IntelliJ, peut-être même que vous voulez cacher le fait que vous utilisez IDEA. Dans ce cas, pas besoin de commiter un .gitignore qui contient <code>.idea</code> et <code>*.iml</code> mettez le plutôt dans <code>~/.gitignore</code>. Pour que ça marche, vous devrez rajouter dans votre <code>~/.gitconfig</code> :</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>[core]
+<pre><code>[core]
     excludesfile = ~/.gitignore
 </code></pre>
-</div>
 
 <h1 id="j3-vim">J’&lt;3 vim</h1>
 <p>J’aime vim, alors je le met partout. Besoin d’un éditeur de texte pour les commits ? vim !</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>[core]
+<pre><code>[core]
     editor = vim
 </code></pre>
-</div>
 
 <p>Besoin d’un outil pour faire des diff ? vim !</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>[merge] 
+<pre><code>[merge] 
     tool = vimdiff
 </code></pre>
-</div>
 
 <h1 id="montre-nous-tes-fichiers">Montre-nous tes fichiers</h1>
-<p>Vous avez créé un nouveau répertoire, ajouté plein de fichiers dedans, et vous revenez en console pour voir ce qu’il y a à commiter. Soit un cas d’utilisation quotidien ou presque. Sauf que quand vous faîtes <code class="highlighter-rouge">git status</code> seul le répertoire apparaît et pas les fichiers à l’intérieur ! Pour y remédier :</p>
+<p>Vous avez créé un nouveau répertoire, ajouté plein de fichiers dedans, et vous revenez en console pour voir ce qu’il y a à commiter. Soit un cas d’utilisation quotidien ou presque. Sauf que quand vous faîtes <code>git status</code> seul le répertoire apparaît et pas les fichiers à l’intérieur ! Pour y remédier :</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>[status]
+<pre><code>[status]
     showUntrackedFiles = all
 </code></pre>
-</div>
 
 <div style="text-align:center;margin-bottom:50px">
     <a href="/images/postDotfilesGit/git-status.png" data-lightbox="group-1" title="git status coloré" class="inlineBoxes">
@@ -184,47 +177,43 @@ $ git config --global user.email "jango.fett@code-troopers.com"
 <h1 id="alias">Alias</h1>
 <p>Comme pour les shell, on peut créer des alias de commande. Par exemple :</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>[alias] 
+<pre><code>[alias] 
     cp = cherry-pick
     co = checkout
     cl = clone
     ci = commit 
     br = branch
 </code></pre>
-</div>
 
 <p>C’est plus rapide à taper… un peu, et encore faut s’en souvenir que cp ça fait cherry-pick. Mais certaines commandes sont longues et là ça devient encore plus pertinent :</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>    last = log -1 --stat
+<pre><code>    last = log -1 --stat
     st = status -sb
     unstage = reset HEAD --
     dc = diff --cached
     pr = pull --rebase
     lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %Cblue&lt;%an&gt;%Creset' --abbrev-commit --date=relative --all
 </code></pre>
-</div>
 
 <p>Je vous laisse essayer celles qui ne sont pas explicite ;)</p>
 
 <h1 id="les-hooks">Les Hooks</h1>
 <p>Il y a beaucoup d’options et de choses à faire mais je terminerai cet article avec les hooks, qui mériteraient peut-être à eux seuls un article. Un hook −qui se traduit par « crochet »− va intercepter une commande afin de réaliser une action. Par exemple, quand je lance la commande commit, je veux vérifier que tous les tests passent, ou quand je push, je veux mettre à jour automatiquement le ticket jira associé, on peut vraiment tout faire vu qu’il s’agit juste de scripts à rajouter.</p>
 
-<p>On a d’abord besoin de définir le répertoire qui va contenir les hooks. Vous pouvez ajouter dans votre <code class="highlighter-rouge">~/.gitconfig</code> :</p>
+<p>On a d’abord besoin de définir le répertoire qui va contenir les hooks. Vous pouvez ajouter dans votre <code>~/.gitconfig</code> :</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>[init]
+<pre><code>[init]
     templatedir = ~/.git_template
 </code></pre>
-</div>
 
-<p>Par exemple si vous voulez rajouter un script qui interdit de commiter <code class="highlighter-rouge">System.out.println</code>, vous pouvez créer ce fichier : <code class="highlighter-rouge">~/.git_template/hooks/pre-commit</code>
+<p>Par exemple si vous voulez rajouter un script qui interdit de commiter <code>System.out.println</code>, vous pouvez créer ce fichier : <code>~/.git_template/hooks/pre-commit</code>
 J’ai récupéré le mien sur https://github.com/borisguery/git-keywords-checker sur lequel j’ai juste modifié les deux variables KEYWORDS_REGEX et EXTENSIONS_REGEX. Ce qui donne grosso modo dans le fichier :</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>5 # Add or remove keywords here
+<pre><code>5 # Add or remove keywords here
 6 KEYWORDS_REGEX="printStackTrace\(|FIXME|TODO"
 7 # Add extensions to check here
 8 EXTENSIONS_REGEX="(.java$|.js$)" On interdit de commiter `printStackTrace(` ou `FIXME` ou `TODO` dans les fichiers `java` ou `js`.
 </code></pre>
-</div>
 
 <div style="text-align:center;margin-bottom:50px">
     <a href="/images/postDotfilesGit/git-hooks.png" data-lightbox="group-1" title="git hooks pre-commit en action" class="inlineBoxes">
@@ -232,13 +221,13 @@ J’ai récupéré le mien sur https://github.com/borisguery/git-keywords-checke
     </a>
 </div>
 
-<p>Oui ça paraît un peu violent d’interdire le commit de TODO et FIXME mais on peut passer outre en commitant avec l’option <code class="highlighter-rouge">--no-verify</code> et au moins on est au courant donc on n’oublie pas les actions nécessaires selon les équipes de travail (ajout d’un post-it, d’une carte trello etc.)</p>
+<p>Oui ça paraît un peu violent d’interdire le commit de TODO et FIXME mais on peut passer outre en commitant avec l’option <code>--no-verify</code> et au moins on est au courant donc on n’oublie pas les actions nécessaires selon les équipes de travail (ajout d’un post-it, d’une carte trello etc.)</p>
 
 <p>2 petits détails pour que ça marche :</p>
 
 <ul>
-  <li>Il faut que le script soit exécutable, donc vous pouvez faire <code class="highlighter-rouge">chmod +x ~/.git_template/hooks/pre-commit</code></li>
-  <li>Ce sera actif uniquement sur les nouveaux dépôts, pour activer le hook sur les dépôts existants, vous devez faire un <code class="highlighter-rouge">git init</code></li>
+  <li>Il faut que le script soit exécutable, donc vous pouvez faire <code>chmod +x ~/.git_template/hooks/pre-commit</code></li>
+  <li>Ce sera actif uniquement sur les nouveaux dépôts, pour activer le hook sur les dépôts existants, vous devez faire un <code>git init</code></li>
 </ul>
 
 <p>Si vous voulez d’autres exemples de hooks, vous pouvez commencer par jeter un œil aux hooks de <a href="https://github.com/petervanderdoes/git-flow-hooks">git-flow</a></p>
@@ -351,7 +340,7 @@ L'article vous a plu ? Partagez-le :
         <div class="row">
             <div class="footer-under">
                 Made with <i class="fa fa-heart"></i> in Tours -
-                © 2016 Code-Troopers - Tous droits réservés
+              © 2016 Code-Troopers - Tous droits réservés
             </div>
         </div>
     </div>

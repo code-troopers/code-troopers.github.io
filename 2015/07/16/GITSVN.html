@@ -25,10 +25,10 @@
         
         <meta name="viewport" content="width=device-width">
 
-        <link rel="stylesheet" href="/styles/style-df692d982e.css">
-     
+        <link rel="stylesheet" href="/styles/style-9089a70539.css">
+
         <!--[if lt IE 9]>
-                <script src="/js/ie8-0a07727802.js"></script>           
+                <script src="/js/ie8-0a07727802.js"></script>
         <![endif]-->
         <meta itemprop="name" content="CT-CDGT"/>
         <meta itemprop="name" content="CT-RMLC"/>
@@ -103,7 +103,7 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
                     <p>Git c’est cool, Git c’est Hype, Git c’est tout récent (<a href="http://git-scm.com/book/fr/v1/D%C3%A9marrage-rapide-Une-rapide-histoire-de-Git">enfin presque</a>) et c’est pour ça qu’on aime bien.
 Mais pour beaucoup Git c’est nouveau, donc c’est le changement, donc c’est compliqué, et c’est pour ça que plein de boîtes préfèrent garder leur serveur svn.</p>
 
-<p>Je vais tenter ici, de vous donner les principales commandes de <code class="highlighter-rouge">Git-SVN</code>. Ainsi si vous vous trouvez dans une boîte qui ne veut pas changer son scm mais que vous, vous avez envie de changement,
+<p>Je vais tenter ici, de vous donner les principales commandes de <code>Git-SVN</code>. Ainsi si vous vous trouvez dans une boîte qui ne veut pas changer son scm mais que vous, vous avez envie de changement,
 vous pourrez donc utiliser la puissance de Git. 
 Et ce sans aucun impact sur le gestionnaire de sources de la société dans laquelle vous êtes. C’est génial non ?</p>
 
@@ -124,85 +124,75 @@ Si ce n’est pas le cas, il n’y a pas de gros changement, mais je vous invite
 
 <p>Donc si on se met dans la situation où tout le monde travaille sur le trunk, pour récupérer les sources du projet dans un nouveau répertoire vous devrez faire un :</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>git svn clone http://maboite/svn/monBeauProjet/ -s
+<pre><code>git svn clone http://maboite/svn/monBeauProjet/ -s
 </code></pre>
-</div>
 
 <p>Par contre dès que le repo svn et un peu vieux (i.e. avec plein de commits) ça va mettre 3h ! En effet, Git va prendre les révisions une par une afin de créer son historique local.
 Si vous n’avez pas besoin de tout l’historique des révisions ce que vous pouvez faire c’est :</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>git svn clone http://maboite/svn/monBeauProjet/ -s -r4000:HEAD
+<pre><code>git svn clone http://maboite/svn/monBeauProjet/ -s -r4000:HEAD
 </code></pre>
-</div>
 
 <p>ainsi il ne crééra l’histo qu’à partir de la révision 4000 du svn. Je vous conseille donc de prendre le 4000 le plus proche de la dernière révision.</p>
 
 <p>À partir de là c’est bon, vous avez votre projet qui est géré par Git. La preuve vous pouvez tester via ces différentes commandes</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>git status
+<pre><code>git status
 git branch -a
 git log -n5
 </code></pre>
-</div>
 
 <h2 id="travailler-sur-le-projet-en-local">Travailler sur le projet (en local)</h2>
 <p>Vous pouvez donc dès à présent commencer à travailler offline ou bien sans vous soucier des commits de vos collègues.
 Et cela avec tous les avantages que Git apporte.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>git commit -m"Ajout de la modification du mot de passe par l'admin"
+<pre><code>git commit -m"Ajout de la modification du mot de passe par l'admin"
 git stash save “Début de ma tâche prioritaire”
 ... // un peu de travail urgent
 git stash pop
 </code></pre>
-</div>
 
 <p>On peut même faire des branches Git (en local) sans que cela n’impacte le serveur.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>git checkout -b myLocalBranch
+<pre><code>git checkout -b myLocalBranch
 ... // du travail avec plein de petits commits
 git checkout master
 git merge myLocalBranch
 </code></pre>
-</div>
 
 <h2 id="commiter-sur-le-svn">Commiter sur le svn</h2>
 <p>Ensuite pour se synchroniser avec vos collègues (c’est mieux) les deux commandes indispensables sont</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>git svn rebase
+<pre><code>git svn rebase
 git svn dcommit
 </code></pre>
-</div>
 
-<p>Le <code class="highlighter-rouge">git svn rebase</code> va faire l’équivalent d’un svn update quant au <code class="highlighter-rouge">git svn dcommit</code> ça sera un svn commit.</p>
+<p>Le <code>git svn rebase</code> va faire l’équivalent d’un svn update quant au <code>git svn dcommit</code> ça sera un svn commit.</p>
 
 <h2 id="bonus--utiliser-des-branches">Bonus : Utiliser des branches</h2>
 <p>Bon soyons honnêtes si vous utilisez un svn il y a quand même peu de chances que les branches soient vraiment utilisées (ou alors peut-être que vous aimez la douleur). Mais si ça arrive, voilà comment les utiliser.</p>
 
 <p>Mettre à jour toutes les branches du svn :</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>git svn fetch
+<pre><code>git svn fetch
 </code></pre>
-</div>
 
 <p>Changer de branche :</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>git checkout -b &lt;brancheDistante&gt; &lt;nomDeBrancheLocale&gt;
+<pre><code>git checkout -b &lt;brancheDistante&gt; &lt;nomDeBrancheLocale&gt;
 </code></pre>
-</div>
 
 <p>Et maintenant vous pouvez naviguer entre vos branches normalement via Git  :</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>git checkout master
+<pre><code>git checkout master
 git checkout nomDeBrancheLocale
 git checkout -
 </code></pre>
-</div>
 
 <p>et par exemple pour recopier un commit d’une branche à une autre sans copier manuellement le fichier.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>git cherry-pick
+<pre><code>git cherry-pick
 </code></pre>
-</div>
 
 <p>Voilà vous avez maintenant les bases pour utiliser Git alors que de premier abord cela ne semblait pas possible.
 Il ne vous reste plus qu’à forcer un peu plus pour remplacer l’ancien serveur svn par un nouveau sous Git et comme ça toute votre boîte pourra en profiter.
@@ -317,7 +307,7 @@ L'article vous a plu ? Partagez-le :
         <div class="row">
             <div class="footer-under">
                 Made with <i class="fa fa-heart"></i> in Tours -
-                © 2016 Code-Troopers - Tous droits réservés
+              © 2016 Code-Troopers - Tous droits réservés
             </div>
         </div>
     </div>
