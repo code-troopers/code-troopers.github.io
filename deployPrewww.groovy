@@ -10,6 +10,8 @@ node {
 }
 stage 'Copy public'
 node('miko') {
+  ws{
   unstash 'source'
   sh 'tar -xzvf source.tgz'
+  }
 }
