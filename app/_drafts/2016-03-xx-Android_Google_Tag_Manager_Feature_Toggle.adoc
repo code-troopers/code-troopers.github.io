@@ -42,37 +42,37 @@ Ces étapes sont résumées dans ces écrans :
 
 :lightboxGroup: 0
 :lightboxImage: 2016-03-AndroidGoogleTagManager/Capture_01
-:lightboxImageTitle: TODO
+:lightboxImageTitle: Création du container
 
 include::app/_includes/lightbox.adoc[]
 
 :lightboxImage: 2016-03-AndroidGoogleTagManager/Capture_02
-:lightboxImageTitle: TODO
+:lightboxImageTitle: Création du container - Nom et type
 
 include::app/_includes/lightbox.adoc[]
 
 :lightboxImage: 2016-03-AndroidGoogleTagManager/Capture_031
-:lightboxImageTitle: TODO
+:lightboxImageTitle: GTM id généré
 
 include::app/_includes/lightbox.adoc[]
 
 :lightboxImage: 2016-03-AndroidGoogleTagManager/Capture_04
-:lightboxImageTitle: TODO
+:lightboxImageTitle: Écran 'Variables'
 
 include::app/_includes/lightbox.adoc[]
 
 :lightboxImage: 2016-03-AndroidGoogleTagManager/Capture_051
-:lightboxImageTitle: TODO
+:lightboxImageTitle: Création d'une nouvelle variable
 
 include::app/_includes/lightbox.adoc[]
 
 :lightboxImage: 2016-03-AndroidGoogleTagManager/Capture_061
-:lightboxImageTitle: TODO
+:lightboxImageTitle: Publication du container
 
 include::app/_includes/lightbox.adoc[]
 
 :lightboxImage: 2016-03-AndroidGoogleTagManager/Capture_071
-:lightboxImageTitle: TODO
+:lightboxImageTitle: Téléchargement du container
 
 include::app/_includes/lightbox.adoc[]
 
