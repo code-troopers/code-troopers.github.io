@@ -40,43 +40,31 @@ La mise en place d'une configuration pour une application Android passe donc par
 
 Ces étapes sont résumées dans ces écrans :
 
-:lightboxGroup: 0
-:lightboxImage: 2016-03-AndroidGoogleTagManager/Capture_01
-:lightboxImageTitle: Création du container
+{lt}div style="text-align : center"{gt}
+{lt}a class="inlineBoxes" href="/images/posts/2016-03-AndroidGoogleTagManager/Capture_01.png" data-lightbox="0" title="Création du container"{gt}
+        {lt}img class="medium" src="/images/posts/2016-03-AndroidGoogleTagManager/Capture_01_min.png" alt="Création du container"/{gt}
+{lt}/a{gt}
+{lt}a class="inlineBoxes" href="/images/posts/2016-03-AndroidGoogleTagManager/Capture_02.png" data-lightbox="0" title="Création du container - Nom et type"{gt}
+        {lt}img class="medium" src="/images/posts/2016-03-AndroidGoogleTagManager/Capture_02_min.png" alt="Création du container - Nom et type"/{gt}
+{lt}/a{gt}
+{lt}a class="inlineBoxes" href="/images/posts/2016-03-AndroidGoogleTagManager/Capture_031.png" data-lightbox="0" title="GTM id généré"{gt}
+        {lt}img class="medium" src="/images/posts/2016-03-AndroidGoogleTagManager/Capture_031_min.png" alt="GTM id généré"/{gt}
+{lt}/a{gt}
+{lt}a class="inlineBoxes" href="/images/posts/2016-03-AndroidGoogleTagManager/Capture_04.png" data-lightbox="0" title="Écran 'Variables'"{gt}
+        {lt}img class="medium" src="/images/posts/2016-03-AndroidGoogleTagManager/Capture_04_min.png" alt="Écran 'Variables'"/{gt}
+{lt}/a{gt}
+{lt}a class="inlineBoxes" href="/images/posts/2016-03-AndroidGoogleTagManager/Capture_051.png" data-lightbox="0" title="Création d'une nouvelle variable"{gt}
+        {lt}img class="medium" src="/images/posts/2016-03-AndroidGoogleTagManager/Capture_051_min.png" alt="Création d'une nouvelle variable"/{gt}
+{lt}/a{gt}
+{lt}a class="inlineBoxes" href="/images/posts/2016-03-AndroidGoogleTagManager/Capture_061.png" data-lightbox="0" title="Publication du container"{gt}
+        {lt}img class="medium" src="/images/posts/2016-03-AndroidGoogleTagManager/Capture_061_min.png" alt="Publication du container"/{gt}
+{lt}/a{gt}
+{lt}a class="inlineBoxes" href="/images/posts/2016-03-AndroidGoogleTagManager/Capture_071.png" data-lightbox="0" title="Téléchargement du container"{gt}
+        {lt}img class="medium" src="/images/posts/2016-03-AndroidGoogleTagManager/Capture_071_min.png" alt="Téléchargement du container"/{gt}
+{lt}/a{gt}
 
-include::app/_includes/lightbox.adoc[]
-
-:lightboxImage: 2016-03-AndroidGoogleTagManager/Capture_02
-:lightboxImageTitle: Création du container - Nom et type
-
-include::app/_includes/lightbox.adoc[]
-
-:lightboxImage: 2016-03-AndroidGoogleTagManager/Capture_031
-:lightboxImageTitle: GTM id généré
-
-include::app/_includes/lightbox.adoc[]
-
-:lightboxImage: 2016-03-AndroidGoogleTagManager/Capture_04
-:lightboxImageTitle: Écran 'Variables'
-
-include::app/_includes/lightbox.adoc[]
-
-:lightboxImage: 2016-03-AndroidGoogleTagManager/Capture_051
-:lightboxImageTitle: Création d'une nouvelle variable
-
-include::app/_includes/lightbox.adoc[]
-
-:lightboxImage: 2016-03-AndroidGoogleTagManager/Capture_061
-:lightboxImageTitle: Publication du container
-
-include::app/_includes/lightbox.adoc[]
-
-:lightboxImage: 2016-03-AndroidGoogleTagManager/Capture_071
-:lightboxImageTitle: Téléchargement du container
-
-include::app/_includes/lightbox.adoc[]
-
-
+{lt}/div{gt}
+{lt}br/{gt}
 
 Normalement arrivé là, vous avez configuré un container avec une variable dans celui-ci. Et vous disposez pour ce container de son _code unique_ ainsi que d'un _binaire_ de son contenu.
 
