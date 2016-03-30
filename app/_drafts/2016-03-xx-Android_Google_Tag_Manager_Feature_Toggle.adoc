@@ -6,8 +6,8 @@ cover: android-banner
 tags: [Android, Google Tag Manager, Feature Toggle]
 ---
 
-Le concept de `feature toggle` est bien pratique en tant que développeur si l'on souhaite faire évoluer sa base de code sources à un rythme différent de celui des livraisons des fonctionnalités.
-Et c'est souvent le cas lorsqu'il y a autour du produit une équipe marketing / communication qui s'occupe d'annoncer telle ou telle nouvelle fonctionnalité.
+Le concept de `feature toggle` est bien pratique en tant que développeur si l'on souhaite faire évoluer sa base de code source à un rythme différent de celui des livraisons et des fonctionnalités.
+C'est souvent le cas lorsqu'il y a autour du produit une équipe marketing / communication qui s'occupe d'annoncer telle ou telle nouvelle fonctionnalité.
 
 Le problème avec Android c'est qu'il peut être vite problématique d'utiliser ces features toggle, car une fois l'application arrivée sur le téléphone des utilisateurs le développeur n'a plus
 la possibilité de changer la valeur des flags autrement qu'en relivrant l'application, ce qui peut vite se terminer par du spam d'updates si les activations/désactivations sont trop fréquentes ou trop rapprochées.
@@ -22,20 +22,20 @@ C'est là qu'entre en jeu `Google Tag Manager`, cet outil made by Google va nous
 ## Google Tag Manager : La configuration
 
 Pour commencer, il faut aller dans l'interface dédiée de https://tagmanager.google.com[Google Tag Manager] afin de générer la configuration nécessaire pour notre application.
-C'est via cette ihm et avec les informations que l'on va y ajouter que l'on pourra revenir plus tard et modifier des valeurs qui seront prises en compte dans l'application android.
+C'est via cette IHM et avec les informations que l'on va y ajouter que l'on pourra revenir plus tard et modifier des valeurs qui seront prises en compte dans l'application Android.
 
 La mise en place d'une configuration pour une application Android passe donc par les étapes suivantes :
 
- * Créez un nouveau container (ce qui correspond à créer la configuration pour une application)
- * Donnez-lui le nom que vous voulez et sélectionnez le type `Android`
- * Une fois le container créé un code unique du type `GTM-XXXXXX` lui est attribué par Google notez-le, il sera utilisé dans le code de l'application Android
+ * Créez un nouveau container (ce qui correspond à créer la configuration pour une application).
+ * Donnez-lui le nom que vous voulez et sélectionnez le type `Android`.
+ * Une fois le container créé un code unique du type `GTM-XXXXXX` lui est attribué par Google notez-le, il sera utilisé dans le code de l'application Android.
  * Ensuite dans ce container rendez-vous dans la partie `Variables` et créez une nouvelle variable
- * Choisissez le type `Value Collection`
- * Définissez sa valeur avec un objet json { 'clé' : 'valeur' }, la clé sera elle aussi réutilsée dans le code Android et la valeur peut être ce que vous souhaitez (ici un boolean ira très bien)
- * N'oubliez de d'activer cette variable en sélectionnant Enable : `Always`
- * Sauvegardez la variable
+ * Choisissez le type `Value Collection`.
+ * Définissez sa valeur avec un objet json { 'clé' : 'valeur' }, la clé sera elle aussi réutilsée dans le code Android et la valeur peut être ce que vous souhaitez (ici un boolean ira très bien).
+ * N'oubliez de d'activer cette variable en sélectionnant Enable : `Always`.
+ * Sauvegardez la variable.
  * Vous pouvez dès à présent publier le container, il est prêt à être utilisé.
- * Avant de quitter cet écran une dernière opération utile, téléchargez la première version publiée du container, il sera nécessaire de l'embarquer dans le code sources en tant que configuration initiale
+ * Avant de quitter cet écran une dernière opération utile, téléchargez la première version publiée du container, il sera nécessaire de l'embarquer dans le code source en tant que configuration initiale.
 
 
 Ces étapes sont résumées dans ces écrans :
@@ -82,9 +82,9 @@ La seconde partie du travail consiste à modifier son code applicatif afin de li
 </resources>
 -----
 
-- Ensuite copie le binaire téléchargé (correspondant à la configuration initiale du container) dans le répertoire _/res/raw/_, attention vous devrez surement changer le nom du fichier pour enlever les majuscules
+- Ensuite copiez le binaire téléchargé (correspondant à la configuration initiale du container) dans le répertoire _/res/raw/_, attention vous devrez surement changer le nom du fichier pour enlever les majuscules.
 
-- Ajouter dans votre _build.gradle_ une nouvelle dépendance vers les play services (seulement la partie analytics nous intéresse)
+- Ajoutez dans votre _build.gradle_ une nouvelle dépendance vers les play services (seulement la partie analytics nous intéresse).
 
 [source,groovy]
 -----
@@ -93,7 +93,7 @@ dependencies {
 }
 -----
 
-- Maintenant dans une Activity (ou bien dans votre Application), vous avez deux choses à faire, récupérer une instance de TagManager et faire une requête pour lire la configuration actuelle du Container
+- Maintenant dans une Activity (ou bien dans votre Application), vous avez deux choses à faire, récupérer une instance de TagManager et faire une requête pour lire la configuration actuelle du Container.
 
 [source,java]
 -----
@@ -124,13 +124,13 @@ public class MainActivity extends AppCompatActivity {
 
 
 Et c'est tout ! Vous pouvez retourner dans l'interface de Tag Manager, pour modifier la valeur de la variable feature1, publiez la nouvelle version du container et si vous redémarrez l'application,
- la nouvelle valeur devrait apparaitre
+ la nouvelle valeur devrait apparaitre.
 
 Rapide et efficace, non ?
 
 ### Chargement des données du container
 
-Via l'instance de TagManager différentes méthodes sont disponibles pour charger le container et les valeurs qu'il contient
+Via l'instance de TagManager différentes méthodes sont disponibles pour charger le container et les valeurs qu'il contient.
 
 [source,java]
 -----
@@ -142,7 +142,7 @@ tagManager.loadContainerPreferNonDefault(...); # <2>
 <1> va uniquement regarder les valeurs dans le binaire ajouté dans /res/raw
 <2> vont essayer de prendre les dernières valeurs publiées (ou non) mais sans être garantie à 100% (notamment s'il ya des problèmes de réseaux)
 
-les différences sont détaillées https://developers.google.com/android/reference/com/google/android/gms/tagmanager/TagManager#public-methods[dans la doc].
+Les différences sont détaillées https://developers.google.com/android/reference/com/google/android/gms/tagmanager/TagManager#public-methods[dans la doc].
 Mais selon toute logique cette qui va nous intéresser sera uniquement `loadContainerPreferFresh()`.
 
 
@@ -154,9 +154,9 @@ Les pour et les contre d'utiliser Tag Manager pour faire du feature toggle vont 
 ### Pour
 
 Le principale avantage et la mise en place sans le développement d'un API rien que pour ça (si votre application n'a pas de backend dédié, pas besoin d'en créer un). +
-Toute la logique de configuration initiale versus configuration mise à jour est déjà implémentée et tout se gère via l'appel tagManager.loadContainer() +
-Ça fonctionne tout aussi bien sur iOS +
-Un autre point très intéressant (et non abordé ici) est la publication d'une variable selon des critères (on va pouvoir modifier un toggle, pour par exemple faire du A/B testing en fonction d'un tas de critère comme la taille de l'écran ou bien la langue de l'utilisateur ou même la version de l'application)
+Toute la logique de configuration initiale versus configuration mise à jour est déjà implémentée et tout se gère via l'appel tagManager.loadContainer(). +
+Ça fonctionne tout aussi bien sur iOS. +
+Un autre point très intéressant (et non abordé ici) est la publication d'une variable selon des critères (on va pouvoir modifier un toggle, pour par exemple faire du A/B testing en fonction d'un tas de critères comme la taille de l'écran ou bien la langue de l'utilisateur ou même la version de l'application).
 
 ### Contre
 
