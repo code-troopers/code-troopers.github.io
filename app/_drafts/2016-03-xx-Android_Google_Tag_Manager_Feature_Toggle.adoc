@@ -29,10 +29,10 @@ La mise en place d'une configuration pour une application Android passe donc par
  * Créez un nouveau container (ce qui correspond à créer la configuration pour une application).
  * Donnez-lui le nom que vous voulez et sélectionnez le type `Android`.
  * Une fois le container créé un code unique du type `GTM-XXXXXX` lui est attribué par Google notez-le, il sera utilisé dans le code de l'application Android.
- * Ensuite dans ce container rendez-vous dans la partie `Variables` et créez une nouvelle variable.
+ * Ensuite dans ce container rendez-vous dans la partie `Variables` et créez une nouvelle variable
  * Choisissez le type `Value Collection`.
- * Définissez sa valeur avec un objet json { 'clé' : 'valeur' }, la clé sera elle aussi réutilisée dans le code Android et la valeur peut être ce que vous souhaitez (ici un boolean ira très bien).
- * N'oubliez de d'activer cette variable en sélectionnant Enable : `Always`.
+ * Définissez sa valeur avec un objet json { 'clé' : 'valeur' }, la clé sera elle aussi réutilsée dans le code Android et la valeur peut être ce que vous souhaitez (ici un boolean ira très bien).
+ * N'oubliez d'activer cette variable en sélectionnant Enable : `Always`.
  * Sauvegardez la variable.
  * Vous pouvez dès à présent publier le container, il est prêt à être utilisé.
  * Avant de quitter cet écran une dernière opération utile, téléchargez la première version publiée du container, il sera nécessaire de l'embarquer dans le code source en tant que configuration initiale.
@@ -71,9 +71,9 @@ Normalement arrivé là, vous avez configuré un container avec une variable dan
 
 ## Application Android : Le code
 
-La seconde partie du travail consiste à modifier son code applicatif afin de lire la variable précédemment ajoutée dans Google Tag Manager.
+La seconde partie du travail consiste à modifier son code applicatif afin de lire la variable précédemment ajoutée dans Google Tag Manager
 
-- Pour commencer, stockez votre code Google Tag Manager (dans une constante ou un ficher xml, peu importe).
+- Pour commencer, stocker votre code Google Tag Manager (dans une constante ou un ficher xml, peu importe)
 
 [source,xml]
 -----
@@ -153,14 +153,14 @@ Les pour et les contre d'utiliser Tag Manager pour faire du feature toggle vont 
 
 ### Pour
 
-Le principale avantage et la mise en place sans le développement d'un API rien que pour ça (si votre application n'a pas de backend dédié, pas besoin d'en créer un). +
-Toute la logique de configuration initiale versus configuration mise à jour est déjà implémentée et tout se gère via l'appel tagManager.loadContainer(). +
+Le principale avantage et la mise en place sans le développement d'une API rien que pour ça (si votre application n'a pas de backend dédié, pas besoin d'en créer un). +
+Toute la logique de configuration initiale versus configuration mise à jour est déjà implémentée et tout se gère via l'appel `tagManager.loadContainer()`. +
 Ça fonctionne tout aussi bien sur iOS. +
 Un autre point très intéressant (et non abordé ici) est la publication d'une variable selon des critères (on va pouvoir modifier un toggle, pour par exemple faire du A/B testing en fonction d'un tas de critères comme la taille de l'écran ou bien la langue de l'utilisateur ou même la version de l'application).
 
 ### Contre
 
-Si le loadPreferFresh échoue (problème réseau par exemple) on retombe sur la config par défaut, mais est-ce que ça fonctionnerait mieux avec une solution custom ? par sûr.
+Si le `loadPreferFresh` échoue (problème réseau par exemple) on retombe sur la config par défaut, mais est-ce que ça fonctionnerait mieux avec une solution custom ? par sûr.
 
 ## Liens
 
