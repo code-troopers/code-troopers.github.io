@@ -7,6 +7,249 @@
                 <atom:link href="http://code-troopers.com/feed.xml" rel="self" type="application/rss+xml"/>
                 
                         <item>
+                                <title>Android : Feature Toggle avec Google Tag Manager</title>
+                                <description>&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Le concept de &lt;code&gt;feature toggle&lt;/code&gt; est bien pratique en tant que développeur si l&amp;#8217;on souhaite faire évoluer sa base de code source à un rythme différent de celui des livraisons et des fonctionnalités.
+C&amp;#8217;est souvent le cas lorsqu&amp;#8217;il y a autour du produit une équipe marketing / communication qui s&amp;#8217;occupe d&amp;#8217;annoncer telle ou telle nouvelle fonctionnalité.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Le problème avec Android c&amp;#8217;est qu&amp;#8217;il peut être vite problématique d&amp;#8217;utiliser ces features toggle, car une fois l&amp;#8217;application arrivée sur le téléphone des utilisateurs le développeur n&amp;#8217;a plus
+la possibilité de changer la valeur des flags autrement qu&amp;#8217;en relivrant l&amp;#8217;application, ce qui peut vite se terminer par du spam d&amp;#8217;updates si les activations/désactivations sont trop fréquentes ou trop rapprochées.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;C&amp;#8217;est là qu&amp;#8217;entre en jeu &lt;code&gt;Google Tag Manager&lt;/code&gt;, cet outil made by Google va nous offrir la possibilité d&amp;#8217;activer/désactiver lesdites fonctionnalités et cela sans avoir à redéployer l&amp;#8217;application sur le store.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;&lt;!--break--&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect1&quot;&gt;
+&lt;h2 id=&quot;google-tag-manager-la-configuration&quot;&gt;Google Tag Manager : La configuration&lt;/h2&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Pour commencer, il faut aller dans l&amp;#8217;interface dédiée de &lt;a href=&quot;https://tagmanager.google.com&quot;&gt;Google Tag Manager&lt;/a&gt; afin de générer la configuration nécessaire pour notre application.
+C&amp;#8217;est via cette IHM et avec les informations que l&amp;#8217;on va y ajouter que l&amp;#8217;on pourra revenir plus tard et modifier des valeurs qui seront prises en compte dans l&amp;#8217;application Android.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;La mise en place d&amp;#8217;une configuration pour une application Android passe donc par les étapes suivantes :&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ulist&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Créez un nouveau container (ce qui correspond à créer la configuration pour une application).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Donnez-lui le nom que vous voulez et sélectionnez le type &lt;code&gt;Android&lt;/code&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Une fois le container créé un code unique du type &lt;code&gt;GTM-XXXXXX&lt;/code&gt; lui est attribué par Google notez-le, il sera utilisé dans le code de l&amp;#8217;application Android.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Ensuite dans ce container rendez-vous dans la partie &lt;code&gt;Variables&lt;/code&gt; et créez une nouvelle variable.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Choisissez le type &lt;code&gt;Value Collection&lt;/code&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Définissez sa valeur avec un objet json { &#39;clé&#39; : &#39;valeur&#39; }, la clé sera elle aussi réutilisée dans le code Android et la valeur peut être ce que vous souhaitez (ici un boolean ira très bien).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;N&amp;#8217;oubliez d&amp;#8217;activer cette variable en sélectionnant Enable : &lt;code&gt;Always&lt;/code&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Sauvegardez la variable.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Vous pouvez dès à présent publier le container, il est prêt à être utilisé.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Avant de quitter cet écran une dernière opération utile, téléchargez la première version publiée du container, il sera nécessaire de l&amp;#8217;embarquer dans le code source en tant que configuration initiale.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Ces étapes sont résumées dans ces écrans :&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;&lt;div style=&quot;text-align : center&quot;&gt;
+&lt;a class=&quot;inlineBoxes&quot; href=&quot;/images/posts/2016-03-AndroidGoogleTagManager/GoogleTagManager_containerCreation1.png&quot; data-lightbox=&quot;0&quot; title=&quot;Création du container&quot;&gt;
+        &lt;img class=&quot;medium&quot; src=&quot;/images/posts/2016-03-AndroidGoogleTagManager/GoogleTagManager_containerCreation1_min.png&quot; alt=&quot;Création du container&quot;/&gt;
+&lt;/a&gt;
+&lt;a class=&quot;inlineBoxes&quot; href=&quot;/images/posts/2016-03-AndroidGoogleTagManager/GoogleTagManager_containerCreation2.png&quot; data-lightbox=&quot;0&quot; title=&quot;Création du container - Nom et type&quot;&gt;
+        &lt;img class=&quot;medium&quot; src=&quot;/images/posts/2016-03-AndroidGoogleTagManager/GoogleTagManager_containerCreation2_min.png&quot; alt=&quot;Création du container - Nom et type&quot;/&gt;
+&lt;/a&gt;
+&lt;a class=&quot;inlineBoxes&quot; href=&quot;/images/posts/2016-03-AndroidGoogleTagManager/GoogleTagManager_gtmIdGenerated.png&quot; data-lightbox=&quot;0&quot; title=&quot;GTM id généré&quot;&gt;
+        &lt;img class=&quot;medium&quot; src=&quot;/images/posts/2016-03-AndroidGoogleTagManager/GoogleTagManager_gtmIdGenerated_min.png&quot; alt=&quot;GTM id généré&quot;/&gt;
+&lt;/a&gt;
+&lt;a class=&quot;inlineBoxes&quot; href=&quot;/images/posts/2016-03-AndroidGoogleTagManager/GoogleTagManager_screenVariables.png&quot; data-lightbox=&quot;0&quot; title=&quot;Écran &#39;Variables&#39;&quot;&gt;
+        &lt;img class=&quot;medium&quot; src=&quot;/images/posts/2016-03-AndroidGoogleTagManager/GoogleTagManager_screenVariables_min.png&quot; alt=&quot;Écran &#39;Variables&#39;&quot;/&gt;
+&lt;/a&gt;
+&lt;a class=&quot;inlineBoxes&quot; href=&quot;/images/posts/2016-03-AndroidGoogleTagManager/GoogleTagManager_createVariable.png&quot; data-lightbox=&quot;0&quot; title=&quot;Création d&amp;#8217;une nouvelle variable&quot;&gt;
+        &lt;img class=&quot;medium&quot; src=&quot;/images/posts/2016-03-AndroidGoogleTagManager/GoogleTagManager_createVariable_min.png&quot; alt=&quot;Création d&amp;#8217;une nouvelle variable&quot;/&gt;
+&lt;/a&gt;
+&lt;a class=&quot;inlineBoxes&quot; href=&quot;/images/posts/2016-03-AndroidGoogleTagManager/GoogleTagManager_publishContainer.png&quot; data-lightbox=&quot;0&quot; title=&quot;Publication du container&quot;&gt;
+        &lt;img class=&quot;medium&quot; src=&quot;/images/posts/2016-03-AndroidGoogleTagManager/GoogleTagManager_publishContainer_min.png&quot; alt=&quot;Publication du container&quot;/&gt;
+&lt;/a&gt;
+&lt;a class=&quot;inlineBoxes&quot; href=&quot;/images/posts/2016-03-AndroidGoogleTagManager/GoogleTagManager_downloadContainer.png&quot; data-lightbox=&quot;0&quot; title=&quot;Téléchargement du container&quot;&gt;
+        &lt;img class=&quot;medium&quot; src=&quot;/images/posts/2016-03-AndroidGoogleTagManager/GoogleTagManager_downloadContainer_min.png&quot; alt=&quot;Téléchargement du container&quot;/&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;&lt;/div&gt;
+&lt;br/&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Normalement arrivé là, vous avez configuré un container avec une variable dans celui-ci. Et vous disposez pour ce container de son &lt;em&gt;code unique&lt;/em&gt; ainsi que d&amp;#8217;un &lt;em&gt;binaire&lt;/em&gt; de son contenu.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect1&quot;&gt;
+&lt;h2 id=&quot;application-android-le-code&quot;&gt;Application Android : Le code&lt;/h2&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;La seconde partie du travail consiste à modifier son code applicatif afin de lire la variable précédemment ajoutée dans Google Tag Manager.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ulist&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Pour commencer, stockez votre code Google Tag Manager (dans une constante ou un ficher xml, peu importe).&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;pygments highlight&quot;&gt;&lt;code data-lang=&quot;xml&quot;&gt;&lt;span class=&quot;tok-nt&quot;&gt;&amp;lt;resources&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;tok-nt&quot;&gt;&amp;lt;string&lt;/span&gt; &lt;span class=&quot;tok-na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;tok-s&quot;&gt;&amp;quot;tag_manager_id&amp;quot;&lt;/span&gt;&lt;span class=&quot;tok-nt&quot;&gt;&amp;gt;&lt;/span&gt;GTM-N8NXMK&lt;span class=&quot;tok-nt&quot;&gt;&amp;lt;/string&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;tok-nt&quot;&gt;&amp;lt;/resources&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ulist&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Ensuite copiez le binaire téléchargé (correspondant à la configuration initiale du container) dans le répertoire &lt;em&gt;/res/raw/&lt;/em&gt;, attention vous devrez surement changer le nom du fichier pour enlever les majuscules.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Ajoutez dans votre &lt;em&gt;build.gradle&lt;/em&gt; une nouvelle dépendance vers les play services (seulement la partie analytics nous intéresse).&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;pygments highlight&quot;&gt;&lt;code data-lang=&quot;groovy&quot;&gt;&lt;span class=&quot;tok-n&quot;&gt;dependencies&lt;/span&gt; &lt;span class=&quot;tok-o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;tok-n&quot;&gt;compile&lt;/span&gt; &lt;span class=&quot;tok-s1&quot;&gt;&amp;#39;com.google.android.gms:play-services-analytics:8.4.0&amp;#39;&lt;/span&gt;
+&lt;span class=&quot;tok-o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ulist&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Maintenant dans une Activity (ou bien dans votre Application), vous avez deux choses à faire, récupérer une instance de TagManager et faire une requête pour lire la configuration actuelle du Container.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;pygments highlight&quot;&gt;&lt;code data-lang=&quot;java&quot;&gt;&lt;span class=&quot;tok-kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;tok-kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;tok-nc&quot;&gt;MainActivity&lt;/span&gt; &lt;span class=&quot;tok-kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;tok-n&quot;&gt;AppCompatActivity&lt;/span&gt; &lt;span class=&quot;tok-o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;tok-nd&quot;&gt;@Override&lt;/span&gt;
+    &lt;span class=&quot;tok-kd&quot;&gt;protected&lt;/span&gt; &lt;span class=&quot;tok-kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;tok-nf&quot;&gt;onCreate&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;tok-n&quot;&gt;Bundle&lt;/span&gt; &lt;span class=&quot;tok-n&quot;&gt;savedInstanceState&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;tok-o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;tok-kd&quot;&gt;super&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;tok-na&quot;&gt;onCreate&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;tok-n&quot;&gt;savedInstanceState&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;tok-n&quot;&gt;setContentView&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;tok-n&quot;&gt;R&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;tok-na&quot;&gt;layout&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;tok-na&quot;&gt;activity_main&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;);&lt;/span&gt;
+
+        &lt;span class=&quot;tok-kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;tok-n&quot;&gt;TagManager&lt;/span&gt; &lt;span class=&quot;tok-n&quot;&gt;tagManager&lt;/span&gt; &lt;span class=&quot;tok-o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;tok-n&quot;&gt;TagManager&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;tok-na&quot;&gt;getInstance&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;tok-k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;tok-n&quot;&gt;PendingResult&lt;/span&gt; &lt;span class=&quot;tok-n&quot;&gt;pending&lt;/span&gt; &lt;span class=&quot;tok-o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;tok-n&quot;&gt;tagManager&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;tok-na&quot;&gt;loadContainerPreferFresh&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;tok-n&quot;&gt;getString&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;tok-n&quot;&gt;R&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;tok-na&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;tok-na&quot;&gt;tag_manager_id&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;tok-n&quot;&gt;R&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;tok-na&quot;&gt;raw&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;tok-na&quot;&gt;gtm_initial_conf&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;tok-n&quot;&gt;pending&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;tok-na&quot;&gt;setResultCallback&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;tok-k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;tok-n&quot;&gt;ResultCallback&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;tok-n&quot;&gt;ContainerHolder&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;&amp;gt;()&lt;/span&gt; &lt;span class=&quot;tok-o&quot;&gt;{&lt;/span&gt;
+           &lt;span class=&quot;tok-nd&quot;&gt;@Override&lt;/span&gt;
+           &lt;span class=&quot;tok-kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;tok-kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;tok-nf&quot;&gt;onResult&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;tok-nd&quot;&gt;@NonNull&lt;/span&gt; &lt;span class=&quot;tok-n&quot;&gt;ContainerHolder&lt;/span&gt; &lt;span class=&quot;tok-n&quot;&gt;containerHolder&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;tok-o&quot;&gt;{&lt;/span&gt;
+               &lt;span class=&quot;tok-c1&quot;&gt;// If unsuccessful, return&lt;/span&gt;
+               &lt;span class=&quot;tok-k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;tok-o&quot;&gt;(!&lt;/span&gt;&lt;span class=&quot;tok-n&quot;&gt;containerHolder&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;tok-na&quot;&gt;getStatus&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;tok-na&quot;&gt;isSuccess&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;())&lt;/span&gt; &lt;span class=&quot;tok-o&quot;&gt;{&lt;/span&gt;
+                   &lt;span class=&quot;tok-c1&quot;&gt;// Deal with failure&lt;/span&gt;
+                   &lt;span class=&quot;tok-k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;;&lt;/span&gt;
+               &lt;span class=&quot;tok-o&quot;&gt;}&lt;/span&gt;
+               &lt;span class=&quot;tok-n&quot;&gt;containerHolder&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;tok-na&quot;&gt;refresh&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;();&lt;/span&gt;
+
+               &lt;span class=&quot;tok-kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;tok-kt&quot;&gt;boolean&lt;/span&gt; &lt;span class=&quot;tok-n&quot;&gt;feature1Status&lt;/span&gt; &lt;span class=&quot;tok-o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;tok-n&quot;&gt;containerHolder&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;tok-na&quot;&gt;getContainer&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;tok-na&quot;&gt;getBoolean&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;tok-s&quot;&gt;&amp;quot;feature1&amp;quot;&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;);&lt;/span&gt;
+               &lt;span class=&quot;tok-n&quot;&gt;Log&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;tok-na&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;tok-s&quot;&gt;&amp;quot;TagManager&amp;quot;&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;tok-n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;tok-na&quot;&gt;valueOf&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;tok-n&quot;&gt;feature1Status&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;));&lt;/span&gt;
+           &lt;span class=&quot;tok-o&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;tok-o&quot;&gt;},&lt;/span&gt; &lt;span class=&quot;tok-mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;tok-n&quot;&gt;TimeUnit&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;tok-na&quot;&gt;SECONDS&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;tok-o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Et c&amp;#8217;est tout ! Vous pouvez retourner dans l&amp;#8217;interface de Tag Manager, pour modifier la valeur de la variable feature1, publiez la nouvelle version du container et si vous redémarrez l&amp;#8217;application,
+ la nouvelle valeur devrait apparaitre.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Rapide et efficace, non ?&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect2&quot;&gt;
+&lt;h3 id=&quot;chargement-des-données-du-container&quot;&gt;Chargement des données du container&lt;/h3&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Via l&amp;#8217;instance de TagManager différentes méthodes sont disponibles pour charger le container et les valeurs qu&amp;#8217;il contient.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;pygments highlight&quot;&gt;&lt;code data-lang=&quot;java&quot;&gt;&lt;span class=&quot;tok-n&quot;&gt;tagManager&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;tok-na&quot;&gt;loadContainerDefaultOnly&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;(...);&lt;/span&gt; &lt;i class=&quot;conum&quot; data-value=&quot;1&quot;&gt;&lt;/i&gt;&lt;b&gt;(1)&lt;/b&gt;
+&lt;span class=&quot;tok-n&quot;&gt;tagManager&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;tok-na&quot;&gt;loadContainerPreferFresh&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;(...);&lt;/span&gt; &lt;i class=&quot;conum&quot; data-value=&quot;2&quot;&gt;&lt;/i&gt;&lt;b&gt;(2)&lt;/b&gt;
+&lt;span class=&quot;tok-n&quot;&gt;tagManager&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;tok-na&quot;&gt;loadContainerPreferNonDefault&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;(...);&lt;/span&gt; &lt;i class=&quot;conum&quot; data-value=&quot;2&quot;&gt;&lt;/i&gt;&lt;b&gt;(2)&lt;/b&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;colist arabic&quot;&gt;
+&lt;table&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;i class=&quot;conum&quot; data-value=&quot;1&quot;&gt;&lt;/i&gt;&lt;b&gt;1&lt;/b&gt;&lt;/td&gt;
+&lt;td&gt;va uniquement regarder les valeurs dans le binaire ajouté dans /res/raw&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;i class=&quot;conum&quot; data-value=&quot;2&quot;&gt;&lt;/i&gt;&lt;b&gt;2&lt;/b&gt;&lt;/td&gt;
+&lt;td&gt;vont essayer de prendre les dernières valeurs publiées (ou non) mais sans être garantie à 100% (notamment s&amp;#8217;il ya des problèmes de réseaux)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Les différences sont détaillées &lt;a href=&quot;https://developers.google.com/android/reference/com/google/android/gms/tagmanager/TagManager#public-methods&quot;&gt;dans la doc&lt;/a&gt;.
+Mais selon toute logique cette qui va nous intéresser sera uniquement &lt;code&gt;loadContainerPreferFresh()&lt;/code&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect1&quot;&gt;
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Les pour et les contre d&amp;#8217;utiliser Tag Manager pour faire du feature toggle vont forcément dépendre du besoin du développeur.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect2&quot;&gt;
+&lt;h3 id=&quot;pour&quot;&gt;Pour&lt;/h3&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Le principale avantage et la mise en place sans le développement d&amp;#8217;une API rien que pour ça (si votre application n&amp;#8217;a pas de backend dédié, pas besoin d&amp;#8217;en créer un).&lt;br&gt;
+Toute la logique de configuration initiale versus configuration mise à jour est déjà implémentée et tout se gère via l&amp;#8217;appel &lt;code&gt;tagManager.loadContainer()&lt;/code&gt;.&lt;br&gt;
+Ça fonctionne tout aussi bien sur iOS.&lt;br&gt;
+Un autre point très intéressant (et non abordé ici) est la publication d&amp;#8217;une variable selon des critères (on va pouvoir modifier un toggle, pour par exemple faire du A/B testing en fonction d&amp;#8217;un tas de critères comme la taille de l&amp;#8217;écran ou bien la langue de l&amp;#8217;utilisateur ou même la version de l&amp;#8217;application).&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect2&quot;&gt;
+&lt;h3 id=&quot;contre&quot;&gt;Contre&lt;/h3&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Si le &lt;code&gt;loadPreferFresh&lt;/code&gt; échoue (problème réseau par exemple) on retombe sur la config par défaut, mais est-ce que ça fonctionnerait mieux avec une solution custom ? par sûr.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect1&quot;&gt;
+&lt;h2 id=&quot;liens&quot;&gt;Liens&lt;/h2&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Code sources d&amp;#8217;exemple : &lt;a href=&quot;https://github.com/fchauveau/blog-android-tag-manager&quot; class=&quot;bare&quot;&gt;https://github.com/fchauveau/blog-android-tag-manager&lt;/a&gt;&lt;br&gt;
+Documentation Google officielle : &lt;a href=&quot;https://developers.google.com/tag-manager/android/v4/&quot; class=&quot;bare&quot;&gt;https://developers.google.com/tag-manager/android/v4/&lt;/a&gt;&lt;br&gt;
+Cours Udacity d&amp;#8217;explication : &lt;a href=&quot;https://www.udacity.com/course/viewer#!/c-ud876-2/l-4027658558/m-4328729937&quot; class=&quot;bare&quot;&gt;https://www.udacity.com/course/viewer#!/c-ud876-2/l-4027658558/m-4328729937&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
+                                <pubDate>Wed, 30 Mar 2016 00:00:00 +0000</pubDate>
+                                <link>http://code-troopers.com/2016/03/30/Android_Google_Tag_Manager_Feature_Toggle.html</link>
+                                <guid isPermaLink="true">http://code-troopers.com/2016/03/30/Android_Google_Tag_Manager_Feature_Toggle.html</guid>
+                        </item>
+                
+                        <item>
                                 <title>Jenkins Workflow Plugin</title>
                                 <description>&lt;div class=&quot;paragraph&quot;&gt;
 &lt;p&gt;Un des points génants lors de l&amp;#8217;utilisation de Jenkins est le coté volatile de la configuration des jobs de builds.
@@ -1236,73 +1479,6 @@ docker pull mondepotdocker.tld/monapplication:v1.0.0
                                 <pubDate>Thu, 25 Jun 2015 00:00:00 +0000</pubDate>
                                 <link>http://code-troopers.com/2015/06/25/InstallDockerRegistry.html</link>
                                 <guid isPermaLink="true">http://code-troopers.com/2015/06/25/InstallDockerRegistry.html</guid>
-                        </item>
-                
-                        <item>
-                                <title>Améliorer la complétion JavaScript d&#39;IntelliJ IDEA</title>
-                                <description>&lt;h1 id=&quot;intellij-idea&quot;&gt;IntelliJ IDEA&lt;/h1&gt;
-&lt;p&gt;Tout le monde sait que nous adorons utiliser IntelliJ IDEA pour développer. 
-Peu importe le langage IntelliJ est vraiment un excellent IDE qui nous permet d’être efficaces quasiment instantanément.&lt;/p&gt;
-
-&lt;p&gt;Par contre, quand on arrive dans le monde du JavaScript on peut avoir quelques soucis pour être 
-dans un environnement suffisamment typé où l’on sait ce qu’on va faire sans se poser trop de questions, 
-ou tout simplement pouvoir bénéficier de l’aide de l’IDE pour savoir de quelles méthodes on dispose.&lt;/p&gt;
-
-&lt;!--break--&gt;
-
-&lt;h2 id=&quot;javascript-dans-intellij&quot;&gt;JavaScript dans IntelliJ&lt;/h2&gt;
-&lt;p&gt;Par défaut, IntelliJ est déjà suffisament malin pour scanner les fichiers du workspace 
-et trouver de la complétion en automatique (ainsi que la JSDoc).&lt;/p&gt;
-
-&lt;p&gt;Cependant, ce mécanisme ne marche pas à tous les coups :&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;vous utilisez des versions sur des CDN&lt;/li&gt;
-  &lt;li&gt;vous avez des versions minifiées dans votre workspace&lt;/li&gt;
-  &lt;li&gt;vous utilisez des outils qui impliquent certains framework (karma / jasmine / mocha…)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;faire-comprendre-le-javascript--intellij&quot;&gt;Faire comprendre le JavaScript à IntelliJ&lt;/h2&gt;
-&lt;p&gt;Pour réussir à obtenir une complétion correcte vous avez plusieurs solutions :&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;pour les CDN, vous pouvez demander à IntelliJ de récupérer la ressource (il ne la mettra pas dans votre projet pour autant)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div style=&quot;text-align:center;margin-bottom:50px&quot;&gt;
-    &lt;a href=&quot;/images/2015-06-JavaScriptIntelliJ/cdndl.png&quot; data-lightbox=&quot;group-1&quot; title=&quot;Le téléchargement des fichiers sur un CDN [alt+entrée]&quot; class=&quot;inlineBoxes&quot;&gt;
-        &lt;img class=&quot;medium&quot; src=&quot;/images/2015-06-JavaScriptIntelliJ/cdndl.png&quot; alt=&quot;Le téléchargement des fichiers sur un CDN [alt+entrée]&quot; /&gt;
-    &lt;/a&gt;
-&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;pour les versions minifiées, vous pouvez ajouter manuellement les bibliothèques dans la fenêtre de paramètres (Languages &amp;amp; Frameworks &amp;gt; JavaScript &amp;gt; Libraries)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div style=&quot;text-align:center;margin-bottom:50px&quot;&gt;
-    &lt;a href=&quot;/images/2015-06-JavaScriptIntelliJ/settings.png&quot; data-lightbox=&quot;group-1&quot; title=&quot;La fenêtre des paramètres&quot; class=&quot;inlineBoxes&quot;&gt;
-        &lt;img class=&quot;medium&quot; src=&quot;/images/2015-06-JavaScriptIntelliJ/settings.png&quot; alt=&quot;La fenêtre des paramètres&quot; /&gt;
-    &lt;/a&gt;
-&lt;/div&gt;
-
-&lt;h2 id=&quot;la-mega-astuce&quot;&gt;LA mega astuce&lt;/h2&gt;
-&lt;p&gt;IntelliJ est capable de comprendre le TypeScript, et des gens ont eu la bonne idée de regrouper des définitions TypeScript pour
-la plupart des librairies les plus utilisées dans un dépôt Github : &lt;a href=&quot;http://www.definitelytyped.org&quot;&gt;DefinitelyTyped&lt;/a&gt;.
-Dans la fenêtre de création de librairie JavaScript, dans la partie qui permet le téléchargement d’une librairie, 
-sélectionnez la source “TypeScript Community Stubs”, vous verrez qu’il y a beaucoup de librairies que vous utilisez au quotidien.&lt;/p&gt;
-
-&lt;p&gt;Avec ceci, vous aurez une complétion efficace, avec le typage offert par TypeScript (dans la mesure du possible), 
-ainsi qu’une documentation précise (pour la plupart des librairies).&lt;/p&gt;
-
-&lt;div style=&quot;text-align:center;margin-bottom:50px&quot;&gt;
-    &lt;a href=&quot;/images/2015-06-JavaScriptIntelliJ/example.png&quot; data-lightbox=&quot;group-1&quot; title=&quot;Jasmine est bien connu par IntelliJ&quot; class=&quot;inlineBoxes&quot;&gt;
-        &lt;img class=&quot;medium&quot; src=&quot;/images/2015-06-JavaScriptIntelliJ/example.png&quot; alt=&quot;Jasmine est bien connu par IntelliJ&quot; /&gt;
-    &lt;/a&gt;
-&lt;/div&gt;
-</description>
-                                <pubDate>Wed, 10 Jun 2015 00:00:00 +0000</pubDate>
-                                <link>http://code-troopers.com/2015/06/10/CompletionJavascriptDansIntelliJ.html</link>
-                                <guid isPermaLink="true">http://code-troopers.com/2015/06/10/CompletionJavascriptDansIntelliJ.html</guid>
                         </item>
                 
         </channel>

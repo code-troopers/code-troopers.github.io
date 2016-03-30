@@ -16,12 +16,12 @@
         <meta property="twitter:domain" content="http://code-troopers.com"/>
         
         
-        <meta property="twitter:description" content="Le blog posté le 15/05/2015 par Matthieu vim : 10 astuces de configuration pour vos dotfiles vim vimrc shell Cet...">
+        <meta property="twitter:description" content="Le blog posté le 22/05/2015 par Matthieu git : quelques astuces de configuration pour vos dotfiles git gitconfig hook Cet...">
         
         
         
-        <meta name="description" content="Le blog posté le 15/05/2015 par Matthieu vim : 10 astuces de configuration pour vos dotfiles vim vimrc shell Cet article sera le premier d’une série consacrée aux dotfiles. Alors les dotfiles, qu’est-ce que c’est Obi-Wan ? Les dotfiles, ce sont tous les fichiers texte de configuration que l’on peut retrouver dans son répertoire utilisateur pour sauvegarder ses préférences. De nombreux logiciels utilisent cette méthode. On peut citer gnome, IntelliJ, Maven, ssh, git, bash et tant d’autres. On les appelle dotfiles −que l’on peut traduire par fichiers point− parce qu’ils ont un nom qui commence par un point, ce qui correspond aux fichiers cachés sous linux. Introduction Chez les troopers, on est comme beaucoup d’autres constamment alliés à la ligne de commande, cf nos articles sur babun et oh-my-zsh. Un outil indispensable dans un terminal est un éditeur de fichier. Dans notre premier article sur les dotfiles nous parlerons de vim, et plus spécialement de sa configuration avec vimrc. Si vous ne connaissez pas l’un des plus puissants éditeur de texte, commencez par vous renseigner dessus et sur les commandes de base par exemple sur http://www.openvim.com/tutorial.html. Pour configurer vim, une seule chose à faire : vim ~/.vimrc Lire la suite..." />
-        <meta property="og:description" content="Le blog posté le 15/05/2015 par Matthieu vim : 10 astuces de configuration pour vos dotfiles vim vimrc shell Cet article sera le premier d’une série consacrée aux dotfiles. Alors les dotfiles, qu’est-ce que c’est Obi-Wan ? Les dotfiles, ce sont tous les fichiers texte de configuration que l’on peut retrouver dans son répertoire utilisateur pour sauvegarder ses préférences. De nombreux logiciels utilisent cette méthode. On peut citer gnome, IntelliJ, Maven, ssh, git, bash et tant d’autres. On les appelle dotfiles −que l’on peut traduire par fichiers point− parce qu’ils ont un nom qui commence par un point, ce qui correspond aux fichiers cachés sous linux. Introduction Chez les troopers, on est comme beaucoup d’autres constamment alliés à la ligne de commande, cf nos articles sur babun et oh-my-zsh. Un outil indispensable dans un terminal est un éditeur de fichier. Dans notre premier article sur les dotfiles nous parlerons de vim, et plus spécialement de sa configuration avec vimrc. Si vous ne connaissez pas l’un des plus puissants éditeur de texte, commencez par vous renseigner dessus et sur les commandes de base par exemple sur http://www.openvim.com/tutorial.html. Pour configurer vim, une seule chose à faire : vim ~/.vimrc Lire la suite...">
+        <meta name="description" content="Le blog posté le 22/05/2015 par Matthieu git : quelques astuces de configuration pour vos dotfiles git gitconfig hook Cet article est le deuxième de la série des dotfiles. Voir l’article sur vimrc. Nous allons ici aborder quelques configurations indispensables de git. La base Si vous utilisez git, vous avez forcément fait des commandes de base pour rentrer votre nom et votre email (indispensable pour pusher vos commits) $ git config --global user.name Jango Fett $ git config --global user.email jango.fett@code-troopers.com Ceci a pour but d’écrire dans votre fichier ~/.gitconfig ces simples lignes : [user] name = Jango Fett email = jango.fett@code-troopers.com Lire la suite posté le 15/05/2015 par Matthieu vim : 10 astuces de configuration pour vos dotfiles vim vimrc shell Cet article sera le premier d’une série consacrée aux dotfiles. Alors les dotfiles, qu’est-ce que c’est Obi-Wan ? Les dotfiles, ce sont tous les fichiers texte de configuration que l’on peut retrouver dans son répertoire utilisateur pour sauvegarder ses préférences. De nombreux logiciels utilisent cette méthode. On peut citer gnome, IntelliJ, Maven, ssh, git, bash et tant d’autres. On les appelle dotfiles −que l’on peut traduire par fichiers point− parce qu’ils ont un nom qui commence par un..." />
+        <meta property="og:description" content="Le blog posté le 22/05/2015 par Matthieu git : quelques astuces de configuration pour vos dotfiles git gitconfig hook Cet article est le deuxième de la série des dotfiles. Voir l’article sur vimrc. Nous allons ici aborder quelques configurations indispensables de git. La base Si vous utilisez git, vous avez forcément fait des commandes de base pour rentrer votre nom et votre email (indispensable pour pusher vos commits) $ git config --global user.name Jango Fett $ git config --global user.email jango.fett@code-troopers.com Ceci a pour but d’écrire dans votre fichier ~/.gitconfig ces simples lignes : [user] name = Jango Fett email = jango.fett@code-troopers.com Lire la suite posté le 15/05/2015 par Matthieu vim : 10 astuces de configuration pour vos dotfiles vim vimrc shell Cet article sera le premier d’une série consacrée aux dotfiles. Alors les dotfiles, qu’est-ce que c’est Obi-Wan ? Les dotfiles, ce sont tous les fichiers texte de configuration que l’on peut retrouver dans son répertoire utilisateur pour sauvegarder ses préférences. De nombreux logiciels utilisent cette méthode. On peut citer gnome, IntelliJ, Maven, ssh, git, bash et tant d’autres. On les appelle dotfiles −que l’on peut traduire par fichiers point− parce qu’ils ont un nom qui commence par un...">
         
         <meta name="viewport" content="width=device-width">
 
@@ -86,6 +86,48 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     <div class="container">
         <div class="row">
 <!-- This loops through the paginated posts -->
+
+<article class="col-lg-4 col-md-6 col-sm-12">
+    <div onclick="window.location.href='/2015/05/22/Dotfiles-git.html' ;  return false" style="cursor: pointer;">
+	<div class="cover" style="background-image:url(/images/banner/ohmyzsh-banner.png)">
+            <div class="date">posté le 22/05/2015 par Matthieu</div>
+        </div>
+        <h2><a href="/2015/05/22/Dotfiles-git.html">git : quelques astuces de configuration pour vos dotfiles</a></h2><ul class="tags">
+            
+            <li>git</li>
+            
+            <li>gitconfig</li>
+            
+            <li>hook</li>
+            
+        </ul>
+        <div class="content">
+          <p>Cet article est le deuxième de la série des <em>dotfiles</em>. Voir l’article sur <a href="code-troopers.com/2015/05/15/Dotfiles-vim.html">vimrc</a>. Nous allons ici aborder quelques configurations indispensables de git.</p>
+
+<h1 id="la-base">La base</h1>
+
+<p>Si vous utilisez git, vous avez forcément fait des commandes de base pour rentrer votre nom et votre email (indispensable pour pusher vos commits)</p>
+
+<pre><code>$ git config --global user.name "Jango Fett" 
+$ git config --global user.email "jango.fett@code-troopers.com"
+</code></pre>
+
+<p>Ceci a pour but d’écrire dans votre fichier ~/.gitconfig ces simples lignes :</p>
+
+<pre><code>[user]
+    name = Jango Fett
+    email = jango.fett@code-troopers.com
+</code></pre>
+
+
+        </div>
+        <div class="fade-content">
+        </div>
+        <div class="more">
+            <a  href="/2015/05/22/Dotfiles-git.html"><i class="fa fa-arrow-circle-o-right"></i> Lire la suite</a>
+        </div>
+    </div>
+</article>
 
 <article class="col-lg-4 col-md-6 col-sm-12">
     <div onclick="window.location.href='/2015/05/15/Dotfiles-vim.html' ;  return false" style="cursor: pointer;">
@@ -234,41 +276,6 @@ Du coup, un de nos problèmes récurrents est de se rappeler quelle commande doi
         </div>
         <div class="more">
             <a  href="/2014/12/15/CT_Project_Alias.html"><i class="fa fa-arrow-circle-o-right"></i> Lire la suite</a>
-        </div>
-    </div>
-</article>
-
-<article class="col-lg-4 col-md-6 col-sm-12">
-    <div onclick="window.location.href='/2014/12/05/NavigTours_Application_Android_Disponible.html' ;  return false" style="cursor: pointer;">
-	<div class="cover" style="background-image:url(/images/banner/navigtours-banner.png)">
-            <div class="date">posté le 05/12/2014 par Florian</div>
-        </div>
-        <h2><a href="/2014/12/05/NavigTours_Application_Android_Disponible.html">Navig'Tours est disponible</a></h2><ul class="tags">
-            
-            <li>Android</li>
-            
-            <li>Fil Bleu</li>
-            
-        </ul>
-        <div class="content">
-          <h2 id="a-y-est-">Ça y est !</h2>
-<p>L’application est disponible pour tout le monde sur le Play store.</p>
-
-<div style="text-align:center;margin-bottom:50px">
-    <a href="https://play.google.com/store/apps/details?id=com.codetroopers.transport.tours">
-        <img class="medium" alt="QRcode application Navig'Tours" src="/images/postNavigTours2/qrCode_playstore_navigtours.png" />
-    </a>
-    <a href="https://play.google.com/store/apps/details?id=com.codetroopers.transport.tours">
-        <img alt="Get it on Google Play" src="https://developer.android.com/images/brand/fr_generic_rgb_wo_60.png" />
-    </a>
-</div>
-
-
-        </div>
-        <div class="fade-content">
-        </div>
-        <div class="more">
-            <a  href="/2014/12/05/NavigTours_Application_Android_Disponible.html"><i class="fa fa-arrow-circle-o-right"></i> Lire la suite</a>
         </div>
     </div>
 </article>
