@@ -41,26 +41,26 @@ La mise en place d'une configuration pour une application Android passe donc par
 Ces étapes sont résumées dans ces écrans :
 
 {lt}div style="text-align : center"{gt}
-{lt}a class="inlineBoxes" href="/images/posts/2016-03-AndroidGoogleTagManager/Capture_01.png" data-lightbox="0" title="Création du container"{gt}
-        {lt}img class="medium" src="/images/posts/2016-03-AndroidGoogleTagManager/Capture_01_min.png" alt="Création du container"/{gt}
+{lt}a class="inlineBoxes" href="/images/posts/2016-03-AndroidGoogleTagManager/GoogleTagManager_containerCreation1.png" data-lightbox="0" title="Création du container"{gt}
+        {lt}img class="medium" src="/images/posts/2016-03-AndroidGoogleTagManager/GoogleTagManager_containerCreation1_min.png" alt="Création du container"/{gt}
 {lt}/a{gt}
-{lt}a class="inlineBoxes" href="/images/posts/2016-03-AndroidGoogleTagManager/Capture_02.png" data-lightbox="0" title="Création du container - Nom et type"{gt}
-        {lt}img class="medium" src="/images/posts/2016-03-AndroidGoogleTagManager/Capture_02_min.png" alt="Création du container - Nom et type"/{gt}
+{lt}a class="inlineBoxes" href="/images/posts/2016-03-AndroidGoogleTagManager/GoogleTagManager_containerCreation2.png" data-lightbox="0" title="Création du container - Nom et type"{gt}
+        {lt}img class="medium" src="/images/posts/2016-03-AndroidGoogleTagManager/GoogleTagManager_containerCreation2_min.png" alt="Création du container - Nom et type"/{gt}
 {lt}/a{gt}
-{lt}a class="inlineBoxes" href="/images/posts/2016-03-AndroidGoogleTagManager/Capture_031.png" data-lightbox="0" title="GTM id généré"{gt}
-        {lt}img class="medium" src="/images/posts/2016-03-AndroidGoogleTagManager/Capture_031_min.png" alt="GTM id généré"/{gt}
+{lt}a class="inlineBoxes" href="/images/posts/2016-03-AndroidGoogleTagManager/GoogleTagManager_gtmIdGenerated.png" data-lightbox="0" title="GTM id généré"{gt}
+        {lt}img class="medium" src="/images/posts/2016-03-AndroidGoogleTagManager/GoogleTagManager_gtmIdGenerated_min.png" alt="GTM id généré"/{gt}
 {lt}/a{gt}
-{lt}a class="inlineBoxes" href="/images/posts/2016-03-AndroidGoogleTagManager/Capture_04.png" data-lightbox="0" title="Écran 'Variables'"{gt}
-        {lt}img class="medium" src="/images/posts/2016-03-AndroidGoogleTagManager/Capture_04_min.png" alt="Écran 'Variables'"/{gt}
+{lt}a class="inlineBoxes" href="/images/posts/2016-03-AndroidGoogleTagManager/GoogleTagManager_screenVariables.png" data-lightbox="0" title="Écran 'Variables'"{gt}
+        {lt}img class="medium" src="/images/posts/2016-03-AndroidGoogleTagManager/GoogleTagManager_screenVariables_min.png" alt="Écran 'Variables'"/{gt}
 {lt}/a{gt}
-{lt}a class="inlineBoxes" href="/images/posts/2016-03-AndroidGoogleTagManager/Capture_051.png" data-lightbox="0" title="Création d'une nouvelle variable"{gt}
-        {lt}img class="medium" src="/images/posts/2016-03-AndroidGoogleTagManager/Capture_051_min.png" alt="Création d'une nouvelle variable"/{gt}
+{lt}a class="inlineBoxes" href="/images/posts/2016-03-AndroidGoogleTagManager/GoogleTagManager_createVariable.png" data-lightbox="0" title="Création d'une nouvelle variable"{gt}
+        {lt}img class="medium" src="/images/posts/2016-03-AndroidGoogleTagManager/GoogleTagManager_createVariable_min.png" alt="Création d'une nouvelle variable"/{gt}
 {lt}/a{gt}
-{lt}a class="inlineBoxes" href="/images/posts/2016-03-AndroidGoogleTagManager/Capture_061.png" data-lightbox="0" title="Publication du container"{gt}
-        {lt}img class="medium" src="/images/posts/2016-03-AndroidGoogleTagManager/Capture_061_min.png" alt="Publication du container"/{gt}
+{lt}a class="inlineBoxes" href="/images/posts/2016-03-AndroidGoogleTagManager/GoogleTagManager_publishContainer.png" data-lightbox="0" title="Publication du container"{gt}
+        {lt}img class="medium" src="/images/posts/2016-03-AndroidGoogleTagManager/GoogleTagManager_publishContainer_min.png" alt="Publication du container"/{gt}
 {lt}/a{gt}
-{lt}a class="inlineBoxes" href="/images/posts/2016-03-AndroidGoogleTagManager/Capture_071.png" data-lightbox="0" title="Téléchargement du container"{gt}
-        {lt}img class="medium" src="/images/posts/2016-03-AndroidGoogleTagManager/Capture_071_min.png" alt="Téléchargement du container"/{gt}
+{lt}a class="inlineBoxes" href="/images/posts/2016-03-AndroidGoogleTagManager/GoogleTagManager_downloadContainer.png" data-lightbox="0" title="Téléchargement du container"{gt}
+        {lt}img class="medium" src="/images/posts/2016-03-AndroidGoogleTagManager/GoogleTagManager_downloadContainer_min.png" alt="Téléchargement du container"/{gt}
 {lt}/a{gt}
 
 {lt}/div{gt}
