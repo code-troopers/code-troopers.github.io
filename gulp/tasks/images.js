@@ -6,6 +6,7 @@ var gulp = require('gulp');
 var gulpif = require('gulp-if');
 var filter = require('gulp-filter');
 var imagemin = require('gulp-imagemin');
+var imageminGifsicle = require('imagemin-gifsicle');
 var browserSync = require('browser-sync');
 var isProd = require('../util/isProduction');
 var imageResize = require('gulp-image-resize');
@@ -16,6 +17,7 @@ gulp.task('images', function () {
         .pipe(gulpif(!isProd(), changed(config.images.dest)))
         // Images are now compress on repo (see task below)
         // .pipe(imagemin())
+        .pipe(imageminGifsicle({interlaced: true})())
         .pipe(gulp.dest(config.images.dest))
         .pipe(gulpif(browserSync.active, browserSync.reload({stream: true, once: true})));
 });
@@ -27,7 +29,6 @@ gulp.task('compress-images', ['thumbnail-images'], function () {
 });
 gulp.task('thumbnail-images', function () {
     return gulp.src(config.images.posts.src)
-         .pipe(filter(config.images.posts.src))
          .pipe(imageResize({ height : 200, format: 'png', imageMagick: true}))
          .pipe(rename(function (path) { path.basename += "_min"; }))
          .pipe(gulp.dest(config.images.posts.destSrc))
