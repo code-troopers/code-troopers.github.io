@@ -2,7 +2,7 @@ FROM alpine:3.2
 MAINTAINER Cedric Gatay <c.gatay@code-troopers.com>
 
 RUN apk upgrade --update \
- && apk add libatomic readline readline-dev libxml2 libxml2-dev \
+ && apk add libatomic readline readline-dev libxml2 libxml2-dev libc6-compat \
         ncurses-terminfo-base ncurses-terminfo \
         libxslt libxslt-dev zlib-dev zlib \
         ruby ruby-dev yaml yaml-dev \
@@ -17,7 +17,12 @@ RUN apk upgrade --update \
  && rm -rf /root/src /tmp/* /usr/share/man /var/cache/apk/* \
  && apk del build-base zlib-dev ruby-dev readline-dev \
             yaml-dev libffi-dev libxml2-dev \
- && apk search --update
+ && apk search --update \
+ && mkdir /lib64 && ln -s /lib/ld-linux-x86-64.so.2 /lib64/
+RUN  echo "@testing http://dl-4.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories \
+ && apk update \
+ && apk --update add gifsicle@testing
+ 
 
 ENV VERSION=v5.3.0 NPM_VERSION=3
 
@@ -57,6 +62,9 @@ RUN npm install -g gulp && \
 WORKDIR /src
 ADD package.json /tmp/package.json
 RUN cd /tmp && npm install
+# symlink real gifsicle over npm package as it does not like alpine (libmusl instead of libc)
+RUN mkdir -p /src && cp -a /tmp/node_modules /src/ \
+ && ln -fs /usr/bin/gifsicle /tmp/node_modules/gifsicle/vendor/gifsicle
 
 ADD . /src
 RUN mkdir -p /src && cp -a /tmp/node_modules /src/

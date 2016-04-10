@@ -31,8 +31,7 @@ module.exports = {
 
     'images': {
     		 'posts': {
-					'src': 'app/images/posts/**/*.png',
-           'srcToExclude': '!app/images/posts/**/*_min.png',
+					'src': ['app/images/posts/**/*.png','!app/images/posts/**/*_min.png'],
 	        'destSrc': 'app/images/posts',
 				 },
         'src': 'app/images/**/*',

@@ -27,6 +27,7 @@
     "gulp-if": "^1.2.5",
     "gulp-image-resize": "^0.7.1",
     "gulp-imagemin": "^2.4.0",
+    "imagemin-gifsicle" : "^4.2.0",
     "gulp-jshint": "^1.8.3",
     "gulp-less": "^3.0.5",
     "gulp-plumber": "^1.0.1",
