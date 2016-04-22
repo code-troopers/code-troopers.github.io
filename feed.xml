@@ -1303,7 +1303,7 @@ Si ce n’est pas le cas, il n’y a pas de gros changement, mais je vous invite
 &lt;pre&gt;&lt;code&gt;git svn clone http://maboite/svn/monBeauProjet/ -s
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Par contre dès que le repo svn et un peu vieux (i.e. avec plein de commits) ça va mettre 3h ! En effet, Git va prendre les révisions une par une afin de créer son historique local.
+&lt;p&gt;Par contre dès que le repo svn est un peu vieux (i.e. avec plein de commits) ça va mettre 3h ! En effet, Git va prendre les révisions une par une afin de créer son historique local.
 Si vous n’avez pas besoin de tout l’historique des révisions ce que vous pouvez faire c’est :&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;git svn clone http://maboite/svn/monBeauProjet/ -s -r4000:HEAD
