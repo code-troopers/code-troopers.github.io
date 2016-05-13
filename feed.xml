@@ -7,6 +7,102 @@
                 <atom:link href="http://code-troopers.com/feed.xml" rel="self" type="application/rss+xml"/>
                 
                         <item>
+                                <title>Macro Vim : C&#39;est trop génial</title>
+                                <description>&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Comme certains d&amp;#8217;entre vous le savent, j&amp;#8217;aime beaucoup Vim. Il n&amp;#8217;y a pas très longtemps au Tours JUG, je disais que je n&amp;#8217;avais pas de cas d&amp;#8217;utilisation des macro dans Vim dont certains disent que c&amp;#8217;est LA killer feature. Et bien j&amp;#8217;ai trouvé un use case et « c&amp;#8217;est trop génial ! » comme dirait Agnès.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;&lt;!--break--&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;&lt;div style=&quot;text-align : center&quot;&gt;
+&lt;a class=&quot;inlineBoxes&quot; href=&quot;/images/posts/2016-05-VimMacro/trop_genial.gif&quot; data-lightbox=&quot;0&quot; title=&quot;trop génial&quot;&gt;
+        &lt;img class=&quot;medium&quot; src=&quot;/images/posts/2016-05-VimMacro/trop_genial.gif&quot; alt=&quot;trop génial&quot;/&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect1&quot;&gt;
+&lt;h2 id=&quot;angular2-et-macros-vim&quot;&gt;Angular2 et macros Vim&lt;/h2&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Les vidéos de Devoxx 2016 sont sorties, dont &lt;a href=&quot;https://www.youtube.com/watch?v=5U4OasGuo0o&quot;&gt;Angular 2 : Préparez vous dès maintenant à la migration (Benoit Lemoine)&lt;/a&gt;. Une des étapes est de passer par les ControllerAs, je ne vais pas refaire la conf ce n&amp;#8217;est pas le but. Bref, je travaille sur un projet qui définit les controllers comme ceci :&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;literalblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre&gt;$routeProvider.when(&#39;/admin/displayMail&#39;, {templateUrl: &#39;partials/display_mail.html&#39;, controller: &#39;ListMailCtrl&#39;});
+$routeProvider.when(&#39;/admin/createEditMail&#39;, {templateUrl: &#39;partials/create_mail.html&#39;, controller: &#39;EditMailCtrl&#39;});
+$routeProvider.when(&#39;/admin/createEditMail/:id&#39;, {templateUrl: &#39;partials/create_mail.html&#39;, controller: &#39;EditMailCtrl&#39;});
+$routeProvider.when(&#39;/admin/displayUsers&#39;, {templateUrl: &#39;partials/display_users.html&#39;, controller: &#39;DisplayUsersCtrl&#39;});
+$routeProvider.when(&#39;/admin/createUser&#39;, {templateUrl: &#39;partials/create_user.html&#39;, controller: &#39;CreateUserCtrl&#39;});
+$routeProvider.when(&#39;/admin/updateUser/:login&#39;, {templateUrl: &#39;partials/update_user.html&#39;, controller: &#39;UpdateUserCtrl&#39;});&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Je veux rajouter pour chaque ligne un &lt;code&gt;controllerAs: &#39;monCtrl&#39;&lt;/code&gt; avec comme nom le même que le controller associé mais en commençant par une minuscule, et donc obtenir les lignes ci-dessous. J&amp;#8217;ai extrait 6 controllers mais en réalité il y en a plutôt une cinquantaine (les noms ont été changés si on me demande).&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;literalblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre&gt;$routeProvider.when(&#39;/admin/displayMail&#39;, {templateUrl: &#39;partials/display_mail.html&#39;, controller: &#39;ListMailCtrl&#39;, controllerAs: &#39;listMailCtrl&#39;});
+$routeProvider.when(&#39;/admin/createEditMail&#39;, {templateUrl: &#39;partials/create_mail.html&#39;, controller: &#39;EditMailCtrl&#39;, controllerAs: &#39;editMailCtrl&#39;});
+$routeProvider.when(&#39;/admin/createEditMail/:id&#39;, {templateUrl: &#39;partials/create_mail.html&#39;, controller: &#39;EditMailCtrl&#39;, controllerAs: &#39;editMailCtrl&#39;});
+$routeProvider.when(&#39;/admin/displayUsers&#39;, {templateUrl: &#39;partials/display_users.html&#39;, controller: &#39;DisplayUsersCtrl&#39;, controllerAs: &#39;displayUsersCtrl&#39;});
+$routeProvider.when(&#39;/admin/createUser&#39;, {templateUrl: &#39;partials/create_user.html&#39;, controller: &#39;CreateUserCtrl&#39;, controllerAs: &#39;createUserCtrl&#39;});
+$routeProvider.when(&#39;/admin/updateUser/:login&#39;, {templateUrl: &#39;partials/update_user.html&#39;, controller: &#39;UpdateUserCtrl&#39;, controllerAs: &#39;updateUserCtrl&#39;});&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ulist&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;qa&lt;/code&gt; : on commence la macro, on enregistre dans a&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;/controller:&amp;lt;enter&amp;gt;&lt;/code&gt; : on recherche controller:&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;eeee&lt;/code&gt; : on se déplace de mot en mot pour arriver sur le nom du controller&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;yi&#39;&lt;/code&gt; : on copie tout ce qui se trouve à l&amp;#8217;intérieur des &#39; (le nom du controller donc)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;ela&lt;/code&gt; : on se déplace vers la droite et on passe en insertion&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;controllerAs: &#39;&#39;&amp;lt;Esc&amp;gt;&lt;/code&gt; : on écrit le texte et on repasse en mode normal&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;hp&lt;/code&gt; : on passe sur la première &#39; et on copie le texte précédemment copié&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;bgur&lt;/code&gt; : on se place au début du mot et on passe la première lettre en minuscule&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;q&lt;/code&gt; : fin de l&amp;#8217;enregistrement&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;50@a&lt;/code&gt; : on joue la macro 50 fois&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;ce qui donne :
+&lt;code&gt;qa/controller:&amp;lt;enter&amp;gt;eeeeyi&amp;#8217;era, controllerAs: &#39;&#39;&amp;lt;Esc&amp;gt;cpbgurq50@a&lt;/code&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Juste en lisant le texte, on a l&amp;#8217;impression que c&amp;#8217;est compliqué, avec les explications j&amp;#8217;espère que ça paraît plus simple, en tout cas ça l&amp;#8217;est avec l&amp;#8217;habitude. Cela paraît long aussi mais au final c&amp;#8217;est rapide à taper, il suffit de voir la vidéo qui est en vitesse réelle :&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;&lt;div style=&quot;text-align: center;margin:50px;&quot;&gt;
+&lt;video style=&quot;width: 90%; max-width: 600px;&quot; controls src=&quot;/videos/vim_macro.ogv&quot;&gt;&lt;/video&gt;
+&lt;/div&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
+                                <pubDate>Wed, 11 May 2016 00:00:00 +0000</pubDate>
+                                <link>http://code-troopers.com/2016/05/11/Vim_Macro.html</link>
+                                <guid isPermaLink="true">http://code-troopers.com/2016/05/11/Vim_Macro.html</guid>
+                        </item>
+                
+                        <item>
                                 <title>Android : Feature Toggle avec Google Tag Manager</title>
                                 <description>&lt;div class=&quot;paragraph&quot;&gt;
 &lt;p&gt;Le concept de &lt;code&gt;feature toggle&lt;/code&gt; est bien pratique en tant que développeur si l&amp;#8217;on souhaite faire évoluer sa base de code source à un rythme différent de celui des livraisons et des fonctionnalités.
@@ -1379,106 +1475,6 @@ Pour connaître les principales commandes Git, je vous invite à consulter &lt;a
                                 <pubDate>Thu, 16 Jul 2015 00:00:00 +0000</pubDate>
                                 <link>http://code-troopers.com/2015/07/16/GITSVN.html</link>
                                 <guid isPermaLink="true">http://code-troopers.com/2015/07/16/GITSVN.html</guid>
-                        </item>
-                
-                        <item>
-                                <title>Installer votre dépot privé Docker</title>
-                                <description>&lt;p&gt;Petit à petit chez Code-Troopers, nous migrons tous nos développements pour utiliser Docker. 
-Cela fait quelque temps que nous l’utilisons pour des projets “public”, auquel cas le registry public Docker est largement suffisant (et immédiat à utiliser).&lt;/p&gt;
-
-&lt;p&gt;En revanche, nous commençons à migrer nos applications de production également vers Docker, et nous ne pouvons pas utiliser le mode public du registry public.
-Nous nous sommes donc mis à déployer un dépôt privé, authentifié par utilisateur / mot de passe.&lt;/p&gt;
-
-&lt;p&gt;La procédure n’est pas très complexe, mais cette opération reste une bonne opportunité d’écrire un article à ce sujet (les articles en français n’étant pas légion).
-&lt;!--break--&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;step-by-step&quot;&gt;Step by step&lt;/h2&gt;
-&lt;p&gt;Il faut créer une entrée DNS pour votre service.&lt;/p&gt;
-
-&lt;p&gt;Puis nous allons utiliser l’image Docker avec nginx pour l’authentification &lt;a href=&quot;https://github.com/MarvAmBass/docker-nginx-registry-proxy&quot;&gt;docker-nginx-registry-proxy&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&quot;informations-didentification&quot;&gt;Informations d’identification&lt;/h2&gt;
-&lt;p&gt;Pour les étapes suivantes, placez vous dans le répertoire de votre choix pour stocker les fichiers (dans ce cas nous sommes dans &lt;code&gt;/srv/registry-config&lt;/code&gt;)&lt;/p&gt;
-
-&lt;h3 id=&quot;gnration-du-certificat&quot;&gt;Génération du certificat&lt;/h3&gt;
-&lt;p&gt;Pensez à bien renseigner le FQDN DNS lors de la demande de Common Name pour le certificat.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;openssl genrsa -out ca.key 4096
-openssl req -new -x509 -days 1826 -key ca.key -out ca.crt
-openssl genrsa -out ia.key 4096
-openssl req -new -key key.pem -out ia.csr #this is where you need to fill your FQDN
-openssl x509 -req -days 730 -in ia.csr -CA ca.crt -CAkey ca.key -set_serial 01 -out cert.pem
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&quot;gnration-des-mots-de-passes-basic-auth&quot;&gt;Génération des mots de passes basic auth&lt;/h3&gt;
-&lt;p&gt;En utilisant un container docker qui embarque htpasswd vous pourrez générer facilement le fichier nécessaire :&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;docker run --rm -ti -v $(pwd):/tmp dgageot/htpasswd -c /tmp/docker-registry.htpasswd $MONUSER
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&quot;dmarrage-du-registry&quot;&gt;Démarrage du registry&lt;/h2&gt;
-&lt;p&gt;Les images seront stockées dans le répertoire &lt;code&gt;/srv/registry&lt;/code&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;mkdir /srv/registry
-docker run -d --restart=always --name registry -v /srv/docker-registry:/registry -e &quot;SETTINGS_FLAVOR=local&quot; -e &quot;STORAGE_PATH=/registry&quot; registry
-docker run -d --restart=always -p 443:443 -v /srv/registry-config:/etc/nginx/external --link registry:registry --name nginx-registry-proxy marvambass/nginx-registry-proxy
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&quot;configuration-dune-machine-cliente&quot;&gt;Configuration d’une machine cliente&lt;/h2&gt;
-
-&lt;h3 id=&quot;importer-le-certificat-racine&quot;&gt;Importer le certificat racine&lt;/h3&gt;
-&lt;p&gt;Il faut importer le certificat racine dans la liste des certificats reconnus&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;sudo -s
-mkdir -p /etc/docker/certs.d/$FQDN
-cp ca.crt /etc/docker/certs.d/$FQDN/
-
-mkdir -p /usr/local/share/ca-certificates/docker-ct
-cp ca.crt /usr/local/share/ca-certificates/docker-ct/
-update-ca-certificates-
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Pour vérifier que tout fonctionne comme attendu, vous pouvez voir si votre certificat ressort bien dans la commande suivante :&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;awk -v cmd=&#39;openssl x509 -noout -subject&#39; &#39; /BEGIN/{close(cmd)};{print | cmd}&#39; &amp;lt; /etc/ssl/certs/ca-certificates.crt | grep $(VOTRE IDENTIFIANT)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Vous serez également certainement amené à redémarrer vos daemon docker (de chacune des machines)&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;systemctl stop docker
-systemctl start docker
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&quot;identification-sur-le-dpot&quot;&gt;Identification sur le dépot&lt;/h3&gt;
-&lt;p&gt;Une fois que toutes ces étapes sont effectuées, normalement votre dépot est prêt à être utilisé.&lt;/p&gt;
-
-&lt;p&gt;Il vous faut cependant en première étape vous identifier à l’aide du couple utilisateur / mot de passe créé lors de l’installation :&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;docker login https://mondepotdocker.tld
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Ceci aura pour effet de créer un fichier &lt;code&gt;~/.dockercfg&lt;/code&gt; vous permettant d’accéder aux commandes suivantes sans avoir besoin de retaper vos identifiants.&lt;/p&gt;
-
-&lt;h2 id=&quot;utilisation-du-dpt&quot;&gt;Utilisation du dépôt&lt;/h2&gt;
-
-&lt;p&gt;Une fois la machine cliente configurée, vous pouvez simplement utiliser le dépot en préfixant les noms de vos images par l’URL du dépôt.
-Par exemple, pour push/pull l’image de monapplication la commande suivante fera l’affaire :&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;docker push mondepotdocker.tld/monapplication:v1.0.0
-docker pull mondepotdocker.tld/monapplication:v1.0.0
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&quot;utilisation-avec-docker-compose&quot;&gt;Utilisation avec docker-compose&lt;/h3&gt;
-
-&lt;p&gt;Si vous utilisez docker-compose, il se peut que vous ayiez des soucis avec le certificat autosigné et/ou avec l’authentification.&lt;/p&gt;
-
-&lt;p&gt;Pour contourner la vérification du certificat, vous pouvez simplement lancer &lt;code&gt;docker-compose&lt;/code&gt; avec le flag &lt;code&gt;--allow-insecure-ssl&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Pour ce qui est de l’authentification, une astuce simple pour contourner les problèmes de ce genre est de faire un &lt;code&gt;docker pull&lt;/code&gt; manuellement au préalable (le scripter depuis le fichier compose.yml n’est pas trop difficile).&lt;/p&gt;
-</description>
-                                <pubDate>Thu, 25 Jun 2015 00:00:00 +0000</pubDate>
-                                <link>http://code-troopers.com/2015/06/25/InstallDockerRegistry.html</link>
-                                <guid isPermaLink="true">http://code-troopers.com/2015/06/25/InstallDockerRegistry.html</guid>
                         </item>
                 
         </channel>
