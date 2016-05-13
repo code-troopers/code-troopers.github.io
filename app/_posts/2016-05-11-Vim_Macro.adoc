@@ -58,7 +58,7 @@ ce qui donne :
 Juste en lisant le texte, on a l'impression que c'est compliqué, avec les explications j'espère que ça paraît plus simple, en tout cas ça l'est avec l'habitude. Cela paraît long aussi mais au final c'est rapide à taper, il suffit de voir la vidéo qui est en vitesse réelle :
 
 {lt}div style="text-align: center;margin:50px;"{gt}
-{lt}video style="width: 90%; max-width: 600px;" controls src="/videos/vim_macro.webm"{gt}{lt}/video{gt}
+{lt}video style="width: 100%;" controls src="/videos/vim_macro.webm"{gt}{lt}/video{gt}
 {lt}/div{gt}
 
 
