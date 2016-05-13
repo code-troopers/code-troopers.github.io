@@ -92,7 +92,7 @@ $routeProvider.when(&#39;/admin/updateUser/:login&#39;, {templateUrl: &#39;parti
 &lt;/div&gt;
 &lt;div class=&quot;paragraph&quot;&gt;
 &lt;p&gt;&lt;div style=&quot;text-align: center;margin:50px;&quot;&gt;
-&lt;video style=&quot;width: 90%; max-width: 600px;&quot; controls src=&quot;/videos/vim_macro.ogv&quot;&gt;&lt;/video&gt;
+&lt;video style=&quot;width: 90%; max-width: 600px;&quot; controls src=&quot;/videos/vim_macro.webm&quot;&gt;&lt;/video&gt;
 &lt;/div&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
