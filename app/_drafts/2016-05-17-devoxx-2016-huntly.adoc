@@ -8,16 +8,18 @@ tags: [Devoxx, Gamification]
 
 An english version of this blogpost is published on Michaël Bitard's blog at https://agileek.github.io/
 
-Cette année pour devoxx j’étais le seul Code-Troopers disponible, mais ce n’est pas grave, car j’y a retrouvé Michaël, ancien collègue tourangeau maintenant basé à Toulouse. On va vous raconter ici comment on s’est bien amusé pendant ces 3 jours.
+Cette année pour Devoxx, j’étais le seul Code-Troopers disponible mais ce n’est pas grave car j’y ai retrouvé Michaël, ancien collègue tourangeau maintenant basé à Toulouse.
+On va vous raconter ici comment on s’est bien amusés pendant ces 3 jours.
 
 {break}
 
 [%hardbreaks]
 
 
-Cette année pour devoxx 2016 il y avait une nouveauté qui aurait probablement dû arriver bien plus tôt, il s’agit des applications mobiles officielles.
-Rien de bien révolutionnaire à ça vous allez me dire, et je suis d'accord car chaque année des âmes charitables prenaient de leur temps pour sortir une application permettant d'avoir le programme dans sa poche.
-Mais en plus de l’application permettant de voir et gérer le programme https://play.google.com/store/apps/details?id=com.devoxx[My devoxx], il y a eu de publié sur les stores l’application https://play.google.com/store/apps/details?id=com.devoxx.huntly[Devoxx Huntly] qui a pour tag line “Win tickets for devoxx events”. Autant le dire tout de suite, jouer pour gagner des places pour devoxx, ça mérite un peu plus d’attention.
+Pour l'édition 2016 de DevoxxFR, il y avait une nouveauté qui aurait probablement dû arriver bien plus tôt, il s’agit des applications mobiles officielles.
+Rien de bien révolutionnaire à ça vous allez me dire, et je suis d'accord car les années précédentes des âmes charitables prenaient de leur temps pour sortir une application permettant d'avoir le programme dans sa poche.
+Mais en plus de l’application permettant de voir et gérer le programme https://play.google.com/store/apps/details?id=com.devoxx[My devoxx],
+il y a eu de publié sur les stores l’application https://play.google.com/store/apps/details?id=com.devoxx.huntly[Devoxx Huntly] qui a pour tag line “Win tickets for devoxx events”. Autant le dire tout de suite, jouer pour gagner des places pour Devoxx, ça mérite un peu plus d’attention.
 
 Pour ce qui va suivre nous allons uniquement parler de celle disponible sur Android car c’est celle que nous avons utilisée.
 
@@ -36,16 +38,22 @@ Pour ce qui va suivre nous allons uniquement parler de celle disponible sur Andr
 
 {lt}br/{gt}
 
-Comment ça marche et quel est le but ?
-Le but est assez simple, avoir le plus de point. Comment ça marche ? En scannant des QR code comme ceux ci-dessous via l'application. Un jeu d'enfant donc.
+## Comment ça marche et quel est le but ?
 
-Le côté sympa de la chose c'est que les QR code étaient présents sur chacun des stands des exposants. C'est donc un moyen sympa de faire tous les stands. Et c'est ce que l'on a fait. Et dans la plupart des cas le fait d'aller scanner le QR code sur un stand était un bon moyen pour arriver sur le stand et commencer la conversation avec les personnes présentes.
+Le but est assez simple, avoir le plus de points. Comment ça marche ? En scannant des QR codes comme ceux ci-dessous via l'application. Un jeu d'enfant donc.
 
-Parfois (surtout le premier jour) c'était pour expliquer ce qu'était ce QR code (voir même le trouver sur le stand) et à quoi il servait (ce qui est un peu dommage que les stands n’étaient pas au courant de l’existence de huntly)
-On ne va pas se mentir non plus, on n'a pas parlé à tous les exposants, certains stands sont moins sympas à aller voir que d'autres, dans ce cas on a un peu esquivé. Mais il faut quand meme avouer que cette année j'ai parlé a beaucoup plus d'exposants que les années précédentes, et c’est sans aucun doute du fait de l'appli.
+Le côté sympa de la chose c'est que les QR codes étaient présents sur chacun des stands des exposants. C'est donc un moyen sympa de tous les faire.
+C'est donc ce que l'on a fait.
+Et dans la plupart des cas, le fait d'aller scanner le QR code sur place était un bon moyen pour arriver sur le stand et commencer la conversation avec les personnes présentes.
+
+Parfois (surtout le premier jour) nous avons dû expliquer ce qu'était ce fameux QR code (voir même le trouver sur le stand) et à quoi il servait (nous avons trouvé dommage que les stands n'aient pas été plus au courant de l'existence de huntly)
+On ne va pas se mentir non plus, on n'a pas parlé à tous les exposants, certains stands sont moins sympas à aller voir que d'autres, et dans ce cas, on a un peu esquivé.
+Mais il faut quand même avouer que cette année, j'ai parlé à beaucoup plus d'exposants que les années précédentes, sans aucun doute du fait de l'appli.
 
 
-Étant donné que c'est la première mise en place, il y avait forcément quelques petites retouches à faire, et sur ce coup-là on peut dire que la team de scalac était au taquet car il y a eu au moins 2 updates durant les trois jours qui ont permis de corriger notamment un problème avec l'api twitter et un autre avec le scan de contact (2 updates en 3 jours, je parle toujours de l'appli Android, parce que bon sur iOS... :p)
+Étant donné que c'est la première mise en place,
+il y avait forcément quelques petites retouches à faire,
+et sur ce coup-là on peut dire que la team de scalac était au taquet car il y a eu au moins 2 updates durant les trois jours qui ont permis de corriger notamment un problème avec l'api twitter et un autre avec le scan de contact (2 updates en 3 jours, je parle toujours de l'appli Android, parce que bon, sur iOS... :p)
 
 
 
@@ -72,9 +80,11 @@ On ne va pas se mentir non plus, on n'a pas parlé à tous les exposants, certai
 
 {lt}br/{gt}
 
-Ce qui nous a plu :
+## Ce qui nous a plu
 
-Quand on est dans une conférence pour développeurs, on peut s’attendre à voir des filous tenter de feinter/hacker/tricher quoi. Ça n’a pas tardé car quelques heures après on a vu une personne qui semblait avoir vachement plus d’avance que tout le monde (Frédéric camblor pour ne pas le citer). Il s’est lui-même dénoncé au stand (ça lui a valu un direct de stefan) en expliquant qu’il avait profité du fait que la communication avec le serveur était en ssl au lieu de tls pour intercepter les communications et envoyer des informations au serveur.
+Quand on est dans une conférence pour développeurs, on peut s’attendre à voir des filous tenter de feinter/hacker/tricher, quoi.
+Ça n’a pas tardé car quelques heures après le début du jeu on a remarqué une personne qui semblait avoir vachement plus d’avance que tout le monde (Frédéric Camblor pour ne pas le citer).
+Il s’est lui-même dénoncé au stand, ça lui a valu un direct de Stefan, en expliquant qu’il avait profité du fait que la communication avec le serveur était en ssl au lieu de tls pour intercepter les communications et envoyer des informations au serveur.
 
 {lt}div style="text-align : center"{gt}
 {lt}a class="inlineBoxes" href="/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_stephan_pushing_fcamblor.jpeg" data-lightbox="4" title=""{gt}
@@ -83,22 +93,28 @@ Quand on est dans une conférence pour développeurs, on peut s’attendre à vo
 
 {lt}br/{gt}
 
-Ce qui n'a pas trop marché :
+## Ce qui n'a pas trop marché
 
-Certaines des quêtes étaient des check-ins, il s'agissait de passer dans toutes les salles où il y avait des confs, et normalement il y avait des beacons qui devaient permettre de détecter automatiquement qu'on était dans la bonne zone; Malheureusement je n'ai jamais capté un seul signal même avec mon bluetooth allumé tout le temps. D'ailleurs si quelqu’un a capté un signal, je suis curieux de savoir comment ça marchait (le seul signal qui a été capté était le beacon que j’avais dans le sac, et il a été capté par Michaël au bout d’une heure de binomage lors d’un workshop). Mais bon ce n'était pas grave car il y avait en backup des QR code pour faire ces quêtes.
+Certaines des quêtes étaient des check-ins, il s'agissait de passer dans toutes les salles où il y avait des confs et normalement, il y avait des beacons qui devaient permettre de détecter automatiquement qu'on était dans la bonne zone.
+Malheureusement je n'ai jamais capté un seul signal, même avec mon bluetooth allumé tout le temps.
+D'ailleurs, si quelqu’un a capté un signal, je suis curieux de savoir comment ça marchait (le seul signal qui a été capté était le beacon que j’avais dans le sac, et il a été capté par Michaël au bout d’une heure de binomage lors d’un workshop).
+Mais bon ce n'est pas grave car il y avait en backup des QR codes pour faire ces quêtes.
 
-Évolutions
-Bien qu'on ait fait le tour de tous les stands, celui sur lequel on a passé le plus de temps reste celui de devoxx huntly. Pour parler des choses à modifier pour les prochaines éditions notamment pour les quêtes pour gagner encore plus de points !
+## Évolutions
+
+Bien qu'on ait fait le tour de tous les stands, celui sur lequel on a passé le plus de temps reste celui de devoxx huntly.
+Nous avons parlé des choses à modifier pour les prochaines éditions, notamment en ce qui concerne les quêtes afin de gagner encore plus de points !
 
 Parmi les points qui pourront être améliorés on peut citer par exemple :
 
-* Une meilleure gestion des points perdus. En effet derrière certains QR code se cachaient des questions, or même si on avait plusieurs tentatives pour y répondre, le fait de se tromper une ou deux fois diminuait le nombre de points gagnés, mais pour le comprendre il a fallu que les dev de l’appli l’explique.
-* La première quête en lançant l'appli est d'entrer un code de parrainage, le problème c'est que lorsque l'on est dans les premiers à installer l'appli, il n'y a personne pour donner un code, ce qui est plutôt dommage.
+* Une meilleure gestion des points perdus : en effet, derrière certains QR codes se cachaient des questions, or même si on avait plusieurs tentatives pour y répondre, le fait de se tromper une ou deux fois diminuait le nombre de points gagnés. C'était une bonne idée mais pour la comprendre, il a fallu que les dev de l'appli l'expliquent.
+* La première quête en lançant l'appli consiste à entrer un code de parrainage, le problème c'est que lorsque l'on est dans les premiers à installer l'appli, il n'y a personne pour donner un code, ce qui est plutôt dommage.
 * Pour chacune des quêtes le fait de publier un message sur twitter permettait de gagner des points en plus, le problème c'est qu'avec plus de 50 quêtes, et à chaque fois le même message, ça ressemble plus à du spam qu'autre chose.
 * La chose la plus fun à améliorer pour moi sera de réussir à coupler l'appli aux nombreux jeux prévus par les exposants. Avoir un classement global parmi tous les jeux de tous les stands, là ça serait vraiment le top.
 
 
-L’annonce des vainqueurs a donc eut lieu durant https://youtu.be/h2hA3TSTdpw?t=4m13s[l’épisode des casts codeurs] auquel nous n’avons pas pu assister cette année. Et Michaël a donc bien gagné sa place pour devoxxFR 2017. Quant à moi, ce n’est que partie remise.
+L’annonce des vainqueurs a donc eu lieu durant https://youtu.be/h2hA3TSTdpw?t=4m13s[l’épisode des casts codeurs] auquel nous n’avons pas pu assister cette année.
+Et Michaël a donc bien gagné sa place pour DevoxxFR 2017. Quant à moi, ce n’est que partie remise.
 
 {lt}div style="text-align : center"{gt}
 {lt}a class="inlineBoxes" href="/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_classment_final.png" data-lightbox="1" title=""{gt}
@@ -108,7 +124,8 @@ L’annonce des vainqueurs a donc eut lieu durant https://youtu.be/h2hA3TSTdpw?t
 
 {lt}br/{gt}
 
-Le code sources de MyDevoxx est sur github : https://github.com/devoxx/AndroidMobileApp
+Le code source de MyDevoxx est sur github : https://github.com/devoxx/AndroidMobileApp
 
 
-En tout cas, sachant que ces applications vont être utilisées pour chaque devoxx, on peut être sûr que ça va vite évoluer et qu’on aura quelque chose de plus abouti pour devoxx france l’année prochaine !
+En tout cas, sachant que ces applications vont être utilisées pour chaque Devoxx,
+on peut être sûrs que ça va vite évoluer et qu’on aura quelque chose de plus abouti pour Devoxx France l’année prochaine !
