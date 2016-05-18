@@ -24,14 +24,14 @@ il y a eu de publié sur les stores l’application https://play.google.com/stor
 Pour ce qui va suivre nous allons uniquement parler de celle disponible sur Android car c’est celle que nous avons utilisée.
 
 {lt}div style="text-align : center"{gt}
-{lt}a class="inlineBoxes" href="/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_tag_app1.png" data-lightbox="0" title="Devoxx Huntly screenshot"{gt}
-        {lt}img class="medium" src="/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_tag_app1.png" alt="Devoxx Huntly screenshot"/{gt}
+{lt}a class="inlineBoxes" href="/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_tag_app1.png" data-lightbox="2" title="Devoxx Huntly screenshot"{gt}
+        {lt}img class="medium" src="/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_tag_app1_min.png" alt="Devoxx Huntly screenshot"/{gt}
 {lt}/a{gt}
-{lt}a class="inlineBoxes" href="/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_tag_app2.png" data-lightbox="0" title="Devoxx Huntly screenshot - Liste des quêtes"{gt}
-        {lt}img class="medium" src="/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_tag_app2.png" alt="Devoxx Huntly screenshot - Liste de quêtes"/{gt}
+{lt}a class="inlineBoxes" href="/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_tag_app2.png" data-lightbox="2" title="Devoxx Huntly screenshot - Liste des quêtes"{gt}
+        {lt}img class="medium" src="/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_tag_app2_min.png" alt="Devoxx Huntly screenshot - Liste de quêtes"/{gt}
 {lt}/a{gt}
-{lt}a class="inlineBoxes" href="/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_tag_app3.png" data-lightbox="0" title="Devoxx Huntly screenshot - Quête terminée"{gt}
-        {lt}img class="medium" src="/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_tag_app3.png" alt="Devoxx Huntly screenshot - Quête terminée"/{gt}
+{lt}a class="inlineBoxes" href="/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_tag_app3.png" data-lightbox="2" title="Devoxx Huntly screenshot - Quête terminée"{gt}
+        {lt}img class="medium" src="/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_tag_app3_min.png" alt="Devoxx Huntly screenshot - Quête terminée"/{gt}
 {lt}/a{gt}
 
 {lt}/div{gt}
@@ -58,23 +58,23 @@ et sur ce coup-là on peut dire que la team de scalac était au taquet car il y 
 
 
 {lt}div style="text-align : center"{gt}
-{lt}a class="inlineBoxes" href="/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_tag_stand1.jpg" data-lightbox="0" title="QRCode sur le stant Aldebaran"{gt}
-        {lt}img class="medium" src="/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_tag_stand1.jpg" alt="QRCode sur le stant Aldebaran"/{gt}
+{lt}a class="inlineBoxes" href="/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_tag_stand1.png" data-lightbox="0" title="QRCode sur le stant Aldebaran"{gt}
+        {lt}img class="medium" src="/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_tag_stand1_min.png" alt="QRCode sur le stant Aldebaran"/{gt}
 {lt}/a{gt}
-{lt}a class="inlineBoxes" href="/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_tag_stand2.jpg" data-lightbox="0" title="QRCode sur le stand SII"{gt}
-        {lt}img class="medium" src="/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_tag_stand2.jpg" alt="QRCode sur le stand SII"/{gt}
+{lt}a class="inlineBoxes" href="/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_tag_stand2.png" data-lightbox="0" title="QRCode sur le stand SII"{gt}
+        {lt}img class="medium" src="/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_tag_stand2_min.png" alt="QRCode sur le stand SII"/{gt}
 {lt}/a{gt}
-{lt}a class="inlineBoxes" href="/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_tag_stand3.jpg" data-lightbox="0" title="QRCode sur le stand Stackoverflow"{gt}
-        {lt}img class="medium" src="/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_tag_stand3.jpg" alt="QRCode sur le stand Stackoverflow"/{gt}
+{lt}a class="inlineBoxes" href="/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_tag_stand3.png" data-lightbox="0" title="QRCode sur le stand Stackoverflow"{gt}
+        {lt}img class="medium" src="/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_tag_stand3_min.png" alt="QRCode sur le stand Stackoverflow"/{gt}
 {lt}/a{gt}
-{lt}a class="inlineBoxes" href="/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_tag_stand4.jpg" data-lightbox="0" title="QRCode sur le stand Amazon"{gt}
-        {lt}img class="medium" src="/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_tag_stand4.jpg" alt="QRCode sur le stand Amazon"/{gt}
+{lt}a class="inlineBoxes" href="/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_tag_stand4.png" data-lightbox="0" title="QRCode sur le stand Amazon"{gt}
+        {lt}img class="medium" src="/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_tag_stand4_min.png" alt="QRCode sur le stand Amazon"/{gt}
 {lt}/a{gt}
-{lt}a class="inlineBoxes" href="/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_tag_stand_huntly.jpg" data-lightbox="0" title="Le stand de Devoxx Huntly"{gt}
-        {lt}img class="medium" src="/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_tag_stand_huntly.jpg" alt="Le stand de Devoxx Huntly"/{gt}
+{lt}a class="inlineBoxes" href="/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_tag_stand_huntly.png" data-lightbox="0" title="Le stand de Devoxx Huntly"{gt}
+        {lt}img class="medium" src="/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_tag_stand_huntly_min.png" alt="Le stand de Devoxx Huntly"/{gt}
 {lt}/a{gt}
-{lt}a class="inlineBoxes" href="/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_tag_porte.jpg" data-lightbox="0" title="QRCode sur une porte de salle"{gt}
-        {lt}img class="medium" src="/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_tag_porte.jpg" alt="QRCode sur une porte de salle"/{gt}
+{lt}a class="inlineBoxes" href="/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_tag_porte.png" data-lightbox="0" title="QRCode sur une porte de salle"{gt}
+        {lt}img class="medium" src="/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_tag_porte_min.png" alt="QRCode sur une porte de salle"/{gt}
 {lt}/a{gt}
 {lt}/div{gt}
 
@@ -87,8 +87,8 @@ Quand on est dans une conférence pour développeurs, on peut s’attendre à vo
 Il s’est lui-même dénoncé au stand, ça lui a valu un direct de Stefan, en expliquant qu’il avait profité du fait que la communication avec le serveur était en ssl au lieu de tls pour intercepter les communications et envoyer des informations au serveur.
 
 {lt}div style="text-align : center"{gt}
-{lt}a class="inlineBoxes" href="/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_stephan_pushing_fcamblor.jpeg" data-lightbox="4" title="Stephan maltraitant Frédéric"{gt}
-        {lt}img class="medium" src="/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_stephan_pushing_fcamblor.jpeg" alt="Stephan maltraitant Frédéric"/{gt}
+{lt}a class="inlineBoxes" href="/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_stephan_pushing_fcamblor.png" data-lightbox="4" title="Stephan maltraitant Frédéric"{gt}
+        {lt}img class="medium" src="/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_stephan_pushing_fcamblor.png" alt="Stephan maltraitant Frédéric"/{gt}
 {lt}/a{gt}
 
 {lt}br/{gt}
@@ -118,7 +118,7 @@ Et Michaël a donc bien gagné sa place pour DevoxxFR 2017. Quant à moi, ce n�
 
 {lt}div style="text-align : center"{gt}
 {lt}a class="inlineBoxes" href="/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_classment_final.png" data-lightbox="1" title="Classement final"{gt}
-        {lt}img class="medium" src="/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_classment_final.png" alt="Classement final"/{gt}
+        {lt}img class="medium" src="/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_classment_final_min.png" alt="Classement final"/{gt}
 {lt}/a{gt}
 {lt}/div{gt}
 
