@@ -6,7 +6,7 @@ cover: devoxx2016-banner
 tags: [Devoxx, Gamification]
 ---
 
-An english version of this blogpost is published on Michaël Bitard's blog at https://agileek.github.io/
+An english version of this blogpost is published on Michaël Bitard's blog at https://agileek.github.io/java/2016/05/19/devoxx_2016_huntly/[agileek.github.io]
 
 Cette année pour Devoxx, j’étais le seul Code-Troopers disponible mais ce n’est pas grave car j’y ai retrouvé Michaël, ancien collègue tourangeau maintenant basé à Toulouse.
 On va vous raconter ici comment on s’est bien amusés pendant ces 3 jours.
