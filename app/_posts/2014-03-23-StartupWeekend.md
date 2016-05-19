@@ -74,7 +74,7 @@ Fin de marathon - 17h
 ## Verdict final
 Nous avons réussi à finir dans le top 3 ! La notation se fait autour de trois critères : le modèle économique, la validation client et l’exécution. Ce n’était pas gagné car l’idée du projet a été trouvée dans la journée de vendredi, rien n’avait été préparé avant le début du week-end ! C’est d’ailleurs aussi pour ça que le projet s’est tantôt appelé «be my tourneur», puis «ma ville mon artiste», pour finir sur «My Band My City». Le projet a tout de même séduit le jury qui nous a accordé une excellente 3ème place !
 
-Merci à toute l’équipe du staff qui nous a trés bien nourris pendant ce week-end et merci à nos collègues de FBS qui ont eux aussi fait du très bon boulot.
+Merci à toute l’équipe du staff qui nous a très bien nourris pendant ce week-end et merci à nos collègues de FBS qui ont eux aussi fait du très bon boulot.
 
 ## Classement Final
 10 projets ont été présentés.
