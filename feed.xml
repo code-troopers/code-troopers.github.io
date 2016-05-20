@@ -7,6 +7,177 @@
                 <atom:link href="http://code-troopers.com/feed.xml" rel="self" type="application/rss+xml"/>
                 
                         <item>
+                                <title>Devoxx 2016 : Huntly ou rien !</title>
+                                <description>&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;An english version of this blogpost is published on Michaël Bitard&amp;#8217;s blog at &lt;a href=&quot;https://agileek.github.io/java/2016/05/19/devoxx_2016_huntly/&quot;&gt;agileek.github.io&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Cette année pour Devoxx, j’étais le seul Code-Troopers disponible mais ce n’est pas grave car j’y ai retrouvé Michaël, ancien collègue tourangeau maintenant basé à Toulouse.
+On va vous raconter ici comment on s’est bien amusés pendant ces 3 jours.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;&lt;!--break--&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Pour l&amp;#8217;édition 2016 de DevoxxFR, il y avait une nouveauté qui aurait probablement dû arriver bien plus tôt, il s’agit des applications mobiles officielles.&lt;br&gt;
+Rien de bien révolutionnaire à ça vous allez me dire, et je suis d&amp;#8217;accord car les années précédentes des âmes charitables prenaient de leur temps pour sortir une application permettant d&amp;#8217;avoir le programme dans sa poche.&lt;br&gt;
+Mais en plus de l’application permettant de voir et gérer le programme &lt;a href=&quot;https://play.google.com/store/apps/details?id=com.devoxx&quot;&gt;My devoxx&lt;/a&gt;,&lt;br&gt;
+il y a eu de publié sur les stores l’application &lt;a href=&quot;https://play.google.com/store/apps/details?id=com.devoxx.huntly&quot;&gt;Devoxx Huntly&lt;/a&gt; qui a pour tag line “Win tickets for devoxx events”. Autant le dire tout de suite, jouer pour gagner des places pour Devoxx, ça mérite un peu plus d’attention.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Pour ce qui va suivre nous allons uniquement parler de celle disponible sur Android car c’est celle que nous avons utilisée.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;&lt;div style=&quot;text-align : center&quot;&gt;
+&lt;a class=&quot;inlineBoxes&quot; href=&quot;/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_tag_app1.png&quot; data-lightbox=&quot;2&quot; title=&quot;Devoxx Huntly screenshot&quot;&gt;
+        &lt;img class=&quot;medium&quot; src=&quot;/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_tag_app1_min.png&quot; alt=&quot;Devoxx Huntly screenshot&quot;/&gt;
+&lt;/a&gt;
+&lt;a class=&quot;inlineBoxes&quot; href=&quot;/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_tag_app2.png&quot; data-lightbox=&quot;2&quot; title=&quot;Devoxx Huntly screenshot - Liste des quêtes&quot;&gt;
+        &lt;img class=&quot;medium&quot; src=&quot;/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_tag_app2_min.png&quot; alt=&quot;Devoxx Huntly screenshot - Liste de quêtes&quot;/&gt;
+&lt;/a&gt;
+&lt;a class=&quot;inlineBoxes&quot; href=&quot;/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_tag_app3.png&quot; data-lightbox=&quot;2&quot; title=&quot;Devoxx Huntly screenshot - Quête terminée&quot;&gt;
+        &lt;img class=&quot;medium&quot; src=&quot;/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_tag_app3_min.png&quot; alt=&quot;Devoxx Huntly screenshot - Quête terminée&quot;/&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;&lt;/div&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect1&quot;&gt;
+&lt;h2 id=&quot;comment-ça-marche-et-quel-est-le-but&quot;&gt;Comment ça marche et quel est le but ?&lt;/h2&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Le but est assez simple, avoir le plus de points. Comment ça marche ? En scannant des QR codes comme ceux ci-dessous via l&amp;#8217;application. Un jeu d&amp;#8217;enfant donc.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Le côté sympa de la chose c&amp;#8217;est que les QR codes étaient présents sur chacun des stands des exposants. C&amp;#8217;est donc un moyen sympa de tous les faire.
+C&amp;#8217;est donc ce que l&amp;#8217;on a fait.
+Et dans la plupart des cas, le fait d&amp;#8217;aller scanner le QR code sur place était un bon moyen pour arriver sur le stand et commencer la conversation avec les personnes présentes.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Parfois (surtout le premier jour) nous avons dû expliquer ce qu&amp;#8217;était ce fameux QR code (voir même le trouver sur le stand) et à quoi il servait (nous avons trouvé dommage que les stands n&amp;#8217;aient pas été plus au courant de l&amp;#8217;existence de huntly)
+On ne va pas se mentir non plus, on n&amp;#8217;a pas parlé à tous les exposants, certains stands sont moins sympas à aller voir que d&amp;#8217;autres, et dans ce cas, on a un peu esquivé.
+Mais il faut quand même avouer que cette année, j&amp;#8217;ai parlé à beaucoup plus d&amp;#8217;exposants que les années précédentes, sans aucun doute du fait de l&amp;#8217;appli.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Étant donné que c&amp;#8217;est la première mise en place,
+il y avait forcément quelques petites retouches à faire,
+et sur ce coup-là on peut dire que la team de scalac était au taquet car il y a eu au moins 2 updates durant les trois jours qui ont permis de corriger notamment un problème avec l&amp;#8217;api twitter et un autre avec le scan de contact (2 updates en 3 jours, je parle toujours de l&amp;#8217;appli Android, parce que bon, sur iOS&amp;#8230;&amp;#8203; :p)&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;&lt;div style=&quot;text-align : center&quot;&gt;
+&lt;a class=&quot;inlineBoxes&quot; href=&quot;/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_tag_stand1.png&quot; data-lightbox=&quot;0&quot; title=&quot;QRCode sur le stant Aldebaran&quot;&gt;
+        &lt;img class=&quot;medium&quot; src=&quot;/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_tag_stand1_min.png&quot; alt=&quot;QRCode sur le stant Aldebaran&quot;/&gt;
+&lt;/a&gt;
+&lt;a class=&quot;inlineBoxes&quot; href=&quot;/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_tag_stand2.png&quot; data-lightbox=&quot;0&quot; title=&quot;QRCode sur le stand SII&quot;&gt;
+        &lt;img class=&quot;medium&quot; src=&quot;/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_tag_stand2_min.png&quot; alt=&quot;QRCode sur le stand SII&quot;/&gt;
+&lt;/a&gt;
+&lt;a class=&quot;inlineBoxes&quot; href=&quot;/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_tag_stand3.png&quot; data-lightbox=&quot;0&quot; title=&quot;QRCode sur le stand Stackoverflow&quot;&gt;
+        &lt;img class=&quot;medium&quot; src=&quot;/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_tag_stand3_min.png&quot; alt=&quot;QRCode sur le stand Stackoverflow&quot;/&gt;
+&lt;/a&gt;
+&lt;a class=&quot;inlineBoxes&quot; href=&quot;/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_tag_stand4.png&quot; data-lightbox=&quot;0&quot; title=&quot;QRCode sur le stand Amazon&quot;&gt;
+        &lt;img class=&quot;medium&quot; src=&quot;/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_tag_stand4_min.png&quot; alt=&quot;QRCode sur le stand Amazon&quot;/&gt;
+&lt;/a&gt;
+&lt;a class=&quot;inlineBoxes&quot; href=&quot;/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_tag_stand_huntly.png&quot; data-lightbox=&quot;0&quot; title=&quot;Le stand de Devoxx Huntly&quot;&gt;
+        &lt;img class=&quot;medium&quot; src=&quot;/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_tag_stand_huntly_min.png&quot; alt=&quot;Le stand de Devoxx Huntly&quot;/&gt;
+&lt;/a&gt;
+&lt;a class=&quot;inlineBoxes&quot; href=&quot;/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_tag_porte.png&quot; data-lightbox=&quot;0&quot; title=&quot;QRCode sur une porte de salle&quot;&gt;
+        &lt;img class=&quot;medium&quot; src=&quot;/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_tag_porte_min.png&quot; alt=&quot;QRCode sur une porte de salle&quot;/&gt;
+&lt;/a&gt;
+&lt;/div&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect1&quot;&gt;
+&lt;h2 id=&quot;ce-qui-nous-a-plu&quot;&gt;Ce qui nous a plu&lt;/h2&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Quand on est dans une conférence pour développeurs, on peut s’attendre à voir des filous tenter de feinter/hacker/tricher, quoi.
+Ça n’a pas tardé car quelques heures après le début du jeu on a remarqué une personne qui semblait avoir vachement plus d’avance que tout le monde (Frédéric Camblor pour ne pas le citer).
+Il s’est lui-même dénoncé au stand, ça lui a valu un direct de Stefan, en expliquant qu’il avait profité du fait que la communication avec le serveur était en ssl au lieu de tls pour intercepter les communications et envoyer des informations au serveur.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;&lt;div style=&quot;text-align : center&quot;&gt;
+&lt;a class=&quot;inlineBoxes&quot; href=&quot;/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_stephan_pushing_fcamblor.png&quot; data-lightbox=&quot;4&quot; title=&quot;Stephan maltraitant Frédéric&quot;&gt;
+        &lt;img class=&quot;medium&quot; src=&quot;/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_stephan_pushing_fcamblor.png&quot; alt=&quot;Stephan maltraitant Frédéric&quot;/&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect1&quot;&gt;
+&lt;h2 id=&quot;ce-qui-n-a-pas-trop-marché&quot;&gt;Ce qui n&amp;#8217;a pas trop marché&lt;/h2&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Certaines des quêtes étaient des check-ins, il s&amp;#8217;agissait de passer dans toutes les salles où il y avait des confs et normalement, il y avait des beacons qui devaient permettre de détecter automatiquement qu&amp;#8217;on était dans la bonne zone.
+Malheureusement je n&amp;#8217;ai jamais capté un seul signal, même avec mon bluetooth allumé tout le temps.
+D&amp;#8217;ailleurs, si quelqu’un a capté un signal, je suis curieux de savoir comment ça marchait (le seul signal qui a été capté était le beacon que j’avais dans le sac, et il a été capté par Michaël au bout d’une heure de binomage lors d’un workshop).
+Mais bon ce n&amp;#8217;est pas grave car il y avait en backup des QR codes pour faire ces quêtes.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect1&quot;&gt;
+&lt;h2 id=&quot;Évolutions&quot;&gt;Évolutions&lt;/h2&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Bien qu&amp;#8217;on ait fait le tour de tous les stands, celui sur lequel on a passé le plus de temps reste celui de devoxx huntly.
+Nous avons parlé des choses à modifier pour les prochaines éditions, notamment en ce qui concerne les quêtes afin de gagner encore plus de points !&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Parmi les points qui pourront être améliorés on peut citer par exemple :&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ulist&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Une meilleure gestion des points perdus : en effet, derrière certains QR codes se cachaient des questions, or même si on avait plusieurs tentatives pour y répondre, le fait de se tromper une ou deux fois diminuait le nombre de points gagnés. C&amp;#8217;était une bonne idée mais pour la comprendre, il a fallu que les dev de l&amp;#8217;appli l&amp;#8217;expliquent.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;La première quête en lançant l&amp;#8217;appli consiste à entrer un code de parrainage, le problème c&amp;#8217;est que lorsque l&amp;#8217;on est dans les premiers à installer l&amp;#8217;appli, il n&amp;#8217;y a personne pour donner un code, ce qui est plutôt dommage.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Pour chacune des quêtes le fait de publier un message sur twitter permettait de gagner des points en plus, le problème c&amp;#8217;est qu&amp;#8217;avec plus de 50 quêtes, et à chaque fois le même message, ça ressemble plus à du spam qu&amp;#8217;autre chose.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;La chose la plus fun à améliorer pour moi sera de réussir à coupler l&amp;#8217;appli aux nombreux jeux prévus par les exposants. Avoir un classement global parmi tous les jeux de tous les stands, là ça serait vraiment le top.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;L’annonce des vainqueurs a donc eu lieu durant &lt;a href=&quot;https://youtu.be/h2hA3TSTdpw?t=4m13s&quot;&gt;l’épisode des casts codeurs&lt;/a&gt; auquel nous n’avons pas pu assister cette année.
+Et Michaël a donc bien gagné sa place pour DevoxxFR 2017. Quant à moi, ce n’est que partie remise.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;&lt;div style=&quot;text-align : center&quot;&gt;
+&lt;a class=&quot;inlineBoxes&quot; href=&quot;/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_classment_final.png&quot; data-lightbox=&quot;1&quot; title=&quot;Classement final&quot;&gt;
+        &lt;img class=&quot;medium&quot; src=&quot;/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_classment_final_min.png&quot; alt=&quot;Classement final&quot;/&gt;
+&lt;/a&gt;
+&lt;/div&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Le code source de MyDevoxx est sur github : &lt;a href=&quot;https://github.com/devoxx/AndroidMobileApp&quot; class=&quot;bare&quot;&gt;https://github.com/devoxx/AndroidMobileApp&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;En tout cas, sachant que ces applications vont être utilisées pour chaque Devoxx,
+on peut être sûrs que ça va vite évoluer et qu’on aura quelque chose de plus abouti pour Devoxx France l’année prochaine !&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
+                                <pubDate>Fri, 20 May 2016 00:00:00 +0000</pubDate>
+                                <link>http://code-troopers.com/2016/05/20/devoxx-2016-huntly.html</link>
+                                <guid isPermaLink="true">http://code-troopers.com/2016/05/20/devoxx-2016-huntly.html</guid>
+                        </item>
+                
+                        <item>
                                 <title>Macro Vim : C&#39;est trop génial</title>
                                 <description>&lt;div class=&quot;paragraph&quot;&gt;
 &lt;p&gt;Comme certains d&amp;#8217;entre vous le savent, j&amp;#8217;aime beaucoup Vim. Il n&amp;#8217;y a pas très longtemps au Tours JUG, je disais que je n&amp;#8217;avais pas de cas d&amp;#8217;utilisation des macro dans Vim dont certains disent que c&amp;#8217;est LA killer feature. Et bien j&amp;#8217;ai trouvé un use case et « c&amp;#8217;est trop génial ! » comme dirait Agnès.&lt;/p&gt;
@@ -1368,113 +1539,6 @@ Puis une image owncloud avec des volumes pour les fichiers que l’on va sauvega
                                 <pubDate>Wed, 09 Sep 2015 00:00:00 +0000</pubDate>
                                 <link>http://code-troopers.com/2015/09/09/OwncloudDocker.html</link>
                                 <guid isPermaLink="true">http://code-troopers.com/2015/09/09/OwncloudDocker.html</guid>
-                        </item>
-                
-                        <item>
-                                <title>GIT-SVN comment survivre dans un environnement hostile</title>
-                                <description>&lt;p&gt;Git c’est cool, Git c’est Hype, Git c’est tout récent (&lt;a href=&quot;http://git-scm.com/book/fr/v1/D%C3%A9marrage-rapide-Une-rapide-histoire-de-Git&quot;&gt;enfin presque&lt;/a&gt;) et c’est pour ça qu’on aime bien.
-Mais pour beaucoup Git c’est nouveau, donc c’est le changement, donc c’est compliqué, et c’est pour ça que plein de boîtes préfèrent garder leur serveur svn.&lt;/p&gt;
-
-&lt;p&gt;Je vais tenter ici, de vous donner les principales commandes de &lt;code&gt;Git-SVN&lt;/code&gt;. Ainsi si vous vous trouvez dans une boîte qui ne veut pas changer son scm mais que vous, vous avez envie de changement,
-vous pourrez donc utiliser la puissance de Git. 
-Et ce sans aucun impact sur le gestionnaire de sources de la société dans laquelle vous êtes. C’est génial non ?&lt;/p&gt;
-
-&lt;!--break--&gt;
-
-&lt;h2 id=&quot;prrequis&quot;&gt;Prérequis&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Avoir Git-SVN d’installé ! Et ce qui est bien fait, c’est que Git-SVN fait partie intégrante de Git. C’est donc Git que vous allez installer : &lt;a href=&quot;http://www.git-scm.com&quot;&gt;www.git-scm.com&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Un accès au svn (l’url du projet qui vous intéresse fera largement l’affaire)&lt;/li&gt;
-  &lt;li&gt;Un terminal&lt;/li&gt;
-  &lt;li&gt;Un tout petit peu de courage&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;init-du-projet&quot;&gt;Init du Projet&lt;/h2&gt;
-&lt;p&gt;Le cas le plus courant est celui où tout le monde travaille sur le trunk du projet, et je vais partir de ce cas pour ce guide. 
-Si ce n’est pas le cas, il n’y a pas de gros changement, mais je vous invite à consulter plus en détail &lt;a href=&quot;https://git-scm.com/docs/git-svn&quot;&gt;la doc&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Donc si on se met dans la situation où tout le monde travaille sur le trunk, pour récupérer les sources du projet dans un nouveau répertoire vous devrez faire un :&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;git svn clone http://maboite/svn/monBeauProjet/ -s
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Par contre dès que le repo svn est un peu vieux (i.e. avec plein de commits) ça va mettre 3h ! En effet, Git va prendre les révisions une par une afin de créer son historique local.
-Si vous n’avez pas besoin de tout l’historique des révisions ce que vous pouvez faire c’est :&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;git svn clone http://maboite/svn/monBeauProjet/ -s -r4000:HEAD
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;ainsi il ne crééra l’histo qu’à partir de la révision 4000 du svn. Je vous conseille donc de prendre le 4000 le plus proche de la dernière révision.&lt;/p&gt;
-
-&lt;p&gt;À partir de là c’est bon, vous avez votre projet qui est géré par Git. La preuve vous pouvez tester via ces différentes commandes&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;git status
-git branch -a
-git log -n5
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&quot;travailler-sur-le-projet-en-local&quot;&gt;Travailler sur le projet (en local)&lt;/h2&gt;
-&lt;p&gt;Vous pouvez donc dès à présent commencer à travailler offline ou bien sans vous soucier des commits de vos collègues.
-Et cela avec tous les avantages que Git apporte.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;git commit -m&quot;Ajout de la modification du mot de passe par l&#39;admin&quot;
-git stash save “Début de ma tâche prioritaire”
-... // un peu de travail urgent
-git stash pop
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;On peut même faire des branches Git (en local) sans que cela n’impacte le serveur.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;git checkout -b myLocalBranch
-... // du travail avec plein de petits commits
-git checkout master
-git merge myLocalBranch
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&quot;commiter-sur-le-svn&quot;&gt;Commiter sur le svn&lt;/h2&gt;
-&lt;p&gt;Ensuite pour se synchroniser avec vos collègues (c’est mieux) les deux commandes indispensables sont&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;git svn rebase
-git svn dcommit
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Le &lt;code&gt;git svn rebase&lt;/code&gt; va faire l’équivalent d’un svn update quant au &lt;code&gt;git svn dcommit&lt;/code&gt; ça sera un svn commit.&lt;/p&gt;
-
-&lt;h2 id=&quot;bonus--utiliser-des-branches&quot;&gt;Bonus : Utiliser des branches&lt;/h2&gt;
-&lt;p&gt;Bon soyons honnêtes si vous utilisez un svn il y a quand même peu de chances que les branches soient vraiment utilisées (ou alors peut-être que vous aimez la douleur). Mais si ça arrive, voilà comment les utiliser.&lt;/p&gt;
-
-&lt;p&gt;Mettre à jour toutes les branches du svn :&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;git svn fetch
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Changer de branche :&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;git checkout -b &amp;lt;brancheDistante&amp;gt; &amp;lt;nomDeBrancheLocale&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Et maintenant vous pouvez naviguer entre vos branches normalement via Git  :&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;git checkout master
-git checkout nomDeBrancheLocale
-git checkout -
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;et par exemple pour recopier un commit d’une branche à une autre sans copier manuellement le fichier.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;git cherry-pick
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Voilà vous avez maintenant les bases pour utiliser Git alors que de premier abord cela ne semblait pas possible.
-Il ne vous reste plus qu’à forcer un peu plus pour remplacer l’ancien serveur svn par un nouveau sous Git et comme ça toute votre boîte pourra en profiter.
-&lt;br /&gt;
-&lt;br /&gt;
-Pour connaître les principales commandes Git, je vous invite à consulter &lt;a href=&quot;http://git-scm.com/docs/gittutorial&quot;&gt;la page tutoriel de Git&lt;/a&gt; ou alors de chercher sur &lt;a href=&quot;http://lmgtfy.com/?q=git+commands&quot;&gt;internet&lt;/a&gt;.&lt;/p&gt;
-</description>
-                                <pubDate>Thu, 16 Jul 2015 00:00:00 +0000</pubDate>
-                                <link>http://code-troopers.com/2015/07/16/GITSVN.html</link>
-                                <guid isPermaLink="true">http://code-troopers.com/2015/07/16/GITSVN.html</guid>
                         </item>
                 
         </channel>
