@@ -1,0 +1,25 @@
+{{ partial "header.html" . }}
+<section>
+<div class="header">
+  <h1 class="container">
+    {{ if eq .Title "Blogs" }}
+    <a href="/blog/index.html">Le <span>blog</span></a>
+    {{ else }}
+    {{ .Title }}
+    {{ end}}  
+  </h1>
+</div>
+</section>
+
+<section id="articles">
+    <div class="container">
+      <h3 style="text-align: center;font-size: 6em;margin: 50px;"></h3>
+      {{ range $index, $page := .Paginator.Pages }}
+      {{ .Render "li" }}
+      {{ end }}
+    </div>
+    <div class="row text-center">
+      {{ template "_internal/pagination.html" . }}
+    </div>
+</section>
+{{ partial "footer.html" . }}

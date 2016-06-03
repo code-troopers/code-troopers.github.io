@@ -1,0 +1,25 @@
+{{ $baseurl := .Site.BaseURL }}
+<article class="col-lg-4 col-md-6 col-sm-12">
+  <div onclick="window.location.href='{{ .Permalink }}' ;  return false" style="cursor: pointer;">
+    <div class="cover" style="background-image:url(/images/banner/{{ .Params.cover }}.png)">
+      <div class="date">posté le {{ .Date.Format "02/01/2006" }} par {{ .Params.author}}</div>
+      {{if .Params.tags }}
+      <ul class="tags">
+      {{ range $index, $tag := .Params.tags }}
+          <!--<li><a href="{{ $baseurl }}/tags/{{ $tag | urlize }}/">{{ $tag }}</a></li>-->
+          <li>{{ $tag }}</li>
+      {{ end }}
+      </ul>
+      {{ end }}
+
+    </div>
+      <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+      <div class="content">
+        {{ .Summary }}
+      </div>
+      <div class="fade-content"></div>
+      <div class="more">
+        <a  href="{{ .Permalink }}"><i class="fa fa-arrow-circle-o-right"></i> Lire la suite</a>
+      </div>
+    </div>
+</article>

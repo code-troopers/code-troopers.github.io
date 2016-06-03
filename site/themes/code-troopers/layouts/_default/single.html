@@ -1,0 +1,124 @@
+{{ $baseurl := .Site.BaseURL }}
+{{ partial "header.html" . }}
+<section>
+<div class="header">
+  <h1 class="container">
+    <a href="/blog/index.html">Le <span>blog</span></a>
+  </h1>
+</div>
+</section>
+
+<section id="post">
+        <div class="container">
+        <article>
+            <div>
+		<div class="cover" style="background-image:url(/images/banner/{{ .Params.cover }}-big.png)">
+                    <div class="date">posté le {{ .Date.Format "02/01/2006" }} par {{ .Params.author}}</div>
+                </div>
+                <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+                <span class="label label-info">~{{ .ReadingTime }} minute(s) à lire</span>
+                {{if .Params.tags }}
+                <ul class="tags">
+                {{ range $index, $tag := .Params.tags }}
+                    <li><a style="color:white;border-color: white" href="{{ $baseurl }}/tags/{{ $tag | urlize }}/">{{ $tag }}</a></li>
+                {{ end }}
+                </ul>
+                {{ end }}
+                <div class="content">
+                    	{{ .Content }}
+                </div>
+<div class="share">
+L'article vous a plu ? Partagez-le :
+    <ul class="socials">
+        <li>
+            <a target="_blank" title="Twitter" href="https://twitter.com/share?url=http://code-troopers.com{{ .Permalink }}&text={{ .Title }}&via=codetroopers"
+                rel="nofollow"
+                onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=400,width=700');return false;">
+                <i class="fa fa-twitter-square"></i>
+            </a>
+        </li>
+        <li>
+            <a target="_blank" title="Facebook" href="https://www.facebook.com/sharer.php?u=http://code-troopers.com{{ .Permalink }}&t={{ .Title }}"
+                class="facebook-button" rel="nofollow"
+                onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=500,width=700');return false;">
+                <i class="fa fa-facebook-square"></i>
+            </a>
+        </li>
+        <li>
+            <a target="_blank" title="Google +" href="https://plus.google.com/share?url=http://code-troopers.com{{ .Permalink }}&hl=fr"
+                class="google-button" rel="nofollow"
+                onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=650');return false;">
+                <i class="fa fa-google-plus-square"></i>
+            </a>
+        </li>
+        <li>
+            <a target="_blank" title="Linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=http://code-troopers.com{{ .Permalink }}&title={{ .Title }}"
+                class="linkedin-button" rel="nofollow"
+                onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=650');return false;">
+                <i class="fa fa-linkedin-square"></i>
+            </a>
+        </li>
+        <li>
+            <a target="_blank" title="Envoyer par mail" href="mailto:?subject={{ .Title }}&body=http://code-troopers.com{{ .Permalink }}" rel="nofollow">
+                <i class="fa fa-envelope"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+<div style="clear:both"></div>
+
+
+
+                <div class="back">
+                    <a href="/"><i class="fa fa-arrow-circle-o-up"></i> Retour aux articles</a>
+                    <div class="pull-right paginate">
+                        {{ if .Next }}
+                        <a href="{{ .Next.Permalink }}"><i class="fa fa-arrow-circle-o-left"></i> Précédent</a>
+                        {{ else }}
+                        <span class="disabled"><i class="fa fa-arrow-circle-o-left"></i> Précédent</span>
+                        {{ end }}
+                        {{ if .Prev }}
+                        <a href="{{ .Prev.Permalink }}"><i class="fa fa-arrow-circle-o-right"></i> Suivant</a>
+                        {{ else }}
+                        <span class="disabled"><i class="fa fa-arrow-circle-o-right"></i> Suivant</span>
+                        {{ end }}
+                    </div>
+                </div>
+
+                <section id="menu">
+                    <ul>
+                        {{ range $key, $taxonomy := .Site.Taxonomies.featured }}
+                        <li> {{ $key }} </li>
+                        <ul>
+                            {{ range $taxonomy.Pages }}
+                            <li hugo-nav="{{ .RelPermalink}}"><a href="{{ .Permalink}}"> {{ .LinkTitle }} </a> </li>
+                            {{ end }}
+                        </ul>
+                        {{ end }}
+                    </ul>
+                </section>
+
+                <div id="disqus_thread"></div>
+                <script type="text/javascript">
+                    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+                    var disqus_shortname = 'codetroopers'; // required: replace example with your forum shortname
+		    var disqus_url = window.location.href;
+		    if (window.location.protocol != "http:"){
+			disqus_url = "http:" + window.location.href.substring(window.location.protocol.length);
+		    }
+
+                    /* * * DON'T EDIT BELOW THIS LINE * * */
+                    (function() {
+                        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                    })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+            </div>
+        </article>
+        </div>
+    </section>
+{{ partial "footer.html" . }}

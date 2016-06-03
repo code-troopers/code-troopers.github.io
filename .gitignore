@@ -1,10 +1,7 @@
-node_modules
-.generated
-public
-.publish
-.grunt
-.tmp
-app/bower_components
-*.iml
+site/public
 .idea
-.DS_Store
+node_modules
+site/rev-manifest.json
+firebase-debug.log
+site/static/css
+site/static/js
