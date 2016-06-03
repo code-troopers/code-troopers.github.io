@@ -6,8 +6,8 @@ thumbnailimages='npm run images.thumbnail' #Take images in /src/images/posts fol
 runfast='hugo serve -t code-troopers -wD'
 
 #Docker
-dbuild='docker build -t codetroopers/website-hugo -f hugo-Dockerfile . && docker build -t codetroopers/website-node -f node-Dockerfile .'
-drunfast='docker run --rm -it -v $PWD:/app -p 1313:1313 codetroopers/website-hugo serve -s /app/site -t code-troopers -D -w --bind="0.0.0.0"' #Run hugo server on localhost:1313 with livereload and drafts
+dbuild='docker build -t codetroopers/website-node .'
+drunfast='docker run --rm -it -v $PWD:/app -p 1313:1313 codetroopers/hugo-asciidoctor serve -s /app/site -t code-troopers -D -w --bind="0.0.0.0"' #Run hugo server on localhost:1313 with livereload and drafts
 drun='docker run --rm -it -v $PWD/site:/usr/src/app/site codetroopers/website-node npm run build && ct drunfast'
 dcompressimages='docker run --rm -it -v $PWD/site:/usr/src/app/site codetroopers/website-node npm run images.compress'
 dthumbnailimages='docker run --rm -it -v $PWD/site:/usr/src/app/site codetroopers/website-node npm run images.thumbnail'
