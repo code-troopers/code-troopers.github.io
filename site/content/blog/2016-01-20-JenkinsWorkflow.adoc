@@ -7,7 +7,7 @@ tags:
 - Docker
 title: Jenkins Workflow Plugin
 url: /2016/01/20/jenkinsworkflow
-aliases: /2016/01/20/jenkinsworkflow.html
+aliases: /2016/01/20/JenkinsWorkflow.html
 ---
 
 Un des points génants lors de l'utilisation de Jenkins est le coté volatile de la configuration des jobs de builds.

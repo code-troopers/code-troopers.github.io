@@ -8,7 +8,7 @@ tags:
 - Curation
 title: Elcurator, le nouvel outil de curation par Octo
 url: /2014/08/08/elcurator
-aliases: /2014/08/08/elcurator.html
+aliases: /2014/08/08/ElCurator.html
 ---
 
 

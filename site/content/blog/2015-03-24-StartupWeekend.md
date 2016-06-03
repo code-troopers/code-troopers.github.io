@@ -7,7 +7,7 @@ tags:
 - tours
 title: 'Retour sur le Second #SWTours'
 url: /2015/03/24/startupweekend
-aliases: /2015/03/24/startupweekend.html
+aliases: /2015/03/24/StartupWeekend.html
 ---
 
 

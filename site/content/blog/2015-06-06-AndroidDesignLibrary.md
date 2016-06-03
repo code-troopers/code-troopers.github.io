@@ -7,7 +7,7 @@ tags:
 - Librairie
 title: Android Support Design Library
 url: /2015/06/06/androiddesignlibrary
-aliases: /2015/06/06/androiddesignlibrary.html
+aliases: /2015/06/06/AndroidDesignLibrary.html
 ---
 
 

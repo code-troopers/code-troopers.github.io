@@ -8,7 +8,7 @@ tags:
 - Tips
 title: Résoudre les conflits de dépendances
 url: /2014/09/01/conflitsdependances
-aliases: /2014/09/01/conflitsdependances.html
+aliases: /2014/09/01/ConflitsDependances.html
 ---
 
 

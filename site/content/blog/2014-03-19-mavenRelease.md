@@ -8,7 +8,7 @@ tags:
 - Maven
 title: Distribuer sur Maven Central ses bibliothèques
 url: /2014/03/19/mavenrelease
-aliases: /2014/03/19/mavenrelease.html
+aliases: /2014/03/19/mavenRelease.html
 ---
 
 

@@ -8,7 +8,7 @@ tags:
 - tips
 title: Installer votre dépot privé Docker
 url: /2015/06/25/installdockerregistry
-aliases: /2015/06/25/installdockerregistry.html
+aliases: /2015/06/25/InstallDockerRegistry.html
 ---
 
 Petit à petit chez Code-Troopers, nous migrons tous nos développements pour utiliser Docker.

@@ -7,7 +7,7 @@ tags:
 - Add-ons
 title: Top 3 add-ons Heroku
 url: /2014/09/04/addonsheroku
-aliases: /2014/09/04/addonsheroku.html
+aliases: /2014/09/04/AddonsHeroku.html
 ---
 
 

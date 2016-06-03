@@ -8,7 +8,7 @@ tags:
 - startup
 title: Encore un podium pour MyBandMyCity
 url: /2014/04/28/concoursaccede
-aliases: /2014/04/28/concoursaccede.html
+aliases: /2014/04/28/ConcoursAccede.html
 ---
 
 
