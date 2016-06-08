@@ -5,3 +5,4 @@ site/rev-manifest.json
 firebase-debug.log
 site/static/css
 site/static/js
+site/.publish

@@ -8,7 +8,9 @@
     "build.prod": "gulp build --prod --gulpfile site/gulpfile.js && hugo -t code-troopers -s site && gulp rev --gulpfile site/gulpfile.js",
     "images.compress": "gulp images.compress --gulpfile site/gulpfile.js",
     "images.thumbnail": "gulp images.thumbnail --gulpfile site/gulpfile.js",
-    "start": "hugo serve -t code-troopers -w --buildDrafts -s site"
+    "start": "hugo serve -t code-troopers -w --buildDrafts -s site",
+    "clean": "gulp clean --gulpfile site/gulpfile.js",
+    "deploy": "gulp ghpages --gulpfile site/gulpfile.js"
   },
   "devDependencies": {
     "del": "^2.2.0",
@@ -18,6 +20,7 @@
     "gulp-clean-css": "^2.0.9",
     "gulp-concat": "^2.6.0",
     "gulp-concat-css": "^2.3.0",
+    "gulp-gh-pages": "^0.5.4",
     "gulp-if": "^2.0.1",
     "gulp-image-resize": "^0.8.0",
     "gulp-imagemin": "^3.0.1",
