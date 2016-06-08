@@ -6,5 +6,5 @@ var config = require('../config');
 
 gulp.task('ghpages', function () {
     return gulp.src(['public/**'])
-        .pipe(ghPages({branch: 'test'}));
+        .pipe(ghPages());
 });
