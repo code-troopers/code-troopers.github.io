@@ -10,7 +10,10 @@
     "images.thumbnail": "gulp images.thumbnail --gulpfile site/gulpfile.js",
     "start": "hugo serve -t code-troopers -w --buildDrafts -s site",
     "clean": "gulp clean --gulpfile site/gulpfile.js",
-    "deploy": "gulp ghpages --gulpfile site/gulpfile.js"
+    "deploy": "gulp ghpages --gulpfile site/gulpfile.js",
+    "jenkins.prebuild": "gulp build --prod --gulpfile site/gulpfile.js",
+    "jenkins.postbuild": "gulp rev --gulpfile site/gulpfile.js",
+    "jenins.deploy": "npm deploy"
   },
   "devDependencies": {
     "del": "^2.2.0",
