@@ -6,7 +6,7 @@ tags:
 - Jenkins
 - Docker
 title: Jenkins Workflow Plugin
-url: /2016/01/20/jenkinsworkflow
+url: /2016/01/20/jenkinsworkflow/
 aliases: /2016/01/20/JenkinsWorkflow.html
 ---
 

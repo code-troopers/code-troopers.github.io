@@ -7,7 +7,7 @@ tags:
 - Tips
 - Macro
 title: 'Macro Vim : C''est trop génial'
-url: /2016/05/11/vim_macro
+url: /2016/05/11/vim_macro/
 aliases: /2016/05/11/Vim_Macro.html
 ---
 
