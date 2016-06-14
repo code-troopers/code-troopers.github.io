@@ -6,14 +6,13 @@
     <a href="/blog/index.html">Le <span>blog</span></a>
     {{ else }}
     {{ .Title }}
-    {{ end}}  
+    {{ end}}
   </h1>
 </div>
 </section>
 
 <section id="articles">
     <div class="container">
-      <h3 style="text-align: center;font-size: 6em;margin: 50px;"></h3>
       {{ range $index, $page := .Paginator.Pages }}
       {{ .Render "li" }}
       {{ end }}

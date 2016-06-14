@@ -4,13 +4,6 @@ New blog for blog.code-troopers.com
 
 Lead : benjamin@code-troopers.com
 
-To be done :
-- [ ] Fix margin (top/bottom) on main container
-
-- [ ] Jenkins jobs
-- [ ] Deploy on blog.code-troopers.com
-- [ ] Migrate disqus
-
 # Links
 
 - dev       : http://localhost:1313
@@ -33,7 +26,7 @@ Livereload
 ### Prerequisit
 
 - hugo (https://gohugo.io/)
-- asciidoctor (http://asciidoctor.org/) 
+- asciidoctor (http://asciidoctor.org/)
 - (optional) node
 - (optional) firebase-tools `npm i -g firebase-tools` (to deploy on firebase)
 
