@@ -7,7 +7,7 @@ tags:
 - git
 - shell
 title: k is the new l, yo
-url: /2014/05/14/kisthenewl
+url: /2014/05/14/kisthenewl/
 aliases: /2014/05/14/kIsTheNewL.html
 ---
 

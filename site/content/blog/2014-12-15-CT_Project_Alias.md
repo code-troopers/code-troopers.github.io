@@ -6,7 +6,7 @@ tags:
 - Shell
 - Helper
 title: ct - alias de projets
-url: /2014/12/15/ct_project_alias
+url: /2014/12/15/ct_project_alias/
 aliases: /2014/12/15/CT_Project_Alias.html
 ---
 

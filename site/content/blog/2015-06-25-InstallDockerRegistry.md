@@ -7,7 +7,7 @@ tags:
 - docker
 - tips
 title: Installer votre dépot privé Docker
-url: /2015/06/25/installdockerregistry
+url: /2015/06/25/installdockerregistry/
 aliases: /2015/06/25/InstallDockerRegistry.html
 ---
 

@@ -8,7 +8,7 @@ tags:
 - gitconfig
 - hook
 title: 'git : quelques astuces de configuration pour vos dotfiles'
-url: /2015/05/22/dotfiles-git
+url: /2015/05/22/dotfiles-git/
 aliases: /2015/05/22/Dotfiles-git.html
 ---
 

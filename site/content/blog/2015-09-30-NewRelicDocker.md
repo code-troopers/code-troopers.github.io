@@ -7,7 +7,7 @@ tags:
 - New Relic
 - Monitoring
 title: Monitorer ses conteneurs Docker avec New Relic
-url: /2015/09/30/newrelicdocker
+url: /2015/09/30/newrelicdocker/
 aliases: /2015/09/30/NewRelicDocker.html
 ---
 

@@ -6,7 +6,7 @@ tags:
 - Android
 - Permission
 title: Android M - Nouvelle gestion de permission
-url: /2015/09/22/android_m_permissions
+url: /2015/09/22/android_m_permissions/
 aliases: /2015/09/22/Android_M_Permissions.html
 ---
 

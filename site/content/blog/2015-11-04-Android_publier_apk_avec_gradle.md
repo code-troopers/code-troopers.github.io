@@ -8,7 +8,7 @@ tags:
 - Gradle
 - Livraison
 title: 'Android : Publier son apk en ligne de commande'
-url: /2015/11/04/android_publier_apk_avec_gradle
+url: /2015/11/04/android_publier_apk_avec_gradle/
 aliases: /2015/11/04/Android_publier_apk_avec_gradle.html
 ---
 

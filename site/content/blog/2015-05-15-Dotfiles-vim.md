@@ -8,7 +8,7 @@ tags:
 - vimrc
 - shell
 title: 'vim : 10 astuces de configuration pour vos dotfiles'
-url: /2015/05/15/dotfiles-vim
+url: /2015/05/15/dotfiles-vim/
 aliases: /2015/05/15/Dotfiles-vim.html
 ---
 

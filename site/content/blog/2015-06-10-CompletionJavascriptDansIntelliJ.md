@@ -7,7 +7,7 @@ tags:
 - JavaScript
 - tip
 title: Améliorer la complétion JavaScript d'IntelliJ IDEA
-url: /2015/06/10/completionjavascriptdansintellij
+url: /2015/06/10/completionjavascriptdansintellij/
 aliases: /2015/06/10/CompletionJavascriptDansIntelliJ.html
 ---
 

@@ -6,7 +6,7 @@ tags:
 - Android
 - Material design
 title: Squelette Android 5.0
-url: /2014/11/26/squeletteandroid5
+url: /2014/11/26/squeletteandroid5/
 aliases: /2014/11/26/SqueletteAndroid5.html
 ---
 

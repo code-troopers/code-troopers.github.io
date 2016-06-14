@@ -7,7 +7,7 @@ tags:
 - AngularJS
 - Tech
 title: 'Startup Weekend : côté perdant'
-url: /2016/01/14/startupweekend-coteperdant
+url: /2016/01/14/startupweekend-coteperdant/
 aliases: /2016/01/14/StartupWeekend-CotePerdant.html
 ---
 

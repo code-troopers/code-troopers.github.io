@@ -6,7 +6,7 @@ tags:
 - Security
 - Play2
 title: Strength Password Indicator Pour Play2
-url: /2014/03/05/passwordstrength
+url: /2014/03/05/passwordstrength/
 aliases: /2014/03/05/passwordStrength.html
 ---
 
@@ -143,4 +143,3 @@ Vous pouvez retrouver les sources correspondants à cet exemple dans un projet p
 zxcvbn propose 6 indicateurs (<b>entropy, crack_time, crack_time_display, score, match_sequence, calculation_time</b>)
 lors de son contrôle du mot de passe. Dans mon cas je n'ai utilisé que l'entropie
 pour mes niveaux d'indicateurs.
-

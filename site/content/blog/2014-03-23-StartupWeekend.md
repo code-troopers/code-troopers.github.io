@@ -7,7 +7,7 @@ tags:
 - tours
 - Play2
 title: Startup Weekend Tours
-url: /2014/03/23/startupweekend
+url: /2014/03/23/startupweekend/
 aliases: /2014/03/23/StartupWeekend.html
 ---
 

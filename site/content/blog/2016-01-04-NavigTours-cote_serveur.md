@@ -9,7 +9,7 @@ tags:
 - Java8
 - Restx
 title: 'Navig''Tours : côté serveur'
-url: /2016/01/04/navigtours-cote_serveur
+url: /2016/01/04/navigtours-cote_serveur/
 aliases: /2016/01/04/NavigTours-cote_serveur.html
 ---
 

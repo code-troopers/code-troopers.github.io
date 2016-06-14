@@ -7,7 +7,7 @@ tags:
 - Tours
 - startup
 title: Encore un podium pour MyBandMyCity
-url: /2014/04/28/concoursaccede
+url: /2014/04/28/concoursaccede/
 aliases: /2014/04/28/ConcoursAccede.html
 ---
 
