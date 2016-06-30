@@ -8,31 +8,31 @@ $(function () {
             if (window.location.pathname !== '/') {
                 window.location.href = '/#' + hash;
             } else {
-                $('body').scrollTo('#' + hash, 500, {offset: {top: -50} });
+                $('body').scrollTo('#' + hash, 500, {offset: {top: -50}});
             }
         });
     });
     $('#main-skills-carousel').owlCarousel({
-                                               items: 7, //10 items above 1000px browser width
-                                               itemsDesktop: [1000, 5], //5 items between 1000px and 901px
-                                               itemsDesktopSmall: [900, 4], // betweem 900px and 601px
-                                               itemsTablet: [600, 2], //2 items between 600 and 0
-                                               itemsMobile: false, // itemsMobile disabled - inherit from itemsTablet option
-                                               autoPlay: 3000,
-                                               stopOnHover: true,
-                                               lazyLoad: true,
+        items: 7, //10 items above 1000px browser width
+        itemsDesktop: [1000, 5], //5 items between 1000px and 901px
+        itemsDesktopSmall: [900, 4], // betweem 900px and 601px
+        itemsTablet: [600, 2], //2 items between 600 and 0
+        itemsMobile: false, // itemsMobile disabled - inherit from itemsTablet option
+        autoPlay: 3000,
+        stopOnHover: true,
+        lazyLoad: true,
 
-                                           });
+    });
 
     $('.projects-carousel').owlCarousel({
-                                            items: 4, //10 items above 1000px browser width
-                                            itemsTablet: [600, 2], //2 items between 600 and 0
-                                            itemsMobile: false, // itemsMobile disabled - inherit from itemsTablet option
-                                            autoPlay: 3000,
-                                            stopOnHover: true,
-                                            lazyLoad: true,
+        items: 4, //10 items above 1000px browser width
+        itemsTablet: [600, 2], //2 items between 600 and 0
+        itemsMobile: false, // itemsMobile disabled - inherit from itemsTablet option
+        autoPlay: 3000,
+        stopOnHover: true,
+        lazyLoad: true,
 
-                                        });
+    });
     if (window.addEventListener) {
         var a = [];
         window.addEventListener('keydown', function (b) {
@@ -52,9 +52,15 @@ $(function () {
     $('#articles article > div').each(function (i, d) {
         $(d).css('height', maxHeight);
     });
-    $(".project-info-button").click(function(e){
-      e.preventDefault()
-      $(e.target).parents("figure").toggleClass("show-quote");
-    })
+    $(".project-info-button").click(function (e) {
+        e.preventDefault()
+        $(e.target).parents("figure").toggleClass("show-quote");
+    });
+
+    //highlight code not handled by asciidoctor syntax HL
+    $('pre code:not([data-lang])').each(function (i, block) {
+        hljs.highlightBlock(block);
+    });
+
 })
 ;

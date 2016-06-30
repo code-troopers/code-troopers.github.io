@@ -2,7 +2,7 @@
 
 module.exports = {
     'styles': {
-        'src' : ['src/css/style.less'],
+        'src' : ['src/css/style.less','src/css/pygments.css'],
         'dest': 'static/css'
     },
 

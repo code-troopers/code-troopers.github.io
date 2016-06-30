@@ -1,13 +1,13 @@
 build='npm i' #Install dependencies
-run='npm start' #Run hugo server on localhost:1313 with livereload and drafts
-deploy='npm run build.prod && firebase deploy' #Build site to public folder and deploy on firebase
+run='PATH="$(pwd)/scripts:$PATH" npm start' #Run hugo server on localhost:1313 with livereload and drafts
+deploy='PATH="$(pwd)/scripts:$PATH" npm run build.prod && firebase deploy' #Build site to public folder and deploy on firebase
 compressimages='npm run images.compress' #Take images in /src/images folder and compress them into static/images
 thumbnailimages='npm run images.thumbnail' #Take images in /src/images/posts folder and generate thumbnail in static/images/posts
-runfast='hugo serve -t code-troopers -wD'
+runfast='PATH="$(pwd)/scripts:$PATH" hugo serve -t code-troopers -wD -s site'
 
 #Docker
 dbuild='docker build -t codetroopers/website-node .'
-drunfast='docker run --rm -it -v $PWD:/app -p 1313:1313 codetroopers/hugo-asciidoctor serve -s /app/site -t code-troopers -D -w --bind="0.0.0.0"' #Run hugo server on localhost:1313 with livereload and drafts
+drunfast='docker run --rm -it -v $PWD:/app -v $PWD/scripts/asciidoctor:/usr/local/bin/asciidoctor  -p 1313:1313 codetroopers/hugo-asciidoctor hugo serve -s /app/site -t code-troopers -D -w --bind="0.0.0.0"' #Run hugo server on localhost:1313 with livereload and drafts
 drun='docker run --rm -it -v $PWD/site:/usr/src/app/site codetroopers/website-node npm run build && ct drunfast'
 dcompressimages='docker run --rm -it -v $PWD/site:/usr/src/app/site codetroopers/website-node npm run images.compress'
 dthumbnailimages='docker run --rm -it -v $PWD/site:/usr/src/app/site codetroopers/website-node npm run images.thumbnail'
