@@ -15,7 +15,6 @@ node {
 
 node {
   docker.build('website-node').inside('-v /var/jenkins_home/.ssh:/root/.ssh') {
-      sh 'git config user.email "jenkins@code-troopers.com" && git config user.name "Jenkins"'
       sh 'rm -rf node_modules && ln -s /usr/src/app/node_modules node_modules'
       sh 'npm run jenkins.postbuild'
       sh 'npm run jenkins.deploy'
