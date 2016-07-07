@@ -13,7 +13,7 @@
     "deploy": "gulp ghpages --gulpfile site/gulpfile.js",
     "jenkins.prebuild": "gulp build --prod --gulpfile site/gulpfile.js",
     "jenkins.postbuild": "gulp rev --gulpfile site/gulpfile.js",
-    "jenkins.deploy": "npm deploy"
+    "jenkins.deploy": "npm run deploy"
   },
   "devDependencies": {
     "del": "^2.2.0",
