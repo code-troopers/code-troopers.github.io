@@ -1,5 +1,5 @@
 node {
-  git branch: 'master', url: 'https://github.com/code-troopers/website'
+  git branch: 'master', url: 'git@github.com:code-troopers/website.git'
   docker.build('website-node').inside(){
       sh 'rm -rf node_modules && ln -s /usr/src/app/node_modules node_modules'
       sh 'npm run jenkins.prebuild'
