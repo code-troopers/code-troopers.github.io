@@ -1,6 +1,6 @@
 stage 'prebuild'
 node {
-  git branch: 'feature/hugoDelire', url: 'https://github.com/code-troopers/website'
+  git branch: 'master', url: 'https://github.com/code-troopers/website'
   docker.build('website-node').inside(){
       sh 'rm -rf node_modules && ln -s /usr/src/app/node_modules node_modules'
       sh 'npm run jenkins.prebuild'
