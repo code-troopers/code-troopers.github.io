@@ -17,6 +17,6 @@ node {
   docker.build('website-node').inside(){
       sh 'rm -rf node_modules && ln -s /usr/src/app/node_modules node_modules'
       sh 'npm run jenkins.postbuild'
-      //sh 'npm run jenkins.deploy'
+      sh 'npm run jenkins.deploy'
     }
 }
