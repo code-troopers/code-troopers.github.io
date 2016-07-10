@@ -26,23 +26,23 @@ Maintenant que nous sommes bien installés voici un petit tour du propriétaitre
 ## Notre local
 
 {lt}div style="text-align : center"{gt}
-{lt}a class="inlineBoxes" href="/images/2016-07-Mame/photo_mame_ct_04.jpg" data-lightbox="1" title="Local Code-Troopers"{gt}
-        {lt}img class="medium" src="/images/2016-07-Mame/photo_mame_ct_04.jpg" alt="Local Code-Troopers"/{gt}
+{lt}a class="inlineBoxes" href="/images/post/2016-07-Mame/photo_mame_ct_04.jpg" data-lightbox="1" title="Local Code-Troopers"{gt}
+        {lt}img class="medium" src="/images/post/2016-07-Mame/photo_mame_ct_04_min.jpg" alt="Local Code-Troopers"/{gt}
 {lt}/a{gt}
-{lt}a class="inlineBoxes" href="/images/2016-07-Mame/photo_mame_ct_02.jpg" data-lightbox="1" title="Local Code-Troopers"{gt}
-        {lt}img class="medium" src="/images/2016-07-Mame/photo_mame_ct_02.jpg" alt="Local Code-Troopers"/{gt}
+{lt}a class="inlineBoxes" href="/images/post/2016-07-Mame/photo_mame_ct_02.jpg" data-lightbox="1" title="Local Code-Troopers"{gt}
+        {lt}img class="medium" src="/images/post/2016-07-Mame/photo_mame_ct_02_min.jpg" alt="Local Code-Troopers"/{gt}
 {lt}/a{gt}
-{lt}a class="inlineBoxes" href="/images/2016-07-Mame/photo_mame_ct_14.jpg" data-lightbox="1" title="Local Code-Troopers"{gt}
-        {lt}img class="medium" src="/images/2016-07-Mame/photo_mame_ct_14.jpg" alt="Local Code-Troopers"/{gt}
+{lt}a class="inlineBoxes" href="/images/post/2016-07-Mame/photo_mame_ct_14.jpg" data-lightbox="1" title="Local Code-Troopers"{gt}
+        {lt}img class="medium" src="/images/post/2016-07-Mame/photo_mame_ct_14_min.jpg" alt="Local Code-Troopers"/{gt}
 {lt}/a{gt}
-{lt}a class="inlineBoxes" href="/images/2016-07-Mame/photo_mame_ct_11.jpg" data-lightbox="1" title="Local Code-Troopers"{gt}
-        {lt}img class="medium" src="/images/2016-07-Mame/photo_mame_ct_11.jpg" alt="Local Code-Troopers"/{gt}
+{lt}a class="inlineBoxes" href="/images/post/2016-07-Mame/photo_mame_ct_11.jpg" data-lightbox="1" title="Local Code-Troopers"{gt}
+        {lt}img class="medium" src="/images/post/2016-07-Mame/photo_mame_ct_11_min.jpg" alt="Local Code-Troopers"/{gt}
 {lt}/a{gt}
-{lt}a class="inlineBoxes" href="/images/2016-07-Mame/photo_mame_ct_12.jpg" data-lightbox="1" title="Local Code-Troopers"{gt}
-        {lt}img class="medium" src="/images/2016-07-Mame/photo_mame_ct_12.jpg" alt="Local Code-Troopers"/{gt}
+{lt}a class="inlineBoxes" href="/images/post/2016-07-Mame/photo_mame_ct_12.jpg" data-lightbox="1" title="Local Code-Troopers"{gt}
+        {lt}img class="medium" src="/images/post/2016-07-Mame/photo_mame_ct_12_min.jpg" alt="Local Code-Troopers"/{gt}
 {lt}/a{gt}
-{lt}a class="inlineBoxes" href="/images/2016-07-Mame/photo_mame_ct_13.jpg" data-lightbox="1" title="Local Code-Troopers"{gt}
-        {lt}img class="medium" src="/images/2016-07-Mame/photo_mame_ct_13.jpg" alt="Local Code-Troopers"/{gt}
+{lt}a class="inlineBoxes" href="/images/post/2016-07-Mame/photo_mame_ct_13.jpg" data-lightbox="1" title="Local Code-Troopers"{gt}
+        {lt}img class="medium" src="/images/post/2016-07-Mame/photo_mame_ct_13_min.jpg" alt="Local Code-Troopers"/{gt}
 {lt}/a{gt}
 {lt}/div{gt}
 
@@ -51,56 +51,56 @@ Maintenant que nous sommes bien installés voici un petit tour du propriétaitre
 
 
 {lt}div style="text-align : center"{gt}
-{lt}a class="inlineBoxes" href="/images/2016-07-Mame/photo_mame_01.jpg" data-lightbox="2" title="Visite de MAME"{gt}
-        {lt}img class="medium" src="/images/2016-07-Mame/photo_mame_01.jpg" alt="Visite de MAME"/{gt}
+{lt}a class="inlineBoxes" href="/images/post/2016-07-Mame/photo_mame_01.jpg" data-lightbox="2" title="Visite de MAME"{gt}
+        {lt}img class="medium" src="/images/post/2016-07-Mame/photo_mame_01_min.jpg" alt="Visite de MAME"/{gt}
 {lt}/a{gt}
-{lt}a class="inlineBoxes" href="/images/2016-07-Mame/photo_mame_02.jpg" data-lightbox="2" title="Visite de MAME"{gt}
-        {lt}img class="medium" src="/images/2016-07-Mame/photo_mame_02.jpg" alt="Visite de MAME"/{gt}
+{lt}a class="inlineBoxes" href="/images/post/2016-07-Mame/photo_mame_02.jpg" data-lightbox="2" title="Visite de MAME"{gt}
+        {lt}img class="medium" src="/images/post/2016-07-Mame/photo_mame_02_min.jpg" alt="Visite de MAME"/{gt}
 {lt}/a{gt}
-{lt}a class="inlineBoxes" href="/images/2016-07-Mame/photo_mame_04.jpg" data-lightbox="2" title="Visite de MAME"{gt}
-        {lt}img class="medium" src="/images/2016-07-Mame/photo_mame_04.jpg" alt="Visite de MAME"/{gt}
+{lt}a class="inlineBoxes" href="/images/post/2016-07-Mame/photo_mame_04.jpg" data-lightbox="2" title="Visite de MAME"{gt}
+        {lt}img class="medium" src="/images/post/2016-07-Mame/photo_mame_04_min.jpg" alt="Visite de MAME"/{gt}
 {lt}/a{gt}
-{lt}a class="inlineBoxes" href="/images/2016-07-Mame/photo_mame_05.jpg" data-lightbox="2" title="Visite de MAME"{gt}
-        {lt}img class="medium" src="/images/2016-07-Mame/photo_mame_05.jpg" alt="Visite de MAME"/{gt}
+{lt}a class="inlineBoxes" href="/images/post/2016-07-Mame/photo_mame_05.jpg" data-lightbox="2" title="Visite de MAME"{gt}
+        {lt}img class="medium" src="/images/post/2016-07-Mame/photo_mame_05_min.jpg" alt="Visite de MAME"/{gt}
 {lt}/a{gt}
-{lt}a class="inlineBoxes" href="/images/2016-07-Mame/photo_mame_06.jpg" data-lightbox="2" title="Visite de MAME"{gt}
-        {lt}img class="medium" src="/images/2016-07-Mame/photo_mame_06.jpg" alt="Visite de MAME"/{gt}
+{lt}a class="inlineBoxes" href="/images/post/2016-07-Mame/photo_mame_06.jpg" data-lightbox="2" title="Visite de MAME"{gt}
+        {lt}img class="medium" src="/images/post/2016-07-Mame/photo_mame_06_min.jpg" alt="Visite de MAME"/{gt}
 {lt}/a{gt}
-{lt}a class="inlineBoxes" href="/images/2016-07-Mame/photo_mame_07.jpg" data-lightbox="2" title="Visite de MAME"{gt}
-        {lt}img class="medium" src="/images/2016-07-Mame/photo_mame_07.jpg" alt="Visite de MAME"/{gt}
+{lt}a class="inlineBoxes" href="/images/post/2016-07-Mame/photo_mame_07.jpg" data-lightbox="2" title="Visite de MAME"{gt}
+        {lt}img class="medium" src="/images/post/2016-07-Mame/photo_mame_07_min.jpg" alt="Visite de MAME"/{gt}
 {lt}/a{gt}
-{lt}a class="inlineBoxes" href="/images/2016-07-Mame/photo_mame_08.jpg" data-lightbox="2" title="Visite de MAME"{gt}
-        {lt}img class="medium" src="/images/2016-07-Mame/photo_mame_08.jpg" alt="Visite de MAME"/{gt}
+{lt}a class="inlineBoxes" href="/images/post/2016-07-Mame/photo_mame_08.jpg" data-lightbox="2" title="Visite de MAME"{gt}
+        {lt}img class="medium" src="/images/post/2016-07-Mame/photo_mame_08_min.jpg" alt="Visite de MAME"/{gt}
 {lt}/a{gt}
-{lt}a class="inlineBoxes" href="/images/2016-07-Mame/photo_mame_09.jpg" data-lightbox="2" title="Visite de MAME"{gt}
-        {lt}img class="medium" src="/images/2016-07-Mame/photo_mame_09.jpg" alt="Visite de MAME"/{gt}
+{lt}a class="inlineBoxes" href="/images/post/2016-07-Mame/photo_mame_09.jpg" data-lightbox="2" title="Visite de MAME"{gt}
+        {lt}img class="medium" src="/images/post/2016-07-Mame/photo_mame_09_min.jpg" alt="Visite de MAME"/{gt}
 {lt}/a{gt}
-{lt}a class="inlineBoxes" href="/images/2016-07-Mame/photo_mame_11.jpg" data-lightbox="2" title="Visite de MAME"{gt}
-        {lt}img class="medium" src="/images/2016-07-Mame/photo_mame_11.jpg" alt="Visite de MAME"/{gt}
+{lt}a class="inlineBoxes" href="/images/post/2016-07-Mame/photo_mame_11.jpg" data-lightbox="2" title="Visite de MAME"{gt}
+        {lt}img class="medium" src="/images/post/2016-07-Mame/photo_mame_11_min.jpg" alt="Visite de MAME"/{gt}
 {lt}/a{gt}
-{lt}a class="inlineBoxes" href="/images/2016-07-Mame/photo_mame_12.jpg" data-lightbox="2" title="Visite de MAME"{gt}
-        {lt}img class="medium" src="/images/2016-07-Mame/photo_mame_12.jpg" alt="Visite de MAME"/{gt}
+{lt}a class="inlineBoxes" href="/images/post/2016-07-Mame/photo_mame_12.jpg" data-lightbox="2" title="Visite de MAME"{gt}
+        {lt}img class="medium" src="/images/post/2016-07-Mame/photo_mame_12_min.jpg" alt="Visite de MAME"/{gt}
 {lt}/a{gt}
-{lt}a class="inlineBoxes" href="/images/2016-07-Mame/photo_mame_13.jpg" data-lightbox="2" title="Visite de MAME"{gt}
-        {lt}img class="medium" src="/images/2016-07-Mame/photo_mame_13.jpg" alt="Visite de MAME"/{gt}
+{lt}a class="inlineBoxes" href="/images/post/2016-07-Mame/photo_mame_13.jpg" data-lightbox="2" title="Visite de MAME"{gt}
+        {lt}img class="medium" src="/images/post/2016-07-Mame/photo_mame_13_min.jpg" alt="Visite de MAME"/{gt}
 {lt}/a{gt}
-{lt}a class="inlineBoxes" href="/images/2016-07-Mame/photo_mame_14.jpg" data-lightbox="2" title="Visite de MAME"{gt}
-        {lt}img class="medium" src="/images/2016-07-Mame/photo_mame_14.jpg" alt="Visite de MAME"/{gt}
+{lt}a class="inlineBoxes" href="/images/post/2016-07-Mame/photo_mame_14.jpg" data-lightbox="2" title="Visite de MAME"{gt}
+        {lt}img class="medium" src="/images/post/2016-07-Mame/photo_mame_14_min.jpg" alt="Visite de MAME"/{gt}
 {lt}/a{gt}
-{lt}a class="inlineBoxes" href="/images/2016-07-Mame/photo_mame_15.jpg" data-lightbox="2" title="Visite de MAME"{gt}
-        {lt}img class="medium" src="/images/2016-07-Mame/photo_mame_15.jpg" alt="Visite de MAME"/{gt}
+{lt}a class="inlineBoxes" href="/images/post/2016-07-Mame/photo_mame_15.jpg" data-lightbox="2" title="Visite de MAME"{gt}
+        {lt}img class="medium" src="/images/post/2016-07-Mame/photo_mame_15_min.jpg" alt="Visite de MAME"/{gt}
 {lt}/a{gt}
-{lt}a class="inlineBoxes" href="/images/2016-07-Mame/photo_mame_16.jpg" data-lightbox="2" title="Visite de MAME"{gt}
-        {lt}img class="medium" src="/images/2016-07-Mame/photo_mame_16.jpg" alt="Visite de MAME"/{gt}
+{lt}a class="inlineBoxes" href="/images/post/2016-07-Mame/photo_mame_16.jpg" data-lightbox="2" title="Visite de MAME"{gt}
+        {lt}img class="medium" src="/images/post/2016-07-Mame/photo_mame_16_min.jpg" alt="Visite de MAME"/{gt}
 {lt}/a{gt}
-{lt}a class="inlineBoxes" href="/images/2016-07-Mame/photo_mame_17.jpg" data-lightbox="2" title="Visite de MAME"{gt}
-        {lt}img class="medium" src="/images/2016-07-Mame/photo_mame_17.jpg" alt="Visite de MAME"/{gt}
+{lt}a class="inlineBoxes" href="/images/post/2016-07-Mame/photo_mame_17.jpg" data-lightbox="2" title="Visite de MAME"{gt}
+        {lt}img class="medium" src="/images/post/2016-07-Mame/photo_mame_17_min.jpg" alt="Visite de MAME"/{gt}
 {lt}/a{gt}
-{lt}a class="inlineBoxes" href="/images/2016-07-Mame/photo_mame_18.jpg" data-lightbox="2" title="Visite de MAME"{gt}
-        {lt}img class="medium" src="/images/2016-07-Mame/photo_mame_18.jpg" alt="Visite de MAME"/{gt}
+{lt}a class="inlineBoxes" href="/images/post/2016-07-Mame/photo_mame_18.jpg" data-lightbox="2" title="Visite de MAME"{gt}
+        {lt}img class="medium" src="/images/post/2016-07-Mame/photo_mame_18_min.jpg" alt="Visite de MAME"/{gt}
 {lt}/a{gt}
-{lt}a class="inlineBoxes" href="/images/2016-07-Mame/photo_mame_19.jpg" data-lightbox="2" title="Visite de MAME"{gt}
-        {lt}img class="medium" src="/images/2016-07-Mame/photo_mame_19.jpg" alt="Visite de MAME"/{gt}
+{lt}a class="inlineBoxes" href="/images/post/2016-07-Mame/photo_mame_19.jpg" data-lightbox="2" title="Visite de MAME"{gt}
+        {lt}img class="medium" src="/images/post/2016-07-Mame/photo_mame_19_min.jpg" alt="Visite de MAME"/{gt}
 {lt}/a{gt}
 
 
