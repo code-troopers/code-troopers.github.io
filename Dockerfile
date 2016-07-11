@@ -6,12 +6,15 @@ RUN git config --system user.name jenkins && git config --system user.email jenk
 RUN npm install -g gulp
 
 RUN mkdir -p /usr/src/app
+RUN mkdir /home/ct && useradd ct -d /home/ct && chown -R ct:ct /home/ct
+RUN chown -R ct:ct /usr/src/app
+USER ct
 WORKDIR /usr/src/app
+
 
 COPY package.json /usr/src/app
 RUN npm install
 
-RUN useradd ct
 
 VOLUME /usr/src/app/site
 CMD ["npm", "run", "build"]
