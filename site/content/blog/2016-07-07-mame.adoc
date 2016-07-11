@@ -21,7 +21,7 @@ Vous avez probablement vu passer quelques informations lors de l'inauguration qu
 Ce fut notamment l'occasion pour nous de rencontrer beaucoup de monde dont M. le Maire de Tours.
 
 
-Maintenant que nous sommes bien installés voici un petit tour du propriétaitre
+Maintenant que nous sommes bien installés voici un petit tour du propriétaire.
 
 ## Notre local
 
@@ -117,4 +117,4 @@ Et en super bonus une petite vidéo de l'équipe réalisée par https://fr-fr.fa
 
 {lt}br/{gt}
 
-Si vous passez dans les environs pensez à venir nous dire bonjour ou même passer une journée de cowork avec nous !
+Si vous passez dans les environs, pensez à venir nous dire bonjour ou même passer une journée de cowork avec nous !
