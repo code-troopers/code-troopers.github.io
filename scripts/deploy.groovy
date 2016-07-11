@@ -14,7 +14,7 @@ node {
 }
 
 node {
-  docker.build('website-node').inside('-v /var/jenkins_home/.ssh:/root/.ssh') {
+  docker.build('website-node').inside('-v /var/jenkins_home/.ssh:/home/ct/.ssh') {
       sh 'rm -rf node_modules && ln -s /usr/src/app/node_modules node_modules'
       sh 'npm run jenkins.postbuild'
       sh 'npm run jenkins.deploy'
