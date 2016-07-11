@@ -12,9 +12,6 @@ aliases: /2016/07/07/mame.html
 
 Cela fait maintenant un mois que nous avons pris place dans nos nouveaux bureaux situés dans l'ancienne https://www.google.fr/maps/place/MAME/@47.3911602,0.6688206,17z/data=!4m8!1m2!2m1!1smame+tours!3m4!1s0x47fcd5940908fa51:0x9c4f1c3309229360!8m2!3d47.3927031!4d0.6685181?hl=en[imprimerie MAME].
 
-
-{break}
-
 [%hardbreaks]
 
 Vous avez probablement vu passer quelques informations lors de l'inauguration qui a eu lieu le vendredi 10 juin.
