@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jenkins on Code-Troopers - Vous avez une idée, nous la réalisons</title>
+    <link>https://code-troopers.com/tags/jenkins/</link>
+    <description>Recent content in Jenkins on Code-Troopers - Vous avez une idée, nous la réalisons</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>fr-fr</language>
+    <lastBuildDate>Wed, 20 Jan 2016 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://code-troopers.com/tags/jenkins/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Jenkins Workflow Plugin</title>
+      <link>https://code-troopers.com/2016/01/20/jenkinsworkflow/</link>
+      <pubDate>Wed, 20 Jan 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://code-troopers.com/2016/01/20/jenkinsworkflow/</guid>
+      <description>&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;Un des points génants lors de l&amp;#8217;utilisation de Jenkins est le coté volatile de la configuration des jobs de builds.
+Il est souvent nécessaire de jouer de click-click pour faire la configuration des jobs sur Jenkins et de se reposer sur un plugin permettant de versionner,
+autant que possible, les configurations utilisées.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;Mais, une fois que vous aurez lu cet article, vous vous rendrez compte que c&amp;#8217;est le passé.
+Attention toutefois, cet article parle de Jenkins, de Docker et de Groovy, n&amp;#8217;ayez pas peur, tout est &lt;em&gt;presque&lt;/em&gt; trop simple&amp;#8230;&amp;#8203;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;sect1&#34;&gt;
+&lt;h2 id=&#34;_prérequis_jenkins&#34;&gt;Prérequis Jenkins&lt;/h2&gt;
+&lt;div class=&#34;sectionbody&#34;&gt;
+&lt;div class=&#34;sect2&#34;&gt;
+&lt;h3 id=&#34;_jenkins_avec_accès_à_docker&#34;&gt;Jenkins avec accès à Docker&lt;/h3&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;Nous avons l&amp;#8217;habitude d&amp;#8217;utiliser un Jenkins lancé dans un container depuis quelques temps.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;Nous utilisons l&amp;#8217;image maintenue par &lt;a href=&#34;https://agileek.github.io/&#34;&gt;Michael Bitard&lt;/a&gt; &lt;a href=&#34;https://hub.docker.com/r/agileek/docker-jenkins/&#34;&gt;&lt;code&gt;agileek/docker-jenkins&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;Nous lançons cette image en lui fournissant de quoi exécuter le binaire docker client sans soucis :&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;listingblock&#34;&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;pre class=&#34;highlight&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;docker run
+       -d --restart=&#34;always&#34; --name jenkins
+       -u $(id -u):$(getent group docker | cut -d: -f3) &lt;b class=&#34;conum&#34;&gt;(1)&lt;/b&gt;
+       -p 8080:8080
+       -v /var/jenkins_home:/var/jenkins_home &lt;b class=&#34;conum&#34;&gt;(2)&lt;/b&gt;
+       -v $(which docker):/usr/bin/docker &lt;b class=&#34;conum&#34;&gt;(3)&lt;/b&gt;
+       -v /var/run/docker.sock:/var/run/docker.sock &lt;b class=&#34;conum&#34;&gt;(4)&lt;/b&gt;
+       -v /usr/lib/x86_64-linux-gnu/libapparmor.so.1:/lib/x86_64-linux-gnu/libapparmor.so.1 &lt;b class=&#34;conum&#34;&gt;(5)&lt;/b&gt;
+       agileek/docker-jenkins &lt;b class=&#34;conum&#34;&gt;(6)&lt;/b&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;colist arabic&#34;&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Le container est lancé avec l&amp;#8217;utilisateur courant et le groupe &lt;code&gt;docker&lt;/code&gt; pour pouvoir accéder au &lt;code&gt;docker.sock&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Pour éviter les incohérences de chemin, le chemin racine du jenkins est le même en dehors et dans le container&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Le binaire docker du système est fourni dans l&amp;#8217;image&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Le socket docker est également fourni pour que le client puisse &#34;parler&#34; au démon&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;La bibliotheque apparmor est nécessaire pour le bon fonctionnement de docker client&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;sect2&#34;&gt;
+&lt;h3 id=&#34;_jenkins_workflow_plugin&#34;&gt;Jenkins workflow plugin&lt;/h3&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;Pour utiliser la suite des éléments, vous aurez besoin des plugins gérant la notion de &lt;em&gt;workflow&lt;/em&gt; dans Jenkins :&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;Unresolved directive in &amp;lt;stdin&amp;gt; - include::app/_includes/lightbox.adoc[]&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;Ensuite, il nous est possible de créer un job de construction de type &lt;em&gt;workflow&lt;/em&gt; :&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;Unresolved directive in &amp;lt;stdin&amp;gt; - include::app/_includes/lightbox.adoc[]&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;sect1&#34;&gt;
+&lt;h2 id=&#34;_premier_job_em_workflow_em&#34;&gt;Premier job &lt;em&gt;Workflow&lt;/em&gt;&lt;/h2&gt;
+&lt;div class=&#34;sectionbody&#34;&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;Ensuite, c&amp;#8217;est là que la magie opère, plutôt que de devoir sélectionner les n-items voulus et remplir chaque étape du build, nous pouvons maintenant le décrire en utilisant du code !
+Ainsi, en copiant/collant le script suivant dans la partie idoine, vous devriez avoir un job bien configuré qui marche, du premier coup !&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;listingblock&#34;&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;pre class=&#34;highlight&#34;&gt;&lt;code class=&#34;language-groovy&#34; data-lang=&#34;groovy&#34;&gt;def m2Repo = &#39;-v /var/jenkins_home/.m2:/home/jenkins/.m2&#39; //  &lt;b class=&#34;conum&#34;&gt;(1)&lt;/b&gt;
+def timezone = &#39;-e TZ=Europe/Paris&#39; // &lt;b class=&#34;conum&#34;&gt;(2)&lt;/b&gt;
+docker.image(&#34;codetroopers/jenkins-slave-jdk8-restx&#34;)
+    .inside(&#34;${m2Repo} ${timezone}&#34;){ //  &lt;b class=&#34;conum&#34;&gt;(3)&lt;/b&gt;
+    git branch: &#39;master&#39;, url: &#39;https://github.com/code-troopers/jenkins-workflow-demo-repo.git&#39; // &lt;b class=&#34;conum&#34;&gt;(4)&lt;/b&gt;
+    sh &#34;MAVEN_OPTS=-Dfile.encoding=UTF-8 mvn clean install -B -Ppackage&#34; // &lt;b class=&#34;conum&#34;&gt;(5)&lt;/b&gt;
+    step([$class: &#39;ArtifactArchiver&#39;, artifacts: &#39;srv/target/dependency/webapp-runner.jar, srv/target/*.war, run.sh&#39;]) // &lt;b class=&#34;conum&#34;&gt;(6)&lt;/b&gt;
+    step([$class: &#39;JUnitResultArchiver&#39;, testResults: &#39;**/target/surefire-reports/TEST-*.xml&#39;]) // &lt;b class=&#34;conum&#34;&gt;(7)&lt;/b&gt;
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;colist arabic&#34;&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Partage du dépôt Maven local (pour gagner en temps de build)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Export de la timezone (pour les tests unitaires de l&amp;#8217;exemple)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Démarrage du conteneur de build avec la bonne timezone ainsi que le dépôt partagé&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Clonage des sources&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Lancement du build (en forçant l&amp;#8217;UTF-8)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Archivage des produits du build&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Archivage des résultats des tests&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;Comme vous pouvez le voir, le script est relativement parlant et permet en plus de s&amp;#8217;affranchir du clickodrome de configuration dans l&amp;#8217;interface de Jenkins !&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;Il est intéressant de noter que l&amp;#8217;image Docker qui sert au build est une image personnalisée. Ce n&amp;#8217;est pas parce qu&amp;#8217;elle inclut un quelconque fonctionnement permettant de builder
+en utilisant le plugin Workflow. Elle sert de base uniquement car elle met à disposition la partie &lt;code&gt;npm&lt;/code&gt; nécessaire au build de la partie &lt;em&gt;frontend&lt;/em&gt; de l&amp;#8217;application RestX.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;sect1&#34;&gt;
+&lt;h2 id=&#34;_grouper_les_étapes&#34;&gt;Grouper les étapes&lt;/h2&gt;
+&lt;div class=&#34;sectionbody&#34;&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;Le plugin workflow permet en plus de grouper les différentes étapes d&amp;#8217;un build pour permettre, par exemple, de le lancer sur plusieurs environnement différents.
+Ici nous ajoutons simplement un nom de groupe pour notre étape de build.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;listingblock&#34;&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;pre class=&#34;highlight&#34;&gt;&lt;code class=&#34;language-groovy&#34; data-lang=&#34;groovy&#34;&gt;stage &#39;build&#39; // &lt;b class=&#34;conum&#34;&gt;(1)&lt;/b&gt;
+    def m2Repo = &#39;-v /var/jenkins_home/.m2:/home/jenkins/.m2&#39;
+    def timezone = &#39;-e TZ=Europe/Paris&#39;
+    docker.image(&#34;codetroopers/jenkins-slave-jdk8-restx&#34;).inside(&#34;${m2Repo} ${timezone}&#34;){
+        git branch: &#39;master&#39;, url: &#39;https://github.com/code-troopers/jenkins-workflow-demo-repo.git&#39;
+        sh &#34;MAVEN_OPTS=-Dfile.encoding=UTF-8 mvn clean install -B -Ppackage&#34;
+        step([$class: &#39;ArtifactArchiver&#39;, artifacts: &#39;srv/target/dependency/webapp-runner.jar, srv/target/*.war, run.sh&#39;])
+        step([$class: &#39;JUnitResultArchiver&#39;, testResults: &#39;**/target/surefire-reports/TEST-*.xml&#39;])
+    }&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;colist arabic&#34;&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Étape nommée pour l&amp;#8217;exécution de la construction de l&amp;#8217;application&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;sect1&#34;&gt;
+&lt;h2 id=&#34;_mettre_de_côté_les_fichiers_pour_plus_tard&#34;&gt;Mettre de côté les fichiers pour plus tard&lt;/h2&gt;
+&lt;div class=&#34;sectionbody&#34;&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;La notion de &lt;em&gt;stash&lt;/em&gt; bien connue des utilisateurs de git est également présente.
+Elle permet de mettre de côté des fichiers pour les réutiliser à une étape ultérieure du &lt;em&gt;workflow&lt;/em&gt; de build.
+Ceci permet d&amp;#8217;éviter l&amp;#8217;archivage de produits du build pour des raisons &#34;techniques&#34;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;listingblock&#34;&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;pre class=&#34;highlight&#34;&gt;&lt;code class=&#34;language-groovy&#34; data-lang=&#34;groovy&#34;&gt;stage &#39;build&#39;
+    def m2Repo = &#39;-v /var/jenkins_home/.m2:/home/jenkins/.m2&#39;
+    def timezone = &#39;-e TZ=Europe/Paris&#39;
+    docker.image(&#34;codetroopers/jenkins-slave-jdk8-restx&#34;).inside(&#34;${m2Repo} ${timezone}&#34;){
+        git branch: &#39;master&#39;, url: &#39;https://github.com/code-troopers/jenkins-workflow-demo-repo.git&#39;
+        sh &#34;MAVEN_OPTS=-Dfile.encoding=UTF-8 mvn clean install -B -Ppackage&#34;
+        step([$class: &#39;ArtifactArchiver&#39;, artifacts: &#39;srv/target/dependency/webapp-runner.jar, srv/target/*.war, run.sh&#39;])
+        step([$class: &#39;JUnitResultArchiver&#39;, testResults: &#39;**/target/surefire-reports/TEST-*.xml&#39;])
+        stash includes: &#39;run.sh,srv/target/dependency/webapp-runner.jar,srv/target/*.war,Dockerfile&#39;, name: &#39;dockerBuild&#39; // &lt;b class=&#34;conum&#34;&gt;(1)&lt;/b&gt;
+    }&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;colist arabic&#34;&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Enregistrement d&amp;#8217;une liste de fichiers associée à un nom pour une utilisation ultérieure&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;sect1&#34;&gt;
+&lt;h2 id=&#34;_Étape_de_construction_d_une_image_docker&#34;&gt;Étape de construction d&amp;#8217;une image Docker&lt;/h2&gt;
+&lt;div class=&#34;sectionbody&#34;&gt;
+&lt;div class=&#34;listingblock&#34;&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;pre class=&#34;highlight&#34;&gt;&lt;code class=&#34;language-groovy&#34; data-lang=&#34;groovy&#34;&gt;stage &#39;docker&#39; // &lt;b class=&#34;conum&#34;&gt;(1)&lt;/b&gt;
+node{ // &lt;b class=&#34;conum&#34;&gt;(2)&lt;/b&gt;
+  ws{ // &lt;b class=&#34;conum&#34;&gt;(3)&lt;/b&gt;
+    unstash &#39;dockerBuild&#39; // &lt;b class=&#34;conum&#34;&gt;(4)&lt;/b&gt;
+    docker.build(&#34;codetroopers/jenkins-workflow-demo:${env.BUILD_ID}&#34;) // &lt;b class=&#34;conum&#34;&gt;(5)&lt;/b&gt;
+  }
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;colist arabic&#34;&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Création d&amp;#8217;une nouvelle étape&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Permet de distinguer un ensemble d&amp;#8217;opération de build (peut accepter les labels pour restreindre sur des noeuds)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Déclenche la création d&amp;#8217;un nouveau &lt;em&gt;workspace&lt;/em&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Récupère les fichiers mis de côté sous le nom &lt;code&gt;dockerBuild&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Construction d&amp;#8217;une image docker avec pour tag le numéro de build en cours (&lt;code&gt;$BUILD_ID&lt;/code&gt;)&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;sect1&#34;&gt;
+&lt;h2 id=&#34;_workflow_et_gestion_multibranche&#34;&gt;Workflow et gestion multibranche&lt;/h2&gt;
+&lt;div class=&#34;sectionbody&#34;&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;Dans nos façons de fonctionner qui sont maintenant devenues habituelles, nous utilisons de façon intensives les branches pour isoler nos développements.
+Un des points fastidieux est de configurer un nouveau job Jenkins pour chaque branche afin de valider son bon fonctionnement et ne pas se rendre compte trop tard d&amp;#8217;un build au rouge.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;Le plugin &#39;Workflow Multibranch&#39; simplifie de façon drastique ce genre de cas, il suffit de rajouter un descripteur de build dans les sources.
+Le fichier correspondant est tout simplement appelé &lt;code&gt;Jenkinsfile&lt;/code&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;listingblock&#34;&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;pre class=&#34;highlight&#34;&gt;&lt;code class=&#34;language-groovy&#34; data-lang=&#34;groovy&#34;&gt;stage &#39;build&#39;
+    def m2Repo = &#39;-v /var/jenkins_home/.m2:/home/jenkins/.m2&#39;
+    def timezone = &#39;-e TZ=Europe/Paris&#39;
+    docker.image(&#34;codetroopers/jenkins-slave-jdk8-restx&#34;).inside(&#34;${m2Repo} ${timezone}&#34;){
+        checkout scm // &lt;b class=&#34;conum&#34;&gt;(1)&lt;/b&gt;
+        sh &#34;MAVEN_OPTS=-Dfile.encoding=UTF-8 mvn clean install -B -Ppackage&#34;
+        step([$class: &#39;ArtifactArchiver&#39;, artifacts: &#39;srv/target/dependency/webapp-runner.jar, srv/target/*.war, run.sh&#39;])
+        step([$class: &#39;JUnitResultArchiver&#39;, testResults: &#39;**/target/surefire-reports/TEST-*.xml&#39;])
+        stash includes: &#39;run.sh,srv/target/dependency/webapp-runner.jar,srv/target/*.war,Dockerfile&#39;, name: &#39;dockerBuild&#39;
+    }
+
+stage &#39;docker&#39;
+node{
+  ws{
+    unstash &#39;dockerBuild&#39;
+    docker.build(&#34;codetroopers/jenkins-workflow-demo:${env.BUILD_ID}&#34;)
+  }
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;colist arabic&#34;&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Il faut bien entendu remplacer l&amp;#8217;endroit où nous faisions le git clone pour qu&amp;#8217;il soit dynamique par rapport à ce qu&amp;#8217;on
+construit. Le terme &lt;code&gt;checkout scm&lt;/code&gt; permet de s&amp;#8217;assurer de ce fonctionnement.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;L&amp;#8217;intérêt est que chaque branche qui sera buildée n&amp;#8217;aura pas son historique mélangé avec une autre (là où les jobs de validation de Pull Request ont tendance à tout mélanger).
+De plus, un changement dans le process de build sera directement versionné.
+Il n&amp;#8217;y aura donc pas besoin de penser à éditer le job lors du merge sur &lt;code&gt;master&lt;/code&gt; (on a tous vécu ce genre de situation énervante) !&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;sect1&#34;&gt;
+&lt;h2 id=&#34;_attendre_une_confirmation_utilisateur&#34;&gt;Attendre une confirmation utilisateur&lt;/h2&gt;
+&lt;div class=&#34;sectionbody&#34;&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;Un des points intéressant de ce plugin est qu&amp;#8217;il permet la mise en pause des constructions.
+Ainsi, il est possible de mettre en pause une construction correspondant à une livraison et de lui faire attendre une validation manuelle par exemple.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;listingblock&#34;&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;pre class=&#34;highlight&#34;&gt;&lt;code class=&#34;language-groovy&#34; data-lang=&#34;groovy&#34;&gt;stage &#39;build&#39;
+    def m2Repo = &#39;-v /var/jenkins_home/.m2:/home/jenkins/.m2&#39;
+    def timezone = &#39;-e TZ=Europe/Paris&#39;
+    docker.image(&#34;codetroopers/jenkins-slave-jdk8-restx&#34;).inside(&#34;${m2Repo} ${timezone}&#34;){
+        git branch: &#39;master&#39;, url: &#39;https://github.com/code-troopers/jenkins-workflow-demo-repo.git&#39;
+        sh &#34;MAVEN_OPTS=-Dfile.encoding=UTF-8 mvn clean install -B -Ppackage&#34;
+        step([$class: &#39;ArtifactArchiver&#39;, artifacts: &#39;srv/target/dependency/webapp-runner.jar, srv/target/*.war, run.sh&#39;])
+        step([$class: &#39;JUnitResultArchiver&#39;, testResults: &#39;**/target/surefire-reports/TEST-*.xml&#39;])
+        stash includes: &#39;run.sh,srv/target/dependency/webapp-runner.jar,srv/target/*.war,Dockerfile&#39;, name: &#39;dockerBuild&#39;
+    }
+
+stage &#39;docker&#39;
+node{
+    ws{
+        unstash &#39;dockerBuild&#39;
+        def built = docker.build(&#34;codetroopers/jenkins-workflow-demo:${env.BUILD_ID}&#34;)
+        input &#39;Is everything ok ? Run app ?&#39; // &lt;b class=&#34;conum&#34;&gt;(1)&lt;/b&gt;
+        echo &#34;We can run the docker-compose up here&#34;
+        def outcome = input message: &#39;We can even have parameters to answer this question&#39;, parameters: [ // &lt;b class=&#34;conum&#34;&gt;(2)&lt;/b&gt;
+            [name: &#39;myChoice&#39;, description: &#39;My choice&#39;, choices: &#39;Choice 1\nChoice 2\nChoice 3&#39;, $class: &#39;ChoiceParameterDefinition&#39;]
+        ]
+        echo &#34;You have chosen ${outcome}&#34; // &lt;b class=&#34;conum&#34;&gt;(3)&lt;/b&gt;
+    }
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;colist arabic&#34;&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;input&lt;/code&gt; met en pause la construction et permet de continuer ou interrompre celle-ci&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Il est également possible de permettre à l&amp;#8217;utilisateur de faire un choix&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Ici la valeur sélectionnée par l&amp;#8217;utilisateur est écrite dans la sortie du build.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;&lt;em&gt;J&amp;#8217;espère que cet article vous donnera l&amp;#8217;envie d&amp;#8217;essayer de rationnaliser un peu plus la configuration de vos job Jenkins en les stockant dans votre SCM&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

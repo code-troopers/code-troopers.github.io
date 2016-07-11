@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Coursera on Code-Troopers - Vous avez une idée, nous la réalisons</title>
+    <link>https://code-troopers.com/tags/coursera/</link>
+    <description>Recent content in Coursera on Code-Troopers - Vous avez une idée, nous la réalisons</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>fr-fr</language>
+    <lastBuildDate>Wed, 23 Jul 2014 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://code-troopers.com/tags/coursera/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Coursera - Android Handheld Systems : 3ème et dernier cours</title>
+      <link>https://code-troopers.com/2014/07/23/courseraandroid2/</link>
+      <pubDate>Wed, 23 Jul 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://code-troopers.com/2014/07/23/courseraandroid2/</guid>
+      <description>&lt;h3&gt;On Enchaîne !&lt;/h3&gt;
+&lt;p&gt;
+    Ce lundi 21 juillet vient de débuter &lt;a
+        href=&#34;https://class.coursera.org/mobilecloud-001&#34;&gt;le 3ème cours&lt;/a&gt; de la série sur le développement Android proposée par Coursera, alors que
+    &lt;a href=&#34;https://class.coursera.org/posa-002&#34;&gt;le second&lt;/a&gt; vient à peine de se terminer et que les résultats n&#39;ont pas encore été envoyés.
+    Pour rappel le cours qui vient de s’achever a traité en grande majorité tout ce qui touche aux Threads, Services (binding, starting), tâche synchrone &amp; asynchrone, Messenger, AIDL.... (rien que ça)
+&lt;/p&gt;
+
+&lt;p&gt;
+    La prochaine étape que nous propose Coursera intitulée
+    &lt;b&gt;Programming Cloud Services for Android Handheld Systems&lt;/b&gt; sera axée sur la création d&#39;applications qui communiqueront avec des serveurs &#34;dans le cloud&#34;.
+    Ce qui semble correspondre à la majorité des applications actuelles offrant un minimum de fonctionnalités.
+&lt;/p&gt;
+&lt;h3&gt;Il faut emporter son pc à la plage ?&lt;/h3&gt;
+&lt;p&gt;
+    Pas de soucis pour suivre ce cours pendant les vacances. Initialement prévu sur 6 semaines il a été étendu sur 10 semaines,
+    et les jalons habituels pour rendre les exercices (une fois par semaine) on été enlevés.
+    Ainsi aucun problème pour partir 2 ou 3 semaines en vacances, il n’y aura pas de pénalité ni de retard pris dans le cheminement du cours.
+&lt;/p&gt;
+&lt;p&gt;
+    En revanche, le point négatif de ce cours risque d’être les supports. En effet seules des vidéos seront disponibles,
+    &lt;a href=&#34;https://www.coursera.org/instructor/juleswhite&#34;&gt;Jules White&lt;/a&gt; travaillant avec un tableau transparent sur lequel il dessine, aucun silde ne sera téléchargeable pour lire à son rythme.
+&lt;/p&gt;
+
+&lt;h3&gt;&#34;Go to class&#34;&lt;/h3&gt;
+&lt;p&gt;
+    Les premières vidéos sont déjà en ligne, donc si vous êtes intéressé, il est encore temps de s’inscrire pour travailler tout l’été,
+    &lt;a href=&#34;https://www.coursera.org/course/mobilecloud&#34;&gt;c&#39;est par là&lt;/a&gt;
+&lt;/p&gt;
+
+&lt;h3&gt;Retours sur le cours N°2 &lt;/h3&gt;
+&lt;p&gt;
+    J&#39;ai vraiment apprécié ce cours, principalement parce que  &lt;a href=&#34;https://www.coursera.org/instructor/douglasschmidt&#34;&gt;Douglas Schmidt&lt;/a&gt; maîtrise son sujet.
+    Autant sur le fonctionnement d&#39;Android qu&#39;il a profondément étudié ou sur les patterns qu&#39;il explique et pour lesquels il est reconnu. Ce fut vraiment pour moi, du temps bien investi.
+&lt;/p&gt;
+&lt;p&gt;
+    Mais je voudrais surtout revenir sur l&#39;évaluation des exercices à faire.
+    Je l’avais évoqué dans &lt;a
+        href=&#34;http://code-troopers.com/2014/05/15/CourseraAndroid.html&#34;&gt;mon précédent billet&lt;/a&gt;, la façon dont chacun allait être évalué était une première pour moi (sur Coursera).
+    Il s’agissait de noter le travail d’autres étudiants (au moins 5 pour chaque exercice)
+&lt;/p&gt;
+&lt;p&gt;
+    Comme dans toutes situations, il y a du bon et du mauvais. Personnellement je n&#39;ai pas tellement aimé cette façon de faire, notamment pour les raisons suivantes :
+&lt;/p&gt;
+&lt;ul&gt;
+    &lt;li&gt;Trop gourmand en temps car cela demande le temps de regarder la longue vidéo d&#39;explication des solutions possibles puis en plus celui pour évaluer au moins 5 élèves;&lt;/li&gt;
+    &lt;li&gt;Feedback lent : une semaine pour faire l&#39;exercice puis une nouvelle pour que tout le monde s&#39;entre note, si on a fait quelque chose de travers, c&#39;est quasi oublié;&lt;/li&gt;
+    &lt;li&gt;Noter le travail de quelqu&#39;un n&#39;est pas quelque chose d&#39;évident ni de naturel (même si les points à prendre compte étaient donnés).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+    Mais j&#39;en retiens tout de même ces quelques points positifs :
+&lt;/p&gt;
+&lt;ul&gt;
+    &lt;li&gt;Lire du code d’autres personnes, ça permet de voir d’autres approches et façons de penser(même si là j&#39;ai rarement vu 2 solutions différentes);&lt;/li&gt;
+    &lt;li&gt;Avoir des commentaires sur ses propres solutions (positifs ou négatifs, mais dans les deux cas quelqu’un a pris le temps de regarder, ce qui n’arrive pas si souvent dans la vraie vie).&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;h3&gt;Les MOOCs&lt;/h3&gt;
+&lt;p&gt;
+    Pour le moment chacun des cours que j&#39;ai suivi m&#39;a apporté quelque chose, que ça soit une nouvelle façon de réfléchir (principalement pour le Scala)
+    ou de nombreux éclaircissements sur la façon dont certains systèmes fonctionnent ou doivent fonctionner.
+    Donc si vous avez un peu de temps, même simplement pour regarder les slides ou les vidéos, je vous invite vivement à suivre des MOOC et ce quelque soit la plateforme.
+&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Coursera - Android Handheld Systems : 2ème cours</title>
+      <link>https://code-troopers.com/2014/05/15/courseraandroid/</link>
+      <pubDate>Thu, 15 May 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://code-troopers.com/2014/05/15/courseraandroid/</guid>
+      <description>&lt;h3&gt;Coursera &amp; Android&lt;/h3&gt;
+&lt;p&gt;
+   Coursera propose depuis ce Lundi (12 mai) &lt;a href=&#34;https://class.coursera.org/posa-002&#34;&gt;un nouveau cours de développement Android&lt;/a&gt;.
+   Il s&#39;agit, en fait, du second cours d&#39;une série de trois visant à maitriser le développement d&#39;application Android.
+&lt;/p&gt;
+&lt;p&gt;
+   &lt;a href=&#34;https://class.coursera.org/android-001&#34;&gt;Le premier cours, sur le développement Android,&lt;/a&gt; avait comme thème (et comme son nom l&#39;indique) la découverte de la programmation d&#39;application.
+   Cela en abordant les classes et notions majeures telles que les Activity, View, Fragment ou les Intent, ainsi que tous les cycles de vie correspondants, ce qui a pu permettre au plus grand nombre de s&#39;y initier à moindre frais.
+&lt;/p&gt;
+
+&lt;h3&gt;Le cours&lt;/h3&gt;
+&lt;p&gt;
+    Ce nouveau cours a pour thème principal l&#39;apprentissage des bons patterns et l&#39;utilisation de plusieurs frameworks afin de réaliser avec brio les applications Android qui ont recours à des services réseaux.
+&lt;/p&gt;
+&lt;p&gt;
+    Présenté par &lt;a href=&#34;https://www.coursera.org/instructor/douglasschmidt&#34;&gt;Douglas C. Schmidt&lt;/a&gt; (qui parle plutôt vite dans les premières vidéos) et &lt;a href=&#34;https://www.coursera.org/instructor/juleswhite&#34;&gt;C. Jules White&lt;/a&gt;, les cours (vidéos et slides) semblent toujours aussi bien construits et organisés.
+    Ils sont pour le moment faciles à suivre, et donc faisaibles même si vous n&#39;avez pas suivi le premier cours.
+
+&lt;/p&gt;
+&lt;h3&gt;Exercices&lt;/h3&gt;
+&lt;p&gt;
+    Pour ce qui est des excercices, il y a du changement. Contrairement au cours précédent où il fallait uniquement collecter quelques lignes de log pour prouver la réussite d&#39;un exercice, il va falloir cette fois fournir les fichiers sources correspondant au travail réalisé. Ce qui est, je trouve, une bien meilleure façon de faire et surtout fait beaucoup plus &#39;pro&#39;.
+&lt;/p&gt;
+&lt;p&gt;
+    Et justement, en parlant d&#39;évaluation, nouveauté (pour moi du moins) il va falloir évaluer le travail des autres étudiants.
+    En effet pour qu&#39;un exercice réalisé soit validé, il faudra, après l&#39;envoi de son propre travail, noter celui d&#39;autres étudiants, en utilisant leurs codes sources et en répondant à des questions / critères spécifiques posés par la plateforme.
+&lt;/p&gt;
+&lt;p&gt;
+    Petit point négatif à noter, l&#39;IDE à utiliser est Eclipse, c&#39;est sous cet environnement que les résultats seront testés.
+    Mais comme cela n&#39;a pas été un problème lors du premier cours de pouvoir utiliser Android Studio, il faut espérer qu&#39;il en sera de même.
+&lt;/p&gt;
+&lt;h3&gt;Inscription&lt;/h3&gt;
+&lt;p&gt;
+    Il est encore temps de s&#39;incrire puisque les premières vidéos n&#39;ont été diffusées que ce Lundi.
+    Et même si vous n&#39;avez pas le temps pour faire tous les exercices, regarder les vidéos (ou bien les slides) apporte déjà bien plus d&#39;informations, que pourrait le faire une conférence ou une formation.
+&lt;/p&gt;
+
+&lt;h3&gt;Certification&lt;/h3&gt;
+&lt;p&gt;
+    Et pour ceux qui le souhaitent, il est possible d&#39;obtenir un certificat officiel provenant de l&#39;université de Vanderbilt (origine des deux profs) et Coursera, ce qui permet de faire connaître et d&#39;attester de votre réussite dans ces cours.
+    Mais évidement pour cela il faudra payer (49$), car rien n&#39;est gratuit.
+&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

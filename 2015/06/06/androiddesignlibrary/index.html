@@ -1,0 +1,306 @@
+
+<!doctype html >
+<html class="no-js" lang="fr-fr" itemscope itemtype="http://schema.org/Organization">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title> Android Support Design Library &middot;  Code-Troopers - Vous avez une idée, nous la réalisons</title>
+  <meta property="fb:app_id" content="432735746865877"/>
+
+  <meta property="og:title" content=" Android Support Design Library &middot;  Code-Troopers - Vous avez une idée, nous la réalisons" />
+  <meta property="og:site_name" content="Code-Troopers - Vous avez une idée, nous la réalisons" />
+  <meta property="og:url" content="https://code-troopers.com/2015/06/06/androiddesignlibrary/" />
+  <meta property="og:image" content="https://code-troopers.com//images/banner/logo-banner.png"/>
+
+  
+  <meta property="og:type" content="article" />
+  <meta property="og:article:published_time" content="2015-06-06T00:00:00Z" />
+  <meta property="og:article:tag" content="Android" />
+  <meta property="og:article:tag" content="Librairie" />
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@codetroopers" />
+  <meta name="twitter:creator" content="@codetroopers" />
+  <meta name="twitter:title" content="Android Support Design Library" />
+  <meta name="twitter:url" content="https://code-troopers.com/2015/06/06/androiddesignlibrary/" />
+
+  
+  <meta name="twitter:description" content="Avez-vous déjà essayé de transformer vos applications Android pour les rendre conformes aux guidelines Material, si oui, vous avez dû comme nous, vous retrouver à importer plein de librairies tierces pour implémenter par exemple le FAB button, ou même personnaliser le code pour rendre le NavigationDrawer conforme (comme ce qui a pu être fait sur le squelette d&rsquo;un précédent article. Et bien tout ceci est fini (enfin en partie), grâce à la nouvelle librairie Android de Google Design Support." />
+  <meta name="twitter:image" content="https://code-troopers.com//images/banner/android5-banner.png" />
+  <meta name="description" content="Avez-vous déjà essayé de transformer vos applications Android pour les rendre conformes aux guidelines Material, si oui, vous avez dû comme nous, vous retrouver à importer plein de librairies tierces pour implémenter par exemple le FAB button, ou même personnaliser le code pour rendre le NavigationDrawer conforme (comme ce qui a pu être fait sur le squelette d&rsquo;un précédent article. Et bien tout ceci est fini (enfin en partie), grâce à la nouvelle librairie Android de Google Design Support." />
+  <meta property="og:description" content="Avez-vous déjà essayé de transformer vos applications Android pour les rendre conformes aux guidelines Material, si oui, vous avez dû comme nous, vous retrouver à importer plein de librairies tierces pour implémenter par exemple le FAB button, ou même personnaliser le code pour rendre le NavigationDrawer conforme (comme ce qui a pu être fait sur le squelette d&rsquo;un précédent article. Et bien tout ceci est fini (enfin en partie), grâce à la nouvelle librairie Android de Google Design Support."/>
+  
+
+  <meta name="p:domain_verify" content="fc173d84e3a4de948ed4bda2908afd3e"/>
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="MobileOptimized" content="320" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  
+  
+
+  
+  <link href="https://code-troopers.com/index.xml" rel="alternate" type="application/rss+xml" title="Code-Troopers - Vous avez une idée, nous la réalisons" />
+  
+
+  
+  <link rel="canonical" href="https://code-troopers.com/2015/06/06/androiddesignlibrary/" />
+
+  
+  <script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "headline": "Android Support Design Library",
+    "author": {
+      "@type": "Person",
+      "name": "http://profiles.google.com/?rel=author"
+    },
+    "datePublished": "2015-06-06",
+    "description": "",
+    "wordCount":  190 
+  }
+  </script>
+  
+
+  <link href="/css/style-fa8b45cbb9.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  
+  <meta itemprop="name" content="CT-CDGT"/>
+  <meta itemprop="name" content="CT-RMLC"/>
+  <meta itemprop="name" content="CT-BNCS"/>
+  <meta itemprop="name" content="CT-JRPT"/>
+  <meta itemprop="name" content="CT-MTBL"/>
+  <meta itemprop="name" content="CT-FLCH"/>
+  <meta itemprop="name" content="CT-VCMB"/>
+
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/styles/androidstudio.min.css">
+  <script src="https://yandex.st/highlightjs/8.0/highlight.min.js"></script>
+</head>
+<body>
+  
+        <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-NWLQD2"
+                height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-NWLQD2');</script>
+        
+        
+  <header data-spy="affix" class="affix-top">
+    <div class="container">
+        <div class="navbar-header" itemscope itemtype="http://schema.org/Organization">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span><i class="fa fa-bars fa-2x"></i></span>
+            </button>
+            <a itemprop="url" class="navbar-brand" href="/"><img itemprop="logo" class="logo" alt="Code-Troopers logo" title="Code-Troopers logo" src="/images/logo.png">
+                <span itemprop="name" class="brand">Code-Troopers</span>
+            </a>
+        </div>
+        <nav class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="active"><a data-scrollToLink="aboutUs">À propos</a></li>
+                <li><a data-scrollToLink="projects">Réalisations</a></li>
+                <li><a data-scrollToLink="skills">Compétences</a></li>
+                <li><a data-scrollToLink="team">L'équipe</a></li>
+                <li><a data-scrollToLink="contact">Contact</a></li>
+                <li><a href="/blog/">Blog</a></li>
+            </ul>
+        </nav>
+        
+    </div>
+</header>
+
+
+<section>
+<div class="header">
+  <h1 class="container">
+    <a href="/blog/index.html">Le <span>blog</span></a>
+  </h1>
+</div>
+</section>
+
+<section id="post">
+        <div class="container">
+        <article>
+            <div>
+		<div class="cover" style="background-image:url(/images/banner/android5-banner-big.png)">
+                    <div class="date">posté le 06/06/2015 par Benjamin</div>
+                </div>
+                <h2><a href="https://code-troopers.com/2015/06/06/androiddesignlibrary/">Android Support Design Library</a></h2>
+                <span class="label label-info">~1 minute(s) à lire</span>
+                
+                <ul class="tags">
+                
+                    <li><a style="color:white;border-color: white" href="https://code-troopers.com//tags/android/">Android</a></li>
+                
+                    <li><a style="color:white;border-color: white" href="https://code-troopers.com//tags/librairie/">Librairie</a></li>
+                
+                </ul>
+                
+                <div class="content">
+                    	<p>Avez-vous déjà essayé de transformer vos applications Android pour les rendre conformes aux <a href="http://www.google.com/design/spec/material-design/introduction.html">guidelines Material</a>, si oui, vous avez dû comme nous, vous retrouver à importer plein de librairies tierces pour implémenter par exemple le <code>FAB button</code>, ou même personnaliser le code pour rendre le <code>NavigationDrawer</code> conforme (comme ce qui a pu être fait sur le squelette d&rsquo;un <a href="http://code-troopers.com/2014/11/26/SqueletteAndroid5.html">précédent article</a>. Et bien tout ceci est fini (enfin en partie), grâce à la nouvelle librairie Android de Google <a href="http://developer.android.com/tools/support-library/features.html#design">Design Support</a>.</p>
+
+<div style="text-align:center">
+<video width="270" height="444" controls>
+  <source src="/videos/designlibrary-cheesesquare.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+</div>
+
+<p>Pour le moment elle permet d&rsquo;implémenter les composants Material suivants :</p>
+
+<ul>
+<li>TextInputLayout</li>
+<li>FloatingActionButton</li>
+<li>Snackbar</li>
+<li>TabLayout</li>
+<li>NavigationView</li>
+<li>CoordinatorLayout</li>
+<li>AppBarLayout</li>
+<li>CollapsingToolbarLayout</li>
+</ul>
+
+<p>Je vous laisse consulter les différents articles trouvés sur le sujet pour avoir plus de détails :</p>
+
+<ul>
+<li><a href="http://android-developers.blogspot.fr/2015/05/android-design-support-library.html">L&rsquo;article sur l&rsquo;Android developers blog</a></li>
+<li><a href="https://medium.com/android-bites/first-steps-with-the-design-support-library-8dcf06230ddd">L&rsquo;article sur medium.com</a> : qui montre les nouveautés grâce à des petites vidéos mais montre aussi les problèmes (sûrement corrigés au moment où vous lirez cet article)</li>
+<li><a href="http://antonioleiva.com/navigation-view/">Un bout d&rsquo;exemple avec du code pour le NavigationView</a></li>
+</ul>
+
+<p>Enfin, voici le <a href="https://github.com/chrisbanes/cheesesquare">lien</a> vers le code source de l&rsquo;application exemple faite par <a href="https://chris.banes.me/">Chris Banes</a>, montrant les principales nouveautés de cette librairie.</p>
+
+<p>À vos applications !</p>
+
+                </div>
+<div class="share">
+L'article vous a plu ? Partagez-le :
+    <ul class="socials">
+        <li>
+            <a target="_blank" title="Twitter" href="https://twitter.com/share?url=http://code-troopers.comhttps%3a%2f%2fcode-troopers.com%2f2015%2f06%2f06%2fandroiddesignlibrary%2f&text=Android%20Support%20Design%20Library&via=codetroopers"
+                rel="nofollow"
+                onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=400,width=700');return false;">
+                <i class="fa fa-twitter-square"></i>
+            </a>
+        </li>
+        <li>
+            <a target="_blank" title="Facebook" href="https://www.facebook.com/sharer.php?u=http://code-troopers.comhttps%3a%2f%2fcode-troopers.com%2f2015%2f06%2f06%2fandroiddesignlibrary%2f&t=Android%20Support%20Design%20Library"
+                class="facebook-button" rel="nofollow"
+                onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=500,width=700');return false;">
+                <i class="fa fa-facebook-square"></i>
+            </a>
+        </li>
+        <li>
+            <a target="_blank" title="Google +" href="https://plus.google.com/share?url=http://code-troopers.comhttps%3a%2f%2fcode-troopers.com%2f2015%2f06%2f06%2fandroiddesignlibrary%2f&hl=fr"
+                class="google-button" rel="nofollow"
+                onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=650');return false;">
+                <i class="fa fa-google-plus-square"></i>
+            </a>
+        </li>
+        <li>
+            <a target="_blank" title="Linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=http://code-troopers.comhttps%3a%2f%2fcode-troopers.com%2f2015%2f06%2f06%2fandroiddesignlibrary%2f&title=Android%20Support%20Design%20Library"
+                class="linkedin-button" rel="nofollow"
+                onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=650');return false;">
+                <i class="fa fa-linkedin-square"></i>
+            </a>
+        </li>
+        <li>
+            <a target="_blank" title="Envoyer par mail" href="mailto:?subject=Android%20Support%20Design%20Library&body=http://code-troopers.comhttps%3a%2f%2fcode-troopers.com%2f2015%2f06%2f06%2fandroiddesignlibrary%2f" rel="nofollow">
+                <i class="fa fa-envelope"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+<div style="clear:both"></div>
+
+
+
+                <div class="back">
+                    <a href="/"><i class="fa fa-arrow-circle-o-up"></i> Retour aux articles</a>
+                    <div class="pull-right paginate">
+                        
+                        <a href="https://code-troopers.com/2015/05/22/dotfiles-git/"><i class="fa fa-arrow-circle-o-left"></i> Précédent</a>
+                        
+                        
+                        <a href="https://code-troopers.com/2015/06/10/completionjavascriptdansintellij/"><i class="fa fa-arrow-circle-o-right"></i> Suivant</a>
+                        
+                    </div>
+                </div>
+
+                <section id="menu">
+                    <ul>
+                        
+                    </ul>
+                </section>
+
+                <div id="disqus_thread"></div>
+                <script type="text/javascript">
+                     
+                    var disqus_shortname = 'codetroopers'; 
+		    var disqus_url = window.location.href;
+		    if (window.location.protocol != "http:"){
+			disqus_url = "http:" + window.location.href.substring(window.location.protocol.length);
+		    }
+
+                     
+                    (function() {
+                        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                    })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+            </div>
+        </article>
+        </div>
+    </section>
+<footer id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6" itemscope itemtype="http://schema.org/Organization">
+                <h3>Contact</h3>
+
+                <p>Vous avez besoin de nous pour un projet, contactez-nous sur les réseaux sociaux, par mail à <a
+                    href="mailto:contact@code-troopers.com"><meta itemprop="email" content="contact@code-troopers.com">contact@code-
+                    troopers.com</a></p>
+            </div>
+            <div class="col-md-6 simple-social-icons">
+                <h3>Réseaux sociaux</h3>
+                <ul class="socials">
+                    <li><a target="_blank" href="https://twitter.com/codetroopers"><i
+                            class="fa fa-twitter-square"></i></a></li>
+                    <li><a target="_blank"
+                           href="https://www.facebook.com/pages/Code-Troopers/123604307824664"><i
+                            class="fa fa-facebook-square"></i></a></li>
+                    <li><a target="_blank" href="https://plus.google.com/+Code-troopers" rel="publisher"><i
+                            class="fa fa-google-plus-square"></i></a></li>
+                    <li><a target="_blank" href="https://github.com/code-troopers"><i
+                            class="fa fa-github-square"></i></a></li>
+                    <li><a target="_blank" href="/feed.xml"><i
+                            class="fa fa-rss-square"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="footer-under">
+                Made with <i class="fa fa-heart"></i> in Tours -
+              © 2016 Code-Troopers - Tous droits réservés
+            </div>
+						<div class="legals footer-under">
+							  Mentions légales : <br>
+							  Code-Troopers est une  marque déposée à l'INPI (numéro 4145181).<br>
+								CT-CDGT SARL au capital de 1000€, 73 rue Ledru Rollin, 37000 Tours, 808 881 064 RCS Tours. <br>
+								Site hébergé par GitHub Inc.
+						</div>
+        </div>
+    </div>
+</footer>
+<script src="/js/scripts-aa72765cff.js"></script>
+</body>
+

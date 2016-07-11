@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Archi on Code-Troopers - Vous avez une idée, nous la réalisons</title>
+    <link>https://code-troopers.com/tags/archi/</link>
+    <description>Recent content in Archi on Code-Troopers - Vous avez une idée, nous la réalisons</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>fr-fr</language>
+    <lastBuildDate>Mon, 04 Jan 2016 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://code-troopers.com/tags/archi/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Navig&#39;Tours : côté serveur</title>
+      <link>https://code-troopers.com/2016/01/04/navigtours-cote_serveur/</link>
+      <pubDate>Mon, 04 Jan 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://code-troopers.com/2016/01/04/navigtours-cote_serveur/</guid>
+      <description>
+
+&lt;p&gt;Cet article, une fois n&amp;rsquo;est pas coutume, va rentrer un peu plus dans le fonctionnement de la partie serveur mise en place pour &lt;a href=&#34;http://navigtours.com/&#34;&gt;Navig&amp;rsquo;Tours&lt;/a&gt;.
+Si vous n&amp;rsquo;êtes pas technique, il risque d&amp;rsquo;être compliqué de le suivre !&lt;/p&gt;
+
+&lt;!-- break --&gt;
+
+&lt;h2 id=&#34;architecture:dad4c2b1f4f43c57ed0806fbc2bfdf56&#34;&gt;Architecture&lt;/h2&gt;
+
+&lt;p&gt;La partie serveur de Navig&amp;rsquo;Tours est en réalité assez simple. Comme dit lors de différentes présentations des membres de Code-Troopers, ce projet est pour nous un moyen de nous amuser lorsque nous nous retrouvons tous les septs.
+C&amp;rsquo;est également le projet que nous utilisons pour tester certaines technologies et approches.&lt;/p&gt;
+
+&lt;p&gt;Ainsi, Navig&amp;rsquo;Tours est une application développée en utilisant Java 8, mais rien de forcément très étonnant maintenant. Le côté le plus intéressant est qu&amp;rsquo;elle est en production depuis plus d&amp;rsquo;un an maintenant avec Java 8 !&lt;/p&gt;
+
+&lt;p&gt;Ensuite, nous utilisons l&amp;rsquo;excellent framework RestX pour simplifier notre vie dans la gestion des appels REST, ce qu&amp;rsquo;il nous apporte, entre autres :&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;de l&amp;rsquo;injection de dépendances lors de la compilation&lt;/li&gt;
+&lt;li&gt;un outillage d&amp;rsquo;administration complet&lt;/li&gt;
+&lt;li&gt;une plateforme de test intégrée et de specs nous permettant de documenter facilement l&amp;rsquo;API&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Enfin, pour la partie stockage des données, nous utilisons MongoDB qui nous simplifie la gestion de données en manipulant des données principalement au format JSON (et fournit une bonne gestion de la géolocalisation par coordonnées).&lt;/p&gt;
+
+&lt;h2 id=&#34;du-dev:dad4c2b1f4f43c57ed0806fbc2bfdf56&#34;&gt;Du dev&amp;hellip;&lt;/h2&gt;
+
+&lt;p&gt;Côté dev, nous utilisons notre petit wrapper (&lt;a href=&#34;http://code-troopers.com/2014/12/15/CT_Project_Alias.html&#34;&gt;ct&lt;/a&gt;) pour les tâches classiques qui se charge d&amp;rsquo;effectuer le build ainsi que le run de l&amp;rsquo;application avec ses dépendances.
+Le lancement de l&amp;rsquo;application se limite à mettre à disposition un serveur MongoDB ainsi qu&amp;rsquo;à effectuer un &lt;code&gt;java -jar&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;à-la-prod:dad4c2b1f4f43c57ed0806fbc2bfdf56&#34;&gt;À la prod !&lt;/h2&gt;
+
+&lt;p&gt;Historiquement, l&amp;rsquo;application a été déployée sur Heroku dans son plan gratuit en utilisant plusieurs services cibles (pour répartir la charge via l&amp;rsquo;utilisation de plusieurs entrées DNS).&lt;/p&gt;
+
+&lt;p&gt;Mais, suite au changement de tarification d&amp;rsquo;Heroku et notre envie d&amp;rsquo;utiliser Docker sur un vrai projet, nous avons migré l&amp;rsquo;environnement pour utiliser exclusivement Docker.&lt;/p&gt;
+
+&lt;p&gt;Un des intérêts de la transformation que nous avons opéré est que nous sommes également capable de lancer l&amp;rsquo;application très simplement à l&amp;rsquo;aide de descripteurs Docker ainsi que du docker-compose qui décrit les interactions entre nos services.&lt;/p&gt;
+
+&lt;h2 id=&#34;process-de-livraison:dad4c2b1f4f43c57ed0806fbc2bfdf56&#34;&gt;Process de livraison&lt;/h2&gt;
+
+&lt;p&gt;Pour effectuer la livraison de l&amp;rsquo;application, nous sommes passés d&amp;rsquo;un &lt;code&gt;git push&lt;/code&gt; vers heroku à un process impliquant Jenkins dans 3 étapes successives (mais qui s&amp;rsquo;enchaînent automatiquement) :&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;construction de l&amp;rsquo;application et archivage dans un &lt;code&gt;tgz&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;copie du tgz produit pour la construction d&amp;rsquo;une image Docker poussée vers notre dépôt interne&lt;/li&gt;
+&lt;li&gt;lancement de l&amp;rsquo;application via un &lt;code&gt;docker-compose run -d&lt;/code&gt; sur les machines cibles&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;gestion-du-multi-environnement:dad4c2b1f4f43c57ed0806fbc2bfdf56&#34;&gt;Gestion du multi-environnement&lt;/h2&gt;
+
+&lt;p&gt;Comme toutes les applications d&amp;rsquo;entreprise, nous déployons vers plusieurs environnement afin de valider la bonne tenue de l&amp;rsquo;application et la qualité de nos développements :&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;dev / local : poste du développeur&lt;/li&gt;
+&lt;li&gt;preprod : version à passer en production&lt;/li&gt;
+&lt;li&gt;prod : version actuelle&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;À ceci, nous pouvons ajouter plusieurs versions en parallèle pour différentes fonctionnalités et/ou villes (l&amp;rsquo;info exclusive est cachée ici, Navig&amp;rsquo;VotreVille arrive…).
+Pour être capable de gérer des déploiements différents nous avons ajouté quelques paramètres à nos scripts de lancement de docker-compose nous permettant de disposer de noms différents par projet pous éviter les problèmes.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

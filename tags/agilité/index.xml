@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Agilité on Code-Troopers - Vous avez une idée, nous la réalisons</title>
+    <link>https://code-troopers.com/tags/agilit%C3%A9/</link>
+    <description>Recent content in Agilité on Code-Troopers - Vous avez une idée, nous la réalisons</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>fr-fr</language>
+    <lastBuildDate>Wed, 11 Feb 2015 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://code-troopers.com/tags/agilit%C3%A9/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Suivre l&#39;humeur de son équipe avec TeamMood</title>
+      <link>https://code-troopers.com/2015/02/11/teammood/</link>
+      <pubDate>Wed, 11 Feb 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://code-troopers.com/2015/02/11/teammood/</guid>
+      <description>&lt;p&gt;Depuis bientôt 6 mois l&amp;rsquo;équipe des Code-Troopers utilise &lt;a href=&#34;https://www.teammood.com/&#34;&gt;TeamMood&lt;/a&gt; pour suivre son bonheur au quotidien. Retour sur l&amp;rsquo;utilisation d&amp;rsquo;un outil fort sympathique.&lt;/p&gt;
+
+&lt;p&gt;Si l&amp;rsquo;on remonte quelques années en arrière, lorsque nous travaillions encore tous les 7 pour SRMvision,
+nous avions expérimenté un outil sur un grand tableau blanc pour connaître notre état d&amp;rsquo;esprit à la fin de chaque journée de travail.
+Nous l&amp;rsquo;appelions à l&amp;rsquo;époque &lt;code&gt;happiness chart&lt;/code&gt; (d&amp;rsquo;autres l&amp;rsquo;appellent aussi &lt;code&gt;niko-niko&lt;/code&gt;).
+Toute l&amp;rsquo;équipe a rapidement adhéré au principe, car, dans la façon dont nous avions établi les règles, nous pouvions dessiner ce que l&amp;rsquo;on souhaitait dans notre case, seule la couleur importait :&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Vert = Content ;&lt;/li&gt;
+&lt;li&gt;Bleu = Neutre ;&lt;/li&gt;
+&lt;li&gt;Rouge = Pas content.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;On avait régulièrement droit à toutes sortes de dessins, du simple smiley au gribouillis le plus improbable.
+(Je suis assez déçu de n&amp;rsquo;avoir retrouvé aucune photo de ces grands moments d&amp;rsquo;art)&lt;/p&gt;
+
+&lt;p&gt;Le problème que nous avions relevé alors était principalement l&amp;rsquo;assiduité de remplissage.
+En effet, même si pour partir le soir on passait dans la salle où se trouvait le tableau à remplir, on n&amp;rsquo;y pensait pas forcément (trop pressé de rentrer chez soi).
+Il n&amp;rsquo;était donc pas rare qu&amp;rsquo;il y ait des trous, comblés sans conviction le lendemain matin.&lt;/p&gt;
+
+&lt;p&gt;C&amp;rsquo;est là où &lt;a href=&#34;https://www.teammood.com/&#34;&gt;TeamMood&lt;/a&gt; entre en action avec une grosse valeur ajoutée : l&amp;rsquo;envoi d&amp;rsquo;un mail quotidien !
+Plus d&amp;rsquo;excuse pour oublier de voter, il suffit de cliquer sur le lien qui correspond à notre humeur du jour dans le mail reçu,
+c&amp;rsquo;est super simple et rapide, ça marche par téléphone, ça peut se faire dans le bus sur le trajet du retour.
+Et si on se plante, parce qu&amp;rsquo;on a des gros doigts sur un petit écran, on peut revoter dans la foulée, ça permet d&amp;rsquo;écraser son propre vote du jour.&lt;/p&gt;
+
+&lt;div style=&#34;text-align:center;margin-bottom:50px&#34;&gt;
+    &lt;a href=&#34;https://code-troopers.com/images/postTeammood/mailBig.png&#34; data-lightbox=&#34;group-1&#34; title=&#34;Mail du vote quotidien&#34; class=&#34;inlineBoxes&#34;&gt;
+        &lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/postTeammood/mailBig.png&#34; alt=&#34;Mail du vote quotidien&#34;/&gt;
+    &lt;/a&gt;
+    &lt;a href=&#34;https://code-troopers.com/images/postTeammood/mailPhone.png&#34; data-lightbox=&#34;group-1&#34; title=&#34;Mail du vote quotidien sur téléphone&#34; class=&#34;inlineBoxes&#34;&gt;
+        &lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/postTeammood/mailPhone.png&#34; alt=&#34;Mail du vote quotidien sur téléphone&#34;/&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Ensuite on retombe sur le fonctionnement souhaité : en fonction de son vote, on voit apparaître son &lt;em&gt;mood&lt;/em&gt;  avec une palette de couleurs et de smileys simples à comprendre en un coup d&amp;rsquo;œil.
+Avec un peu d&amp;rsquo;historique on peut aussi apprécier via des stats simples l&amp;rsquo;évolution de l&amp;rsquo;humeur de l&amp;rsquo;équipe sur du plus long terme.&lt;/p&gt;
+
+&lt;div style=&#34;text-align:center;margin-bottom:50px&#34;&gt;
+    &lt;a href=&#34;https://code-troopers.com/images/postTeammood/quotidien.png&#34; data-lightbox=&#34;group-2&#34; title=&#34;&#34; class=&#34;inlineBoxes&#34;&gt;
+        &lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/postTeammood/quotidien.png&#34; alt=&#34;&#34;/&gt;
+    &lt;/a&gt;
+    &lt;a href=&#34;https://code-troopers.com/images/postTeammood/stat.png&#34; data-lightbox=&#34;group-2&#34; title=&#34;&#34; class=&#34;inlineBoxes&#34;&gt;
+        &lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/postTeammood/stat.png&#34; alt=&#34;&#34;/&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Finalement il ne reste plus qu&amp;rsquo;à exploiter ces données. Et là, libre à chacun (et à chaque équipe) de l&amp;rsquo;interpréter comme il le souhaite.
+De notre côté nous avons expérimenté plusieurs façons de faire :
+une revue en rétro de fin de sprint, une alerte au daily le lendemain d&amp;rsquo;un jour…
+Cela demande plus ou moins de temps afin de trouver une méthode efficace pour tirer bénéfice de ces informations.
+En général, plus on attend plus le souvenir s&amp;rsquo;estompe et donc le problème est amoindri, ce qui, à mon avis, n&amp;rsquo;est pas une bonne chose.
+Mais là c&amp;rsquo;est vraiment chacun ses goûts.&lt;/p&gt;
+
+&lt;p&gt;Que dire de plus ?
+&lt;a href=&#34;https://www.teammood.com/&#34;&gt;TeamMood&lt;/a&gt; est un produit français (un de plus) développé à Toulouse par &lt;a href=&#34;https://twitter.com/ndeverge&#34;&gt;Nicolas Deverge&lt;/a&gt;.
+C&amp;rsquo;est encore en bêta, mais ça fonctionne parfaitement (aucun problème à signaler depuis qu&amp;rsquo;on l&amp;rsquo;utilise).
+Je sais que la roadmap est bien remplie, mais la prochaine fonctionnalité qu&amp;rsquo;on attend c&amp;rsquo;est la gestion des congés/absences, histoire de ne pas être dérangé pendant les vacances.&lt;/p&gt;
+
+&lt;p&gt;Conclusion :
+je le recommande à toutes les équipes qui sont prêtes à se prendre en main pour faire bouger les choses afin d&amp;rsquo;être heureuses au quotidien.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Soirée Agilité à Tours</title>
+      <link>https://code-troopers.com/2014/09/23/agile_paloaltech_tours/</link>
+      <pubDate>Tue, 23 Sep 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://code-troopers.com/2014/09/23/agile_paloaltech_tours/</guid>
+      <description>
+
+&lt;h2 id=&#34;ça-bouge-à-la-cantine-du-numérique:62bd16bcc8405396f585accdb1329d46&#34;&gt;Ça bouge à la cantine du numérique&lt;/h2&gt;
+
+&lt;p&gt;Depuis la rentrée il y a de l&amp;rsquo;animation à la &lt;a href=&#34;http://paloaltours.org/la-cantine-numerique-tours/&#34;&gt;cantine du numérique de Tours&lt;/a&gt;. En plus de continuer les rendez-vous hebdomadaires tels que le FunLab ou la WebSchool, depuis peu sont organisés des codings goûters (initiés par &lt;a href=&#34;https://twitter.com/j2lb&#34;&gt;Jean-Lou Le Bars&lt;/a&gt;) ainsi que les soirées Palo Altech (initées par &lt;a href=&#34;https://twitter.com/nogunner&#34;&gt;Rodrigo Reyes&lt;/a&gt; et &lt;a href=&#34;https://twitter.com/LudovicLafole&#34;&gt;Ludovic Lafole&lt;/a&gt;).&lt;br /&gt;
+Palo Altech a pour ambition de promovoir les rendez-vous autour de l&amp;rsquo;informatique en général (pour apporter un complément aux soirées JUG déjà spécialisées autour du développement java)&lt;/p&gt;
+
+&lt;h2 id=&#34;soirée-agilité:62bd16bcc8405396f585accdb1329d46&#34;&gt;Soirée Agilité&lt;/h2&gt;
+
+&lt;p&gt;C&amp;rsquo;est donc dans le cadre de Palo Altech que le &lt;strong&gt;mardi 30 septembre à 19h&lt;/strong&gt; est organisée une soirée autour de l&amp;rsquo;agilité. Cette soirée sera découpée en trois présentations :&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Une introduction à l’Agilité, par &lt;a href=&#34;https://twitter.com/f_leguedois&#34;&gt;Frédéric Leguédois&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Perfection Games : ou comment résoudre ses problèmes avec des post-it, par &lt;a href=&#34;https://twitter.com/FlorianChauveau&#34;&gt;Florian Chauveau&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Retour d’expérience d’un développeur en milieu semi-hostile, par &lt;a href=&#34;https://twitter.com/MiguelBasire&#34;&gt;Miguel Basire&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;perfection-games:62bd16bcc8405396f585accdb1329d46&#34;&gt;Perfection Games&lt;/h2&gt;
+
+&lt;p&gt;Point crucial de l&amp;rsquo;amélioration continue, les perfection games dont votre dévoué Trooper fera la présentation sont un excellent moyen de discuter des points de blocage dans les équipes. Cette présentation sera axée principalement sur les expériences vécues au sein de la team Code-Troopers au fil des dernières années de travail ainsi que lors des diverses rencontres.&lt;/p&gt;
+
+&lt;h2 id=&#34;liens:62bd16bcc8405396f585accdb1329d46&#34;&gt;Liens&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://paloaltours.org/agenda/&#34;&gt;Agenda de la cantine&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.eventbrite.fr/e/billets-soiree-palo-altech-2-lagilite-13128837707&#34;&gt;Pour s&amp;rsquo;inscrire pour la soirée (c&amp;rsquo;est gratuit, c&amp;rsquo;est juste pour prévoir la place)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;édit:62bd16bcc8405396f585accdb1329d46&#34;&gt;[ÉDIT]&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Les slides de la présentation &lt;code&gt;Perfection Games&lt;/code&gt; sont sur slideshare : &lt;a href=&#34;http://fr.slideshare.net/FlorianChauveau/agilit-les-perfection-games-en-action&#34;&gt;http://fr.slideshare.net/FlorianChauveau/agilit-les-perfection-games-en-action&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Si vous la voulez chez vous un midi, il suffit de faire une demande de BBL via &lt;a href=&#34;http://www.brownbaglunch.fr/baggers.html#Florian_Chauveau_Tours&#34;&gt;le site http://www.brownbaglunch.fr &lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

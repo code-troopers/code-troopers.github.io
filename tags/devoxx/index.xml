@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Devoxx on Code-Troopers - Vous avez une idée, nous la réalisons</title>
+    <link>https://code-troopers.com/tags/devoxx/</link>
+    <description>Recent content in Devoxx on Code-Troopers - Vous avez une idée, nous la réalisons</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>fr-fr</language>
+    <lastBuildDate>Fri, 20 May 2016 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://code-troopers.com/tags/devoxx/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Devoxx 2016 : Huntly ou rien !</title>
+      <link>https://code-troopers.com/2016/05/20/devoxx-2016-huntly/</link>
+      <pubDate>Fri, 20 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://code-troopers.com/2016/05/20/devoxx-2016-huntly/</guid>
+      <description>&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;An english version of this blogpost is published on Michaël Bitard&amp;#8217;s blog at &lt;a href=&#34;https://agileek.github.io/java/2016/05/19/devoxx_2016_huntly/&#34;&gt;agileek.github.io&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;Cette année pour Devoxx, j’étais le seul Code-Troopers disponible mais ce n’est pas grave car j’y ai retrouvé Michaël, ancien collègue tourangeau maintenant basé à Toulouse.
+On va vous raconter ici comment on s’est bien amusés pendant ces 3 jours.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;Pour l&amp;#8217;édition 2016 de DevoxxFR, il y avait une nouveauté qui aurait probablement dû arriver bien plus tôt, il s’agit des applications mobiles officielles.&lt;br&gt;
+Rien de bien révolutionnaire à ça vous allez me dire, et je suis d&amp;#8217;accord car les années précédentes des âmes charitables prenaient de leur temps pour sortir une application permettant d&amp;#8217;avoir le programme dans sa poche.&lt;br&gt;
+Mais en plus de l’application permettant de voir et gérer le programme &lt;a href=&#34;https://play.google.com/store/apps/details?id=com.devoxx&#34;&gt;My devoxx&lt;/a&gt;,&lt;br&gt;
+il y a eu de publié sur les stores l’application &lt;a href=&#34;https://play.google.com/store/apps/details?id=com.devoxx.huntly&#34;&gt;Devoxx Huntly&lt;/a&gt; qui a pour tag line “Win tickets for devoxx events”. Autant le dire tout de suite, jouer pour gagner des places pour Devoxx, ça mérite un peu plus d’attention.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;Pour ce qui va suivre nous allons uniquement parler de celle disponible sur Android car c’est celle que nous avons utilisée.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;&lt;div style=&#34;text-align : center&#34;&gt;
+&lt;a class=&#34;inlineBoxes&#34; href=&#34;https://code-troopers.com/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_tag_app1.png&#34; data-lightbox=&#34;2&#34; title=&#34;Devoxx Huntly screenshot&#34;&gt;
+        &lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_tag_app1_min.png&#34; alt=&#34;Devoxx Huntly screenshot&#34;/&gt;
+&lt;/a&gt;
+&lt;a class=&#34;inlineBoxes&#34; href=&#34;https://code-troopers.com/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_tag_app2.png&#34; data-lightbox=&#34;2&#34; title=&#34;Devoxx Huntly screenshot - Liste des quêtes&#34;&gt;
+        &lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_tag_app2_min.png&#34; alt=&#34;Devoxx Huntly screenshot - Liste de quêtes&#34;/&gt;
+&lt;/a&gt;
+&lt;a class=&#34;inlineBoxes&#34; href=&#34;https://code-troopers.com/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_tag_app3.png&#34; data-lightbox=&#34;2&#34; title=&#34;Devoxx Huntly screenshot - Quête terminée&#34;&gt;
+        &lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_tag_app3_min.png&#34; alt=&#34;Devoxx Huntly screenshot - Quête terminée&#34;/&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;&lt;/div&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;sect1&#34;&gt;
+&lt;h2 id=&#34;_comment_ça_marche_et_quel_est_le_but&#34;&gt;Comment ça marche et quel est le but ?&lt;/h2&gt;
+&lt;div class=&#34;sectionbody&#34;&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;Le but est assez simple, avoir le plus de points. Comment ça marche ? En scannant des QR codes comme ceux ci-dessous via l&amp;#8217;application. Un jeu d&amp;#8217;enfant donc.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;Le côté sympa de la chose c&amp;#8217;est que les QR codes étaient présents sur chacun des stands des exposants. C&amp;#8217;est donc un moyen sympa de tous les faire.
+C&amp;#8217;est donc ce que l&amp;#8217;on a fait.
+Et dans la plupart des cas, le fait d&amp;#8217;aller scanner le QR code sur place était un bon moyen pour arriver sur le stand et commencer la conversation avec les personnes présentes.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;Parfois (surtout le premier jour) nous avons dû expliquer ce qu&amp;#8217;était ce fameux QR code (voir même le trouver sur le stand) et à quoi il servait (nous avons trouvé dommage que les stands n&amp;#8217;aient pas été plus au courant de l&amp;#8217;existence de huntly)
+On ne va pas se mentir non plus, on n&amp;#8217;a pas parlé à tous les exposants, certains stands sont moins sympas à aller voir que d&amp;#8217;autres, et dans ce cas, on a un peu esquivé.
+Mais il faut quand même avouer que cette année, j&amp;#8217;ai parlé à beaucoup plus d&amp;#8217;exposants que les années précédentes, sans aucun doute du fait de l&amp;#8217;appli.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;Étant donné que c&amp;#8217;est la première mise en place,
+il y avait forcément quelques petites retouches à faire,
+et sur ce coup-là on peut dire que la team de scalac était au taquet car il y a eu au moins 2 updates durant les trois jours qui ont permis de corriger notamment un problème avec l&amp;#8217;api twitter et un autre avec le scan de contact (2 updates en 3 jours, je parle toujours de l&amp;#8217;appli Android, parce que bon, sur iOS&amp;#8230;&amp;#8203; :p)&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;&lt;div style=&#34;text-align : center&#34;&gt;
+&lt;a class=&#34;inlineBoxes&#34; href=&#34;https://code-troopers.com/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_tag_stand1.png&#34; data-lightbox=&#34;0&#34; title=&#34;QRCode sur le stant Aldebaran&#34;&gt;
+        &lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_tag_stand1_min.png&#34; alt=&#34;QRCode sur le stant Aldebaran&#34;/&gt;
+&lt;/a&gt;
+&lt;a class=&#34;inlineBoxes&#34; href=&#34;https://code-troopers.com/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_tag_stand2.png&#34; data-lightbox=&#34;0&#34; title=&#34;QRCode sur le stand SII&#34;&gt;
+        &lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_tag_stand2_min.png&#34; alt=&#34;QRCode sur le stand SII&#34;/&gt;
+&lt;/a&gt;
+&lt;a class=&#34;inlineBoxes&#34; href=&#34;https://code-troopers.com/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_tag_stand3.png&#34; data-lightbox=&#34;0&#34; title=&#34;QRCode sur le stand Stackoverflow&#34;&gt;
+        &lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_tag_stand3_min.png&#34; alt=&#34;QRCode sur le stand Stackoverflow&#34;/&gt;
+&lt;/a&gt;
+&lt;a class=&#34;inlineBoxes&#34; href=&#34;https://code-troopers.com/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_tag_stand4.png&#34; data-lightbox=&#34;0&#34; title=&#34;QRCode sur le stand Amazon&#34;&gt;
+        &lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_tag_stand4_min.png&#34; alt=&#34;QRCode sur le stand Amazon&#34;/&gt;
+&lt;/a&gt;
+&lt;a class=&#34;inlineBoxes&#34; href=&#34;https://code-troopers.com/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_tag_stand_huntly.png&#34; data-lightbox=&#34;0&#34; title=&#34;Le stand de Devoxx Huntly&#34;&gt;
+        &lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_tag_stand_huntly_min.png&#34; alt=&#34;Le stand de Devoxx Huntly&#34;/&gt;
+&lt;/a&gt;
+&lt;a class=&#34;inlineBoxes&#34; href=&#34;https://code-troopers.com/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_tag_porte.png&#34; data-lightbox=&#34;0&#34; title=&#34;QRCode sur une porte de salle&#34;&gt;
+        &lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_tag_porte_min.png&#34; alt=&#34;QRCode sur une porte de salle&#34;/&gt;
+&lt;/a&gt;
+&lt;/div&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;sect1&#34;&gt;
+&lt;h2 id=&#34;_ce_qui_nous_a_plu&#34;&gt;Ce qui nous a plu&lt;/h2&gt;
+&lt;div class=&#34;sectionbody&#34;&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;Quand on est dans une conférence pour développeurs, on peut s’attendre à voir des filous tenter de feinter/hacker/tricher, quoi.
+Ça n’a pas tardé car quelques heures après le début du jeu on a remarqué une personne qui semblait avoir vachement plus d’avance que tout le monde (Frédéric Camblor pour ne pas le citer).
+Il s’est lui-même dénoncé au stand, ça lui a valu un direct de Stefan, en expliquant qu’il avait profité du fait que la communication avec le serveur était en ssl au lieu de tls pour intercepter les communications et envoyer des informations au serveur.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;&lt;div style=&#34;text-align : center&#34;&gt;
+&lt;a class=&#34;inlineBoxes&#34; href=&#34;https://code-troopers.com/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_stephan_pushing_fcamblor.png&#34; data-lightbox=&#34;4&#34; title=&#34;Stephan maltraitant Frédéric&#34;&gt;
+        &lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_stephan_pushing_fcamblor.png&#34; alt=&#34;Stephan maltraitant Frédéric&#34;/&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;sect1&#34;&gt;
+&lt;h2 id=&#34;_ce_qui_n_a_pas_trop_marché&#34;&gt;Ce qui n&amp;#8217;a pas trop marché&lt;/h2&gt;
+&lt;div class=&#34;sectionbody&#34;&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;Certaines des quêtes étaient des check-ins, il s&amp;#8217;agissait de passer dans toutes les salles où il y avait des confs et normalement, il y avait des beacons qui devaient permettre de détecter automatiquement qu&amp;#8217;on était dans la bonne zone.
+Malheureusement je n&amp;#8217;ai jamais capté un seul signal, même avec mon bluetooth allumé tout le temps.
+D&amp;#8217;ailleurs, si quelqu’un a capté un signal, je suis curieux de savoir comment ça marchait (le seul signal qui a été capté était le beacon que j’avais dans le sac, et il a été capté par Michaël au bout d’une heure de binomage lors d’un workshop).
+Mais bon ce n&amp;#8217;est pas grave car il y avait en backup des QR codes pour faire ces quêtes.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;sect1&#34;&gt;
+&lt;h2 id=&#34;_Évolutions&#34;&gt;Évolutions&lt;/h2&gt;
+&lt;div class=&#34;sectionbody&#34;&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;Bien qu&amp;#8217;on ait fait le tour de tous les stands, celui sur lequel on a passé le plus de temps reste celui de devoxx huntly.
+Nous avons parlé des choses à modifier pour les prochaines éditions, notamment en ce qui concerne les quêtes afin de gagner encore plus de points !&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;Parmi les points qui pourront être améliorés on peut citer par exemple :&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;ulist&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Une meilleure gestion des points perdus : en effet, derrière certains QR codes se cachaient des questions, or même si on avait plusieurs tentatives pour y répondre, le fait de se tromper une ou deux fois diminuait le nombre de points gagnés. C&amp;#8217;était une bonne idée mais pour la comprendre, il a fallu que les dev de l&amp;#8217;appli l&amp;#8217;expliquent.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;La première quête en lançant l&amp;#8217;appli consiste à entrer un code de parrainage, le problème c&amp;#8217;est que lorsque l&amp;#8217;on est dans les premiers à installer l&amp;#8217;appli, il n&amp;#8217;y a personne pour donner un code, ce qui est plutôt dommage.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Pour chacune des quêtes le fait de publier un message sur twitter permettait de gagner des points en plus, le problème c&amp;#8217;est qu&amp;#8217;avec plus de 50 quêtes, et à chaque fois le même message, ça ressemble plus à du spam qu&amp;#8217;autre chose.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;La chose la plus fun à améliorer pour moi sera de réussir à coupler l&amp;#8217;appli aux nombreux jeux prévus par les exposants. Avoir un classement global parmi tous les jeux de tous les stands, là ça serait vraiment le top.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;L’annonce des vainqueurs a donc eu lieu durant &lt;a href=&#34;https://youtu.be/h2hA3TSTdpw?t=4m13s&#34;&gt;l’épisode des casts codeurs&lt;/a&gt; auquel nous n’avons pas pu assister cette année.
+Et Michaël a donc bien gagné sa place pour DevoxxFR 2017. Quant à moi, ce n’est que partie remise.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;&lt;div style=&#34;text-align : center&#34;&gt;
+&lt;a class=&#34;inlineBoxes&#34; href=&#34;https://code-troopers.com/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_classment_final.png&#34; data-lightbox=&#34;1&#34; title=&#34;Classement final&#34;&gt;
+        &lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_classment_final_min.png&#34; alt=&#34;Classement final&#34;/&gt;
+&lt;/a&gt;
+&lt;/div&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;Le code source de MyDevoxx est sur github : &lt;a href=&#34;https://github.com/devoxx/AndroidMobileApp&#34; class=&#34;bare&#34;&gt;https://github.com/devoxx/AndroidMobileApp&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;En tout cas, sachant que ces applications vont être utilisées pour chaque Devoxx,
+on peut être sûrs que ça va vite évoluer et qu’on aura quelque chose de plus abouti pour Devoxx France l’année prochaine !&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Devoxx 2015 : c&#39;était bien, mais...</title>
+      <link>https://code-troopers.com/2015/04/15/devoxxfr-2015/</link>
+      <pubDate>Wed, 15 Apr 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://code-troopers.com/2015/04/15/devoxxfr-2015/</guid>
+      <description>&lt;p&gt;Cette année nous étions tous les Troopers à nous rendre à Paris pour LA conférence à ne pas rater.&lt;/p&gt;
+
+&lt;p&gt;Pour ceux qui n&amp;rsquo;auraient pas vu l&amp;rsquo;info sur &lt;a href=&#34;https://twitter.com/search?q=%23DevoxxFR&amp;amp;src=tyah&#34;&gt;Twitter&lt;/a&gt; ou ailleurs, pour la première fois nous étions au Palais des Congrès, et ça on peut dire que c&amp;rsquo;est la classe.&lt;/p&gt;
+
+&lt;p&gt;Mais, dans cet article, je ne vais pas vous faire un résumé des conférences que j&amp;rsquo;ai vues, d&amp;rsquo;abord parce que je n&amp;rsquo;ai pas pris de notes,
+ensuite parce que beaucoup d&amp;rsquo;autres le font déjà, par exemple &lt;a href=&#34;http://agileek.github.io/&#34;&gt;là&lt;/a&gt; et &lt;a href=&#34;http://javamind-fr.blogspot.fr/&#34;&gt;là&lt;/a&gt;, et surtout parce que toutes les sessions étaient filmées et
+seront mises en ligne sur Parleys et accessibles gratuitement (comme les autres années).
+Je vous conseille par exemple &lt;a href=&#34;https://www.parleys.com/tutorial/java-8-streams-collectors-patterns-performances-parallelisation&#34;&gt;les streams Java 8 de José Paumard&lt;/a&gt;
+si vous n&amp;rsquo;êtes toujours pas familiers de la chose.&lt;/p&gt;
+
+&lt;p&gt;Ce que je vais vous raconter dans cet article, ce sont les &lt;code&gt;mais&lt;/code&gt;, parce que &lt;em&gt;Devoxx c&amp;rsquo;est bien mais&amp;hellip;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Car finalement assez peu de personnes en parlent. Et comme en France on aime bien se plaindre (et que je suis un bon français), je veux  bien endosser le rôle du râleur.&lt;/p&gt;
+
+&lt;p&gt;Première chose, sûrement la plus flagrante (et déjà discutée) &lt;strong&gt;les paniers repas&lt;/strong&gt;.
+En effet je trouve tout simplement aberrante l&amp;rsquo;utilisation de ces petites sacoches pour la distribution des repas.
+Car si elles sont dites réutilisables, 90% d&amp;rsquo;entre elles ont dû finir à la poubelle.
+J&amp;rsquo;ai pu lire qu&amp;rsquo;elles sont faites en fibres biodégradables, ce qui est bien, mais un produit créé pour finir dans la poubelle 5 min après son utilisation ça reste un gaspillage totalement inutile.
+D&amp;rsquo;après ce que j&amp;rsquo;ai compris d&amp;rsquo;un rapide échange avec une personne de l&amp;rsquo;orga, ce n&amp;rsquo;est pas ce qui avait été prévu/commandé. Dans tous les cas,
+je ne vois pas comment la société en face peut se dire écolo (ou tenter de le faire croire) en proposant une prestation qui consiste à fournir 3 jours de suite aux mêmes personnes le même mini sac réutilisable.
+Il ne faut pas lire l&amp;rsquo;avenir dans les foies de mouton¹ pour se douter qu&amp;rsquo;au moins deux tiers vont finir à la poubelle.&lt;/p&gt;
+
+&lt;div style=&#34;text-align:center;margin:50px&#34;&gt;
+  &lt;a href=&#34;https://code-troopers.com/images/postDevoxx2015/devoxx2015_1.jpg&#34; data-lightbox=&#34;group-2&#34; title=&#34;Les sac pour les sandwichs...&#34; class=&#34;inlineBoxes&#34;&gt;
+    &lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/postDevoxx2015/devoxx2015_1.jpg&#34; alt=&#34;Les sac pour les sandwichs...&#34;/&gt;
+  &lt;/a&gt;
+  &lt;a href=&#34;https://code-troopers.com/images/postDevoxx2015/devoxx2015_2.jpg&#34; data-lightbox=&#34;group-2&#34; title=&#34;... qui finissent à la poubelle&#34; class=&#34;inlineBoxes&#34;&gt;
+    &lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/postDevoxx2015/devoxx2015_2.jpg&#34; alt=&#34;... qui finissent à la poubelle&#34;/&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Et en parlant de poubelles, on peut aussi vivement critiquer le Palais des Congrès lui même qui ne propose aucune solution de tri sélectif, tous les déchets finissant au même endroit&amp;hellip;
+C&amp;rsquo;est d&amp;rsquo;ailleurs bien dommage car plusieurs personnes ont tenté de trier les sacoches des autres déchets en les mettant de côté dans des cartons vides, mais à chaque fois le personnel du Palais des Congrès récupérait tout dans leurs grandes poubelles. Peut-être parce qu&amp;rsquo;ils facturent une partie de leur prestation au volume de déchets&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;Ensuite j&amp;rsquo;aimerais vous faire part de mon indignation² envers &lt;strong&gt;le comportement des participants&lt;/strong&gt; lors des confs, quickies et autres sessions.
+Je trouve qu&amp;rsquo;un très grand nombre de personnes a fait preuve d&amp;rsquo;irrespect, d&amp;rsquo;incivisme ou tout autre adjectif de ce genre par bien des manières.
+La principale étant de quitter la salle avant la fin de la présentation elle même, souvent au début des questions, pour se rendre le plus vite possible ailleurs (au buffet ou dans une autre salle je suppose)
+et je ne parle pas là d&amp;rsquo;une ou deux personnes lors d&amp;rsquo;une ou deux sessions, mais d&amp;rsquo;au moins une quinzaine et à chaque session. Les questions font partie intégrante d&amp;rsquo;une session et même si le sujet ne nous a finalement pas intéressés, ce n&amp;rsquo;est pas un gros effort que de rester assis 5 minutes de plus et ainsi permettre aux autres personnes, qui elles étaient intéressées, de pouvoir entendre dans le calme les questions/réponses.&lt;/p&gt;
+
+&lt;p&gt;Toujours sur le thème de l&amp;rsquo;incivilité, je trouve scandaleux la quantité de déchets laissés par terre les deux premiers jours. Sachant qu&amp;rsquo;il y avait des poubelles quasiment à chaque sortie de salle. Je ne comprends pas ces comportements (les gens font ça aussi chez eux et sur leur lieu de travail ?)&lt;/p&gt;
+
+&lt;p&gt;Pour finir j&amp;rsquo;aimerais aborder un sujet de beaucoup plus subjectif, &lt;strong&gt;le niveau des conférences&lt;/strong&gt;. En effet j&amp;rsquo;ai (avis personnel, donc)
+eu le sentiment que, par rapport à l&amp;rsquo;année dernière, le niveau était en deçà. J&amp;rsquo;en ai déjà pas mal discuté et plusieurs personnes ne sont pas de cet avis.
+Il est donc assez probable que ce soit dû aux choix que j&amp;rsquo;ai fait plutôt qu&amp;rsquo;à l&amp;rsquo;ensemble des conférences disponibles.&lt;/p&gt;
+
+&lt;p&gt;Mais dans ce cas là, ne faudrait-il pas que le niveau estimé de la conf soit annoncé avant, afin de limiter les déceptions et de mieux cibler le public (par exemple avec des labels &lt;em&gt;débutant, medium, avancé&lt;/em&gt; sur le programme) ?&lt;/p&gt;
+
+&lt;p&gt;Tout cela n&amp;rsquo;est aucunement une charge contre l&amp;rsquo;orga qui a, encore une fois, fait un boulot extraordinaire pour réunir &lt;code&gt;2509&lt;/code&gt; &lt;em&gt;développeurs (et développeuses) passionné(e)s&lt;/em&gt; au Palais des Congrès.
+Et parce que pouvoir assister à une conf de &lt;a href=&#34;https://twitter.com/briangoetz&#34;&gt;Brian Goetz&lt;/a&gt; (architecte de java), ça n&amp;rsquo;arrive pas tous les jours, je serai présent l&amp;rsquo;année prochaine.&lt;/p&gt;
+
+&lt;p&gt;PS : Pour voir quelques photos, il y a le site de &lt;a href=&#34;http://www.devoxx.fr/2015/04/devoxx-france-2015-en-images/&#34;&gt;Devoxx France&lt;/a&gt; et aussi ce &lt;a href=&#34;https://m.flickr.com/#/photos/123583479@N03/sets/72157651881953421&#34;&gt;compte flickr&lt;/a&gt;. Sinon, vous avez toujours internet.&lt;/p&gt;
+
+&lt;p&gt;&lt;small&gt;¹ : Référence au discours de Charles-Alexandre Sabourdin qui a animé les deux keynotes.&lt;/small&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;small&gt;² : oui oui, carrément !&lt;/small&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Retour de devoxx : Améliorer son live-coding</title>
+      <link>https://code-troopers.com/2014/04/21/devoxx1/</link>
+      <pubDate>Mon, 21 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://code-troopers.com/2014/04/21/devoxx1/</guid>
+      <description>&lt;p&gt;Je suis un développeur passionnné&lt;sup&gt;&lt;a href=&#34;#note1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; et, lors des conférences, JUG (ou toutes autres présentations) j&amp;rsquo;aime bien quand le speaker présente un petit bout de code pour illustrer ses propos.
+Lorsque c&amp;rsquo;est du live coding, c&amp;rsquo;est encore mieux.
+Le seul problème c&amp;rsquo;est que quand on n&amp;rsquo;est pas au Mariott et qu&amp;rsquo;il n&amp;rsquo;y a pas un vidéoproj de malade, en général dans l&amp;rsquo;audience, passé le 3&lt;sup&gt;ème&lt;/sup&gt; rang, plus personne n&amp;rsquo;y voit rien.&lt;/p&gt;
+
+&lt;p&gt;Avant la présentation &lt;a href=&#34;http://cfp.devoxx.fr/devoxxfr2014/talk/TYC-384/42%20IntelliJ%20IDEA%20tips%20and%20tricks%20in%2045%20minutes&#34;&gt;42 IntelliJ IDEA tips and tricks&lt;/a&gt; de Hadi Hariri (&lt;a href=&#34;https://twitter.com/@hhariri&#34;&gt;twitter&lt;/a&gt;)
+ la solution c&amp;rsquo;était de fermer toutes les views autour de la classe ouverte puis de faire un ctrl+scroll pour zoomer.
+Cette époque est maintenant révolue, en effet, IntellJ possède un mode présentation qui s&amp;rsquo;occupe de faire tout cela.&lt;/p&gt;
+
+&lt;p&gt;Le résultat en deux screens de comparaison : utilisation classique vs mode présentation&lt;/p&gt;
+
+&lt;div style=&#34;text-align:center;margin:50px&#34;&gt;
+    &lt;a href=&#34;https://code-troopers.com/images/postDevoxx1/normalView.png&#34; data-lightbox=&#34;group-1&#34; title=&#34;Mode normal&#34;  class=&#34;inlineBoxes&#34;&gt;
+        &lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/postDevoxx1/normalView.png&#34; alt=&#34;Mode normal&#34;/&gt;
+    &lt;/a&gt;
+    &lt;a href=&#34;https://code-troopers.com/images/postDevoxx1/presentationView.png&#34; data-lightbox=&#34;group-1&#34; title=&#34;Mode présentation&#34;  class=&#34;inlineBoxes&#34;&gt;
+        &lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/postDevoxx1/presentationView.png&#34; alt=&#34;Mode présentation&#34;/&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Pour activer le mode présentation ça se passe dans le menu &lt;code&gt;View&lt;/code&gt; &amp;gt; &lt;code&gt;Enter Presentation Mode&lt;/code&gt;. Et pour le quitter &lt;code&gt;View&lt;/code&gt; &amp;gt; &lt;code&gt;Exit Presentation Mode&lt;/code&gt;.&lt;/p&gt;
+
+&lt;div style=&#34;text-align:center;margin:50px&#34;&gt;
+    &lt;a href=&#34;https://code-troopers.com/images/postDevoxx1/menu1.png&#34; data-lightbox=&#34;group-1&#34; title=&#34;Menu pour passer en mode présentation&#34; class=&#34;inlineBoxes&#34;&gt;
+        &lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/postDevoxx1/menu1.png&#34; alt=&#34;Accès Menu présentation&#34;/&gt;
+    &lt;/a&gt;
+    &lt;a href=&#34;https://code-troopers.com/images/postDevoxx1/menu2.png&#34; data-lightbox=&#34;group-1&#34; title=&#34;Menu pour quitter en mode présentation&#34; class=&#34;inlineBoxes&#34;&gt;
+            &lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/postDevoxx1/menu2.png&#34; alt=&#34;Retour normal&#34;/&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Bien évidement, assigner un raccourci clavier permettra d&amp;rsquo;être encore plus fluide pour switcher de mode.&lt;/p&gt;
+
+&lt;div style=&#34;text-align:center;margin:50px;&#34;&gt;
+    &lt;a href=&#34;https://code-troopers.com/images/postDevoxx1/settingShortcut.png&#34; data-lightbox=&#34;group-1&#34; title=&#34;Settings pour affecter un raccourci à l&#39;action présentation&#34;&gt;
+        &lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/postDevoxx1/settingShortcut.png&#34; alt=&#34;Settings pour raccourci&#34;/&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;note1&#34;&gt;[1] Une jolie faute d&#39;orthographe sur le tshirt officiel de Devoxx que personne n&#39;avait vu, mais qui a été révélée lors de la première keynote :-)&lt;/div&gt;
+
+&lt;p&gt;PS : Les sources github visibles dans les screens ne sont pas de moi, vous pouvez les consulter à cet endroit &lt;a href=&#34;https://github.com/winterbe/java8-tutorial&#34;&gt;https://github.com/winterbe/java8-tutorial&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

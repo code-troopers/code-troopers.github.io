@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Monitoring on Code-Troopers - Vous avez une idée, nous la réalisons</title>
+    <link>https://code-troopers.com/tags/monitoring/</link>
+    <description>Recent content in Monitoring on Code-Troopers - Vous avez une idée, nous la réalisons</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>fr-fr</language>
+    <lastBuildDate>Wed, 30 Sep 2015 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://code-troopers.com/tags/monitoring/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Monitorer ses conteneurs Docker avec New Relic</title>
+      <link>https://code-troopers.com/2015/09/30/newrelicdocker/</link>
+      <pubDate>Wed, 30 Sep 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://code-troopers.com/2015/09/30/newrelicdocker/</guid>
+      <description>
+
+&lt;p&gt;Si vous ne conaissez pas New Relic, vous loupez quelque chose, c&amp;rsquo;est le service indispensable pour monitorer vos serveurs et vos applications. Il est capable d&amp;rsquo;une part de vous remonter les données physiques de vos serveurs (mémoire, cpu, espace disque), et d&amp;rsquo;autre part d&amp;rsquo;analyser les performances de vos applications (de nombreux langages sont disponibles). Il dispose aussi d&amp;rsquo;un système d&amp;rsquo;alerting, facilement configurable. Tous ces services sont disponibles en version gratuite, avec limitation (nombre de jour limité de rétention des données par exemple). Je vous laisse consulter le &lt;a href=&#34;http://www.newrelic.com&#34;&gt;site officiel&lt;/a&gt; pour plus de détail.&lt;/p&gt;
+
+&lt;p&gt;Nous allons seulement parler du service de monitoring des serveurs dans cet article.&lt;/p&gt;
+
+&lt;div style=&#34;float:right;margin:20px&#34;&gt;
+    &lt;a href=&#34;https://code-troopers.com/images/postNewrelicDocker/new-relic.png&#34; data-lightbox=&#34;group-1&#34; title=&#34;New Relic Logo&#34; class=&#34;inlineBoxes&#34;&gt;
+        &lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/postNewrelicDocker/new-relic.png&#34; alt=&#34;New Relic Logo&#34;/&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;div class=&#34;clearfix&#34;&gt;&lt;/div&gt;
+
+&lt;h2 id=&#34;et-docker-dans-tout-ça:bc5e987537bfb69a6aefddb2b5c9b04b&#34;&gt;Et Docker dans tout ça&lt;/h2&gt;
+
+&lt;p&gt;Ce qui est encore plus fort avec le service de monitoring des serveurs de New Relic, c&amp;rsquo;est qu&amp;rsquo;il est capable de comprendre Docker et donc de vous remonter les données par conteneur.&lt;/p&gt;
+
+&lt;div style=&#34;text-align:center;margin:50px&#34;&gt;
+    &lt;a href=&#34;https://code-troopers.com/images/postNewrelicDocker/screen-newrelic-1.png&#34; data-lightbox=&#34;group-3&#34; title=&#34;Screen 1 New Relic&#34; class=&#34;inlineBoxes&#34;&gt;
+        &lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/postNewrelicDocker/screen-newrelic-1.png&#34; alt=&#34;Screen 1 New Relic&#34;/&gt;
+    &lt;/a&gt;
+    &lt;a href=&#34;https://code-troopers.com/images/postNewrelicDocker/screen-newrelic-2.png&#34; data-lightbox=&#34;group-3&#34; title=&#34;Screen 2 New Relic&#34; class=&#34;inlineBoxes&#34;&gt;
+        &lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/postNewrelicDocker/screen-newrelic-2.png&#34; alt=&#34;Screen 2 New Relic&#34;/&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;div class=&#34;clearfix&#34;&gt;&lt;/div&gt;
+
+&lt;h2 id=&#34;comment-l-installer:bc5e987537bfb69a6aefddb2b5c9b04b&#34;&gt;Comment l&amp;rsquo;installer&lt;/h2&gt;
+
+&lt;p&gt;Avec Docker bien sûr, il faut au préalable s&amp;rsquo;être créé un compte sur le site New Relic pour obtenir l&amp;rsquo;accès à l&amp;rsquo;interface et pouvoir se créer une clé (à remplacer dans la ligne de commande suivante).&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;docker run -d \
+    --privileged=true --name newrelic
+    --pid=host \
+    --net=host \
+    -v /sys:/sys \
+    -v /dev:/dev \
+    --restart=always \
+    -v /var/run/docker.sock:/var/run/docker.sock \
+    -v /var/log:/var/log:rw \
+    -e NRSYSMOND_license_key=&amp;lt;KEY&amp;gt; \
+    -e NRSYSMOND_logfile=/var/log/nrsysmond.log \
+    newrelic/nrsysmond:latest
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Vous trouverez toutes les informations &lt;a href=&#34;https://hub.docker.com/r/newrelic/nrsysmond/&#34;&gt;ici&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Librairie on Code-Troopers - Vous avez une idée, nous la réalisons</title>
+    <link>https://code-troopers.com/tags/librairie/</link>
+    <description>Recent content in Librairie on Code-Troopers - Vous avez une idée, nous la réalisons</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>fr-fr</language>
+    <lastBuildDate>Sat, 06 Jun 2015 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://code-troopers.com/tags/librairie/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Android Support Design Library</title>
+      <link>https://code-troopers.com/2015/06/06/androiddesignlibrary/</link>
+      <pubDate>Sat, 06 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://code-troopers.com/2015/06/06/androiddesignlibrary/</guid>
+      <description>&lt;p&gt;Avez-vous déjà essayé de transformer vos applications Android pour les rendre conformes aux &lt;a href=&#34;http://www.google.com/design/spec/material-design/introduction.html&#34;&gt;guidelines Material&lt;/a&gt;, si oui, vous avez dû comme nous, vous retrouver à importer plein de librairies tierces pour implémenter par exemple le &lt;code&gt;FAB button&lt;/code&gt;, ou même personnaliser le code pour rendre le &lt;code&gt;NavigationDrawer&lt;/code&gt; conforme (comme ce qui a pu être fait sur le squelette d&amp;rsquo;un &lt;a href=&#34;http://code-troopers.com/2014/11/26/SqueletteAndroid5.html&#34;&gt;précédent article&lt;/a&gt;. Et bien tout ceci est fini (enfin en partie), grâce à la nouvelle librairie Android de Google &lt;a href=&#34;http://developer.android.com/tools/support-library/features.html#design&#34;&gt;Design Support&lt;/a&gt;.&lt;/p&gt;
+
+&lt;div style=&#34;text-align:center&#34;&gt;
+&lt;video width=&#34;270&#34; height=&#34;444&#34; controls&gt;
+  &lt;source src=&#34;https://code-troopers.com/videos/designlibrary-cheesesquare.mp4&#34; type=&#34;video/mp4&#34;&gt;
+Your browser does not support the video tag.
+&lt;/video&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Pour le moment elle permet d&amp;rsquo;implémenter les composants Material suivants :&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;TextInputLayout&lt;/li&gt;
+&lt;li&gt;FloatingActionButton&lt;/li&gt;
+&lt;li&gt;Snackbar&lt;/li&gt;
+&lt;li&gt;TabLayout&lt;/li&gt;
+&lt;li&gt;NavigationView&lt;/li&gt;
+&lt;li&gt;CoordinatorLayout&lt;/li&gt;
+&lt;li&gt;AppBarLayout&lt;/li&gt;
+&lt;li&gt;CollapsingToolbarLayout&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Je vous laisse consulter les différents articles trouvés sur le sujet pour avoir plus de détails :&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://android-developers.blogspot.fr/2015/05/android-design-support-library.html&#34;&gt;L&amp;rsquo;article sur l&amp;rsquo;Android developers blog&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://medium.com/android-bites/first-steps-with-the-design-support-library-8dcf06230ddd&#34;&gt;L&amp;rsquo;article sur medium.com&lt;/a&gt; : qui montre les nouveautés grâce à des petites vidéos mais montre aussi les problèmes (sûrement corrigés au moment où vous lirez cet article)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://antonioleiva.com/navigation-view/&#34;&gt;Un bout d&amp;rsquo;exemple avec du code pour le NavigationView&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Enfin, voici le &lt;a href=&#34;https://github.com/chrisbanes/cheesesquare&#34;&gt;lien&lt;/a&gt; vers le code source de l&amp;rsquo;application exemple faite par &lt;a href=&#34;https://chris.banes.me/&#34;&gt;Chris Banes&lt;/a&gt;, montrant les principales nouveautés de cette librairie.&lt;/p&gt;
+
+&lt;p&gt;À vos applications !&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

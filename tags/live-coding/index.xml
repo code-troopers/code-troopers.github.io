@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Live Coding on Code-Troopers - Vous avez une idée, nous la réalisons</title>
+    <link>https://code-troopers.com/tags/live-coding/</link>
+    <description>Recent content in Live Coding on Code-Troopers - Vous avez une idée, nous la réalisons</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>fr-fr</language>
+    <lastBuildDate>Mon, 21 Apr 2014 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://code-troopers.com/tags/live-coding/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Retour de devoxx : Améliorer son live-coding</title>
+      <link>https://code-troopers.com/2014/04/21/devoxx1/</link>
+      <pubDate>Mon, 21 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://code-troopers.com/2014/04/21/devoxx1/</guid>
+      <description>&lt;p&gt;Je suis un développeur passionnné&lt;sup&gt;&lt;a href=&#34;#note1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; et, lors des conférences, JUG (ou toutes autres présentations) j&amp;rsquo;aime bien quand le speaker présente un petit bout de code pour illustrer ses propos.
+Lorsque c&amp;rsquo;est du live coding, c&amp;rsquo;est encore mieux.
+Le seul problème c&amp;rsquo;est que quand on n&amp;rsquo;est pas au Mariott et qu&amp;rsquo;il n&amp;rsquo;y a pas un vidéoproj de malade, en général dans l&amp;rsquo;audience, passé le 3&lt;sup&gt;ème&lt;/sup&gt; rang, plus personne n&amp;rsquo;y voit rien.&lt;/p&gt;
+
+&lt;p&gt;Avant la présentation &lt;a href=&#34;http://cfp.devoxx.fr/devoxxfr2014/talk/TYC-384/42%20IntelliJ%20IDEA%20tips%20and%20tricks%20in%2045%20minutes&#34;&gt;42 IntelliJ IDEA tips and tricks&lt;/a&gt; de Hadi Hariri (&lt;a href=&#34;https://twitter.com/@hhariri&#34;&gt;twitter&lt;/a&gt;)
+ la solution c&amp;rsquo;était de fermer toutes les views autour de la classe ouverte puis de faire un ctrl+scroll pour zoomer.
+Cette époque est maintenant révolue, en effet, IntellJ possède un mode présentation qui s&amp;rsquo;occupe de faire tout cela.&lt;/p&gt;
+
+&lt;p&gt;Le résultat en deux screens de comparaison : utilisation classique vs mode présentation&lt;/p&gt;
+
+&lt;div style=&#34;text-align:center;margin:50px&#34;&gt;
+    &lt;a href=&#34;https://code-troopers.com/images/postDevoxx1/normalView.png&#34; data-lightbox=&#34;group-1&#34; title=&#34;Mode normal&#34;  class=&#34;inlineBoxes&#34;&gt;
+        &lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/postDevoxx1/normalView.png&#34; alt=&#34;Mode normal&#34;/&gt;
+    &lt;/a&gt;
+    &lt;a href=&#34;https://code-troopers.com/images/postDevoxx1/presentationView.png&#34; data-lightbox=&#34;group-1&#34; title=&#34;Mode présentation&#34;  class=&#34;inlineBoxes&#34;&gt;
+        &lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/postDevoxx1/presentationView.png&#34; alt=&#34;Mode présentation&#34;/&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Pour activer le mode présentation ça se passe dans le menu &lt;code&gt;View&lt;/code&gt; &amp;gt; &lt;code&gt;Enter Presentation Mode&lt;/code&gt;. Et pour le quitter &lt;code&gt;View&lt;/code&gt; &amp;gt; &lt;code&gt;Exit Presentation Mode&lt;/code&gt;.&lt;/p&gt;
+
+&lt;div style=&#34;text-align:center;margin:50px&#34;&gt;
+    &lt;a href=&#34;https://code-troopers.com/images/postDevoxx1/menu1.png&#34; data-lightbox=&#34;group-1&#34; title=&#34;Menu pour passer en mode présentation&#34; class=&#34;inlineBoxes&#34;&gt;
+        &lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/postDevoxx1/menu1.png&#34; alt=&#34;Accès Menu présentation&#34;/&gt;
+    &lt;/a&gt;
+    &lt;a href=&#34;https://code-troopers.com/images/postDevoxx1/menu2.png&#34; data-lightbox=&#34;group-1&#34; title=&#34;Menu pour quitter en mode présentation&#34; class=&#34;inlineBoxes&#34;&gt;
+            &lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/postDevoxx1/menu2.png&#34; alt=&#34;Retour normal&#34;/&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Bien évidement, assigner un raccourci clavier permettra d&amp;rsquo;être encore plus fluide pour switcher de mode.&lt;/p&gt;
+
+&lt;div style=&#34;text-align:center;margin:50px;&#34;&gt;
+    &lt;a href=&#34;https://code-troopers.com/images/postDevoxx1/settingShortcut.png&#34; data-lightbox=&#34;group-1&#34; title=&#34;Settings pour affecter un raccourci à l&#39;action présentation&#34;&gt;
+        &lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/postDevoxx1/settingShortcut.png&#34; alt=&#34;Settings pour raccourci&#34;/&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;note1&#34;&gt;[1] Une jolie faute d&#39;orthographe sur le tshirt officiel de Devoxx que personne n&#39;avait vu, mais qui a été révélée lors de la première keynote :-)&lt;/div&gt;
+
+&lt;p&gt;PS : Les sources github visibles dans les screens ne sont pas de moi, vous pouvez les consulter à cet endroit &lt;a href=&#34;https://github.com/winterbe/java8-tutorial&#34;&gt;https://github.com/winterbe/java8-tutorial&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

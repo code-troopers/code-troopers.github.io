@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Windows on Code-Troopers - Vous avez une idée, nous la réalisons</title>
+    <link>https://code-troopers.com/tags/windows/</link>
+    <description>Recent content in Windows on Code-Troopers - Vous avez une idée, nous la réalisons</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>fr-fr</language>
+    <lastBuildDate>Wed, 01 Oct 2014 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://code-troopers.com/tags/windows/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Babun un shell sous Windows</title>
+      <link>https://code-troopers.com/2014/10/01/babun/</link>
+      <pubDate>Wed, 01 Oct 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://code-troopers.com/2014/10/01/babun/</guid>
+      <description>
+
+&lt;h2 id=&#34;oh-non-mon-client-m-oblige-à-être-sous-windows:4926350cdc3d1b77871a61037e1a1233&#34;&gt;Oh non, mon client m&amp;rsquo;oblige à être sous Windows&lt;/h2&gt;
+
+&lt;p&gt;Malheureusement, il est fréquent que nous soyons forcés de travailler sous un environnement que nous n&amp;rsquo;aimons pas. Les raisons sont souvent diverses mais sont presque toujours inflexibles. Le problème est que lorsqu&amp;rsquo;on est habitué à une ligne de commande puissante, le fait d&amp;rsquo;être sous Windows devient un réel handicap.&lt;/p&gt;
+
+&lt;h2 id=&#34;donnez-moi-un-shell:4926350cdc3d1b77871a61037e1a1233&#34;&gt;Donnez moi un shell !&lt;/h2&gt;
+
+&lt;p&gt;Bien sûr, la plupart d&amp;rsquo;entre vous connaîssent Cygwin, qui permet de résoudre bien des problèmes, mais qui en créé aussi un paquet avant d&amp;rsquo;avoir une installation complète et qui fonctionne comme attendu.&lt;/p&gt;
+
+&lt;p&gt;Heureusement,  &lt;a href=&#34;https://twitter.com/tombujok&#34;&gt;Tom Bujok&lt;/a&gt; s&amp;rsquo;est penché sur le souci et a pris le temps de faire une configuration aux petits oignons d&amp;rsquo;un Cygwin complet, avec &lt;code&gt;zsh&lt;/code&gt; et &lt;code&gt;oh-my-zsh&lt;/code&gt; pour avoir une bonne configuration. De plus, pour faire comme si on était sous un unix, on a même un package manager qui permet d&amp;rsquo;installer les outils nécessaires.&lt;/p&gt;
+
+&lt;h2 id=&#34;installation-et-configuration:4926350cdc3d1b77871a61037e1a1233&#34;&gt;Installation et configuration&lt;/h2&gt;
+
+&lt;p&gt;Il suffit de récupérer le zip sur le site officiel &lt;a href=&#34;http://babun.github.io/&#34;&gt;http://babun.github.io&lt;/a&gt; de le dézipper et de lancer le script &lt;code&gt;install.bat&lt;/code&gt;. Ce qui est bien, c&amp;rsquo;est qu&amp;rsquo;il est possible de lancer le script d&amp;rsquo;installation et donc d&amp;rsquo;utiliser babun sans disposer des droits d&amp;rsquo;administrateur sur sa machine.&lt;/p&gt;
+
+&lt;p&gt;Une fois la &lt;em&gt;longue&lt;/em&gt; installation terminée, vous disposez d&amp;rsquo;un shell bien configuré avec la plupart des outils nécessaires bien configurés.&lt;/p&gt;
+
+&lt;p&gt;Cependant vous voudrez certainement personnaliser votre environnement avec quelques alias. Pour ceci, il suffit de créer un fichier contenant vos alias dans &lt;code&gt;~/.oh-my-zsh/custom/aliases.zsh&lt;/code&gt; (le nom est libre, le fichier doit porter l&amp;rsquo;extension  &lt;code&gt;zsh&lt;/code&gt; pour qu&amp;rsquo;il soit automatiquement chargé). Il ne s&amp;rsquo;agit ni plus ni moins de la configuration permise par oh-my-zsh (vous pouvez vous référer &lt;a href=&#34;https://code-troopers.com/2014/09/17/ohmyzsh/&#34;&gt;à cet article&lt;/a&gt; pour plus de détails)&lt;/p&gt;
+
+&lt;div style=&#34;text-align:center;margin:50px&#34;&gt;
+ &lt;a style=&#34;display: inline&#34; href=&#34;https://code-troopers.com/images/postBabun/babun.png&#34; data-lightbox=&#34;image-0&#34; title=&#34;Babun et tmux&#34;&gt;
+         &lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/postBabun/babun.png&#34; alt=&#34;Babun et tmux&#34;/&gt;
+ &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&#34;conseils-pratiques:4926350cdc3d1b77871a61037e1a1233&#34;&gt;Conseils pratiques&lt;/h2&gt;
+
+&lt;p&gt;Depuis quelques temps, nous sommes quelques membres de l&amp;rsquo;équipe à &lt;strong&gt;devoir&lt;/strong&gt; travailler  sous Windows. Nous avons rapidement ajouté &lt;code&gt;tmux&lt;/code&gt; à la liste des outils indispensables (la gestion des terminaux Windows n&amp;rsquo;étant pas optimale) ainsi que &lt;code&gt;irssi&lt;/code&gt; en tant que client IRC.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ pact install tmux irssi
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Puisque c&amp;rsquo;est ni plus ni moins qu&amp;rsquo;une installation de Cygwin, l&amp;rsquo;accès à vos disque se fera par le montage &lt;code&gt;/cygdrive/c/&lt;/code&gt; pour le disque &lt;code&gt;C:&lt;/code&gt; par exemple. Veuillez noter également que l&amp;rsquo;emplacement de votre &lt;code&gt;home&lt;/code&gt; sera en fait &lt;code&gt;/cygdrive/c/Users/$USER/.babun/cygwin/home/$USER&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Maintenant, vous serez presque aussi productifs sous Windows que sous un système &amp;ldquo;agréable&amp;rdquo; !&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

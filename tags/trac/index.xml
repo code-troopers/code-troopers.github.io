@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Trac on Code-Troopers - Vous avez une idée, nous la réalisons</title>
+    <link>https://code-troopers.com/tags/trac/</link>
+    <description>Recent content in Trac on Code-Troopers - Vous avez une idée, nous la réalisons</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>fr-fr</language>
+    <lastBuildDate>Mon, 08 Jul 2013 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://code-troopers.com/tags/trac/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>jsTrac l&#39;outil de déclaration de ticket à plugger</title>
+      <link>https://code-troopers.com/2013/07/08/postjstrac/</link>
+      <pubDate>Mon, 08 Jul 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://code-troopers.com/2013/07/08/postjstrac/</guid>
+      <description>&lt;h3&gt;Introduction&lt;/h3&gt;
+
+&lt;p&gt;
+    Comme tout développeur le sait (mais ne l&#39;admettra jamais), son travail n&#39;est pas parfait.
+    Il est donc nécessaire de réaliser une phase de recette de nos applications avant de les livrer.
+    Même si de nombreux outils existent pour référencer les bugs (trac, jira...), cette phase est souvent laborieuse.
+    Nous avons donc décidé de simplifier ce processus en créant &lt;b&gt;jsTrac&lt;/b&gt;.
+&lt;/p&gt;
+
+&lt;br/&gt;
+&lt;h3&gt;jsTrac&lt;/h3&gt;
+
+&lt;p&gt;
+    Il s&#39;agit d&#39;un outil visant à fluidifier la recette de sites web en créant rapidement des rapports de bug sur le
+    logiciel
+    de gestion des tickets &lt;a href=&#34;http://trac.edgewall.org/&#34;&gt;trac&lt;/a&gt;.
+&lt;/p&gt;
+
+&lt;p&gt;
+Les principales fonctionnalités sont les suivantes :
+&lt;ul&gt;
+    &lt;li&gt;impression d&#39;écran de la page visionnée ;&lt;/li&gt;
+    &lt;li&gt;mise en évidence de zones à l&#39;aide de rectangles colorés et de flèches ;&lt;/li&gt;
+    &lt;li&gt;ajout d&#39;annotations ;&lt;/li&gt;
+    &lt;li&gt;masquage d&#39;informations ;&lt;/li&gt;
+    &lt;li&gt;pré-remplissage du formulaire de création du ticket avec des informations utiles (url,login…) ;&lt;/li&gt;
+    &lt;li&gt;mise-à-jour des tickets.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/p&gt;
+
+&lt;br/&gt;
+&lt;h3&gt;Comment ça marche ?&lt;/h3&gt;
+&lt;h4&gt;1. Déclarer un bug&lt;/h4&gt;
+&lt;p&gt;
+    Pour pouvoir déclarer un bug, il suffit d&#39;ajouter un bouton dans votre page. Celui-ci devra exécuter une fonction
+    javascript permettant d&#39;appeler l&#39;interface de &lt;b&gt;jsTrac&lt;/b&gt;.
+    &lt;br/&gt;
+    &lt;a href=&#34;https://code-troopers.com/images/postJsTrac/altS.png&#34; data-lightbox=&#34;image-1&#34; title=&#34;Bouton de lancement de jsTrac&#34;&gt;
+        &lt;img class=&#34;mini&#34; src=&#34;https://code-troopers.com/images/postJsTrac/altS.png&#34; alt=&#34;Bouton de lancement de jsTrac&#34;/&gt;
+    &lt;/a&gt;
+
+&lt;/p&gt;
+&lt;p&gt;
+    De notre côté, nous l&#39;avons aussi associé à un raccourci clavier.
+    On pourrait aussi l&#39;imaginer sous forme d&#39;un bookmarklet ou d&#39;un script grease-monkey, donc complètement
+    décorellé du site à recetter.
+&lt;/p&gt;
+
+&lt;h4&gt;2. Annoter le screenshot&lt;/h4&gt;
+&lt;p&gt;
+    Lorsque le script est exécuté, une boîte à outils s&#39;ouvre offrant la possibilité d&#39;ajouter des informations sur la
+    page courante.
+    Il est alors possible d&#39;ajouter des cadres, flêches, et même du texte. Dans un souci de confidentialité, il est
+    aussi possible de noircir certaines zones de la page afin d&#39;en masquer le contenu.
+&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://code-troopers.com/images/postJsTrac/dessin.png&#34; data-lightbox=&#34;image-2&#34; title=&#34;Création flèche et rectangle&#34;&gt;
+    &lt;img class=&#34;mini&#34; src=&#34;https://code-troopers.com/images/postJsTrac/dessin.png&#34; alt=&#34;Création flèche et rectangle&#34;/&gt;
+&lt;/a&gt;
+&lt;/p&gt;
+
+
+&lt;h4&gt;3. Création du ticket&lt;/h4&gt;
+
+&lt;p&gt;
+    Une fois les modifications validées, l&#39;image est générée, et le formulaire de création du ticket apparait.
+    Les deux champs principaux à remplir sont le nom et la description du ticket. En fonction de la configuration
+    utilisée, certain champs peuvent être pré-rempli, comme le jalon et le composant (qui sont également dépendant
+    de la configuration du serveur Trac).
+&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://code-troopers.com/images/postJsTrac/creation_ticket.png&#34; data-lightbox=&#34;image-3&#34; title=&#34;Création ticket trac&#34;&gt;
+    &lt;img class=&#34;mini&#34; src=&#34;https://code-troopers.com/images/postJsTrac/creation_ticket.png&#34; alt=&#34;Création ticket trac&#34;/&gt;
+&lt;/a&gt;
+&lt;/p&gt;
+
+&lt;h4&gt;4. Le ticket dans Trac&lt;/h4&gt;
+&lt;p&gt;
+    Les personnes en charge de la résolution des tickets verront apparaître le nouveau ticket dans trac avec le
+    screenshot lié. De plus dans notre utilisation, le ticket contient des informations supplémentaires telles que l&#39;url
+    de la page consultée, la personne connectée, la société… Il est possible d&#39;adapter le contenu du ticket à vos
+    besoins.
+&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://code-troopers.com/images/postJsTrac/ticket_trac.png&#34; data-lightbox=&#34;image-4&#34; title=&#34;ticket trac créé&#34;&gt;
+    &lt;img class=&#34;mini&#34; src=&#34;https://code-troopers.com/images/postJsTrac/ticket_trac.png&#34; alt=&#34;ticket trac créé&#34;/&gt;
+&lt;/a&gt;
+&lt;/p&gt;
+
+&lt;br/&gt;
+&lt;h3&gt;Bénéfices&lt;/h3&gt;
+&lt;p&gt;Suite à l&#39;utilisation quotidienne de &lt;b&gt;jsTrac&lt;/b&gt;, nous avons constaté :&lt;/p&gt;
+&lt;p&gt;
+    &lt;ul&gt;
+        &lt;li&gt;Gain de temps à la déclaration des tickets&lt;/li&gt;
+        &lt;ul&gt;
+            &lt;li&gt;Pas besoins de faire le screenshot&lt;/li&gt;
+            &lt;li&gt;Pas besoins d&#39;ouvrir &#34;paint&#34; pour y ajouter des informations&lt;/li&gt;
+            &lt;li&gt;Pas besoins de se connecter sur une autre page pour créer un ticket&lt;/li&gt;
+            &lt;li&gt;Réduit la perte du contexte lors de la recette&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;li&gt;Traitement des tickets améliorés&lt;/li&gt;
+        &lt;ul&gt;
+            &lt;li&gt;La présence systématique d&#39;un screenshot aide à la compréhension du bug&lt;/li&gt;
+            &lt;li&gt;Les informations supplémentaires aident à la résolution&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/ul&gt;
+&lt;/p&gt;
+
+&lt;br/&gt;
+&lt;h3&gt;Comment installer jsTrac ?&lt;/h3&gt;
+
+&lt;p&gt;
+    &lt;b&gt;jsTrac&lt;/b&gt; est disponible sur &lt;a href=&#34;https://github.com/srmvision/jsTrac&#34;&gt;GitHub&lt;/a&gt;.
+&lt;/p&gt;
+&lt;p&gt;
+    Pour la mise en place et la configuration les informations nécessaires se trouvent dans la description du projet.
+&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

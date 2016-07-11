@@ -1,0 +1,596 @@
+
+<!doctype html >
+<html class="no-js" lang="fr-fr" itemscope itemtype="http://schema.org/Organization">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title> Jenkins Workflow Plugin &middot;  Code-Troopers - Vous avez une idée, nous la réalisons</title>
+  <meta property="fb:app_id" content="432735746865877"/>
+
+  <meta property="og:title" content=" Jenkins Workflow Plugin &middot;  Code-Troopers - Vous avez une idée, nous la réalisons" />
+  <meta property="og:site_name" content="Code-Troopers - Vous avez une idée, nous la réalisons" />
+  <meta property="og:url" content="https://code-troopers.com/2016/01/20/jenkinsworkflow/" />
+  <meta property="og:image" content="https://code-troopers.com//images/banner/logo-banner.png"/>
+
+  
+  <meta property="og:type" content="article" />
+  <meta property="og:article:published_time" content="2016-01-20T00:00:00Z" />
+  <meta property="og:article:tag" content="Jenkins" />
+  <meta property="og:article:tag" content="Docker" />
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@codetroopers" />
+  <meta name="twitter:creator" content="@codetroopers" />
+  <meta name="twitter:title" content="Jenkins Workflow Plugin" />
+  <meta name="twitter:url" content="https://code-troopers.com/2016/01/20/jenkinsworkflow/" />
+
+  
+  <meta name="twitter:description" content="Un des points génants lors de l&#8217;utilisation de Jenkins est le coté volatile de la configuration des jobs de builds. Il est souvent nécessaire de jouer de click-click pour faire la configuration des jobs sur Jenkins et de se reposer sur un plugin permettant de versionner, autant que possible, les configurations utilisées. Mais, une fois que vous aurez lu cet article, vous vous rendrez compte que c&#8217;est le passé. Attention toutefois, cet article parle de Jenkins, de Docker et de Groovy, n&#8217;ayez pas peur, tout est presque trop simple&#8230;&#8203; Prérequis Jenkins Jenkins avec accès à Docker Nous avons l&#8217;habitude d&#8217;utiliser un Jenkins lancé dans un container depuis quelques temps." />
+  <meta name="twitter:image" content="https://code-troopers.com//images/banner/jenkins-banner.png" />
+  <meta name="description" content="Un des points génants lors de l&#8217;utilisation de Jenkins est le coté volatile de la configuration des jobs de builds. Il est souvent nécessaire de jouer de click-click pour faire la configuration des jobs sur Jenkins et de se reposer sur un plugin permettant de versionner, autant que possible, les configurations utilisées. Mais, une fois que vous aurez lu cet article, vous vous rendrez compte que c&#8217;est le passé. Attention toutefois, cet article parle de Jenkins, de Docker et de Groovy, n&#8217;ayez pas peur, tout est presque trop simple&#8230;&#8203; Prérequis Jenkins Jenkins avec accès à Docker Nous avons l&#8217;habitude d&#8217;utiliser un Jenkins lancé dans un container depuis quelques temps." />
+  <meta property="og:description" content="Un des points génants lors de l&#8217;utilisation de Jenkins est le coté volatile de la configuration des jobs de builds. Il est souvent nécessaire de jouer de click-click pour faire la configuration des jobs sur Jenkins et de se reposer sur un plugin permettant de versionner, autant que possible, les configurations utilisées. Mais, une fois que vous aurez lu cet article, vous vous rendrez compte que c&#8217;est le passé. Attention toutefois, cet article parle de Jenkins, de Docker et de Groovy, n&#8217;ayez pas peur, tout est presque trop simple&#8230;&#8203; Prérequis Jenkins Jenkins avec accès à Docker Nous avons l&#8217;habitude d&#8217;utiliser un Jenkins lancé dans un container depuis quelques temps."/>
+  
+
+  <meta name="p:domain_verify" content="fc173d84e3a4de948ed4bda2908afd3e"/>
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="MobileOptimized" content="320" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  
+  
+
+  
+  <link href="https://code-troopers.com/index.xml" rel="alternate" type="application/rss+xml" title="Code-Troopers - Vous avez une idée, nous la réalisons" />
+  
+
+  
+  <link rel="canonical" href="https://code-troopers.com/2016/01/20/jenkinsworkflow/" />
+
+  
+  <script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "headline": "Jenkins Workflow Plugin",
+    "author": {
+      "@type": "Person",
+      "name": "http://profiles.google.com/?rel=author"
+    },
+    "datePublished": "2016-01-20",
+    "description": "",
+    "wordCount":  1258 
+  }
+  </script>
+  
+
+  <link href="/css/style-fa8b45cbb9.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  
+  <meta itemprop="name" content="CT-CDGT"/>
+  <meta itemprop="name" content="CT-RMLC"/>
+  <meta itemprop="name" content="CT-BNCS"/>
+  <meta itemprop="name" content="CT-JRPT"/>
+  <meta itemprop="name" content="CT-MTBL"/>
+  <meta itemprop="name" content="CT-FLCH"/>
+  <meta itemprop="name" content="CT-VCMB"/>
+
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/styles/androidstudio.min.css">
+  <script src="https://yandex.st/highlightjs/8.0/highlight.min.js"></script>
+</head>
+<body>
+  
+        <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-NWLQD2"
+                height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-NWLQD2');</script>
+        
+        
+  <header data-spy="affix" class="affix-top">
+    <div class="container">
+        <div class="navbar-header" itemscope itemtype="http://schema.org/Organization">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span><i class="fa fa-bars fa-2x"></i></span>
+            </button>
+            <a itemprop="url" class="navbar-brand" href="/"><img itemprop="logo" class="logo" alt="Code-Troopers logo" title="Code-Troopers logo" src="/images/logo.png">
+                <span itemprop="name" class="brand">Code-Troopers</span>
+            </a>
+        </div>
+        <nav class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="active"><a data-scrollToLink="aboutUs">À propos</a></li>
+                <li><a data-scrollToLink="projects">Réalisations</a></li>
+                <li><a data-scrollToLink="skills">Compétences</a></li>
+                <li><a data-scrollToLink="team">L'équipe</a></li>
+                <li><a data-scrollToLink="contact">Contact</a></li>
+                <li><a href="/blog/">Blog</a></li>
+            </ul>
+        </nav>
+        
+    </div>
+</header>
+
+
+<section>
+<div class="header">
+  <h1 class="container">
+    <a href="/blog/index.html">Le <span>blog</span></a>
+  </h1>
+</div>
+</section>
+
+<section id="post">
+        <div class="container">
+        <article>
+            <div>
+		<div class="cover" style="background-image:url(/images/banner/jenkins-banner-big.png)">
+                    <div class="date">posté le 20/01/2016 par Cedric</div>
+                </div>
+                <h2><a href="https://code-troopers.com/2016/01/20/jenkinsworkflow/">Jenkins Workflow Plugin</a></h2>
+                <span class="label label-info">~6 minute(s) à lire</span>
+                
+                <ul class="tags">
+                
+                    <li><a style="color:white;border-color: white" href="https://code-troopers.com//tags/jenkins/">Jenkins</a></li>
+                
+                    <li><a style="color:white;border-color: white" href="https://code-troopers.com//tags/docker/">Docker</a></li>
+                
+                </ul>
+                
+                <div class="content">
+                    	<div class="paragraph">
+<p>Un des points génants lors de l&#8217;utilisation de Jenkins est le coté volatile de la configuration des jobs de builds.
+Il est souvent nécessaire de jouer de click-click pour faire la configuration des jobs sur Jenkins et de se reposer sur un plugin permettant de versionner,
+autant que possible, les configurations utilisées.</p>
+</div>
+<div class="paragraph">
+<p>Mais, une fois que vous aurez lu cet article, vous vous rendrez compte que c&#8217;est le passé.
+Attention toutefois, cet article parle de Jenkins, de Docker et de Groovy, n&#8217;ayez pas peur, tout est <em>presque</em> trop simple&#8230;&#8203;</p>
+</div>
+<div class="sect1">
+<h2 id="_prérequis_jenkins">Prérequis Jenkins</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_jenkins_avec_accès_à_docker">Jenkins avec accès à Docker</h3>
+<div class="paragraph">
+<p>Nous avons l&#8217;habitude d&#8217;utiliser un Jenkins lancé dans un container depuis quelques temps.</p>
+</div>
+<div class="paragraph">
+<p>Nous utilisons l&#8217;image maintenue par <a href="https://agileek.github.io/">Michael Bitard</a> <a href="https://hub.docker.com/r/agileek/docker-jenkins/"><code>agileek/docker-jenkins</code></a>.</p>
+</div>
+<div class="paragraph">
+<p>Nous lançons cette image en lui fournissant de quoi exécuter le binaire docker client sans soucis :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">docker run
+       -d --restart="always" --name jenkins
+       -u $(id -u):$(getent group docker | cut -d: -f3) <b class="conum">(1)</b>
+       -p 8080:8080
+       -v /var/jenkins_home:/var/jenkins_home <b class="conum">(2)</b>
+       -v $(which docker):/usr/bin/docker <b class="conum">(3)</b>
+       -v /var/run/docker.sock:/var/run/docker.sock <b class="conum">(4)</b>
+       -v /usr/lib/x86_64-linux-gnu/libapparmor.so.1:/lib/x86_64-linux-gnu/libapparmor.so.1 <b class="conum">(5)</b>
+       agileek/docker-jenkins <b class="conum">(6)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<ol>
+<li>
+<p>Le container est lancé avec l&#8217;utilisateur courant et le groupe <code>docker</code> pour pouvoir accéder au <code>docker.sock</code></p>
+</li>
+<li>
+<p>Pour éviter les incohérences de chemin, le chemin racine du jenkins est le même en dehors et dans le container</p>
+</li>
+<li>
+<p>Le binaire docker du système est fourni dans l&#8217;image</p>
+</li>
+<li>
+<p>Le socket docker est également fourni pour que le client puisse "parler" au démon</p>
+</li>
+<li>
+<p>La bibliotheque apparmor est nécessaire pour le bon fonctionnement de docker client</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_jenkins_workflow_plugin">Jenkins workflow plugin</h3>
+<div class="paragraph">
+<p>Pour utiliser la suite des éléments, vous aurez besoin des plugins gérant la notion de <em>workflow</em> dans Jenkins :</p>
+</div>
+<div class="paragraph">
+<p>Unresolved directive in &lt;stdin&gt; - include::app/_includes/lightbox.adoc[]</p>
+</div>
+<div class="paragraph">
+<p>Ensuite, il nous est possible de créer un job de construction de type <em>workflow</em> :</p>
+</div>
+<div class="paragraph">
+<p>Unresolved directive in &lt;stdin&gt; - include::app/_includes/lightbox.adoc[]</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_premier_job_em_workflow_em">Premier job <em>Workflow</em></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Ensuite, c&#8217;est là que la magie opère, plutôt que de devoir sélectionner les n-items voulus et remplir chaque étape du build, nous pouvons maintenant le décrire en utilisant du code !
+Ainsi, en copiant/collant le script suivant dans la partie idoine, vous devriez avoir un job bien configuré qui marche, du premier coup !</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-groovy" data-lang="groovy">def m2Repo = '-v /var/jenkins_home/.m2:/home/jenkins/.m2' //  <b class="conum">(1)</b>
+def timezone = '-e TZ=Europe/Paris' // <b class="conum">(2)</b>
+docker.image("codetroopers/jenkins-slave-jdk8-restx")
+    .inside("${m2Repo} ${timezone}"){ //  <b class="conum">(3)</b>
+    git branch: 'master', url: 'https://github.com/code-troopers/jenkins-workflow-demo-repo.git' // <b class="conum">(4)</b>
+    sh "MAVEN_OPTS=-Dfile.encoding=UTF-8 mvn clean install -B -Ppackage" // <b class="conum">(5)</b>
+    step([$class: 'ArtifactArchiver', artifacts: 'srv/target/dependency/webapp-runner.jar, srv/target/*.war, run.sh']) // <b class="conum">(6)</b>
+    step([$class: 'JUnitResultArchiver', testResults: '**/target/surefire-reports/TEST-*.xml']) // <b class="conum">(7)</b>
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<ol>
+<li>
+<p>Partage du dépôt Maven local (pour gagner en temps de build)</p>
+</li>
+<li>
+<p>Export de la timezone (pour les tests unitaires de l&#8217;exemple)</p>
+</li>
+<li>
+<p>Démarrage du conteneur de build avec la bonne timezone ainsi que le dépôt partagé</p>
+</li>
+<li>
+<p>Clonage des sources</p>
+</li>
+<li>
+<p>Lancement du build (en forçant l&#8217;UTF-8)</p>
+</li>
+<li>
+<p>Archivage des produits du build</p>
+</li>
+<li>
+<p>Archivage des résultats des tests</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Comme vous pouvez le voir, le script est relativement parlant et permet en plus de s&#8217;affranchir du clickodrome de configuration dans l&#8217;interface de Jenkins !</p>
+</div>
+<div class="paragraph">
+<p>Il est intéressant de noter que l&#8217;image Docker qui sert au build est une image personnalisée. Ce n&#8217;est pas parce qu&#8217;elle inclut un quelconque fonctionnement permettant de builder
+en utilisant le plugin Workflow. Elle sert de base uniquement car elle met à disposition la partie <code>npm</code> nécessaire au build de la partie <em>frontend</em> de l&#8217;application RestX.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_grouper_les_étapes">Grouper les étapes</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Le plugin workflow permet en plus de grouper les différentes étapes d&#8217;un build pour permettre, par exemple, de le lancer sur plusieurs environnement différents.
+Ici nous ajoutons simplement un nom de groupe pour notre étape de build.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-groovy" data-lang="groovy">stage 'build' // <b class="conum">(1)</b>
+    def m2Repo = '-v /var/jenkins_home/.m2:/home/jenkins/.m2'
+    def timezone = '-e TZ=Europe/Paris'
+    docker.image("codetroopers/jenkins-slave-jdk8-restx").inside("${m2Repo} ${timezone}"){
+        git branch: 'master', url: 'https://github.com/code-troopers/jenkins-workflow-demo-repo.git'
+        sh "MAVEN_OPTS=-Dfile.encoding=UTF-8 mvn clean install -B -Ppackage"
+        step([$class: 'ArtifactArchiver', artifacts: 'srv/target/dependency/webapp-runner.jar, srv/target/*.war, run.sh'])
+        step([$class: 'JUnitResultArchiver', testResults: '**/target/surefire-reports/TEST-*.xml'])
+    }</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<ol>
+<li>
+<p>Étape nommée pour l&#8217;exécution de la construction de l&#8217;application</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_mettre_de_côté_les_fichiers_pour_plus_tard">Mettre de côté les fichiers pour plus tard</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>La notion de <em>stash</em> bien connue des utilisateurs de git est également présente.
+Elle permet de mettre de côté des fichiers pour les réutiliser à une étape ultérieure du <em>workflow</em> de build.
+Ceci permet d&#8217;éviter l&#8217;archivage de produits du build pour des raisons "techniques".</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-groovy" data-lang="groovy">stage 'build'
+    def m2Repo = '-v /var/jenkins_home/.m2:/home/jenkins/.m2'
+    def timezone = '-e TZ=Europe/Paris'
+    docker.image("codetroopers/jenkins-slave-jdk8-restx").inside("${m2Repo} ${timezone}"){
+        git branch: 'master', url: 'https://github.com/code-troopers/jenkins-workflow-demo-repo.git'
+        sh "MAVEN_OPTS=-Dfile.encoding=UTF-8 mvn clean install -B -Ppackage"
+        step([$class: 'ArtifactArchiver', artifacts: 'srv/target/dependency/webapp-runner.jar, srv/target/*.war, run.sh'])
+        step([$class: 'JUnitResultArchiver', testResults: '**/target/surefire-reports/TEST-*.xml'])
+        stash includes: 'run.sh,srv/target/dependency/webapp-runner.jar,srv/target/*.war,Dockerfile', name: 'dockerBuild' // <b class="conum">(1)</b>
+    }</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<ol>
+<li>
+<p>Enregistrement d&#8217;une liste de fichiers associée à un nom pour une utilisation ultérieure</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_Étape_de_construction_d_une_image_docker">Étape de construction d&#8217;une image Docker</h2>
+<div class="sectionbody">
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-groovy" data-lang="groovy">stage 'docker' // <b class="conum">(1)</b>
+node{ // <b class="conum">(2)</b>
+  ws{ // <b class="conum">(3)</b>
+    unstash 'dockerBuild' // <b class="conum">(4)</b>
+    docker.build("codetroopers/jenkins-workflow-demo:${env.BUILD_ID}") // <b class="conum">(5)</b>
+  }
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<ol>
+<li>
+<p>Création d&#8217;une nouvelle étape</p>
+</li>
+<li>
+<p>Permet de distinguer un ensemble d&#8217;opération de build (peut accepter les labels pour restreindre sur des noeuds)</p>
+</li>
+<li>
+<p>Déclenche la création d&#8217;un nouveau <em>workspace</em></p>
+</li>
+<li>
+<p>Récupère les fichiers mis de côté sous le nom <code>dockerBuild</code></p>
+</li>
+<li>
+<p>Construction d&#8217;une image docker avec pour tag le numéro de build en cours (<code>$BUILD_ID</code>)</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_workflow_et_gestion_multibranche">Workflow et gestion multibranche</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Dans nos façons de fonctionner qui sont maintenant devenues habituelles, nous utilisons de façon intensives les branches pour isoler nos développements.
+Un des points fastidieux est de configurer un nouveau job Jenkins pour chaque branche afin de valider son bon fonctionnement et ne pas se rendre compte trop tard d&#8217;un build au rouge.</p>
+</div>
+<div class="paragraph">
+<p>Le plugin 'Workflow Multibranch' simplifie de façon drastique ce genre de cas, il suffit de rajouter un descripteur de build dans les sources.
+Le fichier correspondant est tout simplement appelé <code>Jenkinsfile</code>.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-groovy" data-lang="groovy">stage 'build'
+    def m2Repo = '-v /var/jenkins_home/.m2:/home/jenkins/.m2'
+    def timezone = '-e TZ=Europe/Paris'
+    docker.image("codetroopers/jenkins-slave-jdk8-restx").inside("${m2Repo} ${timezone}"){
+        checkout scm // <b class="conum">(1)</b>
+        sh "MAVEN_OPTS=-Dfile.encoding=UTF-8 mvn clean install -B -Ppackage"
+        step([$class: 'ArtifactArchiver', artifacts: 'srv/target/dependency/webapp-runner.jar, srv/target/*.war, run.sh'])
+        step([$class: 'JUnitResultArchiver', testResults: '**/target/surefire-reports/TEST-*.xml'])
+        stash includes: 'run.sh,srv/target/dependency/webapp-runner.jar,srv/target/*.war,Dockerfile', name: 'dockerBuild'
+    }
+
+stage 'docker'
+node{
+  ws{
+    unstash 'dockerBuild'
+    docker.build("codetroopers/jenkins-workflow-demo:${env.BUILD_ID}")
+  }
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<ol>
+<li>
+<p>Il faut bien entendu remplacer l&#8217;endroit où nous faisions le git clone pour qu&#8217;il soit dynamique par rapport à ce qu&#8217;on
+construit. Le terme <code>checkout scm</code> permet de s&#8217;assurer de ce fonctionnement.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>L&#8217;intérêt est que chaque branche qui sera buildée n&#8217;aura pas son historique mélangé avec une autre (là où les jobs de validation de Pull Request ont tendance à tout mélanger).
+De plus, un changement dans le process de build sera directement versionné.
+Il n&#8217;y aura donc pas besoin de penser à éditer le job lors du merge sur <code>master</code> (on a tous vécu ce genre de situation énervante) !</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_attendre_une_confirmation_utilisateur">Attendre une confirmation utilisateur</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Un des points intéressant de ce plugin est qu&#8217;il permet la mise en pause des constructions.
+Ainsi, il est possible de mettre en pause une construction correspondant à une livraison et de lui faire attendre une validation manuelle par exemple.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-groovy" data-lang="groovy">stage 'build'
+    def m2Repo = '-v /var/jenkins_home/.m2:/home/jenkins/.m2'
+    def timezone = '-e TZ=Europe/Paris'
+    docker.image("codetroopers/jenkins-slave-jdk8-restx").inside("${m2Repo} ${timezone}"){
+        git branch: 'master', url: 'https://github.com/code-troopers/jenkins-workflow-demo-repo.git'
+        sh "MAVEN_OPTS=-Dfile.encoding=UTF-8 mvn clean install -B -Ppackage"
+        step([$class: 'ArtifactArchiver', artifacts: 'srv/target/dependency/webapp-runner.jar, srv/target/*.war, run.sh'])
+        step([$class: 'JUnitResultArchiver', testResults: '**/target/surefire-reports/TEST-*.xml'])
+        stash includes: 'run.sh,srv/target/dependency/webapp-runner.jar,srv/target/*.war,Dockerfile', name: 'dockerBuild'
+    }
+
+stage 'docker'
+node{
+    ws{
+        unstash 'dockerBuild'
+        def built = docker.build("codetroopers/jenkins-workflow-demo:${env.BUILD_ID}")
+        input 'Is everything ok ? Run app ?' // <b class="conum">(1)</b>
+        echo "We can run the docker-compose up here"
+        def outcome = input message: 'We can even have parameters to answer this question', parameters: [ // <b class="conum">(2)</b>
+            [name: 'myChoice', description: 'My choice', choices: 'Choice 1\nChoice 2\nChoice 3', $class: 'ChoiceParameterDefinition']
+        ]
+        echo "You have chosen ${outcome}" // <b class="conum">(3)</b>
+    }
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<ol>
+<li>
+<p><code>input</code> met en pause la construction et permet de continuer ou interrompre celle-ci</p>
+</li>
+<li>
+<p>Il est également possible de permettre à l&#8217;utilisateur de faire un choix</p>
+</li>
+<li>
+<p>Ici la valeur sélectionnée par l&#8217;utilisateur est écrite dans la sortie du build.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><em>J&#8217;espère que cet article vous donnera l&#8217;envie d&#8217;essayer de rationnaliser un peu plus la configuration de vos job Jenkins en les stockant dans votre SCM</em></p>
+</div>
+</div>
+</div>
+
+                </div>
+<div class="share">
+L'article vous a plu ? Partagez-le :
+    <ul class="socials">
+        <li>
+            <a target="_blank" title="Twitter" href="https://twitter.com/share?url=http://code-troopers.comhttps%3a%2f%2fcode-troopers.com%2f2016%2f01%2f20%2fjenkinsworkflow%2f&text=Jenkins%20Workflow%20Plugin&via=codetroopers"
+                rel="nofollow"
+                onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=400,width=700');return false;">
+                <i class="fa fa-twitter-square"></i>
+            </a>
+        </li>
+        <li>
+            <a target="_blank" title="Facebook" href="https://www.facebook.com/sharer.php?u=http://code-troopers.comhttps%3a%2f%2fcode-troopers.com%2f2016%2f01%2f20%2fjenkinsworkflow%2f&t=Jenkins%20Workflow%20Plugin"
+                class="facebook-button" rel="nofollow"
+                onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=500,width=700');return false;">
+                <i class="fa fa-facebook-square"></i>
+            </a>
+        </li>
+        <li>
+            <a target="_blank" title="Google +" href="https://plus.google.com/share?url=http://code-troopers.comhttps%3a%2f%2fcode-troopers.com%2f2016%2f01%2f20%2fjenkinsworkflow%2f&hl=fr"
+                class="google-button" rel="nofollow"
+                onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=650');return false;">
+                <i class="fa fa-google-plus-square"></i>
+            </a>
+        </li>
+        <li>
+            <a target="_blank" title="Linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=http://code-troopers.comhttps%3a%2f%2fcode-troopers.com%2f2016%2f01%2f20%2fjenkinsworkflow%2f&title=Jenkins%20Workflow%20Plugin"
+                class="linkedin-button" rel="nofollow"
+                onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=650');return false;">
+                <i class="fa fa-linkedin-square"></i>
+            </a>
+        </li>
+        <li>
+            <a target="_blank" title="Envoyer par mail" href="mailto:?subject=Jenkins%20Workflow%20Plugin&body=http://code-troopers.comhttps%3a%2f%2fcode-troopers.com%2f2016%2f01%2f20%2fjenkinsworkflow%2f" rel="nofollow">
+                <i class="fa fa-envelope"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+<div style="clear:both"></div>
+
+
+
+                <div class="back">
+                    <a href="/"><i class="fa fa-arrow-circle-o-up"></i> Retour aux articles</a>
+                    <div class="pull-right paginate">
+                        
+                        <a href="https://code-troopers.com/2016/01/14/startupweekend-coteperdant/"><i class="fa fa-arrow-circle-o-left"></i> Précédent</a>
+                        
+                        
+                        <a href="https://code-troopers.com/2016/03/30/android_google_tag_manager_feature_toggle/"><i class="fa fa-arrow-circle-o-right"></i> Suivant</a>
+                        
+                    </div>
+                </div>
+
+                <section id="menu">
+                    <ul>
+                        
+                    </ul>
+                </section>
+
+                <div id="disqus_thread"></div>
+                <script type="text/javascript">
+                     
+                    var disqus_shortname = 'codetroopers'; 
+		    var disqus_url = window.location.href;
+		    if (window.location.protocol != "http:"){
+			disqus_url = "http:" + window.location.href.substring(window.location.protocol.length);
+		    }
+
+                     
+                    (function() {
+                        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                    })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+            </div>
+        </article>
+        </div>
+    </section>
+<footer id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6" itemscope itemtype="http://schema.org/Organization">
+                <h3>Contact</h3>
+
+                <p>Vous avez besoin de nous pour un projet, contactez-nous sur les réseaux sociaux, par mail à <a
+                    href="mailto:contact@code-troopers.com"><meta itemprop="email" content="contact@code-troopers.com">contact@code-
+                    troopers.com</a></p>
+            </div>
+            <div class="col-md-6 simple-social-icons">
+                <h3>Réseaux sociaux</h3>
+                <ul class="socials">
+                    <li><a target="_blank" href="https://twitter.com/codetroopers"><i
+                            class="fa fa-twitter-square"></i></a></li>
+                    <li><a target="_blank"
+                           href="https://www.facebook.com/pages/Code-Troopers/123604307824664"><i
+                            class="fa fa-facebook-square"></i></a></li>
+                    <li><a target="_blank" href="https://plus.google.com/+Code-troopers" rel="publisher"><i
+                            class="fa fa-google-plus-square"></i></a></li>
+                    <li><a target="_blank" href="https://github.com/code-troopers"><i
+                            class="fa fa-github-square"></i></a></li>
+                    <li><a target="_blank" href="/feed.xml"><i
+                            class="fa fa-rss-square"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="footer-under">
+                Made with <i class="fa fa-heart"></i> in Tours -
+              © 2016 Code-Troopers - Tous droits réservés
+            </div>
+						<div class="legals footer-under">
+							  Mentions légales : <br>
+							  Code-Troopers est une  marque déposée à l'INPI (numéro 4145181).<br>
+								CT-CDGT SARL au capital de 1000€, 73 rue Ledru Rollin, 37000 Tours, 808 881 064 RCS Tours. <br>
+								Site hébergé par GitHub Inc.
+						</div>
+        </div>
+    </div>
+</footer>
+<script src="/js/scripts-aa72765cff.js"></script>
+</body>
+

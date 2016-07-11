@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Git Svn on Code-Troopers - Vous avez une idée, nous la réalisons</title>
+    <link>https://code-troopers.com/tags/git-svn/</link>
+    <description>Recent content in Git Svn on Code-Troopers - Vous avez une idée, nous la réalisons</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>fr-fr</language>
+    <lastBuildDate>Thu, 16 Jul 2015 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://code-troopers.com/tags/git-svn/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>GIT-SVN comment survivre dans un environnement hostile</title>
+      <link>https://code-troopers.com/2015/07/16/gitsvn/</link>
+      <pubDate>Thu, 16 Jul 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://code-troopers.com/2015/07/16/gitsvn/</guid>
+      <description>
+
+&lt;p&gt;Git c’est cool, Git c’est Hype, Git c’est tout récent (&lt;a href=&#34;http://git-scm.com/book/fr/v1/D%C3%A9marrage-rapide-Une-rapide-histoire-de-Git&#34;&gt;enfin presque&lt;/a&gt;) et c’est pour ça qu’on aime bien.
+Mais pour beaucoup Git c’est nouveau, donc c’est le changement, donc c’est compliqué, et c’est pour ça que plein de boîtes préfèrent garder leur serveur svn.&lt;/p&gt;
+
+&lt;p&gt;Je vais tenter ici, de vous donner les principales commandes de &lt;code&gt;Git-SVN&lt;/code&gt;. Ainsi si vous vous trouvez dans une boîte qui ne veut pas changer son scm mais que vous, vous avez envie de changement,
+vous pourrez donc utiliser la puissance de Git.
+Et ce sans aucun impact sur le gestionnaire de sources de la société dans laquelle vous êtes. C&amp;rsquo;est génial non ?&lt;/p&gt;
+
+&lt;h2 id=&#34;prérequis:670b5efaab07fcd0dc591466ac7460f0&#34;&gt;Prérequis&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Avoir Git-SVN d&amp;rsquo;installé ! Et ce qui est bien fait, c&amp;rsquo;est que Git-SVN fait partie intégrante de Git. C&amp;rsquo;est donc Git que vous allez installer : &lt;a href=&#34;http://www.git-scm.com&#34;&gt;www.git-scm.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Un accès au svn (l&amp;rsquo;url du projet qui vous intéresse fera largement l&amp;rsquo;affaire)&lt;/li&gt;
+&lt;li&gt;Un terminal&lt;/li&gt;
+&lt;li&gt;Un tout petit peu de courage&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;init-du-projet:670b5efaab07fcd0dc591466ac7460f0&#34;&gt;Init du Projet&lt;/h2&gt;
+
+&lt;p&gt;Le cas le plus courant est celui où tout le monde travaille sur le trunk du projet, et je vais partir de ce cas pour ce guide.
+Si ce n&amp;rsquo;est pas le cas, il n&amp;rsquo;y a pas de gros changement, mais je vous invite à consulter plus en détail &lt;a href=&#34;https://git-scm.com/docs/git-svn&#34;&gt;la doc&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Donc si on se met dans la situation où tout le monde travaille sur le trunk, pour récupérer les sources du projet dans un nouveau répertoire vous devrez faire un :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git svn clone http://maboite/svn/monBeauProjet/ -s
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Par contre dès que le repo svn est un peu vieux (i.e. avec plein de commits) ça va mettre 3h ! En effet, Git va prendre les révisions une par une afin de créer son historique local.
+Si vous n’avez pas besoin de tout l’historique des révisions ce que vous pouvez faire c’est :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git svn clone http://maboite/svn/monBeauProjet/ -s -r4000:HEAD
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;ainsi il ne crééra l’histo qu’à partir de la révision 4000 du svn. Je vous conseille donc de prendre le 4000 le plus proche de la dernière révision.&lt;/p&gt;
+
+&lt;p&gt;À partir de là c’est bon, vous avez votre projet qui est géré par Git. La preuve vous pouvez tester via ces différentes commandes&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git status
+git branch -a
+git log -n5
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;travailler-sur-le-projet-en-local:670b5efaab07fcd0dc591466ac7460f0&#34;&gt;Travailler sur le projet (en local)&lt;/h2&gt;
+
+&lt;p&gt;Vous pouvez donc dès à présent commencer à travailler offline ou bien sans vous soucier des commits de vos collègues.
+Et cela avec tous les avantages que Git apporte.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git commit -m&amp;quot;Ajout de la modification du mot de passe par l&#39;admin&amp;quot;
+git stash save “Début de ma tâche prioritaire”
+... // un peu de travail urgent
+git stash pop
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;On peut même faire des branches Git (en local) sans que cela n&amp;rsquo;impacte le serveur.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git checkout -b myLocalBranch
+... // du travail avec plein de petits commits
+git checkout master
+git merge myLocalBranch
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;commiter-sur-le-svn:670b5efaab07fcd0dc591466ac7460f0&#34;&gt;Commiter sur le svn&lt;/h2&gt;
+
+&lt;p&gt;Ensuite pour se synchroniser avec vos collègues (c&amp;rsquo;est mieux) les deux commandes indispensables sont&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git svn rebase
+git svn dcommit
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Le &lt;code&gt;git svn rebase&lt;/code&gt; va faire l&amp;rsquo;équivalent d&amp;rsquo;un svn update quant au &lt;code&gt;git svn dcommit&lt;/code&gt; ça sera un svn commit.&lt;/p&gt;
+
+&lt;h2 id=&#34;bonus-utiliser-des-branches:670b5efaab07fcd0dc591466ac7460f0&#34;&gt;Bonus : Utiliser des branches&lt;/h2&gt;
+
+&lt;p&gt;Bon soyons honnêtes si vous utilisez un svn il y a quand même peu de chances que les branches soient vraiment utilisées (ou alors peut-être que vous aimez la douleur). Mais si ça arrive, voilà comment les utiliser.&lt;/p&gt;
+
+&lt;p&gt;Mettre à jour toutes les branches du svn :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git svn fetch
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Changer de branche :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git checkout -b &amp;lt;brancheDistante&amp;gt; &amp;lt;nomDeBrancheLocale&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Et maintenant vous pouvez naviguer entre vos branches normalement via Git  :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git checkout master
+git checkout nomDeBrancheLocale
+git checkout -
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;et par exemple pour recopier un commit d&amp;rsquo;une branche à une autre sans copier manuellement le fichier.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git cherry-pick
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Voilà vous avez maintenant les bases pour utiliser Git alors que de premier abord cela ne semblait pas possible.
+Il ne vous reste plus qu&amp;rsquo;à forcer un peu plus pour remplacer l&amp;rsquo;ancien serveur svn par un nouveau sous Git et comme ça toute votre boîte pourra en profiter.
+&lt;br/&gt;
+&lt;br/&gt;
+Pour connaître les principales commandes Git, je vous invite à consulter &lt;a href=&#34;http://git-scm.com/docs/gittutorial&#34;&gt;la page tutoriel de Git&lt;/a&gt; ou alors de chercher sur &lt;a href=&#34;http://lmgtfy.com/?q=git+commands&#34;&gt;internet&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

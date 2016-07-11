@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Material Design on Code-Troopers - Vous avez une idée, nous la réalisons</title>
+    <link>https://code-troopers.com/tags/material-design/</link>
+    <description>Recent content in Material Design on Code-Troopers - Vous avez une idée, nous la réalisons</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>fr-fr</language>
+    <lastBuildDate>Wed, 26 Nov 2014 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://code-troopers.com/tags/material-design/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Squelette Android 5.0</title>
+      <link>https://code-troopers.com/2014/11/26/squeletteandroid5/</link>
+      <pubDate>Wed, 26 Nov 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://code-troopers.com/2014/11/26/squeletteandroid5/</guid>
+      <description>
+
+&lt;h2 id=&#34;pourquoi:d73e07438734fa8a3e6c6162f44beb59&#34;&gt;Pourquoi ?&lt;/h2&gt;
+
+&lt;p&gt;Chez Code-Troopers, nous avons pas mal de projets &lt;strong&gt;Android&lt;/strong&gt;. Au début du projet, on fait toujours la même chose :&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;on lance &lt;strong&gt;Android Studio&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;on créé un nouveau projet&lt;/li&gt;
+&lt;li&gt;on choisit parmi les templates qu&amp;rsquo;il nous propose&lt;/li&gt;
+&lt;li&gt;on ajoute nos librairies favorites&lt;/li&gt;
+&lt;li&gt;on modifie le thème&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Toutes ces étapes sont répétitives. De plus, avec l&amp;rsquo;arrivée du &lt;strong&gt;Material Design&lt;/strong&gt; et
+les nouvelles libraires de compatibilités, les templates que propose &lt;strong&gt;Android Studio&lt;/strong&gt; ne sont plus d&amp;rsquo;actualité. Par exemple si l&amp;rsquo;on choisit un template avec le &lt;strong&gt;NavigationDrawer&lt;/strong&gt;, il faut presque tout changer pour que celui-ci colle au nouveau standard &lt;strong&gt;Material Design&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;le-squelette:d73e07438734fa8a3e6c6162f44beb59&#34;&gt;Le squelette&lt;/h2&gt;
+
+&lt;p&gt;Afin de faciliter la vie des troopers, j&amp;rsquo;ai décidé de créer un squelette d&amp;rsquo;application &lt;strong&gt;Android&lt;/strong&gt; contenant nos librairies favorites et le minimum visuel.&lt;/p&gt;
+
+&lt;div style=&#34;text-align:center;margin:50px&#34;&gt;
+&lt;a href=&#34;https://code-troopers.com/images/postAndroid5/screen1.png&#34; data-lightbox=&#34;group-1&#34; title=&#34;Page d&#39;accueil du squelette&#34; class=&#34;inlineBoxes&#34;&gt;
+&lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/postAndroid5/screen1.png&#34; alt=&#34;Page d&#39;accueil du squelette&#34;/&gt;
+&lt;/a&gt;
+&lt;a href=&#34;https://code-troopers.com/images/postAndroid5/screen2.png&#34; data-lightbox=&#34;group-1&#34; title=&#34;Navigation drawer&#34; class=&#34;inlineBoxes&#34;&gt;
+&lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/postAndroid5/screen2.png&#34; alt=&#34;Navigation drawer&#34;/&gt;
+&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&#34;bye-bye-actionbar-hello-toolbar:d73e07438734fa8a3e6c6162f44beb59&#34;&gt;Bye bye ActionBar, Hello Toolbar&lt;/h3&gt;
+
+&lt;p&gt;Depuis l&amp;rsquo;arrivée de &lt;strong&gt;Lollipop&lt;/strong&gt;, un nouvel élément a fait son entrée dans le SDK, la &lt;strong&gt;Toolbar&lt;/strong&gt;. Celle-ci possède quasiment les mêmes fonctionnalités que l&amp;rsquo;ActionBar. Le principal avantage, c&amp;rsquo;est qu&amp;rsquo;elle n&amp;rsquo;est pas liée magiquement au layout, c&amp;rsquo;est à nous de l&amp;rsquo;inclure.&lt;/p&gt;
+
+&lt;h3 id=&#34;navigationdrawer:d73e07438734fa8a3e6c6162f44beb59&#34;&gt;NavigationDrawer&lt;/h3&gt;
+
+&lt;p&gt;Si l&amp;rsquo;on se réfère aux &lt;a href=&#34;http://www.google.com/design/spec/patterns/navigation-drawer.html&#34;&gt;specifications du &lt;strong&gt;Material Design&lt;/strong&gt;&lt;/a&gt;, le menu doit prendre toute la hauteur de l&amp;rsquo;écran et se placer sous la barre de statut. Ceci n&amp;rsquo;est pas encore bien implémenté par tout le monde. De plus, l&amp;rsquo;implémentation n&amp;rsquo;est pas si simple. J&amp;rsquo;ai donc décidé de l&amp;rsquo;inclure dans ce squelette en ajoutant par là même, l&amp;rsquo;intéraction avec la &lt;strong&gt;Toolbar&lt;/strong&gt; (pour pouvoir avoir l&amp;rsquo;icône hamburger sans avoir à ajouter de ressources). Je tiens au passage à remercier l&amp;rsquo;auteur de ce &lt;a href=&#34;http://stackoverflow.com/questions/26745300/navigation-drawer-semi-transparent-over-status-bar-not-working&#34;&gt;post&lt;/a&gt; qui m&amp;rsquo;a grandement aidé.&lt;/p&gt;
+
+&lt;h3 id=&#34;librairies:d73e07438734fa8a3e6c6162f44beb59&#34;&gt;Librairies&lt;/h3&gt;
+
+&lt;p&gt;Pour l&amp;rsquo;instant, j&amp;rsquo;ai ajouté seulement trois librairies :&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://jakewharton.github.io/butterknife/&#34;&gt;&lt;strong&gt;ButterKnife&lt;/strong&gt;&lt;/a&gt; pour l&amp;rsquo;injection de view&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://square.github.io/dagger/&#34;&gt;&lt;strong&gt;Dagger&lt;/strong&gt;&lt;/a&gt; pour l&amp;rsquo;injection du reste&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://square.github.io/picasso/&#34;&gt;&lt;strong&gt;Picasso&lt;/strong&gt;&lt;/a&gt; pour le chargement et la gestion des images&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;le-thème:d73e07438734fa8a3e6c6162f44beb59&#34;&gt;Le thème&lt;/h3&gt;
+
+&lt;p&gt;Je me suis basé sur le thème par défaut de &lt;strong&gt;AppCompat&lt;/strong&gt;, je l&amp;rsquo;ai ensuite modifié pour changer les couleurs des barres de statut et d&amp;rsquo;action lorsque le téléphone est sous &lt;strong&gt;Lollipop&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;projet:d73e07438734fa8a3e6c6162f44beb59&#34;&gt;Projet&lt;/h2&gt;
+
+&lt;p&gt;Voilà, vous pouvez trouver ce projet sur notre &lt;a href=&#34;https://github.com/code-troopers/material-android-bootstrap&#34;&gt;github&lt;/a&gt;. Il va sûrement évoluer avec le temps pour ajouter d&amp;rsquo;autres choses afin d&amp;rsquo;avoir des exemples d&amp;rsquo;implémentations. Vos commentaires, issues sont les bienvenues, je me ferai un plaisir d&amp;rsquo;y répondre et si vous avez d&amp;rsquo;autres idées, vous pouvez toujours forker.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

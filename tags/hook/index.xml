@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hook on Code-Troopers - Vous avez une idée, nous la réalisons</title>
+    <link>https://code-troopers.com/tags/hook/</link>
+    <description>Recent content in Hook on Code-Troopers - Vous avez une idée, nous la réalisons</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>fr-fr</language>
+    <lastBuildDate>Fri, 22 May 2015 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://code-troopers.com/tags/hook/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>git : quelques astuces de configuration pour vos dotfiles</title>
+      <link>https://code-troopers.com/2015/05/22/dotfiles-git/</link>
+      <pubDate>Fri, 22 May 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://code-troopers.com/2015/05/22/dotfiles-git/</guid>
+      <description>
+
+&lt;p&gt;Cet article est le deuxième de la série des &lt;em&gt;dotfiles&lt;/em&gt;. Voir l&amp;rsquo;article sur &lt;a href=&#34;code-troopers.com/2015/05/15/Dotfiles-vim.html&#34;&gt;vimrc&lt;/a&gt;. Nous allons ici aborder quelques configurations indispensables de git.&lt;/p&gt;
+
+&lt;h1 id=&#34;la-base:83bbafdbb7f3dd4e141ab0d9b554e336&#34;&gt;La base&lt;/h1&gt;
+
+&lt;p&gt;Si vous utilisez git, vous avez forcément fait des commandes de base pour rentrer votre nom et votre email (indispensable pour pusher vos commits)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ git config --global user.name &amp;quot;Jango Fett&amp;quot;
+$ git config --global user.email &amp;quot;jango.fett@code-troopers.com&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Ceci a pour but d&amp;rsquo;écrire dans votre fichier ~/.gitconfig ces simples lignes :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[user]
+    name = Jango Fett
+    email = jango.fett@code-troopers.com
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;un-peu-de-couleurs:83bbafdbb7f3dd4e141ab0d9b554e336&#34;&gt;Un peu de couleurs&lt;/h1&gt;
+
+&lt;p&gt;C&amp;rsquo;est toujours important d&amp;rsquo;avoir de la couleur, ça donne bonne mine, ça rend joyeux mais surtout ça aide à la lisibilité. Dans les dernières version de git, la couleur est activée automatiquement, mais vous pouvez toujours la modifier ! Voici un exemple de configuration :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[color &amp;quot;branch&amp;quot;]
+    current = yellow reverse
+    local = yellow
+    remote = green
+[color &amp;quot;diff&amp;quot;]
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
+[color &amp;quot;status&amp;quot;]
+    added = yellow
+    changed = green
+    untracked = cyan
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;div style=&#34;text-align:center;margin-bottom:50px&#34;&gt;
+    &lt;a href=&#34;https://code-troopers.com/images/postDotfilesGit/gitcolours.png&#34; data-lightbox=&#34;group-1&#34; title=&#34;git avec couleurs personnalisées&#34; class=&#34;inlineBoxes&#34;&gt;
+        &lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/postDotfilesGit/gitcolours.png&#34; alt=&#34;git avec couleurs personnalisées&#34;/&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;h1 id=&#34;gitignore-global:83bbafdbb7f3dd4e141ab0d9b554e336&#34;&gt;gitignore global&lt;/h1&gt;
+
+&lt;p&gt;Parfois vous arrivez dans un environnement où personne n&amp;rsquo;utilise IntelliJ, peut-être même que vous voulez cacher le fait que vous utilisez IDEA. Dans ce cas, pas besoin de commiter un .gitignore qui contient &lt;code&gt;.idea&lt;/code&gt; et &lt;code&gt;*.iml&lt;/code&gt; mettez le plutôt dans &lt;code&gt;~/.gitignore&lt;/code&gt;. Pour que ça marche, vous devrez rajouter dans votre &lt;code&gt;~/.gitconfig&lt;/code&gt; :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[core]
+    excludesfile = ~/.gitignore
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;j-3-vim:83bbafdbb7f3dd4e141ab0d9b554e336&#34;&gt;J&amp;rsquo;&amp;lt;3 vim&lt;/h1&gt;
+
+&lt;p&gt;J&amp;rsquo;aime vim, alors je le met partout. Besoin d&amp;rsquo;un éditeur de texte pour les commits ? vim !&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[core]
+    editor = vim
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Besoin d&amp;rsquo;un outil pour faire des diff ? vim !&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[merge]
+    tool = vimdiff
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;montre-nous-tes-fichiers:83bbafdbb7f3dd4e141ab0d9b554e336&#34;&gt;Montre-nous tes fichiers&lt;/h1&gt;
+
+&lt;p&gt;Vous avez créé un nouveau répertoire, ajouté plein de fichiers dedans, et vous revenez en console pour voir ce qu&amp;rsquo;il y a à commiter. Soit un cas d&amp;rsquo;utilisation quotidien ou presque. Sauf que quand vous faîtes &lt;code&gt;git status&lt;/code&gt; seul le répertoire apparaît et pas les fichiers à l&amp;rsquo;intérieur ! Pour y remédier :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[status]
+    showUntrackedFiles = all
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;div style=&#34;text-align:center;margin-bottom:50px&#34;&gt;
+    &lt;a href=&#34;https://code-troopers.com/images/postDotfilesGit/git-status.png&#34; data-lightbox=&#34;group-1&#34; title=&#34;git status coloré&#34; class=&#34;inlineBoxes&#34;&gt;
+        &lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/postDotfilesGit/git-status.png&#34; alt=&#34;git status coloré&#34;/&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;h1 id=&#34;alias:83bbafdbb7f3dd4e141ab0d9b554e336&#34;&gt;Alias&lt;/h1&gt;
+
+&lt;p&gt;Comme pour les shell, on peut créer des alias de commande. Par exemple :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[alias]
+    cp = cherry-pick
+    co = checkout
+    cl = clone
+    ci = commit
+    br = branch
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;C&amp;rsquo;est plus rapide à taper… un peu, et encore faut s&amp;rsquo;en souvenir que cp ça fait cherry-pick. Mais certaines commandes sont longues et là ça devient encore plus pertinent :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    last = log -1 --stat
+    st = status -sb
+    unstage = reset HEAD --
+    dc = diff --cached
+    pr = pull --rebase
+    lg = log --graph --pretty=format:&#39;%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %Cblue&amp;lt;%an&amp;gt;%Creset&#39; --abbrev-commit --date=relative --all
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Je vous laisse essayer celles qui ne sont pas explicite ;)&lt;/p&gt;
+
+&lt;h1 id=&#34;les-hooks:83bbafdbb7f3dd4e141ab0d9b554e336&#34;&gt;Les Hooks&lt;/h1&gt;
+
+&lt;p&gt;Il y a beaucoup d&amp;rsquo;options et de choses à faire mais je terminerai cet article avec les hooks, qui mériteraient peut-être à eux seuls un article. Un hook −qui se traduit par « crochet »− va intercepter une commande afin de réaliser une action. Par exemple, quand je lance la commande commit, je veux vérifier que tous les tests passent, ou quand je push, je veux mettre à jour automatiquement le ticket jira associé, on peut vraiment tout faire vu qu&amp;rsquo;il s&amp;rsquo;agit juste de scripts à rajouter.&lt;/p&gt;
+
+&lt;p&gt;On a d&amp;rsquo;abord besoin de définir le répertoire qui va contenir les hooks. Vous pouvez ajouter dans votre &lt;code&gt;~/.gitconfig&lt;/code&gt; :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[init]
+    templatedir = ~/.git_template
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Par exemple si vous voulez rajouter un script qui interdit de commiter &lt;code&gt;System.out.println&lt;/code&gt;, vous pouvez créer ce fichier : &lt;code&gt;~/.git_template/hooks/pre-commit&lt;/code&gt;
+J&amp;rsquo;ai récupéré le mien sur &lt;a href=&#34;https://github.com/borisguery/git-keywords-checker&#34;&gt;https://github.com/borisguery/git-keywords-checker&lt;/a&gt; sur lequel j&amp;rsquo;ai juste modifié les deux variables KEYWORDS_REGEX et EXTENSIONS_REGEX. Ce qui donne grosso modo dans le fichier :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;5 # Add or remove keywords here
+6 KEYWORDS_REGEX=&amp;quot;printStackTrace\(|FIXME|TODO&amp;quot;
+7 # Add extensions to check here
+8 EXTENSIONS_REGEX=&amp;quot;(.java$|.js$)&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;On interdit de commiter &lt;code&gt;printStackTrace(&lt;/code&gt; ou &lt;code&gt;FIXME&lt;/code&gt; ou &lt;code&gt;TODO&lt;/code&gt; dans les fichiers &lt;code&gt;java&lt;/code&gt; ou &lt;code&gt;js&lt;/code&gt;.&lt;/p&gt;
+
+&lt;div style=&#34;text-align:center;margin-bottom:50px&#34;&gt;
+    &lt;a href=&#34;https://code-troopers.com/images/postDotfilesGit/git-hooks.png&#34; data-lightbox=&#34;group-1&#34; title=&#34;git hooks pre-commit en action&#34; class=&#34;inlineBoxes&#34;&gt;
+        &lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/postDotfilesGit/git-hooks.png&#34; alt=&#34;git hooks pre-commit en action&#34;/&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Oui ça paraît un peu violent d&amp;rsquo;interdire le commit de TODO et FIXME mais on peut passer outre en commitant avec l&amp;rsquo;option &lt;code&gt;--no-verify&lt;/code&gt; et au moins on est au courant donc on n&amp;rsquo;oublie pas les actions nécessaires selon les équipes de travail (ajout d&amp;rsquo;un post-it, d&amp;rsquo;une carte trello etc.)&lt;/p&gt;
+
+&lt;p&gt;2 petits détails pour que ça marche :&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Il faut que le script soit exécutable, donc vous pouvez faire &lt;code&gt;chmod +x ~/.git_template/hooks/pre-commit&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Ce sera actif uniquement sur les nouveaux dépôts, pour activer le hook sur les dépôts existants, vous devez faire un &lt;code&gt;git init&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Si vous voulez d&amp;rsquo;autres exemples de hooks, vous pouvez commencer par jeter un œil aux hooks de &lt;a href=&#34;https://github.com/petervanderdoes/git-flow-hooks&#34;&gt;git-flow&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Guide on Code-Troopers - Vous avez une idée, nous la réalisons</title>
+    <link>https://code-troopers.com/tags/guide/</link>
+    <description>Recent content in Guide on Code-Troopers - Vous avez une idée, nous la réalisons</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>fr-fr</language>
+    <lastBuildDate>Thu, 25 Jun 2015 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://code-troopers.com/tags/guide/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Installer votre dépot privé Docker</title>
+      <link>https://code-troopers.com/2015/06/25/installdockerregistry/</link>
+      <pubDate>Thu, 25 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://code-troopers.com/2015/06/25/installdockerregistry/</guid>
+      <description>
+
+&lt;p&gt;Petit à petit chez Code-Troopers, nous migrons tous nos développements pour utiliser Docker.
+Cela fait quelque temps que nous l&amp;rsquo;utilisons pour des projets &amp;ldquo;public&amp;rdquo;, auquel cas le registry public Docker est largement suffisant (et immédiat à utiliser).&lt;/p&gt;
+
+&lt;p&gt;En revanche, nous commençons à migrer nos applications de production également vers Docker, et nous ne pouvons pas utiliser le mode public du registry public.
+Nous nous sommes donc mis à déployer un dépôt privé, authentifié par utilisateur / mot de passe.&lt;/p&gt;
+
+&lt;p&gt;La procédure n&amp;rsquo;est pas très complexe, mais cette opération reste une bonne opportunité d&amp;rsquo;écrire un article à ce sujet (les articles en français n&amp;rsquo;étant pas légion).&lt;/p&gt;
+
+&lt;h2 id=&#34;step-by-step:5ccf6384c70e5ed97658dbf0e91e8805&#34;&gt;Step by step&lt;/h2&gt;
+
+&lt;p&gt;Il faut créer une entrée DNS pour votre service.&lt;/p&gt;
+
+&lt;p&gt;Puis nous allons utiliser l&amp;rsquo;image Docker avec nginx pour l&amp;rsquo;authentification &lt;a href=&#34;https://github.com/MarvAmBass/docker-nginx-registry-proxy&#34;&gt;docker-nginx-registry-proxy&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;informations-d-identification:5ccf6384c70e5ed97658dbf0e91e8805&#34;&gt;Informations d&amp;rsquo;identification&lt;/h2&gt;
+
+&lt;p&gt;Pour les étapes suivantes, placez vous dans le répertoire de votre choix pour stocker les fichiers (dans ce cas nous sommes dans &lt;code&gt;/srv/registry-config&lt;/code&gt;)&lt;/p&gt;
+
+&lt;h3 id=&#34;génération-du-certificat:5ccf6384c70e5ed97658dbf0e91e8805&#34;&gt;Génération du certificat&lt;/h3&gt;
+
+&lt;p&gt;Pensez à bien renseigner le FQDN DNS lors de la demande de Common Name pour le certificat.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;openssl genrsa -out ca.key 4096
+openssl req -new -x509 -days 1826 -key ca.key -out ca.crt
+openssl genrsa -out ia.key 4096
+openssl req -new -key key.pem -out ia.csr #this is where you need to fill your FQDN
+openssl x509 -req -days 730 -in ia.csr -CA ca.crt -CAkey ca.key -set_serial 01 -out cert.pem
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;génération-des-mots-de-passes-basic-auth:5ccf6384c70e5ed97658dbf0e91e8805&#34;&gt;Génération des mots de passes basic auth&lt;/h3&gt;
+
+&lt;p&gt;En utilisant un container docker qui embarque htpasswd vous pourrez générer facilement le fichier nécessaire :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;docker run --rm -ti -v $(pwd):/tmp dgageot/htpasswd -c /tmp/docker-registry.htpasswd $MONUSER
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;démarrage-du-registry:5ccf6384c70e5ed97658dbf0e91e8805&#34;&gt;Démarrage du registry&lt;/h2&gt;
+
+&lt;p&gt;Les images seront stockées dans le répertoire &lt;code&gt;/srv/registry&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;mkdir /srv/registry
+docker run -d --restart=always --name registry -v /srv/docker-registry:/registry -e &amp;quot;SETTINGS_FLAVOR=local&amp;quot; -e &amp;quot;STORAGE_PATH=/registry&amp;quot; registry
+docker run -d --restart=always -p 443:443 -v /srv/registry-config:/etc/nginx/external --link registry:registry --name nginx-registry-proxy marvambass/nginx-registry-proxy
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;configuration-d-une-machine-cliente:5ccf6384c70e5ed97658dbf0e91e8805&#34;&gt;Configuration d&amp;rsquo;une machine cliente&lt;/h2&gt;
+
+&lt;h3 id=&#34;importer-le-certificat-racine:5ccf6384c70e5ed97658dbf0e91e8805&#34;&gt;Importer le certificat racine&lt;/h3&gt;
+
+&lt;p&gt;Il faut importer le certificat racine dans la liste des certificats reconnus&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo -s
+mkdir -p /etc/docker/certs.d/$FQDN
+cp ca.crt /etc/docker/certs.d/$FQDN/
+
+mkdir -p /usr/local/share/ca-certificates/docker-ct
+cp ca.crt /usr/local/share/ca-certificates/docker-ct/
+update-ca-certificates-
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Pour vérifier que tout fonctionne comme attendu, vous pouvez voir si votre certificat ressort bien dans la commande suivante :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;awk -v cmd=&#39;openssl x509 -noout -subject&#39; &#39; /BEGIN/{close(cmd)};{print | cmd}&#39; &amp;lt; /etc/ssl/certs/ca-certificates.crt | grep $(VOTRE IDENTIFIANT)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Vous serez également certainement amené à redémarrer vos daemon docker (de chacune des machines)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;systemctl stop docker
+systemctl start docker
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;identification-sur-le-dépot:5ccf6384c70e5ed97658dbf0e91e8805&#34;&gt;Identification sur le dépot&lt;/h3&gt;
+
+&lt;p&gt;Une fois que toutes ces étapes sont effectuées, normalement votre dépot est prêt à être utilisé.&lt;/p&gt;
+
+&lt;p&gt;Il vous faut cependant en première étape vous identifier à l&amp;rsquo;aide du couple utilisateur / mot de passe créé lors de l&amp;rsquo;installation :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;docker login https://mondepotdocker.tld
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Ceci aura pour effet de créer un fichier &lt;code&gt;~/.dockercfg&lt;/code&gt; vous permettant d&amp;rsquo;accéder aux commandes suivantes sans avoir besoin de retaper vos identifiants.&lt;/p&gt;
+
+&lt;h2 id=&#34;utilisation-du-dépôt:5ccf6384c70e5ed97658dbf0e91e8805&#34;&gt;Utilisation du dépôt&lt;/h2&gt;
+
+&lt;p&gt;Une fois la machine cliente configurée, vous pouvez simplement utiliser le dépot en préfixant les noms de vos images par l&amp;rsquo;URL du dépôt.
+Par exemple, pour push/pull l&amp;rsquo;image de monapplication la commande suivante fera l&amp;rsquo;affaire :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;docker push mondepotdocker.tld/monapplication:v1.0.0
+docker pull mondepotdocker.tld/monapplication:v1.0.0
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;utilisation-avec-docker-compose:5ccf6384c70e5ed97658dbf0e91e8805&#34;&gt;Utilisation avec docker-compose&lt;/h3&gt;
+
+&lt;p&gt;Si vous utilisez docker-compose, il se peut que vous ayiez des soucis avec le certificat autosigné et/ou avec l&amp;rsquo;authentification.&lt;/p&gt;
+
+&lt;p&gt;Pour contourner la vérification du certificat, vous pouvez simplement lancer &lt;code&gt;docker-compose&lt;/code&gt; avec le flag &lt;code&gt;--allow-insecure-ssl&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Pour ce qui est de l&amp;rsquo;authentification, une astuce simple pour contourner les problèmes de ce genre est de faire un &lt;code&gt;docker pull&lt;/code&gt; manuellement au préalable (le scripter depuis le fichier compose.yml n&amp;rsquo;est pas trop difficile).&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

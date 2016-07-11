@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Helper on Code-Troopers - Vous avez une idée, nous la réalisons</title>
+    <link>https://code-troopers.com/tags/helper/</link>
+    <description>Recent content in Helper on Code-Troopers - Vous avez une idée, nous la réalisons</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>fr-fr</language>
+    <lastBuildDate>Mon, 15 Dec 2014 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://code-troopers.com/tags/helper/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>ct - alias de projets</title>
+      <link>https://code-troopers.com/2014/12/15/ct_project_alias/</link>
+      <pubDate>Mon, 15 Dec 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://code-troopers.com/2014/12/15/ct_project_alias/</guid>
+      <description>
+
+&lt;p&gt;Dans l’équipe Code-Troopers, nous manipulons des technos qui sont assez différentes et qui possèdent chacune un vocabulaire différent qui leur permet de fonctionner en ligne de commande.
+Du coup, un de nos problèmes récurrents est de se rappeler quelle commande dois-je lancer lorsque je veux travailler sur tel projet (&lt;code&gt;mvn jetty:run&lt;/code&gt;, &lt;code&gt;gradle assemble&lt;/code&gt;, &lt;code&gt;grunt serve&lt;/code&gt;…).&lt;/p&gt;
+
+&lt;p&gt;Un autre aspect pénible à avoir plein de façons différentes de fonctionner est qu’il est quasiment impossible d’avoir des alias pertinents dans son shell préféré.&lt;/p&gt;
+
+&lt;p&gt;Fort de ce constat, nous avons entrepris d’écrire notre petit outil qui nous permet de moins réflechir quand on change de projet. Puisqu’on est pas super imaginatif et qu’on n’avait pas encore de petit outil à notre nom, nous l’avons nommé “ct”.&lt;/p&gt;
+
+&lt;h2 id=&#34;qu-est-ce-que-c-est:7c3eefad04d6091e508b225df85821df&#34;&gt;Qu’est ce que c’est ?&lt;/h2&gt;
+
+&lt;p&gt;Imaginez que pour chaque projet vous n’ayiez qu’à remplir un fichier (à la façon de votre &lt;code&gt;.gitignore&lt;/code&gt;) pour définir les différentes tâches disponibles. Une fois ceci fait, les autres développeurs n’ont plus à se soucier des tâches à lancer, ils peuvent se contenter d’utiliser le vocabulaire commun, de se placer dans le répertoire du projet et de lancer la commande &lt;code&gt;ct run&lt;/code&gt; au lieu de &lt;code&gt;mvn jetty:run&lt;/code&gt; (et s’ils veulent connaître la liste des tâches disponibles ils le peuvent via un &lt;code&gt;ct help&lt;/code&gt;).&lt;/p&gt;
+
+&lt;p&gt;Encore mieux, puisque les commandes sont normalisées, vous pouvez directement exporter vos alias qui accélèrent encore l’utilisation (&lt;code&gt;run&lt;/code&gt; pour &lt;code&gt;ct run&lt;/code&gt;), et bingo, c’est transverse pour tous vos projets.&lt;/p&gt;
+
+&lt;h2 id=&#34;comment-ça-marche:7c3eefad04d6091e508b225df85821df&#34;&gt;Comment ça marche ?&lt;/h2&gt;
+
+&lt;p&gt;Le tout est un bête script shell qui utilise quelques commandes de base et quelques outils indispensables à tout développeur.&lt;/p&gt;
+
+&lt;p&gt;Quelques spécificités sont à remarquer en fonction de votre OS :&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;sous Mac, il est important d’installer gnu-sed en lieu et place de celui d’origine&lt;/li&gt;
+&lt;li&gt;sous Windows, il vous faut un shell unix (&lt;a href=&#34;https://code-troopers.com/2014/10/01/babun/&#34;&gt;Babun&lt;/a&gt; est conseillé).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;comment-l-utiliser:7c3eefad04d6091e508b225df85821df&#34;&gt;Comment l’utiliser ?&lt;/h2&gt;
+
+&lt;p&gt;Tout se fait en très peu d’étapes :&lt;/p&gt;
+
+&lt;h3 id=&#34;installation-de-l-outil:7c3eefad04d6091e508b225df85821df&#34;&gt;Installation de l’outil:&lt;/h3&gt;
+
+&lt;p&gt;Référez-vous au &lt;a href=&#34;https://github.com/code-troopers/ct/blob/master/README.md&#34;&gt;README&lt;/a&gt; présent sur le dépôt &lt;a href=&#34;https://github.com/code-troopers/ct/&#34;&gt;Github&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Pour résumer il est juste nécessaire de placer une copie du script dans votre &lt;code&gt;$PATH&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;CT_TARGET=~/bin;mkdir $CT_TARGET; wget -O $CT_TARGET/ct https://raw.githubusercontent.com/code-troopers/ct/master/ct &amp;amp;&amp;amp; chmod +x $CT_TARGET/ct
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;intégration-dans-un-projet:7c3eefad04d6091e508b225df85821df&#34;&gt;Intégration dans un projet&lt;/h3&gt;
+
+&lt;p&gt;Créez à la racine un fichier nommé &lt;code&gt;.ctproject&lt;/code&gt; qui va contenir vos alias&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;run=’mvn jetty:run’
+debug=’mvn jetty:dbg’
+test=’mvn test’
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;L’idéal étant de le faire au démarrage du projet, plus de questions à se poser ultérieurement&lt;/p&gt;
+
+&lt;h3 id=&#34;utilisation-dans-un-projet:7c3eefad04d6091e508b225df85821df&#34;&gt;Utilisation dans un projet&lt;/h3&gt;
+
+&lt;p&gt;Il suffit de lancer la commande qui correspond à un alias (par exemple ici : &lt;code&gt;ct run&lt;/code&gt;, &lt;code&gt;ct debug&lt;/code&gt; ou &lt;code&gt;ct test&lt;/code&gt;, ou d’exécuter &lt;code&gt;ct help&lt;/code&gt; pour avoir la liste des alias disponibles).&lt;/p&gt;
+
+&lt;h3 id=&#34;tuning-sur-plusieurs-projets:7c3eefad04d6091e508b225df85821df&#34;&gt;Tuning sur plusieurs projets&lt;/h3&gt;
+
+&lt;p&gt;En définissant votre nomenclature d’alias par projet, vous pourrez vous permettre d’exporter des alias globaux sur vos machines pour appeler &lt;code&gt;ct&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;bonus-lister-les-ports-ouverts:7c3eefad04d6091e508b225df85821df&#34;&gt;Bonus : lister les ports ouverts&lt;/h2&gt;
+
+&lt;p&gt;Puisque nous jonglons souvent entre projets, un autres soucis que nous avons est que nous oublions les ports ouverts pour chacun des projets. En plus, nous avons souvent plusieurs projets de démarrés sans même nous rappeler qu’ils le sont (surtout avec les projets légers REST/AngularJS).&lt;/p&gt;
+
+&lt;p&gt;Nous avons donc rajouté la commande &lt;code&gt;ct ports&lt;/code&gt; qui démarre un micro serveur http et permet de récupérer la liste des ports qui attendent des connexions sur nos machines, ainsi que le dossier de travail associé (ce qui est souvent suffisant pour savoir de quel projet il s’agit).&lt;/p&gt;
+
+&lt;div style=&#34;text-align:center;&#34;&gt;
+    &lt;a href=&#34;https://code-troopers.com/images/postCT/listen.png&#34; title=&#34;Exemple de listing des ports&#34; data-lightbox=&#34;group1&#34;&gt;
+    &lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/postCT/listen.png&#34; alt=&#34;Exemple de listing des ports&#34;&gt;&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Pour pouvoir utiliser cette commande, il faut que les quelques outils suivants soient installés : &lt;em&gt;netcat&lt;/em&gt;, &lt;em&gt;awk&lt;/em&gt;, &lt;em&gt;wget&lt;/em&gt; et &lt;em&gt;lsof&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;exemple-d-utilisation:7c3eefad04d6091e508b225df85821df&#34;&gt;Exemple d&amp;rsquo;utilisation&lt;/h3&gt;
+
+&lt;div style=&#34;text-align:center;&#34;&gt;
+&lt;video width=&#34;90%&#34; controls src=&#34;https://code-troopers.com/videos/screencast_ct.webm&#34;&gt;
+&lt;object type=&#34;application/x-shockwave-flash&#34; width=&#34;400&#34; height=&#34;222&#34; data=&#34;http://www.youtube.com/v/HVMoJqg41Bw&#34;&gt;
+  &lt;param name=&#34;movie&#34; value=&#34;http://www.youtube.com/v/jkWjmGdraR8&#34; /&gt;
+  &lt;param name=&#34;wmode&#34; value=&#34;transparent&#34; /&gt;
+Screencast d&#39;une utilisation quotidienne de ct. Vous n&#39;avez pas de navigateur moderne, ni Flash installé...
+ &lt;/object&gt;&lt;/video&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
