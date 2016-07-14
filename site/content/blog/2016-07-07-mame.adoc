@@ -43,7 +43,7 @@ Maintenant que nous sommes bien installés voici un petit tour du propriétaire.
 {lt}/a{gt}
 {lt}/div{gt}
 
-## Ballade dans MAME
+## Balade dans MAME
 
 
 
