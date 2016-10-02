@@ -42,9 +42,9 @@ Annoter une méthode @Nullable permet d'indiquer que le retour de celle-ci peut 
 
 {lt}br/{gt}
 
-# @<Any>Ref
+# @<Any>Res
 
-Le groupe d'annotation suivant est probablement celui que j'utilise le plus souvent est le `@...Ref`.
+Le groupe d'annotation suivant est probablement celui que j'utilise le plus souvent est le `@...Res`.
 
 Et oui étant donné que toutes les références des ressources sont des `int` lorsqu'elles sont générées dans votre class _R_ il est difficile de les différencier lorsqu'on en passe une en paramètre de méthode.
 Et bien avec un `@ColorRes int myColor`, Android studio s'occupera de vous avertir si la valeur passée ne correspond pas à une ressource du type `color`.
@@ -130,6 +130,7 @@ Certes ce n'est pas aussi puissant qu'une enum, mais il faudra faire avec.
 
 {lt}br/{gt}
 
+Il est possible de faire la même chose pour une liste de _Integer_ avec `@IntDef`.
 
 # @Range
 Toujours dans l'idée d'éviter de créer des énum @IntRange permettra de spécifier un peu plus ce qu'une méthode attend en paramètre.
