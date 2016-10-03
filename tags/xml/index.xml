@@ -16,21 +16,21 @@
       
       <guid>https://code-troopers.com/2016/10/03/android-annotations-lib/</guid>
       <description>&lt;div class=&#34;paragraph&#34;&gt;
-&lt;p&gt;Dans le lot des &lt;a href=&#34;https://developer.android.com/topic/libraries/support-library/index.html&#34;&gt;supports librairies&lt;/a&gt; que propose Google pour le développement Android (principalement pour la compatibilité des certains composants sur des anciennes versions de l&amp;#8217;OS) il y en a une qui de prime abord ne va pas beaucoup servir c&amp;#8217;est &lt;code&gt;support-annotations&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Dans le lot des &lt;a href=&#34;https://developer.android.com/topic/libraries/support-library/index.html&#34;&gt;supports librairies&lt;/a&gt; que propose Google pour le développement Android (principalement pour la compatibilité de certains composants sur des anciennes versions de l&amp;#8217;OS) il y en a une qui de prime abord ne va pas beaucoup servir c&amp;#8217;est &lt;code&gt;support-annotations&lt;/code&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&#34;paragraph&#34;&gt;
 &lt;p&gt;En effet cette librairie ne contient pas grand chose en terme de classes ni de &lt;a href=&#34;http://www.methodscount.com/?lib=com.android.support%3Asupport-annotations%3A24.2.1&#34;&gt;méthodes&lt;/a&gt;. En revanche elle possède de nombreuses annotations (d&amp;#8217;où son nom&amp;#8230;&amp;#8203;). Le comble c&amp;#8217;est que presque toutes ces annotations sont définie en tant que &lt;code&gt;@Retention(CLASS)&lt;/code&gt;, c&amp;#8217;est-à-dire qu&amp;#8217;elles seront conservées lors la génération des fichiers &lt;em&gt;.classes&lt;/em&gt; mais n&amp;#8217;auront pas d&amp;#8217;impact au moment de l&amp;#8217;execution du code`.&lt;br&gt;
-À quoi peuvent-elles servir ? Et bien c&amp;#8217;est le propre des annotations, elles servent à apporter des informations sur des portions de code et éventuellement donner quelques instructions au compilateur. L&amp;#8217;un des exemples le plus connu est &lt;em&gt;@Deprecated&lt;/em&gt; que vous devez cotoyer tous les jours. Cette annotation a pour seul but d&amp;#8217;informer le développeur qu&amp;#8217;il est fortement déconseillé d&amp;#8217;utilser cette méthode.&lt;/p&gt;
+À quoi peuvent-elles servir ? Et bien c&amp;#8217;est le propre des annotations, elles servent à apporter des informations sur des portions de code et éventuellement donner quelques instructions au compilateur. L&amp;#8217;un des exemples le plus connu est &lt;em&gt;@Deprecated&lt;/em&gt; que vous devez cotoyer tous les jours. Cette annotation a pour seul but d&amp;#8217;informer le développeur qu&amp;#8217;il est fortement déconseillé d&amp;#8217;utiliser cette méthode.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&#34;paragraph&#34;&gt;
-&lt;p&gt;L&amp;#8217;avantage d&amp;#8217;utiliser les &lt;code&gt;support-annotations&lt;/code&gt; est qu&amp;#8217;Android Studio connait leur signification et donc vas pouvoir highlighter des portions de code en rapport avec celles-ci lorsqu&amp;#8217;un comportement attendu n&amp;#8217;est pas respecté.&lt;/p&gt;
+&lt;p&gt;L&amp;#8217;avantage d&amp;#8217;utiliser les &lt;code&gt;support-annotations&lt;/code&gt; est qu&amp;#8217;Android Studio connait leur signification et donc va pouvoir highlighter des portions de code en rapport avec celles-ci lorsqu&amp;#8217;un comportement attendu n&amp;#8217;est pas respecté.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&#34;paragraph&#34;&gt;
 &lt;p&gt;Faisons un petit tour des &lt;a href=&#34;https://developer.android.com/reference/android/support/annotation/package-summary.html&#34;&gt;annotations présentes dans &lt;code&gt;support-annotations&lt;/code&gt;&lt;/a&gt; et de leur intégration dans Android Studio&lt;/p&gt;
 &lt;/div&gt;
 &lt;h1 id=&#34;__nullable_nonnull&#34; class=&#34;sect0&#34;&gt;@Nullable / @NonNull&lt;/h1&gt;
 &lt;div class=&#34;paragraph&#34;&gt;
-&lt;p&gt;Le couple d&amp;#8217;annotation le plus connu est probablement @Nullable et @NonNull, car déjà présent depuis un certain temps dans différents packages comme &lt;a href=&#34;https://www.jetbrains.com/help/idea/2016.2/nullable-and-notnull-annotations.html&#34;&gt;Intellij&lt;/a&gt; ou &lt;a href=&#34;http://mvnrepository.com/artifact/javax.annotation/javax.annotation-api/1.3&#34;&gt;javax.annotations&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Le couple d&amp;#8217;annotations le plus connu est probablement @Nullable et @NonNull, car déjà présent depuis un certain temps dans différents packages comme &lt;a href=&#34;https://www.jetbrains.com/help/idea/2016.2/nullable-and-notnull-annotations.html&#34;&gt;Intellij&lt;/a&gt; ou &lt;a href=&#34;http://mvnrepository.com/artifact/javax.annotation/javax.annotation-api/1.3&#34;&gt;javax.annotations&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&#34;paragraph&#34;&gt;
 &lt;p&gt;Annoter une méthode @Nullable permet d&amp;#8217;indiquer que le retour de celle-ci peut être &lt;em&gt;null&lt;/em&gt; et donc qu&amp;#8217;il est fort préférable de procéder à un null check avant d&amp;#8217;utiliser l&amp;#8217;objet retourné. Le @NonNull permet lui d&amp;#8217;assurer que le résultat est toujours un objet valide.&lt;/p&gt;
@@ -50,11 +50,11 @@
 &lt;/div&gt;
 &lt;h1 id=&#34;__any_res&#34; class=&#34;sect0&#34;&gt;@&amp;lt;Any&amp;gt;Res&lt;/h1&gt;
 &lt;div class=&#34;paragraph&#34;&gt;
-&lt;p&gt;Le groupe d&amp;#8217;annotation suivant est probablement celui que j&amp;#8217;utilise le plus souvent est le &lt;code&gt;@&amp;#8230;&amp;#8203;Res&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Le groupe d&amp;#8217;annotations suivant est probablement celui que j&amp;#8217;utilise le plus souvent est le &lt;code&gt;@&amp;#8230;&amp;#8203;Res&lt;/code&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&#34;paragraph&#34;&gt;
 &lt;p&gt;Et oui étant donné que toutes les références des ressources sont des &lt;code&gt;int&lt;/code&gt; lorsqu&amp;#8217;elles sont générées dans votre class &lt;em&gt;R&lt;/em&gt; il est difficile de les différencier lorsqu&amp;#8217;on en passe une en paramètre de méthode.
-Et bien avec un &lt;code&gt;@ColorRes int myColor&lt;/code&gt;, Android studio s&amp;#8217;occupera de vous avertir si la valeur passée ne correspond pas à une ressource du type &lt;code&gt;color&lt;/code&gt;.&lt;/p&gt;
+Et bien avec un &lt;code&gt;@ColorRes int myColor&lt;/code&gt;, Android Studio s&amp;#8217;occupera de vous avertir si la valeur passée ne correspond pas à une ressource du type &lt;code&gt;color&lt;/code&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&#34;paragraph&#34;&gt;
 &lt;p&gt;&lt;div style=&#34;text-align : center&#34;&gt;
@@ -90,7 +90,7 @@ Et bien avec un &lt;code&gt;@ColorRes int myColor&lt;/code&gt;, Android studio s
 &lt;/div&gt;
 &lt;h1 id=&#34;__callsuper&#34; class=&#34;sect0&#34;&gt;@CallSuper&lt;/h1&gt;
 &lt;div class=&#34;paragraph&#34;&gt;
-&lt;p&gt;Je l&amp;#8217;ai découverte récement et je trouve qu&amp;#8217;elle est d&amp;#8217;une grande aide. Étant donné l&amp;#8217;importance du cycle de vie de chaque élément dans Android
+&lt;p&gt;Je l&amp;#8217;ai découverte récemment et je trouve qu&amp;#8217;elle est d&amp;#8217;une grande aide. Étant donné l&amp;#8217;importance du cycle de vie de chaque élément dans Android
 il est indispensble de s&amp;#8217;assurer que chaque méthode est appelée au bon moment.
 Et lorsque qu&amp;#8217;il y a un peu de refactor il arrive vite d&amp;#8217;oublier d&amp;#8217;appeler le super d&amp;#8217;une méthode surchargée. Maintenant vous en serez averti !&lt;/p&gt;
 &lt;/div&gt;
@@ -109,7 +109,7 @@ Et lorsque qu&amp;#8217;il y a un peu de refactor il arrive vite d&amp;#8217;oub
 &lt;p&gt;Pour être sur de ne pas oublier une permission dans le &lt;code&gt;manifest.xml&lt;/code&gt; cette annotation permettra (sur une classe ou une méthode) de vous rappeler explicitement quelles sont celles dont vous avez besoin.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&#34;paragraph&#34;&gt;
-&lt;p&gt;On peut d&amp;#8217;ailleurs voir le warning d&amp;#8217;android studio en créant un sample project et en démarrant une nouvelle activity avec un &lt;code&gt;Intent.ACTION_CALL&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;On peut d&amp;#8217;ailleurs voir le warning d&amp;#8217;Android Studio en créant un sample project et en démarrant une nouvelle activity avec un &lt;code&gt;Intent.ACTION_CALL&lt;/code&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&#34;paragraph&#34;&gt;
 &lt;p&gt;&lt;div style=&#34;text-align : center&#34;&gt;
@@ -123,8 +123,8 @@ Et lorsque qu&amp;#8217;il y a un peu de refactor il arrive vite d&amp;#8217;oub
 &lt;/div&gt;
 &lt;h1 id=&#34;__stringdef&#34; class=&#34;sect0&#34;&gt;@StringDef&lt;/h1&gt;
 &lt;div class=&#34;paragraph&#34;&gt;
-&lt;p&gt;Lorsque l&amp;#8217;on dev pour Android on doit savoir que &lt;a href=&#34;https://www.youtube.com/watch?v=Hzs6OBcvNQE&#34;&gt;les enums sont a proscrire&lt;/a&gt; et du coup c&amp;#8217;est embetant, car c&amp;#8217;est tout de même bien pratique.
-La parade est donc de passer par une liste de constantes et de créer une nouvelle annotation qui limitera les valeurs attendu, comme ceci :&lt;/p&gt;
+&lt;p&gt;Lorsque l&amp;#8217;on dev pour Android on doit savoir que &lt;a href=&#34;https://www.youtube.com/watch?v=Hzs6OBcvNQE&#34;&gt;les enums sont à proscrire&lt;/a&gt; et du coup c&amp;#8217;est embêtant, car c&amp;#8217;est tout de même bien pratique.
+La parade est donc de passer par une liste de constantes et de créer une nouvelle annotation qui limitera les valeurs attendues, comme ceci :&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&#34;listingblock&#34;&gt;
 &lt;div class=&#34;content&#34;&gt;
@@ -143,7 +143,7 @@ public @interface Trooper {
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&#34;paragraph&#34;&gt;
-&lt;p&gt;Et ensuite d&amp;#8217;uiliser cette  annotation a chaque fois que seulement une des valeurs précédent est autorisée.&lt;/p&gt;
+&lt;p&gt;Et ensuite d&amp;#8217;utiliser cette annotation à chaque fois que seulement une des valeurs précédente est autorisée.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&#34;listingblock&#34;&gt;
 &lt;div class=&#34;content&#34;&gt;
@@ -186,7 +186,7 @@ public @interface Trooper {
 &lt;h1 id=&#34;_lint&#34; class=&#34;sect0&#34;&gt;Lint&lt;/h1&gt;
 &lt;div class=&#34;paragraph&#34;&gt;
 &lt;p&gt;Comme chacune des erreurs n&amp;#8217;empèche pas la compilation du projet, un bon moyen de surveiller qu&amp;#8217;il n&amp;#8217;y a pas de violation aux règles mises en place grâce à toutes ces annotations,
-est de controler les rapports générés par lint&lt;/p&gt;
+est de contrôler les rapports générés par lint&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&#34;paragraph&#34;&gt;
 &lt;p&gt;&lt;div style=&#34;text-align : center&#34;&gt;
