@@ -17,10 +17,10 @@ Dans le lot des https://developer.android.com/topic/libraries/support-library/in
 
 [%hardbreaks]
 
-En effet cette librairie ne contient pas grand chose en terme de classes ni de http://www.methodscount.com/?lib=com.android.support%3Asupport-annotations%3A24.2.1[méthodes]. En revanche elle possède de nombreuses annotations (d'où son nom...). Le comble c'est que presque toutes ces annotations sont définie en tant que `@Retention(CLASS)`, c'est-à-dire qu'elles seront conversées lors la génération des fichiers _.classes_ mais n'auront pas d'impact au moment de l'execution du code`.
+En effet cette librairie ne contient pas grand chose en terme de classes ni de http://www.methodscount.com/?lib=com.android.support%3Asupport-annotations%3A24.2.1[méthodes]. En revanche elle possède de nombreuses annotations (d'où son nom...). Le comble c'est que presque toutes ces annotations sont définie en tant que `@Retention(CLASS)`, c'est-à-dire qu'elles seront conservées lors la génération des fichiers _.classes_ mais n'auront pas d'impact au moment de l'execution du code`.
 À quoi peuvent-elles servir ? Et bien c'est le propre des annotations, elles servent à apporter des informations sur des portions de code et éventuellement donner quelques instructions au compilateur. L'un des exemples le plus connu est _@Deprecated_ que vous devez cotoyer tous les jours. Cette annotation a pour seul but d'informer le développeur qu'il est fortement déconseillé d'utilser cette méthode.
 
-L'avantage d'utiliser les `support-annotations` est qu'Android Studio connait leur signification et donc vas pouvoir highliter des portions de code en rapport avec celles-ci lorsqu'un comportement attendu n'est pas respecté.
+L'avantage d'utiliser les `support-annotations` est qu'Android Studio connait leur signification et donc vas pouvoir highlighter des portions de code en rapport avec celles-ci lorsqu'un comportement attendu n'est pas respecté.
 
 Faisons un petit tour des https://developer.android.com/reference/android/support/annotation/package-summary.html[annotations présentes dans `support-annotations`] et de leur intégration dans Android Studio
 
