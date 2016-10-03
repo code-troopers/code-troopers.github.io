@@ -148,7 +148,7 @@ Une variante `@FloatRange` est aussi disponible.
 # Lint
 
 Comme chacune des erreurs n'empèche pas la compilation du projet, un bon moyen de surveiller qu'il n'y a pas de violation aux règles mises en place grâce à toutes ces annotations,
-est de controler les rapports générer par lint
+est de controler les rapports générés par lint
 
 {lt}div style="text-align : center"{gt}
 {lt}a class="inlineBoxes" href="/images/posts/2016-09_AndroidAnnotations/android_annotations_lint.png" data-lightbox="1" title="Exemple de rapport lint"{gt}
