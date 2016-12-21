@@ -144,28 +144,28 @@ Merci l’orga
 Pour voir quelques photos du weekend vous pouvez allez jetter un oeil sur [twitter](https://twitter.com/search?q=%23SWTOURS&src=tyah&mode=photos) ou bien sur la galerie de la [smilybox](http://www.smilybox.fr/albums/index.php?galerie=swtours) qui était installée dans la zone détente.
 
 <div style="text-align:center;">
-    <a href="/images/postSWTours2015/swtours_2015_0.jpg" title="" data-lightbox="group1" class="inlineBoxes">
-      <img class="mini" src="/images/postSWTours2015/swtours_2015_0.jpg" alt="">
+    <a href="/images/posts/2015-03-24-StartupWeekend/swtours_2015_0.jpg" title="" data-lightbox="group1" class="inlineBoxes">
+      <img class="mini" src="/images/posts/2015-03-24-StartupWeekend/swtours_2015_0.jpg" alt="">
     </a>
-    <a href="/images/postSWTours2015/swtours_2015_1.jpg" title="" data-lightbox="group1" class="inlineBoxes">
-      <img class="mini" src="/images/postSWTours2015/swtours_2015_1.jpg" alt="">
+    <a href="/images/posts/2015-03-24-StartupWeekend/swtours_2015_1.jpg" title="" data-lightbox="group1" class="inlineBoxes">
+      <img class="mini" src="/images/posts/2015-03-24-StartupWeekend/swtours_2015_1.jpg" alt="">
     </a>
-    <a href="/images/postSWTours2015/swtours_2015_4.jpg" title="" data-lightbox="group1" class="inlineBoxes">
-      <img class="mini" src="/images/postSWTours2015/swtours_2015_4.jpg" alt="">
+    <a href="/images/posts/2015-03-24-StartupWeekend/swtours_2015_4.jpg" title="" data-lightbox="group1" class="inlineBoxes">
+      <img class="mini" src="/images/posts/2015-03-24-StartupWeekend/swtours_2015_4.jpg" alt="">
     </a>
-    <a href="/images/postSWTours2015/swtours_2015_2.jpg" title="" data-lightbox="group1" class="inlineBoxes">
-      <img class="mini" src="/images/postSWTours2015/swtours_2015_2.jpg" alt="">
+    <a href="/images/posts/2015-03-24-StartupWeekend/swtours_2015_2.jpg" title="" data-lightbox="group1" class="inlineBoxes">
+      <img class="mini" src="/images/posts/2015-03-24-StartupWeekend/swtours_2015_2.jpg" alt="">
     </a>
-    <a href="/images/postSWTours2015/swtours_2015_6.jpg" title="" data-lightbox="group1" class="inlineBoxes">
-      <img class="mini" src="/images/postSWTours2015/swtours_2015_6.jpg" alt="">
+    <a href="/images/posts/2015-03-24-StartupWeekend/swtours_2015_6.jpg" title="" data-lightbox="group1" class="inlineBoxes">
+      <img class="mini" src="/images/posts/2015-03-24-StartupWeekend/swtours_2015_6.jpg" alt="">
     </a>
-    <a href="/images/postSWTours2015/swtours_2015_7.jpg" title="" data-lightbox="group1" class="inlineBoxes">
-      <img class="mini" src="/images/postSWTours2015/swtours_2015_7.jpg" alt="">
+    <a href="/images/posts/2015-03-24-StartupWeekend/swtours_2015_7.jpg" title="" data-lightbox="group1" class="inlineBoxes">
+      <img class="mini" src="/images/posts/2015-03-24-StartupWeekend/swtours_2015_7.jpg" alt="">
     </a>
-    <a href="/images/postSWTours2015/swtours_2015_3.jpg" title="" data-lightbox="group1" class="inlineBoxes">
-      <img class="mini" src="/images/postSWTours2015/swtours_2015_3.jpg" alt="">
+    <a href="/images/posts/2015-03-24-StartupWeekend/swtours_2015_3.jpg" title="" data-lightbox="group1" class="inlineBoxes">
+      <img class="mini" src="/images/posts/2015-03-24-StartupWeekend/swtours_2015_3.jpg" alt="">
     </a>
-    <a href="/images/postSWTours2015/swtours_2015_5.jpg" title="" data-lightbox="group1" class="inlineBoxes">
-      <img class="mini" src="/images/postSWTours2015/swtours_2015_5.jpg" alt="">
+    <a href="/images/posts/2015-03-24-StartupWeekend/swtours_2015_5.jpg" title="" data-lightbox="group1" class="inlineBoxes">
+      <img class="mini" src="/images/posts/2015-03-24-StartupWeekend/swtours_2015_5.jpg" alt="">
     </a>
 </div>

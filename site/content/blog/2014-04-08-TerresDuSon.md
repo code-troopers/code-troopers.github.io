@@ -16,8 +16,8 @@ Comme vous avez pu le voir dans un [article précédent](http://code-troopers.co
 
 
 <div style="text-align : center">
-<a style="display: inline" href="/images/postTDS/tds.png" data-lightbox="image-0" title="Logo Terres du son">
-        <img class="mini" src="/images/postTDS/tds.png" alt="tds logo"/>
+<a style="display: inline" href="/images/posts/2014-04-08-TerresDuSon/tds.png" data-lightbox="image-0" title="Logo Terres du son">
+        <img class="mini" src="/images/posts/2014-04-08-TerresDuSon/tds.png" alt="tds logo"/>
 </a>
 </div>
 

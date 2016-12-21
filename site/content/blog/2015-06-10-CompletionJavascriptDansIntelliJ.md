@@ -39,16 +39,16 @@ Pour réussir à obtenir une complétion correcte vous avez plusieurs solutions 
  * pour les CDN, vous pouvez demander à IntelliJ de récupérer la ressource (il ne la mettra pas dans votre projet pour autant)
 
 <div style="text-align:center;margin-bottom:50px">
-    <a href="/images/2015-06-JavaScriptIntelliJ/cdndl.png" data-lightbox="group-1" title="Le téléchargement des fichiers sur un CDN [alt+entrée]" class="inlineBoxes">
-        <img class="medium" src="/images/2015-06-JavaScriptIntelliJ/cdndl.png" alt="Le téléchargement des fichiers sur un CDN [alt+entrée]"/>
+    <a href="/images/posts/2015-06-JavaScriptIntelliJ/cdndl.png" data-lightbox="group-1" title="Le téléchargement des fichiers sur un CDN [alt+entrée]" class="inlineBoxes">
+        <img class="medium" src="/images/posts/2015-06-JavaScriptIntelliJ/cdndl.png" alt="Le téléchargement des fichiers sur un CDN [alt+entrée]"/>
     </a>
 </div>
 
  * pour les versions minifiées, vous pouvez ajouter manuellement les bibliothèques dans la fenêtre de paramètres (Languages & Frameworks > JavaScript > Libraries)
 
 <div style="text-align:center;margin-bottom:50px">
-    <a href="/images/2015-06-JavaScriptIntelliJ/settings.png" data-lightbox="group-1" title="La fenêtre des paramètres" class="inlineBoxes">
-        <img class="medium" src="/images/2015-06-JavaScriptIntelliJ/settings.png" alt="La fenêtre des paramètres"/>
+    <a href="/images/posts/2015-06-JavaScriptIntelliJ/settings.png" data-lightbox="group-1" title="La fenêtre des paramètres" class="inlineBoxes">
+        <img class="medium" src="/images/posts/2015-06-JavaScriptIntelliJ/settings.png" alt="La fenêtre des paramètres"/>
     </a>
 </div>
 
@@ -62,7 +62,7 @@ Avec ceci, vous aurez une complétion efficace, avec le typage offert par TypeSc
 ainsi qu'une documentation précise (pour la plupart des librairies).
 
 <div style="text-align:center;margin-bottom:50px">
-    <a href="/images/2015-06-JavaScriptIntelliJ/example.png" data-lightbox="group-1" title="Jasmine est bien connu par IntelliJ" class="inlineBoxes">
-        <img class="medium" src="/images/2015-06-JavaScriptIntelliJ/example.png" alt="Jasmine est bien connu par IntelliJ"/>
+    <a href="/images/posts/2015-06-JavaScriptIntelliJ/example.png" data-lightbox="group-1" title="Jasmine est bien connu par IntelliJ" class="inlineBoxes">
+        <img class="medium" src="/images/posts/2015-06-JavaScriptIntelliJ/example.png" alt="Jasmine est bien connu par IntelliJ"/>
     </a>
 </div>

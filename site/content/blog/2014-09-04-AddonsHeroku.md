@@ -21,17 +21,17 @@ Les add-ons sont rangés en catégories, vous avez des services de bases de donn
 * [New Relic](https://addons.heroku.com/newrelic) pour surveiller l'application
 
 
-## ![Logo Papertrail](/images/postAddonsHeroku/papertrail.png) Papertrail
+## ![Logo Papertrail](/images/posts/2014-09-04-AddonsHeroku/papertrail.png) Papertrail
 
 [Papertrail](https://papertrailapp.com/) est un service de logs. Il permet de consulter en temps réel les logs de votre application Heroku. Vous avez même la possibilité de sauvegarder vos recherches ou de créer des alertes personnalisées. La version gratuite permet de stocker jusqu'à 10Mo de log par jour, de rechercher sur 2 jours et de retenir jusqu'à 7 jours les logs. Pour l'installer, il suffit de l'ajouter depuis l'interface d'Heroku, il n'y a rien à configurer. Ensuite, vous avez juste à cliquer sur le lien pour consulter vos logs.
 
-## ![Logo SendGrid](/images/postAddonsHeroku/sendgrid.png) SendGrid
+## ![Logo SendGrid](/images/posts/2014-09-04-AddonsHeroku/sendgrid.png) SendGrid
 
 
 
 [SendGrid](http://sendgrid.com/) est un service de messagerie électronique. Une fois l'add-on ajouté sur Heroku, vous disposez dans les variables de configuration de votre application, d'un login et d'un mot de passe. Il ne vous reste plus qu'à changer l'accès au serveur smtp dans votre application pour utiliser ces variables. En plus de faire office de serveur smtp, SendGrid vous offre la possibilité de tracer les mails, c'est-à-dire de savoir combien ont été ouverts, combien de personnes ont cliqué sur les liens contenus, combien ne sont pas arrivés à destination… tout ça même dans la version gratuite. La seule contrainte en version gratuite est la limitation à 200 mails par jour.
 
-## ![Logo New Relic](/images/postAddonsHeroku/newrelic.png) New Relic
+## ![Logo New Relic](/images/posts/2014-09-04-AddonsHeroku/newrelic.png) New Relic
 
 
 

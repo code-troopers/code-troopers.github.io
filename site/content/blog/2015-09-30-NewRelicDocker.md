@@ -17,8 +17,8 @@ Si vous ne conaissez pas New Relic, vous loupez quelque chose, c'est le service 
 Nous allons seulement parler du service de monitoring des serveurs dans cet article.
 
 <div style="float:right;margin:20px">
-    <a href="/images/postNewrelicDocker/new-relic.png" data-lightbox="group-1" title="New Relic Logo" class="inlineBoxes">
-        <img class="medium" src="/images/postNewrelicDocker/new-relic.png" alt="New Relic Logo"/>
+    <a href="/images/posts/2015-09-30-NewRelicDocker/new-relic.png" data-lightbox="group-1" title="New Relic Logo" class="inlineBoxes">
+        <img class="medium" src="/images/posts/2015-09-30-NewRelicDocker/new-relic.png" alt="New Relic Logo"/>
     </a>
 </div>
 
@@ -31,11 +31,11 @@ Nous allons seulement parler du service de monitoring des serveurs dans cet arti
 Ce qui est encore plus fort avec le service de monitoring des serveurs de New Relic, c'est qu'il est capable de comprendre Docker et donc de vous remonter les données par conteneur.
 
 <div style="text-align:center;margin:50px">
-    <a href="/images/postNewrelicDocker/screen-newrelic-1.png" data-lightbox="group-3" title="Screen 1 New Relic" class="inlineBoxes">
-        <img class="medium" src="/images/postNewrelicDocker/screen-newrelic-1.png" alt="Screen 1 New Relic"/>
+    <a href="/images/posts/2015-09-30-NewRelicDocker/screen-newrelic-1.png" data-lightbox="group-3" title="Screen 1 New Relic" class="inlineBoxes">
+        <img class="medium" src="/images/posts/2015-09-30-NewRelicDocker/screen-newrelic-1.png" alt="Screen 1 New Relic"/>
     </a>
-    <a href="/images/postNewrelicDocker/screen-newrelic-2.png" data-lightbox="group-3" title="Screen 2 New Relic" class="inlineBoxes">
-        <img class="medium" src="/images/postNewrelicDocker/screen-newrelic-2.png" alt="Screen 2 New Relic"/>
+    <a href="/images/posts/2015-09-30-NewRelicDocker/screen-newrelic-2.png" data-lightbox="group-3" title="Screen 2 New Relic" class="inlineBoxes">
+        <img class="medium" src="/images/posts/2015-09-30-NewRelicDocker/screen-newrelic-2.png" alt="Screen 2 New Relic"/>
     </a>
 </div>
 

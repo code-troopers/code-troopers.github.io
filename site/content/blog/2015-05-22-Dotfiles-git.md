@@ -50,8 +50,8 @@ C'est toujours important d'avoir de la couleur, ça donne bonne mine, ça rend j
         untracked = cyan
 
 <div style="text-align:center;margin-bottom:50px">
-    <a href="/images/postDotfilesGit/gitcolours.png" data-lightbox="group-1" title="git avec couleurs personnalisées" class="inlineBoxes">
-        <img class="medium" src="/images/postDotfilesGit/gitcolours.png" alt="git avec couleurs personnalisées"/>
+    <a href="/images/posts/2015-05-22-Dotfiles-git/gitcolours.png" data-lightbox="group-1" title="git avec couleurs personnalisées" class="inlineBoxes">
+        <img class="medium" src="/images/posts/2015-05-22-Dotfiles-git/gitcolours.png" alt="git avec couleurs personnalisées"/>
     </a>
 </div>
 
@@ -85,8 +85,8 @@ Vous avez créé un nouveau répertoire, ajouté plein de fichiers dedans, et vo
         showUntrackedFiles = all
 
 <div style="text-align:center;margin-bottom:50px">
-    <a href="/images/postDotfilesGit/git-status.png" data-lightbox="group-1" title="git status coloré" class="inlineBoxes">
-        <img class="medium" src="/images/postDotfilesGit/git-status.png" alt="git status coloré"/>
+    <a href="/images/posts/2015-05-22-Dotfiles-git/git-status.png" data-lightbox="group-1" title="git status coloré" class="inlineBoxes">
+        <img class="medium" src="/images/posts/2015-05-22-Dotfiles-git/git-status.png" alt="git status coloré"/>
     </a>
 </div>
 
@@ -131,8 +131,8 @@ J'ai récupéré le mien sur https://github.com/borisguery/git-keywords-checker 
 On interdit de commiter `printStackTrace(` ou `FIXME` ou `TODO` dans les fichiers `java` ou `js`.
 
 <div style="text-align:center;margin-bottom:50px">
-    <a href="/images/postDotfilesGit/git-hooks.png" data-lightbox="group-1" title="git hooks pre-commit en action" class="inlineBoxes">
-        <img class="medium" src="/images/postDotfilesGit/git-hooks.png" alt="git hooks pre-commit en action"/>
+    <a href="/images/posts/2015-05-22-Dotfiles-git/git-hooks.png" data-lightbox="group-1" title="git hooks pre-commit en action" class="inlineBoxes">
+        <img class="medium" src="/images/posts/2015-05-22-Dotfiles-git/git-hooks.png" alt="git hooks pre-commit en action"/>
     </a>
 </div>
 

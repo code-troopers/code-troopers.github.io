@@ -31,11 +31,11 @@ les nouvelles libraires de compatibilités, les templates que propose __Android 
 Afin de faciliter la vie des troopers, j'ai décidé de créer un squelette d'application __Android__ contenant nos librairies favorites et le minimum visuel.
 
 <div style="text-align:center;margin:50px">
-<a href="/images/postAndroid5/screen1.png" data-lightbox="group-1" title="Page d'accueil du squelette" class="inlineBoxes">
-<img class="medium" src="/images/postAndroid5/screen1.png" alt="Page d'accueil du squelette"/>
+<a href="/images/posts/2014-11-26-SqueletteAndroid5/screen1.png" data-lightbox="group-1" title="Page d'accueil du squelette" class="inlineBoxes">
+<img class="medium" src="/images/posts/2014-11-26-SqueletteAndroid5/screen1.png" alt="Page d'accueil du squelette"/>
 </a>
-<a href="/images/postAndroid5/screen2.png" data-lightbox="group-1" title="Navigation drawer" class="inlineBoxes">
-<img class="medium" src="/images/postAndroid5/screen2.png" alt="Navigation drawer"/>
+<a href="/images/posts/2014-11-26-SqueletteAndroid5/screen2.png" data-lightbox="group-1" title="Navigation drawer" class="inlineBoxes">
+<img class="medium" src="/images/posts/2014-11-26-SqueletteAndroid5/screen2.png" alt="Navigation drawer"/>
 </a>
 </div>
 

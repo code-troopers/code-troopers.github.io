@@ -48,8 +48,8 @@ La procédure miracle est donc la suivante :
 Lorsqu'il se lance h2-browser devrait vous présenter une fenêtre de connexion comme celle-ci :
 
 <div style="text-align : center">
-    <a style="display: inline" href="/images/postPlayDbBrowser/h2-browser.png" data-lightbox="image-0" title="Fenêtre de connection h2-browser">
-            <img class="medium" src="/images/postPlayDbBrowser/h2-browser.png" alt="Fenêtre de connection h2-browser"/>
+    <a style="display: inline" href="/images/posts/2014-05-05-PlayDbBrowser/h2-browser.png" data-lightbox="image-0" title="Fenêtre de connection h2-browser">
+            <img class="medium" src="/images/posts/2014-05-05-PlayDbBrowser/h2-browser.png" alt="Fenêtre de connection h2-browser"/>
     </a>
 </div>
 

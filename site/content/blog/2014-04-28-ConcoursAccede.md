@@ -16,11 +16,11 @@ Si vous nous suivez, vous savez sûrement que notre équipe a participé et est 
 
 
 <div style="text-align:center;margin:50px">
-    <a href="/images/postAccede/photo.jpg" data-lightbox="group-1" title="Mode normal"  class="inlineBoxes">
-	<img class="medium" src="/images/postAccede/photo.jpg" alt="Mode normal"/>
+    <a href="/images/posts/2014-04-28-ConcoursAccede/photo.jpg" data-lightbox="group-1" title="Mode normal"  class="inlineBoxes">
+	<img class="medium" src="/images/posts/2014-04-28-ConcoursAccede/photo.jpg" alt="Mode normal"/>
     </a>
-    <a href="/images/postAccede/slide.png" data-lightbox="group-1" title="Mode présentation"  class="inlineBoxes">
-	<img class="medium" src="/images/postAccede/slide.png" alt="Mode présentation"/>
+    <a href="/images/posts/2014-04-28-ConcoursAccede/slide.png" data-lightbox="group-1" title="Mode présentation"  class="inlineBoxes">
+	<img class="medium" src="/images/posts/2014-04-28-ConcoursAccede/slide.png" alt="Mode présentation"/>
     </a>
 </div>
 
