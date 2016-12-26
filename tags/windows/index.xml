@@ -36,8 +36,8 @@
 &lt;p&gt;Cependant vous voudrez certainement personnaliser votre environnement avec quelques alias. Pour ceci, il suffit de créer un fichier contenant vos alias dans &lt;code&gt;~/.oh-my-zsh/custom/aliases.zsh&lt;/code&gt; (le nom est libre, le fichier doit porter l&amp;rsquo;extension  &lt;code&gt;zsh&lt;/code&gt; pour qu&amp;rsquo;il soit automatiquement chargé). Il ne s&amp;rsquo;agit ni plus ni moins de la configuration permise par oh-my-zsh (vous pouvez vous référer &lt;a href=&#34;https://code-troopers.com/2014/09/17/ohmyzsh/&#34;&gt;à cet article&lt;/a&gt; pour plus de détails)&lt;/p&gt;
 
 &lt;div style=&#34;text-align:center;margin:50px&#34;&gt;
- &lt;a style=&#34;display: inline&#34; href=&#34;https://code-troopers.com/images/postBabun/babun.png&#34; data-lightbox=&#34;image-0&#34; title=&#34;Babun et tmux&#34;&gt;
-         &lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/postBabun/babun.png&#34; alt=&#34;Babun et tmux&#34;/&gt;
+ &lt;a style=&#34;display: inline&#34; href=&#34;https://code-troopers.com/images/posts/2014-10-01-babun/babun.png&#34; data-lightbox=&#34;image-0&#34; title=&#34;Babun et tmux&#34;&gt;
+         &lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/posts/2014-10-01-babun/babun.png&#34; alt=&#34;Babun et tmux&#34;/&gt;
  &lt;/a&gt;
 &lt;/div&gt;
 

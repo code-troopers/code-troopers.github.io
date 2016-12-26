@@ -29,9 +29,9 @@ utilisateurs à utiliser un bon mot de passe. Alors, au travail !&lt;/p&gt;
 Nous allons donc parler de feedback visuel. Prenons par exemple une création de compte Google.
 Lorsqu&amp;rsquo;on entre le mot de passe, Google nous informe de la qualité de la chaîne saisie via un pop-up contenant une progressbar de couleur, accompagnée d&amp;rsquo;un petit commentaire.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;a href=&amp;quot;/images/postPasswordStrength/googleWay.png&amp;quot; data-lightbox=&amp;quot;image-1&amp;quot;
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;a href=&amp;quot;/images/posts/2014-03-05-passwordStrength/googleWay.png&amp;quot; data-lightbox=&amp;quot;image-1&amp;quot;
    title=&amp;quot;Indicateur de niveau de sécurité by Google&amp;quot;&amp;gt;
-    &amp;lt;img class=&amp;quot;mini&amp;quot; src=&amp;quot;/images/postPasswordStrength/googleWay.png&amp;quot;
+    &amp;lt;img class=&amp;quot;mini&amp;quot; src=&amp;quot;/images/posts/2014-03-05-passwordStrength/googleWay.png&amp;quot;
          alt=&amp;quot;Indicateur de niveau de sécurité by Google&amp;quot;/&amp;gt;
 &amp;lt;/a&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
@@ -121,21 +121,21 @@ puis l&amp;rsquo;appel de la fonction javascript de zxcvbn qui se charge de calc
 
 &lt;p&gt;Comme vous pouvez le voir dans le js qui traite le retour de la fonction zxcvbn, il y a 3 niveaux de couleurs qui se déclenchent à différents niveaux, combinés à un simple label&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://code-troopers.com/images/postPasswordStrength/weak.png&#34; data-lightbox=&#34;image-1&#34;
+&lt;p&gt;&lt;a href=&#34;https://code-troopers.com/images/posts/2014-03-05-passwordStrength/weak.png&#34; data-lightbox=&#34;image-1&#34;
    title=&#34;Feedback pour un mauvais mot de passe&#34;&gt;
-    &lt;img class=&#34;mini&#34; src=&#34;https://code-troopers.com/images/postPasswordStrength/weak.png&#34; alt=&#34;Feedback pour un mauvais mot de passe&#34;/&gt;
+    &lt;img class=&#34;mini&#34; src=&#34;https://code-troopers.com/images/posts/2014-03-05-passwordStrength/weak.png&#34; alt=&#34;Feedback pour un mauvais mot de passe&#34;/&gt;
 &lt;/a&gt;
-&lt;a href=&#34;https://code-troopers.com/images/postPasswordStrength/fair.png&#34; data-lightbox=&#34;image-1&#34;
+&lt;a href=&#34;https://code-troopers.com/images/posts/2014-03-05-passwordStrength/fair.png&#34; data-lightbox=&#34;image-1&#34;
    title=&#34;Feedback pour un mot de passe moyen&#34;&gt;
-    &lt;img class=&#34;mini&#34; src=&#34;https://code-troopers.com/images/postPasswordStrength/fair.png&#34; alt=&#34;Feedback pour un mot de passe moyen&#34;/&gt;
+    &lt;img class=&#34;mini&#34; src=&#34;https://code-troopers.com/images/posts/2014-03-05-passwordStrength/fair.png&#34; alt=&#34;Feedback pour un mot de passe moyen&#34;/&gt;
 &lt;/a&gt;
-&lt;a href=&#34;https://code-troopers.com/images/postPasswordStrength/good.png&#34; data-lightbox=&#34;image-1&#34;
+&lt;a href=&#34;https://code-troopers.com/images/posts/2014-03-05-passwordStrength/good.png&#34; data-lightbox=&#34;image-1&#34;
    title=&#34;Feedback pour un bon mot de passe&#34;&gt;
-    &lt;img class=&#34;mini&#34; src=&#34;https://code-troopers.com/images/postPasswordStrength/good.png&#34; alt=&#34;Feedback pour un bon mot de passe&#34;/&gt;
+    &lt;img class=&#34;mini&#34; src=&#34;https://code-troopers.com/images/posts/2014-03-05-passwordStrength/good.png&#34; alt=&#34;Feedback pour un bon mot de passe&#34;/&gt;
 &lt;/a&gt;
-&lt;a href=&#34;https://code-troopers.com/images/postPasswordStrength/great.png&#34; data-lightbox=&#34;image-1&#34;
+&lt;a href=&#34;https://code-troopers.com/images/posts/2014-03-05-passwordStrength/great.png&#34; data-lightbox=&#34;image-1&#34;
    title=&#34;Feedback pour un mot de passe parfait&#34;&gt;
-    &lt;img class=&#34;mini&#34; src=&#34;https://code-troopers.com/images/postPasswordStrength/great.png&#34; alt=&#34;Feedback pour un mot de passe parfait&#34;/&gt;
+    &lt;img class=&#34;mini&#34; src=&#34;https://code-troopers.com/images/posts/2014-03-05-passwordStrength/great.png&#34; alt=&#34;Feedback pour un mot de passe parfait&#34;/&gt;
 &lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;sources:5e76d6bd0d63e3520a432c1520957f8a&#34;&gt;Sources&lt;/h2&gt;

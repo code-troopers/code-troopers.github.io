@@ -54,8 +54,8 @@ J&amp;rsquo;utilisais &lt;a href=&#34;https://github.com/nojhan/liquidprompt&#34
 Voici ce que cela donne avec mon thème (adapté du thème sunrise), que vous pouvez trouver  sur &lt;a href=&#34;https://raw.githubusercontent.com/mattboll/zshrc/master/mattboll.zsh-theme&#34;&gt;GitHub&lt;/a&gt; :&lt;/p&gt;
 
 &lt;div style=&#34;text-align:center;margin:50px&#34;&gt;
-&lt;a style=&#34;display: inline&#34; href=&#34;https://code-troopers.com/images/postOhMyZsh/oh-my-zsh-theme.png&#34; data-lightbox=&#34;image-0&#34; title=&#34;Thème oh-my-zsh&#34;&gt;
-        &lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/postOhMyZsh/oh-my-zsh-theme.png&#34; alt=&#34;Thème oh-my-zsh&#34;/&gt;
+&lt;a style=&#34;display: inline&#34; href=&#34;https://code-troopers.com/images/posts/2014-09-17-ohMyZsh/oh-my-zsh-theme.png&#34; data-lightbox=&#34;image-0&#34; title=&#34;Thème oh-my-zsh&#34;&gt;
+        &lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/posts/2014-09-17-ohMyZsh/oh-my-zsh-theme.png&#34; alt=&#34;Thème oh-my-zsh&#34;/&gt;
 &lt;/a&gt;
 &lt;/div&gt;
 
@@ -95,11 +95,11 @@ Vous trouverez la liste des plugins dans &lt;code&gt;~/.oh-my-zsh/plugins&lt;/co
 &lt;p&gt;Voici un comparatif des deux rendus, version &lt;code&gt;ls&lt;/code&gt; et version &lt;code&gt;k&lt;/code&gt; :&lt;/p&gt;
 
 &lt;p&gt;&lt;div style=&#34;text-align : center&#34;&gt;
-&lt;a style=&#34;display: inline&#34; href=&#34;https://code-troopers.com/images/postKisTheNewL/lsalcolor.png&#34; data-lightbox=&#34;image-0&#34; title=&#34;version ls -al --color&#34;&gt;
-        &lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/postKisTheNewL/lsalcolor_min.png&#34; alt=&#34;version k&#34;/&gt;
+&lt;a style=&#34;display: inline&#34; href=&#34;https://code-troopers.com/images/posts/2014-05-14-kIsTheNewL/lsalcolor.png&#34; data-lightbox=&#34;image-0&#34; title=&#34;version ls -al --color&#34;&gt;
+        &lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/posts/2014-05-14-kIsTheNewL/lsalcolor_min.png&#34; alt=&#34;version k&#34;/&gt;
 &lt;/a&gt;
-&lt;a style=&#34;display: inline&#34; href=&#34;https://code-troopers.com/images/postKisTheNewL/k.png&#34; data-lightbox=&#34;image-0&#34; title=&#34;version k&#34;&gt;
-        &lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/postKisTheNewL/k_min.png&#34; alt=&#34;version k&#34;/&gt;
+&lt;a style=&#34;display: inline&#34; href=&#34;https://code-troopers.com/images/posts/2014-05-14-kIsTheNewL/k.png&#34; data-lightbox=&#34;image-0&#34; title=&#34;version k&#34;&gt;
+        &lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/posts/2014-05-14-kIsTheNewL/k_min.png&#34; alt=&#34;version k&#34;/&gt;
 &lt;/a&gt;
 &lt;/div&gt;
 &lt;br/&gt;&lt;/p&gt;

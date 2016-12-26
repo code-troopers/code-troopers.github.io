@@ -244,8 +244,8 @@ test=’mvn test’
 &lt;p&gt;Nous avons donc rajouté la commande &lt;code&gt;ct ports&lt;/code&gt; qui démarre un micro serveur http et permet de récupérer la liste des ports qui attendent des connexions sur nos machines, ainsi que le dossier de travail associé (ce qui est souvent suffisant pour savoir de quel projet il s’agit).&lt;/p&gt;
 
 &lt;div style=&#34;text-align:center;&#34;&gt;
-    &lt;a href=&#34;https://code-troopers.com/images/postCT/listen.png&#34; title=&#34;Exemple de listing des ports&#34; data-lightbox=&#34;group1&#34;&gt;
-    &lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/postCT/listen.png&#34; alt=&#34;Exemple de listing des ports&#34;&gt;&lt;/a&gt;
+    &lt;a href=&#34;https://code-troopers.com/images/posts/2014-12-15-CT_Project_Alias/listen.png&#34; title=&#34;Exemple de listing des ports&#34; data-lightbox=&#34;group1&#34;&gt;
+    &lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/posts/2014-12-15-CT_Project_Alias/listen.png&#34; alt=&#34;Exemple de listing des ports&#34;&gt;&lt;/a&gt;
 &lt;/div&gt;
 
 &lt;p&gt;Pour pouvoir utiliser cette commande, il faut que les quelques outils suivants soient installés : &lt;em&gt;netcat&lt;/em&gt;, &lt;em&gt;awk&lt;/em&gt;, &lt;em&gt;wget&lt;/em&gt; et &lt;em&gt;lsof&lt;/em&gt;.&lt;/p&gt;
@@ -290,8 +290,8 @@ Screencast d&#39;une utilisation quotidienne de ct. Vous n&#39;avez pas de navig
 &lt;p&gt;Cependant vous voudrez certainement personnaliser votre environnement avec quelques alias. Pour ceci, il suffit de créer un fichier contenant vos alias dans &lt;code&gt;~/.oh-my-zsh/custom/aliases.zsh&lt;/code&gt; (le nom est libre, le fichier doit porter l&amp;rsquo;extension  &lt;code&gt;zsh&lt;/code&gt; pour qu&amp;rsquo;il soit automatiquement chargé). Il ne s&amp;rsquo;agit ni plus ni moins de la configuration permise par oh-my-zsh (vous pouvez vous référer &lt;a href=&#34;https://code-troopers.com/2014/09/17/ohmyzsh/&#34;&gt;à cet article&lt;/a&gt; pour plus de détails)&lt;/p&gt;
 
 &lt;div style=&#34;text-align:center;margin:50px&#34;&gt;
- &lt;a style=&#34;display: inline&#34; href=&#34;https://code-troopers.com/images/postBabun/babun.png&#34; data-lightbox=&#34;image-0&#34; title=&#34;Babun et tmux&#34;&gt;
-         &lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/postBabun/babun.png&#34; alt=&#34;Babun et tmux&#34;/&gt;
+ &lt;a style=&#34;display: inline&#34; href=&#34;https://code-troopers.com/images/posts/2014-10-01-babun/babun.png&#34; data-lightbox=&#34;image-0&#34; title=&#34;Babun et tmux&#34;&gt;
+         &lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/posts/2014-10-01-babun/babun.png&#34; alt=&#34;Babun et tmux&#34;/&gt;
  &lt;/a&gt;
 &lt;/div&gt;
 
@@ -353,8 +353,8 @@ J&amp;rsquo;utilisais &lt;a href=&#34;https://github.com/nojhan/liquidprompt&#34
 Voici ce que cela donne avec mon thème (adapté du thème sunrise), que vous pouvez trouver  sur &lt;a href=&#34;https://raw.githubusercontent.com/mattboll/zshrc/master/mattboll.zsh-theme&#34;&gt;GitHub&lt;/a&gt; :&lt;/p&gt;
 
 &lt;div style=&#34;text-align:center;margin:50px&#34;&gt;
-&lt;a style=&#34;display: inline&#34; href=&#34;https://code-troopers.com/images/postOhMyZsh/oh-my-zsh-theme.png&#34; data-lightbox=&#34;image-0&#34; title=&#34;Thème oh-my-zsh&#34;&gt;
-        &lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/postOhMyZsh/oh-my-zsh-theme.png&#34; alt=&#34;Thème oh-my-zsh&#34;/&gt;
+&lt;a style=&#34;display: inline&#34; href=&#34;https://code-troopers.com/images/posts/2014-09-17-ohMyZsh/oh-my-zsh-theme.png&#34; data-lightbox=&#34;image-0&#34; title=&#34;Thème oh-my-zsh&#34;&gt;
+        &lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/posts/2014-09-17-ohMyZsh/oh-my-zsh-theme.png&#34; alt=&#34;Thème oh-my-zsh&#34;/&gt;
 &lt;/a&gt;
 &lt;/div&gt;
 
@@ -394,11 +394,11 @@ Vous trouverez la liste des plugins dans &lt;code&gt;~/.oh-my-zsh/plugins&lt;/co
 &lt;p&gt;Voici un comparatif des deux rendus, version &lt;code&gt;ls&lt;/code&gt; et version &lt;code&gt;k&lt;/code&gt; :&lt;/p&gt;
 
 &lt;p&gt;&lt;div style=&#34;text-align : center&#34;&gt;
-&lt;a style=&#34;display: inline&#34; href=&#34;https://code-troopers.com/images/postKisTheNewL/lsalcolor.png&#34; data-lightbox=&#34;image-0&#34; title=&#34;version ls -al --color&#34;&gt;
-        &lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/postKisTheNewL/lsalcolor_min.png&#34; alt=&#34;version k&#34;/&gt;
+&lt;a style=&#34;display: inline&#34; href=&#34;https://code-troopers.com/images/posts/2014-05-14-kIsTheNewL/lsalcolor.png&#34; data-lightbox=&#34;image-0&#34; title=&#34;version ls -al --color&#34;&gt;
+        &lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/posts/2014-05-14-kIsTheNewL/lsalcolor_min.png&#34; alt=&#34;version k&#34;/&gt;
 &lt;/a&gt;
-&lt;a style=&#34;display: inline&#34; href=&#34;https://code-troopers.com/images/postKisTheNewL/k.png&#34; data-lightbox=&#34;image-0&#34; title=&#34;version k&#34;&gt;
-        &lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/postKisTheNewL/k_min.png&#34; alt=&#34;version k&#34;/&gt;
+&lt;a style=&#34;display: inline&#34; href=&#34;https://code-troopers.com/images/posts/2014-05-14-kIsTheNewL/k.png&#34; data-lightbox=&#34;image-0&#34; title=&#34;version k&#34;&gt;
+        &lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/posts/2014-05-14-kIsTheNewL/k_min.png&#34; alt=&#34;version k&#34;/&gt;
 &lt;/a&gt;
 &lt;/div&gt;
 &lt;br/&gt;&lt;/p&gt;

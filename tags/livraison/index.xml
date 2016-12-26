@@ -40,11 +40,11 @@ Si ce n&amp;rsquo;est pas le cas, vous pouvez vous reposer sur la &lt;a href=&#3
 &lt;p&gt;Pour cela, rendez-vous dans un premier temps dans l&amp;rsquo;interface développeur du Play Store, dans la section &lt;code&gt;Settings &amp;gt; API acces&lt;/code&gt; et cliquez sur &lt;code&gt;Create Service Account&lt;/code&gt;.&lt;/p&gt;
 
 &lt;div style=&#34;text-align:center;margin:50px&#34;&gt;
-  &lt;a href=&#34;https://code-troopers.com/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_ConfigureAccount_Screen1.png&#34; data-lightbox=&#34;group-1&#34; title=&#34;Configuration de l&#39;Accout service - 1&#34; class=&#34;inlineBoxes&#34;&gt;
-    &lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_ConfigureAccount_Screen1.png&#34; alt=&#34;Configuration de l&#39;Accout service - 1&#34;/&gt;
+  &lt;a href=&#34;https://code-troopers.com/images/posts/2015-11-04-Android_publier_apk_avec_gradle/Android_Gradle_PublishAPK_ConfigureAccount_Screen1.png&#34; data-lightbox=&#34;group-1&#34; title=&#34;Configuration de l&#39;Accout service - 1&#34; class=&#34;inlineBoxes&#34;&gt;
+    &lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/posts/2015-11-04-Android_publier_apk_avec_gradle/Android_Gradle_PublishAPK_ConfigureAccount_Screen1.png&#34; alt=&#34;Configuration de l&#39;Accout service - 1&#34;/&gt;
   &lt;/a&gt;
-  &lt;a href=&#34;https://code-troopers.com/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_ConfigureAccount_Screen2.png&#34; data-lightbox=&#34;group-1&#34; title=&#34;Configuration de l&#39;Accout service - 2&#34; class=&#34;inlineBoxes&#34;&gt;
-    &lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_ConfigureAccount_Screen2.png&#34; alt=&#34;Configuration de l&#39;Accout service - 2&#34;/&gt;
+  &lt;a href=&#34;https://code-troopers.com/images/posts/2015-11-04-Android_publier_apk_avec_gradle/Android_Gradle_PublishAPK_ConfigureAccount_Screen2.png&#34; data-lightbox=&#34;group-1&#34; title=&#34;Configuration de l&#39;Accout service - 2&#34; class=&#34;inlineBoxes&#34;&gt;
+    &lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/posts/2015-11-04-Android_publier_apk_avec_gradle/Android_Gradle_PublishAPK_ConfigureAccount_Screen2.png&#34; alt=&#34;Configuration de l&#39;Accout service - 2&#34;/&gt;
   &lt;/a&gt;
 &lt;/div&gt;
 
@@ -55,22 +55,22 @@ Si ce n&amp;rsquo;est pas le cas, vous pouvez vous reposer sur la &lt;a href=&#3
 &lt;p&gt;On peut ensuite voir qu&amp;rsquo;un nouveau &lt;code&gt;Service account&lt;/code&gt; est apparu dans la liste des Credentials.&lt;/p&gt;
 
 &lt;div style=&#34;text-align:center;margin:50px&#34;&gt;
-  &lt;a href=&#34;https://code-troopers.com/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_ConfigureAccount_Screen3.png&#34; data-lightbox=&#34;group-1&#34; title=&#34;Configuration de l&#39;Accout service - 3&#34; class=&#34;inlineBoxes&#34;&gt;
-    &lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_ConfigureAccount_Screen3.png&#34; alt=&#34;Configuration de l&#39;Accout service - 3&#34;/&gt;
+  &lt;a href=&#34;https://code-troopers.com/images/posts/2015-11-04-Android_publier_apk_avec_gradle/Android_Gradle_PublishAPK_ConfigureAccount_Screen3.png&#34; data-lightbox=&#34;group-1&#34; title=&#34;Configuration de l&#39;Accout service - 3&#34; class=&#34;inlineBoxes&#34;&gt;
+    &lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/posts/2015-11-04-Android_publier_apk_avec_gradle/Android_Gradle_PublishAPK_ConfigureAccount_Screen3.png&#34; alt=&#34;Configuration de l&#39;Accout service - 3&#34;/&gt;
   &lt;/a&gt;
-  &lt;a href=&#34;https://code-troopers.com/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_ConfigureAccount_Screen4.png&#34; data-lightbox=&#34;group-1&#34; title=&#34;Configuration de l&#39;Accout service - 4&#34; class=&#34;inlineBoxes&#34;&gt;
-    &lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_ConfigureAccount_Screen4.png&#34; alt=&#34;Configuration de l&#39;Accout service - 4&#34;/&gt;
+  &lt;a href=&#34;https://code-troopers.com/images/posts/2015-11-04-Android_publier_apk_avec_gradle/Android_Gradle_PublishAPK_ConfigureAccount_Screen4.png&#34; data-lightbox=&#34;group-1&#34; title=&#34;Configuration de l&#39;Accout service - 4&#34; class=&#34;inlineBoxes&#34;&gt;
+    &lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/posts/2015-11-04-Android_publier_apk_avec_gradle/Android_Gradle_PublishAPK_ConfigureAccount_Screen4.png&#34; alt=&#34;Configuration de l&#39;Accout service - 4&#34;/&gt;
   &lt;/a&gt;
-  &lt;a href=&#34;https://code-troopers.com/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_ConfigureAccount_Screen5.png&#34; data-lightbox=&#34;group-1&#34; title=&#34;Configuration de l&#39;Accout service - 5&#34; class=&#34;inlineBoxes&#34;&gt;
-    &lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_ConfigureAccount_Screen5.png&#34; alt=&#34;Configuration de l&#39;Accout service - 5&#34;/&gt;
+  &lt;a href=&#34;https://code-troopers.com/images/posts/2015-11-04-Android_publier_apk_avec_gradle/Android_Gradle_PublishAPK_ConfigureAccount_Screen5.png&#34; data-lightbox=&#34;group-1&#34; title=&#34;Configuration de l&#39;Accout service - 5&#34; class=&#34;inlineBoxes&#34;&gt;
+    &lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/posts/2015-11-04-Android_publier_apk_avec_gradle/Android_Gradle_PublishAPK_ConfigureAccount_Screen5.png&#34; alt=&#34;Configuration de l&#39;Accout service - 5&#34;/&gt;
   &lt;/a&gt;
 &lt;/div&gt;
 
 &lt;p&gt;De retour sur l&amp;rsquo;interface d&amp;rsquo;admin du Play Store, on constate que le &lt;code&gt;Service Account&lt;/code&gt; est bien créé et disponible ici.&lt;/p&gt;
 
 &lt;div style=&#34;text-align:center;margin:50px&#34;&gt;
-  &lt;a href=&#34;https://code-troopers.com/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_ConfigureAccount_Screen6.png&#34; data-lightbox=&#34;group-1&#34; title=&#34;Configuration de l&#39;Accout service - 6&#34; class=&#34;inlineBoxes&#34;&gt;
-    &lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_ConfigureAccount_Screen6.png&#34; alt=&#34;Configuration de l&#39;Accout service - 6&#34;/&gt;
+  &lt;a href=&#34;https://code-troopers.com/images/posts/2015-11-04-Android_publier_apk_avec_gradle/Android_Gradle_PublishAPK_ConfigureAccount_Screen6.png&#34; data-lightbox=&#34;group-1&#34; title=&#34;Configuration de l&#39;Accout service - 6&#34; class=&#34;inlineBoxes&#34;&gt;
+    &lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/posts/2015-11-04-Android_publier_apk_avec_gradle/Android_Gradle_PublishAPK_ConfigureAccount_Screen6.png&#34; alt=&#34;Configuration de l&#39;Accout service - 6&#34;/&gt;
   &lt;/a&gt;
 &lt;/div&gt;
 
@@ -90,11 +90,11 @@ Si ce n&amp;rsquo;est pas le cas, vous pouvez vous reposer sur la &lt;a href=&#3
 &lt;p&gt;Ces choix pourront être modifés ultérieurement dans l&amp;rsquo;écran récapitulatif (mais ce n&amp;rsquo;est pas recommandé).&lt;/p&gt;
 
 &lt;div style=&#34;text-align:center;margin:50px&#34;&gt;
-  &lt;a href=&#34;https://code-troopers.com/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_ConfigureAccount_Screen7.png&#34; data-lightbox=&#34;group-1&#34; title=&#34;Configuration de l&#39;Accout service - 7&#34; class=&#34;inlineBoxes&#34;&gt;
-    &lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_ConfigureAccount_Screen7.png&#34; alt=&#34;Configuration de l&#39;Accout service - 7&#34;/&gt;
+  &lt;a href=&#34;https://code-troopers.com/images/posts/2015-11-04-Android_publier_apk_avec_gradle/Android_Gradle_PublishAPK_ConfigureAccount_Screen7.png&#34; data-lightbox=&#34;group-1&#34; title=&#34;Configuration de l&#39;Accout service - 7&#34; class=&#34;inlineBoxes&#34;&gt;
+    &lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/posts/2015-11-04-Android_publier_apk_avec_gradle/Android_Gradle_PublishAPK_ConfigureAccount_Screen7.png&#34; alt=&#34;Configuration de l&#39;Accout service - 7&#34;/&gt;
   &lt;/a&gt;
-  &lt;a href=&#34;https://code-troopers.com/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_ConfigureAccount_Screen8.png&#34; data-lightbox=&#34;group-1&#34; title=&#34;Configuration de l&#39;Accout service - 8&#34; class=&#34;inlineBoxes&#34;&gt;
-    &lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_ConfigureAccount_Screen8.png&#34; alt=&#34;Configuration de l&#39;Accout service - 8&#34;/&gt;
+  &lt;a href=&#34;https://code-troopers.com/images/posts/2015-11-04-Android_publier_apk_avec_gradle/Android_Gradle_PublishAPK_ConfigureAccount_Screen8.png&#34; data-lightbox=&#34;group-1&#34; title=&#34;Configuration de l&#39;Accout service - 8&#34; class=&#34;inlineBoxes&#34;&gt;
+    &lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/posts/2015-11-04-Android_publier_apk_avec_gradle/Android_Gradle_PublishAPK_ConfigureAccount_Screen8.png&#34; alt=&#34;Configuration de l&#39;Accout service - 8&#34;/&gt;
   &lt;/a&gt;
 &lt;/div&gt;
 
@@ -138,11 +138,11 @@ apply plugin: &#39;com.github.triplet.play&#39;
 &lt;p&gt;On y voit toutes les tâches gradle qu&amp;rsquo;on peut appeler :&lt;/p&gt;
 
 &lt;div style=&#34;text-align:center;margin:50px&#34;&gt;
-  &lt;a href=&#34;https://code-troopers.com/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_Gradlew_tasks_config_before.png&#34; data-lightbox=&#34;group-1&#34; title=&#34;Liste des tasks gradle disponibles sans le plugin&#34; class=&#34;inlineBoxes&#34;&gt;
-    &lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_Gradlew_tasks_config_before.png&#34; alt=&#34;Liste des tasks gradle disponibles sans le plugin&#34;/&gt;
+  &lt;a href=&#34;https://code-troopers.com/images/posts/2015-11-04-Android_publier_apk_avec_gradle/Android_Gradle_PublishAPK_Gradlew_tasks_config_before.png&#34; data-lightbox=&#34;group-1&#34; title=&#34;Liste des tasks gradle disponibles sans le plugin&#34; class=&#34;inlineBoxes&#34;&gt;
+    &lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/posts/2015-11-04-Android_publier_apk_avec_gradle/Android_Gradle_PublishAPK_Gradlew_tasks_config_before.png&#34; alt=&#34;Liste des tasks gradle disponibles sans le plugin&#34;/&gt;
   &lt;/a&gt;
-  &lt;a href=&#34;https://code-troopers.com/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_Gradlew_tasks_config_after.png&#34; data-lightbox=&#34;group-1&#34; title=&#34;Liste des tasks gradle disponibles avec le plugin&#34; class=&#34;inlineBoxes&#34;&gt;
-    &lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_Gradlew_tasks_config_after.png&#34; alt=&#34;Liste des tasks gradle disponibles avec le plugin&#34;/&gt;
+  &lt;a href=&#34;https://code-troopers.com/images/posts/2015-11-04-Android_publier_apk_avec_gradle/Android_Gradle_PublishAPK_Gradlew_tasks_config_after.png&#34; data-lightbox=&#34;group-1&#34; title=&#34;Liste des tasks gradle disponibles avec le plugin&#34; class=&#34;inlineBoxes&#34;&gt;
+    &lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/posts/2015-11-04-Android_publier_apk_avec_gradle/Android_Gradle_PublishAPK_Gradlew_tasks_config_after.png&#34; alt=&#34;Liste des tasks gradle disponibles avec le plugin&#34;/&gt;
   &lt;/a&gt;
 &lt;/div&gt;
 
@@ -168,8 +168,8 @@ Ce qui peut notamment se faire comme ça :&lt;/p&gt;
 &lt;p&gt;Maintenant, on peut voir la présence de la tâche qui nous intéresse : &lt;code&gt;publishApkRelease&lt;/code&gt;&lt;/p&gt;
 
 &lt;div style=&#34;text-align:center;margin:50px&#34;&gt;
-  &lt;a href=&#34;https://code-troopers.com/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_Gradlew_tasks_config_complete.png&#34; data-lightbox=&#34;group-1&#34; title=&#34;Liste des tasks gradle disponibles avec upload apk&#34; class=&#34;inlineBoxes&#34;&gt;
-    &lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_Gradlew_tasks_config_complete.png&#34; alt=&#34;Liste des tasks gradle disponibles avec upload apk&#34;/&gt;
+  &lt;a href=&#34;https://code-troopers.com/images/posts/2015-11-04-Android_publier_apk_avec_gradle/Android_Gradle_PublishAPK_Gradlew_tasks_config_complete.png&#34; data-lightbox=&#34;group-1&#34; title=&#34;Liste des tasks gradle disponibles avec upload apk&#34; class=&#34;inlineBoxes&#34;&gt;
+    &lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/posts/2015-11-04-Android_publier_apk_avec_gradle/Android_Gradle_PublishAPK_Gradlew_tasks_config_complete.png&#34; alt=&#34;Liste des tasks gradle disponibles avec upload apk&#34;/&gt;
   &lt;/a&gt;
 &lt;/div&gt;        
 
@@ -185,8 +185,8 @@ Ce qui peut notamment se faire comme ça :&lt;/p&gt;
 &lt;p&gt;Si il y a un problème lors de l&amp;rsquo;updload, il est affiché dans la console, par exemple si le &lt;strong&gt;version code&lt;/strong&gt; est déjà utilisé&lt;/p&gt;
 
 &lt;div style=&#34;text-align:center;margin:50px&#34;&gt;
-  &lt;a href=&#34;https://code-troopers.com/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_Gradlew_upload_ko.png&#34; data-lightbox=&#34;group-1&#34; title=&#34;Exemple d&#39;upload d&#39;apk en erreur&#34; class=&#34;inlineBoxes&#34;&gt;
-    &lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/postAndroidGradlePublishApk/Android_Gradle_PublishAPK_Gradlew_upload_ko.png&#34; alt=&#34;Exemple d&#39;upload d&#39;apk en erreur&#34;/&gt;
+  &lt;a href=&#34;https://code-troopers.com/images/posts/2015-11-04-Android_publier_apk_avec_gradle/Android_Gradle_PublishAPK_Gradlew_upload_ko.png&#34; data-lightbox=&#34;group-1&#34; title=&#34;Exemple d&#39;upload d&#39;apk en erreur&#34; class=&#34;inlineBoxes&#34;&gt;
+    &lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/posts/2015-11-04-Android_publier_apk_avec_gradle/Android_Gradle_PublishAPK_Gradlew_upload_ko.png&#34; alt=&#34;Exemple d&#39;upload d&#39;apk en erreur&#34;/&gt;
   &lt;/a&gt;
 &lt;/div&gt;    
 

@@ -46,19 +46,19 @@ Au final, on a pu commencer à tous faire nos git clone vers 10h le samedi matin
 &lt;p&gt;Le samedi soir, on est dans la vibe. Plus trop besoin de réseau, on a des visuels et nos bibliothèques de base. Pas besoin de s&amp;rsquo;occuper des ravitaillements, on se concentre juste sur le code et c&amp;rsquo;est ça qu&amp;rsquo;on aime.
 Nous avons donc une navbar avec notre logo et les différentes actions de navigation fonctionnelles.
 &lt;div style=&#34;text-align:center;margin-bottom:50px&#34;&gt;
-    &lt;a href=&#34;https://code-troopers.com/images/postWeGuide/navbar1.png&#34; data-lightbox=&#34;group-2&#34; title=&#34;navbar weguide&#34; class=&#34;inlineBoxes&#34;&gt;
-&lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/postWeGuide/navbar1.png&#34; alt=&#34;navbar&#34;/&gt;&lt;br/&gt;
+    &lt;a href=&#34;https://code-troopers.com/images/posts/2016-01-14-StartupWeekend-CotePerdant/navbar1.png&#34; data-lightbox=&#34;group-2&#34; title=&#34;navbar weguide&#34; class=&#34;inlineBoxes&#34;&gt;
+&lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/posts/2016-01-14-StartupWeekend-CotePerdant/navbar1.png&#34; alt=&#34;navbar&#34;/&gt;&lt;br/&gt;
     &lt;/a&gt;
 &lt;br/&gt;
-    &lt;a href=&#34;https://code-troopers.com/images/postWeGuide/navbar2.png&#34; data-lightbox=&#34;group-2&#34; title=&#34;navbar connected weguide&#34; class=&#34;inlineBoxes&#34;&gt;
-&lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/postWeGuide/navbar2.png&#34; alt=&#34;navbar connecté&#34;/&gt;
+    &lt;a href=&#34;https://code-troopers.com/images/posts/2016-01-14-StartupWeekend-CotePerdant/navbar2.png&#34; data-lightbox=&#34;group-2&#34; title=&#34;navbar connected weguide&#34; class=&#34;inlineBoxes&#34;&gt;
+&lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/posts/2016-01-14-StartupWeekend-CotePerdant/navbar2.png&#34; alt=&#34;navbar connecté&#34;/&gt;
     &lt;/a&gt;
 &lt;/div&gt;&lt;/p&gt;
 
 &lt;p&gt;Un logo, une phrase d&amp;rsquo;accroche sur un fond de page avec transition d&amp;rsquo;images en background animé par css (ici en accéléré dans le gif).
 &lt;div style=&#34;text-align:center;margin-bottom:50px&#34;&gt;
-    &lt;a href=&#34;https://code-troopers.com/images/postWeGuide/logo.gif&#34; data-lightbox=&#34;group-3&#34; title=&#34;Logo weguide&#34; class=&#34;inlineBoxes&#34;&gt;
-&lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/postWeGuide/logo.gif&#34; alt=&#34;logo&#34;/&gt;
+    &lt;a href=&#34;https://code-troopers.com/images/posts/2016-01-14-StartupWeekend-CotePerdant/logo.gif&#34; data-lightbox=&#34;group-3&#34; title=&#34;Logo weguide&#34; class=&#34;inlineBoxes&#34;&gt;
+&lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/posts/2016-01-14-StartupWeekend-CotePerdant/logo.gif&#34; alt=&#34;logo&#34;/&gt;
     &lt;/a&gt;
 &lt;/div&gt;&lt;/p&gt;
 
@@ -66,32 +66,32 @@ Nous avons donc une navbar avec notre logo et les différentes actions de naviga
 On recherche donc une ville, un autocomplete angular material, avec des dates de début et de fin de projet. Si vous connaissez AngularJS, vous savez peut-être qu&amp;rsquo;il n&amp;rsquo;y avait pas de date picker jusqu&amp;rsquo;à peu. Maintenant il y en a mais en RC et c&amp;rsquo;est encore un peu buggué, il a fallu corriger certaines choses liées au style.
 Ah oui, sur le bouton de recherche, en plus du ripple effect il y a un petit effet kiss cool tout en css et évidemment, la ville est mandatory (tout est dans le détail).
 &lt;div style=&#34;text-align: center;margin:50px;&#34;&gt;
-&lt;video style=&#34;width: 90%; max-width: 600px;&#34; controls src=&#34;https://code-troopers.com/images/postWeGuide/search.webm&#34;&gt;&lt;/video&gt;
+&lt;video style=&#34;width: 90%; max-width: 600px;&#34; controls src=&#34;https://code-troopers.com/images/posts/2016-01-14-StartupWeekend-CotePerdant/search.webm&#34;&gt;&lt;/video&gt;
 &lt;/div&gt;&lt;/p&gt;
 
 &lt;p&gt;On arrive alors sur la page de résultats. Sur cette page au design épuré, nous avons la barre de recherche avec la ville et les dates saisies précédemment.
 &lt;div style=&#34;text-align:center;margin-bottom:50px&#34;&gt;
-    &lt;a href=&#34;https://code-troopers.com/images/postWeGuide/searchbar.png&#34; data-lightbox=&#34;group-4&#34; title=&#34;Searchbar weguide&#34; class=&#34;inlineBoxes&#34;&gt;
-&lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/postWeGuide/searchbar.png&#34; alt=&#34;searchbar&#34;/&gt;
+    &lt;a href=&#34;https://code-troopers.com/images/posts/2016-01-14-StartupWeekend-CotePerdant/searchbar.png&#34; data-lightbox=&#34;group-4&#34; title=&#34;Searchbar weguide&#34; class=&#34;inlineBoxes&#34;&gt;
+&lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/posts/2016-01-14-StartupWeekend-CotePerdant/searchbar.png&#34; alt=&#34;searchbar&#34;/&gt;
     &lt;/a&gt;
 &lt;/div&gt;&lt;/p&gt;
 
 &lt;p&gt;S&amp;rsquo;en suit des paramètres par défaut. Des checkbox pour les activités, des doubles sliders pour sélectionner la distance et le prix souhaité.
 &lt;div style=&#34;text-align:center;margin-bottom:50px&#34;&gt;
-    &lt;a href=&#34;https://code-troopers.com/images/postWeGuide/params.gif&#34; data-lightbox=&#34;group-5&#34; title=&#34;search parameters weguide&#34; class=&#34;inlineBoxes&#34;&gt;
-&lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/postWeGuide/params.gif&#34; alt=&#34;params&#34;/&gt;
+    &lt;a href=&#34;https://code-troopers.com/images/posts/2016-01-14-StartupWeekend-CotePerdant/params.gif&#34; data-lightbox=&#34;group-5&#34; title=&#34;search parameters weguide&#34; class=&#34;inlineBoxes&#34;&gt;
+&lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/posts/2016-01-14-StartupWeekend-CotePerdant/params.gif&#34; alt=&#34;params&#34;/&gt;
     &lt;/a&gt;
 &lt;/div&gt;&lt;/p&gt;
 
 &lt;p&gt;Au centre, une description du guide, &amp;ldquo;effet zoom pour plus d&amp;rsquo;infos&amp;rdquo; et la possibilité de lui envoyer un message.
 &lt;div style=&#34;text-align: center;margin:50px;&#34;&gt;
-&lt;video style=&#34;width: 90%; max-width: 600px;&#34; controls src=&#34;https://code-troopers.com/images/postWeGuide/guide.webm&#34;&gt;&lt;/video&gt;
+&lt;video style=&#34;width: 90%; max-width: 600px;&#34; controls src=&#34;https://code-troopers.com/images/posts/2016-01-14-StartupWeekend-CotePerdant/guide.webm&#34;&gt;&lt;/video&gt;
 &lt;/div&gt;&lt;/p&gt;
 
 &lt;p&gt;Enfin, une autre page fonctionnelle a été réalisée pour s&amp;rsquo;inscrire en tant que guide.
 Tout est enregistré dans le local storage avec AngularJS, ça permet d&amp;rsquo;aller vite, de pouvoir jouer avec l&amp;rsquo;appli mais de ne pas avoir besoin d&amp;rsquo;une base de donnée.
 &lt;div style=&#34;text-align: center;margin:50px;&#34;&gt;
-&lt;video style=&#34;width: 90%; max-width: 600px;&#34; controls src=&#34;https://code-troopers.com/images/postWeGuide/register.webm&#34;&gt;&lt;/video&gt;
+&lt;video style=&#34;width: 90%; max-width: 600px;&#34; controls src=&#34;https://code-troopers.com/images/posts/2016-01-14-StartupWeekend-CotePerdant/register.webm&#34;&gt;&lt;/video&gt;
 &lt;/div&gt;&lt;/p&gt;
 
 &lt;p&gt;Pour en voir plus, vous pouvez aller sur &lt;a href=&#34;https://weguide.herokuapp.com&#34;&gt;https://weguide.herokuapp.com&lt;/a&gt;  et le code est disponible sur &lt;a href=&#34;https://github.com/code-troopers/sw-weguide/&#34;&gt;https://github.com/code-troopers/sw-weguide/&lt;/a&gt; mais ne vous attardez pas trop sur les commits logs :p&lt;/p&gt;

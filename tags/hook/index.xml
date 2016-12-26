@@ -54,8 +54,8 @@ $ git config --global user.email &amp;quot;jango.fett@code-troopers.com&amp;quot
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;div style=&#34;text-align:center;margin-bottom:50px&#34;&gt;
-    &lt;a href=&#34;https://code-troopers.com/images/postDotfilesGit/gitcolours.png&#34; data-lightbox=&#34;group-1&#34; title=&#34;git avec couleurs personnalisées&#34; class=&#34;inlineBoxes&#34;&gt;
-        &lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/postDotfilesGit/gitcolours.png&#34; alt=&#34;git avec couleurs personnalisées&#34;/&gt;
+    &lt;a href=&#34;https://code-troopers.com/images/posts/2015-05-22-Dotfiles-git/gitcolours.png&#34; data-lightbox=&#34;group-1&#34; title=&#34;git avec couleurs personnalisées&#34; class=&#34;inlineBoxes&#34;&gt;
+        &lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/posts/2015-05-22-Dotfiles-git/gitcolours.png&#34; alt=&#34;git avec couleurs personnalisées&#34;/&gt;
     &lt;/a&gt;
 &lt;/div&gt;
 
@@ -90,8 +90,8 @@ $ git config --global user.email &amp;quot;jango.fett@code-troopers.com&amp;quot
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;div style=&#34;text-align:center;margin-bottom:50px&#34;&gt;
-    &lt;a href=&#34;https://code-troopers.com/images/postDotfilesGit/git-status.png&#34; data-lightbox=&#34;group-1&#34; title=&#34;git status coloré&#34; class=&#34;inlineBoxes&#34;&gt;
-        &lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/postDotfilesGit/git-status.png&#34; alt=&#34;git status coloré&#34;/&gt;
+    &lt;a href=&#34;https://code-troopers.com/images/posts/2015-05-22-Dotfiles-git/git-status.png&#34; data-lightbox=&#34;group-1&#34; title=&#34;git status coloré&#34; class=&#34;inlineBoxes&#34;&gt;
+        &lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/posts/2015-05-22-Dotfiles-git/git-status.png&#34; alt=&#34;git status coloré&#34;/&gt;
     &lt;/a&gt;
 &lt;/div&gt;
 
@@ -141,8 +141,8 @@ J&amp;rsquo;ai récupéré le mien sur &lt;a href=&#34;https://github.com/borisg
 &lt;p&gt;On interdit de commiter &lt;code&gt;printStackTrace(&lt;/code&gt; ou &lt;code&gt;FIXME&lt;/code&gt; ou &lt;code&gt;TODO&lt;/code&gt; dans les fichiers &lt;code&gt;java&lt;/code&gt; ou &lt;code&gt;js&lt;/code&gt;.&lt;/p&gt;
 
 &lt;div style=&#34;text-align:center;margin-bottom:50px&#34;&gt;
-    &lt;a href=&#34;https://code-troopers.com/images/postDotfilesGit/git-hooks.png&#34; data-lightbox=&#34;group-1&#34; title=&#34;git hooks pre-commit en action&#34; class=&#34;inlineBoxes&#34;&gt;
-        &lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/postDotfilesGit/git-hooks.png&#34; alt=&#34;git hooks pre-commit en action&#34;/&gt;
+    &lt;a href=&#34;https://code-troopers.com/images/posts/2015-05-22-Dotfiles-git/git-hooks.png&#34; data-lightbox=&#34;group-1&#34; title=&#34;git hooks pre-commit en action&#34; class=&#34;inlineBoxes&#34;&gt;
+        &lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/posts/2015-05-22-Dotfiles-git/git-hooks.png&#34; alt=&#34;git hooks pre-commit en action&#34;/&gt;
     &lt;/a&gt;
 &lt;/div&gt;
 

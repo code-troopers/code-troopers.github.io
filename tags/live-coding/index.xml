@@ -26,30 +26,30 @@ Cette époque est maintenant révolue, en effet, IntellJ possède un mode prése
 &lt;p&gt;Le résultat en deux screens de comparaison : utilisation classique vs mode présentation&lt;/p&gt;
 
 &lt;div style=&#34;text-align:center;margin:50px&#34;&gt;
-    &lt;a href=&#34;https://code-troopers.com/images/postDevoxx1/normalView.png&#34; data-lightbox=&#34;group-1&#34; title=&#34;Mode normal&#34;  class=&#34;inlineBoxes&#34;&gt;
-        &lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/postDevoxx1/normalView.png&#34; alt=&#34;Mode normal&#34;/&gt;
+    &lt;a href=&#34;https://code-troopers.com/images/posts/2014-04-21-devoxx1/normalView.png&#34; data-lightbox=&#34;group-1&#34; title=&#34;Mode normal&#34;  class=&#34;inlineBoxes&#34;&gt;
+        &lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/posts/2014-04-21-devoxx1/normalView.png&#34; alt=&#34;Mode normal&#34;/&gt;
     &lt;/a&gt;
-    &lt;a href=&#34;https://code-troopers.com/images/postDevoxx1/presentationView.png&#34; data-lightbox=&#34;group-1&#34; title=&#34;Mode présentation&#34;  class=&#34;inlineBoxes&#34;&gt;
-        &lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/postDevoxx1/presentationView.png&#34; alt=&#34;Mode présentation&#34;/&gt;
+    &lt;a href=&#34;https://code-troopers.com/images/posts/2014-04-21-devoxx1/presentationView.png&#34; data-lightbox=&#34;group-1&#34; title=&#34;Mode présentation&#34;  class=&#34;inlineBoxes&#34;&gt;
+        &lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/posts/2014-04-21-devoxx1/presentationView.png&#34; alt=&#34;Mode présentation&#34;/&gt;
     &lt;/a&gt;
 &lt;/div&gt;
 
 &lt;p&gt;Pour activer le mode présentation ça se passe dans le menu &lt;code&gt;View&lt;/code&gt; &amp;gt; &lt;code&gt;Enter Presentation Mode&lt;/code&gt;. Et pour le quitter &lt;code&gt;View&lt;/code&gt; &amp;gt; &lt;code&gt;Exit Presentation Mode&lt;/code&gt;.&lt;/p&gt;
 
 &lt;div style=&#34;text-align:center;margin:50px&#34;&gt;
-    &lt;a href=&#34;https://code-troopers.com/images/postDevoxx1/menu1.png&#34; data-lightbox=&#34;group-1&#34; title=&#34;Menu pour passer en mode présentation&#34; class=&#34;inlineBoxes&#34;&gt;
-        &lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/postDevoxx1/menu1.png&#34; alt=&#34;Accès Menu présentation&#34;/&gt;
+    &lt;a href=&#34;https://code-troopers.com/images/posts/2014-04-21-devoxx1/menu1.png&#34; data-lightbox=&#34;group-1&#34; title=&#34;Menu pour passer en mode présentation&#34; class=&#34;inlineBoxes&#34;&gt;
+        &lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/posts/2014-04-21-devoxx1/menu1.png&#34; alt=&#34;Accès Menu présentation&#34;/&gt;
     &lt;/a&gt;
-    &lt;a href=&#34;https://code-troopers.com/images/postDevoxx1/menu2.png&#34; data-lightbox=&#34;group-1&#34; title=&#34;Menu pour quitter en mode présentation&#34; class=&#34;inlineBoxes&#34;&gt;
-            &lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/postDevoxx1/menu2.png&#34; alt=&#34;Retour normal&#34;/&gt;
+    &lt;a href=&#34;https://code-troopers.com/images/posts/2014-04-21-devoxx1/menu2.png&#34; data-lightbox=&#34;group-1&#34; title=&#34;Menu pour quitter en mode présentation&#34; class=&#34;inlineBoxes&#34;&gt;
+            &lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/posts/2014-04-21-devoxx1/menu2.png&#34; alt=&#34;Retour normal&#34;/&gt;
     &lt;/a&gt;
 &lt;/div&gt;
 
 &lt;p&gt;Bien évidement, assigner un raccourci clavier permettra d&amp;rsquo;être encore plus fluide pour switcher de mode.&lt;/p&gt;
 
 &lt;div style=&#34;text-align:center;margin:50px;&#34;&gt;
-    &lt;a href=&#34;https://code-troopers.com/images/postDevoxx1/settingShortcut.png&#34; data-lightbox=&#34;group-1&#34; title=&#34;Settings pour affecter un raccourci à l&#39;action présentation&#34;&gt;
-        &lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/postDevoxx1/settingShortcut.png&#34; alt=&#34;Settings pour raccourci&#34;/&gt;
+    &lt;a href=&#34;https://code-troopers.com/images/posts/2014-04-21-devoxx1/settingShortcut.png&#34; data-lightbox=&#34;group-1&#34; title=&#34;Settings pour affecter un raccourci à l&#39;action présentation&#34;&gt;
+        &lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/posts/2014-04-21-devoxx1/settingShortcut.png&#34; alt=&#34;Settings pour raccourci&#34;/&gt;
     &lt;/a&gt;
 &lt;/div&gt;
 

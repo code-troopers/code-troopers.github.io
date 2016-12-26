@@ -22,8 +22,8 @@
 &lt;p&gt;Nous allons seulement parler du service de monitoring des serveurs dans cet article.&lt;/p&gt;
 
 &lt;div style=&#34;float:right;margin:20px&#34;&gt;
-    &lt;a href=&#34;https://code-troopers.com/images/postNewrelicDocker/new-relic.png&#34; data-lightbox=&#34;group-1&#34; title=&#34;New Relic Logo&#34; class=&#34;inlineBoxes&#34;&gt;
-        &lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/postNewrelicDocker/new-relic.png&#34; alt=&#34;New Relic Logo&#34;/&gt;
+    &lt;a href=&#34;https://code-troopers.com/images/posts/2015-09-30-NewRelicDocker/new-relic.png&#34; data-lightbox=&#34;group-1&#34; title=&#34;New Relic Logo&#34; class=&#34;inlineBoxes&#34;&gt;
+        &lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/posts/2015-09-30-NewRelicDocker/new-relic.png&#34; alt=&#34;New Relic Logo&#34;/&gt;
     &lt;/a&gt;
 &lt;/div&gt;
 
@@ -34,11 +34,11 @@
 &lt;p&gt;Ce qui est encore plus fort avec le service de monitoring des serveurs de New Relic, c&amp;rsquo;est qu&amp;rsquo;il est capable de comprendre Docker et donc de vous remonter les données par conteneur.&lt;/p&gt;
 
 &lt;div style=&#34;text-align:center;margin:50px&#34;&gt;
-    &lt;a href=&#34;https://code-troopers.com/images/postNewrelicDocker/screen-newrelic-1.png&#34; data-lightbox=&#34;group-3&#34; title=&#34;Screen 1 New Relic&#34; class=&#34;inlineBoxes&#34;&gt;
-        &lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/postNewrelicDocker/screen-newrelic-1.png&#34; alt=&#34;Screen 1 New Relic&#34;/&gt;
+    &lt;a href=&#34;https://code-troopers.com/images/posts/2015-09-30-NewRelicDocker/screen-newrelic-1.png&#34; data-lightbox=&#34;group-3&#34; title=&#34;Screen 1 New Relic&#34; class=&#34;inlineBoxes&#34;&gt;
+        &lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/posts/2015-09-30-NewRelicDocker/screen-newrelic-1.png&#34; alt=&#34;Screen 1 New Relic&#34;/&gt;
     &lt;/a&gt;
-    &lt;a href=&#34;https://code-troopers.com/images/postNewrelicDocker/screen-newrelic-2.png&#34; data-lightbox=&#34;group-3&#34; title=&#34;Screen 2 New Relic&#34; class=&#34;inlineBoxes&#34;&gt;
-        &lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/postNewrelicDocker/screen-newrelic-2.png&#34; alt=&#34;Screen 2 New Relic&#34;/&gt;
+    &lt;a href=&#34;https://code-troopers.com/images/posts/2015-09-30-NewRelicDocker/screen-newrelic-2.png&#34; data-lightbox=&#34;group-3&#34; title=&#34;Screen 2 New Relic&#34; class=&#34;inlineBoxes&#34;&gt;
+        &lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/posts/2015-09-30-NewRelicDocker/screen-newrelic-2.png&#34; alt=&#34;Screen 2 New Relic&#34;/&gt;
     &lt;/a&gt;
 &lt;/div&gt;
 

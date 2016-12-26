@@ -48,8 +48,8 @@ et trouver de la complétion en automatique (ainsi que la JSDoc).&lt;/p&gt;
 &lt;/ul&gt;
 
 &lt;div style=&#34;text-align:center;margin-bottom:50px&#34;&gt;
-    &lt;a href=&#34;https://code-troopers.com/images/2015-06-JavaScriptIntelliJ/cdndl.png&#34; data-lightbox=&#34;group-1&#34; title=&#34;Le téléchargement des fichiers sur un CDN [alt+entrée]&#34; class=&#34;inlineBoxes&#34;&gt;
-        &lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/2015-06-JavaScriptIntelliJ/cdndl.png&#34; alt=&#34;Le téléchargement des fichiers sur un CDN [alt+entrée]&#34;/&gt;
+    &lt;a href=&#34;https://code-troopers.com/images/posts/2015-06-JavaScriptIntelliJ/cdndl.png&#34; data-lightbox=&#34;group-1&#34; title=&#34;Le téléchargement des fichiers sur un CDN [alt+entrée]&#34; class=&#34;inlineBoxes&#34;&gt;
+        &lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/posts/2015-06-JavaScriptIntelliJ/cdndl.png&#34; alt=&#34;Le téléchargement des fichiers sur un CDN [alt+entrée]&#34;/&gt;
     &lt;/a&gt;
 &lt;/div&gt;
 
@@ -58,8 +58,8 @@ et trouver de la complétion en automatique (ainsi que la JSDoc).&lt;/p&gt;
 &lt;/ul&gt;
 
 &lt;div style=&#34;text-align:center;margin-bottom:50px&#34;&gt;
-    &lt;a href=&#34;https://code-troopers.com/images/2015-06-JavaScriptIntelliJ/settings.png&#34; data-lightbox=&#34;group-1&#34; title=&#34;La fenêtre des paramètres&#34; class=&#34;inlineBoxes&#34;&gt;
-        &lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/2015-06-JavaScriptIntelliJ/settings.png&#34; alt=&#34;La fenêtre des paramètres&#34;/&gt;
+    &lt;a href=&#34;https://code-troopers.com/images/posts/2015-06-JavaScriptIntelliJ/settings.png&#34; data-lightbox=&#34;group-1&#34; title=&#34;La fenêtre des paramètres&#34; class=&#34;inlineBoxes&#34;&gt;
+        &lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/posts/2015-06-JavaScriptIntelliJ/settings.png&#34; alt=&#34;La fenêtre des paramètres&#34;/&gt;
     &lt;/a&gt;
 &lt;/div&gt;
 
@@ -74,8 +74,8 @@ sélectionnez la source &amp;ldquo;TypeScript Community Stubs&amp;rdquo;, vous v
 ainsi qu&amp;rsquo;une documentation précise (pour la plupart des librairies).&lt;/p&gt;
 
 &lt;div style=&#34;text-align:center;margin-bottom:50px&#34;&gt;
-    &lt;a href=&#34;https://code-troopers.com/images/2015-06-JavaScriptIntelliJ/example.png&#34; data-lightbox=&#34;group-1&#34; title=&#34;Jasmine est bien connu par IntelliJ&#34; class=&#34;inlineBoxes&#34;&gt;
-        &lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/2015-06-JavaScriptIntelliJ/example.png&#34; alt=&#34;Jasmine est bien connu par IntelliJ&#34;/&gt;
+    &lt;a href=&#34;https://code-troopers.com/images/posts/2015-06-JavaScriptIntelliJ/example.png&#34; data-lightbox=&#34;group-1&#34; title=&#34;Jasmine est bien connu par IntelliJ&#34; class=&#34;inlineBoxes&#34;&gt;
+        &lt;img class=&#34;medium&#34; src=&#34;https://code-troopers.com/images/posts/2015-06-JavaScriptIntelliJ/example.png&#34; alt=&#34;Jasmine est bien connu par IntelliJ&#34;/&gt;
     &lt;/a&gt;
 &lt;/div&gt;
 </description>
@@ -83,10 +83,10 @@ ainsi qu&amp;rsquo;une documentation précise (pour la plupart des librairies).&
     
     <item>
       <title>jsTrac l&#39;outil de déclaration de ticket à plugger</title>
-      <link>https://code-troopers.com/2013/07/08/postjstrac/</link>
+      <link>https://code-troopers.com/2013/07/08/2013-07-08-postjstrac/</link>
       <pubDate>Mon, 08 Jul 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://code-troopers.com/2013/07/08/postjstrac/</guid>
+      <guid>https://code-troopers.com/2013/07/08/2013-07-08-postjstrac/</guid>
       <description>&lt;h3&gt;Introduction&lt;/h3&gt;
 
 &lt;p&gt;
@@ -124,8 +124,8 @@ Les principales fonctionnalités sont les suivantes :
     Pour pouvoir déclarer un bug, il suffit d&#39;ajouter un bouton dans votre page. Celui-ci devra exécuter une fonction
     javascript permettant d&#39;appeler l&#39;interface de &lt;b&gt;jsTrac&lt;/b&gt;.
     &lt;br/&gt;
-    &lt;a href=&#34;https://code-troopers.com/images/postJsTrac/altS.png&#34; data-lightbox=&#34;image-1&#34; title=&#34;Bouton de lancement de jsTrac&#34;&gt;
-        &lt;img class=&#34;mini&#34; src=&#34;https://code-troopers.com/images/postJsTrac/altS.png&#34; alt=&#34;Bouton de lancement de jsTrac&#34;/&gt;
+    &lt;a href=&#34;https://code-troopers.com/images/posts/2013-07-08-postJsTrac/altS.png&#34; data-lightbox=&#34;image-1&#34; title=&#34;Bouton de lancement de jsTrac&#34;&gt;
+        &lt;img class=&#34;mini&#34; src=&#34;https://code-troopers.com/images/posts/2013-07-08-postJsTrac/altS.png&#34; alt=&#34;Bouton de lancement de jsTrac&#34;/&gt;
     &lt;/a&gt;
 
 &lt;/p&gt;
@@ -143,8 +143,8 @@ Les principales fonctionnalités sont les suivantes :
     aussi possible de noircir certaines zones de la page afin d&#39;en masquer le contenu.
 &lt;/p&gt;
 &lt;p&gt;
-&lt;a href=&#34;https://code-troopers.com/images/postJsTrac/dessin.png&#34; data-lightbox=&#34;image-2&#34; title=&#34;Création flèche et rectangle&#34;&gt;
-    &lt;img class=&#34;mini&#34; src=&#34;https://code-troopers.com/images/postJsTrac/dessin.png&#34; alt=&#34;Création flèche et rectangle&#34;/&gt;
+&lt;a href=&#34;https://code-troopers.com/images/posts/2013-07-08-postJsTrac/dessin.png&#34; data-lightbox=&#34;image-2&#34; title=&#34;Création flèche et rectangle&#34;&gt;
+    &lt;img class=&#34;mini&#34; src=&#34;https://code-troopers.com/images/posts/2013-07-08-postJsTrac/dessin.png&#34; alt=&#34;Création flèche et rectangle&#34;/&gt;
 &lt;/a&gt;
 &lt;/p&gt;
 
@@ -158,8 +158,8 @@ Les principales fonctionnalités sont les suivantes :
     de la configuration du serveur Trac).
 &lt;/p&gt;
 &lt;p&gt;
-&lt;a href=&#34;https://code-troopers.com/images/postJsTrac/creation_ticket.png&#34; data-lightbox=&#34;image-3&#34; title=&#34;Création ticket trac&#34;&gt;
-    &lt;img class=&#34;mini&#34; src=&#34;https://code-troopers.com/images/postJsTrac/creation_ticket.png&#34; alt=&#34;Création ticket trac&#34;/&gt;
+&lt;a href=&#34;https://code-troopers.com/images/posts/2013-07-08-postJsTrac/creation_ticket.png&#34; data-lightbox=&#34;image-3&#34; title=&#34;Création ticket trac&#34;&gt;
+    &lt;img class=&#34;mini&#34; src=&#34;https://code-troopers.com/images/posts/2013-07-08-postJsTrac/creation_ticket.png&#34; alt=&#34;Création ticket trac&#34;/&gt;
 &lt;/a&gt;
 &lt;/p&gt;
 
@@ -171,8 +171,8 @@ Les principales fonctionnalités sont les suivantes :
     besoins.
 &lt;/p&gt;
 &lt;p&gt;
-&lt;a href=&#34;https://code-troopers.com/images/postJsTrac/ticket_trac.png&#34; data-lightbox=&#34;image-4&#34; title=&#34;ticket trac créé&#34;&gt;
-    &lt;img class=&#34;mini&#34; src=&#34;https://code-troopers.com/images/postJsTrac/ticket_trac.png&#34; alt=&#34;ticket trac créé&#34;/&gt;
+&lt;a href=&#34;https://code-troopers.com/images/posts/2013-07-08-postJsTrac/ticket_trac.png&#34; data-lightbox=&#34;image-4&#34; title=&#34;ticket trac créé&#34;&gt;
+    &lt;img class=&#34;mini&#34; src=&#34;https://code-troopers.com/images/posts/2013-07-08-postJsTrac/ticket_trac.png&#34; alt=&#34;ticket trac créé&#34;/&gt;
 &lt;/a&gt;
 &lt;/p&gt;
 
