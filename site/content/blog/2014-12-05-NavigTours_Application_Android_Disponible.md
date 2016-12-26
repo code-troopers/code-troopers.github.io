@@ -16,33 +16,33 @@ L'application est disponible pour tout le monde sur le Play store.
 
 <div style="text-align:center;margin-bottom:50px">
     <a href="https://play.google.com/store/apps/details?id=com.codetroopers.transport.tours">
-        <img class="medium" alt="QRcode application Navig'Tours" src="/images/postNavigTours2/qrCode_playstore_navigtours.png" />
+        <img class="medium" alt="QRcode application Navig'Tours" src="/images/posts/2014-12-05-NavigTours_Application_Android_Disponible/qrCode_playstore_navigtours.png" />
     </a>
     <a href="https://play.google.com/store/apps/details?id=com.codetroopers.transport.tours">
-        <img alt="Get it on Google Play" src="https://developer.android.com/images/brand/fr_generic_rgb_wo_60.png" />
+        <img alt="Get it on Google Play" src="https://developer.android.com/images/posts/brand/fr_generic_rgb_wo_60.png" />
     </a>
 </div>
 
 
 
 <div style="text-align:center;margin:50px">
-    <a href="/images/postNavigTours2/preview_search.png" data-lightbox="group-1" title="Écrans recherche d'itinéraire" class="inlineBoxes">
-        <img class="medium" src="/images/postNavigTours2/preview_search.png" alt="Écrans recherche d'itinéraire"/>
+    <a href="/images/posts/2014-12-05-NavigTours_Application_Android_Disponible/preview_search.png" data-lightbox="group-1" title="Écrans recherche d'itinéraire" class="inlineBoxes">
+        <img class="medium" src="/images/posts/2014-12-05-NavigTours_Application_Android_Disponible/preview_search.png" alt="Écrans recherche d'itinéraire"/>
     </a>
-    <a href="/images/postNavigTours2/preview_map.png" data-lightbox="group-1" title="Écran carte des arrêts" class="inlineBoxes">
-        <img class="medium" src="/images/postNavigTours2/preview_map.png" alt="Écran carte des arrêts"/>
+    <a href="/images/posts/2014-12-05-NavigTours_Application_Android_Disponible/preview_map.png" data-lightbox="group-1" title="Écran carte des arrêts" class="inlineBoxes">
+        <img class="medium" src="/images/posts/2014-12-05-NavigTours_Application_Android_Disponible/preview_map.png" alt="Écran carte des arrêts"/>
     </a>
-    <a href="/images/postNavigTours2/preview_favorite.png" data-lightbox="group-1" title="Écrans arrêts favoris" class="inlineBoxes">
-        <img class="medium" src="/images/postNavigTours2/preview_favorite.png" alt="Écrans arrêts favoris"/>
+    <a href="/images/posts/2014-12-05-NavigTours_Application_Android_Disponible/preview_favorite.png" data-lightbox="group-1" title="Écrans arrêts favoris" class="inlineBoxes">
+        <img class="medium" src="/images/posts/2014-12-05-NavigTours_Application_Android_Disponible/preview_favorite.png" alt="Écrans arrêts favoris"/>
     </a>
-    <a href="/images/postNavigTours2/preview_stop_detail.png" data-lightbox="group-1" title="Écran arrêt" class="inlineBoxes">
-        <img class="medium" src="/images/postNavigTours2/preview_stop_detail.png" alt="Écran arrêt"/>
+    <a href="/images/posts/2014-12-05-NavigTours_Application_Android_Disponible/preview_stop_detail.png" data-lightbox="group-1" title="Écran arrêt" class="inlineBoxes">
+        <img class="medium" src="/images/posts/2014-12-05-NavigTours_Application_Android_Disponible/preview_stop_detail.png" alt="Écran arrêt"/>
     </a>
-    <a href="/images/postNavigTours2/preview_notifications.png" data-lightbox="group-1" title="Écrans notifications" class="inlineBoxes">
-        <img class="medium" src="/images/postNavigTours2/preview_notifications.png" alt="Écrans notifications"/>
+    <a href="/images/posts/2014-12-05-NavigTours_Application_Android_Disponible/preview_notifications.png" data-lightbox="group-1" title="Écrans notifications" class="inlineBoxes">
+        <img class="medium" src="/images/posts/2014-12-05-NavigTours_Application_Android_Disponible/preview_notifications.png" alt="Écrans notifications"/>
     </a>
-    <a href="/images/postNavigTours2/preview_settings.png" data-lightbox="group-1" title="Écran paramètre" class="inlineBoxes">
-        <img class="medium" src="/images/postNavigTours2/preview_settings.png" alt="Écran paramètre"/>
+    <a href="/images/posts/2014-12-05-NavigTours_Application_Android_Disponible/preview_settings.png" data-lightbox="group-1" title="Écran paramètre" class="inlineBoxes">
+        <img class="medium" src="/images/posts/2014-12-05-NavigTours_Application_Android_Disponible/preview_settings.png" alt="Écran paramètre"/>
     </a>
 </div>
 

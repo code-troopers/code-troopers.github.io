@@ -35,11 +35,11 @@ Avant de commencer à coder, une dernière chose à garder à l'esprit c'est que
  Il faudra donc adapter la gestion de ces permissions à cette éventualité.
 
 <div style="text-align:center;margin-bottom:50px">
-    <a href="/images/2015-09-AndroidMPermissions/p6.png" data-lightbox="group-1" title="Écran App Info" class="inlineBoxes">
-        <img class="medium" src="/images/2015-09-AndroidMPermissions/p6.png" alt="Écran App Info"/>
+    <a href="/images/posts/2015-09-AndroidMPermissions/p6.png" data-lightbox="group-1" title="Écran App Info" class="inlineBoxes">
+        <img class="medium" src="/images/posts/2015-09-AndroidMPermissions/p6.png" alt="Écran App Info"/>
     </a>
-    <a href="/images/2015-09-AndroidMPermissions/p5.png" data-lightbox="group-1" title="Écran App Info : détail des permissions"  class="inlineBoxes">
-            <img class="medium" src="/images/2015-09-AndroidMPermissions/p5.png" alt="Écran App Info : détail des permissions"/>
+    <a href="/images/posts/2015-09-AndroidMPermissions/p5.png" data-lightbox="group-1" title="Écran App Info : détail des permissions"  class="inlineBoxes">
+            <img class="medium" src="/images/posts/2015-09-AndroidMPermissions/p5.png" alt="Écran App Info : détail des permissions"/>
     </a>
 </div>
 
@@ -93,8 +93,8 @@ Si la permission n'est pas accordée, il va falloir la demander, de préférence
 
 
 <div style="text-align:center;margin-bottom:50px">
-    <a href="/images/2015-09-AndroidMPermissions/p1.png" data-lightbox="group-1" title="Dialog de demande d'une permission" class="inlineBoxes">
-        <img class="medium" src="/images/2015-09-AndroidMPermissions/p1.png" alt="Dialog de demande d'une permission"/>
+    <a href="/images/posts/2015-09-AndroidMPermissions/p1.png" data-lightbox="group-1" title="Dialog de demande d'une permission" class="inlineBoxes">
+        <img class="medium" src="/images/posts/2015-09-AndroidMPermissions/p1.png" alt="Dialog de demande d'une permission"/>
     </a>
 </div>
 
@@ -123,11 +123,11 @@ Pour cela il suffit de passer plusieurs permissions dans le tableau passé en pa
                                       REQUEST_CODE_TWO);
 
 <div style="text-align:center;margin-bottom:50px">
-    <a href="/images/2015-09-AndroidMPermissions/p2.png" data-lightbox="group-1" title="Dialog de demande de plusieurs permissions 1/2" class="inlineBoxes">
-        <img class="medium" src="/images/2015-09-AndroidMPermissions/p2.png" alt="Dialog de demande de plusieurs permissions 1/2"/>
+    <a href="/images/posts/2015-09-AndroidMPermissions/p2.png" data-lightbox="group-1" title="Dialog de demande de plusieurs permissions 1/2" class="inlineBoxes">
+        <img class="medium" src="/images/posts/2015-09-AndroidMPermissions/p2.png" alt="Dialog de demande de plusieurs permissions 1/2"/>
     </a>
-<a href="/images/2015-09-AndroidMPermissions/p3.png" data-lightbox="group-1" title="Dialog de demande de plusieurs permissions 2/2" class="inlineBoxes">
-        <img class="medium" src="/images/2015-09-AndroidMPermissions/p3.png" alt="Dialog de demande de plusieurs permissions 2/2"/>
+<a href="/images/posts/2015-09-AndroidMPermissions/p3.png" data-lightbox="group-1" title="Dialog de demande de plusieurs permissions 2/2" class="inlineBoxes">
+        <img class="medium" src="/images/posts/2015-09-AndroidMPermissions/p3.png" alt="Dialog de demande de plusieurs permissions 2/2"/>
     </a>
 </div>
 
@@ -157,8 +157,8 @@ Cela se fera avec la méthode shouldShowRequestPermissionRationale
 
 
 <div style="text-align:center;margin-bottom:50px">
-    <a href="/images/2015-09-AndroidMPermissions/p4.png" data-lightbox="group-1" title="Dialog d'explication sur une demande de permissions" class="inlineBoxes">
-        <img class="medium" src="/images/2015-09-AndroidMPermissions/p4.png" alt="Dialog d'explication sur une demande de permissions"/>
+    <a href="/images/posts/2015-09-AndroidMPermissions/p4.png" data-lightbox="group-1" title="Dialog d'explication sur une demande de permissions" class="inlineBoxes">
+        <img class="medium" src="/images/posts/2015-09-AndroidMPermissions/p4.png" alt="Dialog d'explication sur une demande de permissions"/>
     </a>
 </div>
 

@@ -25,11 +25,11 @@ aliases: /2014/05/14/kIsTheNewL.html
 Voici un comparatif des deux rendus, version `ls` et version `k` :
 
 <div style="text-align : center">
-<a style="display: inline" href="/images/postKisTheNewL/lsalcolor.png" data-lightbox="image-0" title="version ls -al --color">
-        <img class="medium" src="/images/postKisTheNewL/lsalcolor_min.png" alt="version k"/>
+<a style="display: inline" href="/images/posts/2014-05-14-kIsTheNewL/lsalcolor.png" data-lightbox="image-0" title="version ls -al --color">
+        <img class="medium" src="/images/posts/2014-05-14-kIsTheNewL/lsalcolor_min.png" alt="version k"/>
 </a>
-<a style="display: inline" href="/images/postKisTheNewL/k.png" data-lightbox="image-0" title="version k">
-        <img class="medium" src="/images/postKisTheNewL/k_min.png" alt="version k"/>
+<a style="display: inline" href="/images/posts/2014-05-14-kIsTheNewL/k.png" data-lightbox="image-0" title="version k">
+        <img class="medium" src="/images/posts/2014-05-14-kIsTheNewL/k_min.png" alt="version k"/>
 </a>
 </div>
 <br/>

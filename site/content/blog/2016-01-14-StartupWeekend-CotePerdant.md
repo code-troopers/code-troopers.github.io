@@ -40,20 +40,20 @@ Ensuite nous commençons à intégrer ce que l'on aura besoin. Du beau et des pe
 Le samedi soir, on est dans la vibe. Plus trop besoin de réseau, on a des visuels et nos bibliothèques de base. Pas besoin de s'occuper des ravitaillements, on se concentre juste sur le code et c'est ça qu'on aime.
 Nous avons donc une navbar avec notre logo et les différentes actions de navigation fonctionnelles.
 <div style="text-align:center;margin-bottom:50px">
-    <a href="/images/postWeGuide/navbar1.png" data-lightbox="group-2" title="navbar weguide" class="inlineBoxes">
-<img class="medium" src="/images/postWeGuide/navbar1.png" alt="navbar"/><br/>
+    <a href="/images/posts/2016-01-14-StartupWeekend-CotePerdant/navbar1.png" data-lightbox="group-2" title="navbar weguide" class="inlineBoxes">
+<img class="medium" src="/images/posts/2016-01-14-StartupWeekend-CotePerdant/navbar1.png" alt="navbar"/><br/>
     </a>
 <br/>
-    <a href="/images/postWeGuide/navbar2.png" data-lightbox="group-2" title="navbar connected weguide" class="inlineBoxes">
-<img class="medium" src="/images/postWeGuide/navbar2.png" alt="navbar connecté"/>
+    <a href="/images/posts/2016-01-14-StartupWeekend-CotePerdant/navbar2.png" data-lightbox="group-2" title="navbar connected weguide" class="inlineBoxes">
+<img class="medium" src="/images/posts/2016-01-14-StartupWeekend-CotePerdant/navbar2.png" alt="navbar connecté"/>
     </a>
 </div>
 
 
 Un logo, une phrase d'accroche sur un fond de page avec transition d'images en background animé par css (ici en accéléré dans le gif).
 <div style="text-align:center;margin-bottom:50px">
-    <a href="/images/postWeGuide/logo.gif" data-lightbox="group-3" title="Logo weguide" class="inlineBoxes">
-<img class="medium" src="/images/postWeGuide/logo.gif" alt="logo"/>
+    <a href="/images/posts/2016-01-14-StartupWeekend-CotePerdant/logo.gif" data-lightbox="group-3" title="Logo weguide" class="inlineBoxes">
+<img class="medium" src="/images/posts/2016-01-14-StartupWeekend-CotePerdant/logo.gif" alt="logo"/>
     </a>
 </div>
 
@@ -61,32 +61,32 @@ Un footer avec nos liens twitter et facebook, et le premier formulaire de recher
 On recherche donc une ville, un autocomplete angular material, avec des dates de début et de fin de projet. Si vous connaissez AngularJS, vous savez peut-être qu'il n'y avait pas de date picker jusqu'à peu. Maintenant il y en a mais en RC et c'est encore un peu buggué, il a fallu corriger certaines choses liées au style.
 Ah oui, sur le bouton de recherche, en plus du ripple effect il y a un petit effet kiss cool tout en css et évidemment, la ville est mandatory (tout est dans le détail).
 <div style="text-align: center;margin:50px;">
-<video style="width: 90%; max-width: 600px;" controls src="/images/postWeGuide/search.webm"></video>
+<video style="width: 90%; max-width: 600px;" controls src="/images/posts/2016-01-14-StartupWeekend-CotePerdant/search.webm"></video>
 </div>
 
 On arrive alors sur la page de résultats. Sur cette page au design épuré, nous avons la barre de recherche avec la ville et les dates saisies précédemment.
 <div style="text-align:center;margin-bottom:50px">
-    <a href="/images/postWeGuide/searchbar.png" data-lightbox="group-4" title="Searchbar weguide" class="inlineBoxes">
-<img class="medium" src="/images/postWeGuide/searchbar.png" alt="searchbar"/>
+    <a href="/images/posts/2016-01-14-StartupWeekend-CotePerdant/searchbar.png" data-lightbox="group-4" title="Searchbar weguide" class="inlineBoxes">
+<img class="medium" src="/images/posts/2016-01-14-StartupWeekend-CotePerdant/searchbar.png" alt="searchbar"/>
     </a>
 </div>
 
 S'en suit des paramètres par défaut. Des checkbox pour les activités, des doubles sliders pour sélectionner la distance et le prix souhaité.
 <div style="text-align:center;margin-bottom:50px">
-    <a href="/images/postWeGuide/params.gif" data-lightbox="group-5" title="search parameters weguide" class="inlineBoxes">
-<img class="medium" src="/images/postWeGuide/params.gif" alt="params"/>
+    <a href="/images/posts/2016-01-14-StartupWeekend-CotePerdant/params.gif" data-lightbox="group-5" title="search parameters weguide" class="inlineBoxes">
+<img class="medium" src="/images/posts/2016-01-14-StartupWeekend-CotePerdant/params.gif" alt="params"/>
     </a>
 </div>
 
 Au centre, une description du guide, "effet zoom pour plus d'infos" et la possibilité de lui envoyer un message.
 <div style="text-align: center;margin:50px;">
-<video style="width: 90%; max-width: 600px;" controls src="/images/postWeGuide/guide.webm"></video>
+<video style="width: 90%; max-width: 600px;" controls src="/images/posts/2016-01-14-StartupWeekend-CotePerdant/guide.webm"></video>
 </div>
 
 Enfin, une autre page fonctionnelle a été réalisée pour s'inscrire en tant que guide.
 Tout est enregistré dans le local storage avec AngularJS, ça permet d'aller vite, de pouvoir jouer avec l'appli mais de ne pas avoir besoin d'une base de donnée.
 <div style="text-align: center;margin:50px;">
-<video style="width: 90%; max-width: 600px;" controls src="/images/postWeGuide/register.webm"></video>
+<video style="width: 90%; max-width: 600px;" controls src="/images/posts/2016-01-14-StartupWeekend-CotePerdant/register.webm"></video>
 </div>
 
 Pour en voir plus, vous pouvez aller sur [https://weguide.herokuapp.com](https://weguide.herokuapp.com)  et le code est disponible sur [https://github.com/code-troopers/sw-weguide/](https://github.com/code-troopers/sw-weguide/) mais ne vous attardez pas trop sur les commits logs :p

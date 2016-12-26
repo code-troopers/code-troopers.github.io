@@ -24,9 +24,9 @@ Nous allons donc parler de feedback visuel. Prenons par exemple une création de
 Lorsqu'on entre le mot de passe, Google nous informe de la qualité de la chaîne saisie via un pop-up contenant une progressbar de couleur, accompagnée d'un petit commentaire.
 
 ~~~html
-<a href="/images/postPasswordStrength/googleWay.png" data-lightbox="image-1"
+<a href="/images/posts/2014-03-05-passwordStrength/googleWay.png" data-lightbox="image-1"
    title="Indicateur de niveau de sécurité by Google">
-    <img class="mini" src="/images/postPasswordStrength/googleWay.png"
+    <img class="mini" src="/images/posts/2014-03-05-passwordStrength/googleWay.png"
          alt="Indicateur de niveau de sécurité by Google"/>
 </a>
 ~~~
@@ -117,21 +117,21 @@ Ce script est largement inspiré de : <a href="https://github.com/johnbeil/boots
 
 Comme vous pouvez le voir dans le js qui traite le retour de la fonction zxcvbn, il y a 3 niveaux de couleurs qui se déclenchent à différents niveaux, combinés à un simple label
 
-<a href="/images/postPasswordStrength/weak.png" data-lightbox="image-1"
+<a href="/images/posts/2014-03-05-passwordStrength/weak.png" data-lightbox="image-1"
    title="Feedback pour un mauvais mot de passe">
-    <img class="mini" src="/images/postPasswordStrength/weak.png" alt="Feedback pour un mauvais mot de passe"/>
+    <img class="mini" src="/images/posts/2014-03-05-passwordStrength/weak.png" alt="Feedback pour un mauvais mot de passe"/>
 </a>
-<a href="/images/postPasswordStrength/fair.png" data-lightbox="image-1"
+<a href="/images/posts/2014-03-05-passwordStrength/fair.png" data-lightbox="image-1"
    title="Feedback pour un mot de passe moyen">
-    <img class="mini" src="/images/postPasswordStrength/fair.png" alt="Feedback pour un mot de passe moyen"/>
+    <img class="mini" src="/images/posts/2014-03-05-passwordStrength/fair.png" alt="Feedback pour un mot de passe moyen"/>
 </a>
-<a href="/images/postPasswordStrength/good.png" data-lightbox="image-1"
+<a href="/images/posts/2014-03-05-passwordStrength/good.png" data-lightbox="image-1"
    title="Feedback pour un bon mot de passe">
-    <img class="mini" src="/images/postPasswordStrength/good.png" alt="Feedback pour un bon mot de passe"/>
+    <img class="mini" src="/images/posts/2014-03-05-passwordStrength/good.png" alt="Feedback pour un bon mot de passe"/>
 </a>
-<a href="/images/postPasswordStrength/great.png" data-lightbox="image-1"
+<a href="/images/posts/2014-03-05-passwordStrength/great.png" data-lightbox="image-1"
    title="Feedback pour un mot de passe parfait">
-    <img class="mini" src="/images/postPasswordStrength/great.png" alt="Feedback pour un mot de passe parfait"/>
+    <img class="mini" src="/images/posts/2014-03-05-passwordStrength/great.png" alt="Feedback pour un mot de passe parfait"/>
 </a>
 
 ## Sources

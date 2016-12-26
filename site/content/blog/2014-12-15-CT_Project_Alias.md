@@ -70,8 +70,8 @@ Puisque nous jonglons souvent entre projets, un autres soucis que nous avons est
 Nous avons donc rajouté la commande `ct ports` qui démarre un micro serveur http et permet de récupérer la liste des ports qui attendent des connexions sur nos machines, ainsi que le dossier de travail associé (ce qui est souvent suffisant pour savoir de quel projet il s’agit).
 
 <div style="text-align:center;">
-    <a href="/images/postCT/listen.png" title="Exemple de listing des ports" data-lightbox="group1">
-    <img class="medium" src="/images/postCT/listen.png" alt="Exemple de listing des ports"></a>
+    <a href="/images/posts/2014-12-15-CT_Project_Alias/listen.png" title="Exemple de listing des ports" data-lightbox="group1">
+    <img class="medium" src="/images/posts/2014-12-15-CT_Project_Alias/listen.png" alt="Exemple de listing des ports"></a>
 </div>
 
 Pour pouvoir utiliser cette commande, il faut que les quelques outils suivants soient installés : _netcat_, _awk_, _wget_ et _lsof_.

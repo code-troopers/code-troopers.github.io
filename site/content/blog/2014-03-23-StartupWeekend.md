@@ -49,14 +49,14 @@ Les discussions allant entre les mentors et la partie business, ce n’est que v
 Vers minuit, les fonctionnalités étaient toutes présentes, c’était même livré en prod (sur Heroku, avec un lien vers un serveur dédié nous appartenant pour la partie ElasticSearch) ! Par contre c’était un peu… “blanc”.
 
 <div style="text-align : center">
-<a style="display: inline" href="/images/postSWTours/mbmc_nostyle_1.png" data-lightbox="image-0" title="mbmc sans style">
-        <img class="mini" src="/images/postSWTours/mbmc_nostyle_1.png" alt="mbmc sans style"/>
+<a style="display: inline" href="/images/posts/2014-03-23-StartupWeekend/mbmc_nostyle_1.png" data-lightbox="image-0" title="mbmc sans style">
+        <img class="mini" src="/images/posts/2014-03-23-StartupWeekend/mbmc_nostyle_1.png" alt="mbmc sans style"/>
 </a>
-<a style="display: inline" href="/images/postSWTours/mbmc_nostyle_2.png" data-lightbox="image-0" title="mbmc sans style">
-        <img class="mini" src="/images/postSWTours/mbmc_nostyle_2.png" alt="mbmc sans style"/>
+<a style="display: inline" href="/images/posts/2014-03-23-StartupWeekend/mbmc_nostyle_2.png" data-lightbox="image-0" title="mbmc sans style">
+        <img class="mini" src="/images/posts/2014-03-23-StartupWeekend/mbmc_nostyle_2.png" alt="mbmc sans style"/>
 </a>
-<a style="display: inline" href="/images/postSWTours/mbmc_nostyle_3.png" data-lightbox="image-0" title="mbmc sans style">
-        <img class="mini" src="/images/postSWTours/mbmc_nostyle_3.png" alt="mbmc sans style"/>
+<a style="display: inline" href="/images/posts/2014-03-23-StartupWeekend/mbmc_nostyle_3.png" data-lightbox="image-0" title="mbmc sans style">
+        <img class="mini" src="/images/posts/2014-03-23-StartupWeekend/mbmc_nostyle_3.png" alt="mbmc sans style"/>
 </a>
 </div>
 
@@ -96,8 +96,8 @@ Ce weekend n’aurait pas pu avoir lieu sans l’investissement de nombreuses pe
 Il vient ensuite tous les mentors qui ont apportés leur connaissance du marché, leurs expériences des startups et surtout leurs côtés pragmatiques sur les questions de rentabilité et de viabilité des projets.
 
 
-<a href="/images/postSWTours/team.jpg" data-lightbox="image-1" title="L’équipe de MyBandMyCity (de gauche à droite) : François (De Feraudy), Fabian (Petit), Julien (Pagnac), Matthieu (Bollot), Cédric (Gatay), Florian (Chauveau), Benjamin (Cousin)">
-        <img class="mini" src="/images/postSWTours/team.jpg" alt="L’équipe de MyBandMyCity"/>
+<a href="/images/posts/2014-03-23-StartupWeekend/team.jpg" data-lightbox="image-1" title="L’équipe de MyBandMyCity (de gauche à droite) : François (De Feraudy), Fabian (Petit), Julien (Pagnac), Matthieu (Bollot), Cédric (Gatay), Florian (Chauveau), Benjamin (Cousin)">
+        <img class="mini" src="/images/posts/2014-03-23-StartupWeekend/team.jpg" alt="L’équipe de MyBandMyCity"/>
 </a>
 L’équipe de MyBandMyCity (de gauche à droite) : François (De Feraudy), Fabian (Petit), Julien (Pagnac), Matthieu (Bollot), Cédric (Gatay), Florian (Chauveau), Benjamin (Cousin)
 
