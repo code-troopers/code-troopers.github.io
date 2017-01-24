@@ -13,7 +13,8 @@
         <article>
             <div>
 		<div class="cover" style="background-image:url(/images/banner/{{ .Params.cover }}-big.png)">
-                    <div class="date">posté le {{ .Date.Format "02/01/2006" }} par {{ .Params.author}}</div>
+                    <!--<div class="date">posté le {{ .Date.Format "02/01/2006" }} par {{ .Params.author}}</div>-->
+                    <div class="date">par {{ .Params.author}}</div>
                 </div>
                 <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
                 <span class="label label-info">~{{ .ReadingTime }} minute(s) à lire</span>
