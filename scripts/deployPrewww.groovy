@@ -26,7 +26,7 @@ node {
 }
 
 stage 'deploy'
-node {
+node('pi') {
     unstash 'binary'
     sh 'echo "FROM nginx" >> Dockerfile && echo "COPY site/public /usr/share/nginx/html" >> Dockerfile'
     sh 'docker build -t docker.code-troopers.com/website-prewww:latest .'
