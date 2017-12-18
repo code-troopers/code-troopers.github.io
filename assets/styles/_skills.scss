@@ -1,0 +1,63 @@
+@import 'variables';
+@import 'mixins';
+
+section#skills{
+  background: $gradient;
+  color: $white;
+
+  .wrapper{
+    margin: auto;
+    width: 960px;
+    max-width: 100%;
+    padding:30px;
+
+    h1{
+      text-align: center;
+      font-size: 3rem;
+    }
+
+    ul{
+      display: flex;
+      flex-wrap: wrap;
+      list-style: none;
+      li{
+        flex: 1;
+        text-align: center;
+        margin: 1rem;
+
+        &:first-child{
+          margin-left: 0;
+        }
+
+        &:last-child{
+          margin-right: 0;
+        }
+
+        img{
+          height: 100px;
+        }
+
+        .title{
+          font-weight: bold;
+          padding-top: 1rem;
+          padding-bottom: 1rem;
+          font-size: 1.3rem;
+        }
+
+        div:last-child{
+          &:before {
+            content: ' ';
+            display: block;
+            padding-top: 0.8rem;
+            margin: auto;
+            border-top: 1px solid $white;
+            width: 30px;
+          }
+          letter-spacing: 0.1rem;
+          line-height: 1.4rem;
+          font-size: 0.8rem;
+        }
+      }
+    }
+  }
+}
