@@ -1,0 +1,29 @@
+@import 'variables';
+
+footer {
+  background: $black;
+
+  .wrapper {
+    margin: auto;
+    padding: 5rem 30px 2rem;
+    color: $grey;
+    font-size: 0.7rem;
+
+    span:first-child{
+      float:left;
+    }
+
+    span:last-child{
+      float:right;
+    }
+
+    a{
+      text-decoration: none;
+      color: inherit;
+
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+  }
+}

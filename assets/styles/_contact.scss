@@ -1,0 +1,57 @@
+@import 'variables';
+@import 'mixins';
+
+section#contact {
+  background: $gradient;
+  color: $white;
+  padding-bottom: 5rem;
+
+  & > div {
+    display: flex;
+
+    & > div {
+      flex: 1;
+      background: $white;
+      color: $black;
+    }
+    & > div:first-child {
+      img {
+        height: 400px;
+        max-width: 100%;
+      }
+    }
+    & > div:last-child {
+      padding: 5rem;
+      h2 {
+        @include separator($black)
+      }
+
+      p {
+        line-height: 1.5rem;
+      }
+
+      strong {
+        font-weight: bold;
+      }
+
+      a {
+        display: inline-block;
+        width: auto;
+        background: $gradient;
+        color: $white;
+        padding: 0.5rem 1rem;
+        border-radius: 0.3rem;
+        text-decoration: none;
+        font-weight: bold;
+
+      }
+    }
+  }
+
+  ul {
+    justify-content: center;
+    li {
+      max-width: 140px;
+    }
+  }
+}
