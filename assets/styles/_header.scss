@@ -20,11 +20,11 @@ nav {
     font-size: 0.8rem;
   }
 
-  a.logo {
+  a.brand {
     flex: 0.8;
   }
 
-  a.blog{
+  a.blog {
     flex: 0.5;
   }
 
@@ -39,7 +39,7 @@ nav {
     background: $gradient;
   }
 
-  a.logo:hover {
+  a.brand:hover {
     background: inherit;
   }
 
@@ -48,6 +48,80 @@ nav {
 
     span {
       @include gradient-text($gradient, 'light');
+    }
+  }
+}
+
+header {
+  background-size: cover;
+  background-image: url('../images/header_large.jpg');
+  background-position: center center;
+  background-color: $grey;
+  padding-bottom: 5rem;
+  //height: 900px;
+
+  .logo {
+    background-image: url('../images/header_logo.png');
+    width: 420px;
+    max-width: 100%;
+    height: 311px;
+    margin: auto;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+  }
+
+  .introduction {
+    color: $white;
+    margin: auto;
+    width: 960px;
+    max-width: 100%;
+    display: flex;
+    padding-left: 30px;
+    padding-right: 30px;
+    line-height: 1.6rem;
+
+    h2:after {
+      content: ' ';
+      display: block;
+      padding-top: 0.8rem;
+      margin-left: -0.6rem;
+      border-bottom: 1px solid $white;
+      width: 50px;
+    }
+
+    div:first-child {
+      flex: 1;
+
+      p {
+        font-size: 1.3rem;
+        line-height: 2rem;
+      }
+    }
+
+    div:last-child {
+      margin-left: 5rem;
+      flex: 2;
+    }
+
+    .gradient {
+      font-size: 1.2rem;
+      font-weight: bold;
+      @include gradient-text($gradient, 'dark');
+    }
+
+    a {
+      text-transform: uppercase;
+      text-decoration: none;
+      color: $white;
+      letter-spacing: 0.2rem;
+      font-size: 0.8rem;
+      padding-bottom: 0.1rem;
+      border-bottom: 1px dotted $white;
+
+      &:hover {
+        color: $lightblue;
+        border-color: $lightblue;
+      }
     }
   }
 
