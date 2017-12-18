@@ -1,0 +1,54 @@
+@import 'variables';
+@import 'mixins';
+
+nav {
+  background-color: $black;
+  display: flex;
+
+  a {
+    color: $white;
+    display: block;
+    border-left: 1px solid $darkgrey;
+    border-right: 1px solid $darkgrey;
+    padding: 30px 0;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+    flex: 1;
+    text-align: center;
+    letter-spacing: 0.2rem;
+    font-size: 0.8rem;
+  }
+
+  a.logo {
+    flex: 0.8;
+  }
+
+  a.blog{
+    flex: 0.5;
+  }
+
+  a:last-child {
+    border-right: none;
+  }
+  a:first-child {
+    border-left: none;
+  }
+
+  a:hover {
+    background: $gradient;
+  }
+
+  a.logo:hover {
+    background: inherit;
+  }
+
+  a.blog:hover {
+    background: $white;
+
+    span {
+      @include gradient-text($gradient, 'light');
+    }
+  }
+
+}
