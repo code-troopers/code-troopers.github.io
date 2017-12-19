@@ -1,0 +1,71 @@
+@import 'variables';
+@import 'mixins';
+
+section#portfolio {
+  color: $white;
+  background: $black;
+
+  .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    & > div {
+      flex: 1;
+      
+      a{
+        font-size: 0.7rem;
+      }
+
+      img {
+        max-width: 100%;
+        min-width: 320px;
+      }
+
+      & > div {
+        padding: 1rem 3rem;
+        h2 {
+          @include separator($white);
+        }
+
+        p {
+          font-size: 0.7rem;
+          color: $grey;
+          line-height: 1.3rem;
+        }
+
+      }
+    }
+  }
+
+  ul.skill {
+    li {
+      border: 2px solid $darkgrey;
+      border-radius: 0.5rem;
+      width: auto;
+      position: relative;
+      display: inline-block;
+      padding: 0.5rem 0.5rem 0.5rem 30px;
+      font-size: 0.7rem;
+
+      span::before {
+        content: ' ';
+        background-size: 22px 22px;
+        width: 22px;
+        height: 22px;
+        display: block;
+        position: absolute;
+        top: 4px;
+        left: 4px;
+      }
+    }
+    li.android span::before {
+      background-image: url('../images/android.png');
+    }
+    li.ios span::before {
+      background-image: url('../images/ios.png');
+    }
+    li.web span::before {
+      background-image: url('../images/web.png');
+    }
+  }
+
+}
