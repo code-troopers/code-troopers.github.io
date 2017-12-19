@@ -43,16 +43,3 @@
     width: 50px;
   }
 }
-
-@mixin arrowRight($color){
-  &::after {
-    content: ' ';
-    border: 0 solid;
-    border-right-width: 3px;
-    border-bottom-width: 3px;
-    display: inline-block;
-    padding: 3px;
-    transform: rotate(-45deg);
-    -webkit-transform: rotate(-45deg);
-  }
-}

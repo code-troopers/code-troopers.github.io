@@ -1,0 +1,14 @@
+.pagination{
+  padding-top: 1rem;
+  padding-bottom: 3rem;
+  .previous-page{
+    float: left;
+    &::after{
+      content:' ';
+      background: url('/img/arrow_right.svg') no-repeat;
+    }
+  }
+  .next-page{
+    float: right;
+  }
+}

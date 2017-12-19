@@ -7,3 +7,4 @@ dataDir: "site/data"
 layoutDir: "site/layouts"
 staticDir: "site/static"
 themesDir: "site/themes"
+paginate: 9

@@ -18,9 +18,17 @@
             {{ .Render "li" }}
             {{ end }}
         </div>
-        <div class="row text-center">
-            {{ template "_internal/pagination.html" . }}
+        {{ if or (.Paginator.HasPrev) (.Paginator.HasNext) }}
+        <div class="pagination">
+            {{ if .Paginator.HasPrev }}
+            <a href="{{ .Paginator.Prev.URL }}" class="previous-page"><img src="/img/arrow_left.svg"/> Page précédente</a>
+            {{ end }}
+            {{ if .Paginator.HasNext }}
+            <a href="{{ .Paginator.Next.URL }}" class="next-page">Page suivante <img src="/img/arrow_right.svg"/></a>
+            {{ end }}
         </div>
+        {{ end }}
     </section>
+
 </section>
 {{ partial "footer.html" . }}
