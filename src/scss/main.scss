@@ -58,7 +58,8 @@ a.btn{
 
   &:hover{
     background: $gradient;
-    border-color: transparent;
+    border-color: $darkblue;
+    color: $white;
   }
 }
 

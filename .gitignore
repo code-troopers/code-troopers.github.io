@@ -6,3 +6,4 @@ firebase-debug.log
 site/static/css
 site/static/js
 site/.publish
+dist
