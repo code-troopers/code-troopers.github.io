@@ -3,11 +3,10 @@
 <div>
   <img src="/images/banner/{{ .Params.cover }}.png">
   <div>
-    <h2>{{ .Title }}</h2>
+    <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
     <ul class="tags">
       {{ range $index, $tag := .Params.tags }}
-      <!--<li><a href="{{ $baseurl }}/tags/{{ $tag | urlize }}/">{{ $tag }}</a></li>-->
-      <li>{{ $tag }}</li>
+      <li><a href="/tags/{{ $tag | urlize }}/">{{ $tag }}</a></li>
       {{ end }}
     </ul>
     <p>{{ .Summary | truncate 100 }}</p>

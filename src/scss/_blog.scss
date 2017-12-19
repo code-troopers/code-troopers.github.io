@@ -37,7 +37,7 @@ section#articles {
       flex: 1;
 
       a{
-        font-size: 0.7rem;
+
         color: $black;
         .arrow-right{
           margin-left: -15px;
@@ -46,6 +46,7 @@ section#articles {
         }
       }
       .read-more{
+        font-size: 0.7rem;
         position: absolute;
         bottom: 30px;
       }
@@ -92,6 +93,10 @@ section#articles {
         top: 4px;
         left: 4px;
       }
+    }
+    li:hover{
+      background: $gradient;
+      color: $black;
     }
   }
 }
