@@ -33,7 +33,7 @@
   }
 }
 
-@mixin separator($color){
+@mixin separator($color, $center : false){
   &::after {
     content: ' ';
     display: block;
@@ -41,5 +41,8 @@
     margin-left: -0.6rem;
     border-bottom: 1px solid $color;
     width: 50px;
+    @if($center){
+      margin: auto;
+    }
   }
 }
