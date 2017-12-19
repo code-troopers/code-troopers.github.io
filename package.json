@@ -45,6 +45,7 @@
     "json-loader": "0.5.4",
     "lunr": "2.1.2",
     "node-sass": "4.5.3",
+    "normalize.css": "^7.0.0",
     "postcss-cssnext": "^2.7.0",
     "postcss-easysprites": "0.1.8",
     "postcss-import": "^10.0.0",
@@ -57,6 +58,6 @@
     "webpack-dev-middleware": "1.10.2",
     "webpack-hot-middleware": "2.18.0",
     "whatwg-fetch": "^1.0.0",
-    "normalize.css": "^7.0.0"
+    "fontawesome": "^4.7.2"
   }
 }

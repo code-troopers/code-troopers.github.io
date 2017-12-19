@@ -46,3 +46,38 @@
     }
   }
 }
+
+@mixin tags($color){
+  ul.tags {
+    li {
+      border: 2px solid $color;
+      border-radius: 0.5rem;
+      width: auto;
+      position: relative;
+      display: inline-block;
+      padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+      font-size: 0.7rem;
+
+      span::before {
+        content: ' ';
+        background-size: 22px 22px;
+        width: 22px;
+        height: 22px;
+        display: block;
+        position: absolute;
+        top: 4px;
+        left: 4px;
+      }
+    }
+    li:hover{
+      background: $gradient;
+      color: $black;
+      a{
+        color: $black;
+      }
+    }
+    &.float{
+      float:left;
+    }
+  }
+}

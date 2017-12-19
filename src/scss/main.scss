@@ -1,4 +1,5 @@
 @import '../../node_modules/normalize.css/normalize.css';
+@import '../../node_modules/font-awesome/css/font-awesome.css';
 @import 'variables';
 @import 'mixins';
 @import 'header';
@@ -9,7 +10,7 @@
 @import 'portfolio';
 @import 'blog';
 @import 'casting';
-@import '_pagination';
+@import 'pagination';
 
 html {
   box-sizing: border-box;

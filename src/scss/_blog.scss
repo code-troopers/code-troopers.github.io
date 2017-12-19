@@ -1,4 +1,4 @@
-section#blog{
+section#blogs{
   background: $greywhite;
 
   & > a{
@@ -73,30 +73,64 @@ section#articles {
     }
   }
 
-  ul.tags {
-    li {
-      border: 2px solid $lightgrey;
-      border-radius: 0.5rem;
-      width: auto;
-      position: relative;
-      display: inline-block;
-      padding: 0.5rem 0.5rem 0.5rem 0.5rem;
-      font-size: 0.7rem;
+  @include tags($lightgrey);
+}
 
-      span::before {
-        content: ' ';
-        background-size: 22px 22px;
-        width: 22px;
-        height: 22px;
-        display: block;
-        position: absolute;
-        top: 4px;
-        left: 4px;
+section#blog{
+  width: 900px;
+  background: $white;
+  margin: 0 auto;
+  article {
+    & > img {
+      width: 100%;
+    }
+    & > h2 {
+      @include separator($black);
+    }
+    .content{
+      @include separator($black);
+    }
+    section#author{
+      float:right;
+      color: $grey;
+      font-size: 0.7rem;
+      .author-name{
+        background: $gradient;
+        color: $white;
+        padding: 0.5rem 1rem;
+        border-radius: 0.75rem;
       }
     }
-    li:hover{
-      background: $gradient;
-      color: $black;
+    .share{
+      border-radius: 0.75rem;
+      border: 2px solid $lightgrey;
+      padding: 1rem;
+      clear:both;
+      > span {
+        color: $grey;
+        //margin: 0 1rem;
+      }
+      > ul {
+        float: right;
+        margin: -.5rem;
+        li {
+          display:inline-block;
+          font-size: 2rem;
+          &:hover{
+            color: $darkblue;
+          }
+        }
+      }
     }
+
   }
+  a{
+    color: $grey;
+  }
+  a:hover{
+    color: inherit;
+  }
+
+  @include tags($lightgrey);
+
 }
