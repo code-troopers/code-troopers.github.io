@@ -89,6 +89,10 @@ section#blog{
     }
     .content{
       @include separator($black);
+      pre{
+        width:100%;
+        overflow: auto;
+      }
     }
     section#author{
       float:right;
@@ -116,6 +120,7 @@ section#blog{
         li {
           display:inline-block;
           font-size: 2rem;
+          padding: 0 1rem;
           &:hover{
             color: $darkblue;
           }

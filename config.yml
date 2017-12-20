@@ -8,3 +8,4 @@ layoutDir: "site/layouts"
 staticDir: "site/static"
 themesDir: "site/themes"
 paginate: 9
+pygmentsUseClasses: true

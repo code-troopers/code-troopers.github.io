@@ -4,7 +4,9 @@
 
 // Load application styles
 import 'scss/main.scss';
-console.log("App loaded");
+import hljs from 'highlight.js';
+
+hljs.initHighlightingOnLoad();
 
 // ================================
 // START YOUR APP HERE
