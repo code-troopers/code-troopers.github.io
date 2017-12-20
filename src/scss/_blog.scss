@@ -37,7 +37,6 @@ section#articles {
       flex: 1;
 
       a{
-
         color: $black;
         .arrow-right{
           margin-left: -15px;
@@ -93,6 +92,13 @@ section#blog{
         width:100%;
         overflow: auto;
       }
+      .inlineBoxes {
+        img {
+          padding: 1rem;
+          max-width: 20rem;
+        }
+      }
+
     }
     section#author{
       float:right;

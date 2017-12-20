@@ -17,7 +17,7 @@
                 <!--<div class="date">par {{ .Params.author}}</div>-->
                 <!--</div>-->
                 <h2>{{ .Title }}</h2>
-                <span class="label label-info">~{{ .ReadingTime }} minute(s) à lire</span>
+                <!--<span class="label label-info">~{{ .ReadingTime }} minute(s) à lire</span>-->
                 {{if .Params.tags }}
                 <ul class="tags">
                     {{ range $index, $tag := .Params.tags }}
@@ -42,19 +42,19 @@
                     <span>Partager</span>
                     <ul class="socials">
                         <li>
-                            <a target="_blank" title="Twitter"
-                               href="https://twitter.com/share?url=http://code-troopers.com{{ .Permalink }}&text={{ .Title }}&via=codetroopers"
-                               rel="nofollow"
-                               onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=400,width=700');return false;">
-                                <i class="fa fa-twitter"></i>
-                            </a>
-                        </li>
-                        <li>
                             <a target="_blank" title="Facebook"
                                href="https://www.facebook.com/sharer.php?u=http://code-troopers.com{{ .Permalink }}&t={{ .Title }}"
                                class="facebook-button" rel="nofollow"
                                onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=500,width=700');return false;">
                                 <i class="fa fa-facebook"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" title="Twitter"
+                               href="https://twitter.com/share?url=http://code-troopers.com{{ .Permalink }}&text={{ .Title }}&via=codetroopers"
+                               rel="nofollow"
+                               onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=400,width=700');return false;">
+                                <i class="fa fa-twitter"></i>
                             </a>
                         </li>
                         <li>
@@ -75,14 +75,10 @@
                         {{ if .Next }}
                         <a href="{{ .Next.Permalink }}" class="previous-page"><i class="fa fa-arrow-circle-o-left"></i>
                             Précédent</a>
-                        {{ else }}
-                        <span class="disabled"><i class="fa fa-arrow-circle-o-left"></i> Précédent</span>
                         {{ end }}
                         {{ if .Prev }}
                         <a href="{{ .Prev.Permalink }}" class="next-page">
                             Suivant <i class="fa fa-arrow-circle-o-right"></i></a>
-                        {{ else }}
-                        <span class="disabled">Suivant <i class="fa fa-arrow-circle-o-right"></i></span>
                         {{ end }}
                     </div>
                 </div>
