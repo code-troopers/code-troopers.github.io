@@ -2,10 +2,8 @@
 <header>
     <nav>
         <a href="/" class="brand">Code-Troopers</a>
-        <a href="#skills">Compétences</a>
-        <a href="#portfolio">Réalisations</a>
-        <a href="#casting">Casting</a>
-        <a href="#contact">Contact</a>
-        <a href="/blog" class="blog"><span>Blog</span></a>
+        {{ range .Site.Menus.main }}
+        <a href="{{ .URL }}" class="{{ if or ($.IsMenuCurrent "main" .) ($.HasMenuCurrent "main" .) }} active {{ end }} {{ .Pre }}">{{ .Name }}</a>
+        {{ end }}
     </nav>
 </header>

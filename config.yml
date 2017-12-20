@@ -9,3 +9,28 @@ staticDir: "site/static"
 themesDir: "site/themes"
 paginate: 9
 pygmentsUseClasses: true
+SectionPagesMenu: "main"
+
+menu:
+  main:
+    - Identifier: "skills"
+      Name: "Compétences"
+      URL: "/#skills"
+      Weight: 1
+    - Identifier: "portfolio"
+      Name: "Réalisations"
+      URL: "/#portfolio"
+      Weight: 2
+    - Identifier: "casting"
+      Name: "Casting"
+      URL: "/#casting"
+      Weight: 3
+    - Identifier: "contact"
+      Name: "Contact"
+      URL: "/#contact"
+      Weight: 4
+    - Identifier: "blog"
+      Name: "Blog"
+      URL: "/blog"
+      Pre: "blog"
+      Weight: 5
