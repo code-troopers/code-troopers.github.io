@@ -1,3 +1,4 @@
 prepare='npm i' #Install dependencies
 dev='make dev' # run server
 build='make dist' # builds
+run='npm run serve-dev' # run local dev version on :3000
