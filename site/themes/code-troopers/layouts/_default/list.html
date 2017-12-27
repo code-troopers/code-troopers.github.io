@@ -24,7 +24,7 @@
             <a href="{{ .Paginator.Prev.URL }}" class="previous-page"><img src="/img/arrow_left.svg"/> Page précédente</a>
             {{ end }}
             {{ if .Paginator.HasNext }}
-            <a href="{{ .Paginator.Next.URL }}" class="next-page">Page suivante <img src="/img/arrow_right.svg"/></a>
+            <a href="{{ .Paginator.Next.URL }}" class="next-page">Page suivante <img class="arrow-right"  src="/img/arrow_right.svg"/></a>
             {{ end }}
         </div>
         {{ end }}

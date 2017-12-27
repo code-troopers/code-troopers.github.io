@@ -10,6 +10,8 @@
       {{ end }}
     </ul>
     <p>{{ .Summary | truncate 100 }}</p>
-    <a class="read-more" href="{{ .Permalink }}">En savoir plus <i class="arrow-right">&nbsp;</i></a>
+    <a class="read-more" href="{{ .Permalink }}">En savoir plus
+      {{ partial "arrow_right.html" . }}
+    </a>
   </div>
 </div>

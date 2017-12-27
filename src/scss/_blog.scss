@@ -23,7 +23,6 @@ section#articles {
   margin: 0 auto;
   color: $bloggrey;
 
-
   .wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -38,11 +37,15 @@ section#articles {
 
       a{
         color: $black;
-        .arrow-right{
-          margin-left: -15px;
-          display:block;
-          background: url('/img/arrow_right.svg') no-repeat;
+        @include arrowRight();
+        &:hover {
+          @include arrowRight($lightblue);
+          color: $lightblue;
+          width:80%;
+          //does not work
+          transition: all 3s;
         }
+
       }
       .read-more{
         font-size: 0.7rem;
@@ -143,5 +146,7 @@ section#blog{
   }
 
   @include tags($lightgrey);
+
+
 
 }
