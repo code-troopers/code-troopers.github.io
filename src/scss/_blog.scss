@@ -37,20 +37,26 @@ section#articles {
 
       a{
         color: $black;
-        @include arrowRight();
-        &:hover {
-          @include arrowRight($lightblue);
-          color: $lightblue;
-          width:80%;
-          //does not work
-          transition: all 3s;
-        }
-
       }
       .read-more{
         font-size: 0.7rem;
         position: absolute;
         bottom: 30px;
+      }
+      a.read-more {
+        display: inline-block;
+        width: 40%;
+        @include arrows();
+        .arrow_box_right{
+          margin-left: -10px;
+        }
+        transition: width 1s ease-in-out;
+        &:hover {
+          @include arrows($lightblue);
+          color: $lightblue;
+          width: 75%;
+
+        }
       }
 
       img {

@@ -82,11 +82,12 @@
   }
 }
 
-@mixin arrowRight($color: black){
-  .arrow_box {
+@mixin arrows($color: black){
+  .arrow_box_right {
+    transition: inherit;
     margin-top: 0.75rem;
     position: relative;
-    background: #222e36;
+    background: $color;
     border: 1px solid $color;
     border-radius: 4px;
     width: 100%;
@@ -103,7 +104,7 @@
     }
 
     &:after {
-      border-color: rgba(34, 46, 54, 0);
+      border-color: rgba(0, 0, 0, 0);
       border-left-color: $color;
       border-width: 4px;
       margin-top: -4px;
@@ -111,6 +112,38 @@
     &:before {
       border-color: rgba(0, 0, 0, 0);
       border-left-color: $color;
+      border-width: 5px;
+      margin-top: -5px;
+    }
+  }
+  .arrow_box_left {
+    transition: inherit;
+    margin-top: 0.75rem;
+    position: relative;
+    background: $color;
+    border: 1px solid $color;
+    border-radius: 4px;
+    width: 100%;
+    &:after, &:before {
+      right: 100%;
+      top: 50%;
+      border: solid transparent;
+      content: " ";
+      height: 0;
+      width: 0;
+      position: absolute;
+      pointer-events: none;
+    }
+
+    &:after {
+      border-color: rgba(0, 0, 0, 0);
+      border-right-color: $color;
+      border-width: 4px;
+      margin-top: -4px;
+    }
+    &:before {
+      border-color: rgba(0, 0, 0, 0);
+      border-right-color: $color;
       border-width: 5px;
       margin-top: -5px;
     }
