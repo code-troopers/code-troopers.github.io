@@ -21,10 +21,16 @@
         {{ if or (.Paginator.HasPrev) (.Paginator.HasNext) }}
         <div class="pagination">
             {{ if .Paginator.HasPrev }}
-            <a href="{{ .Paginator.Prev.URL }}" class="previous-page"><img src="/img/arrow_left.svg"/> Page précédente</a>
+            <a href="{{ .Paginator.Prev.URL }}" class="previous-page">
+                <div class="arrow">{{ partial "arrow_left.html" . }}</div>
+                Page précédente
+            </a>
             {{ end }}
             {{ if .Paginator.HasNext }}
-            <a href="{{ .Paginator.Next.URL }}" class="next-page">Page suivante <img class="arrow-right"  src="/img/arrow_right.svg"/></a>
+            <a href="{{ .Paginator.Next.URL }}" class="next-page">
+                Page suivante
+                <div class="arrow">{{ partial "arrow_right.html" . }}</div>
+            </a>
             {{ end }}
         </div>
         {{ end }}
