@@ -20,6 +20,7 @@ Comme certains d'entre vous le savent, j'aime beaucoup Vim. Il n'y a pas très l
 {lt}a class="inlineBoxes" href="/images/posts/2016-05-VimMacro/trop_genial.gif" data-lightbox="0" title="trop génial"{gt}
         {lt}img class="medium" src="/images/posts/2016-05-VimMacro/trop_genial.gif" alt="trop génial"/{gt}
 {lt}/a{gt}
+{lt}/div{gt}
 
 [%hardbreaks]
 

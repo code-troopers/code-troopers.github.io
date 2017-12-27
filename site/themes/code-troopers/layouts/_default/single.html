@@ -73,12 +73,16 @@
                 <div class="back">
                     <div class="pagination">
                         {{ if .Next }}
-                        <a href="{{ .Next.Permalink }}" class="previous-page"><i class="fa fa-arrow-circle-o-left"></i>
-                            Précédent</a>
+                        <a href="{{ .Next.Permalink }}" class="previous-page">
+                            <div class="arrow">{{ partial "arrow_left.html" . }}</div>
+                            Article précédent
+                        </a>
                         {{ end }}
                         {{ if .Prev }}
                         <a href="{{ .Prev.Permalink }}" class="next-page">
-                            Suivant <i class="fa fa-arrow-circle-o-right"></i></a>
+                            Article suivant
+                            <div class="arrow">{{ partial "arrow_right.html" . }}</div>
+                        </a>
                         {{ end }}
                     </div>
                 </div>

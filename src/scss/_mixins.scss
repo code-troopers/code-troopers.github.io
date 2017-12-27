@@ -82,70 +82,60 @@
   }
 }
 
-@mixin arrows($color: black){
-  .arrow_box_right {
+@mixin arrows($color: black, $margin-top: 0.75rem, $thickness: 4px){
+  .arrow_box {
     transition: inherit;
-    margin-top: 0.75rem;
+    margin-top: $margin-top;
     position: relative;
     background: $color;
-    border: 1px solid $color;
-    border-radius: 4px;
+    border: #{$thickness / 4} solid $color;
     width: 100%;
+
+    &:after, &:before {
+      border: solid transparent;
+      content: " ";
+      height: 0;
+      width: 0;
+      position: absolute;
+      pointer-events: none;
+    }
+
+    &:after {
+      border-color: rgba(0, 0, 0, 0);
+      border-width: $thickness;
+      margin-top: #{-1 * $thickness};
+    }
+    &:before {
+      border-color: rgba(0, 0, 0, 0);
+      border-width: #{$thickness + 1};
+      margin-top: #{- 1 * ($thickness + 1)};
+    }
+  }
+
+  .arrow_box_right {
 
     &:after, &:before {
       left: 100%;
       top: 50%;
-      border: solid transparent;
-      content: " ";
-      height: 0;
-      width: 0;
-      position: absolute;
-      pointer-events: none;
     }
-
     &:after {
-      border-color: rgba(0, 0, 0, 0);
       border-left-color: $color;
-      border-width: 4px;
-      margin-top: -4px;
     }
     &:before {
-      border-color: rgba(0, 0, 0, 0);
       border-left-color: $color;
-      border-width: 5px;
-      margin-top: -5px;
     }
   }
   .arrow_box_left {
-    transition: inherit;
-    margin-top: 0.75rem;
-    position: relative;
-    background: $color;
-    border: 1px solid $color;
-    border-radius: 4px;
-    width: 100%;
     &:after, &:before {
       right: 100%;
       top: 50%;
-      border: solid transparent;
-      content: " ";
-      height: 0;
-      width: 0;
-      position: absolute;
-      pointer-events: none;
     }
 
     &:after {
-      border-color: rgba(0, 0, 0, 0);
       border-right-color: $color;
-      border-width: 4px;
-      margin-top: -4px;
     }
     &:before {
-      border-color: rgba(0, 0, 0, 0);
       border-right-color: $color;
-      border-width: 5px;
-      margin-top: -5px;
     }
   }
 }

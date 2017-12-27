@@ -1,13 +1,7 @@
 .pagination{
   padding-top: 1rem;
   padding-bottom: 3rem;
-  .previous-page{
-    float: left;
-    &::after{
-      content:' ';
-      background: url('/img/arrow_right.svg') no-repeat;
-    }
-  }
+  @include arrows($grey, -0.33rem, 3px);
   .next-page{
     float: right;
   }

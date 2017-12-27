@@ -95,6 +95,7 @@ Il s’est lui-même dénoncé au stand, ça lui a valu un direct de Stefan, en 
 {lt}a class="inlineBoxes" href="/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_stephan_pushing_fcamblor.png" data-lightbox="4" title="Stephan maltraitant Frédéric"{gt}
         {lt}img class="medium" src="/images/posts/2016-05-DevoxxHuntly/devoxx2016_huntly_stephan_pushing_fcamblor.png" alt="Stephan maltraitant Frédéric"/{gt}
 {lt}/a{gt}
+{lt}/div{gt}
 
 {lt}br/{gt}
 

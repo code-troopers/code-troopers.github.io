@@ -96,6 +96,15 @@ section#blog{
       @include separator($black);
     }
     .content{
+      a{
+        color: $black;
+      }
+      color: $grey;
+      font-family: "Montserrat Light", "Helvetica Neue", Arial, sans-serif;
+      h1,h2,h3,h4,h5,h6{
+        color: $black;
+        font-family: "Montserrat", Helvetica, Arial, sans-serif;
+      }
       @include separator($black);
       pre{
         width:100%;
@@ -105,6 +114,14 @@ section#blog{
         img {
           padding: 1rem;
           max-width: 20rem;
+        }
+      }
+      ul {
+        list-style: disc inside;
+        li {
+          > p {
+            display: inline;
+          }
         }
       }
 
@@ -121,23 +138,51 @@ section#blog{
       }
     }
     .share{
-      border-radius: 0.75rem;
+      border-radius: 0.5rem;
       border: 2px solid $lightgrey;
-      padding: 1rem;
+      padding: 0.8rem;
       clear:both;
+      font-size: 0.8rem;
       > span {
         color: $grey;
         //margin: 0 1rem;
       }
       > ul {
         float: right;
-        margin: -.5rem;
+        margin: 0rem;
         li {
-          display:inline-block;
-          font-size: 2rem;
-          padding: 0 1rem;
-          &:hover{
+          display: inline-block;
+          font-size: 1rem;
+          padding: 0 0.8rem;
+          &:hover {
             color: $darkblue;
+          }
+        }
+      }
+    }
+    .pagination{
+      font-family: "Montserrat Light", "Helvetica Neue", Arial, sans-serif;
+      a{
+        font-size: 0.8rem;
+        transition: width 1s, margin-left 1s, margin-right 1s;
+        .arrow{
+          transition: inherit;
+          display: inline-block;
+          width: 24px;
+        }
+        &:hover{
+          color: $grey;
+        }
+        &.previous-page:hover{
+          .arrow{
+            width: 32px;
+            margin-left: -8px;
+          }
+        }
+        &.next-page:hover{
+          margin-right: -8px;
+          .arrow{
+            width: 32px;
           }
         }
       }
