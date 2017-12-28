@@ -3,7 +3,7 @@ node('docker') {
     // This displays colors using the 'xterm' ansi color map.
     ansiColor('xterm') {
       checkout scm
-
+      sh 'docker info'
       sh 'env'
       sh 'pwd'
       sh 'make release'
