@@ -28,6 +28,7 @@
                 <div class="content">
                     {{ .Content }}
                 </div>
+                <div class="content-footer">
                 {{if .Params.tags }}
                 <ul class="tags float">
                     {{ range $index, $tag := .Params.tags }}
@@ -38,6 +39,7 @@
                 <section id="author">
                     <div class="date">Rédigé par <span class="author-name">{{ .Params.author}}</span></div>
                 </section>
+                </div>
                 <div class="share">
                     <span>Partager</span>
                     <ul class="socials">

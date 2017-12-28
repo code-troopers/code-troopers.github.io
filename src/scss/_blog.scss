@@ -125,15 +125,26 @@ section#blog{
       }
 
     }
-    section#author{
-      float:right;
-      color: $grey;
-      font-size: 0.7rem;
-      .author-name{
-        background: $gradient;
-        color: $white;
-        padding: 0.5rem 1rem;
-        border-radius: 0.75rem;
+    .content-footer {
+      margin: 1rem 0;
+      display: flex;
+      justify-content: space-between;
+
+      .tags{
+        flex: 1;
+      }
+
+      section#author {
+        text-align: right;
+        flex: 0.5;
+        color: $grey;
+        font-size: 0.7rem;
+        .author-name {
+          background: $gradient;
+          color: $white;
+          padding: 0.5rem 1rem;
+          border-radius: 0.75rem;
+        }
       }
     }
     .share{
@@ -144,7 +155,6 @@ section#blog{
       font-size: 0.8rem;
       > span {
         color: $grey;
-        //margin: 0 1rem;
       }
       > ul {
         float: right;
