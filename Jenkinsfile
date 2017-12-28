@@ -7,12 +7,9 @@ pipeline {
   stages {
     stage("build") {
       steps {
-        sh 'ls -al /usr/src/app'
-        dir('/usr/src/app') {
-          sh 'npm run build'
-          sh 'npm run lint --silent'
-          sh 'npm run stylelint --silent'
-        }
+        sh 'cd /usr/src/app && npm run build'
+        sh 'cd /usr/src/app && npm run lint --silent'
+        sh 'cd /usr/src/app && npm run stylelint --silent'
       }
     }
   }
