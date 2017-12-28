@@ -4,7 +4,7 @@ node('docker') {
     checkout scm
 
     def image = docker.build("codetroopers/website:${env.BUILD_ID}")
-    image.withRun('npm run build')
+    image.run('npm run build')
 //            {
 //      sh 'npm run build'
 //      sh 'npm run lint --silent'
