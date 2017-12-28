@@ -3,8 +3,7 @@ node('docker') {
   ansiColor('xterm') {
     checkout scm
 
-    def image = docker.build("codetroopers/website:${env.BUILD_ID}")
-    image.run('npm run build')
+    docker.build("codetroopers/website:${env.BUILD_ID}").withRun('npm run build')
 //            {
 //      sh 'npm run build'
 //      sh 'npm run lint --silent'
