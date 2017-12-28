@@ -33,6 +33,4 @@ RUN npm install
 COPY . /usr/src/app
 EXPOSE 3000
 
-RUN chmod -R a+rw /usr/src/app
-
 CMD [ "npm", "run", "serve-prod"]
