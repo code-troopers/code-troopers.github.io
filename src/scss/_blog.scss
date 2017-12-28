@@ -148,13 +148,16 @@ section#blog{
       }
       > ul {
         float: right;
-        margin: 0rem;
+        margin: 0;
         li {
           display: inline-block;
           font-size: 1rem;
           padding: 0 0.8rem;
           &:hover {
             color: $darkblue;
+            a{
+              color: inherit;
+            }
           }
         }
       }
