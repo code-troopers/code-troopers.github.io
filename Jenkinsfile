@@ -4,6 +4,7 @@ node('dind') {
     checkout scm
 
     sh 'env'
+    sh 'pwd'
     sh 'make release'
     sh 'ls -lR'
     archiveArtifacts 'dist'
