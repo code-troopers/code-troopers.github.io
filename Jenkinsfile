@@ -3,6 +3,7 @@ node('dind') {
   ansiColor('xterm') {
     checkout scm
 
+    sh 'mkdir dist || true'
     sh 'make build dist'
     sh 'ls -lR'
     archiveArtifacts 'dist'
