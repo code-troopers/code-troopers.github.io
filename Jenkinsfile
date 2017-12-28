@@ -1,12 +1,9 @@
-node('docker') {
+node('dind') {
   // This displays colors using the 'xterm' ansi color map.
   ansiColor('xterm') {
     checkout scm
 
-    def customImg = docker.build("codetroopers/website:${env.BUILD_ID}")
-    customImg.withRun('-e NEVERMIND=whatever', 'npm run build'){ c ->
-      sh 'sleep 60'
-    }
+    sh 'make dist'
 
 //            {
 //      sh 'npm run build'
