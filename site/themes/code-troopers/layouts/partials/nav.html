@@ -3,7 +3,7 @@
     <nav>
         <a href="/" class="brand">Code-Troopers</a>
         {{ range .Site.Menus.main }}
-        <a href="{{ .URL }}" class="{{ if or ($.IsMenuCurrent "main" .) ($.HasMenuCurrent "main" .) }} active {{ end }} {{ .Pre }}">{{ .Name }}</a>
+        <a href="{{ .URL }}" class="{{ if or ($.IsMenuCurrent "main" .) ($.HasMenuCurrent "main" .) }} active {{ end }} {{ .Pre }}"><span>{{ .Name }}</span></a>
         {{ end }}
     </nav>
 </header>
