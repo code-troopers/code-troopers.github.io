@@ -4,7 +4,7 @@ node('docker') {
     checkout scm
 
     def customImg = docker.build("codetroopers/website:${env.BUILD_ID}").withRun('npm run build')
-    customImg.withRun('', 'npm run build'){ c ->
+    customImg.withRun('-e NEVERMIND=whatever', 'npm run build'){ c ->
 
     }
 
