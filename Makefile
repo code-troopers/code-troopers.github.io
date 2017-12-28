@@ -27,4 +27,4 @@ dev: build serve-dev
 
 serve: build serve-prod
 
-release: clean build lint dist
+release: clean build dist
