@@ -44,7 +44,7 @@ section#articles {
         width: 40%;
         @include arrows();
         .arrow_box_right{
-          margin-left: -10px;
+          margin-left: -0.6rem;
         }
         transition: width 1s ease-in-out;
         &:hover {
@@ -136,6 +136,7 @@ section#blog{
 
       section#author {
         text-align: right;
+        align-self: center;
         flex: 0.5;
         color: $grey;
         font-size: 0.7rem;

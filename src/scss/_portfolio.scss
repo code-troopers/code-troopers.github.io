@@ -31,6 +31,19 @@ section#portfolio {
           color: $grey;
           line-height: 1.3rem;
         }
+        a.read-more{
+          display: inline-block;
+          width: 40%;
+          transition: width 1s ease-in-out;
+          .arrow_box{
+            margin-left: -0.6rem;
+          }
+          @include arrows($white);
+          &:hover{
+            width:100%;
+            @include arrows($lightblue);
+          }
+        }
 
       }
     }
