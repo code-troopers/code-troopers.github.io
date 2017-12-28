@@ -13,7 +13,7 @@ node('docker') {
       sh 'pwd'
       sh 'env'
       sh 'ls dist'
-      archiveArtifacts 'dist'
+      archiveArtifacts 'dist/**'
     }
   }
 }
