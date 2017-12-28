@@ -18,10 +18,16 @@ nav {
     text-align: center;
     letter-spacing: 0.2rem;
     font-size: 0.6rem;
+    border-bottom: 2px solid $darkgrey;
   }
 
   a.brand {
     flex: 0.8;
+    &, &:hover{
+      background: url('../img/Code-Troopers.png') no-repeat center;
+      color: rgba(0,0,0,0);
+      border-bottom: 2px solid $darkgrey;
+    }
   }
 
   a.blog {
@@ -29,6 +35,7 @@ nav {
     &.active{
       background: $gradient;
       border-left: none;
+      border-bottom: none;
     }
   }
 
@@ -42,11 +49,9 @@ nav {
   a:hover {
     background: $gradient;
     color: $white;
+    border-bottom: none;
   }
 
-  a.brand:hover {
-    background: inherit;
-  }
 
   a.blog:hover {
     background: $white;
