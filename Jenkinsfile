@@ -3,6 +3,7 @@ node('dind') {
   ansiColor('xterm') {
     checkout scm
 
+    sh 'env'
     sh 'make release'
     sh 'ls -lR'
     archiveArtifacts 'dist'
