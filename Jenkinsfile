@@ -1,6 +1,7 @@
 pipeline {
   agent {
     dockerfile {
+      args " -v ${PWD}/site:/usr/src/app/site -v ${PWD}/src:/usr/src/app/src -v ${PWD}/dist:/usr/src/app/dist"
     }
   }
   stages {
