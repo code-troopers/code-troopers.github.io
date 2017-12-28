@@ -5,7 +5,7 @@ node('docker') {
 
     def customImg = docker.build("codetroopers/website:${env.BUILD_ID}")
     customImg.withRun('-e NEVERMIND=whatever', 'npm run build'){ c ->
-
+      sh 'sleep 60"'
     }
 
 //            {
