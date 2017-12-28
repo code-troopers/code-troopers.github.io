@@ -4,6 +4,7 @@ node('dind') {
     checkout scm
 
     sh 'make build dist'
+    sh 'ls -lR'
     archiveArtifacts 'dist'
 
 //            {
