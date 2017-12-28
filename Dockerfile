@@ -7,11 +7,13 @@ RUN curl -sL https://deb.nodesource.com/setup_8.x | bash
 
 # Install node and pygments (for syntax highlighting)
 RUN apt-get -qq update \
-  && DEBIAN_FRONTEND=noninteractive apt-get -qq install -y --no-install-recommends build-essential python-pygments git ca-certificates nodejs \
+  && DEBIAN_FRONTEND=noninteractive apt-get -qq install -y --no-install-recommends build-essential python-pygments git ca-certificates nodejs rubygems\
   && rm -rf /var/lib/apt/lists/*
 
+RUN gem install --no-ri --no-rdoc asciidoctor
+
 # Download and install hugo
-ENV HUGO_VERSION 0.25.1
+ENV HUGO_VERSION 0.31.1
 ENV HUGO_BINARY hugo_${HUGO_VERSION}_Linux-64bit.deb
 ARG HUGO_URL
 ENV HUGO_URL https://github.com/spf13/hugo/releases/download/v${HUGO_VERSION}/${HUGO_BINARY}
@@ -30,4 +32,4 @@ RUN npm install
 COPY . /usr/src/app
 EXPOSE 3000
 
-CMD [ "npm", "start"]
+CMD [ "npm", "run", "serve-prod"]
