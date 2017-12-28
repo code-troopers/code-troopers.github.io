@@ -1,5 +1,6 @@
 .generated/
 .git/
+site/public/
 dist/
 public/
 node_modules/
