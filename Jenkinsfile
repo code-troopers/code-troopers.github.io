@@ -3,15 +3,8 @@ node('dind') {
   ansiColor('xterm') {
     checkout scm
 
-    sh 'mkdir dist || true'
-    sh 'make build dist'
+    sh 'make release'
     sh 'ls -lR'
     archiveArtifacts 'dist'
-
-//            {
-//      sh 'npm run build'
-//      sh 'npm run lint --silent'
-//      sh 'npm run stylelint --silent'
-//    }
   }
 }

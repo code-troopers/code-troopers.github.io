@@ -17,7 +17,7 @@ serve-prod:
 	@eval $(DOCKER_RUN) npm run serve-prod
 
 dist:
-	@eval $(DOCKER_RUN) npm run build
+	eval $(DOCKER_RUN) npm run build
 
 lint:
 	@eval $(DOCKER_RUN) npm run lint --silent
