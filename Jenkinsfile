@@ -3,7 +3,7 @@ node('dind') {
   ansiColor('xterm') {
     checkout scm
 
-    sh 'make dist'
+    sh 'make build dist'
 
 //            {
 //      sh 'npm run build'
