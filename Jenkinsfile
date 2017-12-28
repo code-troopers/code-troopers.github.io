@@ -6,7 +6,10 @@ node('dind') {
     sh 'env'
     sh 'pwd'
     sh 'make release'
-    sh 'ls -lR'
+    sh 'ls -la'
+    sh 'pwd'
+    sh 'env'
+    sh 'ls dist'
     archiveArtifacts 'dist'
   }
 }
