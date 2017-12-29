@@ -97,78 +97,12 @@
     <h1>Réalisations</h1>
 
     <div class="wrapper">
-        <div>
-            <img src="img/portfolio/nowly.jpg">
-            <div>
-                <h2>Nowly</h2>
-                <ul class="skill">
-                    <li class="android"><span>Android</span></li>
-                </ul>
-                <p>Conversion de l'application iPhone existante vers une application native Android. Nowly vous permet
-                    de
-                    savoir qui est disponible à proximité.</p>
-                <a class="read-more" href="/nowly.html">En savoir plus
-                    <div class="arrow_box_right arrow_box">
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div>
-            <img src="img/portfolio/fizzer.jpg">
-            <div>
-                <h2>Fizzer</h2>
-                <ul class="skill">
-                    <li class="android"><span>Android</span></li>
-                    <li class="web"><span>Web</span></li>
-                </ul>
-                <p>Application Android d'envoie de carte postale personnalisée directement depuis votre smartphone.
-                    Prenez
-                    des photos, réalisez votre collage et envoyez votre carte postale.</p>
-                <a class="read-more" href="/fizzer.html">En savoir plus
-                    <div class="arrow_box_right arrow_box">
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div>
-            <img src="img/portfolio/toosla.jpg">
-            <div>
-                <h2>Toosla</h2>
-                <ul class="skill">
-                    <li class="android"><span>Android</span></li>
-                    <li class="web"><span>Web</span></li>
-                </ul>
-                <p>Application Android de location de voiture. Avec Toosla plus besoin de guichet ni ce clé ! Tout se
-                    passe
-                    avec votre mobile. L'application se connecte en Bluetooth avec la voiture et vous en donne le
-                    contrôle.</p>
-                <a class="read-more" href="/toosla.html">En savoir plus
-                    <div class="arrow_box_right arrow_box">
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div>
-            <img src="img/portfolio/navigtours.jpg">
-            <div>
-                <h2>Navig'Tours</h2>
-                <ul class="skill">
-                    <li class="android"><span>Android</span></li>
-                    <li class="ios"><span>iOS</span></li>
-                    <li class="web"><span>Web</span></li>
-                </ul>
-                <p>Les applications gratuites natives Android et iOS. Navig'Tours permet de consulter les horaires,
-                    lignes
-                    et arrêts des bus et tram de Tours (réseau Fil Bleu).</p>
-                <a class="read-more" href="/navigtours.html">En savoir plus
-                    <div class="arrow_box_right arrow_box">
-                    </div>
-                </a>
-            </div>
-        </div>
+        {{ range first 4 (where .Site.Pages "Section" "work") }}
+        {{ .Render "li" }}
+        {{ end }}
     </div>
     <div class="wrapper-center">
-        <a href="/portfolio" class="btn">Toutes nos réalisations</a>
+        <a href="/work" class="btn">Toutes nos réalisations</a>
     </div>
 </section>
 

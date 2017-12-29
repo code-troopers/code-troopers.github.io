@@ -1,0 +1,40 @@
+{{ partial "nav.html" . }}
+<section id="portfolio">
+    <div class="wrapper">
+        <h1>
+            {{ if eq .Title "Works" }}
+            Réalisations
+            {{ else }}
+            {{ .Title }}
+            {{ end}}
+        </h1>
+    </div>
+
+
+    <div class="wrapper">
+    {{ range $index, $page := .Paginator.Pages }}
+    {{ .Render "li" }}
+    {{ end }}
+    </div>
+
+    <section id="articles">
+        {{ if or (.Paginator.HasPrev) (.Paginator.HasNext) }}
+        <div class="pagination">
+            {{ if .Paginator.HasPrev }}
+            <a href="{{ .Paginator.Prev.URL }}" class="previous-page">
+                <div class="arrow">{{ partial "arrow_left.html" . }}</div>
+                Page précédente
+            </a>
+            {{ end }}
+            {{ if .Paginator.HasNext }}
+            <a href="{{ .Paginator.Next.URL }}" class="next-page">
+                Page suivante
+                <div class="arrow">{{ partial "arrow_right.html" . }}</div>
+            </a>
+            {{ end }}
+        </div>
+        {{ end }}
+    </section>
+
+</section>
+{{ partial "footer.html" . }}

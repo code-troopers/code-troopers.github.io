@@ -1,0 +1,15 @@
+---
+cover: navigtours.jpg
+date: '2017-12-29'
+tags:
+- Android
+- iOS
+- Web
+title: "Navig'Tours"
+url: /navigtours.html
+
+---
+
+Les applications gratuites natives Android et iOS. Navig'Tours permet de consulter les horaires,
+lignes et arrêts des bus et tram de Tours (réseau Fil Bleu).
+<!--more-->

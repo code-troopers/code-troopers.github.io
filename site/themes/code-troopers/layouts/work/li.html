@@ -1,0 +1,17 @@
+{{ $baseurl := .Site.BaseURL }}
+
+<div>
+  <img src="/img/portfolio/{{ .Params.cover }}">
+  <div>
+    <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+    <ul class="skill">
+      {{ range $index, $tag := .Params.tags }}
+      <li class="{{ lower $tag }}"><span>{{ $tag }}</span></li>
+      {{ end }}
+    </ul>
+    <p>{{ .Summary }}</p>
+    <a class="read-more" href="{{ .Permalink }}">En savoir plus
+      {{ partial "arrow_right.html" . }}
+    </a>
+  </div>
+</div>

@@ -8,6 +8,10 @@ section#portfolio {
   .wrapper {
     display: flex;
     flex-wrap: wrap;
+    h1{
+      flex:1;
+      text-align: center;
+    }
     & > div {
       flex: 1;
       
@@ -24,6 +28,9 @@ section#portfolio {
         padding: 1rem 3rem;
         h2 {
           @include separator($white);
+          a{
+            font-size: inherit;
+          }
         }
 
         p {
@@ -49,6 +56,44 @@ section#portfolio {
     }
   }
 
+
+
+}
+
+section#work{
+  background-color:$black;
+  color: $lightgrey;
+
+  .wrapper{
+    width:1200px;
+    margin: auto;
+    display:flex;
+    flex-wrap: wrap;
+    h1{
+      flex:1;
+      color: $white;
+    }
+    article{
+      & > img{
+        width:100%;
+      }
+    }
+    article > h2, .content{
+      @include separator($lightgrey)
+    }
+    .content-footer{
+      padding: 1rem 0;
+    }
+    .share{
+      border-color: $darkgrey;
+      a{
+        color: $lightgrey;
+      }
+    }
+  }
+}
+
+section#work, section#portfolio{
   ul.skill {
     li {
       border: 2px solid $darkgrey;
@@ -80,5 +125,4 @@ section#portfolio {
       background-image: url('../img/web.png');
     }
   }
-
 }

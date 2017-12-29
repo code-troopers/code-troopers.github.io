@@ -1,0 +1,29 @@
+@import "variables";
+.share{
+  border-radius: 0.5rem;
+  border: 2px solid $lightgrey;
+  padding: 0.8rem;
+  clear:both;
+  font-size: 0.8rem;
+  > span {
+    color: $grey;
+  }
+  > ul {
+    float: right;
+    margin: 0;
+    li {
+      display: inline-block;
+      font-size: 1rem;
+      padding: 0 0.8rem;
+      &:hover {
+        color: $darkblue;
+        a{
+          color: inherit;
+          &:hover{
+            color: $darkblue !important;
+          }
+        }
+      }
+    }
+  }
+}
