@@ -17,19 +17,20 @@ nav {
     flex: 1;
     text-align: center;
     letter-spacing: 0.2rem;
-    font-size: 0.6rem;
+    font-size: 0.8rem;
     border-bottom: 2px solid $darkgrey;
+    max-height: 60px;
   }
 
   a.brand {
     flex: 0.8;
     &, &:hover{
+      background: none;
       img{
         display: inherit;
         text-align: center;
-        height: 0.8rem;
         max-width: 90%;
-        margin: auto;
+        margin: 0 auto;
       }
       border-bottom: 2px solid $darkgrey;
     }
@@ -135,7 +136,7 @@ nav {
 
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1023px) {
   nav{
     a{
       display:none;
