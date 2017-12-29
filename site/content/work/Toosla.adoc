@@ -1,5 +1,5 @@
 ---
-cover: toosla.jpg
+cover: toosla
 date: '2017-12-29'
 tags:
 - Android

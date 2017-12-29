@@ -1,5 +1,5 @@
 ---
-cover: fizzer.jpg
+cover: fizzer
 date: '2017-12-29'
 tags:
 - Android

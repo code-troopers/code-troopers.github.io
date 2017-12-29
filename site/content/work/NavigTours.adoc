@@ -1,5 +1,5 @@
 ---
-cover: navigtours.jpg
+cover: navigtours
 date: '2017-12-29'
 tags:
 - Android
