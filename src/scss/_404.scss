@@ -6,11 +6,9 @@
   height: 100%;
 
   .logo {
-    background-image: url('../img/white_logo.png');
-    width: 471px;
     max-width: 100%;
-    height: 348px;
-    margin: auto;
+    margin: 0 auto;
+    display: inherit;
   }
 
   h1{
@@ -47,5 +45,15 @@
       border-radius: 0.5rem;
     }
 
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #error404{
+    .quote{
+      blockquote {
+        max-width: 100%;
+      }
+    }
   }
 }
