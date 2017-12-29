@@ -24,8 +24,13 @@ nav {
   a.brand {
     flex: 0.8;
     &, &:hover{
-      background: url('../img/Code-Troopers.png') no-repeat center;
-      color: rgba(0,0,0,0);
+      img{
+        display: inherit;
+        text-align: center;
+        height: 0.8rem;
+        max-width: 90%;
+        margin: auto;
+      }
       border-bottom: 2px solid $darkgrey;
     }
   }

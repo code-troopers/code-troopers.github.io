@@ -7,7 +7,7 @@
 <!-- header -->
 <header>
     <nav>
-        <a href="/" class="brand">Code-Troopers</a>
+        <a href="/" class="brand"><img src="/img/Code-Troopers.png" alt="Code-Troopers"></a>
         {{ range .Site.Menus.main }}
             {{ if ne .Name "Works" }}
             <a href="{{ .URL }}" class="{{ if or ($.IsMenuCurrent "main" .) ($.HasMenuCurrent "main" .) }} active {{ end }} {{ .Pre }}"><span>{{ .Name }}</span></a>
