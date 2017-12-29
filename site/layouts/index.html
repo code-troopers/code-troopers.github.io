@@ -106,6 +106,25 @@
     </div>
 </section>
 
+
+<section id="blogs">
+    <h1>Blog</h1>
+
+    <div class="wrapper">
+
+        <section id="articles">
+            <div class="wrapper">
+                {{ range first 3 (where .Site.Pages "Section" "blog") }}
+                {{ .Render "li" }}
+                {{ end }}
+            </div>
+        </section>
+    </div>
+    <div class="wrapper-center">
+        <a href="/blog" class="btn">Tous nos articles</a>
+    </div>
+</section>
+
 <section id="casting">
     <h1>Casting</h1>
     <div class="wrapper">

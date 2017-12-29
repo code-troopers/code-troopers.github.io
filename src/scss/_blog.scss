@@ -9,6 +9,15 @@ section#blogs{
     color: $grey;
   }
 
+  a.btn{
+    border-color: $bloggrey;
+    color: $bloggrey;
+    &:hover{
+      border-color: $lightblue;
+      color: $white;
+    }
+  }
+
 }
 
 section#articles {
