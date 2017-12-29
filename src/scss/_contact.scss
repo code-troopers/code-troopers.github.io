@@ -55,3 +55,19 @@ section#contact {
     }
   }
 }
+
+@media screen and (max-width: 767px) {
+  section#contact {
+    & > div {
+      flex-direction: column;
+      & > div:first-child {
+        img {
+          height: auto;
+        }
+      }
+      & > div:last-child {
+        padding: 3rem;
+      }
+    }
+  }
+}

@@ -83,3 +83,9 @@ a{
     color: $lightblue;
   }
 }
+
+@media screen and (max-width: 767px) {
+  section h1{
+    font-size: 2rem;
+  }
+}

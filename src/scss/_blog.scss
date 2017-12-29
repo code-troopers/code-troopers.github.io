@@ -20,8 +20,9 @@ section#blogs{
 
 }
 
+
+
 section#articles {
-  width: 1200px;
   margin: 0 auto;
   color: $bloggrey;
 
@@ -32,13 +33,10 @@ section#articles {
     & > div {
       position: relative;
       background: $white;
-      margin: 0 30px 30px 0;
+
       padding-bottom: 60px;
       // max-width: 30%; //to deal with orphan
       flex: 1;
-      &:nth-child(3n){
-        margin-right: 0;
-      }
 
       a{
         color: $black;
@@ -168,4 +166,17 @@ section#blog{
 
 
 
+}
+@media screen and (min-width: 1200px) {
+  section#articles {
+    width: 1200px;
+    .wrapper {
+      & > div {
+        margin: 0 30px 30px 0 !important;
+        &:nth-child(3n) {
+          margin-right: 0 !important;
+        }
+      }
+    }
+  }
 }
