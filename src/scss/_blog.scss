@@ -88,7 +88,6 @@ section#articles {
 }
 
 section#blog{
-  width: 900px;
   background: $white;
   margin: 0 auto;
   article {
@@ -135,6 +134,7 @@ section#blog{
     .content-footer {
       margin: 1rem 0;
       display: flex;
+      flex-direction: column;
       justify-content: space-between;
 
       .tags{
@@ -176,6 +176,14 @@ section#blog{
         &:nth-child(3n) {
           margin-right: 0 !important;
         }
+      }
+    }
+  }
+  section#blog {
+    width: 900px;
+    article{
+      .content-footer{
+        flex-direction: row;
       }
     }
   }
