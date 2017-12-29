@@ -3,15 +3,23 @@
 <div>
   <img src="/images/banner/{{ .Params.cover }}.png">
   <div>
-    <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+    <h2>
+      {{ if .Truncated }}
+      <a href="{{ .Permalink }}">{{ .Title }}</a>
+      {{ else }}
+      {{ .Title }}
+      {{ end }}
+    </h2>
     <ul class="tags">
       {{ range $index, $tag := .Params.tags }}
       <li><a href="/tags/{{ $tag | urlize }}/">{{ $tag }}</a></li>
       {{ end }}
     </ul>
     <p>{{ .Summary | truncate 100 }}</p>
+    {{ if .Truncated }}
     <a class="read-more" href="{{ .Permalink }}">En savoir plus
       {{ partial "arrow_right.html" . }}
     </a>
+    {{ end }}
   </div>
 </div>
