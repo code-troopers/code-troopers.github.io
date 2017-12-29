@@ -4,6 +4,7 @@
   "description": "Hugo and Webpack, together at last.",
   "main": "src/js/app.js",
   "scripts": {
+    "clean": "gulp clean",
     "hugo": "gulp hugo",
     "build": "gulp build",
     "build-preview": "gulp build-preview",
