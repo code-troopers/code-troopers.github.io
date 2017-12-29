@@ -7,10 +7,12 @@ node('docker') {
         sh 'docker info'
         sh 'docker build -f Dockerfile -t hugo-webpack .'
         sh 'docker run --rm -v ${PWD}/site:/usr/src/app/site -v ${PWD}/src:/usr/src/app/src -v ${PWD}/dist:/usr/src/app/dist hugo-webpack npm run build'
-        sh 'docker rmi hugo-webpack'
         dir('dist') {
           stash name: 'dist', excludes: 'CNAME'
         }
+        //clean dist from docker once stashed to prevent uid issues
+        sh 'docker run --rm -v ${PWD}/site:/usr/src/app/site -v ${PWD}/src:/usr/src/app/src -v ${PWD}/dist:/usr/src/app/dist hugo-webpack gulp clean'
+        sh 'docker rmi hugo-webpack'
       }
     }
   }
