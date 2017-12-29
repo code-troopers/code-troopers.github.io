@@ -11,7 +11,7 @@ node('docker') {
           stash name: 'dist', excludes: 'CNAME'
         }
         //clean dist from docker once stashed to prevent uid issues
-        sh 'docker run --rm -v ${PWD}/site:/usr/src/app/site -v ${PWD}/src:/usr/src/app/src -v ${PWD}/dist:/usr/src/app/dist hugo-webpack npm run clean'
+        sh 'docker run --rm -v ${PWD}:/app debian:jessie rm -rf /app/dist'
         sh 'docker rmi hugo-webpack'
       }
     }
