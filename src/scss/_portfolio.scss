@@ -21,7 +21,6 @@ section#portfolio {
 
       img {
         max-width: 100%;
-        min-width: 320px;
       }
 
       & > div {
@@ -81,7 +80,7 @@ section#work{
       @include separator($lightgrey)
     }
     .content{
-      margin: 0.5rem;
+      //margin: 0.5rem;
     }
     .content-footer{
       padding: 1rem 0;
@@ -136,6 +135,17 @@ section#work, section#portfolio{
     }
     .content{
       margin: inherit;
+    }
+  }
+  section#portfolio {
+
+    .wrapper {
+      & > div {
+        img {
+          max-width: 100%;
+          min-width: 320px;
+        }
+      }
     }
   }
 }
