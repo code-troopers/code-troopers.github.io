@@ -9,7 +9,7 @@ url: /toosla.html
 
 ---
 
-Application Android de location de voiture. Avec Toosla plus besoin de guichet ni ce clé ! Tout se
+Application Android de location de voiture. Avec Toosla plus besoin de guichet ni de clé ! Tout se
 passe avec votre mobile. L'application se connecte en Bluetooth avec la voiture et vous en donne le
 contrôle.
 <!--more-->
