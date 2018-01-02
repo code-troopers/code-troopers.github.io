@@ -80,6 +80,9 @@ section#work{
     article > h2, .content{
       @include separator($lightgrey)
     }
+    .content{
+      margin: 0.5rem;
+    }
     .content-footer{
       padding: 1rem 0;
     }
@@ -130,6 +133,9 @@ section#work, section#portfolio{
   section#work{
     .wrapper {
       width: 1200px;
+    }
+    .content{
+      margin: inherit;
     }
   }
 }
