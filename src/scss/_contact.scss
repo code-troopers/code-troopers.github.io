@@ -67,18 +67,11 @@ section#contact {
         }
         i {
           position:absolute;
-          top:25%;
-          left:25%;
-          font-size: 2.5rem;
-          &.fa-facebook {
-            left: 33%;
-          }
-          &.fa-rss{
-            left:33%;
-          }
+          top:50%;
+          left:50%;
+          transform: translate(-37%,-50%);
           &.fa-google-plus{
-            top: 33%;
-            font-size: 2rem;
+            left: 40%;
           }
         }
       }
