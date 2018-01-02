@@ -52,6 +52,36 @@ section#contact {
     justify-content: center;
     li {
       max-width: 140px;
+      a {
+        position: relative;
+        width: 5rem;
+        height: 5rem;
+        border: 2px solid white;
+        border-radius: 3rem;
+        display: inline-block;
+        &:hover{
+          background-color: $white;
+          i{
+            color: $darkblue;
+          }
+        }
+        i {
+          position:absolute;
+          top:25%;
+          left:25%;
+          font-size: 2.5rem;
+          &.fa-facebook {
+            left: 33%;
+          }
+          &.fa-rss{
+            left:33%;
+          }
+          &.fa-google-plus{
+            top: 33%;
+            font-size: 2rem;
+          }
+        }
+      }
     }
   }
 }
