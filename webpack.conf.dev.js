@@ -3,24 +3,18 @@ import glob from 'glob';
 import path from 'path';
 import postCSS from './config/postcss';
 import cssNano from './config/cssnano';
-import ExtractTextPlugin from 'extract-text-webpack-plugin';
 
-export default function(devMode = false) {
-  const optimizePlugins = devMode ? [
+export default function() {
+  const optimizePlugins = [
     new webpack.HotModuleReplacementPlugin()
-  ] : [
-    new webpack.optimize.UglifyJsPlugin(),
-    new ExtractTextPlugin('styles.css')
   ];
   const cssLoaders = [
-    { loader: 'css-loader', options: Object.assign({ minimize: !devMode, sourceMap: true }, cssNano) },
+    { loader: 'css-loader', options: Object.assign({ minimize: false, sourceMap: true }, cssNano) },
     { loader: 'postcss-loader', options: Object.assign({ sourceMap: true }, postCSS) },
     { loader: 'resolve-url-loader', options: { sourceMap: true } },
     { loader: 'sass-loader', options: { sourceMap: true } }
   ];
-  if (devMode) {
-    cssLoaders.unshift('style-loader');
-  }
+  cssLoaders.unshift('style-loader');
   return {
     devtool: 'source-map',
     module: {
@@ -46,13 +40,13 @@ export default function(devMode = false) {
         },
         {
           test: /\.(scss|sass)?$/,
-          use: devMode ? cssLoaders : ExtractTextPlugin.extract({ use: cssLoaders })
+          use: cssLoaders
         }
       ]
     },
     context: path.join(__dirname, 'src'),
     entry: function() { //eslint-disable-line object-shorthand
-      const hot = devMode ? ['webpack-hot-middleware/client?reload=true'] : [];
+      const hot = ['webpack-hot-middleware/client?reload=true'];
       const js = ['./js/app.js'];
       const img = glob.sync('./img/**/*', {
         absolute: true,

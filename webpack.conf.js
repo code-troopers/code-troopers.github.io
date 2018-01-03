@@ -11,10 +11,8 @@ import EventHooksPlugin from 'event-hooks-webpack-plugin';
 import CopyWebpackPlugin from 'copy-webpack-plugin';
 
 
-export default function(devMode = false) {
-  const optimizePlugins = devMode ? [
-    new webpack.HotModuleReplacementPlugin()
-  ] : [
+export default function() {
+  const optimizePlugins = [
     new webpack.optimize.UglifyJsPlugin(),
     new ExtractTextPlugin('styles.[hash:4].css'),
     new ManifestPlugin(),
@@ -25,21 +23,18 @@ export default function(devMode = false) {
     }),
   ];
   const cssLoaders = [
-    { loader: 'css-loader', options: Object.assign({ minimize: !devMode, sourceMap: true }, cssNano) },
+    { loader: 'css-loader', options: Object.assign({ minimize: true, sourceMap: true }, cssNano) },
     { loader: 'postcss-loader', options: Object.assign({ sourceMap: true }, postCSS) },
     { loader: 'resolve-url-loader', options: { sourceMap: true } },
     { loader: 'sass-loader', options: { sourceMap: true } }
   ];
-  if (devMode) {
-    cssLoaders.unshift('style-loader');
-  }
   return {
     devtool: 'source-map',
     module: {
       rules: [
         {
           test: /\.((jpe?g)|(png)|(svg)|(gif)|(mp4)|(webm))(\?v=\d+\.\d+\.\d+)?$/,
-          loader: devMode ? 'file-loader?name=[path][name].[ext]' : 'file-loader?name=[path][name].[hash:4].[ext]'
+          loader: 'file-loader?name=[path][name].[hash:4].[ext]'
         },
         {
           test: /\.((eot)|(woff)|(woff2)|(ttf))(\?v=\d+\.\d+\.\d+)?$/,
@@ -62,13 +57,12 @@ export default function(devMode = false) {
         },
         {
           test: /\.(scss|sass)?$/,
-          use: devMode ? cssLoaders : ExtractTextPlugin.extract({ use: cssLoaders })
+          use: ExtractTextPlugin.extract({ use: cssLoaders })
         }
       ]
     },
     context: path.join(__dirname, '.tmp'),
     entry: function() { //eslint-disable-line object-shorthand
-      const hot = devMode ? ['webpack-hot-middleware/client?reload=true'] : [];
       const js = ['./js/app.js'];
       const img = glob.sync('./img/**/*', {
         absolute: true,
@@ -91,17 +85,16 @@ export default function(devMode = false) {
         nodir: true,
         nosort: true
       });
-      return [...hot, ...js, ...img, ...postsImg, ...html];
+      return [...js, ...img, ...postsImg, ...html];
     },
     output: {
       path: path.join(__dirname, './dist'),
       publicPath: '/',
-      filename: devMode ? '[name].js' : '[name].[chunkhash:6].js',
+      filename: '[name].[chunkhash:6].js',
     },
     plugins: [
       new EventHooksPlugin({
         'before-run': (compilation, done) => {
-          console.log('Copying source files to compiled')
           fs.copy('src', '.tmp', done);
         }
       }),

@@ -28,7 +28,7 @@ gulp.task('serve-prod', ['build'], () => {
 });
 
 gulp.task('serve-dev', ['hugo-dev'], () => {
-  const compiler = webpack(webpackDevConfig(true));
+  const compiler = webpack(webpackDevConfig());
   const webpackMiddleware = webpackDevMiddleware(compiler, {
     publicPath: '/',
     reporter: webpackReporter
