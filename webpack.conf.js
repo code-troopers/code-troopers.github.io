@@ -8,6 +8,7 @@ import ExtractTextPlugin from 'extract-text-webpack-plugin';
 import ManifestPlugin from 'webpack-manifest-plugin';
 import ManifestReplacePlugin from 'webpack-manifest-replace-plugin';
 import EventHooksPlugin from 'event-hooks-webpack-plugin';
+import CopyWebpackPlugin from 'copy-webpack-plugin';
 
 
 export default function(devMode = false) {
@@ -98,18 +99,34 @@ export default function(devMode = false) {
       filename: devMode ? '[name].js' : '[name].[chunkhash:6].js',
     },
     plugins: [
-      // new CopyWebpackPlugin([
-      //   {
-      //     from: path.join(__dirname, 'src'),
-      //     to: path.join(__dirname, '.tmp')
-      //   }
-      // ]),
       new EventHooksPlugin({
         'before-run': (compilation, done) => {
           console.log('Copying source files to compiled')
           fs.copy('src', '.tmp', done);
         }
       }),
+      new CopyWebpackPlugin([
+        {
+          from: 'favicon.ico',
+          to: '../dist/favicon.ico'
+        },
+        {
+          from: '.nojekyll',
+          to: '../dist/'
+        },
+        {
+          from: 'audio',
+          to: '../dist/audio'
+        },
+        {
+          from: 'files',
+          to: '../dist/files'
+        },
+        {
+          from: 'videos',
+          to: '../dist/videos'
+        },
+      ]),
       new webpack.ProvidePlugin({
         fetch: 'imports-loader?this=>global!exports-loader?global.fetch!whatwg-fetch'
       }),
