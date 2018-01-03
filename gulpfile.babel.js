@@ -50,10 +50,13 @@ gulp.task('serve-dev', ['hugo-dev'], () => {
 
 
 
-gulp.task('hugo-dist', (cb) => buildSite(cb, ['-d', '.tmp']));
+gulp.task('hugo-dist', ['clean'], (cb) => buildSite(cb, ['-d', '.tmp']));
 gulp.task('hugo-dev', ['clean'], (cb) => buildSite(cb, ['-d', 'dist', '--buildDrafts', '--buildFuture'], { WEBPACK_HOT: true }));
 
 gulp.task('clean', () => {
+  if (process.env.SKIP_CLEAN){
+    return;
+  }
   return del(['dist/**', '.tmp/**']);
 });
 
