@@ -1,40 +1,23 @@
+import 'process';
 import BrowserSync from 'browser-sync';
 import cp from 'child_process';
 import gulp from 'gulp';
 import gutil from 'gulp-util';
+import del from 'del';
 import webpack from 'webpack';
 import webpackDevMiddleware from 'webpack-dev-middleware';
 import webpackHotMiddleware from 'webpack-hot-middleware';
 import webpackConfig from './webpack.conf';
+import webpackDevConfig from './webpack.conf.dev';
 
 const hugoBin = 'hugo';
-const defaultArgs = ['-d', 'dist', '--config', 'config.yml', '-v', '-t', 'code-troopers'];
+const defaultArgs = ['-d', '.tmp', '--config', 'config.yml', '-v', '-t', 'code-troopers'];
 
 const browserSync = BrowserSync.create();
 
-gulp.task('hugo', (cb) => buildSite(cb));
-gulp.task('hugo-hot', (cb) => buildSite(cb, null, { WEBPACK_HOT: true }));
-gulp.task('hugo-preview', (cb) => buildSite(cb, ['--buildDrafts', '--buildFuture']));
+gulp.task('build', ['js']);
 
-gulp.task('build', ['clean', 'js', 'hugo']);
-gulp.task('build-preview', ['clean', 'js', 'hugo-preview']);
-
-gulp.task('clean', () => {
-  return cp.spawn('rm', ['-rf', 'dist']);
-});
-
-gulp.task('js', (cb) => {
-  webpack(webpackConfig(), (err, stats) => {
-    if (err) throw new gutil.PluginError('webpack', err);
-    gutil.log('[webpack]', stats.toString({
-      colors: true,
-      progress: true
-    }));
-    cb();
-  });
-});
-
-gulp.task('serve-prod', ['clean', 'hugo', 'js'], () => {
+gulp.task('serve-prod', ['build'], () => {
   browserSync.init({
     notify: false,
     open: false,
@@ -44,8 +27,8 @@ gulp.task('serve-prod', ['clean', 'hugo', 'js'], () => {
   });
 });
 
-gulp.task('serve-dev', ['clean', 'hugo'], () => {
-  const compiler = webpack(webpackConfig(true));
+gulp.task('serve-dev', ['hugo-dev'], () => {
+  const compiler = webpack(webpackDevConfig(true));
   const webpackMiddleware = webpackDevMiddleware(compiler, {
     publicPath: '/',
     reporter: webpackReporter
@@ -65,10 +48,30 @@ gulp.task('serve-dev', ['clean', 'hugo'], () => {
   gulp.watch('./site/**/*', ['hugo', () => webpackMiddleware.invalidate()]);
 });
 
+
+
+gulp.task('hugo-dist', ['clean'], (cb) => buildSite(cb, ['-d', '.tmp']));
+gulp.task('hugo-dev', ['clean'], (cb) => buildSite(cb, ['-d', 'dist', '--buildDrafts', '--buildFuture'], { WEBPACK_HOT: true }));
+
+gulp.task('clean', () => {
+  return del(['dist', '.tmp']);
+});
+
+gulp.task('js', ['hugo-dist'], (cb) => {
+  webpack(webpackConfig(), (err, stats) => {
+    if (err) throw new gutil.PluginError('webpack', err);
+    gutil.log('[webpack]', stats.toString({
+      colors: true,
+      progress: true
+    }));
+    cb();
+  });
+});
+
+
 function buildSite(cb, options, env = null) {
   const args = options ? defaultArgs.concat(options) : defaultArgs;
-  const nodeEnv = env && Object.assign({ PATH: '/usr/local/bin' }, env);
-
+  const nodeEnv = env && Object.assign({}, process.env, env);
   return cp.spawn(hugoBin, args, { stdio: 'inherit', env: nodeEnv }).on('close', (code) => {
     if (code === 0) {
       browserSync.reload();
