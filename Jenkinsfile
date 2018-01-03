@@ -17,7 +17,7 @@ node('docker') {
         }
         stage('Cleanup') {
           //clean dist from docker once stashed to prevent uid issues
-          sh 'docker run --rm -v ${PWD}:/app debian:jessie rm -rf /app/dist'
+          sh 'docker run --rm -v ${PWD}:/app debian:jessie rm -rf /app/dist /app/.tmp'
           sh 'docker rmi hugo-webpack'
         }
       }
