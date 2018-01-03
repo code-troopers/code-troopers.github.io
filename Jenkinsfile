@@ -10,28 +10,36 @@ node('docker') {
           sh 'docker build -f Dockerfile -t hugo-webpack .'
         }
         stage('Build and stash results') {
-          sh 'docker run --rm -v ${PWD}/site:/usr/src/app/site -v ${PWD}/src:/usr/src/app/src -v ${PWD}/dist:/usr/src/app/dist hugo-webpack npm run build'
+          sh 'docker run --rm -v ${PWD}/site:/usr/src/app/site -v ${PWD}/src:/usr/src/app/src -v ${PWD}/dist:/usr/src/app/dist -e SKIP_CLEAN=true hugo-webpack npm run build'
           dir('dist') {
             stash name: 'dist', excludes: 'CNAME'
           }
         }
         stage('Cleanup') {
           //clean dist from docker once stashed to prevent uid issues
-          sh 'docker run --rm -v ${PWD}:/app debian:jessie rm -rf /app/dist'
+          sh 'docker run --rm -v ${PWD}:/app debian:jessie rm -rf /app/dist /app/.tmp'
           sh 'docker rmi hugo-webpack'
         }
       }
     }
 }
 node{
-  //TODO handle pre / prod deployment
-  stage('Checkout current site') {
-    git branch: 'gh-pages', credentialsId: 'bc7230d3-816a-4c7b-947b-7cf7f5806707', url: 'git@github.com:code-troopers/pre-www.git'
-  }
-  stage('Update site and push') {
-    unstash name: 'dist'
-    sh 'git add -A'
-    sh 'git commit -a -m "New release"'
-    sh 'git push -u origin gh-pages'
+  if (BRANCH_NAME.equals("feat/hugov2")) {
+    //TODO handle pre / prod deployment
+    stage('Checkout current site') {
+      git branch: 'gh-pages', credentialsId: 'bc7230d3-816a-4c7b-947b-7cf7f5806707', url: 'git@github.com:code-troopers/pre-www.git'
+    }
+    stage('Update site and push') {
+      unstash name: 'dist'
+      sh 'git add -A'
+      sh 'git commit -a -m "New release"'
+      sh 'git push -u origin gh-pages'
+    }
+  }else{
+    stage("Archiving build results"){
+      echo "BRANCH_NAME not requires a deploy ${BRANCH_NAME}"
+      unstash name: 'dist'
+      archiveArtifacts '**/*'
+    }
   }
 }
