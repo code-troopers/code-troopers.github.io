@@ -45,7 +45,8 @@ gulp.task('serve-dev', ['hugo-dev'], () => {
       ]
     }
   });
-  gulp.watch('./site/**/*', ['hugo', () => webpackMiddleware.invalidate()]);
+  process.env.SKIP_CLEAN = true
+  gulp.watch('./site/**/*', ['hugo-dev', () => webpackMiddleware.invalidate()]);
 });
 
 

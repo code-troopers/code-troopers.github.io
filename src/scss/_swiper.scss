@@ -1,0 +1,58 @@
+@import '../../node_modules/swiper/dist/css/swiper.css';
+
+section#stack{
+  //display: flex;
+  background: $darkgrey;
+  h1{
+    color: $white;
+  }
+  .stack-swiper{
+    width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 3rem;
+
+  .swiper-container{
+
+    .arrow {
+      @include arrows($lightgrey, 0);
+      width: 24px;
+      transition: width 1s ease-in-out, right 1s ease-in-out, left 1s ease-in-out;
+      &:hover{
+        width: 32px;
+      }
+      &.swiper-next{
+        right: 12px;
+        &:hover{
+          right: 4px;
+        }
+      }
+      &.swiper-prev{
+        left: 12px;
+        &:hover{
+          left: 4px;
+        }
+      }
+      &.swiper-next, &.swiper-prev{
+        position: absolute;
+        display: flex;
+        top: 0;
+        height: 100%;
+        align-items: center;
+        cursor: pointer;
+        z-index: 1;
+      }
+    }
+    .swiper-slide{
+      height: 8rem;
+      display:flex;
+      align-items: center;
+      text-align: center;
+
+      img{
+        object-fit: contain;
+        flex:1;
+      }
+    }
+  }
+  }
+}
