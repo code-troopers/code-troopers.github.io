@@ -50,6 +50,11 @@ section#stack{
 
       img{
         object-fit: contain;
+        max-width: 5rem;
+        max-height: 5rem;
+        padding: 1rem;
+        background: $white;
+        border-radius: 5rem;
         flex:1;
       }
     }

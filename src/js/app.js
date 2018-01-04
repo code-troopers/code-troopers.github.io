@@ -14,6 +14,7 @@ new Swiper('#stack .swiper-container', {
   slidesPerView: 7,
   direction: 'horizontal',
   loop: true,
+  loopAdditionalSlides: 7,
   centeredSlides: true,
 
   navigation: {
