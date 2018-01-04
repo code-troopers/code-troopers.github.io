@@ -14,7 +14,9 @@ section#portfolio {
     }
     & > div {
       flex: 1;
-      
+      border: 1px solid $darkgrey;
+      border-right: none;
+
       a{
         font-size: 0.7rem;
       }
