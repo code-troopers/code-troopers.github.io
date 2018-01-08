@@ -17,7 +17,11 @@ new Swiper('#stack .swiper-container', {
   //loop: true, //looping makes weird things
   //loopedSlides: 1,
   //centeredSlides: true,
-
+  breakpoints: {
+    768:{
+      slidesPerView: 2
+    }
+  },
   navigation: {
     nextEl: '#stack .swiper-next',
     prevEl: '#stack .swiper-prev',
@@ -31,6 +35,11 @@ new Swiper('#customers .swiper-container', {
   loop: true,
   //loopedSlides: 1,
   //centeredSlides: true,
+  breakpoints: {
+    768:{
+      slidesPerView: 1,
+    }
+  },
 
   navigation: {
     nextEl: '#customers .swiper-next',

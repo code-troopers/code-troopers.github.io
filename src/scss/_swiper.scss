@@ -1,11 +1,8 @@
 @import '../../node_modules/swiper/dist/css/swiper.css';
 
-@mixin swiper($borderRadius: 0, $arrowColor: $darkgrey){
+@mixin swiper($borderRadius: 0, $arrowColor: $grey){
   .stack-swiper {
     position: relative;
-    @media screen and (max-width: 1199px) {
-      width: 100%;
-    }
     margin: 0 auto;
     padding: 0 3rem 3rem;
     .arrow {
@@ -69,6 +66,7 @@
 }
 
 section#stack {
+  width:100%;
   background: $darkgrey;
   h1 {
     color: $white;
@@ -76,6 +74,15 @@ section#stack {
   @include swiper(5rem, $lightgrey);
   .stack-swiper {
     width: 1200px;
+    @media screen and (max-width: 1199px) {
+      width: calc(100% - 4rem);
+      margin-left: 2rem;
+      margin-right: 2rem;
+      .swiper-container .swiper-slide img {
+        max-width: 4rem;
+        max-height: 4rem;
+      }
+    }
   }
 
 }
@@ -88,11 +95,23 @@ section#customers{
 
   @include swiper();
   .stack-swiper {
-    margin-left: 1rem;
-    margin-right: 1rem;
-    padding-top: 3rem;
+    padding-bottom: 0;
+    margin: 0 2rem;
     .arrow{
-      padding-top: 3rem;
+      margin-top: 1.5rem;
+    }
+    .swiper-slide{
+      padding: 3rem 0;
+      border-left: 0.5px solid $lightgrey;
+      @media screen and (max-width: 767px) {
+        border: 0;
+      }
+    }
+    .swiper-container{
+      @media screen and (max-width: 767px) {
+        border-left: 0.5px solid $lightgrey;
+        border-right: 0.5px solid $lightgrey;
+      }
     }
   }
 }
