@@ -9,13 +9,14 @@ import 'lightbox2';
 import Swiper from 'swiper';
 
 hljs.initHighlightingOnLoad();
+
 new Swiper('#stack .swiper-container', {
-  width: 1200, //this break responsive but width detection does not work automagically :(
-  slidesPerView: 7,
+  spaceBetween: 32,
+  slidesPerView: 'auto',
   direction: 'horizontal',
-  loop: true,
-  loopAdditionalSlides: 7,
-  centeredSlides: true,
+  //loop: true, //looping makes weird things
+  //loopedSlides: 1,
+  //centeredSlides: true,
 
   navigation: {
     nextEl: '.swiper-next',
