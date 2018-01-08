@@ -139,3 +139,29 @@
     }
   }
 }
+
+@mixin socialBubble(){
+  a {
+    position: relative;
+    width: 5rem;
+    height: 5rem;
+    border: 2px solid white;
+    border-radius: 50%;
+    display: inline-block;
+    &:hover{
+      background-color: $white;
+      i{
+        color: $darkblue;
+      }
+    }
+    i {
+      position:absolute;
+      top:50%;
+      left:50%;
+      transform: translate(-37%,-50%);
+      &.fa-google-plus{
+        left: 40%;
+      }
+    }
+  }
+}

@@ -62,6 +62,33 @@ section#casting {
         p{
           font-size: 0.7rem;
         }
+        ul {
+          li {
+            display: inline-block;
+            @include socialBubble();
+            a {
+              padding: 1.25rem;
+              width: 1rem;
+              height: 1rem;
+              font-size: 1.5rem;
+              color: $grey;
+              border: 2px solid $lightgrey;
+              &:hover{
+                background: $gradient;
+                i{
+                  color: $white;
+                }
+              }
+              i {
+                &.fa-google-plus {
+                  font-size: 1.25rem;
+                }
+              }
+            }
+          }
+        }
+
+
       }
     }
 
