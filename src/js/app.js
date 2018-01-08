@@ -19,8 +19,22 @@ new Swiper('#stack .swiper-container', {
   //centeredSlides: true,
 
   navigation: {
-    nextEl: '.swiper-next',
-    prevEl: '.swiper-prev',
+    nextEl: '#stack .swiper-next',
+    prevEl: '#stack .swiper-prev',
+  }
+})
+
+
+new Swiper('#customers .swiper-container', {
+  slidesPerView: 5,
+  direction: 'horizontal',
+  loop: true,
+  //loopedSlides: 1,
+  //centeredSlides: true,
+
+  navigation: {
+    nextEl: '#customers .swiper-next',
+    prevEl: '#customers .swiper-prev',
   }
 })
 

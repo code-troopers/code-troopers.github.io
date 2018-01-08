@@ -1,12 +1,7 @@
 @import '../../node_modules/swiper/dist/css/swiper.css';
 
-section#stack{
-  background: $darkgrey;
-  h1{
-    color: $white;
-  }
-  .stack-swiper{
-      width: 1200px;
+@mixin swiper($borderRadius: 0, $arrowColor: $darkgrey){
+  .stack-swiper {
     position: relative;
     @media screen and (max-width: 1199px) {
       width: 100%;
@@ -14,7 +9,7 @@ section#stack{
     margin: 0 auto;
     padding: 0 3rem 3rem;
     .arrow {
-      @include arrows($lightgrey, 0);
+      @include arrows($arrowColor, 0);
       width: 24px;
       padding-bottom: 3rem;
       transition: width 1s ease-in-out, right 1s ease-in-out, left 1s ease-in-out;
@@ -44,31 +39,60 @@ section#stack{
       }
     }
 
-  .swiper-container{
+    .swiper-container {
 
-    .swiper-slide{
-      height: 8rem;
-      width: 8rem;
-      display:flex;
-      align-items: center;
-      text-align: center;
-      justify-content: space-between;
+      .swiper-slide {
+        height: 8rem;
+        width: 8rem;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: space-evenly;
 
-      img{
-        object-fit: contain;
-        max-width: 5rem;
-        max-height: 5rem;
-        padding: 1rem;
-        background: $white;
-        border-radius: 5rem;
-        flex:1;
-        filter: grayscale(1);
-        &:hover{
-          filter:none;
-          cursor: pointer;
+        img {
+          object-fit: contain;
+          max-width: 5rem;
+          max-height: 5rem;
+          padding: 1rem;
+          background: $white;
+          border-radius: $borderRadius;
+          flex: 1;
+          filter: grayscale(1);
+          &:hover {
+            filter: none;
+            cursor: pointer;
+          }
         }
       }
     }
   }
+}
+
+section#stack {
+  background: $darkgrey;
+  h1 {
+    color: $white;
+  }
+  @include swiper(5rem, $lightgrey);
+  .stack-swiper {
+    width: 1200px;
+  }
+
+}
+
+section#customers{
+  h1{
+    background-color: $black;
+    color: $white;
+  }
+
+  @include swiper();
+  .stack-swiper {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    padding-top: 3rem;
+    .arrow{
+      padding-top: 3rem;
+    }
   }
 }
