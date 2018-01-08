@@ -1,5 +1,7 @@
 @import 'variables';
 @import 'mixins';
+@import '../../node_modules/font-awesome/scss/mixins';
+@import '../../node_modules/font-awesome/scss/variables';
 
 section#portfolio {
   color: $white;
@@ -104,26 +106,31 @@ section#work, section#portfolio{
       display: inline-block;
       padding: 0.5rem 0.5rem 0.5rem 30px;
       font-size: 0.7rem;
-
+      color: $bloggrey;
       span::before {
-        content: ' ';
-        background-size: 22px 22px;
-        width: 22px;
-        height: 22px;
+        content: '';
         display: block;
         position: absolute;
-        top: 4px;
-        left: 4px;
+        top: 5px;
+        left: 8px;
+        @include fa-icon();
+        font-size: 18px;
+      }
+
+      &:hover{
+        background: $gradient;
+        border-color: transparent;
+        color: $white;
       }
     }
     li.android span::before {
-      background-image: url('../img/android.png');
+      content: $fa-var-android;
     }
     li.ios span::before {
-      background-image: url('../img/ios.png');
+      content: $fa-var-apple;
     }
     li.web span::before {
-      background-image: url('../img/web.png');
+      content: $fa-var-globe;
     }
   }
 }
