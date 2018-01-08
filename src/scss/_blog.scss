@@ -33,7 +33,7 @@ section#articles {
     & > div {
       position: relative;
       background: $white;
-
+      margin: 2rem;
       padding-bottom: 60px;
       // max-width: 30%; //to deal with orphan
       flex: 1;

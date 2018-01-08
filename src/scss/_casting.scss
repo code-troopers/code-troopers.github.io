@@ -7,12 +7,18 @@ section#casting {
     padding-left: 30px;
     padding-right: 30px;
     margin: auto;
+    > p {
+      letter-spacing: initial;
+    }
     p {
       color: $grey;
       text-align: center;
       line-height: 1.5rem;
     }
 
+    a{
+      color: $black;
+    }
     ul.casting {
       & > li {
         margin: 2rem;
