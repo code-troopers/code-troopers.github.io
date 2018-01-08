@@ -14,8 +14,6 @@ section#portfolio {
     }
     & > div {
       flex: 1;
-      border: 1px solid $darkgrey;
-      border-right: none;
 
       a{
         font-size: 0.7rem;
@@ -143,6 +141,8 @@ section#work, section#portfolio{
 
     .wrapper {
       & > div {
+        border: 1px solid $darkgrey;
+        border-right: none;
         img {
           max-width: 100%;
           min-width: 360px;
