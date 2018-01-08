@@ -12,6 +12,7 @@ section#numbers {
       color: $grey;
 
       div:first-child {
+        font-family: "Montserrat Black", Helvetica, Arial, sans-serif;
         @include gradient-text($gradient, 'light');
         font-size: 5rem;
         font-weight: bold;
