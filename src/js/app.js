@@ -33,8 +33,6 @@ new Swiper('#customers .swiper-container', {
   slidesPerView: 5,
   direction: 'horizontal',
   loop: true,
-  //loopedSlides: 1,
-  //centeredSlides: true,
   breakpoints: {
     768:{
       slidesPerView: 1,
