@@ -59,6 +59,7 @@ section#contact {
 
 @media screen and (max-width: 767px) {
   section#contact {
+    letter-spacing: initial;
     & > div {
       flex-direction: column;
       & > div:first-child {

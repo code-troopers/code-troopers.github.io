@@ -39,26 +39,39 @@
     .swiper-container {
 
       .swiper-slide {
-        height: 8rem;
-        width: 8rem;
+        height: 6rem;
+        width: 6rem;
         display: flex;
         align-items: center;
         text-align: center;
         justify-content: space-evenly;
+        position: relative;
 
         img {
+          position: absolute;
+          top: 0;
+          left: 0;
           object-fit: contain;
-          max-width: 5rem;
-          max-height: 5rem;
+          width: 4rem;
+          height: 4rem;
           padding: 1rem;
-          background: $white;
-          border-radius: $borderRadius;
           flex: 1;
           filter: grayscale(1);
           &:hover {
             filter: none;
             cursor: pointer;
           }
+        }
+        &:before{
+          position:absolute;
+          top: 0;
+          left: 0;
+          content: '';
+          width: 5rem;
+          height: 5rem;
+          padding: 0.5rem;
+          background: $white;
+          border-radius: $borderRadius;
         }
       }
     }
@@ -71,9 +84,9 @@ section#stack {
   h1 {
     color: $white;
   }
-  @include swiper(5rem, $lightgrey);
+  @include swiper(50%, $lightgrey);
   .stack-swiper {
-    width: 1200px;
+    width: calc(8 * 8rem + 72px);
     @media screen and (max-width: 1199px) {
       width: calc(100% - 4rem);
       margin-left: 2rem;
@@ -98,16 +111,19 @@ section#customers{
     padding-bottom: 0;
     margin: 0 2rem;
     .arrow{
-      margin-top: 1.5rem;
-    }
-    .swiper-slide{
-      padding: 3rem 0;
-      border-left: 0.5px solid $lightgrey;
-      @media screen and (max-width: 767px) {
-        border: 0;
-      }
+      padding-top: 3rem;
     }
     .swiper-container{
+      .swiper-slide {
+        padding: 3rem 0;
+        border-left: 0.5px solid $lightgrey;
+        @media screen and (max-width: 767px) {
+          border: 0;
+        }
+        img {
+          position: inherit;
+        }
+      }
       @media screen and (max-width: 767px) {
         border-left: 0.5px solid $lightgrey;
         border-right: 0.5px solid $lightgrey;

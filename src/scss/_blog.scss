@@ -85,6 +85,11 @@ section#articles {
   }
 
   @include tags($lightgrey);
+  ul.tags {
+    li a {
+      color: $grey;
+    }
+  }
 }
 
 section#blog{
@@ -96,8 +101,10 @@ section#blog{
     }
     & > h2 {
       @include separator($black);
+      letter-spacing: initial;
     }
     .content{
+      letter-spacing: initial;
       a{
         color: $black;
         &:hover{
@@ -129,6 +136,9 @@ section#blog{
             display: inline;
           }
         }
+      }
+      iframe {
+        max-width: 100%;
       }
 
     }
