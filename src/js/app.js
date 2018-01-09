@@ -12,32 +12,48 @@ import CountUp from 'countup';
 
 hljs.initHighlightingOnLoad();
 
-new Swiper('#stack .swiper-container', {
+var swipers = []
+swipers.push(new Swiper('#stack .swiper-container', {
     spaceBetween: 32,
+    init:false,
     slidesPerView: 'auto',
     direction: 'horizontal',
     //loop: true, //looping makes weird things
     //loopedSlides: 1,
     //centeredSlides: true,
     breakpoints: {
-        768: {
+        320: {
+            slidesPerView: 1
+        },
+        512: {
             slidesPerView: 2
+        },
+        768: {
+            slidesPerView: 3
+        },
+        1024: {
+            slidesPerView: 4
         }
+
     },
     navigation: {
         nextEl: '#stack .swiper-next',
         prevEl: '#stack .swiper-prev',
     }
-})
+}))
 
 
-new Swiper('#customers .swiper-container', {
+swipers.push(new Swiper('#customers .swiper-container', {
     slidesPerView: 5,
+    init:false,
     direction: 'horizontal',
     loop: true,
     breakpoints: {
-        768: {
+        1024: {
             slidesPerView: 1,
+        },
+        1280: {
+            slidesPerView: 3,
         }
     },
 
@@ -45,7 +61,7 @@ new Swiper('#customers .swiper-container', {
         nextEl: '#customers .swiper-next',
         prevEl: '#customers .swiper-prev',
     }
-})
+}))
 
 window.onload = function () {
     var elements = document.getElementsByClassName("count-up");
@@ -66,6 +82,10 @@ window.onload = function () {
             this.destroy();
         });
     }
+    //to ensure everything is ready before displaying the swipers
+    swipers.forEach(function(e){
+        e.init();
+    })
 };
 
 // ================================
