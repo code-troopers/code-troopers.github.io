@@ -1,6 +1,6 @@
 @import '../../node_modules/swiper/dist/css/swiper.css';
 
-@mixin swiper($borderRadius: 0, $arrowColor: $grey){
+@mixin swiper($arrowColor: $grey){
   .stack-swiper {
     position: relative;
     margin: 0 auto;
@@ -45,33 +45,15 @@
         align-items: center;
         text-align: center;
         justify-content: space-evenly;
-        position: relative;
 
         img {
-          position: absolute;
-          top: 0;
-          left: 0;
           object-fit: contain;
-          width: 4rem;
-          height: 4rem;
           padding: 1rem;
-          flex: 1;
           filter: grayscale(1);
           &:hover {
             filter: none;
             cursor: pointer;
           }
-        }
-        &:before{
-          position:absolute;
-          top: 0;
-          left: 0;
-          content: '';
-          width: 5rem;
-          height: 5rem;
-          padding: 0.5rem;
-          background: $white;
-          border-radius: $borderRadius;
         }
       }
     }
@@ -84,9 +66,37 @@ section#stack {
   h1 {
     color: $white;
   }
-  @include swiper(50%, $lightgrey);
+  @include swiper($lightgrey);
   .stack-swiper {
     width: calc(8 * 8rem + 72px);
+
+    .swiper-container {
+
+      .swiper-slide {
+        position: relative;
+
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 4rem;
+          height: 4rem;
+          flex: 1;
+        }
+        &:before {
+          position: absolute;
+          top: 0;
+          left: 0;
+          content: '';
+          width: 5rem;
+          height: 5rem;
+          padding: 0.5rem;
+          background: $white;
+          border-radius: 50%;
+        }
+      }
+    }
+
     @media screen and (max-width: 1199px) {
       width: calc(100% - 4rem);
       margin-left: 2rem;
@@ -117,6 +127,9 @@ section#customers{
       .swiper-slide {
         padding: 3rem 0;
         border-left: 0.5px solid $lightgrey;
+        img{
+          max-height: 9rem;
+        }
         @media screen and (max-width: 767px) {
           border: 0;
         }
