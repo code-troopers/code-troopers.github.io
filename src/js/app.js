@@ -10,6 +10,9 @@ import Swiper from 'swiper';
 import scrollMonitor from 'scrollmonitor';
 import CountUp from 'countup';
 
+import "intersection-observer";
+import lozad from 'lozad';
+
 hljs.initHighlightingOnLoad();
 
 var swipers = []
@@ -64,6 +67,7 @@ swipers.push(new Swiper('#customers .swiper-container', {
 }))
 
 window.onload = function () {
+    lozad().observe();
     var elements = document.getElementsByClassName("count-up");
     for (var el of elements) {
         var options = {

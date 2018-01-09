@@ -1,7 +1,7 @@
 {{ $baseurl := .Site.BaseURL }}
 
 <div>
-  <img src="/images/banner/{{ .Params.cover }}.png">
+  <img class="lozad" data-src="/images/banner/{{ .Params.cover }}.png">
   <div>
     <h2>
       {{ if .Truncated }}
