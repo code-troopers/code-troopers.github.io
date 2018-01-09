@@ -35,7 +35,6 @@ section#articles {
       background: $white;
       margin: 2rem;
       padding-bottom: 60px;
-      // max-width: 30%; //to deal with orphan
       flex: 1;
 
       a{
@@ -64,7 +63,6 @@ section#articles {
 
       img {
         max-width: 100%;
-        min-width: 280px;
       }
 
       & > div {
@@ -177,6 +175,27 @@ section#blog{
 
 
 
+}
+
+@media screen and (min-width: 768px) {
+  section#articles {
+    .wrapper {
+      & > div {
+        min-width: 51%; //to force items to flow one below the other
+        max-width: 700px;
+      }
+    }
+  }
+}
+@media screen and (min-width: 1024px) {
+  section#articles {
+    .wrapper {
+      & > div {
+        min-width: calc(100% / 3 - 4rem);
+        max-width: calc(100% / 3 - 4rem);
+      }
+    }
+  }
 }
 @media screen and (min-width: 1200px) {
   section#articles {

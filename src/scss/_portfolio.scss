@@ -17,6 +17,7 @@ section#portfolio {
     & > div {
       flex: 1;
 
+
       a{
         font-size: 0.7rem;
       }
@@ -136,6 +137,18 @@ section#work, section#portfolio{
   }
 }
 
+@media screen and (min-width: 768px) {
+  section#portfolio {
+
+    .wrapper {
+      & > div {
+        min-width: 50%;
+        max-width: 50%;
+      }
+    }
+  }
+}
+
 @media screen and (min-width: 1200px) {
   section#work{
     .wrapper {
@@ -150,10 +163,11 @@ section#work, section#portfolio{
     .wrapper {
       & > div {
         border: 1px solid $darkgrey;
-        border-right: none;
+        border-left: none;
+        min-width: 25%;
+        max-width: 25%;
         img {
           max-width: 100%;
-          min-width: 360px;
         }
       }
     }

@@ -34,11 +34,16 @@
 
 @media screen and (max-width: 1200px) {
   .pagination {
-    .next-page{
-      margin-right: 0.8rem;
-    }
-    .previous-page{
-      margin-left: 0.8rem;
+    a {
+      &.next-page {
+        margin-right: 0.8rem;
+        &:hover {
+          margin-right: 8px;
+        }
+      }
+      &.previous-page {
+        margin-left: 0.8rem;
+      }
     }
   }
 }
