@@ -1,71 +1,77 @@
 @import 'variables';
 @import 'mixins';
 
-nav {
-  background-color: $black;
-  display: flex;
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
 
-  a {
-    color: $white;
-    display: block;
-    border-left: 1px solid $darkgrey;
-    border-right: 1px solid $darkgrey;
-    padding: 1.5rem 0;
-    text-transform: uppercase;
-    text-decoration: none;
-    font-weight: bold;
-    flex: 1;
-    text-align: center;
-    letter-spacing: 0.2rem;
-    font-size: 0.8rem;
-    border-bottom: 2px solid $darkgrey;
-    max-height: 60px;
-  }
+  nav {
+    background-color: $black;
+    display: flex;
 
-  a.brand {
-    flex: 0.8;
-    &, &:hover{
-      background: none;
-      img{
-        display: inherit;
-        text-align: center;
-        max-width: 90%;
-        margin: -0.25rem auto;
-        height: 22px;
-        padding: 0.2rem;
-      }
+    a {
+      color: $white;
+      display: block;
+      border-left: 1px solid $darkgrey;
+      border-right: 1px solid $darkgrey;
+      padding: 1.5rem 0;
+      text-transform: uppercase;
+      text-decoration: none;
+      font-weight: bold;
+      flex: 1;
+      text-align: center;
+      letter-spacing: 0.2rem;
+      font-size: 0.8rem;
       border-bottom: 2px solid $darkgrey;
+      max-height: 60px;
     }
-  }
 
-  a.blog {
-    flex: 0.5;
-    &.active{
-      background: $gradient;
+    a.brand {
+      flex: 0.8;
+      &, &:hover {
+        background: none;
+        img {
+          display: inherit;
+          text-align: center;
+          max-width: 90%;
+          margin: -0.25rem auto;
+          height: 22px;
+          padding: 0.2rem;
+        }
+        border-bottom: 2px solid $darkgrey;
+      }
+    }
+
+    a.blog {
+      flex: 0.5;
+      &.active {
+        background: $gradient;
+        border-left: none;
+        border-bottom: none;
+      }
+    }
+
+    a:last-child {
+      border-right: none;
+    }
+    a:first-child {
       border-left: none;
+    }
+
+    a:hover {
+      background: $gradient;
+      color: $white;
       border-bottom: none;
     }
-  }
 
-  a:last-child {
-    border-right: none;
-  }
-  a:first-child {
-    border-left: none;
-  }
+    a.blog:hover {
+      background: $white;
 
-  a:hover {
-    background: $gradient;
-    color: $white;
-    border-bottom: none;
-  }
-
-
-  a.blog:hover {
-    background: $white;
-
-    span {
-      @include gradient-text($gradient, 'light');
+      span {
+        @include gradient-text($gradient, 'light');
+      }
     }
   }
 }
@@ -139,26 +145,28 @@ nav {
 }
 
 @media screen and (max-width: 1023px) {
-  nav{
-    a{
-      display:none;
-      &.brand,&.blog{
-        display: initial;
-      }
-      &.brand{
-        &,&:hover{
-          background-size: 75%;
+  header {
+    nav {
+      a {
+        display: none;
+        &.brand, &.blog {
+          display: initial;
+        }
+        &.brand {
+          &, &:hover {
+            background-size: 75%;
+          }
         }
       }
-    }
 
+    }
   }
   #company {
-    .introduction{
+    .introduction {
       flex-direction: column;
-      div:last-child{
+      div:last-child {
         margin-left: 0;
       }
+      }
     }
-  }
 }
