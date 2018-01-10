@@ -17,6 +17,7 @@
   "author": "Ben Lerchin <ben@lerchin.com> (http://benlerchin.com)",
   "license": "MIT",
   "dependencies": {
+    "animated-scroll-to": "^1.1.8",
     "autoprefixer": "7.1.1",
     "babel-core": "6.25.0",
     "babel-eslint": "^6.1.2",

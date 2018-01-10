@@ -3,15 +3,15 @@
  */
 
 // Load application styles
-import 'scss/main.scss';
-import hljs from 'highlight.js';
-import 'lightbox2';
-import Swiper from 'swiper';
-import scrollMonitor from 'scrollmonitor';
-import CountUp from 'countup';
-
-import "intersection-observer";
-import lozad from 'lozad';
+import 'scss/main.scss'
+import hljs from 'highlight.js'
+import 'lightbox2'
+import Swiper from 'swiper'
+import scrollMonitor from 'scrollmonitor'
+import CountUp from 'countup'
+import 'intersection-observer'
+import lozad from 'lozad'
+import animateScrollTo from 'animated-scroll-to'
 
 hljs.initHighlightingOnLoad();
 
@@ -94,6 +94,16 @@ window.onload = function () {
     swipers.forEach(function(e){
         e.init();
     })
+    var navItems = document.querySelectorAll('header nav a[href^=\\/\\#]')
+    for (var i = 0; i < navItems.length; i++) {
+        var navItem = navItems[i]
+        navItem.addEventListener('click', function () {
+          var chunks = this.href.split(/#/)
+          if (chunks.length > 0) {
+            animateScrollTo(document.querySelector('#' + chunks[chunks.length - 1]))
+          }
+        })
+    }
 };
 
 // ================================
