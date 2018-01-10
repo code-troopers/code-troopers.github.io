@@ -94,7 +94,7 @@ window.onload = function () {
     swipers.forEach(function(e){
         e.init();
     })
-    var navItems = document.querySelectorAll('header nav a[href^=\\/\\#]')
+    var navItems = document.querySelectorAll('header nav a[href^=\\/\\#], footer a.scroll-to-top')
     for (var i = 0; i < navItems.length; i++) {
         var navItem = navItems[i]
         navItem.addEventListener('click', function () {
