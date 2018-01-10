@@ -54,7 +54,6 @@ section#contact {
       width: 60%;
     }
     li {
-      width: 5rem;
       @include socialBubble()
     }
   }

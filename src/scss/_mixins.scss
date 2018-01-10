@@ -152,6 +152,15 @@
     border: 2px solid white;
     border-radius: 50%;
     display: inline-block;
+    @media screen and (max-width: 520px) {
+      width: 3rem;
+      height: 3rem;
+
+      .fa-3x{
+        font-size: 1.5em;
+      }
+
+    }
     &:hover{
       background-color: $white;
       i{
