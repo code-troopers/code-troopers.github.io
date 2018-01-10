@@ -177,7 +177,7 @@ section#blog {
 
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 768px) {
   section#articles {
     .wrapper {
       & > div {
@@ -191,6 +191,7 @@ section#blog {
 @media screen and (min-width: 1024px) {
   section#articles {
     .wrapper {
+      justify-content: start;
       & > div {
         min-width: calc(100% / 3 - 4rem);
         max-width: calc(100% / 3 - 4rem);
@@ -204,7 +205,6 @@ section#blog {
     width: 1200px;
     .wrapper {
       & > div {
-        margin: 0 30px 30px 0 !important;
         &:nth-child(3n) {
           margin-right: 0 !important;
         }
