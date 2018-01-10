@@ -15,7 +15,7 @@
       <li class="{{ lower $tag }}"><span>{{ $tag }}</span></li>
       {{ end }}
     </ul>
-    <p>{{ .Summary }}</p>
+    {{ .Summary }}
     {{ if .Truncated }}
     <a class="read-more" href="{{ .Permalink }}">En savoir plus
       {{ partial "arrow_right.html" . }}

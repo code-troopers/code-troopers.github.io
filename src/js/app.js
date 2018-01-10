@@ -71,7 +71,9 @@ window.onload = function () {
         rootMargin: '200px'
     }).observe();
     var elements = document.getElementsByClassName("count-up");
-    for (var el of elements) {
+    //ie support
+    for (var i = 0; i < elements.length; i++) {
+        var el = elements[i];
         var options = {
             useEasing: true,
             useGrouping: true,
