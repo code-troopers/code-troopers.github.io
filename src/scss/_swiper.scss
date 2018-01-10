@@ -47,6 +47,7 @@
         justify-content: space-evenly;
 
         img {
+          max-width: 90%;
           object-fit: contain;
           padding: 1rem;
           filter: grayscale(1);
