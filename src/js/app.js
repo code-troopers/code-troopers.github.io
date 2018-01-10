@@ -67,7 +67,9 @@ swipers.push(new Swiper('#customers .swiper-container', {
 }))
 
 window.onload = function () {
-    lozad().observe();
+    lozad('.lozad',{
+        rootMargin: '200px 0'
+    }).observe();
     var elements = document.getElementsByClassName("count-up");
     for (var el of elements) {
         var options = {
