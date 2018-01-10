@@ -15,13 +15,19 @@ section#skills{
       li{
         margin: 1rem;
 
-        &:first-child{
-          margin-left: 0;
+
+
+        @media screen and (max-width: 768px) {
+            min-width: calc(50% - 2rem);
+            max-width: calc(50% - 2rem);
         }
 
-        &:last-child{
-          margin-right: 0;
+        @media screen and (max-width: 640px) {
+          min-width: 51%;
+          max-width: 51%;
+          margin: 1rem auto;
         }
+
 
         img{
           height: 100px;
@@ -50,3 +56,4 @@ section#skills{
     }
   }
 }
+
