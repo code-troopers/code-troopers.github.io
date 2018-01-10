@@ -1,26 +1,24 @@
-section#blogs{
+section#blogs {
   background: $greywhite;
 
-  & > a{
+  & > a {
     color: $black;
   }
 
-  a{
+  a {
     color: $grey;
   }
 
-  a.btn{
+  a.btn {
     border-color: $bloggrey;
     color: $bloggrey;
-    &:hover{
+    &:hover {
       border-color: $lightblue;
       color: $white;
     }
   }
 
 }
-
-
 
 section#articles {
   margin: 0 auto;
@@ -37,10 +35,10 @@ section#articles {
       padding-bottom: 60px;
       flex: 1;
 
-      a{
+      a {
         color: $black;
       }
-      .read-more{
+      .read-more {
         font-size: 0.7rem;
         position: absolute;
         bottom: 30px;
@@ -49,7 +47,7 @@ section#articles {
         display: inline-block;
         width: 40%;
         @include arrows();
-        .arrow_box_right{
+        .arrow_box_right {
           margin-left: -0.6rem;
         }
         transition: width 1s ease-in-out;
@@ -90,90 +88,92 @@ section#articles {
   }
 }
 
-section#blog{
+section#blog {
   background: $white;
   margin: 0 auto;
   article {
     & > img {
-      width: 100%;
+      max-width: 100%;
     }
-    & > h2 {
-      @include separator($black);
-      letter-spacing: initial;
-    }
-    .content{
-      letter-spacing: initial;
-      a{
-        color: $black;
-        &:hover{
-          color: inherit;
+    & > .wrapper-content {
+      margin-left: 1rem;
+      margin-right: 1rem;
+
+      & > h2 {
+        @include separator($black);
+        letter-spacing: initial;
+      }
+      .content {
+        letter-spacing: initial;
+        a {
+          color: $black;
+          &:hover {
+            color: inherit;
+          }
         }
-      }
-      margin: 0.5rem;
-      color: $grey;
-      font-family: "Montserrat Light", "Helvetica Neue", Arial, sans-serif;
-      h1,h2,h3,h4,h5,h6{
-        color: $black;
-        font-family: "Montserrat", Helvetica, Arial, sans-serif;
-      }
-      @include separator($black);
-      pre{
-        width:100%;
-        overflow: auto;
-      }
-      .inlineBoxes {
-        img {
-          padding: 1rem;
-          max-width: 20rem;
+        margin: 0.5rem;
+        color: $grey;
+        font-family: "Montserrat Light", "Helvetica Neue", Arial, sans-serif;
+        h1, h2, h3, h4, h5, h6 {
+          color: $black;
+          font-family: "Montserrat", Helvetica, Arial, sans-serif;
         }
+        @include separator($black);
+        pre {
+          width: 100%;
+          overflow: auto;
+        }
+        .inlineBoxes {
+          img {
+            padding: 1rem;
+            max-width: 20rem;
+          }
+        }
+        ul {
+          list-style: disc inside;
+          li {
+            > p {
+              display: inline;
+            }
+          }
+        }
+        iframe {
+          max-width: 100%;
+        }
+
       }
-      ul {
-        list-style: disc inside;
-        li {
-          > p {
-            display: inline;
+      .content-footer {
+        margin: 1rem 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .tags {
+          flex: 1;
+        }
+
+        section#author {
+          text-align: right;
+          align-self: center;
+          flex: 0.5;
+          color: $grey;
+          font-size: 0.7rem;
+          .author-name {
+            background: $gradient;
+            color: $white;
+            padding: 0.5rem 1rem;
+            border-radius: 0.75rem;
           }
         }
       }
-      iframe {
-        max-width: 100%;
-      }
-
-    }
-    .content-footer {
-      margin: 1rem 0;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-
-      .tags{
-        flex: 1;
-      }
-
-      section#author {
-        text-align: right;
-        align-self: center;
-        flex: 0.5;
-        color: $grey;
-        font-size: 0.7rem;
-        .author-name {
-          background: $gradient;
-          color: $white;
-          padding: 0.5rem 1rem;
-          border-radius: 0.75rem;
-        }
-      }
     }
 
   }
-  a{
+  a {
     color: $grey;
   }
 
-
   @include tags($lightgrey);
-
-
 
 }
 
@@ -187,6 +187,7 @@ section#blog{
     }
   }
 }
+
 @media screen and (min-width: 1024px) {
   section#articles {
     .wrapper {
@@ -197,6 +198,7 @@ section#blog{
     }
   }
 }
+
 @media screen and (min-width: 1200px) {
   section#articles {
     width: 1200px;
@@ -211,11 +213,11 @@ section#blog{
   }
   section#blog {
     width: 900px;
-    article{
-      .content{
+    article {
+      .content {
         margin: inherit;
       }
-      .content-footer{
+      .content-footer {
         flex-direction: row;
       }
     }

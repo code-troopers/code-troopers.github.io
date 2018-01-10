@@ -80,8 +80,13 @@ section#work{
         width:100%;
       }
     }
-    article > h2, .content{
-      @include separator($lightgrey)
+    article .wrapper-content{
+      margin-left: 1rem;
+      margin-right: 1rem;
+
+      & > h2, .content {
+        @include separator($lightgrey)
+      }
     }
     .content{
       //margin: 0.5rem;
