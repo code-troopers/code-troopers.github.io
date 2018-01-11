@@ -67,6 +67,7 @@ swipers.push(new Swiper('#customers .swiper-container', {
 }))
 
 window.onload = function () {
+  console.log('On load called')
     lozad('.lozad',{
         rootMargin: '200px'
     }).observe();
@@ -92,7 +93,9 @@ window.onload = function () {
     }
     //to ensure everything is ready before displaying the swipers
     swipers.forEach(function(e){
-        e.init();
+      try {
+        e.init()
+      } catch (e) { }
     })
     var navItems = document.querySelectorAll('header nav a[href^=\\/\\#], footer a.scroll-to-top')
     for (var i = 0; i < navItems.length; i++) {
