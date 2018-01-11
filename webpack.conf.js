@@ -33,7 +33,20 @@ export default function() {
     module: {
       rules: [
         {
-          test: /\.((jpe?g)|(png)|(svg)|(gif)|(mp4)|(webm))(\?v=\d+\.\d+\.\d+)?$/,
+          test: /\.(gif|png|jpe?g)$/i,
+          use: [
+            {
+              loader: 'url-loader',
+              options: {
+                limit: 4098,
+                fallback: 'file-loader',
+                name: '[path][name].[ext]'
+              }
+            }
+          ]
+        },
+        {
+          test: /\.((svg)|(mp4)|(webm))(\?v=\d+\.\d+\.\d+)?$/,
           loader: 'file-loader?name=[path][name].[hash:4].[ext]'
         },
         {
@@ -53,7 +66,7 @@ export default function() {
         },
         {
           test: /\.html$/,
-          loader:  'file-loader?name=[path][name].[ext]!extract-loader!html-loader'
+          loader:  'file-loader?name=[path][name].[ext]!extract-loader!html-loader?attrs[]=:data-src&attrs[]=img:src'
         },
         {
           test: /\.(scss|sass)?$/,

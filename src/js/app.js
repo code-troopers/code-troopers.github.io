@@ -13,6 +13,14 @@ import 'intersection-observer'
 import lozad from 'lozad'
 import animateScrollTo from 'animated-scroll-to'
 
+import { src, trace } from '..//img/header_logo.png';
+
+/*console.log(trace);
+const logo = document.getElementsByClassName("logo")[0]
+logo.src=trace
+logo.className="logo lozad"
+logo.setAttribute("data-src", src)*/
+
 hljs.initHighlightingOnLoad();
 
 var swipers = []
