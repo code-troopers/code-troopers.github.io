@@ -15,10 +15,7 @@ section#contact {
       color: $black;
     }
     & > div:first-child {
-      img {
-        height: 400px;
-        max-width: 100%;
-      }
+      max-height: 550px;
     }
     & > div:last-child {
       padding: 5rem;

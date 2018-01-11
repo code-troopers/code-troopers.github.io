@@ -1,5 +1,8 @@
 @mixin gradient-text($gradient, $bg : 'light') {
   @supports(mix-blend-mode: lighten) {
+    overflow: hidden;
+    //fix when zooming blending can leak
+    border: 1px solid transparent;
     display: inline-block;
     position: relative;
 
@@ -7,11 +10,7 @@
       content: '';
       display: block;
       position: absolute;
-      //fix when zooming blending can leak
-      top: 2px;
-      right: 2px;
-      bottom: 2px;
-      left: 2px;
+      top: 0; right: 0; left: 0; bottom: 0;
 
       background: unquote($gradient);
       pointer-events: none;
