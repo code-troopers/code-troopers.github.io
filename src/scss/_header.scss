@@ -88,6 +88,9 @@ header {
 #company {
   background-size: cover;
   background-image: url('../img/header_large.jpg');
+  @media screen and (max-width: 768px) {
+    background-image: url('../img/header_small.jpg');
+  }
   background-position: center center;
   background-color: $grey;
   padding-bottom: 5rem;
