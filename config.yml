@@ -10,7 +10,7 @@ themesDir: "site/themes"
 paginate: 9
 pygmentsUseClasses: true
 SectionPagesMenu: "main"
-
+relativeURLs: true
 menu:
   main:
     - Identifier: "skills"

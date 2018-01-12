@@ -40,7 +40,7 @@ export default function() {
               options: {
                 limit: 8192,
                 fallback: 'file-loader',
-                name: '[path][name].[ext]'
+                name: '[path][name].[hash:4].[ext]'
               }
             }
           ]
