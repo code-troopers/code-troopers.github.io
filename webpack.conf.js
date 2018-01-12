@@ -38,7 +38,7 @@ export default function() {
             {
               loader: 'url-loader',
               options: {
-                limit: 4098,
+                limit: 8192,
                 fallback: 'file-loader',
                 name: '[path][name].[ext]'
               }

@@ -23,8 +23,51 @@ logo.setAttribute("data-src", src)*/
 
 hljs.initHighlightingOnLoad();
 
-var swipers = []
-swipers.push(new Swiper('#stack .swiper-container', {
+
+var initLozad = function() {
+//this should be done by a specific webpack loader
+  var lozadElt = document.getElementsByClassName("lozad");
+  //ie support
+  for (var i = 0; i < lozadElt.length; i++) {
+    var e = lozadElt[i];
+    if (/data:.*/.test(e.getAttribute('data-src'))) {
+      e.setAttribute('src', e.getAttribute('data-src'));
+      e.className = '';
+    }
+  }
+
+  lozad('.lozad', {
+    rootMargin: '200px'
+  }).observe();
+}
+
+var initCountUp = function(){
+  var elements = document.getElementsByClassName("count-up");
+  //ie support
+  for (var i = 0; i < elements.length; i++) {
+    var el = elements[i];
+    var options = {
+      useEasing: true,
+      useGrouping: true,
+      separator: ',',
+      decimal: '.'
+    };
+    scrollMonitor.create(el).enterViewport(function () {
+      var demo = new CountUp(this.watchItem, 0, this.watchItem.getAttribute('data-count'), 0, 3, options);
+      if (!demo.error) {
+        demo.start();
+      } else {
+        console.error(demo.error);
+      }
+      this.destroy();
+    });
+  }
+}
+
+var initSwiper = function (){
+
+  var swipers = []
+  swipers.push(new Swiper('#stack .swiper-container', {
     spaceBetween: 32,
     init:false,
     slidesPerView: 'auto',
@@ -33,88 +76,72 @@ swipers.push(new Swiper('#stack .swiper-container', {
     //loopedSlides: 1,
     //centeredSlides: true,
     breakpoints: {
-        320: {
-            slidesPerView: 1
-        },
-        512: {
-            slidesPerView: 2
-        },
-        768: {
-            slidesPerView: 3
-        },
-        1024: {
-            slidesPerView: 4
-        }
+      320: {
+        slidesPerView: 1
+      },
+      512: {
+        slidesPerView: 2
+      },
+      768: {
+        slidesPerView: 3
+      },
+      1024: {
+        slidesPerView: 4
+      }
 
     },
     navigation: {
-        nextEl: '#stack .swiper-next',
-        prevEl: '#stack .swiper-prev',
+      nextEl: '#stack .swiper-next',
+      prevEl: '#stack .swiper-prev',
     }
-}))
+  }))
 
 
-swipers.push(new Swiper('#customers .swiper-container', {
+  swipers.push(new Swiper('#customers .swiper-container', {
     slidesPerView: 5,
     init:false,
     direction: 'horizontal',
     loop: true,
     breakpoints: {
-        1024: {
-            slidesPerView: 1,
-        },
-        1280: {
-            slidesPerView: 3,
-        }
+      1024: {
+        slidesPerView: 1,
+      },
+      1280: {
+        slidesPerView: 3,
+      }
     },
 
     navigation: {
-        nextEl: '#customers .swiper-next',
-        prevEl: '#customers .swiper-prev',
+      nextEl: '#customers .swiper-next',
+      prevEl: '#customers .swiper-prev',
     }
-}))
+  }))
+  //to ensure everything is ready before displaying the swipers
+  swipers.forEach(function(e){
+    try {
+      e.init()
+    } catch (e) { }
+  })
+}
+
+var initNavScroll = function(){
+  var navItems = document.querySelectorAll('header nav a[href^=\\/\\#], footer a.scroll-to-top')
+  for (var i = 0; i < navItems.length; i++) {
+    var navItem = navItems[i]
+    navItem.addEventListener('click', function () {
+      var chunks = this.href.split(/#/)
+      if (chunks.length > 0) {
+        animateScrollTo(document.querySelector('#' + chunks[chunks.length - 1]))
+      }
+    })
+  }
+}
 
 window.onload = function () {
-  console.log('On load called')
-    lozad('.lozad',{
-        rootMargin: '200px'
-    }).observe();
-    var elements = document.getElementsByClassName("count-up");
-    //ie support
-    for (var i = 0; i < elements.length; i++) {
-        var el = elements[i];
-        var options = {
-            useEasing: true,
-            useGrouping: true,
-            separator: ',',
-            decimal: '.'
-        };
-        scrollMonitor.create(el).enterViewport(function () {
-            var demo = new CountUp(this.watchItem, 0, this.watchItem.getAttribute('data-count'), 0, 3, options);
-            if (!demo.error) {
-                demo.start();
-            } else {
-                console.error(demo.error);
-            }
-            this.destroy();
-        });
-    }
-    //to ensure everything is ready before displaying the swipers
-    swipers.forEach(function(e){
-      try {
-        e.init()
-      } catch (e) { }
-    })
-    var navItems = document.querySelectorAll('header nav a[href^=\\/\\#], footer a.scroll-to-top')
-    for (var i = 0; i < navItems.length; i++) {
-        var navItem = navItems[i]
-        navItem.addEventListener('click', function () {
-          var chunks = this.href.split(/#/)
-          if (chunks.length > 0) {
-            animateScrollTo(document.querySelector('#' + chunks[chunks.length - 1]))
-          }
-        })
-    }
+  initLozad();
+  initCountUp();
+  initSwiper();
+  initNavScroll();
 };
 
 // ================================
