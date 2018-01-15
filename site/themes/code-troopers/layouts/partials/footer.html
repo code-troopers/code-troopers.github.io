@@ -66,5 +66,8 @@
     </div>
 </footer>
 <script src="/main.js"></script>
+{{ if eq .Page.Type "blog" }}
+<script src="/blog.js"></script>
+{{ end }}
 </body>
 </html>

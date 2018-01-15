@@ -9,6 +9,7 @@ import ManifestPlugin from 'webpack-manifest-plugin';
 import ManifestReplacePlugin from 'webpack-manifest-replace-plugin';
 import EventHooksPlugin from 'event-hooks-webpack-plugin';
 import CopyWebpackPlugin from 'copy-webpack-plugin';
+import SuppressChunksPlugin from 'suppress-chunks-webpack-plugin';
 
 export default function() {
   const optimizePlugins = [
@@ -20,6 +21,7 @@ export default function() {
       src: '**/*.html',
       manifestFilename: 'manifest.json'
     }),
+    new SuppressChunksPlugin(['img', 'html'])
   ];
   const cssLoaders = [
     { loader: 'css-loader', options: Object.assign({ minimize: true, sourceMap: true }, cssNano) },
@@ -37,7 +39,7 @@ export default function() {
             {
               loader: 'url-loader',
               options: {
-                limit: 8192,
+                limit: 6144,
                 fallback: 'file-loader',
                 name: '[path][name].[hash:4].[ext]'
               }
@@ -97,7 +99,12 @@ export default function() {
         nodir: true,
         nosort: true
       });
-      return [...js, ...img, ...postsImg, ...html];
+      return {
+        main: [...js],
+        img: [...img, ...postsImg],
+        html: [...html],
+        blog: './js/blog.js'
+      };
     },
     output: {
       path: path.join(__dirname, './dist'),

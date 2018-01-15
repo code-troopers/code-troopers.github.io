@@ -4,8 +4,7 @@
 
 // Load application styles
 import 'scss/main.scss'
-import hljs from 'highlight.js'
-import 'lightbox2'
+
 import Swiper from 'swiper'
 import scrollMonitor from 'scrollmonitor'
 import CountUp from 'countup'
@@ -13,7 +12,6 @@ import 'intersection-observer'
 import lozad from 'lozad'
 import animateScrollTo from 'animated-scroll-to'
 
-hljs.initHighlightingOnLoad();
 
 
 var initLozad = function() {
