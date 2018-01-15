@@ -15,7 +15,7 @@ section#text{
     color: $grey;
   }
 
-  @media screen and (max-width: 1199px) {
+  @media screen and (max-width: $desktop) {
     width: 90%;
     letter-spacing: initial;
   }

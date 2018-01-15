@@ -1,3 +1,5 @@
+@import 'variables';
+
 @mixin gradient-text($gradient, $bg : 'light') {
   @supports(mix-blend-mode: lighten) {
     overflow: hidden;

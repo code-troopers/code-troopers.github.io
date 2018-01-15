@@ -1,4 +1,5 @@
 @import '../../node_modules/swiper/dist/css/swiper.css';
+@import 'variables';
 
 @mixin swiper($arrowColor: $grey){
   .stack-swiper {
@@ -98,19 +99,19 @@ section#stack {
 
     width: calc(6 * 8rem + 64px);
 
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: $smalldesktop) {
       width: calc(4 * 8rem + 62px);
       margin: 0 auto;
     }
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: $tablet) {
       width: calc(3 * 8rem + 60px);
       margin: 0 auto;
     }
-    @media screen and (max-width: 512px) {
+    @media screen and (max-width: $phone) {
       width: calc(2 * 8rem + 62px);
       margin: 0 auto;
     }
-    @media screen and (max-width: 320px) {
+    @media screen and (max-width: $smallphone) {
       width: calc(8rem + 64px);
       margin: 0 auto;
     }
@@ -138,14 +139,14 @@ section#customers{
         img{
           max-height: 9rem;
         }
-        @media screen and (max-width: 767px) {
+        @media screen and (max-width: $tablet) {
           border: 0;
         }
         img {
           position: inherit;
         }
       }
-      @media screen and (max-width: 767px) {
+      @media screen and (max-width: $tablet) {
         border-left: 0.5px solid $lightgrey;
         border-right: 0.5px solid $lightgrey;
       }

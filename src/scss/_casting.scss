@@ -1,3 +1,5 @@
+@import 'variables';
+
 section#casting {
   background: $white;
   padding-bottom: 5rem;
@@ -96,7 +98,7 @@ section#casting {
 }
 
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: $tablet) {
   section#casting {
     .wrapper {
       ul.casting {

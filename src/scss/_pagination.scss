@@ -1,3 +1,5 @@
+@import 'variables';
+
 .pagination{
   padding-top: 1rem;
   padding-bottom: 3rem;
@@ -32,7 +34,7 @@
   }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: $desktop) {
   .pagination {
     a {
       &.next-page {

@@ -1,3 +1,5 @@
+@import "variables";
+
 section#blogs {
   background: $greywhite;
 
@@ -177,7 +179,7 @@ section#blog {
 
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: $tablet) {
   section#articles {
     .wrapper {
       & > div {
@@ -188,7 +190,7 @@ section#blog {
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: $smalldesktop) {
   section#articles {
     .wrapper {
       justify-content: start;
@@ -200,7 +202,7 @@ section#blog {
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: $desktop) {
   section#articles {
     width: 1200px;
     .wrapper {

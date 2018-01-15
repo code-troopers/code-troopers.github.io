@@ -144,7 +144,7 @@ section#work, section#portfolio{
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: $tablet) {
   section#portfolio {
 
     .wrapper {
@@ -155,7 +155,7 @@ section#work, section#portfolio{
     }
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: $tablet) {
   section#portfolio {
 
     .wrapper {
@@ -167,7 +167,7 @@ section#work, section#portfolio{
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: $desktop) {
   section#work{
     .wrapper {
       width: 1200px;

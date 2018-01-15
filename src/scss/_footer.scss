@@ -40,7 +40,7 @@ footer {
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: $tablet) {
   footer{
     .wrapper{
       padding-bottom: 5rem;

@@ -88,7 +88,7 @@ header {
 #company {
   background-size: cover;
   background-image: url('../img/header_large.jpg');
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: $tablet) {
     background-image: url('../img/header_small.jpg');
   }
   background-position: center center;
@@ -156,7 +156,7 @@ header {
 
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: $smalldesktop) {
   header {
     nav {
       a {

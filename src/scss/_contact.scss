@@ -47,7 +47,7 @@ section#contact {
 
   ul {
     justify-content: center;
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $tablet) {
       width: 60%;
     }
     li {
@@ -56,7 +56,7 @@ section#contact {
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: $tablet) {
   section#contact {
     letter-spacing: initial;
     & > div {

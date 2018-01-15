@@ -17,12 +17,12 @@ section#skills{
 
 
 
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: $smalldesktop) {
             min-width: calc(50% - 2rem);
             max-width: calc(50% - 2rem);
         }
 
-        @media screen and (max-width: 640px) {
+        @media screen and (max-width: $phone) {
           min-width: 51%;
           max-width: 51%;
           margin: 1rem auto;
