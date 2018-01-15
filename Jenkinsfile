@@ -3,7 +3,12 @@ node('docker') {
       // This displays colors using the 'xterm' ansi color map.
       ansiColor('xterm') {
         stage('Checkout sources') {
-          checkout scm
+          checkout([
+                  $class: 'GitSCM',
+                  branches: scm.branches,
+                  extensions: scm.extensions + [[$class: 'WipeWorkspace']],
+                  userRemoteConfigs: scm.userRemoteConfigs
+          ])
         }
         stage('Build building image') {
           sh 'docker info'
