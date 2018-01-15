@@ -33,6 +33,10 @@ node{
     //TODO handle pre / prod deployment
     stage('Checkout current site') {
       git branch: 'gh-pages', credentialsId: 'bc7230d3-816a-4c7b-947b-7cf7f5806707', url: 'git@github.com:code-troopers/pre-www.git'
+      sh 'git rm -r -q *'
+      sh 'git reset HEAD CNAME'
+      sh 'git checkout -- CNAME'
+      sh 'git commit -m "Clean older version"'
     }
     stage('Update site and push') {
       unstash name: 'dist'
