@@ -9,7 +9,6 @@ url: /toosla.html
 
 ---
 
-Application Android de location de voiture. Avec Toosla plus besoin de guichet ni de clé ! Tout se
-passe avec votre mobile. L'application se connecte en Bluetooth avec la voiture et vous en donne le
-contrôle.
+Toosla est une application permettant la location de véhicule de façon complètement dématérialisée.
+Le principal enjeu technique était de concevoir un système robuste utilisant le bluetooth pour communiquer avec le véhicule.
 <!--more-->

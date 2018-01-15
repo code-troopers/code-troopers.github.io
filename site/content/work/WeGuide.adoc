@@ -1,0 +1,12 @@
+---
+cover: weguide
+date: '2017-12-30'
+tags:
+- Web
+title: 'We Guide'
+url: /weguide.html
+
+---
+
+We Guide est une plateforme de mise en relation entre Touristes et Guides Professionnels et entre Touristes et Particuliers locaux.  Le but est de découvrir ou REdécouvrir un lieux, une ville, une région d’une façon plus authentique et personnalisée.
+<!--more-->
