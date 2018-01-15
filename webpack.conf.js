@@ -10,7 +10,6 @@ import ManifestReplacePlugin from 'webpack-manifest-replace-plugin';
 import EventHooksPlugin from 'event-hooks-webpack-plugin';
 import CopyWebpackPlugin from 'copy-webpack-plugin';
 
-
 export default function() {
   const optimizePlugins = [
     new webpack.optimize.UglifyJsPlugin(),
@@ -33,7 +32,20 @@ export default function() {
     module: {
       rules: [
         {
-          test: /\.((jpe?g)|(png)|(svg)|(gif)|(mp4)|(webm))(\?v=\d+\.\d+\.\d+)?$/,
+          test: /\.(gif|png|jpe?g)$/i,
+          use: [
+            {
+              loader: 'url-loader',
+              options: {
+                limit: 8192,
+                fallback: 'file-loader',
+                name: '[path][name].[hash:4].[ext]'
+              }
+            }
+          ]
+        },
+        {
+          test: /\.((svg)|(mp4)|(webm))(\?v=\d+\.\d+\.\d+)?$/,
           loader: 'file-loader?name=[path][name].[hash:4].[ext]'
         },
         {
@@ -53,7 +65,7 @@ export default function() {
         },
         {
           test: /\.html$/,
-          loader:  'file-loader?name=[path][name].[ext]!extract-loader!html-loader'
+          loader:  'file-loader?name=[path][name].[ext]!lozad-loader!extract-loader!html-loader?attrs[]=:data-src&attrs[]=img:src'
         },
         {
           test: /\.(scss|sass)?$/,
@@ -130,6 +142,9 @@ export default function() {
         path.resolve('src'),
         'node_modules'
       ]
+    },
+    resolveLoader: {
+      modules: ['node_modules', path.resolve(__dirname, 'loaders')]
     }
   };
 }
