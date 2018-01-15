@@ -25,6 +25,8 @@ section#portfolio {
       img {
         max-width: 100%;
         min-width: 220px;
+        min-height: 330px;
+        object-fit: cover;
       }
 
       & > div {
@@ -149,6 +151,17 @@ section#work, section#portfolio{
       & > div {
         min-width: 50%;
         max-width: 50%;
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  section#portfolio {
+
+    .wrapper {
+      & > div {
+        min-width: 100%;
+        max-width: 100%;
       }
     }
   }
