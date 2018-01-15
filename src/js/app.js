@@ -14,8 +14,8 @@ import animateScrollTo from 'animated-scroll-to'
 
 
 
-var initLozad = function() {
-  lozad('.lozad', {
+var initLozad = function(selector) {
+  lozad(selector || '.lozad', {
     rootMargin: '200px'
   }).observe();
 }
@@ -97,7 +97,9 @@ var initSwiper = function (){
   //to ensure everything is ready before displaying the swipers
   swipers.forEach(function(e){
     try {
-      e.init()
+      e.init();
+      //as swiper images can be lazy loaded, target lozad lazy loading on duplicated slides
+      initLozad('.swiper-slide-duplicate .lozad');
     } catch (e) { }
   })
 }
