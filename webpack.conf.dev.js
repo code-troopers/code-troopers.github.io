@@ -55,7 +55,10 @@ export default function() {
         nodir: true,
         nosort: true
       });
-      return [...hot, ...js, ...img];
+      return {
+        main: [...hot, ...js, ...img],
+        blog: ['./js/blog.js']
+      };
     },
     output: {
       path: path.join(__dirname, './dist'),
