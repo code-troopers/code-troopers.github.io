@@ -10,7 +10,6 @@ import ManifestReplacePlugin from 'webpack-manifest-replace-plugin';
 import EventHooksPlugin from 'event-hooks-webpack-plugin';
 import CopyWebpackPlugin from 'copy-webpack-plugin';
 
-
 export default function() {
   const optimizePlugins = [
     new webpack.optimize.UglifyJsPlugin(),
@@ -66,7 +65,7 @@ export default function() {
         },
         {
           test: /\.html$/,
-          loader:  'file-loader?name=[path][name].[ext]!extract-loader!html-loader?attrs[]=:data-src&attrs[]=img:src'
+          loader:  'file-loader?name=[path][name].[ext]!lozad-loader!extract-loader!html-loader?attrs[]=:data-src&attrs[]=img:src'
         },
         {
           test: /\.(scss|sass)?$/,
@@ -143,6 +142,9 @@ export default function() {
         path.resolve('src'),
         'node_modules'
       ]
+    },
+    resolveLoader: {
+      modules: ['node_modules', path.resolve(__dirname, 'loaders')]
     }
   };
 }

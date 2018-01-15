@@ -17,17 +17,6 @@ hljs.initHighlightingOnLoad();
 
 
 var initLozad = function() {
-//this should be done by a specific webpack loader
-  var lozadElt = document.getElementsByClassName("lozad");
-  //ie support
-  for (var i = 0; i < lozadElt.length; i++) {
-    var e = lozadElt[i];
-    if (/data:.*/.test(e.getAttribute('data-src'))) {
-      e.setAttribute('src', e.getAttribute('data-src'));
-      e.className = '';
-    }
-  }
-
   lozad('.lozad', {
     rootMargin: '200px'
   }).observe();
