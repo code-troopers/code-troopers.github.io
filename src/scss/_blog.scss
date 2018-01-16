@@ -109,6 +109,8 @@ section#blog {
         letter-spacing: initial;
         a {
           color: $black;
+          word-wrap: break-word;
+
           &:hover {
             color: inherit;
           }
