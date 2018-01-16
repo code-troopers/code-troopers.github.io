@@ -1,0 +1,18 @@
+#!/bin/sh
+# Script used to pass additional parameters to asciidoctor. It allows us to properly customize the rendering.
+ARGS="-a 'hardbreaks!' -a 'source-highlighter=pygments' -a 'pygments-css=class' -a 'icons=font' -a 'break=<!--break-->'"
+EXEC=$(which -a asciidoctor | head -2 | tail -1) # find next than self in path
+if [ -f $EXEC ]; then
+    eval $EXEC $ARGS $@
+exit
+fi
+EXEC=/usr/bin/asciidoctor
+if [ -f $EXEC ]; then
+    eval $EXEC $ARGS $@
+exit
+fi
+EXEC=/usr/local/bin/asciidoctor
+if [ -f  $EXEC ]; then
+    eval $EXEC $ARGS $@
+exit
+fi

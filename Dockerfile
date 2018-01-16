@@ -10,10 +10,10 @@ RUN apt-get -qq update \
   && DEBIAN_FRONTEND=noninteractive apt-get -qq install -y --no-install-recommends build-essential python-pygments git ca-certificates nodejs rubygems\
   && rm -rf /var/lib/apt/lists/*
 
-RUN gem install --no-ri --no-rdoc asciidoctor
+RUN gem install --no-ri --no-rdoc asciidoctor pygments.rb
 
 # Download and install hugo
-ENV HUGO_VERSION 0.31.1
+ENV HUGO_VERSION 0.32.4
 ENV HUGO_BINARY hugo_${HUGO_VERSION}_Linux-64bit.deb
 ARG HUGO_URL
 ENV HUGO_URL https://github.com/spf13/hugo/releases/download/v${HUGO_VERSION}/${HUGO_BINARY}

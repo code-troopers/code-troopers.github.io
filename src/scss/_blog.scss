@@ -1,5 +1,5 @@
 @import "variables";
-
+@import "pygments";
 section#blogs {
   background: $greywhite;
 
@@ -151,6 +151,10 @@ section#blog {
         }
         iframe {
           max-width: 100%;
+        }
+
+        .pygments{
+          padding: 1rem;
         }
 
       }

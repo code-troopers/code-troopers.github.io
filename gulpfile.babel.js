@@ -1,4 +1,5 @@
 import 'process';
+import path from 'path';
 import BrowserSync from 'browser-sync';
 import cp from 'child_process';
 import gulp from 'gulp';
@@ -75,7 +76,8 @@ gulp.task('js', ['hugo-dist'], (cb) => {
 
 function buildSite(cb, options, env = null) {
   const args = options ? defaultArgs.concat(options) : defaultArgs;
-  const nodeEnv = env && Object.assign({}, process.env, env);
+  var  nodeEnv = env && Object.assign({}, process.env, env);
+  nodeEnv['PATH'] = `${path.join(__dirname, 'scripts')}:${nodeEnv['PATH']}`
   return cp.spawn(hugoBin, args, { stdio: 'inherit', env: nodeEnv }).on('close', (code) => {
     if (code === 0) {
       browserSync.reload();
