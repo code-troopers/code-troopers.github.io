@@ -3,6 +3,10 @@
 section#blogs {
   background: $greywhite;
 
+
+  & > * {
+    margin: 0 auto;
+  }
   & > a {
     color: $black;
   }
@@ -23,8 +27,10 @@ section#blogs {
 }
 
 section#articles {
-  margin: 0 auto;
   color: $bloggrey;
+  & > * {
+    margin: 0 auto;
+  }
 
   .wrapper {
     display: flex;
@@ -92,7 +98,9 @@ section#articles {
 
 section#blog {
   background: $white;
-  margin: 0 auto;
+  & > * {
+    margin: 0 auto;
+  }
   article {
     & > img {
       max-width: 100%;
@@ -206,7 +214,9 @@ section#blog {
 
 @media screen and (min-width: $desktop) {
   section#articles {
-    width: 1200px;
+    & > * {
+      width: 1200px;
+    }
     .wrapper {
       & > div {
         &:nth-child(3n) {
@@ -216,7 +226,9 @@ section#blog {
     }
   }
   section#blog {
-    width: 900px;
+    & > * {
+      width: 900px;
+    }
     article {
       .content {
         margin: inherit;
