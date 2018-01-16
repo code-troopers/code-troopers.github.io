@@ -15,7 +15,7 @@ node('docker') {
           sh 'docker build -f Dockerfile -t hugo-webpack .'
         }
         stage('Build and stash results') {
-          sh 'docker run --rm -v ${PWD}/site:/usr/src/app/site -v ${PWD}/src:/usr/src/app/src -v ${PWD}/dist:/usr/src/app/dist -e SKIP_CLEAN=true hugo-webpack npm run build'
+          sh 'docker run --rm -v ${PWD}/site:/usr/src/app/site -v ${PWD}/src:/usr/src/app/src -v ${PWD}/dist:/usr/src/app/dist hugo-webpack npm run build'
           dir('dist') {
             stash name: 'dist', excludes: 'CNAME'
           }
