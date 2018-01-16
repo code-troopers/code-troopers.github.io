@@ -58,7 +58,7 @@ gulp.task('clean', () => {
   if (process.env.SKIP_CLEAN){
     return;
   }
-  return del(['dist/**', '.tmp/**']);
+  return del(['dist/**', '.tmp/**', '!dist', '!.tmp']);
 });
 
 gulp.task('js', ['hugo-dist'], (cb) => {
