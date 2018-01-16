@@ -76,7 +76,7 @@ gulp.task('js', ['hugo-dist'], (cb) => {
 
 function buildSite(cb, options, env = null) {
   const args = options ? defaultArgs.concat(options) : defaultArgs;
-  var  nodeEnv = env && Object.assign({}, process.env, env);
+  var  nodeEnv = env && Object.assign({}, process.env, env) || process.env;
   nodeEnv['PATH'] = `${path.join(__dirname, 'scripts')}:${nodeEnv['PATH']}`
   return cp.spawn(hugoBin, args, { stdio: 'inherit', env: nodeEnv }).on('close', (code) => {
     if (code === 0) {
