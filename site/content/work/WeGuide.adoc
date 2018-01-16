@@ -1,6 +1,6 @@
 ---
 cover: weguide
-date: '2016-01-01'
+date: '2018-01-01'
 tags:
 - Web
 title: 'WeGuide'
