@@ -6,7 +6,7 @@ tags:
 - Stage
 title: 'Stage 2017'
 url: /2016/12/21/stages-2017/
-aliases: /2016/12/21/stage-2017.html
+aliases: 2016/12/21/stage-2017.html
 ---
 
 *[EDIT]* : nous ne cherchons plus de stagiaires pour cette année. Rendez-vous l'année prochaine.

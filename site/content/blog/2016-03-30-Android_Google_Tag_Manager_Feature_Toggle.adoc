@@ -8,7 +8,7 @@ tags:
 - Feature Toggle
 title: 'Android : Feature Toggle avec Google Tag Manager'
 url: /2016/03/30/android_google_tag_manager_feature_toggle/
-aliases: /2016/03/30/Android_Google_Tag_Manager_Feature_Toggle.html
+aliases: 2016/03/30/Android_Google_Tag_Manager_Feature_Toggle.html
 ---
 
 

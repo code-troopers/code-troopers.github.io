@@ -7,7 +7,7 @@ tags:
 - Gamification
 title: 'Devoxx 2016 : Huntly ou rien !'
 url: /2016/05/20/devoxx-2016-huntly/
-aliases: /2016/05/20/devoxx-2016-huntly.html
+aliases: 2016/05/20/devoxx-2016-huntly.html
 ---
 
 

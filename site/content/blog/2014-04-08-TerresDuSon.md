@@ -8,7 +8,7 @@ tags:
 - Terres du son
 title: Application officielle Android pour Terres du son 2014
 url: /2014/04/08/terresduson/
-aliases: /2014/04/08/TerresDuSon.html
+aliases: 2014/04/08/TerresDuSon.html
 ---
 
 

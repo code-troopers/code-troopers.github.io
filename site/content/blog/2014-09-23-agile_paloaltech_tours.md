@@ -9,7 +9,7 @@ tags:
 - Conférence
 title: Soirée Agilité à Tours
 url: /2014/09/23/agile_paloaltech_tours/
-aliases: /2014/09/23/agile_paloaltech_tours.html
+aliases: 2014/09/23/agile_paloaltech_tours.html
 ---
 
 

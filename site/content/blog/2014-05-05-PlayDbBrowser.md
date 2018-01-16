@@ -8,7 +8,7 @@ tags:
 - h2-browser
 title: Play2 accéder à la base de donnée
 url: /2014/05/05/playdbbrowser/
-aliases: /2014/05/05/PlayDbBrowser.html
+aliases: 2014/05/05/PlayDbBrowser.html
 ---
 
 

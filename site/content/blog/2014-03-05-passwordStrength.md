@@ -7,7 +7,7 @@ tags:
 - Play2
 title: Strength Password Indicator Pour Play2
 url: /2014/03/05/passwordstrength/
-aliases: /2014/03/05/passwordStrength.html
+aliases: 2014/03/05/passwordStrength.html
 ---
 
 

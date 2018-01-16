@@ -9,7 +9,7 @@ tags:
 - Design
 title: 'Android Annotations : Abusez-en !'
 url: /2016/10/03/android-annotations-lib/
-aliases: /2016/10/03/android-annotations-lib.html
+aliases: 2016/10/03/android-annotations-lib.html
 ---
 
 Dans le lot des https://developer.android.com/topic/libraries/support-library/index.html[supports librairies] que propose Google pour le développement Android (principalement pour la compatibilité de certains composants sur des anciennes versions de l'OS) il y en a une qui de prime abord ne va pas beaucoup servir c'est `support-annotations`.

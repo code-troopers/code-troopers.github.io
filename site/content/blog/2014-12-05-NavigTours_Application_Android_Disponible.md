@@ -7,7 +7,7 @@ tags:
 - Fil Bleu
 title: Navig'Tours est disponible
 url: /2014/12/05/navigtours_application_android_disponible/
-aliases: /2014/12/05/NavigTours_Application_Android_Disponible.html
+aliases: 2014/12/05/NavigTours_Application_Android_Disponible.html
 ---
 
 
