@@ -32,6 +32,13 @@ section#contact {
       }
 
       a {
+        color: $black;
+        &:hover {
+          color: $lightblue;
+        }
+      }
+      
+      a.button {
         display: inline-block;
         width: auto;
         background: $gradient;
@@ -40,7 +47,6 @@ section#contact {
         border-radius: 0.3rem;
         text-decoration: none;
         font-weight: bold;
-
       }
     }
   }
