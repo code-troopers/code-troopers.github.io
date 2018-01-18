@@ -1,7 +1,13 @@
 {{ $baseurl := .Site.BaseURL }}
 
 <div>
-  <img class="lozad" data-src="/images/portfolio/{{ .Params.cover }}.jpg">
+  {{ if .Truncated }}
+  <a href="{{ .Permalink }}">
+  {{ end }}
+    <img class="lozad" data-src="/images/portfolio/{{ .Params.cover }}.jpg">
+  {{ if .Truncated }}
+  </a>
+  {{ end }}
   <div>
     <h2>
       {{ if .Truncated }}
