@@ -32,7 +32,11 @@ var initCountUp = function(){
       decimal: '.'
     };
     scrollMonitor.create(el).enterViewport(function () {
-      var demo = new CountUp(this.watchItem, 0, this.watchItem.getAttribute('data-count'), 0, 3, options);
+        var targetValue = this.watchItem.getAttribute('data-count');
+        if (this.watchItem.getAttribute('data-random')) {
+            targetValue = Math.ceil(Math.random()*64);
+        }
+        var demo = new CountUp(this.watchItem, 0, targetValue, 0, 3, options);
       if (!demo.error) {
         demo.start();
       } else {
