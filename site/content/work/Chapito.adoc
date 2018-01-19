@@ -12,9 +12,6 @@ url: /chapito.html
 
 Chapitô est LE projet interne des Code-Troopers. Il s’agit d’un outil 100% en ligne qui permet à tous les organisateurs de festivals de créer une application sur-mesure sans aucune connaissance en développement web & développement d’application.
 <!--more-->
-
-Chapitô est LE projet interne des Code-Troopers. Il s’agit d’un outil 100% en ligne qui permet à tous les organisateurs de festivals de créer une application sur-mesure sans aucune connaissance en développement web & développement d’application.
-
 Il s’agit d’un réel confort pour les organisateurs de festival puisque proposer une application devient indispensable. Ce générateur permet de générer des applications natives correspondant à la charte graphique des festivals. 
 
 Comment ça marche ? 
