@@ -17,12 +17,11 @@
   "dependencies": {
     "animated-scroll-to": "^1.1.8",
     "countup": "^1.8.2",
-    "font-awesome": "4.7.0",
-    "highlight.js": "^9.12.0",
-    "intersection-observer": "^0.5.0",
-    "jarallax": "^1.9.3",
     "lightbox2": "^2.10.0",
     "lozad": "^1.0.9",
+    "intersection-observer": "^0.5.0",
+    "highlight.js": "^9.12.0",
+    "font-awesome": "4.7.0",
     "scrollmonitor": "^1.2.4",
     "swiper": "^4.0.7"
   },

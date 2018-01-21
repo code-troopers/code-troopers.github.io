@@ -11,7 +11,6 @@ import CountUp from 'countup'
 import 'intersection-observer'
 import lozad from 'lozad'
 import animateScrollTo from 'animated-scroll-to'
-import 'jarallax'
 
 
 
@@ -127,7 +126,4 @@ window.onload = function () {
   initCountUp();
   initSwiper();
   initNavScroll();
-  jarallax(document.querySelectorAll('.jarallax'), {
-    speed: 0.2,
-  });
 };
