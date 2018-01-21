@@ -132,21 +132,10 @@ header {
       flex: 2;
     }
 
-    .gradient-container{
-      // same fix as below
-      position: relative;
-      margin-bottom: 2.4rem;
-      .gradient {
-        font-size: 1.2rem;
-        font-weight: bold;
-        @include gradient-text($gradient, 'dark');
-        //FIX for Chrome / Webkit, with jarallax, position relative on section breaks transparency of gradient on logo
-        position: static !important;
-        display: block !important;
-        &::before{
-          left: 1px;
-        }
-      }
+    .gradient {
+      font-size: 1.2rem;
+      font-weight: bold;
+      @include gradient-text($gradient, 'dark');
     }
 
     a {
