@@ -2,7 +2,6 @@
 
 **For websites built with Hugo and Webpack**
 
-
 ## Usage (run with Docker)
 
 ```bash
