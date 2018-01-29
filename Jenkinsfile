@@ -30,9 +30,22 @@ node('docker') {
 }
 node{
   if (BRANCH_NAME.equals("feat/hugov2")) {
-    //TODO handle pre / prod deployment
     stage('Checkout current site') {
       git branch: 'gh-pages', credentialsId: 'bc7230d3-816a-4c7b-947b-7cf7f5806707', url: 'git@github.com:code-troopers/pre-www.git'
+      sh 'git rm -r -q *'
+      sh 'git reset HEAD CNAME'
+      sh 'git checkout -- CNAME'
+      sh 'git commit -m "Clean older version"'
+    }
+    stage('Update site and push') {
+      unstash name: 'dist'
+      sh 'git add -A'
+      sh 'git commit -a -m "New release"'
+      sh 'git push -u origin gh-pages'
+    }
+  }else if (BRANCH_NAME.equals("master")) {
+    stage('Checkout current site') {
+      sh 'git checkout gh-pages'
       sh 'git rm -r -q *'
       sh 'git reset HEAD CNAME'
       sh 'git checkout -- CNAME'
