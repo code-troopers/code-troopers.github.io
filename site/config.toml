@@ -1,6 +1,6 @@
 baseurl = "https://code-troopers.com"
 languageCode = "fr-fr"
-title = "Code-Troopers - Vous avez une idée, nous la réalisons"
+title = "Code-Troopers"
 paginate = 6
 pygmentsuseclasses = true
 
