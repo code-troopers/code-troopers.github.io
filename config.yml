@@ -1,6 +1,6 @@
 baseurl: "/"
 languageCode: "fr-fr"
-title: "Code-Troopers - Vous avez une idée, nous la réalisons"
+title: "Code-Troopers"
 archetypeDir: "site/archetypes"
 contentDir: "site/content"
 dataDir: "site/data"
