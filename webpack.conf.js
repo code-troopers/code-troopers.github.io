@@ -24,7 +24,7 @@ export default function() {
     new SuppressChunksPlugin(['img', 'html'])
   ];
   const cssLoaders = [
-    { loader: 'css-loader', options: Object.assign({ minimize: true, sourceMap: true }, cssNano) },
+    { loader: 'css-loader', options: Object.assign({ minimize: {discardComments: { removeAll: true }}, sourceMap: true }, cssNano) },
     { loader: 'postcss-loader', options: Object.assign({ sourceMap: true }, postCSS) },
     { loader: 'resolve-url-loader', options: { sourceMap: true } },
     { loader: 'sass-loader', options: { sourceMap: true } }
