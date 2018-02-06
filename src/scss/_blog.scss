@@ -116,12 +116,13 @@ section#blog {
       }
       .content {
         letter-spacing: initial;
+        line-height: 2rem;
         a {
-          color: $black;
+          color: $lightblue;
           word-wrap: break-word;
 
           &:hover {
-            color: inherit;
+            color: darken($lightblue, 10%);
           }
         }
         margin: 0.5rem;
