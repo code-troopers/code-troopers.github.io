@@ -9,7 +9,7 @@ url: /2018/02/06/stages-2018/
 aliases: 2018/02/06/stage-2018.html
 ---
 
-Avec un peu de retard, voici nos offres de stages pour 2018, ça se passe toujours à MAME, le baby-foot est toujours pas loin pour se détendre entre deux lignes de codes.
+Avec un peu de retard, voici nos offres de stages pour 2018, ça se passe toujours à MAME, le baby-foot est toujours à proximité pour se détendre entre deux lignes de codes.
 
 - [line-through]#Administration système : https://code-troopers.com/files/Stage_2018_4DMIN.pdf[Stage_2018_4DMIN]# : *Attribué*
 - [line-through]#Développement Frontend et/ou Backend : https://code-troopers.com/files/Stage_2018_CR4.pdf[Stage_2018_CR4]#
