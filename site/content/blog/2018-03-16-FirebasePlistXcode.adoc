@@ -18,7 +18,7 @@ Cet article va vous détailler une façon simple mais efficace de gérer ces dif
 ## Multiples fichiers `plist`
 
 Les fichiers `plist` sont des fichiers XML de configuration pour XCode. 
-Lors de la création d'un projet dans Firebase, un est généré contenant les bonnes variables pour votre projet.
+Lors de la création d'un projet dans Firebase, il est possible de récupérer une version générée contenant les bonnes variables pour votre projet.
 Le problème qui peut se produire est lorsqu'on génère plusieurs livrables avec des configurations qui doivent être différentes grace aux _target_.
 Il n'est pas possible, ni confortable, de gérer le cas de plusieurs fichiers `plist` dans les sources.
 La redéfinition du nom du fichier à faire utiliser par Firebase ne marche pas à tous les coups et il a tendance à aller lire la valeur par défaut `GoogleService-Info.plist`.
