@@ -15,9 +15,9 @@ L'aide très bien faite de la mise en place de *PIXEL* préconise celui-çi pour
 == 1ère étape : Configurer Google Tag Manager
 
 C'est un jeu d'enfant, il suffit de vous rendre sur l'interface d'administration (https://tagmanager.google.com), de créer un conteneur et d'ajouter deux bouts de code JS dans votre site et c'est normalement la seule modification qui sera faite dans votre code.
-Je ne m'atarde pas sur cette étape qui est assez simple et déjà très bien documenté.
+Je ne m'attarde pas sur cette étape qui est assez simple et déjà très bien documenté.
 Pour tester si votre conteneur est bien configuré sur votre site, avec *GTM* vous avez la possibilité de lancer un mode debug avec le bouton `PRÉVISUALISER`.
-Cette action permet d'ajouter un panel de debug sur votre site dès lors que vous naviguez avec le même navigateur sur le site ou le conteneur *GTM* est activé.
+Cette action permet d'ajouter un panel de debug sur votre site dès lors que vous naviguez avec le même navigateur sur le site où le conteneur *GTM* est activé.
 Nous reviendrons sur ce panel de debug par la suite.
 
 :lightboxGroup: 0
@@ -29,7 +29,7 @@ include::site/static/lightbox.adoc[]
 Pour ceux qui ne connaissent pas *Google Tag Manager*, il se découpe en trois grandes parties :
 
 * les balises (tag) : une balise représente du code Javascript que l'on va pousser et exécuter dans notre conteneur.
-* les déclencheurs (triggers) : les déclencheurs sont des conditions permettant de pouser ou non nos balises.
+* les déclencheurs (triggers) : les déclencheurs sont des conditions permettant de pousser ou non nos balises.
 * les variables sont ce qu'on pourra interpréter dans notre balise. Il y en a certaines déjà définies et d'autres que l'on peut construire.
 
 Pour ajouter *Google Analytics* à notre application, il va falloir utiliser ces trois composants.
@@ -37,7 +37,7 @@ Pour ajouter *Google Analytics* à notre application, il va falloir utiliser ces
 
 == 2ème étape : Ajouter Google Analytics
 
-Normalement pour ajouter *Google Analytics* à votre application, vous auriez dû (de la même manière qu'on a ajouté *GTM* juste avant), suivre les instructions de *Google Analytics* à la création du projet sur celui-çi et copier-coller un bout de code pour l'activer, mais vous l'avez compris, ce n'est pas ce qu'il va se passer vu qu'on ne va plus toucher au code.
+Normalement pour ajouter *Google Analytics* à votre application, vous auriez dû (de la même manière qu'on a ajouté *GTM* juste avant), suivre les instructions de *Google Analytics* à la création du projet sur celui-ci et copier-coller un bout de code pour l'activer, mais vous l'avez compris, ce n'est pas ce qu'il va se passer vu qu'on ne va plus toucher au code.
 Premièrement, vous devez quand même créer le projet sur https://analytics.google.com/ et garder dans un coin le `trackingId`, ensuite, tout se passe dans *Google Tag Manager*.
 
 Le principe premier de *Google Analytics* est de traquer les différentes pages consultées par l'utilisateur.
@@ -58,7 +58,7 @@ Vous savez que ce n'est pas aussi simple et vous avez déjà dû vous retrouver 
 Pour répondre à ce problème avec *Google Tag Manager*, il faut activer une nouvelle variable `New History Fragment` se basant sur l'API History du navigateur pour stocker la valeur de la nouvelle page.
 Pour faire cela, vous avez juste à cliquer sur `Variables` dans le menu, puis `CONFIGURER` et enfin cocher `New History Fragment`.
 
-Afin d'envoyer un nouvel évenement à chaque changement de page, nous devons déclarer un nouveau déclencheur se basant sur l'API History. Pour cela, cliquez sur le menu `Déclencheurs`, puis `NOUVEAU`.
+Afin d'envoyer un nouvel évènement à chaque changement de page, nous devons déclarer un nouveau déclencheur se basant sur l'API History. Pour cela, cliquez sur le menu `Déclencheurs`, puis `NOUVEAU`.
 À ce moment vous devez cocher l'item `History Change` dans la liste s'affichant lorsque vous cliquez dans le cadre blanc.
 
 Enfin, vous n'avez plus qu'à créer votre balise `Analytics`.
@@ -81,7 +81,7 @@ Il ne reste plus qu'à publier vos modifications pour qu'elles soient actives su
 == Avantages de GTM
 
 GTM propose de multiples fonctionnalités à travers les balises, les déclencheurs et les variables.
-Vous pouvez par exemple déclarer un tableau de variable qui seront différentes suivant les environnements.
+Vous pouvez par exemple déclarer un tableau de variables qui seront différentes suivant les environnements.
 Vous pouvez récupérer des valeurs de votre site grâce à des règles CSS afin de les pousser par exemple vers GA et tout ça sans avoir à relivrer votre application.
 
 
