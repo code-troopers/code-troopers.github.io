@@ -14,8 +14,8 @@ L'aide très bien faite de la mise en place de *PIXEL* préconise celui-çi pour
 
 == 1ère étape : Configurer Google Tag Manager
 
-C'est un jeu d'enfant, il suffit de vous rendre sur l'interface d'administration (https://tagmanager.google.com), de créer un conteneur et d'ajouter deux bouts de code JS dans votre site et c'est normalement la seule modification qui sera faite dans votre code.
-Je ne m'attarde pas sur cette étape qui est assez simple et déjà très bien documenté.
+C'est un jeu d'enfants, il suffit de vous rendre sur l'interface d'administration (https://tagmanager.google.com), de créer un conteneur et d'ajouter deux bouts de code JS dans votre site et c'est normalement la seule modification qui sera faite dans votre code.
+Je ne m'attarde pas sur cette étape qui est assez simple et déjà très bien documentée.
 Pour tester si votre conteneur est bien configuré sur votre site, avec *GTM* vous avez la possibilité de lancer un mode debug avec le bouton `PRÉVISUALISER`.
 Cette action permet d'ajouter un panel de debug sur votre site dès lors que vous naviguez avec le même navigateur sur le site où le conteneur *GTM* est activé.
 Nous reviendrons sur ce panel de debug par la suite.
