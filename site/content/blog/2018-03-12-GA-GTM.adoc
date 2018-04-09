@@ -1,16 +1,18 @@
 ---
 author: Benjamin
 cover: ga-gtm-banner
-date: '2018-03-22'
+date: '2018-04-09'
 tags:
 - GA
 - GTM
 title: 'Google Analytics via Google Tag Manager'
-url: /2018/03/22/ga-gtm/
+url: /2018/04/09/ga-gtm/
 ---
 
 C'est en branchant https://www.facebook.com/business/a/facebook-pixel[PIXEL] sur un projet que j'ai enfin compris et vraiment utilisé *Google Tag Manager*.
 L'aide très bien faite de la mise en place de *PIXEL* préconise celui-çi pour activer et configurer le traqueur Facebook et cela m'a donné envie d'en faire de même pour *Google Analytics*.
+
+Pour ceux qui ne connaissent pas *Google Tag Manager*, c'est un outil permettant d'ajouter, modifier des bouts de Javascript (tags) afin de gérer les analytics ou la pub par exemple à l'aide du back office, et tout ça sans avoir à modifier ou relivrer son application.
 
 == 1ère étape : Configurer Google Tag Manager
 
@@ -26,7 +28,7 @@ Nous reviendrons sur ce panel de debug par la suite.
 
 include::site/static/lightbox.adoc[]
 
-Pour ceux qui ne connaissent pas *Google Tag Manager*, il se découpe en trois grandes parties :
+*Google Tag Manager* se découpe en trois grandes parties :
 
 * les balises (tag) : une balise représente du code Javascript que l'on va pousser et exécuter dans notre conteneur.
 * les déclencheurs (triggers) : les déclencheurs sont des conditions permettant de pousser ou non nos balises.
