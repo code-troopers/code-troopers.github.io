@@ -1,8 +1,8 @@
 @import "variables";
 @import "pygments";
+
 section#blogs {
   background: $greywhite;
-
 
   & > * {
     margin: 0 auto;
@@ -132,6 +132,13 @@ section#blog {
           color: $black;
           font-family: "Montserrat", Helvetica, Arial, sans-serif;
         }
+        code {
+          background: #EEE;
+          padding: 4px;
+          border-radius: 4px;
+          border: 1px solid gainsboro;
+        }
+
         @include separator($black);
         pre {
           width: 100%;
@@ -155,8 +162,14 @@ section#blog {
           max-width: 100%;
         }
 
-        .pygments{
+        .pygments {
           padding: 1rem;
+          code{
+            background: none;
+            padding: 0;
+            border-radius: 0;
+            border: none;
+          }
         }
 
       }
