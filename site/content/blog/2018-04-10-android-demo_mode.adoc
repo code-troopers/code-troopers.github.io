@@ -15,7 +15,7 @@ Depuis la version 6.0 de Android (Marshmallow), une nouvelle section a fait son 
 À l'intérieur se trouvent deux options `Activer le mode de démonstration` et `Afficher le mode de démonstration`. Alors oui, la  subtile différence ne saute pas aux yeux. 
 Et lorsque l'on active la première rien ne se passe, mais dès que l'on clique sur la seconde ... magie !
  
-La status bar est modifié (plus ou moins, cela depend du nombre de notifications que vous aviez en attente). Toutes les notifications ont disparues, l'heure est modifiée, la batterie, le signal gsm ainsi que le signal wifi passent à 100%.
+La status bar est modifiée (plus ou moins, cela dépend du nombre de notifications que vous aviez en attente). Toutes les notifications ont disparues, l'heure est modifiée, la batterie, le signal gsm ainsi que le signal wifi passent à 100%.
 
 C'est génial, mais ça ne sert à rien comme ça, pourtant c'est bel et bien le but de cette fonctionnalité.
 
@@ -29,7 +29,7 @@ C'est génial, mais ça ne sert à rien comme ça, pourtant c'est bel et bien le
 {lt}/div{gt}
  
 Ces deux options permettent donc d'activer et de passer son téléphone en mode démo. 
-Cela permet de couper toutes les notifications et de réinitialiser à des valeurs standard l'heure et l'état des connections de la status bar.
+Cela permet de couper toutes les notifications et de réinitialiser à des valeurs standards l'heure et l'état des connexions de la status bar.
 Tout cela dans le but de _clarifier_ l'écran et cela va nous aider dans l'idée de ne pas détourner l'attention de l'utilisateur sur des détails (plus ou moins gênants).
 
 {lt}div style="text-align : center"{gt}
@@ -44,9 +44,9 @@ L'autre principale utilité que je vois, c'est pour faire les screenshots qui ir
 
 Mais normalement si vous êtes un dev normal, donc un peu flémard, faire les screenshosts à la main vous ne trouvez pas ça très drôle.
 Donc il faudrait pouvoir lancer le _démo mode_ juste avant les screenshots. La chance est avec nous car c'est possible.
-En effet tout un tas d'options sont disponibles via adb pour activer le _demo mode_ et customiser les éléments de la status bar
+En effet tout un tas d'options sont disponibles via adb pour activer le _demo mode_ et customiser les éléments de la status bar.
 
-Pour faire ce que l'on a fait tout au début en passant à la main par les settings il nous suffit d'appeler les commandes adb suivante :
+Pour faire ce que l'on a fait tout au début en passant à la main par les settings il nous suffit d'appeler les commandes adb suivantes :
 
 Activation globale du _demo mode_ 
 [source, shell]
