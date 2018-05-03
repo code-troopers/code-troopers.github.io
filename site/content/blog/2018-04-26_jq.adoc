@@ -30,8 +30,8 @@ Maintenant nous avons du json, regardons ce qu'il y a à l'intérieur.
 `jq '.' nPNSBZjB.json`
 
 :lightboxGroup: 0
-:lightboxImage: 2018-04-26_jq/trello_0.json
-:lightboxImageTitle: Trello json
+:lightboxImage: 2018-04-26_jq/jq1
+:lightboxImageTitle: jq example 1
 
 include::site/static/lightbox.adoc[]
 
@@ -42,8 +42,8 @@ En fouillant un peu, nous voyons que ce qui nous intéresse se trouve dans l'obj
 `jq '.actions[]' nPNSBZjB.json`
 
 :lightboxGroup: 0
-:lightboxImage: 2018-04-26_jq/trello_0.json
-:lightboxImageTitle: Trello json
+:lightboxImage: 2018-04-26_jq/jq2
+:lightboxImageTitle: jq example 2
 
 include::site/static/lightbox.adoc[]
 
@@ -56,8 +56,8 @@ jq -c '.actions[] | {txt: .data.text, name: .data.card.name, member: .memberCrea
 ```
 
 :lightboxGroup: 0
-:lightboxImage: 2018-04-26_jq/trello_0.json
-:lightboxImageTitle: Trello json
+:lightboxImage: 2018-04-26_jq/jq3
+:lightboxImageTitle: jq example 3
 
 include::site/static/lightbox.adoc[]
 
@@ -71,8 +71,8 @@ jq -c '.actions[] | {txt: .data.text, name: .data.card.name, member: .memberCrea
 ```
 
 :lightboxGroup: 0
-:lightboxImage: 2018-04-26_jq/trello_0.json
-:lightboxImageTitle: Trello json
+:lightboxImage: 2018-04-26_jq/jq4
+:lightboxImageTitle: jq example 4
 
 include::site/static/lightbox.adoc[]
 
@@ -80,8 +80,15 @@ include::site/static/lightbox.adoc[]
 Dernière petite information sur l'utilisation de jq, la possibilité de trier, par exemple dans l'ordre alphabétique du champs texte
 
 ```
-jq -c '.actions |= sort_by(.data.text)|.actions[] | {txt: .data.text, name: .data.card.name, member: .memberCreator.fullName} | select(.txt!=null) | select(.txt | startswith("2018"))' nPNSBZjB.json
+jq -c '.actions |= sort_by(.data.text)|.actions[] | {txt: .data.text, name: .data.card.name, member: .memberCreator.fullName} | select(.txt!=null) | select(.txt | startswith("@"))' nPNSBZjB.json
 ```
+
+:lightboxGroup: 0
+:lightboxImage: 2018-04-26_jq/jq5
+:lightboxImageTitle: jq example 5
+
+include::site/static/lightbox.adoc[]
+
 
 J'espère que ce petit exemple d'utilisation de jq vous aura plu, je vous laisse à la documentation officielle si vous désirez en savoir plus : https://stedolan.github.io/jq/
 
