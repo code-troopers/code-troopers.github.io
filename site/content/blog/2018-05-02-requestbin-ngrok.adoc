@@ -66,7 +66,7 @@ Pour cela il suffit de cliquer sur `Create a RequestBin`. Un _Bin_ va alors êtr
 include::site/static/lightbox.adoc[]
 
 Ensuite, comme l'indique le _Bin_ on va pouvoir commencer à jouer avec en branchant nos webhooks ou clients à tester sur cette url, dans notre exemple il s'agit de `http://localhost:8000/1hc5lg41`.
-Voyons le résultat d'une requête qui effectue un simple POST d'un objet JSON quelconque :
+Voyons le résultat d'une requête POST d'un objet JSON quelconque :
 
 [source, shell]
 ----
@@ -91,7 +91,7 @@ Afin d'aller plus loin dans la démarche, il peut être parfois nécessaire de c
 
 Imaginons que l'on veuille d'abord tester les résultats envoyés par ce webhook en utilisant *RequestBin*. On a alors probablement lancé le service en local sur sa propre machine, qui elle même se trouve (au minimum) derrière un routeur que l'on a pas la possibilité (ou l'envie) de configurer pour effectuer la redirection de ports adequat pour atteindre notre machine.
 
-Nous allons pouvoir nous abstraire de tout cela grâce à *https://ngrok.com/[ngrok]*. Il s'agit d'un petit outil très simple d'utilisation qui permet d'exposer des services locaux sur des urls publiques (en HTTP ou HTTPS), sans avoir à faire de quelconque configuration de notre équipement réseau.
+Nous allons pouvoir nous abstraire de tout cela grâce à *https://ngrok.com/[ngrok]*. Il s'agit d'un petit outil qui permet d'exposer des services locaux sur des urls publiques (en HTTP ou HTTPS), sans avoir à faire de quelconque configuration de notre équipement réseau.
 
 === Installation
 
@@ -99,7 +99,7 @@ Il s'agit d'un simple https://ngrok.com/download[binaire à télécharger]. Il e
 
 === Création de tunnel
 
-Une fois *ngrok* installé il est ensuite possible de monter une url publique vers notre serveur local en une simple ligne de commande :
+Une fois *ngrok* installé il est ensuite possible de monter une url publique vers notre serveur local en une seule commande :
 
 [source, shell]
 ----
