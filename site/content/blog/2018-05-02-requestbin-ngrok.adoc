@@ -82,7 +82,7 @@ include::site/static/lightbox.adoc[]
 
 Après avoir rafraîchi la page, il est alors très simple de visualiser le résultat reçu par notre _Bin_ : headers, body, paramètres, ...
 
-Il devient alors très facile d'analyser les requêtes entrantes d'un webhook que l'on souhaite brancher à notre API avant d'implémenter son intégration à proprement parlé. À l'inverse cela peut permettre également de voir les données qui vont être reçues par une API que l'on souhaite attaquer avec son propre client HTTP.
+Il devient alors très facile d'analyser les requêtes entrantes d'un webhook que l'on souhaite brancher à notre API avant d'implémenter son intégration à proprement parler. À l'inverse cela peut permettre également de voir les données qui vont être reçues par une API que l'on souhaite attaquer avec son propre client HTTP.
 
 
 == Redirection de requêtes sur son environnement avec ngrok
