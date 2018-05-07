@@ -11,10 +11,10 @@ title: 'Tester ses webhooks avec RequestBin et ngrok'
 url: /2018/05/02/requestbin-ngrok/
 ---
 
-*https://github.com/Runscope/requestbin[RequestBin, window="_blank"]* est un service qui permet de tester très facilement des webhooks que l'on souhaite brancher à une API, ou bien encore de tester son client HTTP en inspectant les requêtes qui sont émises.
+*https://github.com/Runscope/requestbin[RequestBin]* est un service qui permet de tester très facilement des webhooks que l'on souhaite brancher à une API, ou bien encore de tester son client HTTP en inspectant les requêtes qui sont émises.
 Ce service était auparavant acccessible en ligne, mais victime de son succès, il a ensuite été retiré. Cependant leurs créateurs ont mis à disposition de la communauté les sources afin de permettre à n'importe qui d'heberger sa propre instance de *RequestBin*.
 
-Nous allons donc voir avec quelle simplicité il est possible de tester rapidement ce service en local sur sa machine, et comment il va nous aider par exemple à faire de l'intégration de webhooks externes. Afin de faire cela en un minimum de configuration nous allons également utiliser *https://ngrok.com/[ngrok, window="_blank"]*, un second outil très pratique qui permet d'exposer sur une url publique un service tournant sur sa machine en local.
+Nous allons donc voir avec quelle simplicité il est possible de tester rapidement ce service en local sur sa machine, et comment il va nous aider par exemple à faire de l'intégration de webhooks externes. Afin de faire cela en un minimum de configuration nous allons également utiliser *https://ngrok.com/[ngrok]*, un second outil très pratique qui permet d'exposer sur une url publique un service tournant sur sa machine en local.
 
 
 == *RequestBin*
@@ -23,7 +23,7 @@ Nous allons donc voir avec quelle simplicité il est possible de tester rapideme
 
 _Prérequis_ : disposer de docker et de docker-compose sur la machine qui va heberger le service.
 
-* Récupérer les sources de *https://github.com/Runscope/requestbin[RequestBin, window="_blank"]*
+* Récupérer les sources de *https://github.com/Runscope/requestbin[RequestBin]*
 [source, shell]
 ----
 $ git clone git://github.com/Runscope/requestbin.git
@@ -91,11 +91,11 @@ Afin d'aller plus loin dans la démarche, il peut être parfois nécessaire de c
 
 Imaginons que l'on veuille d'abord tester les résultats envoyés par ce webhook en utilisant *RequestBin*. On a alors probablement lancé le service en local sur sa propre machine, qui elle même se trouve (au minimum) derrière un routeur que l'on a pas la possibilité (ou l'envie) de configurer pour effectuer la redirection de ports adequat pour atteindre notre machine.
 
-Nous allons pouvoir nous abstraire de tout cela grâce à *https://ngrok.com/[ngrok, window="_blank"]*. Il s'agit d'un petit outil qui permet d'exposer des services locaux sur des urls publiques (en HTTP ou HTTPS), sans avoir à faire de quelconque configuration de notre équipement réseau.
+Nous allons pouvoir nous abstraire de tout cela grâce à *https://ngrok.com/[ngrok]*. Il s'agit d'un petit outil qui permet d'exposer des services locaux sur des urls publiques (en HTTP ou HTTPS), sans avoir à faire de quelconque configuration de notre équipement réseau.
 
 === Installation
 
-Il s'agit d'un simple https://ngrok.com/download[binaire à télécharger, window="_blank"]. Il est aussi possible de se créer un compte si l'on souhaite administrer plus finement les tunnels que l'on veut créer mais cette étape reste facultative pour le simple usage que nous souhaitons en faire.
+Il s'agit d'un simple https://ngrok.com/download[binaire à télécharger]. Il est aussi possible de se créer un compte si l'on souhaite administrer plus finement les tunnels que l'on veut créer mais cette étape reste facultative pour le simple usage que nous souhaitons en faire.
 
 === Création de tunnel
 
@@ -147,7 +147,7 @@ Effectivement, selon les services à intégrer la documentation des webhooks est
 == Bonus
 
 Nous avons vu une technique basée sur *RequestBin* pour logguer des requetes HTTP entrantes, moyennant quelques commandes à effectuer sur son poste. Il existe en fait d'autres services en ligne pour effectuer cela...
-On pourra citer notamment *https://webhook.site[Webhook Tester, window="_blank"]* qui est une solution clef en main pour tester des webhooks, comme son nom l'indique, et qui gère pour nous la mise à disposition d'une url publique.
+On pourra citer notamment *https://webhook.site[Webhook Tester]* qui est une solution clef en main pour tester des webhooks, comme son nom l'indique, et qui gère pour nous la mise à disposition d'une url publique.
 
 :lightboxGroup: 0
 :lightboxImage: 2018-05-02_requestbin-ngrok/webhook_tester
