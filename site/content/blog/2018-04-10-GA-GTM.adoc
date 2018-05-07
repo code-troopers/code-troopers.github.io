@@ -9,8 +9,6 @@ title: 'Google Analytics via Google Tag Manager'
 url: /2018/04/09/ga-gtm/
 ---
 
-:linkattrs:
-
 C'est en branchant https://www.facebook.com/business/a/facebook-pixel[Facebook PIXEL] sur un projet, que j'ai enfin compris et vraiment utilisé *Google Tag Manager*.
 L'aide très bien faite de la mise en place de *PIXEL* préconise celui-ci pour activer et configurer le traqueur Facebook et cela m'a donné envie d'en faire de même pour *Google Analytics*.
 
