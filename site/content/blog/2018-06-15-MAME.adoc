@@ -1,0 +1,94 @@
+---
+author: Romain
+cover: logo-banner
+date: '2018-06-15'
+tags:
+- Locaux
+- MAME
+title: 'On a déménagé !'
+url: /2018/06/15/mame/
+---
+
+Cela fait maintenant un petit peu plus d'un mois que nous nous sommes installé dans notre nouveaux bureau. Nous avons quitté les ateliers de MAME, pour la Tours de MAME ! Grand voyage n'est-ce pas, nous avons quand même pris un peu de hauteur.
+Pour nous trouver c'est facile, une fois face à MAME, nous sommes entre le M et le A de MAME !
+
+:lightboxGroup: 0
+:lightboxImage: 2018-06-15-MAME/Mamelocalise
+:lightboxImageTitle: Panel de debug
+
+include::site/static/lightbox.adoc[]
+
+== Un peu d'histoire
+
+
+MAME est une ancienne imprimerie construite par la famille d'imprimeurs Mame. Construit en 1950, l'imprimerie est composée de deux batiments, le premier édifice est une tour dans laquelle il y avait les bureaux administratifs, et le deuxième regroupait les ateliers.
+
+:lightboxGroup: 0
+:lightboxImage: 2018-06-15-MAME/mame-sky
+:lightboxImageTitle: Mame vu du ciel
+include::site/static/lightbox.adoc[]
+:lightboxGroup: 0
+:lightboxImage: 2018-06-15-MAME/mame-indoor
+:lightboxImageTitle: Les ateliers
+include::site/static/lightbox.adoc[]
+:lightboxGroup: 0
+:lightboxImage: 2018-06-15-MAME/mame-facade
+:lightboxImageTitle: La tour
+include::site/static/lightbox.adoc[]
+
+
+L'imprimerie a été réabilitée en 2016 et est désormais un lieu dédié à la création et au numérique.
+Pour plus de détails vous pouvez aller consulter la page wikipedia à partir de laquelle j'ai eu ces informations. https://fr.wikipedia.org/wiki/Site_Mame
+
+
+
+
+
+== Les locaux
+
+Outre le fait que nous ayons gagné en superficie, nous avons surtout gagné en luminosité ! Pour ceux qui connaissaient nos anciens locaux il n'y a pas de comparaison possible. En revanche, bien que nous soyons plus dans l'atelier, on retrouve toujours
+ce style industriel typique de MAME avec les gaines et les tuyaux apparents.
+
+
+=== L'open space
+
+Nous avons un grand open space qui nous permet d'accueillir nos stagiaires et alternants, ainsi que les amis de passages en manque de bonne humeur !
+
+:lightboxGroup: 0
+:lightboxImage: 2018-06-15-MAME/openSpace
+:lightboxImageTitle: L'open space
+include::site/static/lightbox.adoc[]
+
+Mais nous avons gardé un peu de place pour notre babyfoot, il faut bien passer nos nerf sur quelques choses !
+
+:lightboxGroup: 0
+:lightboxImage: 2018-06-15-MAME/baby
+:lightboxImageTitle: Le babyfoot
+include::site/static/lightbox.adoc[]
+
+
+=== La salle de réunion
+
+Afin d'accueillir au mieux nos clients, et continuer à réaliser nos nombreux et prolific brainstorming, nous avons une belle salle de réunion.
+
+:lightboxGroup: 0
+:lightboxImage: 2018-06-15-MAME/salle_reunion
+:lightboxImageTitle: La salle de réunion
+include::site/static/lightbox.adoc[]
+
+
+
+=== La salle de pause
+
+Et enfin la salle de pause, dans laquelle on peut s'asseoir dans un canapé et prendre un petit café le temps de reprendre des forces.
+
+:lightboxGroup: 0
+:lightboxImage: 2018-06-15-MAME/salle_pause
+:lightboxImageTitle: La salle de pause
+include::site/static/lightbox.adoc[]
+
+
+
+Hormis les quelques soucis de climatisation que nous avons, nous sommes plutôt bien installé. Encore un peu d'amènagement et de décoration et on sera vraiment bien.
+
+N'hésitez pas à venir nous voir si vous voulez visiter ou juste faire une partie de babyfoot, vous aurez peut-être aussi des idées de décorations !
