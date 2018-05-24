@@ -37,11 +37,7 @@ include::site/static/lightbox.adoc[]
 include::site/static/lightbox.adoc[]
 
 
-L'imprimerie a été réabilitée en 2016 et est désormais un lieu dédié à la création et au numérique.
-Pour plus de détails vous pouvez aller consulter la page wikipedia à partir de laquelle j'ai eu ces informations. https://fr.wikipedia.org/wiki/Site_Mame
-
-
-
+L'imprimerie a été réabilitée en 2016 et est désormais un lieu dédié à la création et au numérique. La tour accueil des sociétés (comme nous), mais aussi l'école supérieure des Beaux-Arts de Tours et l'école supérieure des métiers de la création numérique ESTEN et dans les ateliers on trouve d'autres sociétés innovantes.
 
 
 == Les locaux
@@ -49,6 +45,10 @@ Pour plus de détails vous pouvez aller consulter la page wikipedia à partir de
 Outre le fait que nous ayons gagné en superficie, nous avons surtout gagné en luminosité ! Pour ceux qui connaissaient nos anciens locaux il n'y a pas de comparaison possible. En revanche, bien que nous soyons plus dans l'atelier, on retrouve toujours
 ce style industriel typique de MAME avec les gaines et les tuyaux apparents.
 
+:lightboxGroup: 0
+:lightboxImage: 2018-06-15-MAME/porte
+:lightboxImageTitle: Accueil
+include::site/static/lightbox.adoc[]
 
 === L'open space
 
