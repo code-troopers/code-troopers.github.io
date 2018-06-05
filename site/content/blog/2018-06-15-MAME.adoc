@@ -37,7 +37,7 @@ include::site/static/lightbox.adoc[]
 include::site/static/lightbox.adoc[]
 
 
-L'imprimerie a été réhabilitée en 2016 pour en faire un lieu dédié à la création et au numérique. La tour accueille des sociétés (comme nous), mais aussi l'école supérieure des Beaux-Arts de Tours et l'école supérieure des métiers de la création numérique ESTEN. Dans les ateliers on trouve d'autres sociétés innovantes.
+L'imprimerie a été réhabilitée en 2016 pour en faire un lieu dédié à la création et au numérique. La tour accueille des sociétés (comme nous), mais aussi l'école supérieure des Beaux-Arts de Tours et l'école du Cercle digital (anciennement ESTEN). Dans les ateliers on trouve d'autres sociétés innovantes.
 
 
 == Les locaux
