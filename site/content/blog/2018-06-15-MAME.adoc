@@ -90,4 +90,4 @@ include::site/static/lightbox.adoc[]
 
 Hormis quelques soucis de climatisation, nous sommes plutôt bien installés. Encore un peu d’aménagement et de décoration nous permettront de nous approprier pleinement les lieux.
 
-N'hésitez pas à venir nous voir si vous voulez visiter ou juste faire une partie de babyfoot. Vous aurez peut-être aussi des idées de décoration !
+N'hésitez pas à venir nous voir si vous voulez visiter ou juste faire une partie de babyfoot.
