@@ -14,7 +14,7 @@ Pour nous trouver c'est facile, une fois face à MAME, nous sommes entre le M et
 
 :lightboxGroup: 0
 :lightboxImage: 2018-06-15-MAME/Mamelocalise
-:lightboxImageTitle: Panel de debug
+:lightboxImageTitle: Mame : notre fenêtre
 
 include::site/static/lightbox.adoc[]
 
