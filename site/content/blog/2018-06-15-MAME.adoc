@@ -21,7 +21,7 @@ include::site/static/lightbox.adoc[]
 == Un peu d'histoire
 
 
-MAME est une ancienne imprimerie crée par la famille d'imprimeurs du même nom. Construite en 1950, l'imprimerie est composée de deux bâtiments, le premier édifice est une tour dans laquelle il y avait les bureaux administratifs et le deuxième regroupait les ateliers.
+MAME est une ancienne imprimerie créée par la famille d'imprimeurs du même nom. Construite en 1950, l'imprimerie est composée de deux bâtiments, le premier édifice est une tour dans laquelle il y avait les bureaux administratifs et le deuxième regroupait les ateliers.
 
 :lightboxGroup: 0
 :lightboxImage: 2018-06-15-MAME/mame-sky
