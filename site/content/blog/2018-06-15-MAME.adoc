@@ -1,12 +1,12 @@
 ---
 author: Romain
 cover: logo-banner
-date: '2018-06-15'
+date: '2018-06-11'
 tags:
 - Locaux
 - MAME
 title: 'On a déménagé !'
-url: /2018/06/15/mame/
+url: /2018/06/11/mame/
 ---
 
 Cela fait maintenant un peu plus d'un mois que nous nous sommes installés dans nos nouveaux bureaux. Aurevoir les ateliers, et bonjour à la tour ! Grand voyage n'est-ce pas ? Nous avons quand même pris un peu de hauteur.
