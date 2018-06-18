@@ -3,6 +3,13 @@ author: Nicolas
 cover: projet-intern
 date: '2018-05-09'
 tags:
+ - Projets internes
+ - Concepts innovants
+ - Croissance
+ - Festivals
+ - Chapitô
+ - We Guide
+ - Navig'Tours
 
 title: 'Projets internes, tu feras'
 url: /2018/05/09/projets-internes/
@@ -59,7 +66,9 @@ Parier sur le développement interne (aussi parfois appelé développement « na
  
 * Enfin, opter pour le développement de projets internes est peu risqué à court terme puisqu’il n'est pas nécessaire de mobiliser un investissement conséquent et devoir gérer l'intégration de nouveaux collaborateurs ou d’une nouvelle équipe.
  
-Le développement de projets internes peut également avoir quelques inconvénients, eh oui ! Sinon tout le monde en ferait. Go, je vous en détails 3/4 !
+== Le développement de projets internes peut également avoir quelques inconvénients
+
+Eh oui ! Sinon tout le monde en ferait. Go, je vous en détails 3/4 !
  
 image:https://media.giphy.com/media/108GZES8iG0myc/giphy.gif[]
  
