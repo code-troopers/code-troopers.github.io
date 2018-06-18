@@ -1,7 +1,7 @@
 ---
 author: Nicolas
 cover: projets-internes-banner
-date: '2018-05-09'
+date: '2018-06-18'
 tags:
  - Projets internes
  - Concepts innovants
@@ -12,7 +12,7 @@ tags:
  - Navig'Tours
 
 title: 'Projets internes, tu feras'
-url: /2018/05/09/projets-internes/
+url: /2018/06/18/projets-internes/
 ---
 
 
