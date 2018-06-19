@@ -45,7 +45,7 @@ La croissance interne peut également se faire à travers différentes actions. 
 
 * La formation de collaborateurs ; permettant l'acquisition en interne de nouvelles compétences
 * La mise en place d'un nouveau réseau de distribution 
-* L'achat de locaux plus grands ou plus confortables permettant d’accueillir de nouveaux collaborateurs plus sereinement. (on vient d’emménager dans nos nouveaux locaux à MAME, à Tours, entre le M & le A, vous êtes les bienvenus pour nous exposer vos projets)
+* L'achat de locaux plus grands ou plus confortables permettant d’accueillir de nouveaux collaborateurs plus sereinement. (on vient d’emménager dans nos nouveaux locaux à MAME, à Tours, entre le M & le A, vous êtes les bienvenus pour nous exposer vos projets, si vous voulez en savoir plus sur nos nouveaux locaux je vous invite à vous rendre sur *http://code-troopers.com/2018/06/11/mame/[cette page, window="_blank"]*.
  
 Mais revenons à nos moutons : les projets internes, il s'agit de projets dont la finalité est de développer l'offre, notre offre, la diversifier, améliorer sa commercialisation. Dans notre cas il s’agit de logiciels, sites, applications web ou mobiles que nous imaginons et créons. Cela fait de nous des éditeurs, mais réaliser des projets internes comportes des avantages et inconvénients.
  
@@ -72,13 +72,13 @@ Eh oui ! Sinon tout le monde en ferait. Go, je vous en détails 3/4 !
  
 image:https://media.giphy.com/media/108GZES8iG0myc/giphy.gif[]
  
-* Le ROI (retours sur investissement) ou le ROTI (Return on time invested) est difficile à évaluer, et surtout les résultats peuvent être longs à venir. Lorsque tout est à faire ; l’identification des besoins, créer une image, obtenir une notoriété, découvrir et créer la clientèle, développer le réseau, le tout sans acquérir une société qui possède déjà les savoir-faire... il est compliqué d'obtenir des résultats à court terme. Cela demande du temps et de l’organisation. L'investissement à prévoir pour croître en interne peut être important avec un ROI positif pouvant apparaître seulement après plusieurs années… ou pas, ou pas du tout ! Ayez peut-être en tête qu’une entreprise qui choisit de se développer par croissance interne, risque de ne pas avoir un développement aussi rapide que les concurrents qui se développent par croissance externe.
+* Le ROI (retours sur investissement) ou le ROTI (retour sur le temps investi) est difficile à évaluer, et surtout les résultats peuvent être longs à venir. Lorsque tout est à faire ; l’identification des besoins, créer une image, obtenir une notoriété, découvrir et créer la clientèle, développer le réseau, le tout sans acquérir une société qui possède déjà les savoir-faire... il est compliqué d'obtenir des résultats à court terme. Cela demande du temps et de l’organisation. L'investissement à prévoir pour croître en interne peut être important avec un ROI positif pouvant apparaître seulement après plusieurs années… ou pas, ou pas du tout ! Ayez peut-être en tête qu’une entreprise qui choisit de se développer par croissance interne, risque de ne pas avoir un développement aussi rapide que les concurrents qui se développent par croissance externe.
  
 * La croissance interne à travers les projets internes peut provoquer une spécialisation trop forte (techno, marché, processus, etc.), ce qui rendrait l’entreprise plus fragile car les bénéfices ne reposeraient que sur un segment de marché. Pensez à diversifier vos projets internes si vous en avez l’opportunité.
  
 * Pour certains marchés et concepts, la taille des acteurs est un facteur clé de succès (élément que la structure doit maîtriser pour espérer dépasser la concurrence). Par exemple si la réalisation d'économies d'échelle (pour réduire les coûts) est indispensable au développement du produit alors les compétiteurs du marché ne peuvent sans doute pas se limiter à de la croissance interne.
  
-* Un concurrent « agressif », ou implanté sur le marché depuis plus longtemps (on parle d’avantage pionnier ou prime du premier entrant) peut remettre en cause votre projet et en challenger l’avenir. Vous n'aurez peut-être pas le temps de mettre les moyens nécessaires pour empêcher votre concurrent de vous nuire, cependant, ayez une chose en tête, si les « gros » concurrent fonctionnent bien, c’est qu’il y a de la place pour les petits !
+* Un concurrent « agressif », ou implanté sur le marché depuis plus longtemps (on parle d’avantage pionnier ou prime du premier entrant) peut remettre en cause votre projet et en challenger l’avenir. Vous n'aurez peut-être pas le temps de mettre les moyens nécessaires pour empêcher votre concurrent de vous nuire, cependant, ayez une chose en tête, si les « gros » concurrents fonctionnent bien, c’est qu’il y a de la place pour les petits !
  
 image:https://media.giphy.com/media/l1ugtlSwK8or4vGik/giphy.gif[]
  
@@ -92,9 +92,9 @@ image:/images/posts/2018-05-09_projets_internes/chapito-logo.png[]
  
 Chapitô est LE projet interne des Code-Troopers. Il s’agit d’un outil 100% en ligne qui permet à tous les organisateurs de festivals de créer une application sur-mesure sans aucune connaissance en développement web & développement d’application.
  
-Il s’agit d’un réel confort pour les organisateurs de festival puisque proposer une application devient indispensable. Ce générateur permet de générer des applications natives correspondant parfaitement à la charte graphique des festivals.
+Il s’agit d’un réel confort pour les organisateurs de festival puisque proposer une application devient indispensable. Ce générateur permet de proposer des applications natives correspondant parfaitement à la charte graphique des festivals.
  
-Comment ça marche ? Les orga se connectent à leur espace personnel sur Chapi.to, ils renseignent toutes les informations & caractéristiques de leur festival, ils nous demandent directement de générer l’application directement via l’outil et c’est bon !
+Comment ça marche ? Les orga se connectent à leur espace personnel sur Chapi.to, ils renseignent toutes les informations & caractéristiques de leur festival, ils nous demandent de générer l’application directement via l’outil et c’est bon !
  
 Créer une application permet aux festivaliers de connaître toutes les informations relatives à l’événement : Artistes, horaires, programmation, preview & musiques, info pratiques, points d’intérêts, partenaires...
  
