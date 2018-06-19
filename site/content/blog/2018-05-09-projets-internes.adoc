@@ -76,7 +76,7 @@ Eh oui ! Sinon tout le monde en ferait. Go, je vous en détails 3/4 !
 [.center]
 image:https://media.giphy.com/media/108GZES8iG0myc/giphy.gif[]
  
-* Le ROI (retours sur investissement) ou le ROTI (Return on time invested) est difficile à évaluer, et surtout les résultats peuvent être longs à venir. Lorsque tout est à faire ; l’identification des besoins, créer une image, obtenir une notoriété, découvrir et créer la clientèle, développer le réseau, le tout sans acquérir une société qui possède déjà les savoir-faire... il est compliqué d'obtenir des résultats à court terme. Cela demande du temps et de l’organisation. L'investissement à prévoir pour croître en interne peut être important avec un ROI positif pouvant apparaître seulement après plusieurs années… ou pas, ou pas du tout ! Ayez peut-être en tête qu’une entreprise qui choisit de se développer par croissance interne, risque de ne pas avoir un développement aussi rapide que les concurrents qui se développent par croissance externe.
+* Le ROI (retour sur investissement) ou le ROTI (retour sur le temps investi) est difficile à évaluer, et surtout les résultats peuvent être longs à venir. Lorsque tout est à faire ; l’identification des besoins, créer une image, obtenir une notoriété, découvrir et créer la clientèle, développer le réseau, le tout sans acquérir une société qui possède déjà les savoir-faire... il est compliqué d'obtenir des résultats à court terme. Cela demande du temps et de l’organisation. L'investissement à prévoir pour croître en interne peut être important avec un ROI positif pouvant apparaître seulement après plusieurs années… ou pas, ou pas du tout ! Ayez peut-être en tête qu’une entreprise qui choisit de se développer par croissance interne, risque de ne pas avoir un développement aussi rapide que les concurrents qui se développent par croissance externe.
  
 * La croissance interne à travers les projets internes peut provoquer une spécialisation trop forte (techno, marché, processus, etc.), ce qui rendrait l’entreprise plus fragile car les bénéfices ne reposeraient que sur un segment de marché. Pensez à diversifier vos projets internes si vous en avez l’opportunité.
  
@@ -140,6 +140,8 @@ image:/images/posts/2018-05-09_projets_internes/navigtours-logo.png[]
 *https://navigtours.com[https://navigtours.com,window="_blank"]*
 
 *https://play.google.com/store/apps/details?id=com.codetroopers.transport.tours[Lien vers le Playstore, window="_blank"]*
+
+*https://itunes.apple.com/fr/app/navigtours/id1055138264?mt=8[Lien vers l'App Store, window="_blank"]*
  
 Navig’Tours est l'application Android / iPhone gratuite pour vos déplacements en bus et tram sur le réseau Fil Bleu, à Tours et son agglomération. Son idée de base c'est de faciliter les déplacements en transports en commun dans l'agglo en proposant notamment un service d'itinéraires en bus et tram ou à pied, le tout en allant récupérer l'ensemble des horaires fournis par Keolis.
 
