@@ -23,12 +23,14 @@ Il me parait indispensable que je me présente pour cet article de blog, vous al
 Mais avant tout, petit rappel ! Code-Troopers a été créé il y a 3 ans par 7 *développeurs* issus de Polytech’ Tours, l’entreprise se développe et réalise des projets pour des grands groupes, des PME, des start-ups… depuis peu l’entreprise embauche ; 1 CDD de 6 mois en *développement*, 1 alternant en *développement* en formation à Polytech’ Tours et 1 alternant en _gestion & entrepreneuriat_ à l’IAE de Tours (je vous invite à vous rendre sur la page *https://www.code-troopers.com/#casting[Casting, window="_blank"]* si vous voulez des précisions).
  
 Vous voyez où je veux en venir ? Devinez lequel je suis… vous l’avez compris, je suis le seul de toute l’équipe à ne pas maîtriser une seule ligne de code, Jenkins, Xcode, Java, strings, ou même encore `$routeProvider.when('/admin/displayMail',{templateUrl:'partials/display_mail.html'})`, c’est du chinois pour moi !
- 
+
+[.center]
 image:https://media.giphy.com/media/L3pfVwbsJbrk4/giphy.gif[]
  
 Alors vous vous demandez peut-être ce que je fais dans une entreprise de *développeurs* web, mobile, appli ?
 Non non je ne me suis pas perdu, mise à part le babyfoot et les afterworks il y avait autre chose d’absolument génial et motivant pour moi : *des projets internes !*
- 
+
+[.center]
 image:https://media.giphy.com/media/6fScAIQR0P0xW/giphy.gif[]
  
  
@@ -50,7 +52,8 @@ La croissance interne peut également se faire à travers différentes actions. 
 Mais revenons à nos moutons : les projets internes, il s'agit de projets dont la finalité est de développer l'offre, notre offre, la diversifier, améliorer sa commercialisation. Dans notre cas il s’agit de logiciels, sites, applications web ou mobiles que nous imaginons et créons. Cela fait de nous des éditeurs, mais réaliser des projets internes comportes des avantages et inconvénients.
  
 == Avantages de la croissance interne à travers les projets internes
- 
+
+[.center]
 image:https://media.giphy.com/media/3o7abB06u9bNzA8lu8/giphy.gif[]
  
  
@@ -69,7 +72,8 @@ Parier sur le développement interne (aussi parfois appelé développement « na
 == Le développement de projets internes peut également avoir quelques inconvénients
 
 Eh oui ! Sinon tout le monde en ferait. Go, je vous en détails 3/4 !
- 
+
+[.center]
 image:https://media.giphy.com/media/108GZES8iG0myc/giphy.gif[]
  
 * Le ROI (retours sur investissement) ou le ROTI (Return on time invested) est difficile à évaluer, et surtout les résultats peuvent être longs à venir. Lorsque tout est à faire ; l’identification des besoins, créer une image, obtenir une notoriété, découvrir et créer la clientèle, développer le réseau, le tout sans acquérir une société qui possède déjà les savoir-faire... il est compliqué d'obtenir des résultats à court terme. Cela demande du temps et de l’organisation. L'investissement à prévoir pour croître en interne peut être important avec un ROI positif pouvant apparaître seulement après plusieurs années… ou pas, ou pas du tout ! Ayez peut-être en tête qu’une entreprise qui choisit de se développer par croissance interne, risque de ne pas avoir un développement aussi rapide que les concurrents qui se développent par croissance externe.
@@ -79,7 +83,8 @@ image:https://media.giphy.com/media/108GZES8iG0myc/giphy.gif[]
 * Pour certains marchés et concepts, la taille des acteurs est un facteur clé de succès (élément que la structure doit maîtriser pour espérer dépasser la concurrence). Par exemple si la réalisation d'économies d'échelle (pour réduire les coûts) est indispensable au développement du produit alors les compétiteurs du marché ne peuvent sans doute pas se limiter à de la croissance interne.
  
 * Un concurrent « agressif », ou implanté sur le marché depuis plus longtemps (on parle d’avantage pionnier ou prime du premier entrant) peut remettre en cause votre projet et en challenger l’avenir. Vous n'aurez peut-être pas le temps de mettre les moyens nécessaires pour empêcher votre concurrent de vous nuire, cependant, ayez une chose en tête, si les « gros » concurrent fonctionnent bien, c’est qu’il y a de la place pour les petits !
- 
+
+[.center]
 image:https://media.giphy.com/media/l1ugtlSwK8or4vGik/giphy.gif[]
  
 Je vous présente un peu nos projets internes ?
@@ -102,7 +107,8 @@ Mais également de rester informé des changements et être alerté des nouveaut
  
 L’application est un outil de communication à part entière et est au service de l’événement qu’elle promeut !
 Vous pouvez déjà télécharger les applications Aucard de Tours et Terres du Son sur les stores ! Let’s dance !
- 
+
+[.center]
 image:https://media.giphy.com/media/12sxs2j080MCuA/giphy.gif[]
  
  
@@ -123,7 +129,8 @@ Les touristes recherchent la ville qu’ils souhaitent visiter, renseignent leur
 Ils personnalisent leur séjour en échangeant avec le local passionné qu’ils choisissent et payent la totalité de la transaction en ligne via un système sécurisé.
  
 Ils profitent d’une visite ou d’une activité de qualité réalisée par des passionnés ayant les mêmes centres d’intérêt qu’eux, le local est rémunéré une fois la prestation réalisée. Let’s guide you !
-  
+
+[.center]
 image:https://media.giphy.com/media/nopqz91prOyvS/giphy.gif[]
  
 === Navig’Tours 
@@ -135,5 +142,6 @@ image:/images/posts/2018-05-09_projets_internes/navigtours-logo.png[]
 *https://play.google.com/store/apps/details?id=com.codetroopers.transport.tours[Lien vers le Playstore, window="_blank"]*
  
 Navig’Tours est l'application Android / iPhone gratuite pour vos déplacements en bus et tram sur le réseau Fil Bleu, à Tours et son agglomération. Son idée de base c'est de faciliter les déplacements en transports en commun dans l'agglo en proposant notamment un service d'itinéraires en bus et tram ou à pied, le tout en allant récupérer l'ensemble des horaires fournis par Keolis.
- 
+
+[.center]
 image:https://media.giphy.com/media/Vsb2ubz4M7Jw4/giphy.gif[]
