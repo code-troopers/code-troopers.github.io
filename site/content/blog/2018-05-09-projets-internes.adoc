@@ -47,9 +47,9 @@ La croissance interne peut également se faire à travers différentes actions. 
 
 * La formation de collaborateurs ; permettant l'acquisition en interne de nouvelles compétences
 * La mise en place d'un nouveau réseau de distribution 
-* L'achat de locaux plus grands ou plus confortables permettant d’accueillir de nouveaux collaborateurs plus sereinement. (on vient d’emménager dans nos nouveaux locaux à MAME, à Tours, entre le M & le A, vous êtes les bienvenus pour nous exposer vos projets, si vous voulez en savoir plus sur nos nouveaux locaux je vous invite à vous rendre sur *http://code-troopers.com/2018/06/11/mame/[cette page, window="_blank"]*.
+* L'achat de locaux plus grands ou plus confortables permettant d’accueillir de nouveaux collaborateurs plus sereinement. D'ailleurs, on vient d’emménager dans nos nouveaux locaux à MAME, à Tours, entre le M & le A, vous êtes les bienvenus pour nous exposer vos projets, si vous voulez en savoir plus sur nos nouveaux locaux je vous invite à vous rendre sur *http://code-troopers.com/2018/06/11/mame/[cette page, window="_blank"]*.
  
-Mais revenons à nos moutons : les projets internes, il s'agit de projets dont la finalité est de développer l'offre, notre offre, la diversifier, améliorer sa commercialisation. Dans notre cas il s’agit de logiciels, sites, applications web ou mobiles que nous imaginons et créons. Cela fait de nous des éditeurs, mais réaliser des projets internes comportes des avantages et inconvénients.
+Mais revenons à nos moutons : les projets internes, il s'agit de projets dont la finalité est de développer l'offre, notre offre, la diversifier, améliorer sa commercialisation. Dans notre cas il s’agit de logiciels, sites, applications web ou mobiles que nous imaginons et créons. Cela fait de nous des éditeurs, mais réaliser des projets internes comporte des avantages et inconvénients.
  
 == Avantages de la croissance interne à travers les projets internes
 
@@ -57,7 +57,7 @@ Mais revenons à nos moutons : les projets internes, il s'agit de projets dont l
 image:https://media.giphy.com/media/3o7abB06u9bNzA8lu8/giphy.gif[]
  
  
-Parier sur le développement interne (aussi parfois appelé développement « naturel » ou organique) d’une entreprise présente de nombreux avantages. Je vous en présente quelques-uns ?
+Parier sur le développement interne (aussi parfois appelé développement « naturel » ou « organique ») d’une entreprise présente de nombreux avantages. Je vous en présente quelques-uns ?
  
 * Le développement de projets internes permet une approche plus progressive et vous autorise, si vos ressources financières vous le permettent, d'autofinancer votre/vos projets, c’est notre cas pour le moment et c’est très confortable.
  
@@ -124,11 +124,11 @@ Le but est de découvrir ou redécouvrir un lieu, un quartier, une ville, une r�
  
 L’objectif est de donner davantage de sens aux voyages, aux séjours touristiques, en France, et ailleurs à l’avenir. Le tout en quelques étapes très simples :
  
-Les touristes recherchent la ville qu’ils souhaitent visiter, renseignent leurs centres d’intérêt, et sélectionnent les profils de Guides Professionnels ou Ambassadeurs locaux correspondant le plus à leur profil, attentes & envies.
+* Les touristes recherchent la ville qu’ils souhaitent visiter, renseignent leurs centres d’intérêt, et identifient les profils de Guides Professionnels ou Ambassadeurs locaux correspondant le plus à leur profil, attentes & envies.
  
-Ils personnalisent leur séjour en échangeant avec le local passionné qu’ils choisissent et payent la totalité de la transaction en ligne via un système sécurisé.
+* Ils personnalisent leur séjour en échangeant avec le local passionné qu’ils choisissent et payent la totalité de la transaction en ligne via un système sécurisé.
  
-Ils profitent d’une visite ou d’une activité de qualité réalisée par des passionnés ayant les mêmes centres d’intérêt qu’eux, le local est rémunéré une fois la prestation réalisée. Let’s guide you !
+* Ils profitent d’une visite ou d’une activité de qualité réalisée par des passionnés ayant les mêmes centres d’intérêt qu’eux, le local est rémunéré une fois la prestation réalisée. Let’s guide you !
 
 [.center]
 image:https://media.giphy.com/media/nopqz91prOyvS/giphy.gif[]
@@ -147,3 +147,10 @@ Navig’Tours est l'application Android / iPhone gratuite pour vos déplacements
 
 [.center]
 image:https://media.giphy.com/media/Vsb2ubz4M7Jw4/giphy.gif[]
+
+
+
+Les projets internes sont motivants, et peuvent, selon le type de structure être vraiment lucratifs, il faut cependant être vigilant sur la réalisation de ces derniers, le ROI peut-être long à venir ou même inexistant dans certains cas. 
+Et vous ? Y avez-vous pensé au sein de votre structure ? 
+
+*https://www.linkedin.com/in/nicolas-dauphin-moulin-7a824074/[-Nicolas-, window=_"blank"]*
