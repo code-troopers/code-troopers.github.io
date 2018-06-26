@@ -1,0 +1,11 @@
+---
+cover: ideas
+date: '2017-12-19'
+tags:
+- Android
+- Web
+title: 'Ideas'
+url: /ideas.html
+
+---
+
