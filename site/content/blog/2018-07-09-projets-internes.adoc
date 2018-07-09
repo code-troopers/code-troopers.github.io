@@ -1,13 +1,13 @@
 ---
 author: Matthieu
 cover: ohmyzsh-banner
-date: '2018-04-26'
+date: '2018-07-09'
 tags:
 - shell
 - json
 - jq
 title: 'Faire du json comme si on faisait du sed (*)'
-url: /2018/04/26/jq/
+url: /2018/07/09/jq/
 ---
 
 Nous usons et abusons de Trello pour nos projets. Pour un projet en particulier, je voulais retrouver certains commentaires répartis sur plusieurs mois.
@@ -30,7 +30,7 @@ Maintenant nous avons du json, regardons ce qu'il y a à l'intérieur.
 `jq '.' nPNSBZjB.json`
 
 :lightboxGroup: 0
-:lightboxImage: 2018-04-26_jq/jq1
+:lightboxImage: 2018-07-09_jq/jq1
 :lightboxImageTitle: jq example 1
 
 include::site/static/lightbox.adoc[]
@@ -42,7 +42,7 @@ En fouillant un peu, nous voyons que ce qui nous intéresse se trouve dans l'obj
 `jq '.actions[]' nPNSBZjB.json`
 
 :lightboxGroup: 0
-:lightboxImage: 2018-04-26_jq/jq2
+:lightboxImage: 2018-07-09_jq/jq2
 :lightboxImageTitle: jq example 2
 
 include::site/static/lightbox.adoc[]
@@ -56,7 +56,7 @@ jq -c '.actions[] | {txt: .data.text, name: .data.card.name, member: .memberCrea
 ```
 
 :lightboxGroup: 0
-:lightboxImage: 2018-04-26_jq/jq3
+:lightboxImage: 2018-07-09_jq/jq3
 :lightboxImageTitle: jq example 3
 
 include::site/static/lightbox.adoc[]
@@ -71,7 +71,7 @@ jq -c '.actions[] | {txt: .data.text, name: .data.card.name, member: .memberCrea
 ```
 
 :lightboxGroup: 0
-:lightboxImage: 2018-04-26_jq/jq4
+:lightboxImage: 2018-07-09_jq/jq4
 :lightboxImageTitle: jq example 4
 
 include::site/static/lightbox.adoc[]
@@ -84,7 +84,7 @@ jq -c '.actions |= sort_by(.data.text)|.actions[] | {txt: .data.text, name: .dat
 ```
 
 :lightboxGroup: 0
-:lightboxImage: 2018-04-26_jq/jq5
+:lightboxImage: 2018-07-09_jq/jq5
 :lightboxImageTitle: jq example 5
 
 include::site/static/lightbox.adoc[]
