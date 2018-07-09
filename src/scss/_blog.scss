@@ -114,6 +114,9 @@ section#blog {
         @include separator($black);
         letter-spacing: initial;
       }
+      .center{
+        text-align: center;
+      }
       .content {
         letter-spacing: initial;
         line-height: 2rem;
@@ -157,6 +160,9 @@ section#blog {
               display: inline;
             }
           }
+        }
+        .underline{
+          text-decoration: underline;
         }
         iframe {
           max-width: 100%;
