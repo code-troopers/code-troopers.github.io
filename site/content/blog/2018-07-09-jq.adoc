@@ -6,6 +6,7 @@ tags:
 - shell
 - json
 - jq
+- trello
 title: 'Faire du json comme si on faisait du sed (*)'
 url: /2018/07/09/jq/
 ---
@@ -14,11 +15,11 @@ Nous usons et abusons de Trello pour nos projets. Pour un projet en particulier,
 Juste en regardant les cartes une par une ou en regardant l'historique serait trop fastidieux.
 Heureusement chaque board Trello permet un export au format json qui nous permet de s'en servir à notre guise.
 
-Je veux juste sortir quelques données, je ne referai jamais la même chose plusieurs fois et je veux que ça me prenne 10 minutes max donc un projet java c'est juste impensable, un langage de script sera plus adapté et ça tombe bien car d'une part le shell (la ligne de commande) est un de mes langages préférés et j'ai pris connaissance de `jq` il n'y a pas longtemps.
+Je veux juste sortir quelques données, je ne referai jamais la même chose plusieurs fois et je veux que ça me prenne 10 minutes max donc un projet java c'est juste impensable, un langage de script sera plus adapté et ça tombe bien car d'une part le shell (la ligne de commande) est un de mes langages préférés et j'ai découvert `jq` il n'y a pas longtemps.
 
-Régulièrement une API nous ressort un pavé de 5000 lignes qui peuvent être lourdes à lire dans un éditeur de texte, pourquoi pas réutiliser pour ces occasions `jq`.
+Régulièrement une API nous ressort un pavé de 5000 lignes qui peuvent être lourdes à lire dans un éditeur de texte, pourquoi pas utiliser pour ces occasions `jq` qui va permettre de traiter ou formatter les données.
 
-Je ne ferai pas l'affront d'expliquer l'installation, il se trouve dans les paquets debian et sans doute dans votre distribution favorite.
+jq est disponible dans la plupart des gestionnaires de paquet.
 
 
 == jq par l'exemple
@@ -77,7 +78,7 @@ jq -c '.actions[] | {txt: .data.text, name: .data.card.name, member: .memberCrea
 include::site/static/lightbox.adoc[]
 
 
-Dernière petite information sur l'utilisation de jq, la possibilité de trier, par exemple dans l'ordre alphabétique du champs texte
+Dernière commande sur l'utilisation de jq, la possibilité de trier, par exemple dans l'ordre alphabétique du champs texte
 
 ```
 jq -c '.actions |= sort_by(.data.text)|.actions[] | {txt: .data.text, name: .data.card.name, member: .memberCreator.fullName} | select(.txt!=null) | select(.txt | startswith("@"))' nPNSBZjB.json
@@ -92,4 +93,4 @@ include::site/static/lightbox.adoc[]
 
 J'espère que ce petit exemple d'utilisation de jq vous aura plu, je vous laisse à la documentation officielle si vous désirez en savoir plus : https://stedolan.github.io/jq/
 
-(*) `sed` c'est la commande qui permet de modifier une chaîne de caractères en shell et que tout informaticien connaît
+(*) `sed` c'est la commande qui permet de modifier une chaîne de caractères en shell et que tout informaticien connaît.
