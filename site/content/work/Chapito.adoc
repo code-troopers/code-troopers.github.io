@@ -25,3 +25,7 @@ Créer une application permet aux festivaliers de connaître toutes les informat
 Mais également de rester informé des changements et être alerté des nouveautés grâce aux notifications
 
 L’application est un outil de communication à part entière et est au service de l’événement qu’elle promeut !
+
+:linkattrs:
+
+http://chapi.to[Lien vers chapi.to, window="_blank", role="button-link"]
