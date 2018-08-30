@@ -1,12 +1,12 @@
 ---
 author: Benjamin
 cover: ohmyzsh-banner
-date: '2018-08-21'
+date: '2018-08-30'
 tags:
 - SEO
 - Angular
 title: 'SEO et Single Page Application = 🤬'
-url: /2018/08/21/angular-seo/
+url: /2018/08/30/angular-seo/
 ---
 
 Lorsque nous avons commencé à développer WeGuide (weguide.fr), nous avons pas mal réfléchi à quelle framework utilisé pour réalisé la partie front et, du fait de notre expérience, avons choisi Angular.
