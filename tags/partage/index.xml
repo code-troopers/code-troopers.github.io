@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Partage on Code-Troopers</title>
+        <link>/tags/partage/</link>
+        <description>Recent content in Partage on Code-Troopers</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>fr-fr</language>
+        <lastBuildDate>Fri, 05 Dec 2014 00:00:00 +0000</lastBuildDate>
+        
+        <atom:link href="/tags/partage/index.xml" rel="self" type="application/rss+xml" />
+        
+        
+        <item>
+            <title>elCurator devient payant !</title>
+            <link>/2014/12/05/elcurator2/</link>
+            <pubDate>Fri, 05 Dec 2014 00:00:00 +0000</pubDate>
+            
+            <guid>/2014/12/05/elcurator2/</guid>
+            <description>J&amp;rsquo;avais parlé cet été dans un autre article du nouvel outil d&amp;rsquo;OCTO Technology pour le partage de contenu au sein d&amp;rsquo;une entreprise. Depuis, entre Code-Troopers (+ 2 autres amis codeurs) nous l&amp;rsquo;utilisons quotidiennement.
+Douche Froide Quelle ne fût pas ma surprise lorsqu&amp;rsquo;hier j&amp;rsquo;ai reçu un mail de la part du product manager m&amp;rsquo;indiquant que le produit &amp;ldquo;sort de sa phase de test en 2015&amp;rdquo;. Nulle part sur le site il n&amp;rsquo;est précisé que le produit est en phase bêta (ou de test), et il est meme encore visible sur la page inscription gratuite</description>
+        </item>
+        
+    </channel>
+</rss>

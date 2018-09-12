@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Guide on Code-Troopers</title>
+        <link>/tags/guide/</link>
+        <description>Recent content in Guide on Code-Troopers</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>fr-fr</language>
+        <lastBuildDate>Thu, 25 Jun 2015 00:00:00 +0000</lastBuildDate>
+        
+        <atom:link href="/tags/guide/index.xml" rel="self" type="application/rss+xml" />
+        
+        
+        <item>
+            <title>Installer votre dépot privé Docker</title>
+            <link>/2015/06/25/installdockerregistry/</link>
+            <pubDate>Thu, 25 Jun 2015 00:00:00 +0000</pubDate>
+            
+            <guid>/2015/06/25/installdockerregistry/</guid>
+            <description>Petit à petit chez Code-Troopers, nous migrons tous nos développements pour utiliser Docker. Cela fait quelque temps que nous l&amp;rsquo;utilisons pour des projets &amp;ldquo;public&amp;rdquo;, auquel cas le registry public Docker est largement suffisant (et immédiat à utiliser).
+En revanche, nous commençons à migrer nos applications de production également vers Docker, et nous ne pouvons pas utiliser le mode public du registry public. Nous nous sommes donc mis à déployer un dépôt privé, authentifié par utilisateur / mot de passe.</description>
+        </item>
+        
+    </channel>
+</rss>

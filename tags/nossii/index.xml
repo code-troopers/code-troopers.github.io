@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Nossii on Code-Troopers</title>
+        <link>/tags/nossii/</link>
+        <description>Recent content in Nossii on Code-Troopers</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>fr-fr</language>
+        <lastBuildDate>Sun, 31 Mar 2013 00:00:00 +0000</lastBuildDate>
+        
+        <atom:link href="/tags/nossii/index.xml" rel="self" type="application/rss+xml" />
+        
+        
+        <item>
+            <title>Début d&#39;activité</title>
+            <link>/2013/03/31/premierarticle/</link>
+            <pubDate>Sun, 31 Mar 2013 00:00:00 +0000</pubDate>
+            
+            <guid>/2013/03/31/premierarticle/</guid>
+            <description>Nous sommes 7 troopers issus de Polytech’Tours, une école d’ingénieur située à Tours. Nous sommes spécialisés dans la conception de sites internet à valeur ajoutée (application web). Depuis 2008 toute l&#39;équipe s&#39;est concentrée sur la réalisation de la solution SRMvision, une plateforme de gestion des services IT. Il s’agit d’un logiciel en tant que service (SaaS) comportant de la gestion d’équipements, de projets, d’incidents etc. Cette application a été réalisée principalement en Java à l’aide de Apache Wicket.</description>
+        </item>
+        
+    </channel>
+</rss>

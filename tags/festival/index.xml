@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Festival on Code-Troopers</title>
+        <link>/tags/festival/</link>
+        <description>Recent content in Festival on Code-Troopers</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>fr-fr</language>
+        <lastBuildDate>Tue, 24 Jun 2014 00:00:00 +0000</lastBuildDate>
+        
+        <atom:link href="/tags/festival/index.xml" rel="self" type="application/rss+xml" />
+        
+        
+        <item>
+            <title>L&#39;application Terres du Son est disponible</title>
+            <link>/2014/06/24/tds2/</link>
+            <pubDate>Tue, 24 Jun 2014 00:00:00 +0000</pubDate>
+            
+            <guid>/2014/06/24/tds2/</guid>
+            <description>C&amp;rsquo;était annoncé, c&amp;rsquo;est maintenant chose faite ! L&amp;rsquo;application android pour Terres du Son 2014 est sur le Play Store.
+Développée en partenariat avec l&amp;rsquo;équipe de TDS, cette application vous offre la possibilité de :
+ Consulter la programmation jour par jour Être notifié avant le passage d&amp;rsquo;un artiste (pour ne pas rater le début) Être notifié avant le départ des navettes Fil Vert (pour ne pas rentrer à pied !) Écouter la playlist officielle du festival Écouter le dernier album de chaque artiste Accéder à une fiche détaillée de l&amp;rsquo;artiste (liens web, vidéo, biographie…) Connaître en temps réel ce qui passe et ce qui va suivre pour chacune des scènes Consulter les horaires des navettes Fil Vert (qui font les aller-retours entre la gare routière de Tours et l&amp;rsquo;entrée du site)        Rendez-vous dès à présent sur le Play Store pour télécharger l&amp;rsquo;appli.</description>
+        </item>
+        
+        <item>
+            <title>Sortie de l&#39;appli Aucard de Tours</title>
+            <link>/2014/04/14/aucard2/</link>
+            <pubDate>Mon, 14 Apr 2014 00:00:00 +0000</pubDate>
+            
+            <guid>/2014/04/14/aucard2/</guid>
+            <description>Suite à notre partenariat avec Radio Béton, nous vous annonçons la mise à disposition sur le Play Store de l&amp;rsquo;application officielle du festival Aucard de Tours 2014.
+Comme vous le savez sûrement le festival Aucard de Tours, qui souhaite favoriser la découverte, ne divulgue pas la programmation heure par heure. C&amp;rsquo;est pourquoi ce n&amp;rsquo;est qu&amp;rsquo;une fois rentrés dans l&amp;rsquo;enceinte du festival que vous prenez connaissance du programme de la soirée sur le tableau.</description>
+        </item>
+        
+        <item>
+            <title>Application officielle Android pour Terres du son 2014</title>
+            <link>/2014/04/08/terresduson/</link>
+            <pubDate>Tue, 08 Apr 2014 00:00:00 +0000</pubDate>
+            
+            <guid>/2014/04/08/terresduson/</guid>
+            <description>Comme vous avez pu le voir dans un article précédent, Code-Troopers est en train de réaliser l&amp;rsquo;application officielle Android pour Aucard de Tours. Deuxième bonne nouvelle, nous réalisons aussi l&amp;rsquo;application officielle Android pour un autre festival tourangeau, Terres du son.
+  Si vous êtes à Tours, vous connaissez sûrement ce festival qui se déroule cette année le 11, 12, 13 Juillet 2014 au Domaine de Candé dans la ville de Monts (37).</description>
+        </item>
+        
+        <item>
+            <title>Code-Troopers &#43; Aucard de Tours = Appli Android</title>
+            <link>/2014/03/17/aucard/</link>
+            <pubDate>Mon, 17 Mar 2014 00:00:00 +0000</pubDate>
+            
+            <guid>/2014/03/17/aucard/</guid>
+            <description>L&#39;équipe Code-Troopers est fière de vous annoncer son implication dans la vie tourangelle via la réalisation de l&#39;application officielle du festival Aucard de Tours.   Ainsi cette année, pour la 29ème édition d&#39;Aucard, vous pourrez tous avoir le programme dans votre poche.  En plus d&#39;avoir accès au programme de chaque soirée, vous pourrez consulter les fiches des artistes. Celles ci seront agrémentées d&#39;un player deezer pour écouter toutes les chansons.</description>
+        </item>
+        
+    </channel>
+</rss>

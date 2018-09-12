@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Material Design on Code-Troopers</title>
+        <link>/tags/material-design/</link>
+        <description>Recent content in Material Design on Code-Troopers</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>fr-fr</language>
+        <lastBuildDate>Wed, 26 Nov 2014 00:00:00 +0000</lastBuildDate>
+        
+        <atom:link href="/tags/material-design/index.xml" rel="self" type="application/rss+xml" />
+        
+        
+        <item>
+            <title>Squelette Android 5.0</title>
+            <link>/2014/11/26/squeletteandroid5/</link>
+            <pubDate>Wed, 26 Nov 2014 00:00:00 +0000</pubDate>
+            
+            <guid>/2014/11/26/squeletteandroid5/</guid>
+            <description>Pourquoi ? Chez Code-Troopers, nous avons pas mal de projets Android. Au début du projet, on fait toujours la même chose :
+ on lance Android Studio on créé un nouveau projet on choisit parmi les templates qu&amp;rsquo;il nous propose on ajoute nos librairies favorites on modifie le thème  Toutes ces étapes sont répétitives. De plus, avec l&amp;rsquo;arrivée du Material Design et les nouvelles libraires de compatibilités, les templates que propose Android Studio ne sont plus d&amp;rsquo;actualité.</description>
+        </item>
+        
+    </channel>
+</rss>

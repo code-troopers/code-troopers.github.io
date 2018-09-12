@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Librairie on Code-Troopers</title>
+        <link>/tags/librairie/</link>
+        <description>Recent content in Librairie on Code-Troopers</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>fr-fr</language>
+        <lastBuildDate>Sat, 06 Jun 2015 00:00:00 +0000</lastBuildDate>
+        
+        <atom:link href="/tags/librairie/index.xml" rel="self" type="application/rss+xml" />
+        
+        
+        <item>
+            <title>Android Support Design Library</title>
+            <link>/2015/06/06/androiddesignlibrary/</link>
+            <pubDate>Sat, 06 Jun 2015 00:00:00 +0000</pubDate>
+            
+            <guid>/2015/06/06/androiddesignlibrary/</guid>
+            <description>Avez-vous déjà essayé de transformer vos applications Android pour les rendre conformes aux guidelines Material, si oui, vous avez dû comme nous, vous retrouver à importer plein de librairies tierces pour implémenter par exemple le FAB button, ou même personnaliser le code pour rendre le NavigationDrawer conforme (comme ce qui a pu être fait sur le squelette d&amp;rsquo;un précédent article. Et bien tout ceci est fini (enfin en partie), grâce à la nouvelle librairie Android de Google Design Support.</description>
+        </item>
+        
+    </channel>
+</rss>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Java on Code-Troopers</title>
+        <link>/tags/java/</link>
+        <description>Recent content in Java on Code-Troopers</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>fr-fr</language>
+        <lastBuildDate>Wed, 15 Apr 2015 00:00:00 +0000</lastBuildDate>
+        
+        <atom:link href="/tags/java/index.xml" rel="self" type="application/rss+xml" />
+        
+        
+        <item>
+            <title>Devoxx 2015 : c&#39;était bien, mais...</title>
+            <link>/2015/04/15/devoxxfr-2015/</link>
+            <pubDate>Wed, 15 Apr 2015 00:00:00 +0000</pubDate>
+            
+            <guid>/2015/04/15/devoxxfr-2015/</guid>
+            <description>Cette année nous étions tous les Troopers à nous rendre à Paris pour LA conférence à ne pas rater.
+Pour ceux qui n&amp;rsquo;auraient pas vu l&amp;rsquo;info sur Twitter ou ailleurs, pour la première fois nous étions au Palais des Congrès, et ça on peut dire que c&amp;rsquo;est la classe.
+Mais, dans cet article, je ne vais pas vous faire un résumé des conférences que j&amp;rsquo;ai vues, d&amp;rsquo;abord parce que je n&amp;rsquo;ai pas pris de notes, ensuite parce que beaucoup d&amp;rsquo;autres le font déjà, par exemple là et là, et surtout parce que toutes les sessions étaient filmées et seront mises en ligne sur Parleys et accessibles gratuitement (comme les autres années).</description>
+        </item>
+        
+        <item>
+            <title>C&#39;est reparti pour un tour</title>
+            <link>/2014/01/01/cestreparti/</link>
+            <pubDate>Wed, 01 Jan 2014 00:00:00 +0000</pubDate>
+            
+            <guid>/2014/01/01/cestreparti/</guid>
+            <description>Salut à vous jeunes padawans et bienvenue sur le nouveau blog des Code-Troopers tourangeaux.
+Le redesign du site indique le réel lancement d&#39;activité de Code-Troopers, nous sommes aujourd&#39;hui 7 développeurs disponibles afin de réaliser des projets, alors n&#39;hésitez pas à nous contacter ou à parler de nous. Vous pouvez aussi nous suivre sur les différents réseaux sociaux pour être au courant de notre actualité ainsi que les nouveaux articles de ce blog.</description>
+        </item>
+        
+    </channel>
+</rss>

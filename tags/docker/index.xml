@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Docker on Code-Troopers</title>
+        <link>/tags/docker/</link>
+        <description>Recent content in Docker on Code-Troopers</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>fr-fr</language>
+        <lastBuildDate>Wed, 20 Jan 2016 00:00:00 +0000</lastBuildDate>
+        
+        <atom:link href="/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+        
+        
+        <item>
+            <title>Jenkins Workflow Plugin</title>
+            <link>/2016/01/20/jenkinsworkflow/</link>
+            <pubDate>Wed, 20 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>/2016/01/20/jenkinsworkflow/</guid>
+            <description>Un des points génants lors de l&amp;#8217;utilisation de Jenkins est le coté volatile de la configuration des jobs de builds. Il est souvent nécessaire de jouer de click-click pour faire la configuration des jobs sur Jenkins et de se reposer sur un plugin permettant de versionner, autant que possible, les configurations utilisées.
+ Mais, une fois que vous aurez lu cet article, vous vous rendrez compte que c&amp;#8217;est le passé. Attention toutefois, cet article parle de Jenkins, de Docker et de Groovy, n&amp;#8217;ayez pas peur, tout est presque trop simple&amp;#8230;&amp;#8203;</description>
+        </item>
+        
+        <item>
+            <title>Navig&#39;Tours : côté serveur</title>
+            <link>/2016/01/04/navigtours-cote_serveur/</link>
+            <pubDate>Mon, 04 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>/2016/01/04/navigtours-cote_serveur/</guid>
+            <description>Cet article, une fois n&amp;rsquo;est pas coutume, va rentrer un peu plus dans le fonctionnement de la partie serveur mise en place pour Navig&amp;rsquo;Tours. Si vous n&amp;rsquo;êtes pas technique, il risque d&amp;rsquo;être compliqué de le suivre !
+Architecture La partie serveur de Navig&amp;rsquo;Tours est en réalité assez simple. Comme dit lors de différentes présentations des membres de Code-Troopers, ce projet est pour nous un moyen de nous amuser lorsque nous nous retrouvons tous les septs.</description>
+        </item>
+        
+        <item>
+            <title>Monitorer ses conteneurs Docker avec New Relic</title>
+            <link>/2015/09/30/newrelicdocker/</link>
+            <pubDate>Wed, 30 Sep 2015 00:00:00 +0000</pubDate>
+            
+            <guid>/2015/09/30/newrelicdocker/</guid>
+            <description>Si vous ne conaissez pas New Relic, vous loupez quelque chose, c&amp;rsquo;est le service indispensable pour monitorer vos serveurs et vos applications. Il est capable d&amp;rsquo;une part de vous remonter les données physiques de vos serveurs (mémoire, cpu, espace disque), et d&amp;rsquo;autre part d&amp;rsquo;analyser les performances de vos applications (de nombreux langages sont disponibles). Il dispose aussi d&amp;rsquo;un système d&amp;rsquo;alerting, facilement configurable. Tous ces services sont disponibles en version gratuite, avec limitation (nombre de jour limité de rétention des données par exemple).</description>
+        </item>
+        
+        <item>
+            <title>Owncloud : solution de cloud en 5 min avec Docker</title>
+            <link>/2015/09/09/ownclouddocker/</link>
+            <pubDate>Wed, 09 Sep 2015 00:00:00 +0000</pubDate>
+            
+            <guid>/2015/09/09/ownclouddocker/</guid>
+            <description>Que ce soit pour des raisons politique de confidentialité ou des raisons technique, Owncloud a énormément de qualités comparé à Dropbox ou Google drive. Déjà car la limite de taille des données est celle du serveur, ensuite car des applications sous linux permettent de synchroniser des dossiers et enfin car il existe une multitude d&amp;rsquo;addons qui permettent de sauvegarder ses mots de passe, jouer de la musique, envoyer des notifs sur Slack etc.</description>
+        </item>
+        
+        <item>
+            <title>Installer votre dépot privé Docker</title>
+            <link>/2015/06/25/installdockerregistry/</link>
+            <pubDate>Thu, 25 Jun 2015 00:00:00 +0000</pubDate>
+            
+            <guid>/2015/06/25/installdockerregistry/</guid>
+            <description>Petit à petit chez Code-Troopers, nous migrons tous nos développements pour utiliser Docker. Cela fait quelque temps que nous l&amp;rsquo;utilisons pour des projets &amp;ldquo;public&amp;rdquo;, auquel cas le registry public Docker est largement suffisant (et immédiat à utiliser).
+En revanche, nous commençons à migrer nos applications de production également vers Docker, et nous ne pouvons pas utiliser le mode public du registry public. Nous nous sommes donc mis à déployer un dépôt privé, authentifié par utilisateur / mot de passe.</description>
+        </item>
+        
+    </channel>
+</rss>

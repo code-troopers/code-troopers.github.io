@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Agilité on Code-Troopers</title>
+        <link>/tags/agilit%C3%A9/</link>
+        <description>Recent content in Agilité on Code-Troopers</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>fr-fr</language>
+        <lastBuildDate>Wed, 11 Feb 2015 00:00:00 +0000</lastBuildDate>
+        
+        <atom:link href="/tags/agilit%C3%A9/index.xml" rel="self" type="application/rss+xml" />
+        
+        
+        <item>
+            <title>Suivre l&#39;humeur de son équipe avec TeamMood</title>
+            <link>/2015/02/11/teammood/</link>
+            <pubDate>Wed, 11 Feb 2015 00:00:00 +0000</pubDate>
+            
+            <guid>/2015/02/11/teammood/</guid>
+            <description>Depuis bientôt 6 mois l&amp;rsquo;équipe des Code-Troopers utilise TeamMood pour suivre son bonheur au quotidien. Retour sur l&amp;rsquo;utilisation d&amp;rsquo;un outil fort sympathique.
+Si l&amp;rsquo;on remonte quelques années en arrière, lorsque nous travaillions encore tous les 7 pour SRMvision, nous avions expérimenté un outil sur un grand tableau blanc pour connaître notre état d&amp;rsquo;esprit à la fin de chaque journée de travail. Nous l&amp;rsquo;appelions à l&amp;rsquo;époque happiness chart (d&amp;rsquo;autres l&amp;rsquo;appellent aussi niko-niko).</description>
+        </item>
+        
+        <item>
+            <title>Soirée Agilité à Tours</title>
+            <link>/2014/09/23/agile_paloaltech_tours/</link>
+            <pubDate>Tue, 23 Sep 2014 00:00:00 +0000</pubDate>
+            
+            <guid>/2014/09/23/agile_paloaltech_tours/</guid>
+            <description>Ça bouge à la cantine du numérique Depuis la rentrée il y a de l&amp;rsquo;animation à la cantine du numérique de Tours. En plus de continuer les rendez-vous hebdomadaires tels que le FunLab ou la WebSchool, depuis peu sont organisés des codings goûters (initiés par Jean-Lou Le Bars) ainsi que les soirées Palo Altech (initées par Rodrigo Reyes et Ludovic Lafole).
+Palo Altech a pour ambition de promovoir les rendez-vous autour de l&amp;rsquo;informatique en général (pour apporter un complément aux soirées JUG déjà spécialisées autour du développement java)</description>
+        </item>
+        
+    </channel>
+</rss>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Gamification on Code-Troopers</title>
+        <link>/tags/gamification/</link>
+        <description>Recent content in Gamification on Code-Troopers</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>fr-fr</language>
+        <lastBuildDate>Fri, 20 May 2016 00:00:00 +0000</lastBuildDate>
+        
+        <atom:link href="/tags/gamification/index.xml" rel="self" type="application/rss+xml" />
+        
+        
+        <item>
+            <title>Devoxx 2016 : Huntly ou rien !</title>
+            <link>/2016/05/20/devoxx-2016-huntly/</link>
+            <pubDate>Fri, 20 May 2016 00:00:00 +0000</pubDate>
+            
+            <guid>/2016/05/20/devoxx-2016-huntly/</guid>
+            <description>An english version of this blogpost is published on Michaël Bitard&amp;#8217;s blog at agileek.github.io
+ Cette année pour Devoxx, j’étais le seul Code-Troopers disponible mais ce n’est pas grave car j’y ai retrouvé Michaël, ancien collègue tourangeau maintenant basé à Toulouse. On va vous raconter ici comment on s’est bien amusés pendant ces 3 jours.
+ Pour l&amp;#8217;édition 2016 de DevoxxFR, il y avait une nouveauté qui aurait probablement dû arriver bien plus tôt, il s’agit des applications mobiles officielles.</description>
+        </item>
+        
+    </channel>
+</rss>

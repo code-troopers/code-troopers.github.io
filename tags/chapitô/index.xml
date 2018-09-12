@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Chapitô on Code-Troopers</title>
+        <link>/tags/chapit%C3%B4/</link>
+        <description>Recent content in Chapitô on Code-Troopers</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>fr-fr</language>
+        <lastBuildDate>Mon, 18 Jun 2018 00:00:00 +0000</lastBuildDate>
+        
+        <atom:link href="/tags/chapit%C3%B4/index.xml" rel="self" type="application/rss+xml" />
+        
+        
+        <item>
+            <title>Projets internes, tu feras</title>
+            <link>/2018/06/18/projets-internes/</link>
+            <pubDate>Mon, 18 Jun 2018 00:00:00 +0000</pubDate>
+            
+            <guid>/2018/06/18/projets-internes/</guid>
+            <description>Il me parait indispensable que je me présente pour cet article de blog, vous allez vite comprendre pourquoi !
+ Mais avant tout, petit rappel ! Code-Troopers a été créée il y a 3 ans par 7 développeurs issus de Polytech’ Tours, l’entreprise se développe et réalise des projets pour des grands groupes, des PME, des start-ups… depuis peu l’entreprise embauche ; 1 CDI en développement, 1 CDD de 6 mois en développement, 1 alternant en développement en formation à Polytech’ Tours et 1 alternant en gestion &amp;amp; entrepreneuriat à l’IAE de Tours (je vous invite à vous rendre sur la page Casting si vous voulez des précisions).</description>
+        </item>
+        
+    </channel>
+</rss>

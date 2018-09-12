@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Dependances on Code-Troopers</title>
+        <link>/tags/dependances/</link>
+        <description>Recent content in Dependances on Code-Troopers</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>fr-fr</language>
+        <lastBuildDate>Mon, 01 Sep 2014 00:00:00 +0000</lastBuildDate>
+        
+        <atom:link href="/tags/dependances/index.xml" rel="self" type="application/rss+xml" />
+        
+        
+        <item>
+            <title>Résoudre les conflits de dépendances</title>
+            <link>/2014/09/01/conflitsdependances/</link>
+            <pubDate>Mon, 01 Sep 2014 00:00:00 +0000</pubDate>
+            
+            <guid>/2014/09/01/conflitsdependances/</guid>
+            <description>Lors de nos développements, nous reposons beaucoup sur des projets externes qui nous fournissent énormément de services utiles. Dans un récent projet, nous avons eu besoin de faire fonctionner Neo4j conjointement à ElasticSearch. Jusqu&amp;rsquo;ici, aucun soucis n&amp;rsquo;est à déplorer, mais nous avions une exigence particulière : il fallait que l&amp;rsquo;application puisse démarrer automatiquement un serveur Neo4J ainsi qu&amp;rsquo;un serveur ElasticSearch sur les postes de développements (ainsi que pour les tests d&amp;rsquo;intégration).</description>
+        </item>
+        
+    </channel>
+</rss>

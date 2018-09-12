@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Startup on Code-Troopers</title>
+        <link>/tags/startup/</link>
+        <description>Recent content in Startup on Code-Troopers</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>fr-fr</language>
+        <lastBuildDate>Thu, 14 Jan 2016 00:00:00 +0000</lastBuildDate>
+        
+        <atom:link href="/tags/startup/index.xml" rel="self" type="application/rss+xml" />
+        
+        
+        <item>
+            <title>Startup Weekend : côté perdant</title>
+            <link>/2016/01/14/startupweekend-coteperdant/</link>
+            <pubDate>Thu, 14 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>/2016/01/14/startupweekend-coteperdant/</guid>
+            <description>Ou : Yo ! AngularJS, le meilleur ami des MVP Le week-end du 5 décembre a eu lieu un Startup Weekend édition tourisme à Tours où 6 troopers étaient présents. 3 d&amp;rsquo;entres nous ont choisi l&amp;rsquo;équipe We Guide composée de 3 développeurs, 3 designers et 3 profils business (les 3 autres ont choisi @shakemytours et ont gagné le Startup Weekend). L&amp;rsquo;idée de base est de découvrir une région à l&amp;rsquo;aide d&amp;rsquo;un guide local, officiel ou non.</description>
+        </item>
+        
+        <item>
+            <title>Retour sur le Second #SWTours</title>
+            <link>/2015/03/24/startupweekend/</link>
+            <pubDate>Tue, 24 Mar 2015 00:00:00 +0000</pubDate>
+            
+            <guid>/2015/03/24/startupweekend/</guid>
+            <description>Ce weekend a eu lieu la seconde édition du Startup Weekend Tours, organisé par Palo Altours. Cette année nous avons pris possession du futur lieu emblématique de l’activité numérique tourangelle : le site de l’ancienne imprimerie MAME.
+Nous étions 4 Troopers venus pour apporter un soutien technique aux pitchs les plus funs et les plus intéressants du weekend. Premier changement pour nous par rapport à l’an dernier, nous avions décidé de ne pas tous travailler sur le même projet.</description>
+        </item>
+        
+        <item>
+            <title>Encore un podium pour MyBandMyCity</title>
+            <link>/2014/04/28/concoursaccede/</link>
+            <pubDate>Mon, 28 Apr 2014 00:00:00 +0000</pubDate>
+            
+            <guid>/2014/04/28/concoursaccede/</guid>
+            <description>Si vous nous suivez, vous savez sûrement que notre équipe a participé et est arrivée 3ème du Startup Weekend qui s&amp;rsquo;est déroulé à Tours les 21-22-23 mars 2014 (un petit résumé de ce weekend intense). Et bien ça continue, François, Fabian et Julien, les 3 étudiants de FBS, porteurs du projet, ont présenté My Band My City au concours de création d&amp;rsquo;entreprises le &amp;ldquo;Tours de la Création&amp;ldquo; qui se déroulait le jeudi 17 avril 2014 et, une fois de plus, le projet est arrivé 3ème sur un total de 25 projets.</description>
+        </item>
+        
+        <item>
+            <title>Sous le capot du Startup Weekend Tours</title>
+            <link>/2014/04/03/souslecapot-startupweekendtours/</link>
+            <pubDate>Thu, 03 Apr 2014 00:00:00 +0000</pubDate>
+            
+            <guid>/2014/04/03/souslecapot-startupweekendtours/</guid>
+            <description>Après l’article global d’impressions sur le Startup Weekend, nous sommes obligés de faire un court article précisant ce que nous avons implémenté et utilisé du point de vue technique (c’est ce qui nous intéresse beaucoup après tout).
+Contenu fonctionnel : Puisque nous avons pris le temps de faire une application entière en 54h, nous allons tout de même détailler les fonctionnalités qui existent dans ce que nous avons produit : * création de compte classique (avec validation par email obligatoire) * création de compte via connexion Facebook * proposition d’ajout de spectacle * vote sur un spectacle existant * duplication de spectacle (changement de ville) * partage Twitter / Facebook / Google plus * envoi de mail selon les statuts des événements * backoffice avec un tableau des événements et la possibilité de modifier leurs statuts * modération des propositions de spectacle (avec remplissage automatique de la biographie / photo d’un artiste à partir de l’API EchoNest) * recherche globale avec Elasticsearch (géolocalisation et full-text sur artiste)</description>
+        </item>
+        
+        <item>
+            <title>Startup Weekend Tours</title>
+            <link>/2014/03/23/startupweekend/</link>
+            <pubDate>Sun, 23 Mar 2014 00:00:00 +0000</pubDate>
+            
+            <guid>/2014/03/23/startupweekend/</guid>
+            <description>Retour sur 54h de Startup Weekend pour la première édition à Tours #swtours
+Introduction Les Startup Weekends ont pour but d’encourager les entrepreneurs à créer leur projet en les confortant dans la viabilité de leur idée et en leur permettant de rencontrer des co-fondateurs. C’est par exemple l’occasion pour un charpentier de rencontrer des informaticiens pour réaliser un site, de rencontrer des avocats pour être sûr de la légalité et des investisseurs pour étudier la viabilité de la startup.</description>
+        </item>
+        
+        <item>
+            <title>Début d&#39;activité</title>
+            <link>/2013/03/31/premierarticle/</link>
+            <pubDate>Sun, 31 Mar 2013 00:00:00 +0000</pubDate>
+            
+            <guid>/2013/03/31/premierarticle/</guid>
+            <description>Nous sommes 7 troopers issus de Polytech’Tours, une école d’ingénieur située à Tours. Nous sommes spécialisés dans la conception de sites internet à valeur ajoutée (application web). Depuis 2008 toute l&#39;équipe s&#39;est concentrée sur la réalisation de la solution SRMvision, une plateforme de gestion des services IT. Il s’agit d’un logiciel en tant que service (SaaS) comportant de la gestion d’équipements, de projets, d’incidents etc. Cette application a été réalisée principalement en Java à l’aide de Apache Wicket.</description>
+        </item>
+        
+    </channel>
+</rss>

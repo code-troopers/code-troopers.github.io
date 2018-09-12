@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Stage on Code-Troopers</title>
+        <link>/tags/stage/</link>
+        <description>Recent content in Stage on Code-Troopers</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>fr-fr</language>
+        <lastBuildDate>Tue, 06 Feb 2018 00:00:00 +0000</lastBuildDate>
+        
+        <atom:link href="/tags/stage/index.xml" rel="self" type="application/rss+xml" />
+        
+        
+        <item>
+            <title>Stage 2018</title>
+            <link>/2018/02/06/stages-2018/</link>
+            <pubDate>Tue, 06 Feb 2018 00:00:00 +0000</pubDate>
+            
+            <guid>/2018/02/06/stages-2018/</guid>
+            <description>Avec un peu de retard, voici nos offres de stages pour 2018, ça se passe toujours à MAME, le baby-foot est toujours à proximité pour se détendre entre deux lignes de codes.
+   Administration système : Stage_2018_4DMIN : Attribué
+  Développement Frontend et/ou Backend : Stage_2018_CR4
+  Développement Frontend et/ou Backend : Stage_2018_W3
+   Il s&amp;#8217;agit pour la plupart de projets déjà en production donc du travail de qualité est attendu !</description>
+        </item>
+        
+        <item>
+            <title>Stage 2017</title>
+            <link>/2016/12/21/stages-2017/</link>
+            <pubDate>Wed, 21 Dec 2016 00:00:00 +0000</pubDate>
+            
+            <guid>/2016/12/21/stages-2017/</guid>
+            <description>[EDIT] : nous ne cherchons plus de stagiaires pour cette année. Rendez-vous l&amp;#8217;année prochaine.
+ C&amp;#8217;est une première depuis la création de Code-Troopers, nous sommes prêts à accueillir, encadrer et former des stagiaires !
+ En effet, maintenant que nous sommes bien au chaud dans nos locaux à MAME nous avons assez de place pour recevoir du monde. Nous souhaitons donc offrir l&amp;#8217;opportunité à ceux qui le souhaitent de venir travailler pour un temps avec nous.</description>
+        </item>
+        
+    </channel>
+</rss>

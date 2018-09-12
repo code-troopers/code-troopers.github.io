@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Macro on Code-Troopers</title>
+        <link>/tags/macro/</link>
+        <description>Recent content in Macro on Code-Troopers</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>fr-fr</language>
+        <lastBuildDate>Wed, 11 May 2016 00:00:00 +0000</lastBuildDate>
+        
+        <atom:link href="/tags/macro/index.xml" rel="self" type="application/rss+xml" />
+        
+        
+        <item>
+            <title>Macro Vim : C&#39;est trop génial</title>
+            <link>/2016/05/11/vim_macro/</link>
+            <pubDate>Wed, 11 May 2016 00:00:00 +0000</pubDate>
+            
+            <guid>/2016/05/11/vim_macro/</guid>
+            <description>Comme certains d&amp;#8217;entre vous le savent, j&amp;#8217;aime beaucoup Vim. Il n&amp;#8217;y a pas très longtemps au Tours JUG, je disais que je n&amp;#8217;avais pas de cas d&amp;#8217;utilisation des macro dans Vim dont certains disent que c&amp;#8217;est LA killer feature. Et bien j&amp;#8217;ai trouvé un use case et « c&amp;#8217;est trop génial ! » comme dirait Agnès.
+  
+ Angular2 et macros Vim Les vidéos de Devoxx 2016 sont sorties, dont Angular 2 : Préparez vous dès maintenant à la migration (Benoit Lemoine).</description>
+        </item>
+        
+    </channel>
+</rss>

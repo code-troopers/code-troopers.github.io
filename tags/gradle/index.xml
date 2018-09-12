@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Gradle on Code-Troopers</title>
+        <link>/tags/gradle/</link>
+        <description>Recent content in Gradle on Code-Troopers</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>fr-fr</language>
+        <lastBuildDate>Wed, 04 Nov 2015 00:00:00 +0000</lastBuildDate>
+        
+        <atom:link href="/tags/gradle/index.xml" rel="self" type="application/rss+xml" />
+        
+        
+        <item>
+            <title>Android : Publier son apk en ligne de commande</title>
+            <link>/2015/11/04/android_publier_apk_avec_gradle/</link>
+            <pubDate>Wed, 04 Nov 2015 00:00:00 +0000</pubDate>
+            
+            <guid>/2015/11/04/android_publier_apk_avec_gradle/</guid>
+            <description>Lorsque l’on fait du développement Android, on a régulièrement besoin de publier des nouvelles versions de l&amp;rsquo;application sur le Play Store. Il est assez fastidieux de devoir se connecter à l’interface de Google, de sélectionner le projet et ensuite d’uploader son nouvel apk.
+Heureusement pour nous, Google a prévu le coup avec une API que l’on peut attaquer en ligne de commande. Et, encore plus sympa, Björn Hurling a publié sur github un plugin gradle qui utilise cette API.</description>
+        </item>
+        
+    </channel>
+</rss>

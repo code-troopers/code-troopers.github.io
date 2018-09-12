@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Windows on Code-Troopers</title>
+        <link>/tags/windows/</link>
+        <description>Recent content in Windows on Code-Troopers</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>fr-fr</language>
+        <lastBuildDate>Wed, 01 Oct 2014 00:00:00 +0000</lastBuildDate>
+        
+        <atom:link href="/tags/windows/index.xml" rel="self" type="application/rss+xml" />
+        
+        
+        <item>
+            <title>Babun un shell sous Windows</title>
+            <link>/2014/10/01/babun/</link>
+            <pubDate>Wed, 01 Oct 2014 00:00:00 +0000</pubDate>
+            
+            <guid>/2014/10/01/babun/</guid>
+            <description>Oh non, mon client m&amp;rsquo;oblige à être sous Windows Malheureusement, il est fréquent que nous soyons forcés de travailler sous un environnement que nous n&amp;rsquo;aimons pas. Les raisons sont souvent diverses mais sont presque toujours inflexibles. Le problème est que lorsqu&amp;rsquo;on est habitué à une ligne de commande puissante, le fait d&amp;rsquo;être sous Windows devient un réel handicap.
+Donnez moi un shell ! Bien sûr, la plupart d&amp;rsquo;entre vous connaîssent Cygwin, qui permet de résoudre bien des problèmes, mais qui en créé aussi un paquet avant d&amp;rsquo;avoir une installation complète et qui fonctionne comme attendu.</description>
+        </item>
+        
+    </channel>
+</rss>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Fil Bleu on Code-Troopers</title>
+        <link>/tags/fil-bleu/</link>
+        <description>Recent content in Fil Bleu on Code-Troopers</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>fr-fr</language>
+        <lastBuildDate>Fri, 05 Dec 2014 00:00:00 +0000</lastBuildDate>
+        
+        <atom:link href="/tags/fil-bleu/index.xml" rel="self" type="application/rss+xml" />
+        
+        
+        <item>
+            <title>Navig&#39;Tours est disponible</title>
+            <link>/2014/12/05/navigtours_application_android_disponible/</link>
+            <pubDate>Fri, 05 Dec 2014 00:00:00 +0000</pubDate>
+            
+            <guid>/2014/12/05/navigtours_application_android_disponible/</guid>
+            <description>Ça y est ! L&amp;rsquo;application est disponible pour tout le monde sur le Play store.
+          Merci aux testeurs Nous avions lancé l&amp;rsquo;application en test lors de la soirée bêta organisée par @paloaltours à la cantine de Tours le 21 octobre dernier. Grâce à cela, et au retours de plus de 70 testeurs, nous avons amélioré certaines choses et même corrigé quelques (rares) bugs.</description>
+        </item>
+        
+        <item>
+            <title>Appli Navig&#39;Tours : ouverture aux bêta-testeurs</title>
+            <link>/2014/10/22/filbleu_tours_application_android/</link>
+            <pubDate>Wed, 22 Oct 2014 00:00:00 +0000</pubDate>
+            
+            <guid>/2014/10/22/filbleu_tours_application_android/</guid>
+            <description>Depuis déjà quelques temps, l&#39;équipe travaille sur une application Android pour consulter les horaires des bus et tram du réseau Fil Bleu.  Et comme hier soir a eu lieu la première soirée bêta-test organisée à la cantine de Tours, nous avons décidé de lancer officiellement notre campagne de bêta-test aujourd&#39;hui. Pourquoi une telle application ?  Nous sommes tous les 7 tourangeaux, il nous arrive donc parfois de prendre le bus, et bien que le site Fil Bleu soit de mieux en mieux chaque année, il n&#39;offre pas toutes les fonctionnalités et ni le confort que peut apporter une application mobile.</description>
+        </item>
+        
+    </channel>
+</rss>

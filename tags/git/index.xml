@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Git on Code-Troopers</title>
+        <link>/tags/git/</link>
+        <description>Recent content in Git on Code-Troopers</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>fr-fr</language>
+        <lastBuildDate>Thu, 16 Jul 2015 00:00:00 +0000</lastBuildDate>
+        
+        <atom:link href="/tags/git/index.xml" rel="self" type="application/rss+xml" />
+        
+        
+        <item>
+            <title>GIT-SVN comment survivre dans un environnement hostile</title>
+            <link>/2015/07/16/gitsvn/</link>
+            <pubDate>Thu, 16 Jul 2015 00:00:00 +0000</pubDate>
+            
+            <guid>/2015/07/16/gitsvn/</guid>
+            <description>Git c’est cool, Git c’est Hype, Git c’est tout récent (enfin presque) et c’est pour ça qu’on aime bien. Mais pour beaucoup Git c’est nouveau, donc c’est le changement, donc c’est compliqué, et c’est pour ça que plein de boîtes préfèrent garder leur serveur svn.
+Je vais tenter ici, de vous donner les principales commandes de Git-SVN. Ainsi si vous vous trouvez dans une boîte qui ne veut pas changer son scm mais que vous, vous avez envie de changement, vous pourrez donc utiliser la puissance de Git.</description>
+        </item>
+        
+        <item>
+            <title>git : quelques astuces de configuration pour vos dotfiles</title>
+            <link>/2015/05/22/dotfiles-git/</link>
+            <pubDate>Fri, 22 May 2015 00:00:00 +0000</pubDate>
+            
+            <guid>/2015/05/22/dotfiles-git/</guid>
+            <description>Cet article est le deuxième de la série des dotfiles. Voir l&amp;rsquo;article sur vimrc. Nous allons ici aborder quelques configurations indispensables de git.
+La base Si vous utilisez git, vous avez forcément fait des commandes de base pour rentrer votre nom et votre email (indispensable pour pusher vos commits)
+$ git config --global user.name &amp;quot;Jango Fett&amp;quot; $ git config --global user.email &amp;quot;jango.fett@code-troopers.com&amp;quot;  Ceci a pour but d&amp;rsquo;écrire dans votre fichier ~/.</description>
+        </item>
+        
+        <item>
+            <title>k is the new l, yo</title>
+            <link>/2014/05/14/kisthenewl/</link>
+            <pubDate>Wed, 14 May 2014 00:00:00 +0000</pubDate>
+            
+            <guid>/2014/05/14/kisthenewl/</guid>
+            <description>ls est une des commandes shell les plus utilisées, pourtant depuis les années 70 elle a très peu changé. Bien sûr, il y a de nombreuses options, citons ls -a pour afficher les fichiers cachés, ls -l pour afficher plus d&amp;rsquo;informations, ls --color pour afficher deux couleurs, une pour les fichiers et une pour les répertoires, ou encore ls -rtl pour trier le contenu par date et afficher le plus récent en dernier.</description>
+        </item>
+        
+    </channel>
+</rss>

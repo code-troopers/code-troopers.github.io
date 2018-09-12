@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Shell on Code-Troopers</title>
+        <link>/tags/shell/</link>
+        <description>Recent content in Shell on Code-Troopers</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>fr-fr</language>
+        <lastBuildDate>Mon, 09 Jul 2018 00:00:00 +0000</lastBuildDate>
+        
+        <atom:link href="/tags/shell/index.xml" rel="self" type="application/rss+xml" />
+        
+        
+        <item>
+            <title>Faire du json comme si on faisait du sed (*)</title>
+            <link>/2018/07/09/jq/</link>
+            <pubDate>Mon, 09 Jul 2018 00:00:00 +0000</pubDate>
+            
+            <guid>/2018/07/09/jq/</guid>
+            <description>Nous usons et abusons de Trello pour nos projets. Pour un projet en particulier, je voulais retrouver certains commentaires répartis sur plusieurs mois. Juste en regardant les cartes une par une ou en regardant l&amp;#8217;historique serait trop fastidieux. Heureusement chaque board Trello permet un export au format json qui nous permet de s&amp;#8217;en servir à notre guise.
+ Je veux juste sortir quelques données, je ne referai jamais la même chose plusieurs fois et je veux que ça me prenne 10 minutes max donc un projet java c&amp;#8217;est juste impensable, un langage de script sera plus adapté et ça tombe bien car d&amp;#8217;une part le shell (la ligne de commande) est un de mes langages préférés et j&amp;#8217;ai découvert jq il n&amp;#8217;y a pas longtemps.</description>
+        </item>
+        
+        <item>
+            <title>vim : 10 astuces de configuration pour vos dotfiles</title>
+            <link>/2015/05/15/dotfiles-vim/</link>
+            <pubDate>Fri, 15 May 2015 00:00:00 +0000</pubDate>
+            
+            <guid>/2015/05/15/dotfiles-vim/</guid>
+            <description>Cet article sera le premier d&amp;rsquo;une série consacrée aux dotfiles. Alors les dotfiles, qu&amp;rsquo;est-ce que c&amp;rsquo;est Obi-Wan ? Les dotfiles, ce sont tous les fichiers texte de configuration que l&amp;rsquo;on peut retrouver dans son répertoire utilisateur pour sauvegarder ses préférences. De nombreux logiciels utilisent cette méthode. On peut citer gnome, IntelliJ, Maven, ssh, git, bash et tant d&amp;rsquo;autres. On les appelle dotfiles −que l&amp;rsquo;on peut traduire par fichiers point− parce qu&amp;rsquo;ils ont un nom qui commence par un point, ce qui correspond aux fichiers cachés sous linux.</description>
+        </item>
+        
+        <item>
+            <title>ct - alias de projets</title>
+            <link>/2014/12/15/ct_project_alias/</link>
+            <pubDate>Mon, 15 Dec 2014 00:00:00 +0000</pubDate>
+            
+            <guid>/2014/12/15/ct_project_alias/</guid>
+            <description>Dans l’équipe Code-Troopers, nous manipulons des technos qui sont assez différentes et qui possèdent chacune un vocabulaire différent qui leur permet de fonctionner en ligne de commande. Du coup, un de nos problèmes récurrents est de se rappeler quelle commande dois-je lancer lorsque je veux travailler sur tel projet (mvn jetty:run, gradle assemble, grunt serve…).
+Un autre aspect pénible à avoir plein de façons différentes de fonctionner est qu’il est quasiment impossible d’avoir des alias pertinents dans son shell préféré.</description>
+        </item>
+        
+        <item>
+            <title>Babun un shell sous Windows</title>
+            <link>/2014/10/01/babun/</link>
+            <pubDate>Wed, 01 Oct 2014 00:00:00 +0000</pubDate>
+            
+            <guid>/2014/10/01/babun/</guid>
+            <description>Oh non, mon client m&amp;rsquo;oblige à être sous Windows Malheureusement, il est fréquent que nous soyons forcés de travailler sous un environnement que nous n&amp;rsquo;aimons pas. Les raisons sont souvent diverses mais sont presque toujours inflexibles. Le problème est que lorsqu&amp;rsquo;on est habitué à une ligne de commande puissante, le fait d&amp;rsquo;être sous Windows devient un réel handicap.
+Donnez moi un shell ! Bien sûr, la plupart d&amp;rsquo;entre vous connaîssent Cygwin, qui permet de résoudre bien des problèmes, mais qui en créé aussi un paquet avant d&amp;rsquo;avoir une installation complète et qui fonctionne comme attendu.</description>
+        </item>
+        
+        <item>
+            <title>oh-my-zsh : l&#39;outil indispensable pour avoir un zsh bien configuré.</title>
+            <link>/2014/09/17/ohmyzsh/</link>
+            <pubDate>Wed, 17 Sep 2014 00:00:00 +0000</pubDate>
+            
+            <guid>/2014/09/17/ohmyzsh/</guid>
+            <description>Introduction Que l&amp;rsquo;on soit dev, ops, sysadmin ou autre pour effectuer nos tâches répétitives et quotidiennes on a généralement deux possibilités : une première communément appelée &amp;ldquo;clic-clic&amp;rdquo; qui consiste à utiliser les interfaces graphiques aussi souvent que possible (afin de perdre un maximum de temps) ; et une seconde qualifiée de &amp;ldquo;barbue&amp;rdquo; qui elle est orientée ligne de commande, scripting et automatisation. Nous les Code-Troopers, on est plutôt technique de barbus !</description>
+        </item>
+        
+        <item>
+            <title>k is the new l, yo</title>
+            <link>/2014/05/14/kisthenewl/</link>
+            <pubDate>Wed, 14 May 2014 00:00:00 +0000</pubDate>
+            
+            <guid>/2014/05/14/kisthenewl/</guid>
+            <description>ls est une des commandes shell les plus utilisées, pourtant depuis les années 70 elle a très peu changé. Bien sûr, il y a de nombreuses options, citons ls -a pour afficher les fichiers cachés, ls -l pour afficher plus d&amp;rsquo;informations, ls --color pour afficher deux couleurs, une pour les fichiers et une pour les répertoires, ou encore ls -rtl pour trier le contenu par date et afficher le plus récent en dernier.</description>
+        </item>
+        
+    </channel>
+</rss>

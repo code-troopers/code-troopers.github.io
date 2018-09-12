@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Développement on Code-Troopers</title>
+        <link>/tags/d%C3%A9veloppement/</link>
+        <description>Recent content in Développement on Code-Troopers</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>fr-fr</language>
+        <lastBuildDate>Wed, 01 Jan 2014 00:00:00 +0000</lastBuildDate>
+        
+        <atom:link href="/tags/d%C3%A9veloppement/index.xml" rel="self" type="application/rss+xml" />
+        
+        
+        <item>
+            <title>C&#39;est reparti pour un tour</title>
+            <link>/2014/01/01/cestreparti/</link>
+            <pubDate>Wed, 01 Jan 2014 00:00:00 +0000</pubDate>
+            
+            <guid>/2014/01/01/cestreparti/</guid>
+            <description>Salut à vous jeunes padawans et bienvenue sur le nouveau blog des Code-Troopers tourangeaux.
+Le redesign du site indique le réel lancement d&#39;activité de Code-Troopers, nous sommes aujourd&#39;hui 7 développeurs disponibles afin de réaliser des projets, alors n&#39;hésitez pas à nous contacter ou à parler de nous. Vous pouvez aussi nous suivre sur les différents réseaux sociaux pour être au courant de notre actualité ainsi que les nouveaux articles de ce blog.</description>
+        </item>
+        
+    </channel>
+</rss>

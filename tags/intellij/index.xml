@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Intellij on Code-Troopers</title>
+        <link>/tags/intellij/</link>
+        <description>Recent content in Intellij on Code-Troopers</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>fr-fr</language>
+        <lastBuildDate>Wed, 10 Jun 2015 00:00:00 +0000</lastBuildDate>
+        
+        <atom:link href="/tags/intellij/index.xml" rel="self" type="application/rss+xml" />
+        
+        
+        <item>
+            <title>Améliorer la complétion JavaScript d&#39;IntelliJ IDEA</title>
+            <link>/2015/06/10/completionjavascriptdansintellij/</link>
+            <pubDate>Wed, 10 Jun 2015 00:00:00 +0000</pubDate>
+            
+            <guid>/2015/06/10/completionjavascriptdansintellij/</guid>
+            <description>IntelliJ IDEA Tout le monde sait que nous adorons utiliser IntelliJ IDEA pour développer. Peu importe le langage IntelliJ est vraiment un excellent IDE qui nous permet d&amp;rsquo;être efficaces quasiment instantanément.
+Par contre, quand on arrive dans le monde du JavaScript on peut avoir quelques soucis pour être dans un environnement suffisamment typé où l&amp;rsquo;on sait ce qu&amp;rsquo;on va faire sans se poser trop de questions, ou tout simplement pouvoir bénéficier de l&amp;rsquo;aide de l&amp;rsquo;IDE pour savoir de quelles méthodes on dispose.</description>
+        </item>
+        
+    </channel>
+</rss>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Tips on Code-Troopers</title>
+        <link>/tags/tips/</link>
+        <description>Recent content in Tips on Code-Troopers</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>fr-fr</language>
+        <lastBuildDate>Wed, 11 May 2016 00:00:00 +0000</lastBuildDate>
+        
+        <atom:link href="/tags/tips/index.xml" rel="self" type="application/rss+xml" />
+        
+        
+        <item>
+            <title>Macro Vim : C&#39;est trop génial</title>
+            <link>/2016/05/11/vim_macro/</link>
+            <pubDate>Wed, 11 May 2016 00:00:00 +0000</pubDate>
+            
+            <guid>/2016/05/11/vim_macro/</guid>
+            <description>Comme certains d&amp;#8217;entre vous le savent, j&amp;#8217;aime beaucoup Vim. Il n&amp;#8217;y a pas très longtemps au Tours JUG, je disais que je n&amp;#8217;avais pas de cas d&amp;#8217;utilisation des macro dans Vim dont certains disent que c&amp;#8217;est LA killer feature. Et bien j&amp;#8217;ai trouvé un use case et « c&amp;#8217;est trop génial ! » comme dirait Agnès.
+  
+ Angular2 et macros Vim Les vidéos de Devoxx 2016 sont sorties, dont Angular 2 : Préparez vous dès maintenant à la migration (Benoit Lemoine).</description>
+        </item>
+        
+        <item>
+            <title>Installer votre dépot privé Docker</title>
+            <link>/2015/06/25/installdockerregistry/</link>
+            <pubDate>Thu, 25 Jun 2015 00:00:00 +0000</pubDate>
+            
+            <guid>/2015/06/25/installdockerregistry/</guid>
+            <description>Petit à petit chez Code-Troopers, nous migrons tous nos développements pour utiliser Docker. Cela fait quelque temps que nous l&amp;rsquo;utilisons pour des projets &amp;ldquo;public&amp;rdquo;, auquel cas le registry public Docker est largement suffisant (et immédiat à utiliser).
+En revanche, nous commençons à migrer nos applications de production également vers Docker, et nous ne pouvons pas utiliser le mode public du registry public. Nous nous sommes donc mis à déployer un dépôt privé, authentifié par utilisateur / mot de passe.</description>
+        </item>
+        
+        <item>
+            <title>Babun un shell sous Windows</title>
+            <link>/2014/10/01/babun/</link>
+            <pubDate>Wed, 01 Oct 2014 00:00:00 +0000</pubDate>
+            
+            <guid>/2014/10/01/babun/</guid>
+            <description>Oh non, mon client m&amp;rsquo;oblige à être sous Windows Malheureusement, il est fréquent que nous soyons forcés de travailler sous un environnement que nous n&amp;rsquo;aimons pas. Les raisons sont souvent diverses mais sont presque toujours inflexibles. Le problème est que lorsqu&amp;rsquo;on est habitué à une ligne de commande puissante, le fait d&amp;rsquo;être sous Windows devient un réel handicap.
+Donnez moi un shell ! Bien sûr, la plupart d&amp;rsquo;entre vous connaîssent Cygwin, qui permet de résoudre bien des problèmes, mais qui en créé aussi un paquet avant d&amp;rsquo;avoir une installation complète et qui fonctionne comme attendu.</description>
+        </item>
+        
+        <item>
+            <title>Résoudre les conflits de dépendances</title>
+            <link>/2014/09/01/conflitsdependances/</link>
+            <pubDate>Mon, 01 Sep 2014 00:00:00 +0000</pubDate>
+            
+            <guid>/2014/09/01/conflitsdependances/</guid>
+            <description>Lors de nos développements, nous reposons beaucoup sur des projets externes qui nous fournissent énormément de services utiles. Dans un récent projet, nous avons eu besoin de faire fonctionner Neo4j conjointement à ElasticSearch. Jusqu&amp;rsquo;ici, aucun soucis n&amp;rsquo;est à déplorer, mais nous avions une exigence particulière : il fallait que l&amp;rsquo;application puisse démarrer automatiquement un serveur Neo4J ainsi qu&amp;rsquo;un serveur ElasticSearch sur les postes de développements (ainsi que pour les tests d&amp;rsquo;intégration).</description>
+        </item>
+        
+    </channel>
+</rss>

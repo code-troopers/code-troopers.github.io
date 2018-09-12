@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Xml on Code-Troopers</title>
+        <link>/tags/xml/</link>
+        <description>Recent content in Xml on Code-Troopers</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>fr-fr</language>
+        <lastBuildDate>Mon, 03 Oct 2016 00:00:00 +0000</lastBuildDate>
+        
+        <atom:link href="/tags/xml/index.xml" rel="self" type="application/rss+xml" />
+        
+        
+        <item>
+            <title>Android Annotations : Abusez-en !</title>
+            <link>/2016/10/03/android-annotations-lib/</link>
+            <pubDate>Mon, 03 Oct 2016 00:00:00 +0000</pubDate>
+            
+            <guid>/2016/10/03/android-annotations-lib/</guid>
+            <description>Dans le lot des supports librairies que propose Google pour le développement Android (principalement pour la compatibilité de certains composants sur des anciennes versions de l&amp;#8217;OS) il y en a une qui de prime abord ne va pas beaucoup servir c&amp;#8217;est support-annotations.
+ En effet cette librairie ne contient pas grand chose en terme de classes ni de méthodes. En revanche elle possède de nombreuses annotations (d&amp;#8217;où son nom&amp;#8230;&amp;#8203;). Le comble c&amp;#8217;est que presque toutes ces annotations sont définie en tant que @Retention(CLASS), c&amp;#8217;est-à-dire qu&amp;#8217;elles seront conservées lors la génération des fichiers .</description>
+        </item>
+        
+    </channel>
+</rss>

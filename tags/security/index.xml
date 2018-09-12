@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Security on Code-Troopers</title>
+        <link>/tags/security/</link>
+        <description>Recent content in Security on Code-Troopers</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>fr-fr</language>
+        <lastBuildDate>Wed, 05 Mar 2014 00:00:00 +0000</lastBuildDate>
+        
+        <atom:link href="/tags/security/index.xml" rel="self" type="application/rss+xml" />
+        
+        
+        <item>
+            <title>Strength Password Indicator Pour Play2</title>
+            <link>/2014/03/05/passwordstrength/</link>
+            <pubDate>Wed, 05 Mar 2014 00:00:00 +0000</pubDate>
+            
+            <guid>/2014/03/05/passwordstrength/</guid>
+            <description>Introduction Le grand public commence tout doucement à être sensibilisé à l’importance d’avoir un mot de passe sécurisé, en partie grâce aux reportages TV de plus en plus nombreux sur ce domaine, mais surtout par les différentes fuites ou vols de bases de données qui arrivent de plus en plus fréquemment.
+Il faut donc profiter de cette sensibiliation et en tant que développeurs, nous avons la possibilité d&amp;rsquo;inciter nos utilisateurs à utiliser un bon mot de passe.</description>
+        </item>
+        
+    </channel>
+</rss>

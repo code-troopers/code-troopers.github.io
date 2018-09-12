@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Outil on Code-Troopers</title>
+        <link>/tags/outil/</link>
+        <description>Recent content in Outil on Code-Troopers</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>fr-fr</language>
+        <lastBuildDate>Fri, 08 Aug 2014 00:00:00 +0000</lastBuildDate>
+        
+        <atom:link href="/tags/outil/index.xml" rel="self" type="application/rss+xml" />
+        
+        
+        <item>
+            <title>Elcurator, le nouvel outil de curation par Octo</title>
+            <link>/2014/08/08/elcurator/</link>
+            <pubDate>Fri, 08 Aug 2014 00:00:00 +0000</pubDate>
+            
+            <guid>/2014/08/08/elcurator/</guid>
+            <description>1 - La curation Fatigué de partager vos bons liens à vos collègues par irc, hipchat ou mail et que 2 jours plus tard on vous les redemande pour la 5ème fois ? Dans ce cas c&amp;rsquo;est que vous avez besoin d&amp;rsquo;un outil de curation. Derrière ce mot plutôt moche se cache le principe de veille technologique à l&amp;rsquo;échelle de l&amp;rsquo;entreprise. Cela permet de concentrer les efforts en la matière en un seul endroit pour que toute une équipe (ou société, ou autre) puisse en bénéficier.</description>
+        </item>
+        
+    </channel>
+</rss>
