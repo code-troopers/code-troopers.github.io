@@ -9,13 +9,13 @@ title: 'SEO et Single Page Application = 🤬'
 url: /2018/08/30/angular-seo/
 ---
 
-Lorsque nous avons commencé à développer WeGuide (weguide.fr), nous avons pas mal réfléchi à quelle framework utilisé pour réalisé la partie front et, du fait de notre expérience, avons choisi Angular.
-Nous connaissions les problèmes liés aux Single Page Application et au SEO mais nous pensions pouvoir les résoudre facilement par la suite.
+Lorsque nous avons commencé à développer WeGuide (https://weguide.fr), nous avons pas mal réfléchi à quel framework utiliser pour réaliser la partie front et, du fait de notre expérience, avons choisi Angular.
+Nous connaissions les problèmes liés aux *Single Page Application* et au *SEO* mais nous pensions pouvoir les résoudre facilement par la suite.
 Au final, c'était un peu plus compliqué que prévu et nous allons expliquer pourquoi dans la suite de cet article.
 
 == Niveau facile : rendre les balises `meta` dynamiques
 
-Angular fournit deux services afin de modifier les balises HTML destinées au SEO lors de l'affichage d'une page, `Meta` et `Title` qui, comme leur nom l'indique, permettent de modifier les balises `<meta>` et `<title>`.
+Angular fournit deux services afin de modifier les balises *HTML* destinées au *SEO* lors de l'affichage d'une page, `Meta` et `Title` qui, comme leur nom l'indique, permettent de modifier les balises `<meta>` et `<title>`.
 
 Voici un exemple de service créé pour mettre à jour les balises meta destinées à l'OpenGraph et à Twitter.
 
@@ -61,12 +61,10 @@ export class SeoService {
 }
 ----
 
-Une fois que ces modifications faites, vous pouvez vérifier que 
+== Niveau moyen : générer un sitemap dynamiquement
 
-== Niveau moyen : générere un sitemap dynamiquement
-
-Une autre partie du SEO indispensable est le sitemaps.
-Il permet aux robots de savoir exactement quelles page indexer.
+Une autre partie du SEO indispensable est le sitemap.
+Il permet aux robots de savoir exactement quelles pages indexer.
 Problème, sur une application comme WeGuide, nous ne pouvons pas écrire ce fichier en dur, en effet, des nouveaux guides crééent leur profil tous les jours sur la plateforme, ce qui veut dire, une nouvelle url en plus à indexer.
 
 Pour remedier à cela c'est assez simple, il faut que le fichier soit dynamique et généré à la volée par votre serveur.
@@ -74,7 +72,7 @@ Pour faire cela, il suffit de servir une route `/sitemap` qui retourne un fichie
 
 Voici un exemple sur une application *Spring Boot* en *Kotlin*
 
-[source, Java]
+[source, java]
 ----
 @Component
 class SitemapView(@Autowired val sitemapService: SitemapService) : AbstractView() {
@@ -101,7 +99,7 @@ Pour générer le fichier *XML*, nous avons utilisé cette librairie https://git
 == Niveau dur : faire un rendu serveur uniquement lors de l'appel par les robots
 
 La dernière étape est la plus compliqué.
-Il faut ajouter une logique au niveau du serveur front qui, si l'appel vient d'un robot, le redirige vers un service permettant de générer le code HTML final de notre page car le problème des robots c'est que 1, ils n'aiment pas le javascript et 2, ils n'aiment pas attendre.
+Il faut ajouter une logique au niveau du serveur front qui, si l'appel vient d'un robot, le redirige vers un service permettant de générer le code *HTML* final de notre page car le problème des robots c'est que 1, ils n'aiment pas le javascript et 2, ils n'aiment pas attendre.
 
 Le service en question que nous avons choisi se nomme *Rendertron* (https://github.com/GoogleChrome/rendertron). Ce n'est rien d'autre qu'un *Google Chrome* headless auquel on envoie l'url de la page que l'on désire et nous renvoie le code HTML en réponse.
 
@@ -111,7 +109,7 @@ Cette librairie fournit directement un filtre HTTP permettant de rediriger vers 
 Il nous a suffit de brancher ce filtre au niveau de Spring Boot comme ceci :
 
 
-[source, Java]
+[source, java]
 ----
 @Bean
 public FilterRegistrationBean registerSeoFilter() {
@@ -129,7 +127,11 @@ public FilterRegistrationBean registerSeoFilter() {
 }
 ----
 
-== Niveau hardcore : déployer Rendertron sur AWS
+== Tests
 
-TODO
+Une fois que vous avez fait toutes vos modifications, vous pouvez tester le bon fonctionnement grâce à plusieurs outils :
 
+* https://cards-dev.twitter.com/validator : le système de *Twitter* pour vérifier l'aperçu d'un lien quand on le partage dans un tweet.
+* https://search.google.com/search-console : la *Google Search Console*, l'outil de *Google* vous permet de voir le *HTML* ou même une capture d'écran d'une URL de votre site de la façon dont voit le robot d'indexation de *Google*. Il vous permet aussi de consulter le sitemap et voir si ses urls ont bien été indexées.
+
+Enfin vous n'avez plus qu'à attendre quelques jours que les différents robots passent sur votre site afin de voir les résultats sur les différents moteurs de recherche.
