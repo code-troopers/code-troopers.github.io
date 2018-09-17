@@ -119,6 +119,10 @@ export default function() {
       }),
       new CopyWebpackPlugin([
         {
+          from: 'index.xml',
+          to: '../dist/index.xml'
+        },
+        {
           from: 'favicon.ico',
           to: '../dist/favicon.ico'
         },

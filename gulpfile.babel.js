@@ -12,7 +12,7 @@ import webpackConfig from './webpack.conf';
 import webpackDevConfig from './webpack.conf.dev';
 
 const hugoBin = 'hugo';
-const defaultArgs = ['-d', 'dist', '--config', 'config.yml', '-v', '-t', 'code-troopers'];
+const defaultArgs = ['-d', '.tmp', '--config', 'config.yml', '-v', '-t', 'code-troopers'];
 
 const browserSync = BrowserSync.create();
 
@@ -52,8 +52,8 @@ gulp.task('serve-dev', ['hugo-dev'], () => {
 
 
 
-gulp.task('hugo-dist', ['clean'], (cb) => buildSite(cb, []));
-gulp.task('hugo-dev', ['clean'], (cb) => buildSite(cb, ['--buildDrafts', '--buildFuture'], { WEBPACK_HOT: true }));
+gulp.task('hugo-dist', ['clean'], (cb) => buildSite(cb, ['-d', '.tmp']));
+gulp.task('hugo-dev', ['clean'], (cb) => buildSite(cb, ['-d', 'dist', '--buildDrafts', '--buildFuture'], { WEBPACK_HOT: true }));
 
 gulp.task('clean', () => {
   if (process.env.SKIP_CLEAN){
