@@ -11,7 +11,7 @@ url: /2018/09/16/angular-seo/
 
 :linkattrs:
 
-Lorsque nous avons commencé à développer https://www.weguide.fr[WeGuide,window="_blank"], nous avons pas mal réfléchi à quel framework utiliser pour réaliser la partie front et, du fait de notre expérience, avons choisi Angular.
+Lorsque nous avons commencé à développer https://www.weguide.fr[We Guide,window="_blank"], nous avons pas mal réfléchi à quel framework utiliser pour réaliser la partie front et, du fait de notre expérience, avons choisi *Angular*.
 Nous connaissions les problèmes liés aux *Single Page Application* et au *SEO* mais nous pensions pouvoir les résoudre facilement par la suite.
 Au final, c'était un peu plus compliqué que prévu et nous allons expliquer pourquoi dans la suite de cet article.
 
@@ -65,9 +65,9 @@ export class SeoService {
 
 == Niveau moyen : générer un sitemap dynamiquement
 
-Une autre partie du SEO indispensable est le sitemap.
+Une autre partie du *SEO* indispensable est le sitemap.
 Il permet aux robots de savoir exactement quelles pages indexer.
-Problème, sur une application comme WeGuide, nous ne pouvons pas écrire ce fichier en dur, en effet, des nouveaux guides crééent leur profil tous les jours sur la plateforme, ce qui veut dire, une nouvelle url en plus à indexer.
+Problème, sur une application comme *We Guide*, nous ne pouvons pas écrire ce fichier en dur, en effet, des nouveaux guides crééent leur profil tous les jours sur la plateforme, ce qui veut dire, une nouvelle url en plus à indexer.
 
 Pour remedier à cela c'est assez simple, il faut que le fichier soit dynamique et généré à la volée par votre serveur.
 Pour faire cela, il suffit de servir une route `/sitemap` qui retourne un fichier *XML* généré à l'aide d'appel aux différents services de votre application.
@@ -101,14 +101,14 @@ Pour générer le fichier *XML*, nous avons utilisé cette librairie https://git
 == Niveau dur : faire un rendu serveur uniquement lors de l'appel par les robots
 
 La dernière étape est la plus compliqué.
-Il faut ajouter une logique au niveau du serveur front qui, si l'appel vient d'un robot, le redirige vers un service permettant de générer le code *HTML* final de notre page car le problème des robots c'est que 1, ils n'aiment pas le javascript et 2, ils n'aiment pas attendre.
+Il faut ajouter une logique au niveau du serveur front qui, si l'appel vient d'un robot, le redirige vers un service permettant de générer le code *HTML* final de notre page car le problème des robots c'est que un, ils n'aiment pas le javascript (le moteur utilisé n'est pas récent) et deux, ils n'aiment pas attendre.
 
-Le service en question que nous avons choisi se nomme *Rendertron* (https://github.com/GoogleChrome/rendertron[https://github.com/GoogleChrome/rendertron,window="_blank"]). Ce n'est rien d'autre qu'un *Google Chrome* headless auquel on envoie l'url de la page que l'on désire et nous renvoie le code HTML en réponse.
+Le service en question que nous avons choisi se nomme *Rendertron* (https://github.com/GoogleChrome/rendertron[https://github.com/GoogleChrome/rendertron,window="_blank"]). Ce n'est rien d'autre qu'un *Google Chrome* headless auquel on envoie l'url de la page que l'on désire et nous renvoie le code *HTML* en réponse.
 
-Pour décider si l'on doit faire du rendu côté serveur ou du rendu côté client, nous nous sommes inspiré d'une librairie Java https://github.com/greengerong/prerender-java[https://github.com/greengerong/prerender-java,window="_blank"].
-Cette librairie fournit directement un filtre HTTP permettant de rediriger vers une url si le `User-Agent` est compris dans la liste des robots de crawling.
+Pour décider si l'on doit faire du rendu côté serveur ou du rendu côté client, nous nous sommes inspirés d'une librairie Java https://github.com/greengerong/prerender-java[https://github.com/greengerong/prerender-java,window="_blank"].
+Cette librairie fournit directement un filtre *HTTP* permettant de rediriger vers une url si le `User-Agent` est compris dans la liste des robots de crawling.
 
-Il nous a suffit de brancher ce filtre au niveau de Spring Boot comme ceci :
+Il nous a suffit de brancher ce filtre au niveau de *Spring Boot* comme ceci :
 
 
 [source, java]
