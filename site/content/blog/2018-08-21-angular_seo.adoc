@@ -67,9 +67,9 @@ export class SeoService {
 
 Une autre partie du *SEO* indispensable est le sitemap.
 Il permet aux robots de savoir exactement quelles pages indexer.
-Problème, sur une application comme *We Guide*, nous ne pouvons pas écrire ce fichier en dur, en effet, des nouveaux guides crééent leur profil tous les jours sur la plateforme, ce qui veut dire, une nouvelle url en plus à indexer.
+Problème, sur une application comme *We Guide*, nous ne pouvons pas écrire ce fichier en dur, en effet, des nouveaux guides créent leur profil tous les jours sur la plateforme, ce qui veut dire, une nouvelle url en plus à indexer.
 
-Pour remedier à cela c'est assez simple, il faut que le fichier soit dynamique et généré à la volée par votre serveur.
+Pour remédier à cela c'est assez simple, il faut que le fichier soit dynamique et généré à la volée par votre serveur.
 Pour faire cela, il suffit de servir une route `/sitemap` qui retourne un fichier *XML* généré à l'aide d'appel aux différents services de votre application.
 
 Voici un exemple sur une application *Spring Boot* en *Kotlin*
