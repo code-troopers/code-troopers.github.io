@@ -13,7 +13,7 @@ RUN apt-get -qq update \
 RUN gem install --no-ri --no-rdoc asciidoctor pygments.rb
 
 # Download and install hugo
-ENV HUGO_VERSION 0.47.1
+ENV HUGO_VERSION 0.48
 ENV HUGO_BINARY hugo_${HUGO_VERSION}_Linux-64bit.deb
 ARG HUGO_URL
 ENV HUGO_URL https://github.com/spf13/hugo/releases/download/v${HUGO_VERSION}/${HUGO_BINARY}
