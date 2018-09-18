@@ -123,6 +123,10 @@ export default function() {
           to: '../dist/index.xml'
         },
         {
+            from: 'sitemap.xml',
+            to: '../dist/sitemap.xml'
+        },
+        {
           from: 'favicon.ico',
           to: '../dist/favicon.ico'
         },
