@@ -34,12 +34,17 @@
     {{ $cover = (printf "https://code-troopers.com/images/banner/%s.png" . ) }}
   {{ end }}
 
+  {{ $url := "https://code-troopers.com" }}
+  {{ with .URL }}
+    {{ $url = (printf "%s%s" "https://code-troopers.com" .) }}
+  {{ end }}
+
   <title>{{ $title }}</title>
   <meta name="viewport" content="user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1,width=device-width" />
 
   <meta property="og:title" content="{{ $title }}" />
   <meta property="og:site_name" content="Code-Troopers" />
-  <meta property="og:url" content="https://code-troopers.com/" />
+  <meta property="og:url" content="{{ $url }}" />
   <meta property="og:image" content="{{ $cover }}"/>
 
 
@@ -50,7 +55,7 @@
   <meta name="twitter:site" content="@codetroopers" />
   <meta name="twitter:creator" content="@codetroopers" />
   <meta name="twitter:title" content="{{ $title }}" />
-  <meta name="twitter:url" content="https://code-troopers.com/" />
+  <meta name="twitter:url" content="{{ $url }}" />
   <meta name="twitter:image" content="{{ $cover }}"/>
 
   <meta name="twitter:description" content="{{ $description }}" />
@@ -65,7 +70,7 @@
 
 
   <link href="https://code-troopers.com/index.xml" rel="alternate" type="application/rss+xml" title="Code-Troopers" />
-  <link rel="canonical" href="https://code-troopers.com/" />
+  <link rel="canonical" href="{{ $url }}" />
   <link rel="shortcut icon" href="/favicon.ico?v=2" type="image/x-icon">
   <link rel="icon" href="/favicon.ico?v=2" type="image/x-icon">
   <meta itemprop="name" content="Code-Troopers"/>
