@@ -7,3 +7,5 @@ site/static/css
 site/static/js
 site/.publish
 dist
+.tmp
+.DS_Store

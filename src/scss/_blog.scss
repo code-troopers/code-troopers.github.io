@@ -71,6 +71,12 @@ section#articles {
         max-width: 100%;
       }
 
+      .img-container{
+        height: 200px;
+        background-size: cover;
+        background-position: 50%;
+      }
+
       & > div {
         padding: 1rem 3rem;
         h2 {
