@@ -1,12 +1,12 @@
 ---
 author: Benjamin
 cover: angularseo-banner
-date: '2018-09-16'
+date: '2018-09-18'
 tags:
 - SEO
 - Angular
 title: 'SEO et Single Page Application = 🤬'
-url: /2018/09/16/angular-seo/
+url: /2018/09/18/angular-seo/
 ---
 
 :linkattrs:
