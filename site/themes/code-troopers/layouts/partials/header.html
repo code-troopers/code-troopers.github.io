@@ -10,13 +10,37 @@
   <!-- End Google Tag Manager -->
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Code-Troopers</title>
+
+  {{ $title := .Site.Title }}
+  {{ if eq .IsHome false}}
+    {{ if eq .Title "Works" }}
+      {{ $title = (printf "%s - %s" "Réalisations" .Site.Title ) }}
+    {{ else if eq .Title "Blogs" }}
+      {{ $title = (printf "%s - %s" "Blog" .Site.Title ) }}
+    {{ else }}
+      {{ $title = (printf "%s - %s" .Title .Site.Title ) }}
+    {{ end }}
+  {{ end }}
+
+  {{ $description := .Site.Params.description }}
+  {{ if eq .IsHome false }}
+    {{ with .Summary }}
+      {{ $description = . }}
+    {{ end }}
+  {{ end }}
+
+  {{ $cover := "https://code-troopers.com/images/banner/logo-banner.png" }}
+  {{ with .Params.cover }}
+    {{ $cover = (printf "https://code-troopers.com/images/banner/%s.png" . ) }}
+  {{ end }}
+
+  <title>{{ $title }}</title>
   <meta name="viewport" content="user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1,width=device-width" />
 
-  <meta property="og:title" content=" Code-Troopers" />
+  <meta property="og:title" content="{{ $title }}" />
   <meta property="og:site_name" content="Code-Troopers" />
   <meta property="og:url" content="https://code-troopers.com/" />
-  <meta property="og:image" content="https://code-troopers.com/images/banner/logo-banner.png"/>
+  <meta property="og:image" content="{{ $cover }}"/>
 
 
   <meta property="og:type" content="website" />
@@ -25,14 +49,13 @@
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@codetroopers" />
   <meta name="twitter:creator" content="@codetroopers" />
-  <meta name="twitter:title" content="Code-Troopers" />
+  <meta name="twitter:title" content="{{ $title }}" />
   <meta name="twitter:url" content="https://code-troopers.com/" />
+  <meta name="twitter:image" content="{{ $cover }}"/>
 
-
-  <meta name="twitter:description" content="Code-Troopers est une agence spécialisée dans le développement logiciel et la conception d’applications mobiles sur-mesure." />
-  <meta name="twitter:image" content="https://code-troopers.com/images/banner/logo-banner.png"/>
-  <meta name="description" content="Code-Troopers est une agence spécialisée dans le développement logiciel et la conception d’applications mobiles sur-mesure." />
-  <meta property="og:description" content="Code-Troopers est une agence spécialisée dans le développement logiciel et la conception d’applications mobiles sur-mesure."/>
+  <meta name="twitter:description" content="{{ $description }}" />
+  <meta name="description" content="{{ $description }}" />
+  <meta property="og:description" content="{{ $description }}"/>
 
 
   <meta name="p:domain_verify" content="fc173d84e3a4de948ed4bda2908afd3e"/>
