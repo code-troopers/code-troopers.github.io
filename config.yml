@@ -1,6 +1,6 @@
 baseurl: "/"
 languageCode: "fr-fr"
-title: "Code-Troopers"
+title: "Code-Troopers Conception d’applications web et mobiles sur-mesure"
 archetypeDir: "site/archetypes"
 contentDir: "site/content"
 dataDir: "site/data"
@@ -34,3 +34,5 @@ menu:
       URL: "/blog"
       Pre: "blog"
       Weight: 5
+params:
+    description: Code-Troopers est une agence spécialisée dans le développement logiciel et la conception d’applications mobiles sur-mesure. Analyse pour de grands groupes, développement natif multisupport pour des start-ups innovantes… Les membres de notre structure s’engagent dans des suivis complets, rigoureux, au plus près des différentes phases de vos projets informatiques.

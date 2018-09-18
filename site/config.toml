@@ -1,9 +1,0 @@
-baseurl = "https://code-troopers.com"
-languageCode = "fr-fr"
-title = "Code-Troopers"
-paginate = 6
-pygmentsuseclasses = true
-
-[params]
-Description = "Code-Troopers est une équipe de développeurs située à Tours, réalisant des projets aux environs de la Touraine et sur la région parisienne. Notre activité principale est le développement logiciel. Nos différents profils nous permettent d'être complets sur les différentes phases de réalisation de vos projets informatiques (analyse, architecture, design, …)."
-twitter = "codetroopers"
