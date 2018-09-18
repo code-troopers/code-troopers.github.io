@@ -15,7 +15,7 @@ Lorsque nous avons commencé à développer https://www.weguide.fr[We Guide,wind
 Nous connaissions les problèmes liés aux *Single Page Application* et au *SEO* mais nous pensions pouvoir les résoudre facilement par la suite.
 Au final, c'était un peu plus compliqué que prévu et nous allons expliquer pourquoi dans la suite de cet article.
 
-== Niveau facile : rendre les balises `meta` dynamiques
+== Les balises <meta>
 
 Angular fournit deux services afin de modifier les balises *HTML* destinées au *SEO* lors de l'affichage d'une page, `Meta` et `Title` qui, comme leur nom l'indique, permettent de modifier les balises `<meta>` et `<title>`.
 
@@ -63,7 +63,7 @@ export class SeoService {
 }
 ----
 
-== Niveau moyen : générer un sitemap dynamiquement
+== Le Sitemap
 
 Une autre partie du *SEO* indispensable est le sitemap.
 Il permet aux robots de savoir exactement quelles pages indexer.
@@ -98,7 +98,7 @@ class SitemapController(@Autowired val sitemapView: SitemapView) {
 Pour générer le fichier *XML*, nous avons utilisé cette librairie https://github.com/lgraubner/sitemap-generator[https://github.com/lgraubner/sitemap-generator,window="_blank"].
 
 
-== Niveau dur : faire un rendu serveur uniquement lors de l'appel par les robots
+== Le rendu côté serveur
 
 La dernière étape est la plus compliqué.
 Il faut ajouter une logique au niveau du serveur front qui, si l'appel vient d'un robot, le redirige vers un service permettant de générer le code *HTML* final de notre page car le problème des robots c'est que un, ils n'aiment pas le javascript (le moteur utilisé n'est pas récent) et deux, ils n'aiment pas attendre.
@@ -129,7 +129,7 @@ public FilterRegistrationBean registerSeoFilter() {
 }
 ----
 
-== Tests
+== Validation
 
 Une fois que vous avez fait toutes vos modifications, vous pouvez tester le bon fonctionnement grâce à plusieurs outils&nbsp;:
 
