@@ -100,7 +100,7 @@ Pour générer le fichier *XML*, nous avons utilisé cette librairie https://git
 
 == Le rendu côté serveur
 
-La dernière étape est la plus compliqué.
+La dernière étape est la plus compliquée.
 Il faut ajouter une logique au niveau du serveur front qui, si l'appel vient d'un robot, le redirige vers un service permettant de générer le code *HTML* final de notre page car le problème des robots c'est que un, ils n'aiment pas le javascript (le moteur utilisé n'est pas récent) et deux, ils n'aiment pas attendre.
 
 Le service en question que nous avons choisi se nomme *Rendertron* (https://github.com/GoogleChrome/rendertron[https://github.com/GoogleChrome/rendertron,window="_blank"]). Ce n'est rien d'autre qu'un *Google Chrome* headless auquel on envoie l'url de la page que l'on désire et nous renvoie le code *HTML* en réponse.
