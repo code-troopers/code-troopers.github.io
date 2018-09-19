@@ -5,7 +5,7 @@ date: '2018-09-18'
 tags:
 - SEO
 - Angular
-title: 'SEO et Single Page Application = 🤬'
+title: 'SEO et Single Page Application'
 url: /2018/09/18/angular-seo/
 ---
 
