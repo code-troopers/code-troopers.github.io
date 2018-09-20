@@ -1,0 +1,10 @@
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    {{ range .Data.Pages }}
+    <url>
+        <loc>https://code-troopers.com{{ .Permalink }}</loc>{{ if not .Lastmod.IsZero }}
+        <lastmod>{{ safeHTML ( .Lastmod.Format "2006-01-02T15:04:05-07:00" ) }}</lastmod>{{ end }}
+        <priority>{{ if eq .IsHome true }}1{{ else if .Is}}0.8{{ end }}</priority>{{ if .IsTranslated }}{{ range .Translations }}
+    </url>
+    {{ end }}
+</urlset>
