@@ -4,7 +4,7 @@
   {{ if .Truncated }}
   <a href="{{ .Permalink }}">
   {{ end }}
-    <img class="lozad" data-src="/images/portfolio/{{ .Params.cover }}.jpg">
+    <img class="lozad" data-src="/{{ .Params.cover }}">
   {{ if .Truncated }}
   </a>
   {{ end }}

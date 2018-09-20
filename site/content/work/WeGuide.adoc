@@ -1,5 +1,5 @@
 ---
-cover: weguide
+cover: images/portfolio/weguide.jpg
 date: '2017-12-26'
 tags:
 - Web

@@ -1,5 +1,5 @@
 ---
-cover: chapito
+cover: images/portfolio/chapito.jpg
 date: '2018-01-10'
 tags:
 - Web

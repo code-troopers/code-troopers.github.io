@@ -1,6 +1,6 @@
 ---
 author: Matthieu
-cover: ohmyzsh-banner
+cover: images/banner/ohmyzsh-banner.png
 date: '2015-05-15'
 description: 'Création de dotfile pour vim : astuces pour .vimrc '
 tags:

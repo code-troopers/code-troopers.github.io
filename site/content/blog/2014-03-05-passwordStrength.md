@@ -1,6 +1,6 @@
 ---
 author: Florian
-cover: passwordStrength-banner
+cover: images/banner/passwordStrength-banner.png
 date: '2014-03-05'
 tags:
 - Security
