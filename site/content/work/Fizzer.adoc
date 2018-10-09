@@ -9,7 +9,7 @@ url: /fizzer.html
 
 ---
 
-Fizzer est l'appli vous permettant d’envoyer des cartes postales personnalisées ! Créer votre carte postale directement depuis votre téléphone en prennant une photo.
+Fizzer est l'appli vous permettant d’envoyer des cartes postales personnalisées ! Créez votre carte postale directement depuis votre téléphone en prennant une photo.
 <!--more-->
 
 L'équipe a contribué pendant plusieurs mois à faire évoluer l'application Android afin d'apporter toujours plus de fonctionnalités aux utilisateurs.
