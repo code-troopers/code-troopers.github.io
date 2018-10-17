@@ -1,6 +1,6 @@
 ---
 author: Romain
-cover: logo-banner
+cover: images/banner/logo-banner.png
 date: '2018-06-11'
 tags:
 - Locaux

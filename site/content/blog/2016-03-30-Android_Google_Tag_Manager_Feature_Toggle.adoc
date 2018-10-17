@@ -1,6 +1,6 @@
 ---
 author: Florian
-cover: android-banner
+cover: images/banner/android-banner.png
 date: '2016-03-30'
 tags:
 - Android

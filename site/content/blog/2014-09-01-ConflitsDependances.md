@@ -1,6 +1,6 @@
 ---
 author: Cedric
-cover: maven-banner
+cover: images/banner/maven-banner.png
 date: '2014-09-01'
 tags:
 - Maven

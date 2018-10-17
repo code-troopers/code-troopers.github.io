@@ -1,6 +1,6 @@
 ---
 author: Code-Troopers
-cover: mbmc-banner
+cover: images/banner/mbmc-banner.png
 date: '2014-04-03'
 tags:
 - startup

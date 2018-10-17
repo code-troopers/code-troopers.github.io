@@ -1,6 +1,6 @@
 ---
 author: Matthieu
-cover: docker-banner
+cover: images/banner/docker-banner.png
 date: '2015-09-09'
 tags:
 - Docker
