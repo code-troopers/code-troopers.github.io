@@ -1,12 +1,13 @@
 ---
 author: Florian
 cover: android-rocket-banner
+date: '2018-11-14'
 tags:
 - Android
 - PlayStore
 - APK
 title: 'Android - Obfuscation et Désobfsucation'
-url: /2018/xx/xx/android-deobfuscation/
+url: /2018/11/14/android-deobfuscation/
 ---
 
 C'est un fait, décompiler une application android (le fichier apk) pour en examiner le code source est une chose plutôt simple. 
@@ -41,8 +42,8 @@ Or, si le code source présent sur le device d'un utilisateur est obfusqué, la 
 
 Et voilà à quoi cela peut ressembler :
 {lt}div style="text-align : center"{gt}
-{lt}a class="inlineBoxes" href="/images/posts/2018-10-01-Android-Deobfuscation/android-playstore-stacktrace.png" data-lightbox="1" {gt}
-        {lt}img class="medium" src="/images/posts/2018-10-01-Android-Deobfuscation/android-playstore-stacktrace.png" /{gt}
+{lt}a class="inlineBoxes" href="/images/posts/2018-11-14-Android-Deobfuscation/android-playstore-stacktrace.png" data-lightbox="1" {gt}
+        {lt}img class="medium" src="/images/posts/2018-11-14-Android-Deobfuscation/android-playstore-stacktrace.png" /{gt}
 {lt}/a{gt}
 {lt}/div{gt}
 
@@ -53,8 +54,8 @@ Mais tout n'est pas perdu. Il y a une section dans le PlayStore qui se nomme __D
 Elle va nous permettre d'ajouter un fichier de mapping qui va faire le lien entre le code obfusqué et le code réel tel qu'il est dans mon IDE.
 
 {lt}div style="text-align : center"{gt}
-{lt}a class="inlineBoxes" href="/images/posts/2018-10-01-Android-Deobfuscation/android-playstore-deobfuscation.png" data-lightbox="1" {gt}
-        {lt}img class="medium" src="/images/posts/2018-10-01-Android-Deobfuscation/android-playstore-deobfuscation.png" /{gt}
+{lt}a class="inlineBoxes" href="/images/posts/2018-11-14-Android-Deobfuscation/android-playstore-deobfuscation.png" data-lightbox="1" {gt}
+        {lt}img class="medium" src="/images/posts/2018-11-14-Android-Deobfuscation/android-playstore-deobfuscation.png" /{gt}
 {lt}/a{gt}
 {lt}/div{gt}
 
@@ -99,8 +100,8 @@ Lorsque qu'il est ajouté dans le PlayStore les stacktraces redeviennent intéli
 Voici donc la même erreur mais avec le fichier de mapping uploadé :
 
 {lt}div style="text-align : center"{gt}
-{lt}a class="inlineBoxes" href="/images/posts/2018-10-01-Android-Deobfuscation/android-playstore-stacktrace-deobfuscated.png" data-lightbox="1" {gt}
-        {lt}img class="medium" src="/images/posts/2018-10-01-Android-Deobfuscation/android-playstore-stacktrace-deobfuscated.png" /{gt}
+{lt}a class="inlineBoxes" href="/images/posts/2018-11-14-Android-Deobfuscation/android-playstore-stacktrace-deobfuscated.png" data-lightbox="1" {gt}
+        {lt}img class="medium" src="/images/posts/2018-11-14-Android-Deobfuscation/android-playstore-stacktrace-deobfuscated.png" /{gt}
 {lt}/a{gt}
 {lt}/div{gt}
 
