@@ -1,6 +1,6 @@
 ---
 author: Florian
-cover: elcurator-banner
+cover: images/banner/elcurator-banner.png
 date: '2014-08-08'
 tags:
 - Veille

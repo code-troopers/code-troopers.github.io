@@ -1,6 +1,6 @@
 ---
 author: Matthieu
-cover: kisthenewl-banner
+cover: images/banner/kisthenewl-banner.png
 date: '2014-05-14'
 tags:
 - zsh

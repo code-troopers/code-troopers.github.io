@@ -4,8 +4,7 @@
   {{ if .Truncated }}
   <a href="{{ .Permalink }}">
   {{ end }}
-    <div class="img-container" style="background-image: url('/images/banner/{{ .Params.cover }}.png')"></div>
-    <!--<img class="lozad" data-src="/images/banner/{{ .Params.cover }}.png">-->
+    <div class="img-container" style="background-image: url('/{{ .Params.cover }}')"></div>
   {{ if .Truncated }}
   </a>
   {{ end }}

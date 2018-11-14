@@ -1,6 +1,6 @@
 ---
 author: Code-Troopers
-cover: swtours-banner
+cover: images/banner/swtours-banner.png
 date: '2014-03-23'
 tags:
 - startup

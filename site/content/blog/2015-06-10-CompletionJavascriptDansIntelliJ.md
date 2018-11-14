@@ -1,6 +1,6 @@
 ---
 author: Cedric
-cover: ct-banner
+cover: images/banner/ct-banner.png
 date: '2015-06-10'
 tags:
 - IntelliJ

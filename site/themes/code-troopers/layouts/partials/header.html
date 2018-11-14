@@ -31,7 +31,7 @@
 
   {{ $cover := "https://code-troopers.com/images/banner/logo-banner.png" }}
   {{ with .Params.cover }}
-    {{ $cover = (printf "https://code-troopers.com/images/banner/%s.png" . ) }}
+        {{ $cover = (printf "https://code-troopers.com/%s" . ) }}
   {{ end }}
 
   {{ $url := "https://code-troopers.com" }}

@@ -1,6 +1,6 @@
 ---
 author: Benjamin
-cover: addonsheroku-banner
+cover: images/banner/addonsheroku-banner.png
 date: '2014-09-04'
 tags:
 - Heroku

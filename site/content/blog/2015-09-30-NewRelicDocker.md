@@ -1,6 +1,6 @@
 ---
 author: Benjamin
-cover: docker-banner
+cover: images/banner/docker-banner.png
 date: '2015-09-30'
 tags:
 - Docker
