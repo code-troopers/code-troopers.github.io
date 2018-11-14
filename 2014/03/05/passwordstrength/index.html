@@ -1,0 +1,473 @@
+
+<!doctype html>
+<html class="no-js" lang="fr-fr" itemscope itemtype="http://schema.org/Organization">
+<head>
+  
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-NWLQD2');</script>
+  
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+  
+  
+    
+      
+    
+  
+
+  
+  
+    
+      
+    
+  
+
+  
+  
+        
+  
+
+  
+  
+    
+  
+
+  <title>Strength Password Indicator Pour Play2 - Code-Troopers Conception d’applications web et mobiles sur-mesure</title>
+  <meta name="viewport" content="user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1,width=device-width" />
+
+  <meta property="og:title" content="Strength Password Indicator Pour Play2 - Code-Troopers Conception d’applications web et mobiles sur-mesure" />
+  <meta property="og:site_name" content="Code-Troopers" />
+  <meta property="og:url" content="https://code-troopers.com/2014/03/05/passwordstrength/" />
+  <meta property="og:image" content="https://code-troopers.com/images/banner/passwordStrength-banner.b2d3.png"/>
+
+
+  <meta property="og:type" content="website" />
+
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@codetroopers" />
+  <meta name="twitter:creator" content="@codetroopers" />
+  <meta name="twitter:title" content="Strength Password Indicator Pour Play2 - Code-Troopers Conception d’applications web et mobiles sur-mesure" />
+  <meta name="twitter:url" content="https://code-troopers.com/2014/03/05/passwordstrength/" />
+  <meta name="twitter:image" content="https://code-troopers.com/images/banner/passwordStrength-banner.b2d3.png"/>
+
+  <meta name="twitter:description" content="Introduction Le grand public commence tout doucement à être sensibilisé à l’importance d’avoir un mot de passe sécurisé, en partie grâce aux reportages TV de plus en plus nombreux sur ce domaine, mais surtout par les différentes fuites ou vols de bases de données qui arrivent de plus en plus fréquemment.
+Il faut donc profiter de cette sensibiliation et en tant que développeurs, nous avons la possibilité d&rsquo;inciter nos utilisateurs à utiliser un bon mot de passe." />
+  <meta name="description" content="Introduction Le grand public commence tout doucement à être sensibilisé à l’importance d’avoir un mot de passe sécurisé, en partie grâce aux reportages TV de plus en plus nombreux sur ce domaine, mais surtout par les différentes fuites ou vols de bases de données qui arrivent de plus en plus fréquemment.
+Il faut donc profiter de cette sensibiliation et en tant que développeurs, nous avons la possibilité d&rsquo;inciter nos utilisateurs à utiliser un bon mot de passe." />
+  <meta property="og:description" content="Introduction Le grand public commence tout doucement à être sensibilisé à l’importance d’avoir un mot de passe sécurisé, en partie grâce aux reportages TV de plus en plus nombreux sur ce domaine, mais surtout par les différentes fuites ou vols de bases de données qui arrivent de plus en plus fréquemment.
+Il faut donc profiter de cette sensibiliation et en tant que développeurs, nous avons la possibilité d&rsquo;inciter nos utilisateurs à utiliser un bon mot de passe."/>
+
+
+  <meta name="p:domain_verify" content="fc173d84e3a4de948ed4bda2908afd3e"/>
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="MobileOptimized" content="320" />
+  <meta name="theme-color" content="#3BCCE5" />
+
+
+  <link href="https://code-troopers.com/index.xml" rel="alternate" type="application/rss+xml" title="Code-Troopers" />
+  <link rel="canonical" href="https://code-troopers.com/2014/03/05/passwordstrength/" />
+  <link rel="shortcut icon" href="../../../../favicon.ico?v=2" type="image/x-icon">
+  <link rel="icon" href="../../../../favicon.ico?v=2" type="image/x-icon">
+  <meta itemprop="name" content="Code-Troopers"/><link rel="stylesheet" href="../../../../styles.f720.css" /><link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
+  <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+  <script>
+      window.addEventListener("load", function(){
+          window.cookieconsent.initialise({
+              "palette": {
+                  "popup": {
+                      "background": "#000"
+                  },
+                  "button": {
+                      "background": "transparent",
+                      "text": "#3BCCE5",
+                      "border": "#3BCCE5"
+                  }
+              },
+              "content": {
+                  "message": "En poursuivant la navigation, vous acceptez l'utilisation de cookies.",
+                  "dismiss": "J'ai compris",
+                  "link": "En savoir plus"
+              }
+          })});
+  </script>
+</head>
+
+<body>
+
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NWLQD2"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+
+
+<header>
+    <nav>
+        <a href="../../../../" class="brand"><img src="data:image/png;base64,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" alt="Code-Troopers"></a>
+        
+            
+            <a href="../../../../#skills" class=" "><span>Compétences</span></a>
+            
+        
+            
+            <a href="../../../../#portfolio" class=" "><span>Réalisations</span></a>
+            
+        
+            
+            <a href="../../../../#casting" class=" "><span>Casting</span></a>
+            
+        
+            
+            <a href="../../../../#contact" class=" "><span>Contact</span></a>
+            
+        
+            
+            <a href="../../../../blog" class=" active  blog"><span>Blog</span></a>
+            
+        
+            
+        
+    </nav>
+</header>
+<section id="blog">
+    <div class="wrapper">
+        <h1>
+            Blog
+        </h1>
+    </div>
+
+    <section id="article">
+        <div class="wrapper">
+            <article>
+                
+                <img src="/images/banner/passwordStrength-banner.b2d3.png">
+                
+                
+                
+                <div class="wrapper-content">
+                    <h2>Strength Password Indicator Pour Play2</h2>
+                    
+                    
+                    <ul class="tags">
+                        
+                        <li><a href="../../../../tags/security/">Security</a></li>
+                        
+                        <li><a href="../../../../tags/play2/">Play2</a></li>
+                        
+                    </ul>
+                    
+                    <div class="content">
+                        
+
+<h2 id="introduction">Introduction</h2>
+
+<p>Le grand public commence tout doucement à être sensibilisé à l’importance d’avoir un mot de passe <b>sécurisé</b>, en partie grâce aux reportages TV de plus en plus nombreux sur ce domaine, mais surtout par les différentes fuites
+ou vols de bases de données qui arrivent de plus en plus fréquemment.</p>
+
+<p>Il faut donc profiter de cette sensibiliation et en tant que développeurs, nous avons la possibilité d&rsquo;inciter nos
+utilisateurs à utiliser un bon mot de passe. Alors, au travail !</p>
+
+<p>Quoi de mieux pour faire passer un message simple à un utilisateur qu&rsquo;un peu de couleur (savamment dosée bien sûr).
+Nous allons donc parler de feedback visuel. Prenons par exemple une création de compte Google.
+Lorsqu&rsquo;on entre le mot de passe, Google nous informe de la qualité de la chaîne saisie via un pop-up contenant une progressbar de couleur, accompagnée d&rsquo;un petit commentaire.</p>
+
+<pre><code class="language-html">&lt;a href=&quot;/images/posts/2014-03-05-passwordStrength/googleWay.8b5a.png&quot; data-lightbox=&quot;image-1&quot;
+   title=&quot;Indicateur de niveau de sécurité by Google&quot;&gt;
+    &lt;img class=&quot;mini&quot; src=&quot;/images/posts/2014-03-05-passwordStrength/googleWay.8b5a.png&quot;
+         alt=&quot;Indicateur de niveau de sécurité by Google&quot;/&gt;
+&lt;/a&gt;
+</code></pre>
+
+<p>À mon goût, c&rsquo;est déjà trop, car c&rsquo;est bien connu, aucun utilisateur ne lit les informations qu&rsquo;on lui donne.
+Donc se contenter d&rsquo;une barre de progression qui change de couleur sera très bien pour rapidement améliorer l&rsquo;expérience utilisateur.</p>
+
+<h2 id="zxcvbn-la-lib-qui-va-bien">zxcvbn : la lib qui va bien</h2>
+
+<p>Il existe déjà de nombreux algorithmes qui essaient de calculer la complexité d’un mot de passe.
+Donc au lieu de tenter d&rsquo;inventer un truc bancal, j’ai décidé d’en utiliser un qui semble plutôt abouti : <a href="https://github.com/lowe/zxcvbn">zxcvbn</a>.</p>
+
+<p>Derrière ce nom barbare on retrouve dans ce projet plusieurs éléments intéressants.
+L’avantage de celui-ci de mon point de vue est qu’en plus de calculer la complexité, il utilise aussi un
+dictionnaire des mauvais mots de passe. Ainsi ‘123456’ ou ‘password’ seront directement qualifés de mauvais mots de passe.</p>
+
+<h2 id="branchement-dans-play">Branchement dans play</h2>
+
+<p>Le branchement dans play, va consister en l&rsquo;ajout de bases au niveau de l&rsquo;input password que l&rsquo;on veux customiser,
+puis l&rsquo;appel de la fonction javascript de zxcvbn qui se charge de calculer le niveau de complexité de la chaîne de caractère qui est saisie par l&rsquo;utilisateur.</p>
+
+<p>Pour cela, on va dans un premier temps inclure les libs qui vont bien :</p>
+
+<ul>
+<li>zxcvbn (à récupérer sur <a href="https://github.com/lowe/zxcvbn">github</a>).</li>
+<li>jquery et bootstrap pour l&rsquo;affichage du feedback</li>
+</ul>
+
+<pre><code class="language-html">&lt;script type=&quot;text/javascript&quot; src=&quot;/assets/js/zxcvbn-async.js&quot;&gt;&lt;/script&gt;
+
+&lt;script src=&quot;//code.jquery.com/jquery-2.0.3.min.js&quot;&gt;&lt;/script&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css&quot;&gt;
+</code></pre>
+
+<p>Ensuite, il faut customiser le champ password en question, pour lui ajouter les quelques attributs qui seront affichés en fonction de la saisie utilisateur</p>
+
+<pre><code class="language-html">&lt;div class=&quot;col-md-6&quot;&gt;
+    @input(
+    fakeForm(&quot;password&quot;),
+    '_label -&gt; Messages(&quot;Password&quot;),
+    'class -&gt; &quot;form-control&quot;) { (id, name, value, args) =&gt;
+    &lt;input type=&quot;password&quot; name=&quot;@name&quot; id=&quot;@id&quot; @toHtmlArgs(args)&gt;
+    &lt;div class=&quot;progress&quot; style=&quot;height: 5px; margin-bottom: 0px;&quot;&gt;
+        &lt;div class=&quot;progress-bar&quot; id=&quot;pwdStrengthProgress&quot; style=&quot;width: 0%;&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;span class=&quot;label&quot; id=&quot;pwdStrengthLabel&quot; style=&quot;position: relative;float: right;&quot;&gt;&lt;/span&gt;
+    }
+&lt;/div&gt;
+</code></pre>
+
+<p>Et pour finir, le script qui, lors de la saisie utilisateur, va faire appel à zxcvbn pour savoir ce qu&rsquo;il faut afficher comme feedback</p>
+
+<pre><code class="language-html">&lt;script&gt;
+    $(document).ready(function () {
+        $('#password').keyup(function (event) {
+            var password = $('#password').val();
+            var result = zxcvbn(password);
+            $('#entropy').html(result.entropy);
+
+            // label based on score (0,1=weak; 2=ok; 3 =good; 4=great)
+            var $label = $('#pwdStrengthLabel');
+            if (password.length === 0) {
+                $label.hide();
+            } else {
+                $label.show();
+            }
+            $label.html(result.entropy &lt; 33 ? &quot;Faible&quot; : result.entropy &lt; 66 ? &quot;Moyen&quot; :
+                                                       result.entropy &lt; 80 ? &quot;Bon&quot; : &quot;Excellent&quot;);
+            $label.removeClass(&quot;label-danger label-warning label-success&quot;)
+                    .addClass(result.entropy &lt; 33 ? &quot;label-danger&quot; :
+                              result.entropy &lt; 66 ? &quot;label-warning&quot; : &quot;label-success&quot;);
+
+            // progress bar based on entropy (tops out at 100)
+            var $progress = $('#pwdStrengthProgress');
+            $progress.css('width', result.entropy + '%');
+            $progress.removeClass(&quot;progress-bar-danger progress-bar-warning progress-bar-success&quot;)
+                    .addClass(result.entropy &lt; 33 ? &quot;progress-bar-danger&quot; :
+                              result.entropy &lt; 66 ? &quot;progress-bar-warning&quot; : &quot;progress-bar-success&quot;);
+        });
+    });
+&lt;/script&gt;
+</code></pre>
+
+<p>Ce script est largement inspiré de : <a href="https://github.com/johnbeil/bootstrap3-zxcvbn/blob/master/index.html">https://github.com/johnbeil/bootstrap3-zxcvbn/blob/master/index.html</a></p>
+
+<h2 id="résultats">Résultats</h2>
+
+<p>Comme vous pouvez le voir dans le js qui traite le retour de la fonction zxcvbn, il y a 3 niveaux de couleurs qui se déclenchent à différents niveaux, combinés à un simple label</p>
+
+<p><a href="../../../../images/posts/2014-03-05-passwordStrength/weak.png" data-lightbox="image-1"
+   title="Feedback pour un mauvais mot de passe">
+    <img class="mini" src="data:image/png;base64,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" alt="Feedback pour un mauvais mot de passe"/>
+</a>
+<a href="../../../../images/posts/2014-03-05-passwordStrength/fair.png" data-lightbox="image-1"
+   title="Feedback pour un mot de passe moyen">
+    <img class="mini" src="data:image/png;base64,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" alt="Feedback pour un mot de passe moyen"/>
+</a>
+<a href="../../../../images/posts/2014-03-05-passwordStrength/good.png" data-lightbox="image-1"
+   title="Feedback pour un bon mot de passe">
+    <img class="mini" src="data:image/png;base64,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" alt="Feedback pour un bon mot de passe"/>
+</a>
+<a href="../../../../images/posts/2014-03-05-passwordStrength/great.png" data-lightbox="image-1"
+   title="Feedback pour un mot de passe parfait">
+    <img class="mini" src="data:image/png;base64,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" alt="Feedback pour un mot de passe parfait"/>
+</a></p>
+
+<h2 id="sources">Sources</h2>
+
+<p>Vous pouvez retrouver les sources correspondants à cet exemple dans un projet play sur github à cette adresse : <a href="https://github.com/fchauveau/passwordStrengthBar">https://github.com/fchauveau/passwordStrengthBar</a></p>
+
+<h2 id="pour-aller-plus-loin">Pour aller plus loin</h2>
+
+<p>zxcvbn propose 6 indicateurs (<b>entropy, crack_time, crack_time_display, score, match_sequence, calculation_time</b>)
+lors de son contrôle du mot de passe. Dans mon cas je n&rsquo;ai utilisé que l&rsquo;entropie
+pour mes niveaux d&rsquo;indicateurs.</p>
+
+                    </div>
+                    <div class="content-footer">
+                        
+                        <ul class="tags float">
+                            
+                            <li><a href="../../../../tags/security/">Security</a></li>
+                            
+                            <li><a href="../../../../tags/play2/">Play2</a></li>
+                            
+                        </ul>
+                        
+                        <section id="author">
+                            <div class="date">Rédigé par <span class="author-name">Florian</span></div>
+                        </section>
+                    </div>
+                    <div class="share">
+                        <span>Partager</span>
+                        <ul class="socials">
+                            <li>
+                                <a target="_blank" title="Facebook"
+                                   href="https://www.facebook.com/sharer.php?u=http://code-troopers.com%2f2014%2f03%2f05%2fpasswordstrength%2f&t=Strength%20Password%20Indicator%20Pour%20Play2"
+                                   class="facebook-button" rel="nofollow"
+                                   onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=500,width=700');return false;">
+                                    <i class="fa fa-facebook"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_blank" title="Twitter"
+                                   href="https://twitter.com/share?url=http://code-troopers.com%2f2014%2f03%2f05%2fpasswordstrength%2f&text=Strength%20Password%20Indicator%20Pour%20Play2&via=codetroopers"
+                                   rel="nofollow"
+                                   onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=400,width=700');return false;">
+                                    <i class="fa fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_blank" title="Google +"
+                                   href="https://plus.google.com/share?url=http://code-troopers.com%2f2014%2f03%2f05%2fpasswordstrength%2f&hl=fr"
+                                   class="google-button" rel="nofollow"
+                                   onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=650');return false;">
+                                    <i class="fa fa-google-plus"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div style="clear:both"></div>
+
+
+                    <div class="back">
+                        <div class="pagination">
+                            
+                            <a href="../../../../2014/03/17/aucard/" class="previous-page">
+                                <div class="arrow"><div class="arrow_box_left arrow_box">
+</div></div>
+                                Article précédent
+                            </a>
+                            
+                            
+                            <a href="../../../../2014/01/01/cestreparti/" class="next-page">
+                                Article suivant
+                                <div class="arrow"><div class="arrow_box_right arrow_box">
+</div></div>
+                            </a>
+                            
+                        </div>
+                    </div>
+
+                    <section id="menu">
+                        <ul>
+                            
+                        </ul>
+                    </section>
+
+                    <div id="disqus_thread"></div>
+                    <script type="text/javascript">
+                         
+                        var disqus_shortname = 'codetroopers' 
+                        var disqus_url = window.location.href
+                        if (window.location.protocol != 'http:') {
+                            disqus_url = 'http:' + window.location.href.substring(window.location.protocol.length)
+                        }
+
+                         
+                        (function () {
+                            var dsq = document.createElement('script')
+                            dsq.type = 'text/javascript'
+                            dsq.async = true
+                            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq)
+                        })()
+                    </script>
+                    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments
+                        powered by Disqus.</a></noscript>
+                    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span
+                            class="logo-disqus">Disqus</span></a>
+                </div>
+            </article>
+        </div>
+    </section>
+</section>
+
+<section id="contact">
+    <h1>Contact</h1>
+
+
+    <div>
+        <div><iframe class="lozad"
+                    width="100%"
+                    height="100%"
+                    frameborder="0" style="border:0"
+                    data-src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDmneK7ppr9MWdY2ynnTXsnhEloW2r7GzQ&q=Code-Troopers,+37000+Tours+France&zoom=15">
+            </iframe></div>
+        <div>
+            <h2>Code-Troopers</h2>
+            <p>
+                <strong>MAME</strong><br>
+                Cité de la création et du numérique<br>
+                49 boulevard Preuilly<br>
+                37000 Tours - Fr
+            </p>
+            <p>
+                <a href="mailto:contact@code-troopers.com">contact@code-troopers.com</a>
+            </p>
+            <p>
+                <a class="button" href="tel:+33782287216">07 82 28 72 16</a>
+            </p>
+        </div>
+    </div>
+
+    <h1>Suivez nos actualités</h1>
+
+    <ul class="flex">
+        <li>
+            <a href="https://facebook.com/codetroopers37">
+                <i class="fa fa-facebook fa-3x fa-fw"></i>
+            </a>
+        </li>
+        <li>
+            <a href="https://twitter.com/codetroopers">
+                <i class="fa fa-twitter fa-3x fa-fw"></i>
+            </a>
+        </li>
+        <li>
+            <a href="https://plus.google.com/+Code-troopers">
+                <i class="fa fa-google-plus fa-3x fa-fw"></i>
+            </a>
+        </li>
+        <li>
+            <a href="https://github.com/code-troopers">
+                <i class="fa fa-github fa-3x fa-fw"></i>
+            </a>
+        </li>
+        <li>
+            <a href="../../../../index.xml">
+                <i class="fa fa-rss fa-3x fa-fw"></i>
+            </a>
+        </li>
+    </ul>
+</section>
+
+<footer>
+    <div class="wrapper">
+        <a href="#top" class="scroll-to-top">
+            <img class="arrow" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAA2CAYAAADOBhlKAAAAhElEQVR42u3TOw0AIRBF0ZWABKQgBSlIQAJSkIIEHLwNBZmCZfiUm3eT6cgZCngAaGPaaGdWQGxzC1hI9gZIkNIp4DDmToCMsbwLOMxzO0BRgLICPNb5GWCG7fNbmC8gYL8ggGyv2K/2W8iTPS92wOI+q3+mnnKGAAECBAgQIECAwC+BF8FrydFpGvcOAAAAAElFTkSuQmCC" alt="arrow">
+        </a>
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAMAAAAKE/YAAAAAM1BMVEVHcEz////////////////////////////////////////////////////////////////P0YphAAAAEXRSTlMAIEBwgLDA/6DQEFCQ4GAw8MRg8BIAAASTSURBVHgB7NmBavMqGIfxv8b4qInq/V/tgQ/kfIXTnG5JWoU+AB0dY7+9eS0s0ZUZu7jVex7yfnWLNRowu4TIYTEsVsOUtr17yX51rti/Ks6tPtPl+5b08aqLneu2qqfVzXV6dPWj4j33+Rm9kOnXJO8fchuXAVooST8oldAAsjN6d8X3if3+CvmiN5ZcBlqw+nU2NCC7pPdk9gbEknSqVCLQdvMOcgAIVhdkA0C4m51c/zVXjuDeJVka4NLlY2iL7spmIJhbFi5b3VFaAW90Q8YDa7pnM7K97yLesCPJAy7dfMJ90oVtDWLVrdUIbdNVpR1wuj0H7EmXZCLkqjdUM0Rz1WqEpLeUwjUrsgBFb6sAi04WoFW9sdognP6ki0lvLUXw6dzPh6Q3l8KZSZkIQR/ohLo2KPpIBVo9b55DnT5n7mrzmzNYpI+qYzprnkDtP2vuaq8fFCDoA51RLJ83d/WiF9sgJg1QirDppUyjJQ1RajTz6p9XNUj1xYu+Q9EwFdhfWuiggQqwvbBFOWmgUv7/E+ahaqgqeB22gNNgOViOl4Oo4YrHC7L+djl4sd8uyKqnWXAaDy0HVs/K5DQiOmXywSm0GhGtDZanp9BrTLT8s7PowIyKNuCevB80KloBzPHbA6GPR2rAncfegT9Y3h3SyOgE+398dASNjFagpePpD4Q+2N9M0NhoBbIeKmBHR1so+jtP1OhoRfzjvlDGR5fHc+do6Tz2bnxquDPHkIs6cRQr2BnQFqp6O1kzoJXZH76eAP0w3Qp1AvSj1NE0B1r/fn5EwizoQNSfEpTfom/5/kEFUv9XN82CTv0e6k7ULGhF9v46D7pPGLZ50BtIkgUzD9qAleTImgetzCIp4GdCe4KkiLsOzZOuQztiP4fzoDeQDNSZ0BWMLGgmtMBqIc+Fzixy+LnQHqeVdSr0H7DHzYV2+BPoM51EQ5kLXUBg50LbUdBf9Bf9RdfT2PPdOmnu6Yv+or/oMhe6gDxuLrTDn0cfIm5Cr6xTof+AHX4utMdpIc+FziyyMBcarAzUmdAVjATbTOgNJEXcTGhH/OlNdXoX3VTv/fSm+kKeCZ1Z+oOiWdD9QZFgmwe9QX/4OQ96J/bXedB9whukWdCp7/I/xNwBBsAwGMXgC/T+5y3wAPj4CTAMMR1K8kSdCKGnTqCk0l8CJqlMB+qhQQcC8SqGHukUtx5aFLc9h9AuE07b7KBd25wgG0K7qz4VOYN2Fdml71NYl76n14fQrtcvZOigPWTYr1hAo6cOcU4OvTgHMqgcehkUBGc19IIzTPt66LfzaxElQMN7EFFCrlpD75NCGFxD7/BCgp1DL8GG2L2GXuwOswI99GYFYMChh96AA0xl9NC/vTu0AQAEgiAY7CPov1vkubNkEraQnawy/CkJvX8xRzvK0giYR4mbLnKIJq7nzMmfv1P0x5X+ItScsVLb27TeD4bHXznb0+zegHtyYwQPLPd93MBnJHyww6JRAIQG4H4AWAkgrHYIKx8L81k2H8DzqUEfdfT5TBoqRUlYFd9FmWMVlO509+l090fSAY7+AkvG2mAzLke+AAAAAElFTkSuQmCC" alt="logo">
+        <div>
+            <span>©2014 — 2018 Code-Troopers | <a href="../../../../legals.html">Mentions légales</a></span>
+            <span>Design : <a href="https://www.descheval.com/">descheval.com</a> | Développement : Code-Troopers</span>
+        </div>
+    </div>
+</footer>
+<script type="application/javascript" src="../../../../main.4a41d3.js"></script>
+
+<script type="application/javascript" src="../../../../blog.89d0ce.js"></script>
+
+</body>
+</html>
+
