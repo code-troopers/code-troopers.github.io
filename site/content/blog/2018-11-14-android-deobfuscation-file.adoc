@@ -1,6 +1,6 @@
 ---
 author: Florian
-cover: android-rocket-banner
+cover: images/banner/android-rocket-banner.png
 date: '2018-11-14'
 tags:
 - Android
