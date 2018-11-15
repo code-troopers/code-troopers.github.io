@@ -105,7 +105,7 @@ Voici donc la même erreur mais avec le fichier de mapping uploadé :
 {lt}/a{gt}
 {lt}/div{gt}
 
-Attention cela ne fonctionne que pour les stacktraces survenues après l'ajout du ficher, ce n'est malheuresement pas rétroactif.
+Attention cela ne fonctionne que pour les stacktraces survenues après l'ajout du ficher, ce n'est malheureusement pas rétroactif.
 
 D'où l'importance d'ajouter ce fichier à chaque nouvelle release de l'application pour ne rien rater.
 
