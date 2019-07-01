@@ -1,5 +1,5 @@
 ---
-cover: ideas
+cover: images/portfolio/ideas.jpg
 date: '2017-12-19'
 tags:
 - Web
