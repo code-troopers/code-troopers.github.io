@@ -1,5 +1,5 @@
 ---
-cover: sensotools
+cover: images/portfolio/sensotools.jpg
 date: '2017-12-19'
 tags:
 - Android
