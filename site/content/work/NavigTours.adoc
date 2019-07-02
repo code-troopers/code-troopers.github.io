@@ -1,6 +1,6 @@
 ---
 cover: images/portfolio/navigtours.jpg
-date: '2017-12-20'
+date: '2019-06-01'
 tags:
 - Android
 - iOS

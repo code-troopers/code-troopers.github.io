@@ -1,0 +1,12 @@
+---
+cover: images/portfolio/eutelmed.jpg
+date: '2018-12-01'
+tags:
+- Web
+title: 'Eutelmed'
+url: /eutelmed.html
+
+---
+
+Eutelmed est une plateforme de télé-médecine. Elle permet de faire de la vidéo-consultation, entre des patients et des professionnels de santé.
+<!--more-->
