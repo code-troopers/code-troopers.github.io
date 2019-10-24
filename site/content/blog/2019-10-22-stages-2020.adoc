@@ -9,7 +9,7 @@ url: /2019/10/22/stages-2020/
 aliases: 2019/10/22/stages-2020.html
 ---
 
-Voici nos offres de stages pour 2020, ça se passe toujours à MAME, le baby-foot est toujours à proximité pour se détendre entre deux lignes de codes.
+👩‍🎓👨‍🎓 Voici nos offres de stages pour 2020, ça se passe à MAME et le baby-foot ⚽ est pas loin pour se détendre entre deux lignes de codes.
 
 {lt}div style="text-align : center"{gt}
 {lt}a style="display: inline" href="/images/posts/2019-10-22-stages-2020/baby.jpeg" data-lightbox="0" title="Le bureau"{gt}
@@ -21,7 +21,7 @@ Voici nos offres de stages pour 2020, ça se passe toujours à MAME, le baby-foo
 - Développement Frontend / Backend / IOT : https://code-troopers.com/files/Stage_2020_AGEN.pdf[Stage_2020_AGEN]
 - Développement Frontend et/ou Backend : https://code-troopers.com/files/Stage_2020_VU3.pdf[Stage_2020_VU3]
 
-Il s'agit pour la plupart de projets déjà en production donc du travail de qualité est attendu ! Et on fera tout pour que le résultat du stage soit intégré directement en production.
+Ce stage sera rémunéré selon les conditions légales, plus une prime dépendant du résultat final.
+
 
 Pour postuler vous pouvez envoyer vos C.V. à : stage@code-troopers.com
-
