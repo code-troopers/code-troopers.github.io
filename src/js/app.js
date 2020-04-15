@@ -76,7 +76,32 @@ var initSwiper = function (){
       nextEl: '#stack .swiper-next',
       prevEl: '#stack .swiper-prev',
     }
-  }))
+  }));
+
+  swipers.push(new Swiper('#stack_fav .swiper-container', {
+    spaceBetween: 32,
+    init:false,
+    slidesPerView: 'auto',
+    direction: 'horizontal',
+    breakpoints: {
+      320: {
+        slidesPerView: 1
+      },
+      512: {
+        slidesPerView: 2
+      },
+      768: {
+        slidesPerView: 3
+      },
+      1024: {
+        slidesPerView: 4
+      }
+    },
+    navigation: {
+      nextEl: '#stack_fav .swiper-next',
+      prevEl: '#stack_fav .swiper-prev',
+    }
+  }));
 
 
   swipers.push(new Swiper('#customers .swiper-container', {
@@ -97,7 +122,7 @@ var initSwiper = function (){
       nextEl: '#customers .swiper-next',
       prevEl: '#customers .swiper-prev',
     }
-  }))
+  }));
   //to ensure everything is ready before displaying the swipers
   swipers.forEach(function(e){
     try {
