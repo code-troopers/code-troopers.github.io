@@ -81,9 +81,8 @@ var initSwiper = function (){
   swipers.push(new Swiper('#stack_fav .swiper-container', {
     spaceBetween: 32,
     init:false,
-    slidesPerView: '5',
+    slidesPerView: 'auto',
     direction: 'horizontal',
-    centerInsufficientSlides: true,
     breakpoints: {
       320: {
         slidesPerView: 1
