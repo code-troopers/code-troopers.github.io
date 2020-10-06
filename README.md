@@ -1,6 +1,6 @@
 # Hugo-Webpack Boilerplate
 
-**For websites built with Hugo and Webpack**
+**For built websites with Hugo and Webpack**
 
 ## Usage (run with Docker)
 
@@ -65,7 +65,7 @@ You can read more about Hugo's template language in their documentation here:
 
 https://gohugo.io/templates/overview/
 
-The most useful page there is the one about the available functions:
+The most useful page there is the one about the available functions and Amazing Documentation:
 
 https://gohugo.io/templates/functions/
 
