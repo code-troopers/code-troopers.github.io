@@ -1,0 +1,69 @@
+---
+author: Matthieu
+cover: images/banner/ohmyzsh-banner.png
+date: '2016-05-11'
+tags:
+- Vim
+- Tips
+- Macro
+title: 'Macro Vim : C''est trop génial'
+url: /2016/05/11/vim_macro/
+aliases: 2016/05/11/Vim_Macro.html
+---
+
+
+Comme certains d'entre vous le savent, j'aime beaucoup Vim. Il n'y a pas très longtemps au Tours JUG, je disais que je n'avais pas de cas d'utilisation des macro dans Vim dont certains disent que c'est LA killer feature. Et bien j'ai trouvé un use case et « c'est trop génial ! » comme dirait Agnès.
+
+
+
+{lt}div style="text-align : center"{gt}
+{lt}a class="inlineBoxes" href="/images/posts/2016-05-VimMacro/trop_genial.gif" data-lightbox="0" title="trop génial"{gt}
+        {lt}img class="medium" src="/images/posts/2016-05-VimMacro/trop_genial.gif" alt="trop génial"/{gt}
+{lt}/a{gt}
+{lt}/div{gt}
+
+[%hardbreaks]
+
+## Angular2 et macros Vim
+
+Les vidéos de Devoxx 2016 sont sorties, dont https://www.youtube.com/watch?v=5U4OasGuo0o[Angular 2 : Préparez vous dès maintenant à la migration (Benoit Lemoine)]. Une des étapes est de passer par les ControllerAs, je ne vais pas refaire la conf ce n'est pas le but. Bref, je travaille sur un projet qui définit les controllers comme ceci :
+
+....
+$routeProvider.when('/admin/displayMail', {templateUrl: 'partials/display_mail.html', controller: 'ListMailCtrl'});
+$routeProvider.when('/admin/createEditMail', {templateUrl: 'partials/create_mail.html', controller: 'EditMailCtrl'});
+$routeProvider.when('/admin/createEditMail/:id', {templateUrl: 'partials/create_mail.html', controller: 'EditMailCtrl'});
+$routeProvider.when('/admin/displayUsers', {templateUrl: 'partials/display_users.html', controller: 'DisplayUsersCtrl'});
+$routeProvider.when('/admin/createUser', {templateUrl: 'partials/create_user.html', controller: 'CreateUserCtrl'});
+$routeProvider.when('/admin/updateUser/:login', {templateUrl: 'partials/update_user.html', controller: 'UpdateUserCtrl'});
+....
+
+Je veux rajouter pour chaque ligne un `controllerAs: 'monCtrl'` avec comme nom le même que le controller associé mais en commençant par une minuscule, et donc obtenir les lignes ci-dessous. J'ai extrait 6 controllers mais en réalité il y en a plutôt une cinquantaine (les noms ont été changés si on me demande).
+
+....
+$routeProvider.when('/admin/displayMail', {templateUrl: 'partials/display_mail.html', controller: 'ListMailCtrl', controllerAs: 'listMailCtrl'});
+$routeProvider.when('/admin/createEditMail', {templateUrl: 'partials/create_mail.html', controller: 'EditMailCtrl', controllerAs: 'editMailCtrl'});
+$routeProvider.when('/admin/createEditMail/:id', {templateUrl: 'partials/create_mail.html', controller: 'EditMailCtrl', controllerAs: 'editMailCtrl'});
+$routeProvider.when('/admin/displayUsers', {templateUrl: 'partials/display_users.html', controller: 'DisplayUsersCtrl', controllerAs: 'displayUsersCtrl'});
+$routeProvider.when('/admin/createUser', {templateUrl: 'partials/create_user.html', controller: 'CreateUserCtrl', controllerAs: 'createUserCtrl'});
+$routeProvider.when('/admin/updateUser/:login', {templateUrl: 'partials/update_user.html', controller: 'UpdateUserCtrl', controllerAs: 'updateUserCtrl'});
+....
+
+- `qa` : on commence la macro, on enregistre dans a
+- `/controller:<enter>` : on recherche controller:
+- `eeee` : on se déplace de mot en mot pour arriver sur le nom du controller
+- `yi'` : on copie tout ce qui se trouve à l'intérieur des ' (le nom du controller donc)
+- `ela` : on se déplace vers la droite et on passe en insertion
+- `controllerAs: ''<Esc>` : on écrit le texte et on repasse en mode normal
+- `hp` : on passe sur la première ' et on copie le texte précédemment copié
+- `bgur` : on se place au début du mot et on passe la première lettre en minuscule
+- `q` : fin de l'enregistrement
+- `50@a` : on joue la macro 50 fois
+
+ce qui donne :
+`qa/controller:<enter>eeeeyi'era, controllerAs: ''<Esc>cpbgurq50@a`
+
+Juste en lisant le texte, on a l'impression que c'est compliqué, avec les explications j'espère que ça paraît plus simple, en tout cas ça l'est avec l'habitude. Cela paraît long aussi mais au final c'est rapide à taper, il suffit de voir la vidéo qui est en vitesse réelle :
+
+{lt}div style="text-align: center;margin:50px;"{gt}
+{lt}video style="width: 100%;" controls src="/videos/vim_macro.webm"{gt}{lt}/video{gt}
+{lt}/div{gt}

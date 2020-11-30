@@ -1,0 +1,94 @@
+---
+author: Benjamin
+cover: images/banner/ga-gtm-banner.png
+date: '2018-04-10'
+tags:
+- GA
+- GTM
+title: 'Google Analytics via Google Tag Manager'
+url: /2018/04/09/ga-gtm/
+---
+
+C'est en branchant https://www.facebook.com/business/a/facebook-pixel[Facebook PIXEL] sur un projet, que j'ai enfin compris et vraiment utilisé *Google Tag Manager*.
+L'aide très bien faite de la mise en place de *PIXEL* préconise celui-ci pour activer et configurer le traqueur Facebook et cela m'a donné envie d'en faire de même pour *Google Analytics*.
+
+Pour ceux qui ne connaissent pas *Google Tag Manager*, c'est un outil permettant d'ajouter, modifier des bouts de Javascript (tags) afin de gérer les analytics ou la pub par exemple à l'aide du back office, et tout ça sans avoir à modifier ou relivrer son application.
+
+== 1ère étape : Configurer Google Tag Manager
+
+C'est un jeu d'enfants, il suffit de vous rendre sur l'interface d'administration (https://tagmanager.google.com), de créer un conteneur et d'ajouter deux bouts de code JS dans votre site et c'est normalement la seule modification qui sera faite dans votre code.
+Je ne m'attarde pas sur cette étape qui est assez simple et déjà très bien documentée.
+Pour tester si votre conteneur est bien configuré sur votre site, avec *GTM* vous avez la possibilité de lancer un mode debug avec le bouton `PRÉVISUALISER`.
+Cette action permet d'ajouter un panel de debug sur votre site dès lors que vous naviguez avec le même navigateur sur le site où le conteneur *GTM* est activé.
+Nous reviendrons sur ce panel de debug par la suite.
+
+:lightboxGroup: 0
+:lightboxImage: 2018-03-22_GA-GTM/debug_panel
+:lightboxImageTitle: Panel de debug
+
+include::site/static/lightbox.adoc[]
+
+*Google Tag Manager* se découpe en trois grandes parties :
+
+* les balises (_tag_) : une balise représente du code Javascript que l'on va pousser et exécuter dans notre conteneur.
+* les déclencheurs (_triggers_) : les déclencheurs sont des conditions permettant de pousser ou non nos balises.
+* les variables sont ce qu'on pourra interpréter dans notre balise. Il y en a certaines déjà définies et d'autres que l'on peut construire.
+
+Pour ajouter *Google Analytics* à notre application, il va falloir utiliser ces trois composants.
+
+
+== 2ème étape : Ajouter Google Analytics
+
+Normalement pour ajouter *Google Analytics* à votre application, vous auriez dû (de la même manière qu'on a ajouté *GTM* juste avant), suivre les instructions de *Google Analytics* à la création du projet sur celui-ci et copier-coller un bout de code pour l'activer.
+Mais vous l'avez compris, ce n'est pas ce qu'il va se passer vu qu'on ne va plus toucher au code.
+Premièrement, vous devez quand même créer le projet sur https://analytics.google.com/ et garder dans un coin le `trackingId`, ensuite, tout se passe dans *Google Tag Manager*.
+
+Le principe premier de *Google Analytics* est de traquer les différentes pages consultées par l'utilisateur.
+Cette information se trouve normalement dans la variable `Page Path` qui fait partie des variables activées par défaut à la création du conteneur.
+Mais si, comme nous, vous faites beaucoup d'*Angular*, vous avez à faire avec des urls du type `http://localhost:9000/#/home`.
+Vous savez que ce n'est pas aussi simple et vous avez déjà dû vous retrouver à mettre ce genre de code pour traquer exactement la page visualisée et pas tout le temps `/`.
+
+[source, javascript]
+----
+  this.router.events.subscribe((event) => {
+            if (event instanceof NavigationEnd) {
+                ga('set', 'page', event.urlAfterRedirects);
+                ga('send', 'pageview');
+            }
+        });
+----
+
+Pour répondre à ce problème avec *Google Tag Manager*, il faut activer une nouvelle variable `New History Fragment` se basant sur l'API History du navigateur pour stocker la valeur de la nouvelle page.
+Pour faire cela, vous avez juste à cliquer sur `Variables` dans le menu, puis `CONFIGURER` et enfin cocher `New History Fragment`.
+
+Afin d'envoyer un nouvel évènement à chaque changement de page, nous devons déclarer un nouveau déclencheur se basant sur l'API History. Pour cela, cliquez sur le menu `Déclencheurs`, puis `NOUVEAU`.
+À ce moment vous devez cocher l'item `History Change` dans la liste s'affichant lorsque vous cliquez dans le cadre blanc.
+
+Enfin, vous n'avez plus qu'à créer votre balise `Analytics`.
+Pour cela rendez-vous dans le menu `Balises`, lorsque vous cliquez sur `NOUVELLE`, vous pouvez sélectionner le type de balise `Universal Analytics` dans le premier cadre et votre déclencheur préalablement créé dans le deuxième.
+Il reste deux informations à configurer, le tracking id que vous pouvez ajouter en configurant une nouvelle variable dans `Google Analytics Settings` et la modification pour prendre en compte votre variable se basant sur l'API History.
+Il faut cocher `Enable overriding settings in this tag`, déplier `More settings` et `Fields to Set` et ajouter un champ `page` correspondant à la valeur `{{New History Fragment}}` (nom de votre variable créée).
+
+À partir de là notre conteneur est bien configuré il n'y a plus qu'à tester et livrer.
+ Pour ce faire, vous devez activer le mode debug en cliquant sur `PRÉVISUALISER` si ce n'est pas déjà fait et lancer votre application.
+ Dans le panel de debug, vous verrez normalemement la liste des différents `déclencheurs` sur la gauche, et lorsque vous cliquez dessus, vous pouvez voir quelles balises ont été activées et dans l'onglet `Variables`, la valeur des différentes variables (dont votre `New History Fragment`).
+
+:lightboxGroup: 0
+:lightboxImage: 2018-03-22_GA-GTM/debug_panel_1
+:lightboxImageTitle: Panel de debug
+
+include::site/static/lightbox.adoc[]
+
+Il ne reste plus qu'à publier vos modifications pour qu'elles soient actives sur tous vos environnements en cliquant sur `ENVOYER` et `PUBLIER`.
+
+== Avantages de GTM
+
+GTM propose de multiples fonctionnalités à travers les balises, les déclencheurs et les variables.
+Vous pouvez :
+
+* déclarer un tableau de variables qui seront différentes suivant les environnements (en se basant sur l'url).
+* récupérer des valeurs de votre site grâce à des règles CSS afin de les pousser par exemple vers GA et tout ça sans avoir à relivrer votre application.
+* ajouter facilement une connexion vers *AdWords*, *Google Optimize* et pleins d'autres services.
+
+
+

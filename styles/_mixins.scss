@@ -1,0 +1,178 @@
+@import 'variables';
+
+@mixin gradient-text($gradient, $bg : 'light') {
+  @supports(mix-blend-mode: lighten) {
+    overflow: hidden;
+    //fix when zooming blending can leak
+    border: 1px solid transparent;
+    display: inline-block;
+    position: relative;
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0; right: 0; left: 0; bottom: 0;
+
+      background: unquote($gradient);
+      pointer-events: none;
+    }
+
+    @if ($bg == 'light') {
+      color: #000;
+      background: #fff;
+      mix-blend-mode: multiply;
+
+      &::before {
+        mix-blend-mode: screen;
+      }
+    } @else {
+      color: #fff;
+      background: #000;
+      mix-blend-mode: lighten;
+
+      &::before {
+        mix-blend-mode: multiply;
+      }
+    }
+  }
+}
+
+@mixin separator($color, $center : false){
+  &::after {
+    content: ' ';
+    display: block;
+    padding-top: 0.8rem;
+    margin-left: -0.6rem;
+    border-bottom: 1px solid $color;
+    width: 50px;
+    @if($center){
+      margin: auto;
+    }
+  }
+}
+
+@mixin tags($color){
+  ul.tags {
+    li {
+      border: 2px solid $color;
+      border-radius: 0.5rem;
+      width: auto;
+      position: relative;
+      display: inline-block;
+      padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+      font-size: 0.7rem;
+
+      span::before {
+        content: ' ';
+        background-size: 22px 22px;
+        width: 22px;
+        height: 22px;
+        display: block;
+        position: absolute;
+        top: 4px;
+        left: 4px;
+      }
+    }
+    li:hover{
+      background: $gradient;
+      color: $black;
+      a{
+        color: $black;
+      }
+    }
+    &.float{
+      float:left;
+    }
+  }
+}
+
+@mixin arrows($color: black, $margin-top: 0.75rem, $thickness: 4px){
+  .arrow_box {
+    transition: inherit;
+    margin-top: $margin-top;
+    position: relative;
+    background: $color;
+    border: #{$thickness / 4} solid $color;
+    width: 100%;
+
+    &:after, &:before {
+      border: solid transparent;
+      content: " ";
+      height: 0;
+      width: 0;
+      position: absolute;
+      pointer-events: none;
+    }
+
+    &:after {
+      border-color: rgba(0, 0, 0, 0);
+      border-width: $thickness;
+      margin-top: #{-1 * $thickness};
+    }
+    &:before {
+      border-color: rgba(0, 0, 0, 0);
+      border-width: #{$thickness + 1};
+      margin-top: #{- 1 * ($thickness + 1)};
+    }
+  }
+
+  .arrow_box_right {
+
+    &:after, &:before {
+      left: 100%;
+      top: 50%;
+    }
+    &:after {
+      border-left-color: $color;
+    }
+    &:before {
+      border-left-color: $color;
+    }
+  }
+  .arrow_box_left {
+    &:after, &:before {
+      right: 100%;
+      top: 50%;
+    }
+
+    &:after {
+      border-right-color: $color;
+    }
+    &:before {
+      border-right-color: $color;
+    }
+  }
+}
+
+@mixin socialBubble(){
+  a {
+    position: relative;
+    width: 5rem;
+    height: 5rem;
+    border: 2px solid white;
+    border-radius: 50%;
+    display: inline-block;
+    @media screen and (max-width: 520px) {
+      width: 3rem;
+      height: 3rem;
+
+      .fa-3x{
+        font-size: 1.5em;
+      }
+
+    }
+    &:hover{
+      background-color: $white;
+      i{
+        color: $darkblue;
+      }
+    }
+    i {
+      position:absolute;
+      top:50%;
+      left:50%;
+      transform: translate(-50%,-50%);
+    }
+  }
+}

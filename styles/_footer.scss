@@ -1,0 +1,49 @@
+@import 'variables';
+
+footer {
+  background: $black;
+
+  .wrapper {
+    margin: auto;
+    padding: 5rem 30px 2rem;
+    color: $grey;
+    font-size: 0.7rem;
+
+    img{
+      display: block;
+      height: 150px;
+      max-width: 100%;
+      margin: 5rem auto;
+    }
+
+    img.arrow{
+      height: 70px;
+      margin-top: 0;
+    }
+
+    span:first-child{
+      float:left;
+    }
+
+    span:last-child{
+      float:right;
+    }
+
+    a{
+      text-decoration: underline;
+      color: inherit;
+
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  footer{
+    .wrapper{
+      padding-bottom: 5rem;
+    }
+  }
+}

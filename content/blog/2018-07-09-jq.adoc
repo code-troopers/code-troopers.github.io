@@ -1,0 +1,96 @@
+---
+author: Matthieu
+cover: images/banner/ohmyzsh-banner.png
+date: '2018-07-09'
+tags:
+- shell
+- json
+- jq
+- trello
+title: 'Faire du json comme si on faisait du sed (*)'
+url: /2018/07/09/jq/
+---
+
+Nous usons et abusons de Trello pour nos projets. Pour un projet en particulier, je voulais retrouver certains commentaires répartis sur plusieurs mois.
+Juste en regardant les cartes une par une ou en regardant l'historique serait trop fastidieux.
+Heureusement chaque board Trello permet un export au format json qui nous permet de s'en servir à notre guise.
+
+Je veux juste sortir quelques données, je ne referai jamais la même chose plusieurs fois et je veux que ça me prenne 10 minutes max donc un projet java c'est juste impensable, un langage de script sera plus adapté et ça tombe bien car d'une part le shell (la ligne de commande) est un de mes langages préférés et j'ai découvert `jq` il n'y a pas longtemps.
+
+Régulièrement une API nous ressort un pavé de 5000 lignes qui peuvent être lourdes à lire dans un éditeur de texte, pourquoi pas utiliser pour ces occasions `jq` qui va permettre de traiter ou formatter les données.
+
+jq est disponible dans la plupart des gestionnaires de paquet.
+
+
+== jq par l'exemple
+
+Prenons cette board publique https://trello.com/b/nPNSBZjB/trello-resources nous pouvons aller dans le menu et faire *menu* -> *plus* -> *imprimer et exporter* -> *exporter en json*
+
+Maintenant nous avons du json, regardons ce qu'il y a à l'intérieur.
+
+`jq '.' nPNSBZjB.json`
+
+:lightboxGroup: 0
+:lightboxImage: 2018-07-09_jq/jq1
+:lightboxImageTitle: jq example 1
+
+include::site/static/lightbox.adoc[]
+
+Si vous aviez ouvert le fichier avec un éditeur conventionnel, vous pouvez voir que c'est un peu plus joli et coloré.
+
+En fouillant un peu, nous voyons que ce qui nous intéresse se trouve dans l'objet actions, nous pouvons regarder plus en détail les actions uniquement :
+
+`jq '.actions[]' nPNSBZjB.json`
+
+:lightboxGroup: 0
+:lightboxImage: 2018-07-09_jq/jq2
+:lightboxImageTitle: jq example 2
+
+include::site/static/lightbox.adoc[]
+
+Comme vous l'avez peut-être compris, une façon simple d'utiliser jq est de mettre en paramètre le path json que l'on souhaite extraire. Ici, les `[]` sont optionnels, cela permet d'afficher uniquement des objets lorsque l'on a un tableau comme ici pour actions.
+
+Il y a cependant beaucoup trop d'informations pour nous qui désirons uniquement la description, le nom de la carte et l'auteur. Nous pouvons formater les données simplement comme ceci :
+
+```
+jq -c '.actions[] | {txt: .data.text, name: .data.card.name, member: .memberCreator.fullName}' nPNSBZjB.json
+```
+
+:lightboxGroup: 0
+:lightboxImage: 2018-07-09_jq/jq3
+:lightboxImageTitle: jq example 3
+
+include::site/static/lightbox.adoc[]
+
+
+Comme nous le ferions en javascript, il suffit de mettre le *nom du champ* *:* *la variable*. Nous pouvons aussi en profiter pour afficher les objets sur une ligne pour gagner en visibilité grâce au `-c`.
+
+Allons encore un peu plus loin, nous ne voulons pas des objets qui ont leur champs texte à null ou alors ceux qui ont un commentaire qui commence par une notification avec `@`, nous pouvons *sélectionner* les objets avec un *select*
+
+```
+jq -c '.actions[] | {txt: .data.text, name: .data.card.name, member: .memberCreator.fullName} | select(.txt!=null) | select(.txt | startswith("@"))' nPNSBZjB.json
+```
+
+:lightboxGroup: 0
+:lightboxImage: 2018-07-09_jq/jq4
+:lightboxImageTitle: jq example 4
+
+include::site/static/lightbox.adoc[]
+
+
+Dernière commande sur l'utilisation de jq, la possibilité de trier, par exemple dans l'ordre alphabétique du champs texte
+
+```
+jq -c '.actions |= sort_by(.data.text)|.actions[] | {txt: .data.text, name: .data.card.name, member: .memberCreator.fullName} | select(.txt!=null) | select(.txt | startswith("@"))' nPNSBZjB.json
+```
+
+:lightboxGroup: 0
+:lightboxImage: 2018-07-09_jq/jq5
+:lightboxImageTitle: jq example 5
+
+include::site/static/lightbox.adoc[]
+
+
+J'espère que ce petit exemple d'utilisation de jq vous aura plu, je vous laisse à la documentation officielle si vous désirez en savoir plus : https://stedolan.github.io/jq/
+
+(*) `sed` c'est la commande qui permet de modifier une chaîne de caractères en shell et que tout informaticien connaît.

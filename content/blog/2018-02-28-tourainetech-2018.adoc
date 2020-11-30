@@ -1,0 +1,39 @@
+---
+author: Florian
+cover: images/banner/tourainettech-banner.png
+date: '2018-02-28'
+tags:
+- Conférences
+title: 'TouraineTech'
+url: /2018/02/28/tourainetech-2018/
+aliases: 2018/02/28/tourainetech-2018.html
+---
+
+La semaine dernière (vendredi 23 février pour être précis) a eu lieu la première édition de la conférence TouraineTech.
+Ce fut le fruit de presque un an de travail de plusieurs bénévoles et acteurs du numérique de Tours.
+En effet c'est en partie la réunion des leaders des différents UserGroups de Tours qui a permis la naissance de cet évènement.
+
+Et nous avons participé activement à son organisation, car dans les 11 membres principaux nous pouvons compter 3 Code-Troopers qui sont Cedric, Benjamin et Florian.
+Et ce n'est pas tout car nous étions aussi sponsors, parce que oui, en plus du temps, il faut de l'argent $_$
+
+
+Pour faire un premier bilan rapide : C'était bien !
+
+Nous avons déjà eu de nombreux retours positifs sur la journée, que ce soit de la part des participants, des https://jefrajames.wordpress.com/2018/02/26/speaking-of-java-9-at-touraine-tech/[speakers] ou des http://lunatech.com/fr/blog/WpREcyoAACsAiqcA/touraine-tech-2018[sponsors].
+Autant dire que nous sommes gonflés à bloc pour préparer une nouvelle édition en 2019 !
+Mais nous savons aussi que nous avons plein de choses à améliorer et nous allons nous y mettre rapidement.
+
+
+{lt}div style="text-align : center"{gt}
+{lt}a class="inlineBoxes" href="/images/posts/2018-02-28_tourainetech/tourainetech1.jpg" data-lightbox="1" {gt}
+        {lt}img class="medium" src="/images/posts/2018-02-28_tourainetech/tourainetech1.jpg" /{gt}
+{lt}/a{gt}
+{lt}a class="inlineBoxes" href="/images/posts/2018-02-28_tourainetech/tourainetech2.jpg" data-lightbox="1" {gt}
+        {lt}img class="medium" src="/images/posts/2018-02-28_tourainetech/tourainetech2.jpg" /{gt}
+{lt}/a{gt}
+{lt}a class="inlineBoxes" href="/images/posts/2018-02-28_tourainetech/tourainetech3.jpg" data-lightbox="1" {gt}
+        {lt}img class="medium" src="/images/posts/2018-02-28_tourainetech/tourainetech3.jpg" /{gt}
+{lt}/a{gt}
+{lt}/div{gt}
+
+Pour suivre les prochaines infos il y a le https://twitter.com/tourainetech[twitter] et le https://touraine.tech/[site web].

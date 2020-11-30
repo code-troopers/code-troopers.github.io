@@ -1,0 +1,141 @@
+---
+author: Benjamin
+cover: images/banner/angularseo-banner.png
+date: '2018-09-18'
+tags:
+- SEO
+- Angular
+title: 'SEO et Single Page Application'
+url: /2018/09/18/angular-seo/
+---
+
+:linkattrs:
+
+Lorsque nous avons commencé à développer https://www.weguide.fr[We Guide,window="_blank"], nous avons pas mal réfléchi à quel framework utiliser pour réaliser la partie front et, du fait de notre expérience, avons choisi *Angular*.
+Nous connaissions les problèmes liés aux *Single Page Application* et au *SEO* mais nous pensions pouvoir les résoudre facilement par la suite.
+Au final, c'était un peu plus compliqué que prévu et nous allons expliquer pourquoi dans la suite de cet article.
+
+== Les balises <meta>
+
+Angular fournit deux services afin de modifier les balises *HTML* destinées au *SEO* lors de l'affichage d'une page, `Meta` et `Title` qui, comme leur nom l'indique, permettent de modifier les balises `<meta>` et `<title>`.
+
+Voici un exemple de service créé pour mettre à jour les balises meta destinées à l'OpenGraph et à Twitter.
+
+[source, javascript]
+----
+@Injectable({
+  providedIn: 'root'
+})
+export class SeoService {
+
+  constructor(private meta: Meta,
+              private title: Title) {
+  }
+
+  generateTags(config) {
+    // default values
+    config = {
+      title: 'Titre de la page',
+      description: 'Description de la page par défaut',
+      image: 'http://imagepardefaut.com',
+      ...config
+    };
+
+    this.meta.updateTag({name: 'twitter:card', content: 'summary'});
+    this.meta.updateTag({name: 'twitter:site', content: '@twitter'});
+    this.meta.updateTag({name: 'twitter:title', content: config.title});
+    this.meta.updateTag({name: 'twitter:description', content: config.description});
+    this.meta.updateTag({name: 'twitter:image', content: config.image});
+
+    this.meta.updateTag({property: 'og:type', content: 'article'});
+    this.meta.updateTag({property: 'og:site_name', content: 'SiteName'});
+    this.meta.updateTag({property: 'og:title', content: config.title});
+    this.meta.updateTag({property: 'og:description', content: config.description});
+    this.meta.updateTag({property: 'og:image', content: config.image});
+    this.meta.updateTag({property: 'og:url', content: `https://monurl/`});
+
+    this.title.setTitle(config.title);
+    this.meta.addTags([
+      {name: 'description', content: config.description},
+      {name: 'keywords', content: config.description},
+    ]);
+  }
+}
+----
+
+== Le Sitemap
+
+Une autre partie du *SEO* indispensable est le sitemap.
+Il permet aux robots de savoir exactement quelles pages indexer.
+Problème, sur une application comme *We Guide*, nous ne pouvons pas écrire ce fichier en dur, en effet, des nouveaux guides créent leur profil tous les jours sur la plateforme, ce qui veut dire, une nouvelle url en plus à indexer.
+
+Pour remédier à cela c'est assez simple, il faut que le fichier soit dynamique et généré à la volée par votre serveur.
+Pour faire cela, il suffit de servir une route `/sitemap` qui retourne un fichier *XML* généré à l'aide d'appel aux différents services de votre application.
+
+Voici un exemple sur une application *Spring Boot* en *Kotlin*
+
+[source, java]
+----
+@Component
+class SitemapView(@Autowired val sitemapService: SitemapService) : AbstractView() {
+    override fun renderMergedOutputModel(model: MutableMap<String, Any>?,
+                                         request: HttpServletRequest?,
+                                         response: HttpServletResponse?) {
+        response?.contentType = APPLICATION_XML_VALUE
+        response?.writer?.append(sitemapService.createSitemap())
+    }
+}
+
+@RestController
+class SitemapController(@Autowired val sitemapView: SitemapView) {
+    @GetMapping("/sitemap", produces = arrayOf(APPLICATION_XML_VALUE))
+    fun generateSiteMap(): SitemapView {
+        return sitemapView
+    }
+}
+----
+
+Pour générer le fichier *XML*, nous avons utilisé cette librairie https://github.com/lgraubner/sitemap-generator[https://github.com/lgraubner/sitemap-generator,window="_blank"].
+
+
+== Le rendu côté serveur
+
+La dernière étape est la plus compliquée.
+Il faut ajouter une logique au niveau du serveur front qui, si l'appel vient d'un robot, le redirige vers un service permettant de générer le code *HTML* final de notre page car le problème des robots c'est que un, ils n'aiment pas le javascript (le moteur utilisé n'est pas récent) et deux, ils n'aiment pas attendre.
+
+Le service en question que nous avons choisi se nomme *Rendertron* (https://github.com/GoogleChrome/rendertron[https://github.com/GoogleChrome/rendertron,window="_blank"]). Ce n'est rien d'autre qu'un *Google Chrome* headless auquel on envoie l'url de la page que l'on désire et nous renvoie le code *HTML* en réponse.
+
+Pour décider si l'on doit faire du rendu côté serveur ou du rendu côté client, nous nous sommes inspirés d'une librairie Java https://github.com/greengerong/prerender-java[https://github.com/greengerong/prerender-java,window="_blank"].
+Cette librairie fournit directement un filtre *HTTP* permettant de rediriger vers une url si le `User-Agent` est compris dans la liste des robots de crawling.
+
+Il nous a suffit de brancher ce filtre au niveau de *Spring Boot* comme ceci :
+
+
+[source, java]
+----
+@Bean
+public FilterRegistrationBean registerSeoFilter() {
+    PreRenderSEOFilter seoFilter = new PreRenderSEOFilter();
+    FilterRegistrationBean filterRegistrationBean = new FilterRegistrationBean();
+
+    filterRegistrationBean.setFilter(seoFilter);
+    filterRegistrationBean.addInitParameter(
+        "prerenderServiceUrl",
+        env.getProperty("application.rendertron.url")+"/render");
+
+    filterRegistrationBean.addUrlPatterns("/*");
+
+    return filterRegistrationBean;
+}
+----
+
+== Validation
+
+Une fois que vous avez fait toutes vos modifications, vous pouvez tester le bon fonctionnement grâce à plusieurs outils&nbsp;:
+
+* https://cards-dev.twitter.com/validator[https://cards-dev.twitter.com/validator,window="_blank"] : le système de *Twitter* pour vérifier l'aperçu d'un lien quand on le partage dans un tweet.
+* https://search.google.com/search-console[https://search.google.com/search-console,window="_blank"] : la *Google Search Console*, l'outil de *Google* vous permet de voir le *HTML* ou même une capture d'écran d'une URL de votre site de la façon dont voit le robot d'indexation de *Google*. Il vous permet aussi de consulter le sitemap et voir si ses urls ont bien été indexées.
+
+Enfin vous n'avez plus qu'à attendre quelques jours que les différents robots passent sur votre site afin de voir les résultats sur les différents moteurs de recherche.
+
+Pour *We Guide*, nous sommes actuellement entrain de tester cette amélioration sur notre plateforme de recette et on espère déployer la version de production très prochainement.

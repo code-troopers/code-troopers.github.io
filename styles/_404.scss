@@ -1,0 +1,59 @@
+@import 'variables';
+
+#error404{
+  background: $gradient;
+  padding: 5rem;
+  height: 100vh;
+
+  .logo {
+    max-width: 100%;
+    margin: 0 auto;
+    display: inherit;
+  }
+
+  h1{
+    font-family: "Montserrat Black", "Helvetica Neue", Arial, sans-serif;
+    font-size: 4rem;
+    text-align: center;
+  }
+  .quote {
+    blockquote {
+      display:flex;
+      max-width: 50%;
+      flex-direction: column;
+
+      font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
+      font-size: 1.1rem;
+      margin: 0 auto;
+      background-color: $white;
+      p {
+        flex: 1;
+        @include gradient-text($gradient, 'light');
+        a {
+          color: inherit;
+        }
+      }
+      cite{
+        flex: 1;
+        text-align: right;
+        font-family: "Montserrat Light", "Helvetica Neue", Arial, sans-serif;
+        font-size: 0.7rem;
+        color: $darkgrey;
+      }
+
+      padding: 1rem;
+      border-radius: 0.5rem;
+    }
+
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  #error404{
+    .quote{
+      blockquote {
+        max-width: 100%;
+      }
+    }
+  }
+}

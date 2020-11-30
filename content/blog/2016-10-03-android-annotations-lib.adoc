@@ -1,0 +1,179 @@
+---
+author: Florian
+cover: images/banner/android-simple-banner.png
+date: '2016-10-03'
+tags:
+- Android
+- XML
+- Tools
+- Design
+title: 'Android Annotations : Abusez-en !'
+url: /2016/10/03/android-annotations-lib/
+aliases: 2016/10/03/android-annotations-lib.html
+---
+
+Dans le lot des https://developer.android.com/topic/libraries/support-library/index.html[supports librairies] que propose Google pour le développement Android (principalement pour la compatibilité de certains composants sur des anciennes versions de l'OS) il y en a une qui de prime abord ne va pas beaucoup servir c'est `support-annotations`.
+
+[%hardbreaks]
+
+En effet cette librairie ne contient pas grand chose en terme de classes ni de http://www.methodscount.com/?lib=com.android.support%3Asupport-annotations%3A24.2.1[méthodes]. En revanche elle possède de nombreuses annotations (d'où son nom...). Le comble c'est que presque toutes ces annotations sont définie en tant que `@Retention(CLASS)`, c'est-à-dire qu'elles seront conservées lors la génération des fichiers _.classes_ mais n'auront pas d'impact au moment de l'execution du code`.
+À quoi peuvent-elles servir ? Et bien c'est le propre des annotations, elles servent à apporter des informations sur des portions de code et éventuellement donner quelques instructions au compilateur. L'un des exemples le plus connu est _@Deprecated_ que vous devez cotoyer tous les jours. Cette annotation a pour seul but d'informer le développeur qu'il est fortement déconseillé d'utiliser cette méthode.
+
+L'avantage d'utiliser les `support-annotations` est qu'Android Studio connait leur signification et donc va pouvoir highlighter des portions de code en rapport avec celles-ci lorsqu'un comportement attendu n'est pas respecté.
+
+Faisons un petit tour des https://developer.android.com/reference/android/support/annotation/package-summary.html[annotations présentes dans `support-annotations`] et de leur intégration dans Android Studio
+
+
+## @Nullable / @NonNull
+
+Le couple d'annotations le plus connu est probablement @Nullable et @NonNull, car déjà présent depuis un certain temps dans différents packages comme https://www.jetbrains.com/help/idea/2016.2/nullable-and-notnull-annotations.html[Intellij] ou http://mvnrepository.com/artifact/javax.annotation/javax.annotation-api/1.3[javax.annotations].
+
+Annoter une méthode @Nullable permet d'indiquer que le retour de celle-ci peut être _null_ et donc qu'il est fort préférable de procéder à un null check avant d'utiliser l'objet retourné. Le @NonNull permet lui d'assurer que le résultat est toujours un objet valide.
+
+{lt}div style="text-align : center"{gt}
+{lt}a class="inlineBoxes" href="/images/posts/2016-09_AndroidAnnotations/android_annotations_nullable.png" data-lightbox="1" title="Warning sur un retour @Nullable"{gt}
+        {lt}img class="medium" src="/images/posts/2016-09_AndroidAnnotations/android_annotations_nullable_min.png" alt="Warning sur un retour @Nullable"/{gt}
+{lt}/a{gt}
+{lt}a class="inlineBoxes" href="/images/posts/2016-09_AndroidAnnotations/android_annotations_notnull.png" data-lightbox="1" title="Warning sur une methode @NonNull"{gt}
+        {lt}img class="medium" src="/images/posts/2016-09_AndroidAnnotations/android_annotations_notnull_min.png" alt="Warning sur une methode @NonNull"/{gt}
+{lt}/a{gt}
+{lt}/div{gt}
+
+{lt}br/{gt}
+
+## @<Any>Res
+
+Le groupe d'annotations suivant est probablement celui que j'utilise le plus souvent est le `@...Res`.
+
+Et oui étant donné que toutes les références des ressources sont des `int` lorsqu'elles sont générées dans votre class _R_ il est difficile de les différencier lorsqu'on en passe une en paramètre de méthode.
+Et bien avec un `@ColorRes int myColor`, Android Studio s'occupera de vous avertir si la valeur passée ne correspond pas à une ressource du type `color`.
+
+{lt}div style="text-align : center"{gt}
+{lt}a class="inlineBoxes" href="/images/posts/2016-09_AndroidAnnotations/android_annotations_stringres.png" data-lightbox="1" title="Warning sur un paramètre @StringRes"{gt}
+        {lt}img class="medium" src="/images/posts/2016-09_AndroidAnnotations/android_annotations_stringres_min.png" alt="Warning sur un paramètre @StringRes"/{gt}
+{lt}/a{gt}
+{lt}/div{gt}
+
+{lt}br/{gt}
+
+La liste (non complète) des ressources que vous pouvez contrôler :
+
+- `ColorRes`
+- `DimenRes`
+- `DrawableRes`
+- `IdRes`
+- `StringRes`
+
+## @CallSuper
+Je l'ai découverte récemment et je trouve qu'elle est d'une grande aide. Étant donné l'importance du cycle de vie de chaque élément dans Android
+il est indispensble de s'assurer que chaque méthode est appelée au bon moment.
+Et lorsque qu'il y a un peu de refactor il arrive vite d'oublier d'appeler le super d'une méthode surchargée. Maintenant vous en serez averti !
+
+{lt}div style="text-align : center"{gt}
+{lt}a class="inlineBoxes" href="/images/posts/2016-09_AndroidAnnotations/android_annotations_callsuper.png" data-lightbox="1" title="Warning sur un appel super manquant"{gt}
+        {lt}img class="medium" src="/images/posts/2016-09_AndroidAnnotations/android_annotations_callsuper_min.png" alt="Warning sur un appel super manquant"/{gt}
+{lt}/a{gt}
+{lt}/div{gt}
+
+{lt}br/{gt}
+
+
+## @RequirePermission
+Pour être sur de ne pas oublier une permission dans le `manifest.xml` cette annotation permettra (sur une classe ou une méthode) de vous rappeler explicitement quelles sont celles dont vous avez besoin.
+
+On peut d'ailleurs voir le warning d'Android Studio en créant un sample project et en démarrant une nouvelle activity avec un `Intent.ACTION_CALL`.
+
+
+{lt}div style="text-align : center"{gt}
+{lt}a class="inlineBoxes" href="/images/posts/2016-09_AndroidAnnotations/android_annotations_permission.png" data-lightbox="1" title="Warning sur une permission manquante"{gt}
+        {lt}img class="medium" src="/images/posts/2016-09_AndroidAnnotations/android_annotations_permission_min.png" alt="Warning sur une permission manquante"/{gt}
+{lt}/a{gt}
+{lt}/div{gt}
+
+{lt}br/{gt}
+
+## @StringDef
+Lorsque l'on dev pour Android on doit savoir que https://www.youtube.com/watch?v=Hzs6OBcvNQE[les enums sont à proscrire] et du coup c'est embêtant, car c'est tout de même bien pratique.
+La parade est donc de passer par une liste de constantes et de créer une nouvelle annotation qui limitera les valeurs attendues, comme ceci :
+
+[source,java]
+-----
+public final static String Constant.TROOPER_VINCENT = "VM";
+public final static String Constant.TROOPER_JORIS = "JP";
+public final static String Constant.TROOPER_BENJAMIN = "BC";
+
+@StringDef({
+        Constant.TROOPER_VINCENT,
+        Constant.TROOPER_JORIS,
+        Constant.TROOPER_BENJAMIN,
+})
+@Retention(RetentionPolicy.SOURCE)
+public @interface Trooper {
+}
+-----
+
+Et ensuite d'utiliser cette annotation à chaque fois que seulement une des valeurs précédente est autorisée.
+
+[source,java]
+-----
+public void getProject(@Trooper String currentTrooper){}
+-----
+
+Certes ce n'est pas aussi puissant qu'une enum, mais il faudra faire avec.
+
+{lt}div style="text-align : center"{gt}
+{lt}a class="inlineBoxes" href="/images/posts/2016-09_AndroidAnnotations/android_annotations_stringdef.png" data-lightbox="1" title="Warning sur un paramètre non attendu"{gt}
+        {lt}img class="medium" src="/images/posts/2016-09_AndroidAnnotations/android_annotations_stringdef_min.png" alt="Warning sur un paramètre non attendu"/{gt}
+{lt}/a{gt}
+{lt}/div{gt}
+
+{lt}br/{gt}
+
+Il est possible de faire la même chose pour une liste de _Integer_ avec `@IntDef`.
+
+## @Range
+Toujours dans l'idée d'éviter de créer des énum @IntRange permettra de spécifier un peu plus ce qu'une méthode attend en paramètre.
+
+{lt}div style="text-align : center"{gt}
+{lt}a class="inlineBoxes" href="/images/posts/2016-09_AndroidAnnotations/android_annotations_range.png" data-lightbox="1" title="Warning sur un paramètre hors limites"{gt}
+        {lt}img class="medium" src="/images/posts/2016-09_AndroidAnnotations/android_annotations_range_min.png" alt="Warning sur un paramètre hors limites"/{gt}
+{lt}/a{gt}
+{lt}/div{gt}
+
+{lt}br/{gt}
+
+Une variante `@FloatRange` est aussi disponible.
+
+## Lint
+
+Comme chacune des erreurs n'empèche pas la compilation du projet, un bon moyen de surveiller qu'il n'y a pas de violation aux règles mises en place grâce à toutes ces annotations,
+est de contrôler les rapports générés par lint
+
+{lt}div style="text-align : center"{gt}
+{lt}a class="inlineBoxes" href="/images/posts/2016-09_AndroidAnnotations/android_annotations_lint.png" data-lightbox="1" title="Exemple de rapport lint"{gt}
+        {lt}img class="medium" src="/images/posts/2016-09_AndroidAnnotations/android_annotations_lint_min.png" alt="Exemple de rapport lint"/{gt}
+{lt}/a{gt}
+{lt}/div{gt}
+
+{lt}br/{gt}
+
+
+## L'ajouter dans son projet
+
+[source,groovy]
+-----
+dependencies {
+    compile 'com.android.support:support-annotations:24.2.1'
+}
+-----
+
+
+### Liens
+
+https://developer.android.com/topic/libraries/support-library/features.html#annotations
+
+https://developer.android.com/studio/write/annotations.html
+
+https://developer.android.com/reference/android/support/annotation/package-summary.html
+
+https://github.com/fchauveau/blog-android-annotations/tree/master/app/src/main/java/com/codetroopers

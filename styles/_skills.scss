@@ -1,0 +1,59 @@
+@import 'variables';
+@import 'mixins';
+
+section#skills{
+  background: $gradient;
+  color: $white;
+
+  .wrapper{
+    margin: auto;
+    width: 960px;
+    max-width: 100%;
+    padding:30px;
+
+    ul{
+      li{
+        margin: 1rem;
+
+
+
+        @media screen and (max-width: $smalldesktop) {
+            min-width: calc(50% - 2rem);
+            max-width: calc(50% - 2rem);
+        }
+
+        @media screen and (max-width: $phone) {
+          min-width: 51%;
+          max-width: 51%;
+          margin: 1rem auto;
+        }
+
+
+        img{
+          height: 100px;
+        }
+
+        .title{
+          font-weight: bold;
+          padding-top: 1rem;
+          padding-bottom: 1rem;
+          font-size: 1.3rem;
+        }
+
+        div:last-child{
+          &:before {
+            content: ' ';
+            display: block;
+            padding-top: 0.8rem;
+            margin: auto;
+            border-top: 1px solid $white;
+            width: 30px;
+          }
+          line-height: 1.4rem;
+          font-size: 0.8rem;
+        }
+      }
+    }
+  }
+}
+

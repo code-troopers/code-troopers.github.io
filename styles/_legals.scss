@@ -1,0 +1,23 @@
+@import "variables";
+
+section#text{
+  background: $white;
+  width: 1200px;
+  margin: 0 auto;
+  h2{
+    @include separator($black);
+  }
+  address{
+    white-space: pre-wrap;
+  }
+
+  p, address, a{
+    color: $grey;
+  }
+
+  @media screen and (max-width: $desktop) {
+    width: 90%;
+    letter-spacing: initial;
+  }
+}
+

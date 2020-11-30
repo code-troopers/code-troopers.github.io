@@ -1,0 +1,156 @@
+---
+author: Nicolas
+cover: images/banner/projets-internes-banner.png
+date: '2018-06-18'
+tags:
+ - Projets internes
+ - Concepts innovants
+ - Croissance
+ - Festivals
+ - Chapitô
+ - We Guide
+ - Navig'Tours
+
+title: 'Projets internes, tu feras'
+url: /2018/06/18/projets-internes/
+---
+
+
+:linkattrs:
+
+Il me parait indispensable que je me présente pour cet article de blog, vous allez vite comprendre pourquoi !
+ 
+Mais avant tout, petit rappel ! Code-Troopers a été créée il y a 3 ans par 7 *développeurs* issus de Polytech’ Tours, l’entreprise se développe et réalise des projets pour des grands groupes, des PME, des start-ups… depuis peu l’entreprise embauche ; 1 CDI en *développement*, 1 CDD de 6 mois en *développement*, 1 alternant en *développement* en formation à Polytech’ Tours et 1 alternant en _gestion & entrepreneuriat_ à l’IAE de Tours (je vous invite à vous rendre sur la page *https://www.code-troopers.com/#casting[Casting, window="_blank"]* si vous voulez des précisions).
+ 
+Vous voyez où je veux en venir ? Devinez lequel je suis… vous l’avez compris, je suis le seul de toute l’équipe à ne pas maîtriser une seule ligne de code, Jenkins, Xcode, Java, strings, ou même encore `$routeProvider.when('/admin/displayMail',{templateUrl:'partials/display_mail.html'})`, c’est du chinois pour moi !
+
+[.center]
+image:https://media.giphy.com/media/L3pfVwbsJbrk4/giphy.gif[]
+ 
+Alors vous vous demandez peut-être ce que je fais dans une entreprise de *développeurs* web, mobile, appli ?
+Non non je ne me suis pas perdu, mis à part le babyfoot et les afterworks il y avait autre chose d’absolument génial et motivant pour moi : *des projets internes !*
+
+[.center]
+image:https://media.giphy.com/media/6fScAIQR0P0xW/giphy.gif[]
+ 
+ 
+_« Mais au fait c’est quoi un projet interne ? »_ Venons-en au cœur de notre sujet.
+ 
+Un projet interne a principalement pour objectif d’augmenter la croissance interne de l’entreprise, soyons clair.
+ 
+Il a pour but de développer l’activité de l’entreprise en mobilisant ses propres moyens ou ressources, pour créer de la valeur ; il s’agit de mobiliser des compétences, des ressources financières ou du savoir-faire.
+(à « l’opposé » de « croissance interne » on trouve la « croissance externe » il s’agit entre autres de l’acquisition de structures existantes, ce n’est pas notre cas… pour le moment)."
+ 
+Concrètement chez Code-Troopers cette stratégie est mise en place grâce à des investissements en R&D pour développer des produits innovants, [.underline]#nos projets internes# donc. Je vous explique un peu plus loin nos supers méga extragalactiques projets innovants comme vous vous en doutez.
+
+La croissance interne peut également se faire à travers différentes actions. Prenons quelques exemples. 
+
+* La formation de collaborateurs ; permettant l'acquisition en interne de nouvelles compétences
+* La mise en place d'un nouveau réseau de distribution 
+* L'achat de locaux plus grands ou plus confortables permettant d’accueillir de nouveaux collaborateurs plus sereinement. D'ailleurs, on vient d’emménager dans nos nouveaux locaux à MAME, à Tours, entre le M & le A, vous êtes les bienvenus pour nous exposer vos projets, si vous voulez en savoir plus sur nos nouveaux locaux je vous invite à vous rendre sur *http://code-troopers.com/2018/06/11/mame/[cette page, window="_blank"]*.
+ 
+Mais revenons à nos moutons : les projets internes, il s'agit de projets dont la finalité est de développer l'offre, notre offre, la diversifier, améliorer sa commercialisation. Dans notre cas il s’agit de logiciels, sites, applications web ou mobiles que nous imaginons et créons. Cela fait de nous des éditeurs, mais réaliser des projets internes comporte des avantages et inconvénients.
+ 
+== Avantages de la croissance interne à travers les projets internes
+
+[.center]
+image:https://media.giphy.com/media/3o7abB06u9bNzA8lu8/giphy.gif[]
+ 
+ 
+Parier sur le développement interne (aussi parfois appelé développement « naturel » ou « organique ») d’une entreprise présente de nombreux avantages. Je vous en présente quelques-uns ?
+ 
+* Le développement de projets internes permet une approche plus progressive et vous autorise, si vos ressources financières vous le permettent, d'autofinancer votre/vos projets, c’est notre cas pour le moment et c’est très confortable.
+ 
+* Cela permet de maîtriser la croissance de votre structure, en adaptant progressivement votre organisation au fur et à mesure de votre évolution. L’adaptation progressive c’est la clef pour réussir votre projet interne, vous gardez le contrôle.
+
+* Les projets internes permettent aussi à toute l’équipe de se lancer de nouveaux challenges mais aussi de tester de nouvelles façons de travailler (seul ou en équipe), de nouveaux outils, de nouvelles technos, personne ne vous dit quoi faire, cela peut vous permettre de gagner en compétence dans un domaine et vous offrir de nouvelles perspectives. Une forte source de cohésion et de motivation. Youpi !
+ 
+* Je ne détaille pas trop ce point, mais grâce au développement de projets internes qui engendreraient une croissance interne, vous garderez votre indépendance vis-à-vis de potentiels actionnaires et/ou établissement financiers
+ 
+* Enfin, opter pour le développement de projets internes est peu risqué à court terme puisqu’il n'est pas nécessaire de mobiliser un investissement conséquent et devoir gérer l'intégration de nouveaux collaborateurs ou d’une nouvelle équipe.
+ 
+== Le développement de projets internes peut également avoir quelques inconvénients
+
+Eh oui ! Sinon tout le monde en ferait. Go, je vous en détails 3/4 !
+
+[.center]
+image:https://media.giphy.com/media/108GZES8iG0myc/giphy.gif[]
+ 
+* Le ROI (retour sur investissement) ou le ROTI (retour sur le temps investi) est difficile à évaluer, et surtout les résultats peuvent être longs à venir. Lorsque tout est à faire ; l’identification des besoins, créer une image, obtenir une notoriété, découvrir et créer la clientèle, développer le réseau, le tout sans acquérir une société qui possède déjà les savoir-faire... il est compliqué d'obtenir des résultats à court terme. Cela demande du temps et de l’organisation. L'investissement à prévoir pour croître en interne peut être important avec un ROI positif pouvant apparaître seulement après plusieurs années… ou pas, ou pas du tout ! Ayez peut-être en tête qu’une entreprise qui choisit de se développer par croissance interne, risque de ne pas avoir un développement aussi rapide que les concurrents qui se développent par croissance externe.
+ 
+* La croissance interne à travers les projets internes peut provoquer une spécialisation trop forte (techno, marché, processus, etc.), ce qui rendrait l’entreprise plus fragile car les bénéfices ne reposeraient que sur un segment de marché. Pensez à diversifier vos projets internes si vous en avez l’opportunité.
+ 
+* Pour certains marchés et concepts, la taille des acteurs est un facteur clé de succès (élément que la structure doit maîtriser pour espérer dépasser la concurrence). Par exemple si la réalisation d'économies d'échelle (pour réduire les coûts) est indispensable au développement du produit alors les compétiteurs du marché ne peuvent sans doute pas se limiter à de la croissance interne.
+ 
+* Un concurrent « agressif », ou implanté sur le marché depuis plus longtemps (on parle d’avantage pionnier ou prime du premier entrant) peut remettre en cause votre projet et en challenger l’avenir. Vous n'aurez peut-être pas le temps de mettre les moyens nécessaires pour empêcher votre concurrent de vous nuire, cependant, ayez une chose en tête, si les « gros » concurrents fonctionnent bien, c’est qu’il y a de la place pour les petits !
+
+[.center]
+image:https://media.giphy.com/media/l1ugtlSwK8or4vGik/giphy.gif[]
+ 
+Je vous présente un peu nos projets internes ?
+ 
+=== Chapitô 
+
+image:/images/posts/2018-05-09_projets_internes/chapito-logo.png[]
+
+*http://www.chapi.to[http://www.chapi.to,window="_blank"]*
+ 
+Chapitô est LE projet interne des Code-Troopers. Il s’agit d’un outil 100% en ligne qui permet à tous les organisateurs de festivals de créer une application sur-mesure sans aucune connaissance en développement web & développement d’application.
+ 
+Il s’agit d’un réel confort pour les organisateurs de festival puisque proposer une application devient indispensable. Ce générateur permet de proposer des applications natives correspondant parfaitement à la charte graphique des festivals.
+ 
+Comment ça marche ? Les orga se connectent à leur espace personnel sur Chapi.to, ils renseignent toutes les informations & caractéristiques de leur festival, ils nous demandent de générer l’application directement via l’outil et c’est bon !
+ 
+Créer une application permet aux festivaliers de connaître toutes les informations relatives à l’événement : Artistes, horaires, programmation, preview & musiques, info pratiques, points d’intérêts, partenaires...
+ 
+Mais également de rester informé des changements et être alerté des nouveautés grâce aux notifications.
+ 
+L’application est un outil de communication à part entière et est au service de l’événement qu’elle promeut !
+Vous pouvez déjà télécharger les applications Aucard de Tours et Terres du Son sur les stores ! Let’s dance !
+
+[.center]
+image:https://media.giphy.com/media/12sxs2j080MCuA/giphy.gif[]
+ 
+ 
+=== We Guide 
+
+image:/images/posts/2018-05-09_projets_internes/weguide-logo.png[]
+
+*https://www.weguide.fr[https://www.weguide.fr, window="_blank"]*
+ 
+We Guide est LA plateforme de mise en relation entre Touristes et Guides professionnels et entre Touristes et Particuliers locaux.
+ 
+Le but est de découvrir ou redécouvrir un lieu, un quartier, une ville, une région, d’une façon beaucoup plus authentique et personnalisée. We Guide : Un touriste, Un local, une rencontre.
+ 
+L’objectif est de donner davantage de sens aux voyages, aux séjours touristiques, en France, et ailleurs à l’avenir. Le tout en quelques étapes très simples :
+ 
+* Les touristes recherchent la ville qu’ils souhaitent visiter, renseignent leurs centres d’intérêt, et identifient les profils de Guides Professionnels ou Ambassadeurs locaux correspondant le plus à leur profil, attentes & envies.
+ 
+* Ils personnalisent leur séjour en échangeant avec le local passionné qu’ils choisissent et payent la totalité de la transaction en ligne via un système sécurisé.
+ 
+* Ils profitent d’une visite ou d’une activité de qualité réalisée par des passionnés ayant les mêmes centres d’intérêt qu’eux, le local est rémunéré une fois la prestation réalisée. Let’s guide you !
+
+[.center]
+image:https://media.giphy.com/media/nopqz91prOyvS/giphy.gif[]
+ 
+=== Navig’Tours 
+
+image:/images/posts/2018-05-09_projets_internes/navigtours-logo.png[]
+
+*https://navigtours.com[https://navigtours.com,window="_blank"]*
+
+*https://play.google.com/store/apps/details?id=com.codetroopers.transport.tours[Lien vers le Playstore, window="_blank"]*
+
+*https://itunes.apple.com/fr/app/navigtours/id1055138264?mt=8[Lien vers l'App Store, window="_blank"]*
+ 
+Navig’Tours est l'application Android / iPhone gratuite pour vos déplacements en bus et tram sur le réseau Fil Bleu, à Tours et son agglomération. Son idée de base c'est de faciliter les déplacements en transports en commun dans l'agglo en proposant notamment un service d'itinéraires en bus et tram ou à pied, le tout en allant récupérer l'ensemble des horaires fournis par Keolis.
+
+[.center]
+image:https://media.giphy.com/media/Vsb2ubz4M7Jw4/giphy.gif[]
+
+
+
+Les projets internes sont motivants, et peuvent, selon le type de structure être vraiment lucratifs, il faut cependant être vigilant sur la réalisation de ces derniers, le ROI peut-être long à venir ou même inexistant dans certains cas. 
+Et vous ? Y avez-vous pensé au sein de votre structure ? 
+
+*https://www.linkedin.com/in/nicolas-dauphin-moulin-7a824074/[-Nicolas-, window=_"blank"]*

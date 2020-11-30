@@ -1,0 +1,36 @@
+@import 'variables';
+@import 'mixins';
+
+section#numbers {
+  background: $white;
+  padding-top:5rem;
+  padding-bottom:5rem;
+  ul {
+    width: 1200px;
+
+    li {
+      margin: 2rem;
+      color: $grey;
+
+      div:first-child {
+        font-family: "Montserrat Black", Helvetica, Arial, sans-serif;
+        @include gradient-text($gradient, 'light');
+        font-size: 5rem;
+        font-weight: bold;
+        padding-bottom: 1rem;
+      }
+
+      div:last-child {
+
+        &:before {
+          content: ' ';
+          display: block;
+          padding-top: 1.5rem;
+          margin: auto;
+          border-top: 1px solid $grey;
+          width: 30px;
+        }
+      }
+    }
+  }
+}

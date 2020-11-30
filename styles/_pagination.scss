@@ -1,0 +1,51 @@
+@import 'variables';
+
+.pagination{
+  padding-top: 1rem;
+  padding-bottom: 3rem;
+  @include arrows($grey, -0.33rem, 3px);
+  font-family: "Montserrat Light", "Helvetica Neue", Arial, sans-serif;
+  .next-page{
+    float: right;
+  }
+  a{
+    font-size: 0.8rem;
+    transition: width 1s, margin-left 1s, margin-right 1s;
+    .arrow{
+      transition: inherit;
+      display: inline-block;
+      width: 24px;
+    }
+    &:hover, &:visited{
+      color: $grey;
+      .arrow{
+        width: 32px;
+      }
+    }
+    &.previous-page:hover{
+      .arrow{
+        margin-left: -8px;
+      }
+    }
+    &.next-page:hover{
+      margin-right: -8px;
+
+    }
+  }
+}
+
+@media screen and (max-width: $desktop) {
+  .pagination {
+    a {
+      &.next-page {
+        margin-right: 0.8rem;
+        &:hover {
+          margin-right: 8px;
+        }
+      }
+      &.previous-page {
+        margin-left: 0.8rem;
+      }
+    }
+  }
+}
