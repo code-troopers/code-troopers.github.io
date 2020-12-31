@@ -34,7 +34,7 @@
             <div class="text">Projets menés avec satisfaction</div>
         </li>
         <li>
-            <div class="count-up" data-count="9">0</div>
+            <div class="count-up" data-count=".casting>li">0</div>
             <div class="text">Collaborateurs</div>
         </li>
         <li>
@@ -98,7 +98,7 @@
     <h1>Réalisations</h1>
 
     <div class="wrapper">
-        {{ range first 4 (where .Site.Pages "Section" "work") }}
+        {{ range first 4 (where .Site.RegularPages "Section" "work") }}
         {{ .Render "li" }}
         {{ end }}
     </div>
@@ -205,7 +205,7 @@
 
         <section id="articles">
             <div class="wrapper">
-                {{ range first 3 (where .Site.Pages "Section" "blog") }}
+                {{ range first 3 (where .Site.RegularPages "Section" "blog") }}
                 {{ .Render "li" }}
                 {{ end }}
             </div>

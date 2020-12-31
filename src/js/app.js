@@ -33,6 +33,9 @@ var initCountUp = function(){
     };
     scrollMonitor.create(el).enterViewport(function () {
         var targetValue = this.watchItem.getAttribute('data-count');
+        if (targetValue.startsWith(".")){
+          targetValue = document.querySelectorAll(targetValue).length;
+        }
         if (this.watchItem.getAttribute('data-random')) {
             targetValue = Math.ceil(Math.random()*32) + 32;
         }

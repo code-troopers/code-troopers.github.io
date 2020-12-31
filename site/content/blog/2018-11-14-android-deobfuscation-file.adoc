@@ -6,7 +6,7 @@ tags:
 - Android
 - PlayStore
 - APK
-title: 'Android - Obfuscation et Désobfsucation'
+title: 'Android - Obfuscation et Désobfuscation'
 url: /2018/11/14/android-deobfuscation/
 ---
 
