@@ -16,9 +16,33 @@ const defaultArgs = ['-d', '.tmp', '--config', 'config.yml', '-v', '-t', 'code-t
 
 const browserSync = BrowserSync.create();
 
-gulp.task('build', ['js']);
 
-gulp.task('serve-prod', ['build'], () => {
+gulp.task('clean', () => {
+  if (process.env.SKIP_CLEAN) {
+    return;
+  }
+  return del(['dist/**', '.tmp/**', '!dist', '!.tmp']);
+});
+
+gulp.task('hugo-dist', gulp.series('clean', (cb) => buildSite(cb, ['-d', '.tmp'])));
+gulp.task('hugo-dev', gulp.series('clean', (cb) => buildSite(cb, ['-d', 'dist', '--buildDrafts', '--buildFuture'], { WEBPACK_HOT: true })));
+
+
+gulp.task('js', gulp.series('hugo-dist', (cb) => {
+  webpack(webpackConfig(), (err, stats) => {
+    if (err) throw new gutil.PluginError('webpack', err);
+    gutil.log('[webpack]', stats.toString({
+      colors: true,
+      progress: true
+    }));
+    cb();
+  });
+}));
+
+
+gulp.task('build', gulp.series('js'));
+
+gulp.task('serve-prod', gulp.series('build', () => {
   browserSync.init({
     notify: false,
     open: false,
@@ -26,9 +50,10 @@ gulp.task('serve-prod', ['build'], () => {
       baseDir: './dist'
     }
   });
-});
+}));
 
-gulp.task('serve-dev', ['hugo-dev'], () => {
+
+gulp.task('serve-dev', gulp.series('hugo-dev', () => {
   const compiler = webpack(webpackDevConfig());
   const webpackMiddleware = webpackDevMiddleware(compiler, {
     publicPath: '/',
@@ -46,38 +71,17 @@ gulp.task('serve-dev', ['hugo-dev'], () => {
       ]
     }
   });
-  process.env.SKIP_CLEAN = true
-  gulp.watch('./site/**/*', ['hugo-dev', () => webpackMiddleware.invalidate()]);
-});
+  process.env.SKIP_CLEAN = true;
+  gulp.watch('./site/**/*', gulp.series('hugo-dev', () => webpackMiddleware.invalidate()));
+}));
 
 
-
-gulp.task('hugo-dist', ['clean'], (cb) => buildSite(cb, ['-d', '.tmp']));
-gulp.task('hugo-dev', ['clean'], (cb) => buildSite(cb, ['-d', 'dist', '--buildDrafts', '--buildFuture'], { WEBPACK_HOT: true }));
-
-gulp.task('clean', () => {
-  if (process.env.SKIP_CLEAN){
-    return;
-  }
-  return del(['dist/**', '.tmp/**', '!dist', '!.tmp']);
-});
-
-gulp.task('js', ['hugo-dist'], (cb) => {
-  webpack(webpackConfig(), (err, stats) => {
-    if (err) throw new gutil.PluginError('webpack', err);
-    gutil.log('[webpack]', stats.toString({
-      colors: true,
-      progress: true
-    }));
-    cb();
-  });
-});
 
 
 function buildSite(cb, options, env = null) {
   const args = options ? defaultArgs.concat(options) : defaultArgs;
-  var  nodeEnv = env && Object.assign({}, process.env, env) || process.env;
-  nodeEnv['PATH'] = `${path.join(__dirname, 'scripts')}:${nodeEnv['PATH']}`
+  var nodeEnv = env && Object.assign({}, process.env, env) || process.env;
+  nodeEnv.PATH = `${path.join(__dirname, 'scripts')}:${nodeEnv.PATH}`;
   return cp.spawn(hugoBin, args, { stdio: 'inherit', env: nodeEnv }).on('close', (code) => {
     if (code === 0) {
       browserSync.reload();
