@@ -1,4 +1,4 @@
-FROM debian:jessie
+FROM debian:buster
 
 # Install node sources
 RUN apt-get -qq update \
