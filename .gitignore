@@ -1,4 +1,5 @@
 site/public
+public
 .idea
 node_modules
 site/rev-manifest.json
