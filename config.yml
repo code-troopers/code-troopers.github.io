@@ -25,14 +25,18 @@ menu:
       Name: "Casting"
       URL: "/#casting"
       Weight: 3
+    - Identifier: "team"
+      Name: "Troopers"
+      URL: "https://team.code-troopers.com"
+      Weight: 4
     - Identifier: "contact"
       Name: "Contact"
       URL: "/#contact"
-      Weight: 4
+      Weight: 5
     - Identifier: "blog"
       Name: "Blog"
       URL: "/blog"
       Pre: "blog"
-      Weight: 5
+      Weight: 6
 params:
     description: Code-Troopers est une agence spécialisée dans le développement logiciel et la conception d’applications mobiles sur-mesure. Analyse pour de grands groupes, développement natif multisupport pour des start-ups innovantes… Les membres de notre structure s’engagent dans des suivis complets, rigoureux, au plus près des différentes phases de vos projets informatiques.
