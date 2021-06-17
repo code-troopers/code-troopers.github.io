@@ -1,0 +1,488 @@
+
+<!doctype html>
+<html class="no-js" lang="fr-fr" itemscope itemtype="http://schema.org/Organization">
+<head>
+  
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-NWLQD2');</script>
+  
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+  
+  
+    
+      
+    
+  
+
+  
+  
+    
+      
+    
+  
+
+  
+  
+        
+  
+
+  
+  
+    
+  
+
+  <title>Distribuer sur Maven Central ses bibliothèques - Code-Troopers Conception d’applications web et mobiles sur-mesure</title>
+  <meta name="viewport" content="user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1,width=device-width" />
+
+  <meta property="og:title" content="Distribuer sur Maven Central ses bibliothèques - Code-Troopers Conception d’applications web et mobiles sur-mesure" />
+  <meta property="og:site_name" content="Code-Troopers" />
+  <meta property="og:url" content="https://code-troopers.com/2014/03/19/mavenrelease/" />
+  <meta property="og:image" content="https://code-troopers.com/images/banner/mavenRelease-banner.64f7.png"/>
+
+
+  <meta property="og:type" content="website" />
+
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@codetroopers" />
+  <meta name="twitter:creator" content="@codetroopers" />
+  <meta name="twitter:title" content="Distribuer sur Maven Central ses bibliothèques - Code-Troopers Conception d’applications web et mobiles sur-mesure" />
+  <meta name="twitter:url" content="https://code-troopers.com/2014/03/19/mavenrelease/" />
+  <meta name="twitter:image" content="https://code-troopers.com/images/banner/mavenRelease-banner.64f7.png"/>
+
+  <meta name="twitter:description" content="Cas d&rsquo;utilisation Il est fréquent que nous réalisions des bouts de codes qui peuvent devenir des bibliothèques (ou librairies pour les faux amis).
+Souvent un des freins à la libre distribution de ces sources très utiles n&rsquo;est pas la mise à disposition des sources (Github a bien aidé dans ce sens ces dernières années), mais la distribution sur un des dépôts Maven accessible au tout venant.
+En fait, il est bon de savoir que Sonatype permet la mise à disposition de n&rsquo;importe quelle bibliothèque ( open source ) dans les dépôts centraux de Maven." />
+  <meta name="description" content="Cas d&rsquo;utilisation Il est fréquent que nous réalisions des bouts de codes qui peuvent devenir des bibliothèques (ou librairies pour les faux amis).
+Souvent un des freins à la libre distribution de ces sources très utiles n&rsquo;est pas la mise à disposition des sources (Github a bien aidé dans ce sens ces dernières années), mais la distribution sur un des dépôts Maven accessible au tout venant.
+En fait, il est bon de savoir que Sonatype permet la mise à disposition de n&rsquo;importe quelle bibliothèque ( open source ) dans les dépôts centraux de Maven." />
+  <meta property="og:description" content="Cas d&rsquo;utilisation Il est fréquent que nous réalisions des bouts de codes qui peuvent devenir des bibliothèques (ou librairies pour les faux amis).
+Souvent un des freins à la libre distribution de ces sources très utiles n&rsquo;est pas la mise à disposition des sources (Github a bien aidé dans ce sens ces dernières années), mais la distribution sur un des dépôts Maven accessible au tout venant.
+En fait, il est bon de savoir que Sonatype permet la mise à disposition de n&rsquo;importe quelle bibliothèque ( open source ) dans les dépôts centraux de Maven."/>
+
+
+  <meta name="p:domain_verify" content="fc173d84e3a4de948ed4bda2908afd3e"/>
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="MobileOptimized" content="320" />
+  <meta name="theme-color" content="#3BCCE5" />
+
+
+  <link href="https://code-troopers.com/index.xml" rel="alternate" type="application/rss+xml" title="Code-Troopers" />
+  <link rel="canonical" href="https://code-troopers.com/2014/03/19/mavenrelease/" />
+  <link rel="shortcut icon" href="../../../../favicon.ico?v=2" type="image/x-icon">
+  <link rel="icon" href="../../../../favicon.ico?v=2" type="image/x-icon">
+  <meta itemprop="name" content="Code-Troopers"/><link rel="stylesheet" href="../../../../styles.4623.css" /><link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
+  <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+  <script>
+      window.addEventListener("load", function(){
+          window.cookieconsent.initialise({
+              "palette": {
+                  "popup": {
+                      "background": "#000"
+                  },
+                  "button": {
+                      "background": "transparent",
+                      "text": "#3BCCE5",
+                      "border": "#3BCCE5"
+                  }
+              },
+              "content": {
+                  "message": "En poursuivant la navigation, vous acceptez l'utilisation de cookies.",
+                  "dismiss": "J'ai compris",
+                  "link": "En savoir plus"
+              }
+          })});
+  </script>
+</head>
+
+<body>
+
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NWLQD2"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+
+
+<header>
+    <nav>
+        <a href="../../../../" class="brand"><img src="data:image/png;base64,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" alt="Code-Troopers"></a>
+        
+            
+            <a href="../../../../#skills" class=" "><span>Compétences</span></a>
+            
+        
+            
+            <a href="../../../../#portfolio" class=" "><span>Réalisations</span></a>
+            
+        
+            
+            <a href="../../../../#casting" class=" "><span>Casting</span></a>
+            
+        
+            
+            <a href="https://team.code-troopers.com" class=" "><span>Troopers</span></a>
+            
+        
+            
+            <a href="../../../../#contact" class=" "><span>Contact</span></a>
+            
+        
+            
+            <a href="../../../../blog" class=" active  blog"><span>Blog</span></a>
+            
+        
+            
+        
+    </nav>
+</header>
+<section id="blog">
+    <div class="wrapper">
+        <h1>
+            Blog
+        </h1>
+    </div>
+
+    <section id="article">
+        <div class="wrapper">
+            <article>
+                
+                <img src="/images/banner/mavenRelease-banner.64f7.png">
+                
+                
+                
+                <div class="wrapper-content">
+                    <h2>Distribuer sur Maven Central ses bibliothèques</h2>
+                    
+                    
+                    <ul class="tags">
+                        
+                        <li><a href="../../../../tags/biblioth%C3%A8que/">bibliothèque</a></li>
+                        
+                        <li><a href="../../../../tags/oss/">OSS</a></li>
+                        
+                        <li><a href="../../../../tags/maven/">Maven</a></li>
+                        
+                    </ul>
+                    
+                    <div class="content">
+                        <h2 id="cas-dutilisation">Cas d&rsquo;utilisation</h2>
+<p>Il est fréquent que nous réalisions des bouts de codes qui peuvent devenir des bibliothèques (ou librairies pour les faux amis).</p>
+<p>Souvent un des freins à la libre distribution de ces sources très utiles n&rsquo;est pas la mise à disposition des sources (<a href="http://www.github.com/code-troopers">Github</a> a bien aidé dans ce sens ces dernières années), mais la distribution sur un des dépôts Maven accessible au tout venant.</p>
+<p>En fait, il est bon de savoir que <a href="http://www.sonatype.org">Sonatype</a> permet la mise à disposition de n&rsquo;importe quelle bibliothèque ( <em>open source</em> ) dans <a href="http://repo1.maven.org/maven2">les dépôts centraux de Maven</a>. Pour ce faire il suffit de suivre quelques étapes.</p>
+<h2 id="signature-des-_artefacts_">Signature des <em>artefacts</em></h2>
+<p>Si vous vous êtes déjà penchés sur la façon de fonctionner des dépôts Maven, vous aurez remarqué que les binaires disponibles sont en réalité signés par leurs développeurs. Le but est simple, permettre d&rsquo;éviter que des petits malins introduisent des backdoors dans des librairies réputées (par exemple imaginez un hacker qui s&rsquo;attaque à apache-httpclient&hellip;).</p>
+<p>Ainsi il va être nécessaire de signer tous les binaires que vous allez produire, ceci passe par l&rsquo;utilisation de <a href="http://www.gnupg.org/">GnuPG</a> et de la mise à disposition de votre clef publique.</p>
+<h3 id="installation-de-gnupg">Installation de GnuPG</h3>
+<p>L&rsquo;installation passe par votre gestionnaire de package classique (<code>apt-get install gpg</code>, <code>brew install gpg</code>, <code>install-gpg-on-my-os.exe</code>&hellip;). De là, vous pourrez vérifier dans un <em>shell</em> que vous avez une version d&rsquo;accessible en tapant par exemple la commande suivante:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ gpg --version
+gpg <span class="o">(</span>GnuPG<span class="o">)</span> 1.4.16
+Copyright <span class="o">(</span>C<span class="o">)</span> <span class="m">2013</span> Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version <span class="m">3</span> or later &lt;http://gnu.org/licenses/gpl.html&gt;
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Home: ~/.gnupg
+Supported algorithms:
+Pubkey: RSA, RSA-E, RSA-S, ELG-E, DSA
+Cipher: IDEA, 3DES, CAST5, BLOWFISH, AES, AES192, AES256, TWOFISH,
+        CAMELLIA128, CAMELLIA192, CAMELLIA256
+Hash: MD5, SHA1, RIPEMD160, SHA256, SHA384, SHA512, SHA224
+Compression: Uncompressed, ZIP, ZLIB, BZIP2
+</code></pre></div><h3 id="génération-de-la-clef">Génération de la clef</h3>
+<p>GnuPG est un mécanisme de chiffrement impliquant une clef publique (distribuée librement) associée à une clef privée (à garder précieusement). Avant de pouvoir prétendre distribuer des binaires chiffrés, il convient donc de générer le couple clef privée/publique et de distribuer la clef publique sur les serveurs appropriés.
+Ainsi, après avoir fourni nom, email et commentaire pour votre clef, vous serez prêt à la distribuer au plus grand nombre :</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ gpg --gen-key
+</code></pre></div><p>Dans les écrans qui apparaissent, vous pouvez conserver les valeurs par défaut pour la plupart des éléments (type, taille et durée de validité). Enfin, vous allez devoir spécifier la <em>passphrase</em> de votre clef. N&rsquo;hésitez pas à utiliser une phrase : elle sera plus difficilement &ldquo;cassable&rdquo; et vous vous en rappelerez certainement mieux qu&rsquo;un mot de passe complexe.</p>
+<h3 id="vérification-de-la-clef">Vérification de la clef</h3>
+<p>Pour vérifier que votre clef est correctement installée, vous pouvez récupérer la liste des clefs connues par votre système. Ainsi pour connaître les clefs publiques vous pouvez taper :</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ gpg --list-keys
+/Users/cgatay/.gnupg/pubring.gpg
+--------------------------------
+pub   2048R/CE236D5E 2013-04-28
+uid                  Cedric Gatay &lt;cedric@gatay.fr&gt;
+sub   2048R/08130909 2013-04-28
+</code></pre></div><p>Et pour les clefs privées :</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ gpg --list-secret-keys
+/Users/cgatay/.gnupg/secring.gpg
+--------------------------------
+sec   2048R/CE236D5E 2013-04-28
+uid                  Cedric Gatay &lt;cedric@gatay.fr&gt;
+ssb   2048R/08130909 2013-04-28
+</code></pre></div><p>Si la génération s&rsquo;est déroulée comme prévu, la seule différence résidera dans l&rsquo;emplacement du fichier correspondant au stockage de la clef publique et privée.</p>
+<h3 id="distribution-de-la-clef-publique">Distribution de la clef publique</h3>
+<p>Pour que tout le monde soit à même de vérifier votre &ldquo;identité&rdquo;, il faut distribuer votre clef publique sur les dépôts reconnus. L&rsquo;un d&rsquo;eux est <code>hkp://pool.sks-keyservers.net</code> qui fera la distribution auprès des différents serveurs OpenPGP.
+Pour se faire, il suffit de lancer la synchronisation vers ce serveur, en remplaçant <code>${KEY_ID}</code> par l&rsquo;id de votre clef publique tel que récupéré lors de la commande précédente (dans mon cas il s&rsquo;agit de <code>CE236D5E</code>):</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">    $ gpg --keyserver hkp://pool.sks-keyservers.net --send-keys <span class="si">${</span><span class="nv">KEY_ID</span><span class="si">}</span>
+</code></pre></div><p>Pour vérifier que l&rsquo;envoi s&rsquo;est fait comme attendu, vous pouvez demander à récupérer la clef par la commande suivante :</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">    $ gpg --keyserver hkp://pool.sks-keyservers.net --recv-keys <span class="si">${</span><span class="nv">KEY_ID</span><span class="si">}</span>
+</code></pre></div><h2 id="création-dun-compte-sur-sonatype">Création d&rsquo;un compte sur Sonatype</h2>
+<p>La distribution de binaires passe par la création d&rsquo;un compte sur le <a href="https://issues.sonatype.org">JIRA de Sonatype</a>. La procédure est assez simple, elle ne vaut pas la peine d&rsquo;être détaillée plus avant.
+Ensuite, pour faire vous autoriser à distribuer vos applicatifs, il est nécessaire de créer un ticket pour demander les droits correspondants. Ce ticket doit être du type <em>Support - Open Source Project Repository Hosting</em> - <em>New Project</em> dans le JIRA OSSRH.
+Il vous faudra ensuite remplir les champs suivants :</p>
+<ul>
+<li>summary : Descriptif de votre projet</li>
+<li>groupId : le groupId de votre projet (généralement votre nom de domaine, <code>com.code-troopers</code> dans notre cas)</li>
+<li>Project URL : URL vers le site du projet</li>
+<li>SCM URL : URL vers les sources du projet</li>
+<li>Nexus Username : votre nom d&rsquo;utilisateur actuel (et les éventuels noms d&rsquo;utilisateurs à autoriser)</li>
+<li>Already sync to central : si il y a déjà des projets sur Maven central avec le même groupId</li>
+<li>Description : n&rsquo;importe quelle information supplémentaire que vous jugez utile de préciser</li>
+</ul>
+<p>Par exemple, le ticket correspondant à la mise à disposition de l&rsquo;intégration entre <a href="http://wicket.apache.org">Apache Wicket</a> et <a href="http://www.parsleyjs.org">ParsleyJS</a> est <a href="https://issues.sonatype.org/browse/OSSRH-6026">OSSRH-6026</a></p>
+<h2 id="préparation-du-projet-pour-la-distribution">Préparation du projet pour la distribution</h2>
+<p>Pour que vous puissiez distribuer votre projet, il est nécessaire d&rsquo;ajuster légèrement le descripteur de votre projet (le fameux <code>pom.xml</code> dans notre cas traitant de Maven).</p>
+<h3 id="informations-indispensables">Informations indispensables</h3>
+<p>Il est nécessaire que le <code>pom.xml</code> contienne les informations suivantes :</p>
+<ul>
+<li><code>modelVersion</code></li>
+<li><code>groupId</code></li>
+<li><code>artifactId</code></li>
+<li><code>version</code></li>
+<li><code>packaging</code></li>
+<li><code>name</code></li>
+<li><code>description</code></li>
+<li><code>url</code></li>
+<li><code>licenses</code></li>
+<li><code>scm.url</code></li>
+<li><code>scm.connection</code></li>
+<li><code>developers</code></li>
+</ul>
+<h3 id="modification-de-votre-projet">Modification de votre projet</h3>
+<p>De plus il est indispensable d&rsquo;hériter du <a href="http://repo1.maven.org/maven2/org/sonatype/oss/oss-parent/7/oss-parent-7.pom">projet parent de Sonatype</a>, celui-ci décrit en fait les plugins ainsi que les dépôts qui vont être utilisés pour la livraison.</p>
+<p>Vous devez donc ajouter dans votre descripteur le lien avec le parent Sonatype :</p>
+<div class="highlight"><pre class="chroma"><code class="language-xml" data-lang="xml"><span class="nt">&lt;project&gt;</span>
+  <span class="nt">&lt;parent&gt;</span>
+    <span class="nt">&lt;groupId&gt;</span>org.sonatype.oss<span class="nt">&lt;/groupId&gt;</span>
+    <span class="nt">&lt;artifactId&gt;</span>oss-parent<span class="nt">&lt;/artifactId&gt;</span>
+    <span class="nt">&lt;version&gt;</span>7<span class="nt">&lt;/version&gt;</span>
+  <span class="nt">&lt;/parent&gt;</span>
+  <span class="c">&lt;!-- le reste de votre descripteur --&gt;</span>
+<span class="nt">&lt;/project&gt;</span>
+</code></pre></div><p>Pour le remplissage des informations de votre dépôt de sources, plusieurs façon de les remplir s&rsquo;offrent à vous en fonction du type de dépôt que vous utilisez, dans la majorité des cas pour les projets récents, le système de gestion de version utilisé est Git, la partie correspondant dans le <code>pom.xml</code>sera donc de la forme suivante (en ajustant <code>${USER}</code> et <code>${PROJECT}</code> bien entendu) :</p>
+<div class="highlight"><pre class="chroma"><code class="language-xml" data-lang="xml"><span class="nt">&lt;scm&gt;</span>
+  <span class="nt">&lt;connection&gt;</span>scm:git:git@github.com:${USER}/${PROJECT}.git<span class="nt">&lt;/connection&gt;</span>
+  <span class="nt">&lt;developerConnection&gt;</span>scm:git:git@github.com:${USER}/${PROJECT}.git<span class="nt">&lt;/developerConnection&gt;</span>
+  <span class="nt">&lt;url&gt;</span>git@github.com:${USER}/${PROJECT}.git<span class="nt">&lt;/url&gt;</span>
+<span class="nt">&lt;/scm&gt;</span>
+</code></pre></div><h2 id="préparation-de-votre-poste-pour-la-distribution">Préparation de votre poste pour la distribution</h2>
+<p>Pour déployer sur les dépôts gérés par Sonatype, vous allez devoir vous identifier pour gérer l&rsquo;upload, bien entendu, il n&rsquo;est pas concevable de stocker vos informations d&rsquo;identification au sein du descripteur de votre projet :</p>
+<ul>
+<li>vous ne voulez pas publier vos identifiants au grand public</li>
+<li>vous ne voulez pas passer sur chacun des projets si vous les changez</li>
+</ul>
+<p>La technique est donc d&rsquo;utiliser le fichier de configuration global de Maven en définissant des paramètres. Ainsi, en éditant le fichier <code>~/.m2/settings.xml</code> vous allez ajouter vos identifiants (encore une fois, en ajustant <code>${USER}</code> et <code>${PASSWORD}</code>):</p>
+<div class="highlight"><pre class="chroma"><code class="language-xml" data-lang="xml">  <span class="nt">&lt;servers&gt;</span>
+    <span class="nt">&lt;server&gt;</span>
+      <span class="nt">&lt;id&gt;</span>sonatype-nexus-snapshots<span class="nt">&lt;/id&gt;</span>
+      <span class="nt">&lt;username&gt;</span>${USER}<span class="nt">&lt;/username&gt;</span>
+      <span class="nt">&lt;password&gt;</span>${PASSWORD}<span class="nt">&lt;/password&gt;</span>
+    <span class="nt">&lt;/server&gt;</span>
+    <span class="nt">&lt;server&gt;</span>
+      <span class="nt">&lt;id&gt;</span>sonatype-nexus-staging<span class="nt">&lt;/id&gt;</span>
+      <span class="nt">&lt;username&gt;</span>${USER}<span class="nt">&lt;/username&gt;</span>
+      <span class="nt">&lt;password&gt;</span>${PASSWORD}<span class="nt">&lt;/password&gt;</span>
+    <span class="nt">&lt;/server&gt;</span>
+  <span class="nt">&lt;/servers&gt;</span>
+</code></pre></div><h2 id="distribution-dune-version-snapshot">Distribution d&rsquo;une version <code>SNAPSHOT</code></h2>
+<p>Si vous désirez distribuer vos bibliothèques sur des dépôts centraux, vous devez connaître les notions de <code>SNAPSHOT</code> et <em>release</em> propres à Maven. Pour faire un bref rappel, les versions <code>SNAPSHOT</code> sont des versions en développement alors que les versions <em>release</em> sont les versions finales. Ainsi, dépendre d&rsquo;une version <code>SNAPSHOT</code> déclenchera des vérifications régulières par l&rsquo;outil de construction pour récupérer toujours la dernière version alors qu&rsquo;une version <em>release</em> ne sera rapatriée qu&rsquo;une et une seule fois (en assurant la stabilité de la construction).</p>
+<p>Sonatype fourni un dépôt pour de telles versions de développement ainsi qu&rsquo;un dépôt pour les versions stables. Dans un premier temps et pour tester que votre système est correctement configuré, vous allez déployer une version <code>SNAPSHOT</code> de votre librairie :</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ mvn clean deploy
+</code></pre></div><p>Si tout se passe comme prévu, votre livrable sera visible et disponible sur le dépôt SNAPSHOT de Sonatype : <a href="https://oss.sonatype.org/content/repositories/snapshots">https://oss.sonatype.org/content/repositories/snapshots</a>
+En cas d&rsquo;erreur <code>401 Unauthorized</code>, vérifiez que vos identifiants JIRA sont corrects (en vous connectant sur <a href="https://issues.sonatype.org">https://issues.sonatype.org</a>).</p>
+<h2 id="préparation-et-distribution-dune-_release_">Préparation et distribution d&rsquo;une <em>release</em></h2>
+<p>Le <em>plugin</em> Maven <em>release</em> est préconfiguré grace à l&rsquo;intégration du descripteur parent de Sonatype, il suffit donc de l&rsquo;utiliser pour construire votre projet, il va s&rsquo;occuper de construire les livrables nécessaires, de les signer et de les déployer en tant que <em>staging</em>.</p>
+<pre><code>$ mvn release:clean
+$ mvn release:prepare
+$ mvn release:perform
+</code></pre>
+<p>Lors de la procédure, le plugin <em>release</em> va s&rsquo;occuper de changer le numéro de version <code>SNAPSHOT</code> vers un numéro <em>release</em>, de préparer la version <code>SNAPSHOT</code>suivante, de <em>tagguer</em> le tout sur le système de gestion de sources. Un de ses atouts est de préparer la construction à partir d&rsquo;une version propre provenant du système de gestion de sources, de cette façon vous pourrez vous assurer de la reproductibilité des constructions.</p>
+<p>Vous aurez donc besoin de saisir la <em>passphrase</em> de votre clef <em>GnuPG</em> lors du processus, pour effectuer la signature des livrables.</p>
+<p><em>Vous pouvez également distribuer votre livrable avec la commande <code>deploy</code> comme dans le cas d&rsquo;une livraison <code>SNAPSHOT</code>.</em></p>
+<h2 id="publication-de-vos-livrables">Publication de vos livrables</h2>
+<p>Pour finir la publication de votre livrable, il faut passer par l&rsquo;interface de Sonatype <a href="https://oss.sonatype.org">https://oss.sonatype.org</a>
+Dans la partie <em>Staging Repositories</em>, vous verrez une ligne correspondant à votre déploiement, sur cette ligne, il faudra <em>close</em> pour dire que la distribution est terminée, puis, une fois qu&rsquo;il sera clos, il faudra en faire la <em>promote</em> pour qu&rsquo;il soit distribué vers les dépôts Maven centraux.</p>
+<p>Si vous ne pouvez pas clôre ou promouvoir votre livrable, Nexus vous fournira un message d&rsquo;explication (tel que &ldquo;impossible de trouver le jar de sources&rdquo;)</p>
+<p><strong>Attention</strong>: pour votre première livraison vers les dépôts centraux, il sera nécessaire de mettre à jour le ticket JIRA que vous avez ouvert pour demander la synchronisation vers Maven Central.</p>
+<h2 id="ajout-dun-collaborateur">Ajout d&rsquo;un collaborateur</h2>
+<p>Il est rare que seul une personne ait le droit d&rsquo;effectuer les distributions, ainsi, dès que vous désirez ajouter quelqu&rsquo;un vous devrez mettre à jour le ticket JIRA pour demander l&rsquo;ajout (collaborateur qui devra suivre également la première partie du guide pour créer un compte et distribuer sa signature numérique).</p>
+<h2 id="livraison-dun-nouveau-projet">Livraison d&rsquo;un nouveau projet</h2>
+<p>Tant que votre projet respecte le <em>groupId</em> dont vous avez revendiqué la paternité, vous pourrez livrer et distribuer à votre convenance sans avoir besoin de créer de nouvelles demandes sur le JIRA de Sonatype.</p>
+<p>Dans notre cas, nous avons enregistré <code>com.code-troopers</code> en tant que <em>groupId</em> parent de nos réalisations.</p>
+
+                    </div>
+                    <div class="content-footer">
+                        
+                        <ul class="tags float">
+                            
+                            <li><a href="../../../../tags/biblioth%C3%A8que/">bibliothèque</a></li>
+                            
+                            <li><a href="../../../../tags/oss/">OSS</a></li>
+                            
+                            <li><a href="../../../../tags/maven/">Maven</a></li>
+                            
+                        </ul>
+                        
+                        <section id="author">
+                            <div class="date">Rédigé par <span class="author-name">Cedric</span></div>
+                        </section>
+                    </div>
+                    <div class="share">
+                        <span>Partager</span>
+                        <ul class="socials">
+                            <li>
+                                <a target="_blank" title="Facebook"
+                                   href="https://www.facebook.com/sharer.php?u=http://code-troopers.com%2f2014%2f03%2f19%2fmavenrelease%2f&t=Distribuer%20sur%20Maven%20Central%20ses%20biblioth%c3%a8ques"
+                                   class="facebook-button" rel="nofollow"
+                                   onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=500,width=700');return false;">
+                                    <i class="fa fa-facebook"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_blank" title="Twitter"
+                                   href="https://twitter.com/share?url=http://code-troopers.com%2f2014%2f03%2f19%2fmavenrelease%2f&text=Distribuer%20sur%20Maven%20Central%20ses%20biblioth%c3%a8ques&via=codetroopers"
+                                   rel="nofollow"
+                                   onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=400,width=700');return false;">
+                                    <i class="fa fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_blank" title="Google +"
+                                   href="https://plus.google.com/share?url=http://code-troopers.com%2f2014%2f03%2f19%2fmavenrelease%2f&hl=fr"
+                                   class="google-button" rel="nofollow"
+                                   onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=650');return false;">
+                                    <i class="fa fa-google-plus"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div style="clear:both"></div>
+
+
+                    <div class="back">
+                        <div class="pagination">
+                            
+                            <a href="../../../../2014/03/23/startupweekend/" class="previous-page">
+                                <div class="arrow"><div class="arrow_box_left arrow_box">
+</div></div>
+                                Article précédent
+                            </a>
+                            
+                            
+                            <a href="../../../../2014/03/17/aucard/" class="next-page">
+                                Article suivant
+                                <div class="arrow"><div class="arrow_box_right arrow_box">
+</div></div>
+                            </a>
+                            
+                        </div>
+                    </div>
+
+                    <section id="menu">
+                        <ul>
+                            
+                        </ul>
+                    </section>
+
+                    <div id="disqus_thread"></div>
+                    <script type="text/javascript">
+                         
+                        var disqus_shortname = 'codetroopers' 
+                        var disqus_url = window.location.href
+                        if (window.location.protocol != 'http:') {
+                            disqus_url = 'http:' + window.location.href.substring(window.location.protocol.length)
+                        }
+
+                         
+                        (function () {
+                            var dsq = document.createElement('script')
+                            dsq.type = 'text/javascript'
+                            dsq.async = true
+                            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq)
+                        })()
+                    </script>
+                    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments
+                        powered by Disqus.</a></noscript>
+                    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span
+                            class="logo-disqus">Disqus</span></a>
+                </div>
+            </article>
+        </div>
+    </section>
+</section>
+
+<section id="contact">
+    <h1>Contact</h1>
+
+
+    <div>
+        <div><iframe class="lozad"
+                    width="100%"
+                    height="100%"
+                    frameborder="0" style="border:0"
+                    data-src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDmneK7ppr9MWdY2ynnTXsnhEloW2r7GzQ&q=Code-Troopers,+37000+Tours+France&zoom=15">
+            </iframe></div>
+        <div>
+            <h2>Code-Troopers</h2>
+            <p>
+                26 bis rue Abraham Bosse<br>
+                37000 Tours - Fr
+            </p>
+            <p>
+                <a href="mailto:contact@code-troopers.com">contact@code-troopers.com</a>
+            </p>
+            <p>
+                <a class="button" href="tel:+33782287216">07 82 28 72 16</a>
+            </p>
+        </div>
+    </div>
+
+    <h1>Suivez nos actualités</h1>
+
+    <ul class="flex">
+        <li>
+            <a href="https://facebook.com/codetroopers37">
+                <i class="fa fa-facebook fa-3x fa-fw"></i>
+            </a>
+        </li>
+        <li>
+            <a href="https://twitter.com/codetroopers">
+                <i class="fa fa-twitter fa-3x fa-fw"></i>
+            </a>
+        </li>
+        <li>
+            <a href="https://github.com/code-troopers">
+                <i class="fa fa-github fa-3x fa-fw"></i>
+            </a>
+        </li>
+        <li>
+            <a href="../../../../index.xml">
+                <i class="fa fa-rss fa-3x fa-fw"></i>
+            </a>
+        </li>
+    </ul>
+</section>
+
+<footer>
+    <div class="wrapper">
+        <a href="#top" class="scroll-to-top">
+            <img class="arrow" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAA2CAYAAADOBhlKAAAAhElEQVR42u3TOw0AIRBF0ZWABKQgBSlIQAJSkIIEHLwNBZmCZfiUm3eT6cgZCngAaGPaaGdWQGxzC1hI9gZIkNIp4DDmToCMsbwLOMxzO0BRgLICPNb5GWCG7fNbmC8gYL8ggGyv2K/2W8iTPS92wOI+q3+mnnKGAAECBAgQIECAwC+BF8FrydFpGvcOAAAAAElFTkSuQmCC" alt="arrow">
+        </a>
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAMAAAAKE/YAAAAAM1BMVEVHcEz////////////////////////////////////////////////////////////////P0YphAAAAEXRSTlMAIEBwgLDA/6DQEFCQ4GAw8MRg8BIAAASTSURBVHgB7NmBavMqGIfxv8b4qInq/V/tgQ/kfIXTnG5JWoU+AB0dY7+9eS0s0ZUZu7jVex7yfnWLNRowu4TIYTEsVsOUtr17yX51rti/Ks6tPtPl+5b08aqLneu2qqfVzXV6dPWj4j33+Rm9kOnXJO8fchuXAVooST8oldAAsjN6d8X3if3+CvmiN5ZcBlqw+nU2NCC7pPdk9gbEknSqVCLQdvMOcgAIVhdkA0C4m51c/zVXjuDeJVka4NLlY2iL7spmIJhbFi5b3VFaAW90Q8YDa7pnM7K97yLesCPJAy7dfMJ90oVtDWLVrdUIbdNVpR1wuj0H7EmXZCLkqjdUM0Rz1WqEpLeUwjUrsgBFb6sAi04WoFW9sdognP6ki0lvLUXw6dzPh6Q3l8KZSZkIQR/ohLo2KPpIBVo9b55DnT5n7mrzmzNYpI+qYzprnkDtP2vuaq8fFCDoA51RLJ83d/WiF9sgJg1QirDppUyjJQ1RajTz6p9XNUj1xYu+Q9EwFdhfWuiggQqwvbBFOWmgUv7/E+ahaqgqeB22gNNgOViOl4Oo4YrHC7L+djl4sd8uyKqnWXAaDy0HVs/K5DQiOmXywSm0GhGtDZanp9BrTLT8s7PowIyKNuCevB80KloBzPHbA6GPR2rAncfegT9Y3h3SyOgE+398dASNjFagpePpD4Q+2N9M0NhoBbIeKmBHR1so+jtP1OhoRfzjvlDGR5fHc+do6Tz2bnxquDPHkIs6cRQr2BnQFqp6O1kzoJXZH76eAP0w3Qp1AvSj1NE0B1r/fn5EwizoQNSfEpTfom/5/kEFUv9XN82CTv0e6k7ULGhF9v46D7pPGLZ50BtIkgUzD9qAleTImgetzCIp4GdCe4KkiLsOzZOuQztiP4fzoDeQDNSZ0BWMLGgmtMBqIc+Fzixy+LnQHqeVdSr0H7DHzYV2+BPoM51EQ5kLXUBg50LbUdBf9Bf9RdfT2PPdOmnu6Yv+or/oMhe6gDxuLrTDn0cfIm5Cr6xTof+AHX4utMdpIc+FziyyMBcarAzUmdAVjATbTOgNJEXcTGhH/OlNdXoX3VTv/fSm+kKeCZ1Z+oOiWdD9QZFgmwe9QX/4OQ96J/bXedB9whukWdCp7/I/xNwBBsAwGMXgC/T+5y3wAPj4CTAMMR1K8kSdCKGnTqCk0l8CJqlMB+qhQQcC8SqGHukUtx5aFLc9h9AuE07b7KBd25wgG0K7qz4VOYN2Fdml71NYl76n14fQrtcvZOigPWTYr1hAo6cOcU4OvTgHMqgcehkUBGc19IIzTPt66LfzaxElQMN7EFFCrlpD75NCGFxD7/BCgp1DL8GG2L2GXuwOswI99GYFYMChh96AA0xl9NC/vTu0AQAEgiAY7CPov1vkubNkEraQnawy/CkJvX8xRzvK0giYR4mbLnKIJq7nzMmfv1P0x5X+ItScsVLb27TeD4bHXznb0+zegHtyYwQPLPd93MBnJHyww6JRAIQG4H4AWAkgrHYIKx8L81k2H8DzqUEfdfT5TBoqRUlYFd9FmWMVlO509+l090fSAY7+AkvG2mAzLke+AAAAAElFTkSuQmCC" alt="logo">
+        <div>
+            <span>©2014 — 2021 Code-Troopers | <a href="../../../../legals.html">Mentions légales</a></span>
+            <span>Design : <a href="https://www.descheval.com/">descheval.com</a> | Développement : Code-Troopers</span>
+        </div>
+    </div>
+</footer>
+<script type="application/javascript" src="../../../../main.d69aae.js"></script>
+
+<script type="application/javascript" src="../../../../blog.a399a2.js"></script>
+
+</body>
+</html>
+
