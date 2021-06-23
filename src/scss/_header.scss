@@ -16,9 +16,30 @@ header {
     }
   }
 
+
+  .hiring a {
+    position: fixed;
+    border-radius: 0.5rem;
+    top: 80px;
+    right: 20px;
+    text-decoration: none;
+    border: 2px solid $darkblue;
+    padding: 1rem 2rem;
+    background: $gradient;
+    color: $white;
+    display: flex;
+    align-items: center;
+    
+    img {
+    width: 28px;
+    margin-right: 8px;
+    }
+  }
+
   nav {
     background-color: $black;
     display: flex;
+
 
     a {
       color: $white;

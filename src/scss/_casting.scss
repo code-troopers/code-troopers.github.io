@@ -4,6 +4,15 @@ section#casting {
   background: $white;
   padding-bottom: 5rem;
 
+  a.btn {
+    border-color: $bloggrey;
+    color: $bloggrey;
+    &:hover {
+      border-color: $lightblue;
+      color: $white;
+    }
+  }
+
   .wrapper {
     max-width: 1260px;
     padding-left: 30px;

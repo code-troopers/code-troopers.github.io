@@ -26,7 +26,7 @@ menu:
       URL: "/#casting"
       Weight: 3
     - Identifier: "team"
-      Name: "Troopers"
+      Name: "Les Troopers"
       URL: "https://team.code-troopers.com"
       Weight: 4
     - Identifier: "contact"
