@@ -35,7 +35,7 @@ menu:
       Weight: 5
     - Identifier: "blog"
       Name: "Blog"
-      URL: "/blog"
+      URL: "/blog/"
       Pre: "blog"
       Weight: 6
 params:
