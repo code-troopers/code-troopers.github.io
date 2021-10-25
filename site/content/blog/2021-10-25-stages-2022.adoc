@@ -1,0 +1,26 @@
+---
+author: Thibaud
+cover: images/banner/logo-banner.png
+date: '2021-10-25'
+tags:
+- Stage
+title: 'Stages 2022'
+url: /2021/10/25/stages-2022/
+aliases: 2021/10/25/stages-2022.html
+---
+
+Ça y est, le mois d'octobre touche bientôt à sa fin, l'automne 🍂 est bien installé et c'est la période favorite chez
+Code-Troopers pour publier des offres de stages 👩‍🎓👨‍🎓
+
+Alors comme chaque année, on a sorti nos meilleures plumes 🖋️️ pour vous rédiger ces offres. Nous savons tous que ce n'est
+jamais chose simple de trouver un stage, c'est pourquoi (comme l'année dernière) nous vous en proposons 4.
+
+- Ops, développement Web et/ou mobile : https://code-troopers.com/files/Stage_2022_Code-Troopers_Matomo.pdf[Stage_2022_Code-Troopers_Matomo]
+- Développement Web : https://code-troopers.com/files/Stage_2022_Code-Troopers_Navig.pdf[Stage_2022_Code-Troopers_Navig]
+- Développement Web : https://code-troopers.com/files/Stage_2022_Code-Troopers_Wakiki.pdf[Stage_2022_Code-Troopers_Wakiki]
+- Gestion : https://code-troopers.com/files/Stage_2022_Code-Troopers_Gestion.pdf[Stage_2022_Code-Troopers_Gestion]
+
+Ces stages auront lieu dans nos nouveaux locaux tourangeaux à Tours centre (le télétravail est également autorisé) et
+ils seront rémunérés selon les conditions légales.
+
+Pour postuler vous pouvez envoyer vos C.V. à : stage@code-troopers.com
