@@ -143,6 +143,10 @@ export default function() {
           to: '../dist/files'
         },
         {
+          from: 'vcards',
+          to: '../dist/vcards'
+        },
+        {
           from: 'videos',
           to: '../dist/videos'
         },
