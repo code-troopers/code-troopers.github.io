@@ -1,0 +1,576 @@
+
+<!doctype html>
+<html class="no-js" lang="fr-fr" itemscope itemtype="http://schema.org/Organization">
+<head>
+  
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-NWLQD2');</script>
+  
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+  
+  
+    
+      
+    
+  
+
+  
+  
+    
+      
+    
+  
+
+  
+  
+        
+  
+
+  
+  
+    
+  
+
+  <title>Android : Feature Toggle avec Google Tag Manager - Code-Troopers Conception d’applications web et mobiles sur-mesure</title>
+  <meta name="viewport" content="user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1,width=device-width" />
+
+  <meta property="og:title" content="Android : Feature Toggle avec Google Tag Manager - Code-Troopers Conception d’applications web et mobiles sur-mesure" />
+  <meta property="og:site_name" content="Code-Troopers" />
+  <meta property="og:url" content="https://code-troopers.com/2016/03/30/android_google_tag_manager_feature_toggle/" />
+  <meta property="og:image" content="https://code-troopers.com/images/banner/android-banner.c728.png"/>
+
+
+  <meta property="og:type" content="website" />
+
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@codetroopers" />
+  <meta name="twitter:creator" content="@codetroopers" />
+  <meta name="twitter:title" content="Android : Feature Toggle avec Google Tag Manager - Code-Troopers Conception d’applications web et mobiles sur-mesure" />
+  <meta name="twitter:url" content="https://code-troopers.com/2016/03/30/android_google_tag_manager_feature_toggle/" />
+  <meta name="twitter:image" content="https://code-troopers.com/images/banner/android-banner.c728.png"/>
+
+  <meta name="twitter:description" content="Le concept de feature toggle est bien pratique en tant que développeur si l’on souhaite faire évoluer sa base de code source à un rythme différent de celui des livraisons et des fonctionnalités. C’est souvent le cas lorsqu’il y a autour du produit une équipe marketing / communication qui s’occupe d’annoncer telle ou telle nouvelle fonctionnalité.
+ Le problème avec Android c’est qu’il peut être vite problématique d’utiliser ces features toggle, car une fois l’application arrivée sur le téléphone des utilisateurs le développeur n’a plus la possibilité de changer la valeur des flags autrement qu’en relivrant l’application, ce qui peut vite se terminer par du spam d’updates si les activations/désactivations sont trop fréquentes ou trop rapprochées." />
+  <meta name="description" content="Le concept de feature toggle est bien pratique en tant que développeur si l’on souhaite faire évoluer sa base de code source à un rythme différent de celui des livraisons et des fonctionnalités. C’est souvent le cas lorsqu’il y a autour du produit une équipe marketing / communication qui s’occupe d’annoncer telle ou telle nouvelle fonctionnalité.
+ Le problème avec Android c’est qu’il peut être vite problématique d’utiliser ces features toggle, car une fois l’application arrivée sur le téléphone des utilisateurs le développeur n’a plus la possibilité de changer la valeur des flags autrement qu’en relivrant l’application, ce qui peut vite se terminer par du spam d’updates si les activations/désactivations sont trop fréquentes ou trop rapprochées." />
+  <meta property="og:description" content="Le concept de feature toggle est bien pratique en tant que développeur si l’on souhaite faire évoluer sa base de code source à un rythme différent de celui des livraisons et des fonctionnalités. C’est souvent le cas lorsqu’il y a autour du produit une équipe marketing / communication qui s’occupe d’annoncer telle ou telle nouvelle fonctionnalité.
+ Le problème avec Android c’est qu’il peut être vite problématique d’utiliser ces features toggle, car une fois l’application arrivée sur le téléphone des utilisateurs le développeur n’a plus la possibilité de changer la valeur des flags autrement qu’en relivrant l’application, ce qui peut vite se terminer par du spam d’updates si les activations/désactivations sont trop fréquentes ou trop rapprochées."/>
+
+
+  <meta name="p:domain_verify" content="fc173d84e3a4de948ed4bda2908afd3e"/>
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="MobileOptimized" content="320" />
+  <meta name="theme-color" content="#3BCCE5" />
+
+
+  <link href="https://code-troopers.com/index.xml" rel="alternate" type="application/rss+xml" title="Code-Troopers" />
+  <link rel="canonical" href="https://code-troopers.com/2016/03/30/android_google_tag_manager_feature_toggle/" />
+  <link rel="shortcut icon" href="../../../../favicon.ico?v=2" type="image/x-icon">
+  <link rel="icon" href="../../../../favicon.ico?v=2" type="image/x-icon">
+  <meta itemprop="name" content="Code-Troopers"/><link rel="stylesheet" href="../../../../styles.eef7.css" /><link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
+  <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+  <script>
+      window.addEventListener("load", function(){
+          window.cookieconsent.initialise({
+              "palette": {
+                  "popup": {
+                      "background": "#000"
+                  },
+                  "button": {
+                      "background": "transparent",
+                      "text": "#3BCCE5",
+                      "border": "#3BCCE5"
+                  }
+              },
+              "content": {
+                  "message": "En poursuivant la navigation, vous acceptez l'utilisation de cookies.",
+                  "dismiss": "J'ai compris",
+                  "link": "En savoir plus"
+              }
+          })});
+  </script>
+</head>
+
+<body>
+
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NWLQD2"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+
+
+<header>
+    <nav>
+        <a href="../../../../" class="brand"><img src="data:image/png;base64,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" alt="Code-Troopers"></a>
+        
+            
+            <a href="../../../../#skills" class=" "><span>Compétences</span></a>
+            
+        
+            
+            <a href="../../../../#portfolio" class=" "><span>Réalisations</span></a>
+            
+        
+            
+            <a href="../../../../#casting" class=" "><span>Casting</span></a>
+            
+        
+            
+            <a href="https://team.code-troopers.com" class=" "><span>Les Troopers</span></a>
+            
+        
+            
+            <a href="../../../../#contact" class=" "><span>Contact</span></a>
+            
+        
+            
+            <a href="../../../../blog/" class=" active  blog"><span>Blog</span></a>
+            
+        
+            
+        
+    </nav>
+    <div class="hiring"><a href="https://team.code-troopers.com/"><img src="/img/hiring.1cd3.png" title="On recrute">On recrute</a></div>
+</header>
+<section id="blog">
+    <div class="wrapper">
+        <h1>
+            Blog
+        </h1>
+    </div>
+
+    <section id="article">
+        <div class="wrapper">
+            <article>
+                
+                <img src="/images/banner/android-banner.c728.png">
+                
+                
+                
+                <div class="wrapper-content">
+                    <h2>Android : Feature Toggle avec Google Tag Manager</h2>
+                    
+                    
+                    <ul class="tags">
+                        
+                        <li><a href="../../../../tags/android/">Android</a></li>
+                        
+                        <li><a href="../../../../tags/google-tag-manager/">Google Tag Manager</a></li>
+                        
+                        <li><a href="../../../../tags/feature-toggle/">Feature Toggle</a></li>
+                        
+                    </ul>
+                    
+                    <div class="content">
+                        <div class="paragraph">
+<p>Le concept de <code>feature toggle</code> est bien pratique en tant que développeur si l’on souhaite faire évoluer sa base de code source à un rythme différent de celui des livraisons et des fonctionnalités.
+C’est souvent le cas lorsqu’il y a autour du produit une équipe marketing / communication qui s’occupe d’annoncer telle ou telle nouvelle fonctionnalité.</p>
+</div>
+<div class="paragraph">
+<p>Le problème avec Android c’est qu’il peut être vite problématique d’utiliser ces features toggle, car une fois l’application arrivée sur le téléphone des utilisateurs le développeur n’a plus
+la possibilité de changer la valeur des flags autrement qu’en relivrant l’application, ce qui peut vite se terminer par du spam d’updates si les activations/désactivations sont trop fréquentes ou trop rapprochées.</p>
+</div>
+<div class="paragraph">
+<p>C’est là qu’entre en jeu <code>Google Tag Manager</code>, cet outil made by Google va nous offrir la possibilité d’activer/désactiver lesdites fonctionnalités et cela sans avoir à redéployer l’application sur le store.</p>
+</div>
+<div class="sect1">
+<h2 id="_google_tag_manager_la_configuration">Google Tag Manager : La configuration</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Pour commencer, il faut aller dans l’interface dédiée de <a href="https://tagmanager.google.com">Google Tag Manager</a> afin de générer la configuration nécessaire pour notre application.
+C’est via cette IHM et avec les informations que l’on va y ajouter que l’on pourra revenir plus tard et modifier des valeurs qui seront prises en compte dans l’application Android.</p>
+</div>
+<div class="paragraph">
+<p>La mise en place d’une configuration pour une application Android passe donc par les étapes suivantes :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Créez un nouveau container (ce qui correspond à créer la configuration pour une application).</p>
+</li>
+<li>
+<p>Donnez-lui le nom que vous voulez et sélectionnez le type <code>Android</code>.</p>
+</li>
+<li>
+<p>Une fois le container créé un code unique du type <code>GTM-XXXXXX</code> lui est attribué par Google notez-le, il sera utilisé dans le code de l’application Android.</p>
+</li>
+<li>
+<p>Ensuite dans ce container rendez-vous dans la partie <code>Variables</code> et créez une nouvelle variable.</p>
+</li>
+<li>
+<p>Choisissez le type <code>Value Collection</code>.</p>
+</li>
+<li>
+<p>Définissez sa valeur avec un objet json { &#39;clé&#39; : &#39;valeur&#39; }, la clé sera elle aussi réutilisée dans le code Android et la valeur peut être ce que vous souhaitez (ici un boolean ira très bien).</p>
+</li>
+<li>
+<p>N’oubliez d’activer cette variable en sélectionnant Enable : <code>Always</code>.</p>
+</li>
+<li>
+<p>Sauvegardez la variable.</p>
+</li>
+<li>
+<p>Vous pouvez dès à présent publier le container, il est prêt à être utilisé.</p>
+</li>
+<li>
+<p>Avant de quitter cet écran une dernière opération utile, téléchargez la première version publiée du container, il sera nécessaire de l’embarquer dans le code source en tant que configuration initiale.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Ces étapes sont résumées dans ces écrans :</p>
+</div>
+<div class="paragraph">
+<p></p><div style="text-align : center">
+<a class="inlineBoxes" href="../../../../images/posts/2016-03-AndroidGoogleTagManager/GoogleTagManager_containerCreation1.1ab3.png" data-lightbox="0" title="Création du container">
+        <img class="medium" src="data:image/png;base64,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" alt="Création du container"/>
+</a>
+<a class="inlineBoxes" href="../../../../images/posts/2016-03-AndroidGoogleTagManager/GoogleTagManager_containerCreation2.5242.png" data-lightbox="0" title="Création du container - Nom et type">
+        <img class="medium" src="data:image/png;base64,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" alt="Création du container - Nom et type"/>
+</a>
+<a class="inlineBoxes" href="../../../../images/posts/2016-03-AndroidGoogleTagManager/GoogleTagManager_gtmIdGenerated.dac3.png" data-lightbox="0" title="GTM id généré">
+        <img class="medium" src="/images/posts/2016-03-AndroidGoogleTagManager/GoogleTagManager_gtmIdGenerated_min.9967.png" alt="GTM id généré"/>
+</a>
+<a class="inlineBoxes" href="../../../../images/posts/2016-03-AndroidGoogleTagManager/GoogleTagManager_screenVariables.4353.png" data-lightbox="0" title="Écran &#39;Variables&#39;">
+        <img class="medium" src="/images/posts/2016-03-AndroidGoogleTagManager/GoogleTagManager_screenVariables_min.0e4d.png" alt="Écran &#39;Variables&#39;"/>
+</a>
+<a class="inlineBoxes" href="../../../../images/posts/2016-03-AndroidGoogleTagManager/GoogleTagManager_createVariable.d6ed.png" data-lightbox="0" title="Création d’une nouvelle variable">
+        <img class="medium" src="/images/posts/2016-03-AndroidGoogleTagManager/GoogleTagManager_createVariable_min.5788.png" alt="Création d’une nouvelle variable"/>
+</a>
+<a class="inlineBoxes" href="../../../../images/posts/2016-03-AndroidGoogleTagManager/GoogleTagManager_publishContainer.73c3.png" data-lightbox="0" title="Publication du container">
+        <img class="medium" src="/images/posts/2016-03-AndroidGoogleTagManager/GoogleTagManager_publishContainer_min.e1ad.png" alt="Publication du container"/>
+</a>
+<a class="inlineBoxes" href="../../../../images/posts/2016-03-AndroidGoogleTagManager/GoogleTagManager_downloadContainer.66ea.png" data-lightbox="0" title="Téléchargement du container">
+        <img class="medium" src="/images/posts/2016-03-AndroidGoogleTagManager/GoogleTagManager_downloadContainer_min.6ff9.png" alt="Téléchargement du container"/>
+</a><p></p>
+</div>
+<div class="paragraph">
+<p></p></div>
+<br/><p></p>
+</div>
+<div class="paragraph">
+<p>Normalement arrivé là, vous avez configuré un container avec une variable dans celui-ci. Et vous disposez pour ce container de son <em>code unique</em> ainsi que d’un <em>binaire</em> de son contenu.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_application_android_le_code">Application Android : Le code</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>La seconde partie du travail consiste à modifier son code applicatif afin de lire la variable précédemment ajoutée dans Google Tag Manager.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Pour commencer, stockez votre code Google Tag Manager (dans une constante ou un ficher xml, peu importe).</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight"><code data-lang="xml"><span></span><span class="tok-nt">&lt;resources&gt;</span>
+    <span class="tok-nt">&lt;string</span> <span class="tok-na">name=</span><span class="tok-s">&#34;tag_manager_id&#34;</span><span class="tok-nt">&gt;</span>GTM-N8NXMK<span class="tok-nt">&lt;/string&gt;</span>
+<span class="tok-nt">&lt;/resources&gt;</span></code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Ensuite copiez le binaire téléchargé (correspondant à la configuration initiale du container) dans le répertoire <em>/res/raw/</em>, attention vous devrez surement changer le nom du fichier pour enlever les majuscules.</p>
+</li>
+<li>
+<p>Ajoutez dans votre <em>build.gradle</em> une nouvelle dépendance vers les play services (seulement la partie analytics nous intéresse).</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight"><code data-lang="groovy"><span></span><span class="tok-n">dependencies</span> <span class="tok-o">{</span>
+    <span class="tok-n">compile</span> <span class="tok-s1">&#39;com.google.android.gms:play-services-analytics:8.4.0&#39;</span>
+<span class="tok-o">}</span></code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Maintenant dans une Activity (ou bien dans votre Application), vous avez deux choses à faire, récupérer une instance de TagManager et faire une requête pour lire la configuration actuelle du Container.</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight"><code data-lang="java"><span></span><span class="tok-kd">public</span> <span class="tok-kd">class</span> <span class="tok-nc">MainActivity</span> <span class="tok-kd">extends</span> <span class="tok-n">AppCompatActivity</span> <span class="tok-p">{</span>
+    <span class="tok-nd">@Override</span>
+    <span class="tok-kd">protected</span> <span class="tok-kt">void</span> <span class="tok-nf">onCreate</span><span class="tok-p">(</span><span class="tok-n">Bundle</span> <span class="tok-n">savedInstanceState</span><span class="tok-p">)</span> <span class="tok-p">{</span>
+        <span class="tok-kd">super</span><span class="tok-p">.</span><span class="tok-na">onCreate</span><span class="tok-p">(</span><span class="tok-n">savedInstanceState</span><span class="tok-p">);</span>
+        <span class="tok-n">setContentView</span><span class="tok-p">(</span><span class="tok-n">R</span><span class="tok-p">.</span><span class="tok-na">layout</span><span class="tok-p">.</span><span class="tok-na">activity_main</span><span class="tok-p">);</span>
+
+        <span class="tok-kd">final</span> <span class="tok-n">TagManager</span> <span class="tok-n">tagManager</span> <span class="tok-o">=</span> <span class="tok-n">TagManager</span><span class="tok-p">.</span><span class="tok-na">getInstance</span><span class="tok-p">(</span><span class="tok-k">this</span><span class="tok-p">);</span>
+        <span class="tok-n">PendingResult</span> <span class="tok-n">pending</span> <span class="tok-o">=</span> <span class="tok-n">tagManager</span><span class="tok-p">.</span><span class="tok-na">loadContainerPreferFresh</span><span class="tok-p">(</span><span class="tok-n">getString</span><span class="tok-p">(</span><span class="tok-n">R</span><span class="tok-p">.</span><span class="tok-na">string</span><span class="tok-p">.</span><span class="tok-na">tag_manager_id</span><span class="tok-p">),</span> <span class="tok-n">R</span><span class="tok-p">.</span><span class="tok-na">raw</span><span class="tok-p">.</span><span class="tok-na">gtm_initial_conf</span><span class="tok-p">);</span>
+        <span class="tok-n">pending</span><span class="tok-p">.</span><span class="tok-na">setResultCallback</span><span class="tok-p">(</span><span class="tok-k">new</span> <span class="tok-n">ResultCallback</span><span class="tok-o">&lt;</span><span class="tok-n">ContainerHolder</span><span class="tok-o">&gt;</span><span class="tok-p">()</span> <span class="tok-p">{</span>
+           <span class="tok-nd">@Override</span>
+           <span class="tok-kd">public</span> <span class="tok-kt">void</span> <span class="tok-nf">onResult</span><span class="tok-p">(</span><span class="tok-nd">@NonNull</span> <span class="tok-n">ContainerHolder</span> <span class="tok-n">containerHolder</span><span class="tok-p">)</span> <span class="tok-p">{</span>
+               <span class="tok-c1">// If unsuccessful, return</span>
+               <span class="tok-k">if</span> <span class="tok-p">(</span><span class="tok-o">!</span><span class="tok-n">containerHolder</span><span class="tok-p">.</span><span class="tok-na">getStatus</span><span class="tok-p">().</span><span class="tok-na">isSuccess</span><span class="tok-p">())</span> <span class="tok-p">{</span>
+                   <span class="tok-c1">// Deal with failure</span>
+                   <span class="tok-k">return</span><span class="tok-p">;</span>
+               <span class="tok-p">}</span>
+               <span class="tok-n">containerHolder</span><span class="tok-p">.</span><span class="tok-na">refresh</span><span class="tok-p">();</span>
+
+               <span class="tok-kd">final</span> <span class="tok-kt">boolean</span> <span class="tok-n">feature1Status</span> <span class="tok-o">=</span> <span class="tok-n">containerHolder</span><span class="tok-p">.</span><span class="tok-na">getContainer</span><span class="tok-p">().</span><span class="tok-na">getBoolean</span><span class="tok-p">(</span><span class="tok-s">&#34;feature1&#34;</span><span class="tok-p">);</span>
+               <span class="tok-n">Log</span><span class="tok-p">.</span><span class="tok-na">d</span><span class="tok-p">(</span><span class="tok-s">&#34;TagManager&#34;</span><span class="tok-p">,</span> <span class="tok-n">String</span><span class="tok-p">.</span><span class="tok-na">valueOf</span><span class="tok-p">(</span><span class="tok-n">feature1Status</span><span class="tok-p">));</span>
+           <span class="tok-p">}</span>
+        <span class="tok-p">},</span> <span class="tok-mi">2</span><span class="tok-p">,</span> <span class="tok-n">TimeUnit</span><span class="tok-p">.</span><span class="tok-na">SECONDS</span><span class="tok-p">);</span>
+<span class="tok-p">}</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Et c’est tout ! Vous pouvez retourner dans l’interface de Tag Manager, pour modifier la valeur de la variable feature1, publiez la nouvelle version du container et si vous redémarrez l’application,
+ la nouvelle valeur devrait apparaitre.</p>
+</div>
+<div class="paragraph">
+<p>Rapide et efficace, non ?</p>
+</div>
+<div class="sect2">
+<h3 id="_chargement_des_données_du_container">Chargement des données du container</h3>
+<div class="paragraph">
+<p>Via l’instance de TagManager différentes méthodes sont disponibles pour charger le container et les valeurs qu’il contient.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight"><code data-lang="java"><span></span><span class="tok-n">tagManager</span><span class="tok-p">.</span><span class="tok-na">loadContainerDefaultOnly</span><span class="tok-p">(...);</span> <i class="conum" data-value="1"></i><b>(1)</b>
+<span class="tok-n">tagManager</span><span class="tok-p">.</span><span class="tok-na">loadContainerPreferFresh</span><span class="tok-p">(...);</span> <i class="conum" data-value="2"></i><b>(2)</b>
+<span class="tok-n">tagManager</span><span class="tok-p">.</span><span class="tok-na">loadContainerPreferNonDefault</span><span class="tok-p">(...);</span> <i class="conum" data-value="2"></i><b>(2)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tbody><tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>va uniquement regarder les valeurs dans le binaire ajouté dans /res/raw</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>vont essayer de prendre les dernières valeurs publiées (ou non) mais sans être garantie à 100% (notamment s’il ya des problèmes de réseaux)</td>
+</tr>
+</tbody></table>
+</div>
+<div class="paragraph">
+<p>Les différences sont détaillées <a href="https://developers.google.com/android/reference/com/google/android/gms/tagmanager/TagManager#public-methods">dans la doc</a>.
+Mais selon toute logique cette qui va nous intéresser sera uniquement <code>loadContainerPreferFresh()</code>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_conclusion">Conclusion</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Les pour et les contre d’utiliser Tag Manager pour faire du feature toggle vont forcément dépendre du besoin du développeur.</p>
+</div>
+<div class="sect2">
+<h3 id="_pour">Pour</h3>
+<div class="paragraph">
+<p>Le principale avantage et la mise en place sans le développement d’une API rien que pour ça (si votre application n’a pas de backend dédié, pas besoin d’en créer un).<br/>
+Toute la logique de configuration initiale versus configuration mise à jour est déjà implémentée et tout se gère via l’appel <code>tagManager.loadContainer()</code>.<br/>
+Ça fonctionne tout aussi bien sur iOS.<br/>
+Un autre point très intéressant (et non abordé ici) est la publication d’une variable selon des critères (on va pouvoir modifier un toggle, pour par exemple faire du A/B testing en fonction d’un tas de critères comme la taille de l’écran ou bien la langue de l’utilisateur ou même la version de l’application).</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_contre">Contre</h3>
+<div class="paragraph">
+<p>Si le <code>loadPreferFresh</code> échoue (problème réseau par exemple) on retombe sur la config par défaut, mais est-ce que ça fonctionnerait mieux avec une solution custom ? par sûr.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_liens">Liens</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Code sources d’exemple : <a href="https://github.com/fchauveau/blog-android-tag-manager" class="bare">https://github.com/fchauveau/blog-android-tag-manager</a><br/>
+Documentation Google officielle : <a href="https://developers.google.com/tag-manager/android/v4/" class="bare">https://developers.google.com/tag-manager/android/v4/</a><br/>
+Cours Udacity d’explication : <a href="https://www.udacity.com/course/viewer#!/c-ud876-2/l-4027658558/m-4328729937" class="bare">https://www.udacity.com/course/viewer#!/c-ud876-2/l-4027658558/m-4328729937</a></p>
+</div>
+</div>
+</div>
+
+                    </div>
+                    <div class="content-footer">
+                        
+                        <ul class="tags float">
+                            
+                            <li><a href="../../../../tags/android/">Android</a></li>
+                            
+                            <li><a href="../../../../tags/google-tag-manager/">Google Tag Manager</a></li>
+                            
+                            <li><a href="../../../../tags/feature-toggle/">Feature Toggle</a></li>
+                            
+                        </ul>
+                        
+                        <section id="author">
+                            <div class="date">Rédigé par <span class="author-name">Florian</span></div>
+                        </section>
+                    </div>
+                    <div class="share">
+                        <span>Partager</span>
+                        <ul class="socials">
+                            <li>
+                                <a target="_blank" title="Facebook"
+                                   href="https://www.facebook.com/sharer.php?u=http://code-troopers.com%2f2016%2f03%2f30%2fandroid_google_tag_manager_feature_toggle%2f&t=Android%20%3a%20Feature%20Toggle%20avec%20Google%20Tag%20Manager"
+                                   class="facebook-button" rel="nofollow"
+                                   onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=500,width=700');return false;">
+                                    <i class="fa fa-facebook"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_blank" title="Twitter"
+                                   href="https://twitter.com/share?url=http://code-troopers.com%2f2016%2f03%2f30%2fandroid_google_tag_manager_feature_toggle%2f&text=Android%20%3a%20Feature%20Toggle%20avec%20Google%20Tag%20Manager&via=codetroopers"
+                                   rel="nofollow"
+                                   onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=400,width=700');return false;">
+                                    <i class="fa fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_blank" title="Google +"
+                                   href="https://plus.google.com/share?url=http://code-troopers.com%2f2016%2f03%2f30%2fandroid_google_tag_manager_feature_toggle%2f&hl=fr"
+                                   class="google-button" rel="nofollow"
+                                   onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=650');return false;">
+                                    <i class="fa fa-google-plus"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div style="clear:both"></div>
+
+
+                    <div class="back">
+                        <div class="pagination">
+                            
+                            <a href="../../../../2016/05/11/vim_macro/" class="previous-page">
+                                <div class="arrow"><div class="arrow_box_left arrow_box">
+</div></div>
+                                Article précédent
+                            </a>
+                            
+                            
+                            <a href="../../../../2016/01/20/jenkinsworkflow/" class="next-page">
+                                Article suivant
+                                <div class="arrow"><div class="arrow_box_right arrow_box">
+</div></div>
+                            </a>
+                            
+                        </div>
+                    </div>
+
+                    <section id="menu">
+                        <ul>
+                            
+                        </ul>
+                    </section>
+
+                    <div id="disqus_thread"></div>
+                    <script type="text/javascript">
+                         
+                        var disqus_shortname = 'codetroopers' 
+                        var disqus_url = window.location.href
+                        if (window.location.protocol != 'http:') {
+                            disqus_url = 'http:' + window.location.href.substring(window.location.protocol.length)
+                        }
+
+                         
+                        (function () {
+                            var dsq = document.createElement('script')
+                            dsq.type = 'text/javascript'
+                            dsq.async = true
+                            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq)
+                        })()
+                    </script>
+                    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments
+                        powered by Disqus.</a></noscript>
+                    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span
+                            class="logo-disqus">Disqus</span></a>
+                </div>
+            </article>
+        </div>
+    </section>
+</section>
+
+<section id="contact">
+    <h1>Contact</h1>
+
+
+    <div>
+        <div><iframe class="lozad"
+                    width="100%"
+                    height="100%"
+                    frameborder="0" style="border:0"
+                    data-src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDmneK7ppr9MWdY2ynnTXsnhEloW2r7GzQ&q=Code-Troopers,+37000+Tours+France&zoom=15">
+            </iframe></div>
+        <div>
+            <h2>Code-Troopers</h2>
+            <p>
+                26 bis rue Abraham Bosse<br>
+                37000 Tours - Fr
+            </p>
+            <p>
+                <a href="mailto:contact@code-troopers.com">contact@code-troopers.com</a>
+            </p>
+            <p>
+                <a class="button" href="tel:+33782287216">07 82 28 72 16</a>
+            </p>
+        </div>
+    </div>
+
+    <h1>Suivez nos actualités</h1>
+
+    <ul class="flex">
+        <li>
+            <a href="https://facebook.com/codetroopers37">
+                <i class="fa fa-facebook fa-3x fa-fw"></i>
+            </a>
+        </li>
+        <li>
+            <a href="https://twitter.com/codetroopers">
+                <i class="fa fa-twitter fa-3x fa-fw"></i>
+            </a>
+        </li>
+        <li>
+            <a href="https://github.com/code-troopers">
+                <i class="fa fa-github fa-3x fa-fw"></i>
+            </a>
+        </li>
+        <li>
+            <a href="../../../../index.xml">
+                <i class="fa fa-rss fa-3x fa-fw"></i>
+            </a>
+        </li>
+    </ul>
+</section>
+
+<footer>
+    <div class="wrapper">
+        <a href="#top" class="scroll-to-top">
+            <img class="arrow" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAA2CAYAAADOBhlKAAAAhElEQVR42u3TOw0AIRBF0ZWABKQgBSlIQAJSkIIEHLwNBZmCZfiUm3eT6cgZCngAaGPaaGdWQGxzC1hI9gZIkNIp4DDmToCMsbwLOMxzO0BRgLICPNb5GWCG7fNbmC8gYL8ggGyv2K/2W8iTPS92wOI+q3+mnnKGAAECBAgQIECAwC+BF8FrydFpGvcOAAAAAElFTkSuQmCC" alt="arrow">
+        </a>
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAMAAAAKE/YAAAAAM1BMVEVHcEz////////////////////////////////////////////////////////////////P0YphAAAAEXRSTlMAIEBwgLDA/6DQEFCQ4GAw8MRg8BIAAASTSURBVHgB7NmBavMqGIfxv8b4qInq/V/tgQ/kfIXTnG5JWoU+AB0dY7+9eS0s0ZUZu7jVex7yfnWLNRowu4TIYTEsVsOUtr17yX51rti/Ks6tPtPl+5b08aqLneu2qqfVzXV6dPWj4j33+Rm9kOnXJO8fchuXAVooST8oldAAsjN6d8X3if3+CvmiN5ZcBlqw+nU2NCC7pPdk9gbEknSqVCLQdvMOcgAIVhdkA0C4m51c/zVXjuDeJVka4NLlY2iL7spmIJhbFi5b3VFaAW90Q8YDa7pnM7K97yLesCPJAy7dfMJ90oVtDWLVrdUIbdNVpR1wuj0H7EmXZCLkqjdUM0Rz1WqEpLeUwjUrsgBFb6sAi04WoFW9sdognP6ki0lvLUXw6dzPh6Q3l8KZSZkIQR/ohLo2KPpIBVo9b55DnT5n7mrzmzNYpI+qYzprnkDtP2vuaq8fFCDoA51RLJ83d/WiF9sgJg1QirDppUyjJQ1RajTz6p9XNUj1xYu+Q9EwFdhfWuiggQqwvbBFOWmgUv7/E+ahaqgqeB22gNNgOViOl4Oo4YrHC7L+djl4sd8uyKqnWXAaDy0HVs/K5DQiOmXywSm0GhGtDZanp9BrTLT8s7PowIyKNuCevB80KloBzPHbA6GPR2rAncfegT9Y3h3SyOgE+398dASNjFagpePpD4Q+2N9M0NhoBbIeKmBHR1so+jtP1OhoRfzjvlDGR5fHc+do6Tz2bnxquDPHkIs6cRQr2BnQFqp6O1kzoJXZH76eAP0w3Qp1AvSj1NE0B1r/fn5EwizoQNSfEpTfom/5/kEFUv9XN82CTv0e6k7ULGhF9v46D7pPGLZ50BtIkgUzD9qAleTImgetzCIp4GdCe4KkiLsOzZOuQztiP4fzoDeQDNSZ0BWMLGgmtMBqIc+Fzixy+LnQHqeVdSr0H7DHzYV2+BPoM51EQ5kLXUBg50LbUdBf9Bf9RdfT2PPdOmnu6Yv+or/oMhe6gDxuLrTDn0cfIm5Cr6xTof+AHX4utMdpIc+FziyyMBcarAzUmdAVjATbTOgNJEXcTGhH/OlNdXoX3VTv/fSm+kKeCZ1Z+oOiWdD9QZFgmwe9QX/4OQ96J/bXedB9whukWdCp7/I/xNwBBsAwGMXgC/T+5y3wAPj4CTAMMR1K8kSdCKGnTqCk0l8CJqlMB+qhQQcC8SqGHukUtx5aFLc9h9AuE07b7KBd25wgG0K7qz4VOYN2Fdml71NYl76n14fQrtcvZOigPWTYr1hAo6cOcU4OvTgHMqgcehkUBGc19IIzTPt66LfzaxElQMN7EFFCrlpD75NCGFxD7/BCgp1DL8GG2L2GXuwOswI99GYFYMChh96AA0xl9NC/vTu0AQAEgiAY7CPov1vkubNkEraQnawy/CkJvX8xRzvK0giYR4mbLnKIJq7nzMmfv1P0x5X+ItScsVLb27TeD4bHXznb0+zegHtyYwQPLPd93MBnJHyww6JRAIQG4H4AWAkgrHYIKx8L81k2H8DzqUEfdfT5TBoqRUlYFd9FmWMVlO509+l090fSAY7+AkvG2mAzLke+AAAAAElFTkSuQmCC" alt="logo">
+        <div>
+            <span>©2014 — 2022 Code-Troopers | <a href="../../../../legals.html">Mentions légales</a></span>
+            <span>Design : <a href="https://www.descheval.com/">descheval.com</a> | Développement : Code-Troopers</span>
+        </div>
+    </div>
+</footer>
+<script type="application/javascript" src="../../../../main.32803c.js"></script>
+
+<script type="application/javascript" src="../../../../blog.499878.js"></script>
+
+</body>
+</html>
+
