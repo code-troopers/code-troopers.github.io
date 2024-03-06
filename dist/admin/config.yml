@@ -7,13 +7,13 @@ backend:
   # branch: main
   # --
   # For use in production on GitHub
-  # name: github
-  # repo: code-troopers/code-troopers.github.io
-  # branch: main
+  name: github
+  repo: code-troopers/code-troopers.github.io
+  branch: main
   # --
   # For use in production on netlify
-  name: git-gateway
-  branch: main
+  # name: git-gateway
+  # branch: main
 
 
 
