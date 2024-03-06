@@ -8,12 +8,6 @@
     </url>
     
     <url>
-        <loc>https://code-troopers.com/dossierfacile.html</loc>
-        <lastmod>2024-03-06T00:00:00+00:00</lastmod>
-        <priority>0.8</priority>
-    </url>
-    
-    <url>
         <loc>https://code-troopers.com/chapito.html</loc>
         <lastmod>2019-04-01T00:00:00+00:00</lastmod>
         <priority>0.8</priority>
@@ -22,6 +16,12 @@
     <url>
         <loc>https://code-troopers.com/eutelmed.html</loc>
         <lastmod>2018-12-01T00:00:00+00:00</lastmod>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://code-troopers.com/dossierfacile.html</loc>
+        <lastmod>2024-03-06T00:00:00+00:00</lastmod>
         <priority>0.8</priority>
     </url>
     
