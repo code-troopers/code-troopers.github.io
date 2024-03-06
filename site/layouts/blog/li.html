@@ -11,19 +11,19 @@
   <div>
     <h2>
       {{ if .Truncated }}
-      <a href="{{ .Permalink }}">{{ .Title }}</a>
+      <a aria-label="En savoir plus sur {{ .Title }}" href="{{ .Permalink }}">{{ .Title }}</a>
       {{ else }}
       {{ .Title }}
       {{ end }}
     </h2>
     <ul class="tags">
       {{ range $index, $tag := .Params.tags }}
-      <li><a href="/tags/{{ $tag | urlize }}/">{{ $tag }}</a></li>
+      <li><a aria-label="Tag {{ $tag }}" href="/tags/{{ $tag | urlize }}/">{{ $tag }}</a></li>
       {{ end }}
     </ul>
     <p>{{ .Summary | truncate 100 }}</p>
     {{ if .Truncated }}
-    <a class="read-more" href="{{ .Permalink }}">En savoir plus
+    <a aria-label="Voir tous les articles" class="read-more" href="{{ .Permalink }}">En savoir plus
       {{ partial "arrow_right.html" . }}
     </a>
     {{ end }}
