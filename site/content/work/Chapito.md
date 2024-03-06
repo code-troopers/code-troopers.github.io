@@ -1,14 +1,13 @@
 ---
-cover: ../chapito.jpg
-date: '2019-04-01'
-tags:
-- Web
-- Android
-- iOS
-title: 'Chapitô'
-url: /chapito.html
+title: Chapitô
 weight: 100
-
+url: /chapito.html
+date: 2019-04-01
+cover: ../chapito.jpg
+tags:
+  - Web
+  - Android
+  - iOS
 ---
 
 Chapitô est LE projet des Code-Troopers. Il s’agit d’un outil 100% en ligne qui permet à tous les organisateurs de festivals de créer une application sur-mesure sans aucune connaissance en développement web & développement d’application.
@@ -27,4 +26,4 @@ Mais également de rester informé des changements et être alerté des nouveaut
 
 L’application est un outil de communication à part entière et est au service de l’événement qu’elle promeut !
 
-[Lien vers chapi.to](http://chapi.to)
+[Plus d'information sur le site chapi.to](http://chapi.to)
