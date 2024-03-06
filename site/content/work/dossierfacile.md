@@ -17,8 +17,6 @@ Le site est grand public, il y a plus de 200 000 visiteurs unique par mois pour 
 
 Pour tout savoir sur le projet :
 
-\- page d'accueil : <https://www.dossierfacile.logement.gouv.fr>
-
-\- statistiques publiques sur les dossiers : [dashboard metabase](https://www.dossierfacile.logement.gouv.fr/stats)
-
-\- statistiques publiques sur les accès au site (données complètes à partir de janvier 2024) : [matomo sur stats.beta.gouv.fr](https://stats.beta.gouv.fr/index.php?module=CoreHome&action=index&idSite=32&period=day&date=yesterday#?period=month&idSite=32&category=General_Visitors&subcategory=General_Overview)
+* page d'accueil : <https://www.dossierfacile.logement.gouv.fr>
+* statistiques publiques sur les dossiers : [dashboard metabase](https://www.dossierfacile.logement.gouv.fr/stats)
+* statistiques publiques sur les accès au site (données complètes à partir de janvier 2024) : [matomo sur stats.beta.gouv.fr](https://stats.beta.gouv.fr/index.php?module=CoreHome&action=index&idSite=32&period=day&date=yesterday#?period=month&idSite=32&category=General_Visitors&subcategory=General_Overview)
