@@ -1,0 +1,425 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+  <title>Code-Troopers - Android - Obfuscation et Désobfuscation</title>
+  <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+
+  
+  
+    <link href="/main.css" rel="stylesheet">
+  
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <base href="/">
+	
+	<link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+	<link rel="icon" href="/favicon.ico">
+	<link rel="manifest" href="/manifest.json">
+	<link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#ff4400">
+	<meta name="theme-color" content="#fff">
+
+  
+  <meta property="og:title" content="Android - Obfuscation et Désobfuscation" />
+<meta property="og:description" content="C’est un fait, décompiler une application android (le fichier apk) pour en examiner le code source est une chose plutôt simple. Il existe de nombreux outils permettant de le faire et c’est logique car, grossièrement, l’apk n’est qu’une archive contenant le code source de l’application et les différentes ressources utilisées dans celle-ci (images, fichiers de langue, layouts de vue…​). Les motivations pour cela peuvent être nombreuses et variées et ce n’est d’ailleurs pas très important car, à partir du moment où c’est faisable, des personnes le feront." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/2018/11/14/android-deobfuscation/" /><meta property="og:image" content="/img/gopher_moi.png"/><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2018-11-14T00:00:00+00:00" />
+<meta property="article:modified_time" content="2018-11-14T00:00:00+00:00" />
+
+
+  
+</head>
+  <body class="sans-serif">
+
+    <header>
+    <nav>
+        
+            <a id="id-company" href="/">Code-Troopers</a>
+        
+            <a id="id-skills" href="#skills">Compétences</a>
+        
+            <a id="id-portfolio" href="#portfolio">Réalisations</a>
+        
+            <a id="id-casting" href="https://team.code-troopers.com">L&#39;équipe</a>
+        
+            <a id="id-blogs" href="/blog">Blog</a>
+        
+            <a id="id-contact" href="#contact">Contact</a>
+        
+    </nav>
+</header>
+
+    
+
+<section id="blog">
+    <div class="wrapper">
+        <h1>
+            Blog
+        </h1>
+    </div>
+
+    <section id="article">
+        <div class="wrapper">
+            <article>
+                
+                <img src="/blog/../android-rocket-banner.png">
+                
+                
+                
+                
+                <div class="wrapper-content">
+                    <h2>Android - Obfuscation et Désobfuscation</h2>
+                    
+                    
+                    <ul class="tags">
+                        
+                        <li><a href="/tags/android/">Android</a></li>
+                        
+                        <li><a href="/tags/playstore/">PlayStore</a></li>
+                        
+                        <li><a href="/tags/apk/">APK</a></li>
+                        
+                    </ul>
+                    
+                    <div class="content">
+                        <div class="paragraph">
+<p>C’est un fait, décompiler une application android (le fichier apk) pour en examiner le code source est une chose plutôt simple.
+Il existe de nombreux outils permettant de le faire et c’est logique car, grossièrement, l’apk n’est qu’une archive contenant le code source de l’application et les différentes ressources utilisées dans celle-ci (images, fichiers de langue, layouts de vue…​).
+Les motivations pour cela peuvent être nombreuses et variées et ce n’est d’ailleurs pas très important car, à partir du moment où c’est faisable, des personnes le feront.</p>
+</div>
+<div class="paragraph">
+<p>Le petit problème, c’est qu’en tant que développeur qui a passé de longs mois à bosser sur son appli, on n’a pas forcément envie de tout se faire copier par le premier venu.
+Donc pour tenter de contrer cela il est possible d’activer l’obfuscation, c’est une phase supplémentaire qui vient s’éxecuter lors de la phase de build.</p>
+</div>
+<div class="paragraph">
+<p>Et c’est assez simple, il faut juste le déclarer dans le fichier gradle :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>  buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles &#39;proguard-rules.pro&#39;
+        }
+    }</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Le processus de build va donc avoir une étape supplémentaire.
+Mais comme rien n’est jamais aussi simple, il faut faire attention à correctement configurer son ficher proguard (qui décrit les règles à appliquer lors de l’obfuscation) afin de ne pas nuire au bon fonctionnement de son application.</p>
+</div>
+<div class="paragraph">
+<p>La <a href="https://developer.android.com/studio/build/shrink-code">doc officielle de Google</a> en parle, tout comme de nombreux articles de <a href="https://blog.octo.com/demystifier-proguard-pour-les-developpeurs-android/">blogs</a>.</p>
+</div>
+<div class="paragraph">
+<p>Une fois que tout ce travail de configuration est terminé, que notre code source de prod est correctement obfusqué, la partie intéressante commence :
+les <em>stacktraces</em>…​</p>
+</div>
+<div class="paragraph">
+<p>Les crashs remontés par store sont en fait le résultat d’une stacktrace qui a été générée car une erreur est survenue pendant l’exécution du code de l’application sur un device utilisateur.
+Or, si le code source présent sur le device d’un utilisateur est obfusqué, la stacktrace qui est générée le sera aussi.</p>
+</div>
+<div class="paragraph">
+<p>Et voilà à quoi cela peut ressembler :
+</p><div style="text-align : center">
+<a class="inlineBoxes" href="/images/posts/2018-11-14-Android-Deobfuscation/android-playstore-stacktrace.png" data-lightbox="1">
+        <img class="medium" src="/images/posts/2018-11-14-Android-Deobfuscation/android-playstore-stacktrace.png"/>
+</a>
+</div><p></p>
+</div>
+<div class="paragraph">
+<p>Même si on arrive à identifier certaines lignes ou actions, ça ne sera pas très pratique à débugger car les numéros de ligne ou les noms de classe ne sont pas toujours pertinents.
+Ici, impossible de trouver dans quelle classe s’est produite l’erreur car je ne sais pas a quoi correspond ni <code>a</code> ni <code>b</code>.</p>
+</div>
+<div class="paragraph">
+<p>Mais tout n’est pas perdu. Il y a une section dans le PlayStore qui se nomme <em>Deobfuscation files</em>.
+Elle va nous permettre d’ajouter un fichier de mapping qui va faire le lien entre le code obfusqué et le code réel tel qu’il est dans mon IDE.</p>
+</div>
+<div class="paragraph">
+<p></p><div style="text-align : center">
+<a class="inlineBoxes" href="/images/posts/2018-11-14-Android-Deobfuscation/android-playstore-deobfuscation.png" data-lightbox="1">
+        <img class="medium" src="/images/posts/2018-11-14-Android-Deobfuscation/android-playstore-deobfuscation.png"/>
+</a>
+</div><p></p>
+</div>
+<div class="paragraph">
+<p>Ce fichier est généré automatiquement lors de la phase de build.
+Il se trouve normalement là :</p>
+</div>
+<div class="paragraph">
+<p><code>/app/build/outputs/mapping/release/mapping.txt</code></p>
+</div>
+<div class="paragraph">
+<p>et ressemble à ça (en beaucoup plus long) :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>android.arch.core.internal.FastSafeIterableMap -&gt; android.arch.a.a.a:
+    java.util.HashMap mHashMap -&gt; a
+    void &lt;init&gt;() -&gt; &lt;init&gt;
+    boolean contains(java.lang.Object) -&gt; a
+android.arch.core.internal.SafeIterableMap -&gt; android.arch.a.a.b:
+    android.arch.core.internal.SafeIterableMap$Entry mStart -&gt; a
+    android.arch.core.internal.SafeIterableMap$Entry mEnd -&gt; b
+    java.util.WeakHashMap mIterators -&gt; c
+    int mSize -&gt; d
+    void &lt;init&gt;() -&gt; &lt;init&gt;
+    int size() -&gt; a
+    java.util.Iterator iterator() -&gt; iterator
+    java.util.Iterator descendingIterator() -&gt; b
+    android.arch.core.internal.SafeIterableMap$IteratorWithAdditions iteratorWithAdditions() -&gt; c
+    java.util.Map$Entry eldest() -&gt; d
+    java.util.Map$Entry newest() -&gt; e
+    boolean equals(java.lang.Object) -&gt; equals
+    java.lang.String toString() -&gt; toString
+    android.arch.core.internal.SafeIterableMap$Entry access$100(android.arch.core.internal.SafeIterableMap) -&gt; a
+android.arch.core.internal.SafeIterableMap$1 -&gt; android.arch.a.a.b$1:
+android.arch.core.internal.SafeIterableMap$AscendingIterator -&gt; android.arch.a.a.b$a:
+    void &lt;init&gt;(android.arch.core.internal.SafeIterableMap$Entry,android.arch.core.internal.SafeIterableMap$Entry) -&gt; &lt;init&gt;
+    android.arch.core.internal.SafeIterableMap$Entry forward(android.arch.core.internal.SafeIterableMap$Entry) -&gt; a
+android.arch.core.internal.SafeIterableMap$DescendingIterator -&gt; android.arch.a.a.b$b:
+    void &lt;init&gt;(android.arch.core.internal.SafeIterableMap$Entry,android.arch.core.internal.SafeIterableMap$Entry) -&gt; &lt;init&gt;
+    android.arch.core.internal.SafeIterableMap$Entry forward(android.arch.core.internal.SafeIterableMap$Entry) -&gt; a</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Lorsque qu’il est ajouté dans le PlayStore les stacktraces redeviennent intéligibles.
+Voici donc la même erreur mais avec le fichier de mapping uploadé :</p>
+</div>
+<div class="paragraph">
+<p></p><div style="text-align : center">
+<a class="inlineBoxes" href="/images/posts/2018-11-14-Android-Deobfuscation/android-playstore-stacktrace-deobfuscated.png" data-lightbox="1">
+        <img class="medium" src="/images/posts/2018-11-14-Android-Deobfuscation/android-playstore-stacktrace-deobfuscated.png"/>
+</a>
+</div><p></p>
+</div>
+<div class="paragraph">
+<p>Attention cela ne fonctionne que pour les stacktraces survenues après l’ajout du ficher, ce n’est malheureusement pas rétroactif.</p>
+</div>
+<div class="paragraph">
+<p>D’où l’importance d’ajouter ce fichier à chaque nouvelle release de l’application pour ne rien rater.</p>
+</div>
+<div class="paragraph">
+<p>Et pour faire cela on va avoir plusieurs solutions :</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>la première est de se connecter au PlayStore et d’aller dans la bonne section pour ajouter le fichier à la main. Même si ça va fonctionner, il faut espérer ne pas oublier de le faire à chaque fois. Et cela rend le processus de livraison encore plus fastidieux, pas franchement génial.</p>
+</li>
+<li>
+<p>la deuxième solution est donc de le faire automatiquement. Sachant que l’on utilise déjà des outils pour faire l’upload des apk en automatique et pour ne pas avoir à se connecter à l’interface, ça semble être une bonne idée.
+Ces outils sont <a href="https://fastlane.tools/">Fastlane</a> et le <a href="https://github.com/Triple-T/gradle-play-publisher">plugin Gradle play-publisher</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Avec le plugin gradle, c’est plutôt simple, depuis la version <a href="https://github.com/Triple-T/gradle-play-publisher/releases/tag/1.2.0">1.2.0</a>, le fichier est automatiquement envoyé sur le store lorsque l’obfusctation est activée.</p>
+</li>
+<li>
+<p>Avec fastlane, c’est à peine un peu plus compliqué, il faut préciser dans le supply le chemin du fichier de mapping</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>    supply(
+        mapping: &#39;./app/build/outputs/mapping/release/mapping.txt&#39;
+    )</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Et lors de l’appel à la <code>lane</code> correspondante au déploiement on peut voir dans les logs que le fichier est bien trouvé et uploadé</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>+-------------------------+-------------------------------------------------+
+|                         Summary for supply 2.98.0                         |
++-------------------------+-------------------------------------------------+
+| track                   | alpha                                           |
+| apk                     | ./app/build/outputs/apk/release/app-release.apk |
+| mapping                 | ./app/build/outputs/mapping/release/mapping.txt |
++-------------------------+-------------------------------------------------+</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Si on n’est pas sûr de son coup on retourner sur le PlayStore dans la section <em>Deobfuscation files</em> pour valider que tout s’est bien passé.</p>
+</div>
+<div class="paragraph">
+<p>Et voilà, maintenant que l’activation de l’obfuscation et la desobfuscation des stacktraces n’est plus un problème, il ne reste plus qu’à les corriger ;)</p>
+</div>
+
+                    </div>
+                    <div class="content-footer">
+                        
+                        <ul class="tags float">
+                            
+                            <li><a href="/tags/android/">Android</a></li>
+                            
+                            <li><a href="/tags/playstore/">PlayStore</a></li>
+                            
+                            <li><a href="/tags/apk/">APK</a></li>
+                            
+                        </ul>
+                        
+                        <section id="author">
+                            <div class="date">Rédigé par <span class="author-name">Florian</span></div>
+                        </section>
+                    </div>
+                    <div class="share">
+                        <span>Partager</span>
+                        <ul class="socials">
+                            <li>
+                                <a target="_blank" title="Facebook"
+                                   href="https://www.facebook.com/sharer.php?u=http://code-troopers.com%2f2018%2f11%2f14%2fandroid-deobfuscation%2f&t=Android%20-%20Obfuscation%20et%20D%c3%a9sobfuscation"
+                                   class="facebook-button" rel="nofollow"
+                                   onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=500,width=700');return false;">
+                                    <i class="ri-facebook-fill"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_blank" title="Twitter"
+                                   href="https://twitter.com/share?url=http://code-troopers.com%2f2018%2f11%2f14%2fandroid-deobfuscation%2f&text=Android%20-%20Obfuscation%20et%20D%c3%a9sobfuscation&via=codetroopers"
+                                   rel="nofollow"
+                                   onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=400,width=700');return false;">
+                                    <i class="ri-twitter-x-fill"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_blank" title="Google +"
+                                   href="https://plus.google.com/share?url=http://code-troopers.com%2f2018%2f11%2f14%2fandroid-deobfuscation%2f&hl=fr"
+                                   class="google-button" rel="nofollow"
+                                   onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=650');return false;">
+                                    <i class="fa fa-google-plus"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div style="clear:both"></div>
+
+
+                    <div class="back">
+                        <div class="pagination">
+                            
+                            <a href="/2021/10/25/stages-2022/" class="previous-page">
+                                <div class="arrow"><div class="arrow_box_left arrow_box">
+</div></div>
+                                Article précédent
+                            </a>
+                            
+                            
+                            <a href="/2018/09/18/angular-seo/" class="next-page">
+                                Article suivant
+                                <div class="arrow"><div class="arrow_box_right arrow_box">
+</div></div>
+                            </a>
+                            
+                        </div>
+                    </div>
+
+                    <section id="menu">
+                        <ul>
+                            
+                        </ul>
+                    </section>
+
+                    <div id="disqus_thread"></div>
+                    <script type="text/javascript">
+                         
+                        var disqus_shortname = 'codetroopers' 
+                        var disqus_url = window.location.href
+                        if (window.location.protocol != 'http:') {
+                            disqus_url = 'http:' + window.location.href.substring(window.location.protocol.length)
+                        }
+
+                         
+                        (function () {
+                            var dsq = document.createElement('script')
+                            dsq.type = 'text/javascript'
+                            dsq.async = true
+                            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq)
+                        })()
+                    </script>
+                    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments
+                        powered by Disqus.</a></noscript>
+                    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span
+                            class="logo-disqus">Disqus</span></a>
+                </div>
+            </article>
+        </div>
+    </section>
+</section>
+
+
+    <section id="contact">
+    <h1>Contact</h1>
+    <div>
+        <div><iframe
+                    width="100%"
+                    height="100%"
+                    loading="lazy"
+                    frameborder="0" style="border:0"
+                    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBZkgfEiV0p1XY0-7jptEa500_MhqZQUYk&q=Code-Troopers,+37000+Tours+France&zoom=15">
+            </iframe></div>
+        <div>
+            <h2>Code-Troopers</h2>
+            <p>
+                26 bis rue Abraham Bosse<br>
+                37000 Tours - Fr
+            </p>
+            <p>
+                <a href="mailto:contact@code-troopers.com">contact@code-troopers.com</a>
+            </p>
+            <p>
+                <a class="button" href="tel:+33782287216">07 82 28 72 16</a>
+            </p>
+        </div>
+    </div>
+
+    <h1>Suivez nos actualités</h1>
+
+    <ul class="flex">
+        <li>
+            <a href="https://facebook.com/codetroopers37">
+                <i class="ri-facebook-fill ri-3x"></i>
+            </a>
+        </li>
+        <li>
+            <a href="https://twitter.com/codetroopers">
+                <i class="ri-twitter-x-fill ri-3x"></i>
+            </a>
+        </li>
+        <li>
+            <a href="https://github.com/code-troopers">
+                <i class="ri-github-fill ri-3x"></i>
+            </a>
+        </li>
+    </ul>
+</section>
+
+<footer>
+    <div class="wrapper">
+        <a href="#top" class="scroll-to-top">
+            <img class="arrow" src="/img/arrow.png" alt="arrow">
+        </a>
+        <img src="/img/footer_logo.png" alt="logo">
+        <div>
+            <span>©2014 — 2024 Code-Troopers | <a href="/legals.html">Mentions légales</a></span>
+            <span>Design : <a href="https://www.descheval.com/">descheval.com</a> | Développement : Code-Troopers</span>
+        </div>
+    </div>
+</footer>
+
+    
+    
+      <script src="/main.js"></script>
+    
+  </body>
+</html>
