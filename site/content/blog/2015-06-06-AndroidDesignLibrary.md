@@ -1,6 +1,6 @@
 ---
 author: Benjamin
-cover: images/banner/android5-banner.png
+cover: ../android5-banner.png
 date: '2015-06-06'
 tags:
 - Android

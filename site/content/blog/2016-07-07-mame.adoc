@@ -1,6 +1,6 @@
 ---
 author: Florian
-cover: images/banner/mame-banner.png
+cover: ../mame-banner.png
 date: '2016-07-07'
 tags:
 - Tours

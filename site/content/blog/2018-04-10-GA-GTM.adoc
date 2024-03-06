@@ -1,6 +1,6 @@
 ---
 author: Benjamin
-cover: images/banner/ga-gtm-banner.png
+cover: ../ga-gtm-banner.png
 date: '2018-04-10'
 tags:
 - GA

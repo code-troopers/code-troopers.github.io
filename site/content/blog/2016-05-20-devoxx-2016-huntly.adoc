@@ -1,6 +1,6 @@
 ---
 author: Florian
-cover: images/banner/devoxx2016-banner.png
+cover: ../devoxx2016-banner.png
 date: '2016-05-20'
 tags:
 - Devoxx

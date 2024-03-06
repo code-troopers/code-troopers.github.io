@@ -1,6 +1,6 @@
 ---
 author: Florian
-cover: images/banner/androidPermission-banner.png
+cover: ../androidPermission-banner.png
 date: '2015-09-22'
 tags:
 - Android

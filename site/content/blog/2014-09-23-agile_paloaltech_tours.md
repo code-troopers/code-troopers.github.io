@@ -1,6 +1,6 @@
 ---
 author: Florian
-cover: images/banner/paloaltech-banner.png
+cover: ../paloaltech-banner.png
 date: '2014-09-23'
 description: Le mardi 30 septembre Palo Altech organise une soirée Agilité à la cantine bêta à Tours
 tags:

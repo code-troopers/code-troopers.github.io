@@ -1,6 +1,6 @@
 ---
 author: Cedric
-cover: images/banner/navigtours-banner.png
+cover: ../navigtours-banner.png
 date: '2016-01-04'
 tags:
 - Archi

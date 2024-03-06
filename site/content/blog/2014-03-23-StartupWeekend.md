@@ -1,14 +1,14 @@
 ---
-author: Code-Troopers
-cover: images/banner/swtours-banner.png
-date: '2014-03-23'
-tags:
-- startup
-- tours
-- Play2
 title: Startup Weekend Tours
+author: Code-Troopers
 url: /2014/03/23/startupweekend/
 aliases: 2014/03/23/StartupWeekend.html
+date: 2014-03-23
+cover: ../swtours-banner.png
+tags:
+  - startup
+  - tours
+  - Play2
 ---
 
 

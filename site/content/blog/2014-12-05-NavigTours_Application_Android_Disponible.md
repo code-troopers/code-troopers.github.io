@@ -1,6 +1,6 @@
 ---
 author: Florian
-cover: images/banner/navigtours-banner.png
+cover: ../navigtours-banner.png
 date: '2014-12-05'
 tags:
 - Android

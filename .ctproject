@@ -1,5 +1,2 @@
-prepare='npm i' #Install dependencies
-dev='make dev' # run server
-build='make dist' # builds
-run='npm run serve-dev' # run local dev version on :3000
-prod='npm run serve-prod' # run local in prod mode on :3000
+npx='npx netlify-cms-proxy-server' # run local proxy server
+dev='yarn install && yarn start' # run server (should run npx too)

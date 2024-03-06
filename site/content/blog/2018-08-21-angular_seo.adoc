@@ -1,6 +1,6 @@
 ---
 author: Benjamin
-cover: images/banner/angularseo-banner.png
+cover: ../angularseo-banner.png
 date: '2018-09-18'
 tags:
 - SEO

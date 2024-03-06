@@ -1,0 +1,133 @@
+{{ define "main" }}
+
+<section id="blog">
+    <div class="wrapper">
+        <h1>
+            Blog
+        </h1>
+    </div>
+
+    <section id="article">
+        <div class="wrapper">
+            <article>
+                <!--<div>-->
+                <img src="/blog/{{ .Params.cover }}">
+                <!--<div class="date">posté le {{ .Date.Format "02/01/2006" }} par {{ .Params.author}}</div>-->
+                <!--<div class="date">par {{ .Params.author}}</div>-->
+                <!-- <p class="">Lire en {{ .ReadingTime }} minutes</p> -->
+                <!--</div>-->
+                <div class="wrapper-content">
+                    <h2>{{ .Title }}</h2>
+                    <!--<span class="label label-info">~{{ .ReadingTime }} minute(s) à lire</span>-->
+                    {{if .Params.tags }}
+                    <ul class="tags">
+                        {{ range $index, $tag := .Params.tags }}
+                        <li><a href="/tags/{{ $tag | urlize }}/">{{ $tag }}</a></li>
+                        {{ end }}
+                    </ul>
+                    {{ end }}
+                    <div class="content">
+                        {{ .Content }}
+                    </div>
+                    <div class="content-footer">
+                        {{if .Params.tags }}
+                        <ul class="tags float">
+                            {{ range $index, $tag := .Params.tags }}
+                            <li><a href="/tags/{{ $tag | urlize }}/">{{ $tag }}</a></li>
+                            {{ end }}
+                        </ul>
+                        {{ end }}
+                        <section id="author">
+                            <div class="date">Rédigé par <span class="author-name">{{ .Params.author}}</span></div>
+                        </section>
+                    </div>
+                    <div class="share">
+                        <span>Partager</span>
+                        <ul class="socials">
+                            <li>
+                                <a target="_blank" title="Facebook"
+                                   href="https://www.facebook.com/sharer.php?u=http://code-troopers.com{{ .Permalink }}&t={{ .Title }}"
+                                   class="facebook-button" rel="nofollow"
+                                   onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=500,width=700');return false;">
+                                    <i class="ri-facebook-fill"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_blank" title="Twitter"
+                                   href="https://twitter.com/share?url=http://code-troopers.com{{ .Permalink }}&text={{ .Title }}&via=codetroopers"
+                                   rel="nofollow"
+                                   onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=400,width=700');return false;">
+                                    <i class="ri-twitter-x-fill"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_blank" title="Google +"
+                                   href="https://plus.google.com/share?url=http://code-troopers.com{{ .Permalink }}&hl=fr"
+                                   class="google-button" rel="nofollow"
+                                   onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=650');return false;">
+                                    <i class="fa fa-google-plus"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div style="clear:both"></div>
+
+
+                    <div class="back">
+                        <div class="pagination">
+                            {{ if .NextInSection }}
+                            <a href="{{ .NextInSection.Permalink }}" class="previous-page">
+                                <div class="arrow">{{ partial "arrow_left.html" . }}</div>
+                                Article précédent
+                            </a>
+                            {{ end }}
+                            {{ if .PrevInSection }}
+                            <a href="{{ .PrevInSection.Permalink }}" class="next-page">
+                                Article suivant
+                                <div class="arrow">{{ partial "arrow_right.html" . }}</div>
+                            </a>
+                            {{ end }}
+                        </div>
+                    </div>
+
+                    <section id="menu">
+                        <ul>
+                            {{ range $key, $taxonomy := .Site.Taxonomies.featured }}
+                            <li> {{ $key }}</li>
+                            <ul>
+                                {{ range $taxonomy.Pages }}
+                                <li hugo-nav="{{ .RelPermalink}}"><a href="{{ .Permalink}}"> {{ .LinkTitle }} </a></li>
+                                {{ end }}
+                            </ul>
+                            {{ end }}
+                        </ul>
+                    </section>
+
+                    <div id="disqus_thread"></div>
+                    <script type="text/javascript">
+                        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+                        var disqus_shortname = 'codetroopers' // required: replace example with your forum shortname
+                        var disqus_url = window.location.href
+                        if (window.location.protocol != 'http:') {
+                            disqus_url = 'http:' + window.location.href.substring(window.location.protocol.length)
+                        }
+
+                        /* * * DON'T EDIT BELOW THIS LINE * * */
+                        (function () {
+                            var dsq = document.createElement('script')
+                            dsq.type = 'text/javascript'
+                            dsq.async = true
+                            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq)
+                        })()
+                    </script>
+                    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments
+                        powered by Disqus.</a></noscript>
+                    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span
+                            class="logo-disqus">Disqus</span></a>
+                </div>
+            </article>
+        </div>
+    </section>
+</section>
+{{ end }}

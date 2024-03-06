@@ -1,6 +1,6 @@
 ---
 author: Benjamin
-cover: images/banner/tds-banner.png
+cover: ../tds-banner.png
 date: '2014-04-08'
 tags:
 - Android

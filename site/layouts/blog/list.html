@@ -1,0 +1,40 @@
+{{ define "main" }}
+
+<section id="blogs">
+    <div class="wrapper">
+        <h1>
+            {{ if eq .Title "Blogs" }}
+            Blog
+            {{ else }}
+            {{ .Title }}
+            {{ end}}
+        </h1>
+    </div>
+
+
+    <section id="articles">
+        <div class="wrapper">
+            {{ range $index, $page := .Paginator.Pages }}
+            {{ .Render "li" }}
+            {{ end }}
+        </div>
+        {{ if or (.Paginator.HasPrev) (.Paginator.HasNext) }}
+        <div class="pagination">
+            {{ if .Paginator.HasPrev }}
+            <a href="{{ .Paginator.Prev.URL }}" class="previous-page">
+                <div class="arrow">{{ partial "arrow_left.html" . }}</div>
+                Page précédente
+            </a>
+            {{ end }}
+            {{ if .Paginator.HasNext }}
+            <a href="{{ .Paginator.Next.URL }}" class="next-page">
+                Page suivante
+                <div class="arrow">{{ partial "arrow_right.html" . }}</div>
+            </a>
+            {{ end }}
+        </div>
+        {{ end }}
+    </section>
+
+</section>
+{{end}}

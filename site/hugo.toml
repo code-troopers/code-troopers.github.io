@@ -1,0 +1,31 @@
+languageCode = "fr-FR"
+defaultContentLang = "fr"
+languageLang = "fr"
+defaultContentLanguage = "fr"
+disableKinds = ["RSS", "taxonomy", "taxonomyTerm"]
+title = "Code-Troopers"
+baseurl = "/"
+
+[params]
+images = ["img/gopher_moi.png"]
+
+[markup]
+
+[markup.goldmark]
+
+[markup.goldmark.renderer]
+unsafe = true
+
+[security]
+enableInlineShortcodes = false
+
+[security.exec]
+allow = ["^dart-sass-embedded$", "^go$", "^npx$", "^postcss$", "^asciidoctor$"]
+osEnv = ["(?i)^(PATH|PATHEXT|APPDATA|TMP|TEMP|TERM|RUBYLIB)$"]
+
+[security.funcs]
+getenv = ["^HUGO_"]
+
+[security.http]
+methods = ["(?i)GET|POST"]
+urls = [".*"]

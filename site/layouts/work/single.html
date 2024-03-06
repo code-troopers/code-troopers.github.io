@@ -1,0 +1,73 @@
+{{ define "main" }}
+<section id="work">
+    <div class="wrapper">
+        <h1>
+            Réalisations
+        </h1>
+    </div>
+
+    <section id="article">
+        <div class="wrapper">
+            <article>
+                <img src="/work/{{ .Params.cover }}">
+                <div class="wrapper-content">
+                    <h2>{{ .Title }}</h2>
+                    {{if .Params.tags }}
+                    <ul class="skill">
+                        {{ range $index, $tag := .Params.tags }}
+                        <li class="{{ lower $tag }}"><span>{{ $tag }}</span></li>
+                        {{ end }}
+                    </ul>
+                    {{ end }}
+                    <div class="content">
+                        {{ .Content }}
+                    </div>
+                    <div class="content-footer">
+                        {{if .Params.tags }}
+                        <ul class="skill float">
+                            {{ range $index, $tag := .Params.tags }}
+                            <li class="{{ lower $tag }}"><span>{{ $tag }}</span></li>
+                            {{ end }}
+                        </ul>
+                        {{ end }}
+                    </div>
+                    <div class="share">
+                        <span>Partager</span>
+                        <ul class="socials">
+                            <li>
+                                <a target="_blank" title="Facebook"
+                                   href="https://www.facebook.com/sharer.php?u=http://code-troopers.com{{ .Permalink }}&t={{ .Title }}"
+                                   class="facebook-button" rel="nofollow"
+                                   onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=500,width=700');return false;">
+                                    <i class="ri-facebook-fill"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_blank" title="Twitter"
+                                   href="https://twitter.com/share?url=http://code-troopers.com{{ .Permalink }}&text={{ .Title }}&via=codetroopers"
+                                   rel="nofollow"
+                                   onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=400,width=700');return false;">
+                                    <i class="ri-twitter-x-fill"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <section id="menu">
+                        <ul>
+                            {{ range $key, $taxonomy := .Site.Taxonomies.featured }}
+                            <li> {{ $key }}</li>
+                            <ul>
+                                {{ range $taxonomy.Pages }}
+                                <li hugo-nav="{{ .RelPermalink}}"><a href="{{ .Permalink}}"> {{ .LinkTitle }} </a></li>
+                                {{ end }}
+                            </ul>
+                            {{ end }}
+                        </ul>
+                    </section>
+                </div>
+            </article>
+        </div>
+    </section>
+</section>
+{{ end }}

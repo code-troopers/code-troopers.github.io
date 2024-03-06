@@ -1,6 +1,6 @@
 ---
 author: Florian
-cover: images/banner/play.png
+cover: ../play.png
 date: '2014-05-05'
 tags:
 - Play2

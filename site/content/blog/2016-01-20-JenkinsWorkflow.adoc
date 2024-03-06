@@ -1,6 +1,6 @@
 ---
 author: Cedric
-cover: images/banner/jenkins-banner.png
+cover: ../jenkins-banner.png
 date: '2016-01-20'
 tags:
 - Jenkins

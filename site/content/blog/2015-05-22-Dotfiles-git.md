@@ -1,6 +1,6 @@
 ---
 author: Matthieu
-cover: images/banner/ohmyzsh-banner.png
+cover: ../ohmyzsh-banner.png
 date: '2015-05-22'
 description: 'Création de dotfiles pour git : astuces pour .gitconfig, git hook '
 tags:

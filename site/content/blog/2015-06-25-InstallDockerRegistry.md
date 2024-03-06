@@ -1,6 +1,6 @@
 ---
 author: Cedric
-cover: images/banner/docker-banner.png
+cover: ../docker-banner.png
 date: '2015-06-25'
 tags:
 - guide

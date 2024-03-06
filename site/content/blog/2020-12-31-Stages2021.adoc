@@ -1,6 +1,6 @@
 ---
 author: Cedric
-cover: images/banner/logo-banner.png
+cover: ../logo-banner.png
 date: '2020-12-31'
 tags:
 - Stage

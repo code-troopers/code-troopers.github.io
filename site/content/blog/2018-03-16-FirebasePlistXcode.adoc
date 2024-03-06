@@ -1,6 +1,6 @@
 ---
 author: Cedric
-cover: images/banner/firebasexcode-banner.png
+cover: ../firebasexcode-banner.png
 date: '2018-03-13'
 tags:
 - XCode

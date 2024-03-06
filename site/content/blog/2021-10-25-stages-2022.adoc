@@ -1,6 +1,6 @@
 ---
 author: Thibaud
-cover: images/banner/logo-banner.png
+cover: ../logo-banner.png
 date: '2021-10-25'
 tags:
 - Stage

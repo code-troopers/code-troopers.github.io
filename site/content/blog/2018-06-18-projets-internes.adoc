@@ -1,6 +1,6 @@
 ---
 author: Nicolas
-cover: images/banner/projets-internes-banner.png
+cover: ../projets-internes-banner.png
 date: '2018-06-18'
 tags:
  - Projets internes

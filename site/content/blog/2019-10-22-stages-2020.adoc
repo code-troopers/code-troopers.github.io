@@ -1,6 +1,6 @@
 ---
 author: Benjamin
-cover: images/banner/logo-banner.png
+cover: ../logo-banner.png
 date: '2019-10-22'
 tags:
 - Stage

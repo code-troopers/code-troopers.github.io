@@ -1,6 +1,6 @@
 ---
 author: Joris
-cover: images/banner/requestbin-ngrok-banner.png
+cover: ../requestbin-ngrok-banner.png
 date: '2018-05-02'
 tags:
 - RequestBin

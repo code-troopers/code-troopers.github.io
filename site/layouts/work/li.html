@@ -1,0 +1,31 @@
+{{ $baseurl := .Site.BaseURL }}
+
+<div>
+  {{ if .Truncated }}
+  <a href="{{ .Permalink }}">
+  {{ end }}
+    <img src="/work/{{ .Params.cover }}">
+  {{ if .Truncated }}
+  </a>
+  {{ end }}
+  <div>
+    <h2>
+      {{ if .Truncated }}
+      <a href="{{ .Permalink }}">{{ .Title }}</a>
+      {{ else }}
+      {{ .Title }}
+      {{ end }}
+    </h2>
+    <ul class="skill">
+      {{ range $index, $tag := .Params.tags }}
+      <li class="{{ lower $tag }}"><span>{{ $tag }}</span></li>
+      {{ end }}
+    </ul>
+    {{ .Summary }}
+    {{ if .Truncated }}
+    <a class="read-more" href="{{ .Permalink }}">En savoir plus
+      {{ partial "arrow_right.html" . }}
+    </a>
+    {{ end }}
+  </div>
+</div>

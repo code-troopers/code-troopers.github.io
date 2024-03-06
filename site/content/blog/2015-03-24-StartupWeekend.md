@@ -1,6 +1,6 @@
 ---
 author: Florian
-cover: images/banner/swtours-banner.png
+cover: ../swtours-banner.png
 date: '2015-03-24'
 tags:
 - startup

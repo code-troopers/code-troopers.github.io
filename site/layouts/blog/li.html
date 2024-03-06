@@ -1,0 +1,31 @@
+{{ $baseurl := .Site.BaseURL }}
+
+<div>
+  {{ if .Truncated }}
+  <a href="{{ .Permalink }}">
+  {{ end }}
+    <div class="img-container" style="background-image: url('/blog/{{ .Params.cover }}')"></div>
+  {{ if .Truncated }}
+  </a>
+  {{ end }}
+  <div>
+    <h2>
+      {{ if .Truncated }}
+      <a href="{{ .Permalink }}">{{ .Title }}</a>
+      {{ else }}
+      {{ .Title }}
+      {{ end }}
+    </h2>
+    <ul class="tags">
+      {{ range $index, $tag := .Params.tags }}
+      <li><a href="/tags/{{ $tag | urlize }}/">{{ $tag }}</a></li>
+      {{ end }}
+    </ul>
+    <p>{{ .Summary | truncate 100 }}</p>
+    {{ if .Truncated }}
+    <a class="read-more" href="{{ .Permalink }}">En savoir plus
+      {{ partial "arrow_right.html" . }}
+    </a>
+    {{ end }}
+  </div>
+</div>

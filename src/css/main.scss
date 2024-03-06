@@ -1,0 +1,121 @@
+// TODO
+// @import '../../node_modules/normalize.css/normalize.css';
+@import '../../node_modules/highlight.js/styles/github-dark.css';
+@import '../../node_modules/lightbox2/dist/css/lightbox.css';
+@import 'variables';
+@import 'mixins';
+@import 'header';
+@import 'numbers';
+@import 'skills';
+@import 'contact';
+@import 'footer';
+@import 'portfolio';
+@import 'blog';
+@import 'casting';
+@import 'pagination';
+@import '404';
+@import 'share';
+@import 'swiper';
+@import 'legals';
+
+:root {
+  scroll-behavior: smooth;
+}
+
+html {
+  box-sizing: border-box;
+  font-family: "Montserrat", Helvetica, Arial, sans-serif;
+  letter-spacing: 0.1rem;
+  background: $white;
+}
+
+body {
+  margin: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+section h1 {
+  font-family: "Montserrat Black", Helvetica, Arial, sans-serif;
+  text-align: center;
+  font-size: 3rem;
+  margin: 0;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  letter-spacing: initial;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+  max-width: 100%;
+  -webkit-margin-before: 0;
+  -webkit-padding-start: 0;
+
+  li {
+  }
+}
+
+ul.flex {
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  li {
+    flex: 1;
+    text-align: center;
+  }
+}
+
+a.btn {
+  text-decoration: none;
+  border: 2px solid $white;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  color: $white;
+  margin: 5rem auto;
+  display: inline-block;
+
+  &:hover {
+    background: $gradient;
+    border-color: $darkblue;
+    color: $white;
+  }
+}
+
+.wrapper-center {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: $white;
+  &:hover {
+    color: $lightblue;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  section h1 {
+    font-size: 2rem;
+  }
+}
+
+.button-link {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 2px solid $darkgrey;
+  border-radius: 0.5rem;
+  width: auto;
+  position: relative;
+  display: inline-block;
+  padding: 1rem;
+  color: $bloggrey;
+
+  &:hover {
+    background: $gradient;
+    border-color: transparent;
+    color: $white;
+  }
+}

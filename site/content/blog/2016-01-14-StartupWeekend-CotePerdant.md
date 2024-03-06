@@ -1,6 +1,6 @@
 ---
 author: Matthieu
-cover: images/banner/swtours-banner.png
+cover: ../swtours-banner.png
 date: '2016-01-14'
 tags:
 - Startup

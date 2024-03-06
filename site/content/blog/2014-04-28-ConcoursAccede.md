@@ -1,6 +1,6 @@
 ---
 author: Benjamin
-cover: images/banner/accede-banner.png
+cover: ../accede-banner.png
 date: '2014-04-28'
 tags:
 - Accede

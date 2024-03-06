@@ -1,6 +1,6 @@
 ---
 author: Cedric
-cover: images/banner/mavenRelease-banner.png
+cover: ../mavenRelease-banner.png
 date: '2014-03-19'
 tags:
 - bibliothèque

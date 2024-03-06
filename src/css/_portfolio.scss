@@ -1,0 +1,193 @@
+@import 'variables';
+@import 'mixins';
+
+section#portfolio {
+  color: $white;
+  background: $black;
+
+  .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    h1{
+      flex:1;
+      text-align: center;
+    }
+    & > div {
+      flex: 1;
+
+
+      a{
+        font-size: 0.7rem;
+      }
+
+      img {
+        max-width: 100%;
+        min-width: 220px;
+        min-height: 330px;
+        object-fit: cover;
+      }
+
+      & > div {
+        padding: 1rem 3rem;
+        h2 {
+          @include separator($white);
+          a{
+            font-size: inherit;
+          }
+        }
+
+        p {
+          font-size: 0.7rem;
+          color: $grey;
+          line-height: 1.3rem;
+        }
+        a.read-more{
+          display: inline-block;
+          width: 40%;
+          transition: width 1s ease-in-out;
+          .arrow_box{
+            margin-left: -0.6rem;
+          }
+          @include arrows($white);
+          &:hover{
+            width:100%;
+            @include arrows($lightblue);
+          }
+        }
+
+      }
+    }
+  }
+
+
+
+}
+
+section#work{
+  background-color:$black;
+  color: $lightgrey;
+
+  .wrapper{
+    margin: auto;
+    display:flex;
+    flex-wrap: wrap;
+    h1{
+      flex:1;
+      color: $white;
+    }
+    article{
+      & > img{
+        width:100%;
+      }
+    }
+    article .wrapper-content{
+      margin-left: 1rem;
+      margin-right: 1rem;
+
+      & > h2, .content {
+        @include separator($lightgrey)
+      }
+    }
+    .content{
+      //margin: 0.5rem;
+    }
+    .content-footer{
+      padding: 1rem 0;
+    }
+    .share{
+      border-color: $darkgrey;
+      a{
+        color: $lightgrey;
+      }
+    }
+  }
+}
+
+section#work, section#portfolio{
+  ul.skill {
+    li {
+      border: 2px solid $darkgrey;
+      border-radius: 0.5rem;
+      width: auto;
+      position: relative;
+      display: inline-block;
+      padding: 0.5rem 0.5rem 0.5rem 30px;
+      font-size: 0.7rem;
+      color: $bloggrey;
+      span::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 5px;
+        left: 8px;
+        font-size: 18px;
+      }
+
+      &:hover{
+        background: $gradient;
+        border-color: transparent;
+        color: $white;
+      }
+    }
+    li.android span::before {
+      font-family: 'remixicon';
+      content: '\ea35';
+    }
+    li.ios span::before {
+      font-family: 'remixicon';
+      content: '\ea3f';
+    }
+    li.web span::before {
+      font-family: 'remixicon';
+      content: '\ec79';
+    }
+  }
+}
+
+@media screen and (min-width: $tablet) {
+  section#portfolio {
+
+    .wrapper {
+      & > div {
+        min-width: 50%;
+        max-width: 50%;
+      }
+    }
+  }
+}
+@media screen and (max-width: $tablet) {
+  section#portfolio {
+
+    .wrapper {
+      & > div {
+        min-width: 100%;
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  section#work{
+    .wrapper {
+      width: 1200px;
+    }
+    .content{
+      margin: inherit;
+    }
+  }
+  section#portfolio {
+
+    .wrapper {
+      & > div {
+        border: 1px solid $darkgrey;
+        border-left: none;
+        min-width: 25%;
+        max-width: 25%;
+        img {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}

@@ -1,6 +1,6 @@
 ---
 author: Matthieu
-cover: images/banner/ohmyzsh-banner.png
+cover: ../ohmyzsh-banner.png
 date: '2018-07-09'
 tags:
 - shell

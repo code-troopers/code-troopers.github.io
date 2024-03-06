@@ -1,6 +1,6 @@
 ---
 author: Florian
-cover: images/banner/logo-banner.png
+cover: ../logo-banner.png
 date: '2016-12-21'
 tags:
 - Stage

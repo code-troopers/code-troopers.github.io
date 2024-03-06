@@ -1,87 +1,60 @@
-# Hugo-Webpack Boilerplate
+# Hugo template for Decap CMS with Netlify Identity
 
-**For websites built with Hugo and Webpack**
+This is a small business template built with [Hugo](https://gohugo.io) and [Decap CMS](https://github.com/decaporg/decap-cms), designed and developed by [Darin Dimitroff](https://twitter.com/deezel), [spacefarm.digital](https://www.spacefarm.digital).
 
-## Usage (run with Docker)
+## Getting started
 
-```bash
-# Serve with watch, livereload
-make dev
+Use our deploy button to get your own copy of the repository. 
 
-# Serve with static assets
-make serve
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/mattboll/one-click-hugo-cms&stack=cms)
 
-# Build assets
-make release
+This will setup everything needed for running the CMS:
+
+* A new repository in your GitHub account with the code
+* Full Continuous Deployment to Netlify's global CDN network
+* Control users and access with Netlify Identity
+* Manage content with Decap CMS
+
+Once the initial build finishes, you can invite yourself as a user. Go to the Identity tab in your new site, click "Invite" and send yourself an invite.
+
+Now you're all set, and you can start editing content!
+
+## Local Development
+
+Clone this repository, and run `yarn` or `npm install` from the new folder to install all required dependencies.
+
+Then start the development server with `yarn start` or `npm start`.
+
+## Testing
+
+With the development server running, run the tests locally
+with `yarn cypress:run` or `npm run cypress:run`.
+Or use `yarn cypress:open` or `npm run cypress:open` to run interactively.
+
+Cypress tests also run on deploy with the [Cypress Netlify integration](https://www.netlify.com/integrations/cypress/).
+
+## Layouts
+
+The template is based on small, content-agnostic partials that can be mixed and matched. The pre-built pages showcase just a few of the possible combinations. Refer to the `site/layouts/partials` folder for all available partials.
+
+Use Hugo’s `dict` functionality to feed content into partials and avoid repeating yourself and creating discrepancies.
+
+## CSS
+
+The template uses a custom fork of Tachyons and PostCSS with cssnext and cssnano. To customize the template for your brand, refer to `src/css/imports/_variables.css` where most of the important global variables like colors and spacing are stored.
+
+## SVG Social Icons
+
+The social media icons are in `site/assets/img`.
+Make sure you use consistent icons in terms of viewport and art direction for optimal results.
+For an icon named `icons-facebook.svg`, refer to the SVG `social-icon` partial like so:
+
+```
+{{ partial "social-icon" (dict "link" "#" "svg" "icons-facebook" "alt" "Kaldi on Facebook") }}
 ```
 
-## Usage (run locally)
 
-Be sure that you have the latest node, npm and [Hugo](https://gohugo.io/) installed. If you need to install hugo on OSX, run:
-
-```bash
-brew install hugo
+Se logger en local :
 ```
-
-If you don't use OSX or don't use homebrew, follow the instructions for installation here instead:
-
-http://gohugo.io/overview/installing/
-
-Next, clone this repository and run:
-
-```bash
-npm install
-npm start
+npx netlify-cms-proxy-server
 ```
-
-Then visit http://localhost:3000/ - BrowserSync will automatically reload CSS or
-refresh the page when stylesheets or content changes.
-
-To build your static output to the `/dist` folder, use:
-
-```bash
-npm run build
-```
-
-## Structure
-
-```
-|--dist                // HTML/CSS/JS/Media end up here
-|--site                // Everything in here will be built with hugo
-|  |--content          // Pages and collections - ask if you need extra pages
-|  |--data             // YAML data files with any data for use in examples
-|  |--layouts          // This is where all templates go
-|  |  |--partials      // This is where includes live
-|  |  |--index.html    // The index page
-|  |--static           // Files in here ends up in the public folder
-|--src                 // Files that will pass through the asset pipeline
-|  |--scss             // main.scss will compile to styles.css
-|  |--js               // app.js will be compiled to /app.js with babel
-```
-
-## Basic Concepts
-
-You can read more about Hugo's template language in their documentation here:
-
-https://gohugo.io/templates/overview/
-
-The most useful page there is the one about the available functions:
-
-https://gohugo.io/templates/functions/
-
-For assets that are completely static and don't need to go through the asset pipeline,
-use the `site/static` folder. Images, font-files, etc, all go there.
-
-Files in the static folder ends up in the web root. So a file called `site/static/favicon.ico`
-will end up being available as `/favicon.ico` and so on...
-
-The `src/js/app.js` file is the entrypoint for webpack and will be built to `/dist/app.js`.
-
-Any SCSS entry points (default `src/scss/main.scss`) must be required both
-in `app.js` and in the HTML header.
-
-You can use ES6 and use both relative imports or import libraries from npm.
-
-## Deploying
-
-Any changes to `master` will be deployed automatically to Github Pages. See `.travis.yml` for configuration.
