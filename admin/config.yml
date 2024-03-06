@@ -8,7 +8,7 @@ backend:
   # --
   # For use in production on GitHub
   # name: github
-  # repo: code-troopers/website
+  # repo: code-troopers/code-troopers.github.io
   # branch: main
   # --
   # For use in production on netlify
