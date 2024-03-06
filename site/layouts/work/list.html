@@ -8,13 +8,11 @@
         </h1>
     </div>
 
-
     <div class="wrapper">
-    {{ range $index, $page := $paginator.Pages }}
-    {{ .Render "li" }}
-    {{ end }}
+        {{ range $index, $page := $paginator.Pages }}
+        {{ .Render "li" }}
+        {{ end }}
     </div>
-
     <section id="articles">
         {{ if or ($paginator.HasPrev) ($paginator.HasNext) }}
         <div class="pagination">

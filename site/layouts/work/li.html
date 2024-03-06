@@ -4,7 +4,7 @@
   {{ if .Truncated }}
   <a href="{{ .Permalink }}">
   {{ end }}
-    <img src="/work/{{ .Params.cover }}">
+    <div class="img-container" style="background-image: url('/work/{{ .Params.cover }}')"></div>
   {{ if .Truncated }}
   </a>
   {{ end }}

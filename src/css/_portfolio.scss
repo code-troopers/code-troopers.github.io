@@ -15,6 +15,11 @@ section#portfolio {
     & > div {
       flex: 1;
 
+      .img-container{
+        height: 330px;
+        background-size: cover;
+        background-position: 50%;
+      }
 
       a{
         font-size: 0.7rem;
