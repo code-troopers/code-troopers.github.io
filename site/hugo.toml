@@ -6,16 +6,6 @@ disableKinds = ["RSS", "taxonomy", "taxonomyTerm"]
 title = "Code-Troopers"
 baseurl = "/"
 
-[params]
-images = ["img/gopher_moi.png"]
-
-[markup]
-
-[markup.goldmark]
-
-[markup.goldmark.renderer]
-unsafe = true
-
 [security]
 enableInlineShortcodes = false
 
@@ -29,3 +19,13 @@ getenv = ["^HUGO_"]
 [security.http]
 methods = ["(?i)GET|POST"]
 urls = [".*"]
+
+[params]
+images = ["img/logo-code-troopers-tête-couleur.png"]
+
+[markup]
+
+[markup.goldmark]
+
+[markup.goldmark.renderer]
+unsafe = true
