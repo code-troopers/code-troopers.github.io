@@ -11,7 +11,7 @@ section#blogs {
   }
 
   a {
-    color: $grey;
+    color: $darkgrey;
   }
 
   a.btn {
@@ -96,7 +96,7 @@ section#articles {
   @include tags($lightgrey);
   ul.tags {
     li a {
-      color: $grey;
+      color: $darkgrey;
     }
   }
 }
@@ -191,7 +191,7 @@ section#blog {
           text-align: right;
           align-self: center;
           flex: 0.5;
-          color: $grey;
+          color: $darkgrey;
           font-size: 0.7rem;
           .author-name {
             background: $gradient;
@@ -205,7 +205,7 @@ section#blog {
 
   }
   a {
-    color: $grey;
+    color: $darkgrey;
   }
 
   @include tags($lightgrey);
