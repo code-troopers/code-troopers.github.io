@@ -2,7 +2,7 @@
 
 <div>
   {{ if .Truncated }}
-  <a href="{{ .Permalink }}">
+  <a aria-label="En savoir plus sur {{ .Title }}" href="{{ .Permalink }}">
   {{ end }}
     <div class="img-container" style="background-image: url('/work/{{ .Params.cover }}')"></div>
   {{ if .Truncated }}
