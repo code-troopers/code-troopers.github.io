@@ -18,7 +18,7 @@
     </h2>
     <ul class="skill">
       {{ range $index, $tag := .Params.tags }}
-      <li class="{{ lower $tag }}"><span>{{ $tag }}</span></li>
+        {{ partial "tag" $tag}}
       {{ end }}
     </ul>
     {{ .Summary }}

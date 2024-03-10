@@ -1,10 +1,6 @@
 <head>
   <title>{{ $.Site.Title }} - {{ .Title }}</title>
   <meta name="description" content="{{ .Description }}">
-  <link
-    href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
-    rel="stylesheet"
-/>
 
   {{ $stylesheet := .Site.Data.webpack.main }}
   {{ with $stylesheet.css }}

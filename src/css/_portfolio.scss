@@ -93,9 +93,6 @@ section#work{
         @include separator($lightgrey)
       }
     }
-    .content{
-      //margin: 0.5rem;
-    }
     .content-footer{
       padding: 1rem 0;
     }
@@ -116,7 +113,7 @@ section#work, section#portfolio{
       width: auto;
       position: relative;
       display: inline-block;
-      padding: 0.5rem 0.5rem 0.5rem 30px;
+      padding: 0.5rem;
       font-size: 0.7rem;
       color: $lightgrey;
       span::before {
@@ -133,18 +130,6 @@ section#work, section#portfolio{
         border-color: transparent;
         color: $white;
       }
-    }
-    li.android span::before {
-      font-family: 'remixicon';
-      content: '\ea35';
-    }
-    li.ios span::before {
-      font-family: 'remixicon';
-      content: '\ea3f';
-    }
-    li.web span::before {
-      font-family: 'remixicon';
-      content: '\ec79';
     }
   }
 }

@@ -49,7 +49,7 @@
                                    href="https://www.facebook.com/sharer.php?u=http://code-troopers.com{{ .Permalink }}&t={{ .Title }}"
                                    class="facebook-button" rel="nofollow"
                                    onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=500,width=700');return false;">
-                                    <i class="ri-facebook-fill"></i>
+                                    {{ partial "svg" "facebook-fill" }}
                                 </a>
                             </li>
                             <li>
@@ -57,15 +57,7 @@
                                    href="https://twitter.com/share?url=http://code-troopers.com{{ .Permalink }}&text={{ .Title }}&via=codetroopers"
                                    rel="nofollow"
                                    onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=400,width=700');return false;">
-                                    <i class="ri-twitter-x-fill"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a target="_blank" title="Google +"
-                                   href="https://plus.google.com/share?url=http://code-troopers.com{{ .Permalink }}&hl=fr"
-                                   class="google-button" rel="nofollow"
-                                   onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=650');return false;">
-                                    <i class="fa fa-google-plus"></i>
+                                    {{ partial "svg" "twitter-x-fill" }}
                                 </a>
                             </li>
                         </ul>
