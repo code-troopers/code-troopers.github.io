@@ -10,23 +10,15 @@
     <section id="article">
         <div class="wrapper">
             <article>
-                <!--<div>-->
-                    {{ with .Resources.GetMatch .Params.cover }}
-                     {{ with .Fill "900x500" }}
-                     {{ with .Resize "900x500 webp" }}
-    <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="">
-    {{end}}
-  {{ end }}
-
+                {{ with .Resources.GetMatch .Params.cover }}
+                    {{ with .Fill "900x500" }}
+                        {{ with .Resize "900x500 webp" }}
+                            <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="">
+                        {{ end }}
                     {{ end }}
-                <!-- <img src="/blog/{{ .Params.cover }}"> -->
-                <!--<div class="date">posté le {{ .Date.Format "02/01/2006" }} par {{ .Params.author}}</div>-->
-                <!--<div class="date">par {{ .Params.author}}</div>-->
-                <!-- <p class="">Lire en {{ .ReadingTime }} minutes</p> -->
-                <!--</div>-->
+                {{ end }}
                 <div class="wrapper-content">
                     <h2>{{ .Title }}</h2>
-                    <!--<span class="label label-info">~{{ .ReadingTime }} minute(s) à lire</span>-->
                     {{if .Params.tags }}
                     <ul class="tags">
                         {{ range $index, $tag := .Params.tags }}
@@ -54,17 +46,17 @@
                         <ul class="socials">
                             <li>
                                 <a target="_blank" title="Facebook"
-                                   href="https://www.facebook.com/sharer.php?u=http://code-troopers.com{{ .Permalink }}&t={{ .Title }}"
-                                   class="facebook-button" rel="nofollow"
-                                   onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=500,width=700');return false;">
+                                    href="https://www.facebook.com/sharer.php?u=http://code-troopers.com{{ .Permalink }}&t={{ .Title }}"
+                                    class="facebook-button" rel="nofollow"
+                                    onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=500,width=700');return false;">
                                     {{ partial "svg" "facebook-fill" }}
                                 </a>
                             </li>
                             <li>
                                 <a target="_blank" title="Twitter"
-                                   href="https://twitter.com/share?url=http://code-troopers.com{{ .Permalink }}&text={{ .Title }}&via=codetroopers"
-                                   rel="nofollow"
-                                   onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=400,width=700');return false;">
+                                    href="https://twitter.com/share?url=http://code-troopers.com{{ .Permalink }}&text={{ .Title }}&via=codetroopers"
+                                    rel="nofollow"
+                                    onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=400,width=700');return false;">
                                     {{ partial "svg" "twitter-x-fill" }}
                                 </a>
                             </li>
@@ -122,7 +114,7 @@
                         })()
                     </script>
                     <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments
-                        powered by Disqus.</a></noscript>
+                            powered by Disqus.</a></noscript>
                     <a href="http://disqus.com" class="dsq-brlink">comments powered by <span
                             class="logo-disqus">Disqus</span></a>
                 </div>
