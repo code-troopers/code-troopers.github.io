@@ -11,7 +11,15 @@
         <div class="wrapper">
             <article>
                 <!--<div>-->
-                <img src="/blog/{{ .Params.cover }}">
+                    {{ with .Resources.GetMatch .Params.cover }}
+                     {{ with .Fill "900x500" }}
+                     {{ with .Resize "900x500 webp" }}
+    <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="">
+    {{end}}
+  {{ end }}
+
+                    {{ end }}
+                <!-- <img src="/blog/{{ .Params.cover }}"> -->
                 <!--<div class="date">posté le {{ .Date.Format "02/01/2006" }} par {{ .Params.author}}</div>-->
                 <!--<div class="date">par {{ .Params.author}}</div>-->
                 <!-- <p class="">Lire en {{ .ReadingTime }} minutes</p> -->
