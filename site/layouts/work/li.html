@@ -5,7 +5,7 @@
   <a aria-label="En savoir plus sur {{ .Title }}" href="{{ .Permalink }}">
   {{ end }}
   {{ with .Resources.GetMatch .Params.cover }}
-    {{ with .Fit "400x300 webp q100" }}
+    {{ with .Fill "400x300 Center webp q100" }}
     <div class="img-container" style="background-image: url('{{ .RelPermalink }}')"></div>
     {{ end }}
   {{ end }}
