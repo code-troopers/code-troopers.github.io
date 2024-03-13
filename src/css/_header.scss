@@ -87,9 +87,9 @@ header {
 
 #company {
   background-size: cover;
-  background-image: url('../img/header_large.jpg');
+  background-image: url('../img/header_large.webp');
   @media screen and (max-width: $tablet) {
-    background-image: url('../img/header_small.jpg');
+    background-image: url('../img/header_small.webp');
     background-attachment: inherit;
   }
   background-position: center center;
