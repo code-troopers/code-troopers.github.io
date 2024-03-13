@@ -1,5 +1,5 @@
 ---
-cover: ../barriere.jpg
+cover: barriere.jpg
 date: '2017-12-19'
 tags:
 - Android

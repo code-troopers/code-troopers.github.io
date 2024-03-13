@@ -2,15 +2,15 @@
 
 <div>
   {{ if .Truncated }}
-  <a aria-label="En savoir plus sur {{ .Title }}" href="{{ .Permalink }}">
+    <a aria-label="En savoir plus sur {{ .Title }}" href="{{ .Permalink }}">
   {{ end }}
-                    {{ with .Resources.GetMatch .Params.cover }}
-                     {{ with .Fill "336x200 webp" }}
+  {{ with .Resources.GetMatch .Params.cover }}
+    {{ with .Fit "336x200 webp q100" }}
     <div class="img-container" style="background-image: url('{{ .RelPermalink }}')"></div>
     {{ end }}
   {{ end }}
   {{ if .Truncated }}
-  </a>
+    </a>
   {{ end }}
   <div>
     <h2>

@@ -1,5 +1,5 @@
 ---
-cover: ../conseil-constitutionnel-v2.jpg
+cover: conseil-constitutionnel-v2.jpg
 date: '2019-03-01'
 tags:
 - Android

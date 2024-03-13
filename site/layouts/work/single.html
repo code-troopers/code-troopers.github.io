@@ -9,7 +9,12 @@
     <section id="article">
         <div class="wrapper">
             <article>
-                <img src="/work/{{ .Params.cover }}">
+                {{ with .Resources.GetMatch .Params.cover }}
+                    {{ with .Process "webp q100" }}
+                        <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="">
+                    {{ end }}
+                {{ end }}
+
                 <div class="wrapper-content">
                     <h2>{{ .Title }}</h2>
                     {{if .Params.tags }}

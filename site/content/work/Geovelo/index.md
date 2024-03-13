@@ -1,5 +1,5 @@
 ---
-cover: ../geovelo.jpg
+cover: geovelo.jpg
 date: '2019-05-01'
 tags:
 - iOS

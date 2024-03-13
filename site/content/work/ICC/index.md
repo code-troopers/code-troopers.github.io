@@ -1,5 +1,5 @@
 ---
-cover: ../icc.jpg
+cover: icc.jpg
 date: '2017-12-19'
 tags:
 - Android

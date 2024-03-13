@@ -3,7 +3,7 @@ title: Wegrow
 weight: 1000
 url: /wegrow.html
 date: 2024-03-12
-cover: ../wegrow.webp
+cover: wegrow.webp
 tags:
   - web
 ---

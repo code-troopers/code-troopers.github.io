@@ -1,5 +1,5 @@
 ---
-cover: ../roadflore.jpg
+cover: roadflore.jpg
 date: '2017-12-19'
 tags:
 - Android

@@ -1,5 +1,5 @@
 ---
-cover: ../soletanche.jpg
+cover: soletanche.jpg
 date: '2017-12-19'
 tags:
 - Android

@@ -1,5 +1,5 @@
 ---
-cover: ../staybeyond.jpg
+cover: staybeyond.jpg
 date: '2017-11-10'
 tags:
 - Web

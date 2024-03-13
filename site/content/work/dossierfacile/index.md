@@ -3,7 +3,7 @@ title: DossierFacile
 weight: 500
 url: /dossierfacile.html
 date: 2024-03-06
-cover: ../justif_dossierfacile.jpg
+cover: justif_dossierfacile.jpg
 tags:
   - web
 ---

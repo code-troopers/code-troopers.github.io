@@ -1,5 +1,5 @@
 ---
-cover: ../nowly.jpg
+cover: nowly.jpg
 date: '2015-12-29'
 draft: true
 tags:

@@ -3,7 +3,7 @@ title: Eutelmed
 weight: 200
 url: /eutelmed.html
 date: 2018-12-01
-cover: ../eutelmed.jpg
+cover: eutelmed.jpg
 tags:
   - Web
 ---
