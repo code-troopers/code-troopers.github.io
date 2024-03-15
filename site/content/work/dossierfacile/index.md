@@ -5,7 +5,7 @@ url: /dossierfacile.html
 date: 2024-03-06
 cover: justif_dossierfacile.jpg
 tags:
-  - web
+  - Web
 ---
 DossierFacile est une Startup d'État. Son objectif est d'aider les usagers à faire un dossier de location clair, complet et cohérent. 
 
