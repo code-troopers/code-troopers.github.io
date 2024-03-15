@@ -1,0 +1,24 @@
+{
+  "cloud": [
+    {
+      "weight": 30,
+      "text": "Vue.js",
+      "label": "DossierFacile, Chapitô"
+    },
+    {
+      "weight": 30,
+      "text": "React.js",
+      "label": " "
+    },
+    {
+      "weight": 30,
+      "text": "Java",
+      "label": "Filbleu, TAO, Chapitô, DossierFacile, Wegrow, LeroySomer"
+    },
+    {
+      "text": "PostgreSQL",
+      "weight": 15,
+      "label": "DossierFacile, Chapitô"
+    }
+  ]
+}
