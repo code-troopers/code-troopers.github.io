@@ -2,7 +2,7 @@
 
 <div>
   {{ if .Truncated }}
-    <a aria-label="En savoir plus sur {{ .Title }}" href="{{ .Permalink }}">
+    <a title="En savoir plus sur {{ .Title }}" href="{{ .Permalink }}">
   {{ end }}
   {{ with .Resources.GetMatch .Params.cover }}
     {{ with .Fill "336x200 Center webp q100" }}

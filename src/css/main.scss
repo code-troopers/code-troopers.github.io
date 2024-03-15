@@ -17,6 +17,7 @@
 @import 'share';
 @import 'swiper';
 @import 'legals';
+@import 'cloud';
 
 :root {
   scroll-behavior: smooth;
@@ -76,6 +77,9 @@ a.btn {
   color: $white;
   margin: 5rem auto;
   display: inline-block;
+  &.dark:hover {
+    background: $darkGradient;
+  }
 
   &:hover {
     background: $gradient;
