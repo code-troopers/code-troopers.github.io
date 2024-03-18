@@ -8,5 +8,56 @@ section#cloud{
     max-width: 100%;
     padding:30px;
 
+    .cloud {
+        position: relative;
+        @media screen and (max-width: 767px) {
+            width: 315px;
+            height: 500px;
+        }
+        min-height: 300px;
+    }
   }
+
+  .cspan {
+    transition: all 0.3s ease;
+  }
+
+  .word {
+    transition: all 1s ease;
+  }
+
+  .w10 {
+    color: $sandyBrown;
+    font-size: 1.6rem;
+  }
+  .w9 {
+    color: $nyanza;
+    font-size: 1.5rem;
+  }
+  .w8 {
+    color: $periwinki;
+    font-size: 1.4rem;
+  }
+  .w7 {
+    font-size: 1.3rem;
+  }
+  .w6 {
+    font-size: 1.2rem;
+  }
+  .w5 {
+    font-size: 1.1rem;
+  }
+  .w4 {
+    font-size: 1rem;
+  }
+  .w3 {
+    font-size: 0.9rem;
+  }
+  .w2 {
+    font-size: 0.8rem;
+  }
+  .w1 {
+    font-size: 0.7rem;
+  }
+
 }
