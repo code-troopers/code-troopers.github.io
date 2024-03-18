@@ -1,59 +1,72 @@
 @import "variables";
 
 section#blogs {
-  background: $greywhite;
+  background: $darkGradient;
+  color: $white;
 
   & > * {
     margin: 0 auto;
-  }
-  & > a {
-    color: $black;
-  }
-
-  a {
-    color: $darkgrey;
-  }
-
-  a.btn {
-    border-color: $bloggrey;
-    color: $bloggrey;
-    &:hover {
-      border-color: $lightblue;
-      color: $white;
-    }
   }
 
 }
 
 section#articles {
-  color: $bloggrey;
   & > * {
     margin: 0 auto;
   }
 
   .wrapper {
+    $light: $lightblue;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    & > div {
+    .blog-snippet-container {
+
+      &::before{
+        content: '';
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -5px;
+        width: 25%;
+        height: 10px;
+        background: $light;
+        border-radius: 10px;
+        transition: .5s;
+        box-shadow: 0 0 10px opacify($color: $light, $amount: 0.5);
+      }
+
+      &:hover {
+        border-color: $light;
+        &::before{
+          bottom: 0;
+          height: 4%;
+          width: 90%;
+          border-radius: 30px;
+        box-shadow: 0 0 70px opacify($color: $light, $amount: 0.7);
+        }
+      }
       position: relative;
-      background: $white;
+
+      border: 2px solid rgba(255,255,255,0.1);
+      border-radius: 15px;
+      background: rgba(27,30,43,0.5);
+
+
       margin: 2rem;
-      padding-bottom: 60px;
       flex: 1;
 
-      a {
-        color: $black;
-      }
+    .blog-snippet {
+      border-radius: 15px;
       .read-more {
-        font-size: 0.7rem;
+        font-size: 0.9rem;
         position: absolute;
         bottom: 30px;
       }
       a.read-more {
         display: inline-block;
         width: 40%;
-        @include arrows();
+        @include arrows($white);
         .arrow_box_right {
           margin-left: -0.6rem;
         }
@@ -74,29 +87,35 @@ section#articles {
         height: 200px;
         background-size: cover;
         background-position: 50%;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
       }
 
       & > div {
         padding: 1rem 3rem;
         h2 {
-          color: $black;
-          @include separator($black);
+          @include separator($white);
         }
 
         p {
-          font-size: 0.7rem;
-          color: $bloggrey;
+          font-size: 0.9rem;
           line-height: 1.3rem;
         }
 
       }
+      transition: 0.1s;
+      z-index: 1;
+      backdrop-filter: blur(15px);
+      height: 100%;
+      padding-bottom: 60px;
+    }
     }
   }
 
   @include tags($lightgrey);
   ul.tags {
     li a {
-      color: $darkgrey;
+      color: $lightgrey;
     }
   }
 }

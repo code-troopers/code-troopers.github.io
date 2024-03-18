@@ -1,6 +1,7 @@
 {{ $baseurl := .Site.BaseURL }}
 
-<div>
+<div class="blog-snippet-container">
+  <div class="blog-snippet">
   {{ if .Truncated }}
     <a title="En savoir plus sur {{ .Title }}" href="{{ .Permalink }}">
   {{ end }}
@@ -31,5 +32,6 @@
       {{ partial "arrow_right.html" . }}
     </a>
     {{ end }}
+  </div>
   </div>
 </div>
