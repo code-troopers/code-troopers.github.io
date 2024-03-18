@@ -1,24 +1,196 @@
 {
   "cloud": [
     {
-      "weight": 30,
+      "id": "cloud-vuejs",
+      "weight": 10,
       "text": "Vue.js",
       "label": "DossierFacile, Chapitô"
     },
     {
-      "weight": 30,
+      "id": "cloud-reactjs",
+      "weight": 10,
       "text": "React.js",
-      "label": " "
+      "label": ""
     },
     {
-      "weight": 30,
+      "id": "cloud-java",
+      "weight": 10,
       "text": "Java",
       "label": "Filbleu, TAO, Chapitô, DossierFacile, Wegrow, LeroySomer"
     },
     {
-      "text": "PostgreSQL",
-      "weight": 15,
+      "id": "cloud-kotlin",
+      "weight": 10,
+      "text": "Kotlin",
+      "label": ""
+    },
+    {
+      "id": "cloud-springboot",
+      "weight": 10,
+      "text": "SpringBoot",
+      "label": "Chapitô, DossierFacile, Wegrow"
+    },
+    {
+      "id": "cloud-nodejs",
+      "weight": 10,
+      "text": "Node.js",
+      "label": "Virtuo"
+    },
+    {
+      "id":  "android",
+      "weight": 9,
+      "text": "Android",
+      "label": "Filbleu, TAO, Chapitô"
+    },
+    {
+      "id": "cloud-ios",
+      "weight": 9,
+      "text": "iOS",
+      "label": "Filbleu, TAO, Chapitô"
+    },
+    {
+      "id": "cloud-swift",
+      "weight": 9,
+      "text": "Swift",
+      "label": "Filbleu, TAO, Chapitô"
+    },
+    {
+      "id": "cloud-angular",
+      "weight": 8,
+      "text": "Angular",
+      "label": "Soletanche, Eutelmed, Wegrow, Fizzer"
+    },
+    {
+      "id": "cloud-docker",
+      "weight": 8,
+      "text": "Docker",
+      "label": ""
+    },
+    {
+      "id": "cloud-kubernetes",
+      "weight": 8,
+      "text": "Kubernetes",
+      "label": "Chapitô, Filbleu, TAO, Wakiki"
+    },
+    {
+      "id": "cloud-typescript",
+      "weight": 8,
+      "text": "Typescript",
+      "label": "Tous ou presque"
+    },
+    {
+      "id": "cloud-keycloak",
+      "weight": 7,
+      "text": "Keycloak",
+      "label": "DossierFacile, Wakiki"
+    },
+    {
+      "id": "cloud-javascript",
+      "weight": 7,
+      "text": "Javascript",
+      "label": ""
+    },
+    {
+      "id": "cloud-golang",
+      "weight": 5,
+      "text": "Golang",
+      "label": "Projets perso"
+    },
+    {
+      "id": "cloud-html",
+      "weight": 5,
+      "text": "html",
+      "label": "Tous ou presque"
+    },
+    {
+      "id": "cloud-css",
+      "weight": 5,
+      "text": "css",
+      "label": "Tous ou presque"
+    },
+    {
+      "id": "cloud-sass",
+      "weight": 5,
+      "text": "sass",
+      "label": "Tous ou presque"
+    },
+    {
+      "id": "cloud-git",
+      "weight": 5,
+      "text": "Git",
+      "label": "Évidemment"
+    },
+    {
+      "id": "cloud-postgresql",
+      "weight": 5,
+      "text": "Postgresql",
+      "label": ""
+    },
+    {
+      "id": "cloud-githubaction",
+      "weight": 5,
+      "text": "Github action",
+      "label": "DossierFacile"
+    },
+    {
+      "id": "cloud-gitlabci",
+      "weight": 5,
+      "text": "Gitlab CI",
+      "label": ""
+    },
+    {
+      "id": "cloud-matomo",
+      "weight": 3,
+      "text": "Matomo",
       "label": "DossierFacile, Chapitô"
+    },
+    {
+      "id": "cloud-mysql",
+      "weight": 3,
+      "text": "MySQL (MariaDB)",
+      "label": ""
+    },
+    {
+      "id": "cloud-mongo",
+      "weight": 3,
+      "text": "Mongo",
+      "label": ""
+    },
+    {
+      "id": "cloud-clevercloud",
+      "weight": 1,
+      "text": "Clever Cloud",
+      "label": "Wegrow"
+    },
+    {
+      "id": "cloud-scalingo",
+      "weight": 1,
+      "text": "Scalingo",
+      "label": "DossierFacile"
+    },
+    {
+      "id": "cloud-elasticsearch",
+      "weight": 1,
+      "text": "ElasticSearch",
+      "label": "Carrefour"
+    },
+    {
+      "id": "cloud-jquery",
+      "weight": 2,
+      "text": "JQuery",
+      "label": "LeroySomer"
+    },
+    {
+      "id": "cloud-hibernate",
+      "weight": 2,
+      "text": "Hibernate",
+      "label": "DossierFacile, Wegrow, Chapitô, Eutelmed, Soletanche"
+    },
+    {
+      "id": "cloud-hugo",
+      "weight": 1,
+      "text": "Hugo",
+      "label": "Ce site :)"
     }
   ]
 }
