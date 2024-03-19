@@ -19,8 +19,7 @@
 
     var elementTop = $(elem).offset().top;
     var elementBottom = elementTop + $(elem).height();
-
-    return ((elementBottom <= documentViewBottom) && (elementTop >= documentViewTop));
+    return ((elementBottom >= documentViewTop) && (elementTop <= documentViewBottom));
   }
 
   $.fn.wordCloud = function(word_array) {
