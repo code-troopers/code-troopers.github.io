@@ -1,0 +1,13 @@
+{{ $tag := . }}
+<li class="tag-container {{ lower $tag }}">
+    {{if eq $tag "Android" }}
+    {{ partial "svg" "android-fill" }}
+    {{ end }}
+    {{if eq $tag "iOS" }}
+    {{ partial "svg" "apple-fill" }}
+    {{ end }}
+    {{if eq $tag "Web" }}
+    {{ partial "svg" "earth-fill" }}
+    {{ end }}
+    <span>{{ $tag }}</span>
+</li>

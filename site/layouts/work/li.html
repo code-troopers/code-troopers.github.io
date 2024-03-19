@@ -1,0 +1,35 @@
+{{ $baseurl := .Site.BaseURL }}
+
+<div>
+  {{ if .Truncated }}
+  <a aria-label="En savoir plus sur {{ .Title }}" href="{{ .Permalink }}">
+  {{ end }}
+  {{ with .Resources.GetMatch .Params.cover }}
+    {{ with .Fill "400x300 Center webp q100" }}
+    <div class="img-container" style="background-image: url('{{ .RelPermalink }}')"></div>
+    {{ end }}
+  {{ end }}
+  {{ if .Truncated }}
+  </a>
+  {{ end }}
+  <div>
+    <h2>
+      {{ if .Truncated }}
+      <a href="{{ .Permalink }}">{{ .Title }}</a>
+      {{ else }}
+      {{ .Title }}
+      {{ end }}
+    </h2>
+    <ul class="skill">
+      {{ range $index, $tag := .Params.tags }}
+        {{ partial "tag" $tag}}
+      {{ end }}
+    </ul>
+    {{ .Summary }}
+    {{ if .Truncated }}
+    <a class="read-more" href="{{ .Permalink }}">En savoir plus
+      {{ partial "arrow_right.html" . }}
+    </a>
+    {{ end }}
+  </div>
+</div>

@@ -1,0 +1,7 @@
+<header>
+    <nav>
+        {{ range .Site.Data.menu.links }}
+            <a id="{{ .id }}" href="{{ .url }}">{{ .name }}</a>
+        {{ end }}
+    </nav>
+</header>

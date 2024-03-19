@@ -1,37 +1,6 @@
-{{ partial "header.html" . }}
+{{ define "main" }}
 
-<!-- Google Tag Manager -->
-<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-NWLQD2"
-                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-        '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-NWLQD2');</script>
-<!-- End Google Tag Manager -->
+<h1>Nothing Here...</h1>
+<h3><a href="{{ "/" | relURL }}">Go Home</a></h3>
 
-<body id="error404">
-    <img class="logo" src="/img/white_logo.png">
-    <h1>404 <span>:(</span></h1>
-    <div class="quote">
-        <blockquote>
-            <p>
-                « BEN: Ce ne sont pas ces pages là que vous recherchez.
-                <br/>
-                TROOPER: Ce ne sont pas ces pages là que nous recherchons.
-                <br/>
-                BEN: Tout va très bien, on peut s'en aller.
-                <br/>
-                TROOPER: Tout va très bien, vous pouvez vous en aller.
-                <br/>
-                BEN: Bon, circulez.
-                <br/>
-                TROOPER: Bon <a href="/">circulez</a>... Allons, <a href="/">circulez</a> ! »
-            </p>
-            <cite>Starwars episode IV : Un nouvel espoir.</cite>
-        </blockquote>
-    </div>
-
-<script src="/main.js"></script>
-</body>
-</html>
+{{ end }}

@@ -1,0 +1,109 @@
+@import 'variables';
+
+section#casting {
+  background: $white;
+  padding-bottom: 5rem;
+
+  a.btn {
+    border-color: $bloggrey;
+    color: $bloggrey;
+    &:hover {
+      border-color: $lightblue;
+      color: $white;
+    }
+  }
+
+  .wrapper {
+    max-width: 1260px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin: auto;
+    > p {
+      letter-spacing: initial;
+    }
+    p {
+      color: $grey;
+      text-align: center;
+      line-height: 1.5rem;
+    }
+
+    a{
+      color: $black;
+    }
+    ul.casting {
+      & > li {
+        margin: 2rem;
+        min-width: 240px;
+
+        div {
+          display: inline-block;
+          width: 220px;
+          height: 220px;
+          position: relative;
+          border-radius: 50%;
+          overflow: hidden;
+          img {
+            object-fit: contain;
+            width: 100%;
+            height: 100%;
+          }
+          &:after {
+            content: '';
+            background: $avatarGradient;
+            width: 100%;
+            height: 100%;
+            opacity: 0.7; //without alpha blend mode make photos really eye catching
+            top: 0;
+            left: 0;
+            position: absolute;
+            mix-blend-mode: color;
+          }
+        }
+
+        h2 {
+          @include separator($grey, true);
+        }
+
+        p{
+          font-size: 0.7rem;
+        }
+        ul {
+          li {
+            display: inline-block;
+            @include socialBubble();
+            a {
+              padding: 1.25rem;
+              width: 1rem;
+              height: 1rem;
+              font-size: 1.5rem;
+              color: $grey;
+              border: 2px solid $lightgrey;
+              &:hover{
+                background: $gradient;
+                i{
+                  color: $white;
+                }
+              }
+            }
+          }
+        }
+
+
+      }
+    }
+
+  }
+}
+
+
+@media screen and (max-width: $tablet) {
+  section#casting {
+    .wrapper {
+      ul.casting {
+        & > li {
+          margin: 0;
+        }
+      }
+    }
+  }
+}

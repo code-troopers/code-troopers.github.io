@@ -1,0 +1,12 @@
+<section id="portfolio">
+    <h1>Réalisations</h1>
+
+    <div class="wrapper">
+        {{ range first 4 (where .Site.RegularPages.ByWeight "Section" "work") }}
+        {{ .Render "li" }}
+        {{ end }}
+    </div>
+    <div class="wrapper-center">
+        <a href="/work/" class="btn">Toutes nos réalisations</a>
+    </div>
+</section>
