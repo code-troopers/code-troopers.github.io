@@ -21,6 +21,7 @@ section#articles {
     flex-wrap: wrap;
     justify-content: space-between;
     .blog-snippet-container {
+      box-shadow: 4px 4px 8px $darkerblue;
 
       &::before{
         content: '';
@@ -32,18 +33,19 @@ section#articles {
         height: 10px;
         background: $light;
         border-radius: 10px;
-        transition: .5s;
-        box-shadow: 0 0 10px opacify($color: $light, $amount: 0.5);
+        transition: .2s;
+        
       }
 
       &:hover {
+        box-shadow: 4px 4px 8px $light;
         border-color: $light;
+        transform: perspective(40px) translateZ(0.5px);
         &::before{
           bottom: 0;
           height: 4%;
           width: 90%;
           border-radius: 30px;
-        box-shadow: 0 0 70px opacify($color: $light, $amount: 0.7);
         }
       }
       position: relative;
@@ -105,7 +107,7 @@ section#articles {
       }
       transition: 0.1s;
       z-index: 1;
-      backdrop-filter: blur(15px);
+      backdrop-filter: blur(25px);
       height: 100%;
       padding-bottom: 60px;
     }
