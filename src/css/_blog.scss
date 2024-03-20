@@ -21,7 +21,9 @@ section#articles {
     flex-wrap: wrap;
     justify-content: space-between;
     .blog-snippet-container {
-      box-shadow: 0px 0px 10px $darkerblue;
+      transition-delay: .2s;
+      transition-duration: .1s;
+      box-shadow: 0px -4px 10px $darkerblue;
 
       &::before{
         content: '';
@@ -33,12 +35,12 @@ section#articles {
         height: 10px;
         background: $light;
         border-radius: 10px;
-        transition: .1s;
+        transition: .2s;
         
       }
 
       &:hover {
-        box-shadow: 0px 0px 10px $light;
+        box-shadow: 0px -6px 10px $light;
         border-color: $light;
         &::before{
           bottom: 0;
