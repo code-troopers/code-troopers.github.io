@@ -41,7 +41,7 @@
       });
       var radius = Math.random();
 
-      var wSpan = $("<span>").addClass("word w" + word.weight).append(word.text);
+      var wSpan = $("<span>").addClass("word w" + word.weight).append($("<span>").addClass("word-text").text(word.text));
 
       $this.append(wSpan);
 
@@ -79,7 +79,7 @@
         drawTag(word_array[i]);
         setTimeout(() => {
           runWord(i + 1);
-        }, 150);
+        }, 50);
       } else {
         setTimeout(() => {
           runWord(i);

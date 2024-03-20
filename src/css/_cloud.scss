@@ -1,20 +1,20 @@
-section#cloud{
+section#cloud {
   background: $darkGradient;
   color: $white;
 
-  .wrapper{
+  .wrapper {
     margin: auto;
     width: 960px;
     max-width: 100%;
-    padding:30px;
+    padding: 30px;
 
     .cloud {
-        position: relative;
-        @media screen and (max-width: 767px) {
-            width: 315px;
-            height: 500px;
-        }
-        min-height: 300px;
+      position: relative;
+      @media screen and (max-width: 767px) {
+        width: 315px;
+        height: 500px;
+      }
+      min-height: 300px;
     }
   }
 
@@ -23,19 +23,43 @@ section#cloud{
   }
 
   .word {
-    transition: all 1s ease;
+    color: var(--word-color);
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 0;
+      background-color: var(--bg-word-color);
+      transition: height 0.7s ease;
+    }
+
+    &:hover {
+      &::before {
+        height: 100%;
+      }
+      .word-text {
+        mix-blend-mode: difference;
+      }
+    }
   }
 
   .w10 {
-    color: $sandyBrown;
+    --word-color: #{$sandyBrown};
+    --bg-word-color: #{$sandyBrown};
     font-size: 1.6rem;
   }
   .w9 {
-    color: $nyanza;
+    --word-color: #{$nyanza};
+    --bg-word-color: #{$nyanza};
     font-size: 1.5rem;
   }
   .w8 {
-    color: $periwinki;
+    --word-color: #{$periwinki};
+    --bg-word-color: #{$periwinki};
     font-size: 1.4rem;
   }
   .w7 {
@@ -59,5 +83,4 @@ section#cloud{
   .w1 {
     font-size: 0.7rem;
   }
-
 }
