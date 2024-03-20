@@ -4,11 +4,13 @@
   {{ if .Truncated }}
   <a aria-label="En savoir plus sur {{ .Title }}" href="{{ .Permalink }}">
   {{ end }}
+  <div class="cover-head">
   {{ with .Resources.GetMatch .Params.cover }}
     {{ with .Fill "400x300 Center webp q100" }}
     <div class="img-container" style="background-image: url('{{ .RelPermalink }}')"></div>
     {{ end }}
   {{ end }}
+  </div>
   {{ if .Truncated }}
   </a>
   {{ end }}
