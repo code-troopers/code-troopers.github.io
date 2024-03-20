@@ -5,6 +5,12 @@ section#portfolio {
   color: $white;
   background: $black;
 
+    .work-container {
+      &:hover {
+        transform: perspective(40px) translateZ(0.5px);
+      }
+    }
+
   .wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -172,7 +178,7 @@ section#work, section#portfolio{
     .wrapper {
       & > div {
         border: 1px solid $darkgrey;
-        border-left: none;
+        background: $black;
         min-width: 25%;
         max-width: 25%;
         img {

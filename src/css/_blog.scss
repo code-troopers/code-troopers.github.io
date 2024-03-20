@@ -38,13 +38,13 @@ section#articles {
       }
 
       &:hover {
-        box-shadow: 4px 4px 8px $light;
+        box-shadow: 4px -4px 8px $light;
         border-color: $light;
         transform: perspective(40px) translateZ(0.5px);
         &::before{
           bottom: 0;
           height: 4%;
-          width: 90%;
+          width: 100%;
           border-radius: 30px;
         }
       }
