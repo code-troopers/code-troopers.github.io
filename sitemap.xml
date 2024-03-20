@@ -56,18 +56,6 @@
     </url>
     
     <url>
-        <loc>https://code-troopers.com/tags/stage/</loc>
-        <lastmod>2021-10-25T00:00:00+00:00</lastmod>
-        <priority>0.8</priority>
-    </url>
-    
-    <url>
-        <loc>https://code-troopers.com/2021/10/25/stages-2022/</loc>
-        <lastmod>2021-10-25T00:00:00+00:00</lastmod>
-        <priority>0.8</priority>
-    </url>
-    
-    <url>
         <loc>https://code-troopers.com/tags/android/</loc>
         <lastmod>2019-06-01T00:00:00+00:00</lastmod>
         <priority>0.8</priority>
@@ -304,6 +292,12 @@
     <url>
         <loc>https://code-troopers.com/2018/02/28/tourainetech-2018/</loc>
         <lastmod>2018-02-28T00:00:00+00:00</lastmod>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://code-troopers.com/tags/stage/</loc>
+        <lastmod>2018-02-06T00:00:00+00:00</lastmod>
         <priority>0.8</priority>
     </url>
     
