@@ -147,5 +147,9 @@ a {
 .icon-svg {
   width: 3rem;
   height: 3rem;
+  @media screen and (max-width: 767px) {
+    width: 2rem;
+    height: 2rem;
+  }
 }
 }
