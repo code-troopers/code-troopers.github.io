@@ -34,8 +34,10 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Url", name: "url", widget: "string"}
       - {label: "Aliases", name: "aliases", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD", timeFormat: false}
+      - {label: "Expiry Date", name: "expirydate", widget: "datetime", format: "YYYY-MM-DD", timeFormat: false}
       - {label: "Image", name: "cover", widget: "image", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Draft", name: "draft", widget: "boolean", default: true}
       - {label: "Tags", name: "tags", widget: "list"}
   - name: "work" # Used in routes, ie.: /admin/collections/:slug/edit
     label: "Work" # Used in the UI, ie.: "New Post"
@@ -48,8 +50,10 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Weight", name: "weight", widget: "number"}
       - {label: "Url", name: "url", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD", timeFormat: false}
+      - {label: "Expiry Date", name: "expirydate", widget: "datetime", format: "YYYY-MM-DD", timeFormat: false}
       - {label: "Image", name: "cover", widget: "image", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Draft", name: "draft", widget: "boolean", default: true}
       - {label: "Tags", name: "tags", widget: "list"}
   - name: "home"
     label: "Home"
