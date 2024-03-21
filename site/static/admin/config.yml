@@ -34,8 +34,10 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Url", name: "url", widget: "string"}
       - {label: "Aliases", name: "aliases", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD", timeFormat: false}
+      - {label: "Expiry Date", name: "expirydate", widget: "datetime", format: "YYYY-MM-DD", timeFormat: false, required: false, default: ''}
       - {label: "Image", name: "cover", widget: "image", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Draft", name: "draft", widget: "boolean", default: true}
       - {label: "Tags", name: "tags", widget: "list"}
   - name: "work" # Used in routes, ie.: /admin/collections/:slug/edit
     label: "Work" # Used in the UI, ie.: "New Post"
@@ -45,11 +47,13 @@ collections: # A list of collections the CMS should be able to edit
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Weight", name: "weight", widget: "number"}
+      - {label: "Weight", name: "weight", widget: "number", required: false}
       - {label: "Url", name: "url", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD", timeFormat: false}
+      - {label: "Expiry Date", name: "expirydate", widget: "datetime", format: "YYYY-MM-DD", timeFormat: false, required: false, default: ''}
       - {label: "Image", name: "cover", widget: "image", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Draft", name: "draft", widget: "boolean", default: true}
       - {label: "Tags", name: "tags", widget: "list"}
   - name: "home"
     label: "Home"
