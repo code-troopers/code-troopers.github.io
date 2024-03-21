@@ -18,3 +18,6 @@
 
   [plugins.inputs]
     record = true
+
+[security.exec]
+    allow = ['^asciidoctor$']
