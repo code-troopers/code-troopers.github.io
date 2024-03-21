@@ -21,8 +21,7 @@ section#articles {
     flex-wrap: wrap;
     justify-content: space-between;
     .blog-snippet-container {
-      transition-delay: .2s;
-      transition-duration: .1s;
+      transition-duration: .2s;
       box-shadow: 0px -4px 10px $darkerblue;
 
       &::before{
