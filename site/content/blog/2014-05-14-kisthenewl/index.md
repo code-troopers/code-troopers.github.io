@@ -4,7 +4,7 @@ author: Matthieu
 url: /2014/05/14/kisthenewl/
 aliases: 2014/05/14/kIsTheNewL.html
 date: 2014-05-14
-cover: doom.png
+cover: kisthenewl-banner.png
 tags:
   - zsh
   - git
