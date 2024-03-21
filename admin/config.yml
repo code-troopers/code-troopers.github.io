@@ -63,18 +63,12 @@ collections: # A list of collections the CMS should be able to edit
   - name: "site_settings"
     label: "Site Settings"
     files:
-      - file: "site/data/cloud.json"
-        label: Word cloud
-        name: cloud
-        widget: list
+      - file: "site/data/footer.json"
+        label: Footer
+        name: footer
         fields:
-          - label: Cloud
-            name: cloud
-            widget: list
-            fields:
-              - {label: Text, name: text, widget: string}
-              - {label: Poids, name: weight, widget: number}
-              - {label: Réassurance, name: label, widget: string}
+          - {label: Text, name: text, widget: string}
+          - {label: Liens, name: liens, widget: list, fields: [{label: Text, name: text, widget: string}, {label: Url, name: url, widget: string}]}
       - file: "site/data/menu.json"
         label: Menu
         name: menu
