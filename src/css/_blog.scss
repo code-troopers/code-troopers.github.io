@@ -7,7 +7,6 @@ section#blogs {
   & > * {
     margin: 0 auto;
   }
-
 }
 
 section#articles {
@@ -16,101 +15,144 @@ section#articles {
   }
 
   .wrapper {
-    $light: $lightblue;
+    padding: 2rem;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    .blog-snippet-container {
-      transition-duration: .2s;
-      box-shadow: 0px -4px 10px $darkerblue;
+    flex-flow: row wrap;
+    justify-content: space-between !important;
+    column-gap: 2rem;
+    row-gap: 4rem;
 
-      &::before{
-        content: '';
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        bottom: -5px;
-        width: 25%;
-        height: 10px;
-        background: $light;
-        border-radius: 10px;
-        transition: .2s;
-        
-      }
+    position: relative;
+    z-index: 1;
+
+    .blog-snippet-container {
+      $lazerHeight: 10px;
+      $borderRadius: 15px;
+      $backgroundColor: #243c54;
+      $transitionDuration: 0.2s;
+      $borderWidth: 2px;
+      $lazerColor: $lightblue;
+
+      flex: 1;
+      min-width: 18.5rem;
+      width: 100%;
+      position: relative;
+      background-color: $backgroundColor;
+      box-shadow: 0px -4px 10px $darkerblue;
+      border-radius: $borderRadius;
+      transition: box-shadow 0s;
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      justify-content: flex-end;
 
       &:hover {
-        box-shadow: 0px -6px 10px $light;
-        border-color: $light;
-        &::before{
-          bottom: 0;
-          height: 4%;
-          width: 100%;
-          border-radius: 30px;
+        box-shadow: none;
+        transition: box-shadow calc($transitionDuration * 3) ease-in;
+
+        &::before {
+          width: calc(100% + calc(2 * $borderWidth));
+          height: calc(100% + calc(2 * $borderWidth));
+          transition: width $transitionDuration,
+            height calc($transitionDuration * 1.2) ease-in
+              calc($transitionDuration * 0.9);
+        }
+
+        &::after {
+          width: 95%;
+          bottom: calc(-1 * $borderWidth);
+          border-bottom-color: $lazerColor;
+          transition: width $transitionDuration ease-out,
+            bottom calc($transitionDuration * 0.5) ease-in;
         }
       }
-      position: relative;
 
-      border: 2px solid rgba(255,255,255,0.1);
-      border-radius: 15px;
-      background: rgba(27,30,43,0.5);
-
-
-      margin: 2rem;
-      flex: 1;
-
-    .blog-snippet {
-      border-radius: 15px;
-      .read-more {
-        font-size: 0.9rem;
+      &::before {
+        content: "";
         position: absolute;
-        bottom: 30px;
-      }
-      a.read-more {
-        display: inline-block;
-        width: 40%;
-        @include arrows($white);
-        .arrow_box_right {
-          margin-left: -0.6rem;
-        }
-        transition: width 1s ease-in-out;
-        &:hover {
-          @include arrows($lightblue);
-          color: $lightblue;
-          width: 75%;
-
-        }
+        bottom: calc(-1 * $borderWidth);
+        width: 0;
+        height: calc(6 * $lazerHeight);
+        z-index: -1;
+        border: $borderWidth solid $lazerColor;
+        box-shadow: 0 0px 10px $lazerColor;
+        border-radius: calc($borderRadius * 1.1);
+        transition: height calc($transitionDuration * 1.5) ease-out,
+          width $transitionDuration calc($transitionDuration * 1.2);
+        background-color: red;
       }
 
-      img {
-        max-width: 100%;
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: calc(calc(calc($lazerHeight / 2) + $borderWidth) * -1);
+        width: 25%;
+        min-height: 0;
+        height: $lazerHeight;
+        border: none;
+        border-bottom: $borderWidth solid transparent;
+        border-radius: $lazerHeight;
+        background-color: $lazerColor;
+        border-radius: calc($borderRadius * 1.1);
+        transition: width $transitionDuration ease-in
+            calc($transitionDuration * 1.2),
+          bottom calc($transitionDuration * 0.5) ease-out
+            calc($transitionDuration * 1.2);
       }
 
-      .img-container{
-        height: 200px;
-        background-size: cover;
-        background-position: 50%;
-        border-top-left-radius: 15px;
-        border-top-right-radius: 15px;
-      }
+      .blog-snippet {
+        border-radius: $borderRadius;
+        transition: 0.1s;
+        z-index: 2;
+        backdrop-filter: blur(25px);
+        height: 100%;
+        padding-bottom: 60px;
 
-      & > div {
-        padding: 1rem 3rem;
-        h2 {
-          @include separator($white);
-        }
-
-        p {
+        .read-more {
           font-size: 0.9rem;
-          line-height: 1.3rem;
+          position: absolute;
+          bottom: 30px;
         }
 
+        a.read-more {
+          display: inline-block;
+          width: 40%;
+          @include arrows($white);
+          .arrow_box_right {
+            margin-left: -0.6rem;
+          }
+          transition: width 1s ease-in-out;
+          &:hover {
+            @include arrows($lightblue);
+            color: $lightblue;
+            width: 75%;
+          }
+        }
+
+        img {
+          max-width: 100%;
+        }
+
+        .img-container {
+          height: 200px;
+          background-size: cover;
+          background-position: 50%;
+          border-top-left-radius: 15px;
+          border-top-right-radius: 15px;
+        }
+
+        & > div {
+          padding: 1rem 3rem;
+          h2 {
+            @include separator($white);
+          }
+
+          p {
+            font-size: 0.9rem;
+            line-height: 1.3rem;
+          }
+        }
       }
-      transition: 0.1s;
-      z-index: 1;
-      backdrop-filter: blur(25px);
-      height: 100%;
-      padding-bottom: 60px;
-    }
     }
   }
 
@@ -141,7 +183,7 @@ section#blog {
         @include separator($black);
         letter-spacing: initial;
       }
-      .center{
+      .center {
         text-align: center;
       }
       .content {
@@ -157,7 +199,12 @@ section#blog {
         margin: 0.5rem;
         color: $darkgrey;
         font-family: "Montserrat Light", "Helvetica Neue", Arial, sans-serif;
-        h1, h2, h3, h4, h5, h6 {
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
           color: $black;
           font-family: "Montserrat", Helvetica, Arial, sans-serif;
         }
@@ -165,12 +212,12 @@ section#blog {
           font-size: 1rem;
         }
         code:not(.hljs) {
-          background: #EEE;
+          background: #eee;
           padding: 4px;
           border-radius: 4px;
           border: 1px solid gainsboro;
         }
- 
+
         @include separator($black);
         pre {
           width: 100%;
@@ -190,13 +237,12 @@ section#blog {
             }
           }
         }
-        .underline{
+        .underline {
           text-decoration: underline;
         }
         iframe {
           max-width: 100%;
         }
-
       }
       .content-footer {
         margin: 1rem 0;
@@ -223,14 +269,12 @@ section#blog {
         }
       }
     }
-
   }
   a {
     color: $darkgrey;
   }
 
   @include tags($lightgrey);
-
 }
 
 @media screen and (max-width: $tablet) {
