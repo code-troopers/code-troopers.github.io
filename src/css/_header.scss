@@ -69,7 +69,6 @@ header {
 #company {
   background-size: cover;
   background-image: url('../img/header_large.webp');
-  background-blend-mode: overlay;
   @media screen and (max-width: $tablet) {
     background-image: url('../img/header_small.webp');
     background-attachment: inherit;
