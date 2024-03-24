@@ -2,7 +2,6 @@
 cover: soletanche.jpg
 date: '2017-12-19'
 tags:
-- Android
 - Web
 title: 'Soletanche'
 url: /soletanche.html
