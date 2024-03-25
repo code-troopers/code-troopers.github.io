@@ -20,6 +20,7 @@
 @import 'cloud';
 @import 'april';
 @import 'navig';
+@import 'team';
 
 :root {
   scroll-behavior: smooth;
@@ -72,7 +73,7 @@ ul.flex {
 }
 
 a.btn {
-  text-decoration: none;
+  text-decoration: none !important;
   border: 2px solid $white;
   padding: 1rem 2rem;
   border-radius: 0.5rem;
@@ -145,6 +146,17 @@ a {
   height: 1rem;
 }
 
+.x2 {
+.icon-svg {
+  width: 2rem;
+  height: 2rem;
+  @media screen and (max-width: 767px) {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+}
+
 .x3 {
 .icon-svg {
   width: 3rem;
@@ -159,4 +171,27 @@ a {
 .subtitle {
   font-weight: bolder;
   font-size: 1.1rem;
+}
+
+
+@keyframes fadeInRight {
+    from {
+        transform: translateX(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }

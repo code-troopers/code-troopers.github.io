@@ -1,0 +1,86 @@
+<h2>Rencontrez notre équipe</h2>
+<p>
+    Découvrez certains des membres talentueux qui composent notre équipe dévouée et passionnée :
+</p>
+<div class="team-members-wrapper">
+    <ul class="team-members">
+        {{ $pageResource := .Resources }}
+        {{ range $member := (shuffle (.Site.Data.team.team)) }}
+        {{ if $member.photo }}
+        <li class="team-member">
+            {{ with $pageResource.GetMatch $member.photo }}
+            {{ with .Process "webp q100" }}
+            <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}"
+                alt="Photo de {{ $member.name }}">
+            {{ end }}
+            {{ end }}
+            <!-- TODO Else default photo -->
+            <h3>{{ $member.name }}</h3>
+            <p>{{ $member.title }}</p>
+            <div class="full-member">
+                <p>{{ $member.description }}</p>
+                <div class="team-member-links x2">
+                    {{ if $member.github }}
+                    <a href="https://www.github.com/{{ $member.github }}" title="Github de {{ $member.name }}"
+                        target="_blank" rel="noopener">
+                        {{ partial "svg" "github-fill" }}
+                    </a>
+                    {{ end }}
+                    {{ if $member.gitlab }}
+                    <a href="https://www.gitlab.com/{{ $member.gitlab }}" title="Gitlab de {{ $member.name }}"
+                        target="_blank" rel="noopener">
+                        {{ partial "svg" "gitlab-fill" }}
+                    </a>
+                    {{ end }}
+                    {{ if $member.malt }}
+                    <a href="https://www.malt.com/{{ $member.malt }}" title="Malt de {{ $member.name }}" target="_blank"
+                        rel="noopener">
+                        {{ partial "svg" "malt" }}
+                    </a>
+                    {{ end }}
+                    {{ if $member.steam }}
+                    <a href="https://steamcommunity.com/id/{{ $member.steam }}" title="Steam de {{ $member.name }}"
+                        target="_blank" rel="noopener">
+                        {{ partial "svg" "steam-fill" }}
+                    </a>
+                    {{ end }}
+                    {{ if $member.twitter }}
+                    <a href="https://www.x.com/{{ $member.twitter }}" title="X de {{ $member.name }}" target="_blank"
+                        rel="noopener">
+                        {{ partial "svg" "twitter-x-fill" }}
+                    </a>
+                    {{ end }}
+                    {{ if $member.mastodon }}
+                    <a href="{{ $member.mastodon }}" title="Mastodon de {{ $member.name }}" target="_blank"
+                        rel="noopener">
+                        {{ partial "svg" "mastodon-fill" }}
+                    </a>
+                    {{ end }}
+                    {{ if $member.linkedin }}
+                    <a href="https://www.linkedin.com/in/{{ $member.linkedin }}" title="LinkedIn de {{ $member.name }}"
+                        target="_blank" rel="noopener">
+                        {{ partial "svg" "linkedin-fill" }}
+                    </a>
+                    {{ end }}
+                </div>
+        </li>
+        {{ end }}
+        {{ end }}
+    </ul>
+    <button onclick="handleClick('previous')" class="carrousel-button carrousel-button--previous" type="button">➜</button>
+    <button onclick="handleClick('next')" class="carrousel-button carrousel-button--next" type="button">➜</button>
+</div>
+
+<script>
+    const list = document.querySelector(".team-members");
+    const item = document.querySelector(".team-member");
+    const itemWidth = item.offsetWidth;
+
+    function handleClick(direction) {
+        if (direction === "previous") {
+            list.scrollBy({ left: -itemWidth * 2, behavior: "smooth" });
+        } else {
+            list.scrollBy({ left: itemWidth * 2, behavior: "smooth" });
+        }
+    }
+</script>

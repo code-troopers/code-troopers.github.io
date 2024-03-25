@@ -64,6 +64,31 @@ collections: # A list of collections the CMS should be able to edit
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Body, name: body, widget: text}
+  - name: "team"
+    label: "Team  settings"
+    media_folder: "/site/content/team"
+    public_folder: "."
+    files:
+      - file: "site/data/team.json"
+        label: Team
+        name: team
+        widget: list
+        fields:
+          - label: Team
+            name: team
+            widget: list
+            fields:
+              - {label: Name, name: name, widget: string}
+              - {label: Title, name: title, widget: string}
+              - {label: Description, name: description, widget: string, required: false}
+              - {label: Github, name: github, widget: string, required: false}
+              - {label: Gitlab, name: gitlab, widget: string, required: false}
+              - {label: Linkedin, name: linkedin, widget: string, required: false}
+              - {label: Malt, name: malt, widget: string, required: false}
+              - {label: Mastodon, name: mastodon, widget: string, required: false}
+              - {label: Photo, name: photo, widget: "image", required: false}
+              - {label: Steam, name: steam, widget: string, required: false}
+              - {label: Twitter, name: twitter, widget: string, required: false}
   - name: "site_settings"
     label: "Site Settings"
     files:
