@@ -16,25 +16,6 @@ header {
     }
   }
 
-  .hiring a {
-    position: fixed;
-    border-radius: 0.5rem;
-    top: 80px;
-    right: 20px;
-    text-decoration: none;
-    border: 2px solid $darkblue;
-    padding: 1rem 2rem;
-    background: $gradient;
-    color: $white;
-    display: flex;
-    align-items: center;
-    
-    img {
-    width: 28px;
-    margin-right: 8px;
-    }
-  }
-
   nav {
     background-color: $black;
     display: flex;
@@ -65,7 +46,7 @@ header {
     }
 
     a.active {
-      background: $gradient;
+      background: $darkGradient;
       color: $white;
       border-bottom: none;
     }
@@ -74,7 +55,7 @@ header {
       background: $white;
 
       span {
-        @include gradient-text($gradient, 'light');
+        @include gradient-text($darkGradient, 'light');
       }
 
       &.active {
@@ -93,7 +74,7 @@ header {
     background-attachment: inherit;
   }
   background-position: center center;
-  background-color: $grey;
+  background-color: $darkgrey;
   background-attachment: fixed;
   padding-bottom: 5rem;
   padding-top: 5rem;

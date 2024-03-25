@@ -1,0 +1,86 @@
+section#cloud {
+  background: $darkGradient;
+  color: $white;
+
+  .wrapper {
+    margin: auto;
+    width: 960px;
+    max-width: 100%;
+    padding: 30px;
+
+    .cloud {
+      position: relative;
+      @media screen and (max-width: 767px) {
+        width: 315px;
+        height: 500px;
+      }
+      min-height: 300px;
+    }
+  }
+
+  .cspan {
+    transition: all 0.3s ease;
+  }
+
+  .word {
+    color: var(--word-color);
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 0;
+      background-color: var(--bg-word-color);
+      transition: height 0.7s ease;
+    }
+
+    &:hover {
+      &::before {
+        height: 100%;
+      }
+      .word-text {
+        mix-blend-mode: difference;
+      }
+    }
+  }
+
+  .w10 {
+    --word-color: #{$sandyBrown};
+    --bg-word-color: #{$sandyBrown};
+    font-size: 1.6rem;
+  }
+  .w9 {
+    --word-color: #{$nyanza};
+    --bg-word-color: #{$nyanza};
+    font-size: 1.5rem;
+  }
+  .w8 {
+    --word-color: #{$periwinki};
+    --bg-word-color: #{$periwinki};
+    font-size: 1.4rem;
+  }
+  .w7 {
+    font-size: 1.3rem;
+  }
+  .w6 {
+    font-size: 1.2rem;
+  }
+  .w5 {
+    font-size: 1.1rem;
+  }
+  .w4 {
+    font-size: 1rem;
+  }
+  .w3 {
+    font-size: 0.9rem;
+  }
+  .w2 {
+    font-size: 0.8rem;
+  }
+  .w1 {
+    font-size: 0.7rem;
+  }
+}

@@ -15,10 +15,18 @@ section#portfolio {
     & > div {
       flex: 1;
 
+      .cover-head {
+        overflow: hidden;
+        padding: 0;
+      }
       .img-container{
         height: 330px;
         background-size: cover;
         background-position: 50%;
+        &:hover {
+          transition: 0.5s;
+          transform: scale(1.1);
+        }
       }
 
       a{
@@ -30,6 +38,7 @@ section#portfolio {
         min-width: 220px;
         min-height: 330px;
         object-fit: cover;
+
       }
 
       & > div {
@@ -172,7 +181,7 @@ section#work, section#portfolio{
     .wrapper {
       & > div {
         border: 1px solid $darkgrey;
-        border-left: none;
+        background: $black;
         min-width: 25%;
         max-width: 25%;
         img {

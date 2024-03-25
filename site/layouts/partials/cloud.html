@@ -1,0 +1,13 @@
+<section id="cloud">
+    <div class="wrapper">
+        <div>
+            {{ range (shuffle (.Site.Data.cloud.cloud)) }}
+                <span class="cspan" id="{{ .id }}" title="{{ .label }}">{{ .text }}</span>
+            {{ end }}
+        </div>
+        <div class="cloud">
+
+        </div>
+    </div>
+    <script type="module" src="/js/cloud.js"></script>
+</section>

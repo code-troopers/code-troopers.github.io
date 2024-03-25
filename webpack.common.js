@@ -1,4 +1,3 @@
-const webpack = require("webpack");
 const path = require("path");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
@@ -73,6 +72,10 @@ module.exports = {
       patterns: [{
         from: "./src/fonts/",
         to: "fonts/",
+      },
+      {
+        from: "./site/data/cloud.json",
+        to: "data/cloud.json"
       }]
     }),
     new HtmlWebpackPlugin({

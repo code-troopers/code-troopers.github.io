@@ -8,9 +8,21 @@ $bloggrey: #323232;
 
 $lightblue: #3BCCE5;
 $darkblue: #409AD6;
+// $darkerblue: #03045E;
+$darkerblue: #46506d;
 
 $avatarLightBlue: #3CCDE6;
 $avatarDarkBlue: #419BD7;
+
+$sandyBrown: #FA9F42;
+$darkSandyBrown: #D68B2F;
+
+$nyanza: #D6F6DD;
+$darkNyanza: #3CCF6E;
+
+$periwinki: #DAC4F7;
+$darkPeriwinki: #6D3CCF;
+
 
 $tablet: 768px;
 $smalldesktop: 1024px;
@@ -19,4 +31,5 @@ $phone: 512px;
 $smallphone: 320px;
 
 $gradient: linear-gradient(60deg, $lightblue 0%,$darkblue 100%);
+$darkGradient: linear-gradient(60deg, $darkblue 0%,$darkerblue 100%);
 $avatarGradient: linear-gradient(90deg, $avatarLightBlue 0%,$avatarDarkBlue 100%);

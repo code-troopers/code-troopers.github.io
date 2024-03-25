@@ -1,4 +1,4 @@
-@import 'variables';
+@import "variables";
 
 section#casting {
   background: $white;
@@ -18,6 +18,65 @@ section#casting {
     padding-left: 30px;
     padding-right: 30px;
     margin: auto;
+
+    .casting-img-container {
+      @media screen and (max-width: $tablet) {
+        display: none;
+      }
+
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-auto-rows: minmax(200px, auto);
+      gap: 20px;
+
+      .photo {
+        position: relative;
+        overflow: hidden;
+        border-radius: 15px;
+        border: 3px solid transparent;
+        box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        transition: border-color 0.3s ease, transform 0.3s ease;
+    
+        &::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(60deg, $darkblue 0%, $darkerblue 100%);
+          opacity: 0.4;
+          transition: opacity 0.3s ease;
+        }
+    
+        &:hover::before {
+          opacity: 0;
+        }
+    
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition: transform 0.3s ease;
+        }
+    
+        &:hover {
+          transform: scale(1.05);
+          border-color: $lightblue;
+        }
+      }
+      
+      // .photo img {
+      //   border-radius: 15px;
+      //   width: 100%;
+      //   filter: grayscale(10%) sepia(30%) hue-rotate(170deg);
+      //   transition: 0.3s;
+      //   &:hover {
+      //     filter: none;
+      //   }
+      // }
+    }
+
     > p {
       letter-spacing: initial;
     }
@@ -27,9 +86,10 @@ section#casting {
       line-height: 1.5rem;
     }
 
-    a{
+    a {
       color: $black;
     }
+
     ul.casting {
       & > li {
         margin: 2rem;
@@ -48,7 +108,7 @@ section#casting {
             height: 100%;
           }
           &:after {
-            content: '';
+            content: "";
             background: $avatarGradient;
             width: 100%;
             height: 100%;
@@ -64,7 +124,7 @@ section#casting {
           @include separator($grey, true);
         }
 
-        p{
+        p {
           font-size: 0.7rem;
         }
         ul {
@@ -78,23 +138,19 @@ section#casting {
               font-size: 1.5rem;
               color: $grey;
               border: 2px solid $lightgrey;
-              &:hover{
+              &:hover {
                 background: $gradient;
-                i{
+                i {
                   color: $white;
                 }
               }
             }
           }
         }
-
-
       }
     }
-
   }
 }
-
 
 @media screen and (max-width: $tablet) {
   section#casting {
