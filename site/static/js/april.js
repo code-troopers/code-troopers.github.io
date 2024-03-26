@@ -12,13 +12,17 @@ function handleMouseMove(event) {
 $("body").on("mousemove", handleMouseMove)
 
 $("#disable-spotlight").on("click", () => {
-    $("#spotlight")[0].style.display = "none";
-    $("#disable-spotlight")[0].style.display = "none";
+    disableApril();
     localStorage.setItem("disable-april", "true");
 })
 
 if (localStorage.getItem("disable-april") === "true") {
-    $("#spotlight")[0].style.display = "none";
-    $("#disable-spotlight")[0].style.display = "none";
+    disableApril();
 }
+
+    function disableApril() {
+        $("#spotlight")[0].style.display = "none";
+        $("#disable-spotlight")[0].style.display = "none";
+        $("body").off("mousemove", handleMouseMove);
+    }
 })(jQuery)
