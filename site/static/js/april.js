@@ -14,5 +14,11 @@ $("body").on("mousemove", handleMouseMove)
 $("#disable-spotlight").on("click", () => {
     $("#spotlight")[0].style.display = "none";
     $("#disable-spotlight")[0].style.display = "none";
+    localStorage.setItem("disable-april", "true");
 })
+
+if (localStorage.getItem("disable-april") === "true") {
+    $("#spotlight")[0].style.display = "none";
+    $("#disable-spotlight")[0].style.display = "none";
+}
 })(jQuery)
