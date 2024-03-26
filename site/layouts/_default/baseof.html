@@ -9,6 +9,8 @@
 
     {{ block "footer" . }}{{ partial "footer" . }}{{end}}
 
+    {{ partial "april" . }}
+
     {{ $script := .Site.Data.webpack.main }}
     {{ with $script.js }}
       <script src="{{ relURL . }}"></script>

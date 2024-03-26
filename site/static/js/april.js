@@ -1,0 +1,18 @@
+
+(async function($) {
+
+const spotlightEl = $("#spotlight");
+
+function handleMouseMove(event) {
+    const { clientX, clientY } = event;
+    
+    spotlightEl[0].style.background = `radial-gradient(circle at ${clientX}px ${clientY}px, #00000000 10px, #000000FF 100px)`;
+}
+
+$("body").on("mousemove", handleMouseMove)
+
+$("#disable-spotlight").on("click", () => {
+    $("#spotlight")[0].style.display = "none";
+    $("#disable-spotlight")[0].style.display = "none";
+})
+})(jQuery)
