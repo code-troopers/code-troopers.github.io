@@ -10,7 +10,7 @@
     left: 0;
     z-index: 1000;
     pointer-events: none;
-    @media screen and (max-width: 1024) {
+    @media screen and (max-width: 1024px) {
         display: none;
     }
   }
@@ -20,7 +20,7 @@
     z-index: 999;
     right: 50px;
     bottom: 20px;
-    @media screen and (max-width: 1024) {
+    @media screen and (max-width: 1024px) {
         display: none;
     }
   }
