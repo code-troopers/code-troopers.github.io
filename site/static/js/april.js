@@ -1,5 +1,11 @@
 
 (async function($) {
+    const d = new Date();
+    if (d.getMonth() === 3 && d.getDate() === 1) {
+        $("#april").html("<a href='#' id='disable-spotlight' class='btn dark'>Désactiver le mode sombre</a><div id='spotlight'></div>");
+    } else {
+        return;
+    }
 
 const spotlightEl = $("#spotlight");
 
