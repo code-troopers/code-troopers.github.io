@@ -1,11 +1,12 @@
 ---
-title: Patain, 10 ans !
+title: Déjà 11 ans !
 author: Troopers
-draft: true
-url: /2024/03/31/10-ans/
-aliases: /2024/03/31/10-ans.html
+url: /2024/03/31/11-ans/
+aliases: /2024/03/31/11-ans.html
 date: 2024-03-31
+expirydate: ""
 cover: blog-11ans.jpg
+draft: true
 tags:
   - NoESN
   - NoSSII
@@ -18,7 +19,7 @@ Il y a de cela onze ans, un petit groupe d'aspirants développeurs osait se lanc
 
 Nos réalisations parlent d'elles-mêmes. Que ce soit pour des géants de l'industrie comme Barrière, Vinci, et Renault, ou des startups en plein essor telles que Géovélo, Fizzer, Wegrow et Eutelmed, nous avons laissé notre empreinte sur une multitude de projets divers et passionnants.
 
-Mais notre parcours ne s'arrête pas là. Nous avons créé des produits à fort impact, comme Navig'Tours, qui est devenu l'application officielle de Filbleu, et avons développé des solutions sur mesure pour des événements emblématiques tels que Aucard de Tours et la Fête de l'Humanité.
+Mais notre parcours ne s'arrête pas là. Nous avons créé des produits à fort impact, comme Navig'Tours, qui est devenu l'application officielle de Filbleu, et avons développé des solutions sur mesure pour des événements emblématiques tels que la Fête de l'Humanité, le Printemps de Bourges et Aucard de Tours.
 
 Et notre engagement envers l'innovation ne s'arrête pas à nos projets. Nous avons entendu vos retours sur notre site web et sommes déterminés à le rajeunir et à le rendre plus intéractif, tout en partageant notre expertise à travers une série d'articles captivants, comme celui qui expliquera comment nous avons rendu notre site éditable sans connaissance en développement !
 
