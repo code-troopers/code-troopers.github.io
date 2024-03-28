@@ -13,7 +13,7 @@ tags:
 ---
 # 🎉🎂 Célébrons 11 ans d'innovation avec Code-Troopers ! 🎂🎉
 
-Il y a de cela onze ans, un petit groupe d'aspirants développeurs osait se lancer dans une aventure technologique passionnante. Aujourd'hui, nous célébrons non seulement nos débuts, mais aussi nos accomplissements et notre croissance !
+Il y a de cela onze ans [exactement](http://code-troopers.com/2013/03/31/premierarticle/), un petit groupe d'aspirants développeurs osait se lancer dans une aventure technologique passionnante. Aujourd'hui, nous célébrons non seulement nos débuts, mais aussi nos accomplissements et notre croissance !
 
 À l'origine une équipe de sept, nous sommes désormais une famille de quinze passionnés, dont treize développeurs déterminés à repousser les frontières de la technologie. Depuis nos modestes débuts, nous avons évolué avec le paysage technologique, embrassant de nouvelles langues et frameworks pour rester à la pointe de l'innovation.
 
