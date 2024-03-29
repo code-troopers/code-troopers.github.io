@@ -6,7 +6,7 @@ aliases: /2024/03/31/11-ans.html
 date: 2024-03-31
 expirydate: ""
 cover: blog-11ans.jpg
-draft: true
+draft: false
 tags:
   - NoESN
   - NoSSII
