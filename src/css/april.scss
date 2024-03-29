@@ -1,0 +1,26 @@
+
+
+#spotlight {
+    position: fixed;
+    background: black;
+    opacity: 1;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    pointer-events: none;
+    @media screen and (max-width: 1024px) {
+        display: none;
+    }
+  }
+
+  #disable-spotlight {
+    position: fixed;
+    z-index: 999;
+    right: 50px;
+    bottom: 20px;
+    @media screen and (max-width: 1024px) {
+        display: none;
+    }
+  }

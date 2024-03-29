@@ -13,5 +13,12 @@
     {{ with $script.js }}
       <script src="{{ relURL . }}"></script>
     {{ end }}
+    <script>
+      const d = new Date();
+      // Show April Fools' joke
+      if (d.getMonth() === 3 && d.getDate() === 1) {
+          $.getScript("/js/april.js");
+      }
+    </script>
   </body>
 </html>
