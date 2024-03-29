@@ -1,15 +1,22 @@
 @import 'variables';
 
-.pagination{
+.pagination {
   padding-top: 1rem;
   padding-bottom: 3rem;
-  @include arrows($grey, -0.33rem, 3px);
+  @include arrows($white, -0.33rem, 3px);
+  &.black {
+    @include arrows($black, -0.33rem, 3px);
+  }
   font-family: "Montserrat Light", "Helvetica Neue", Arial, sans-serif;
   .next-page{
     float: right;
   }
   a{
-    font-size: 0.8rem;
+    font-size: 0.9rem;
+    color: $white;
+    .black {
+      color: $black;
+    }
     transition: width 1s, margin-left 1s, margin-right 1s;
     .arrow{
       transition: inherit;
@@ -17,7 +24,10 @@
       width: 24px;
     }
     &:hover, &:visited{
-      color: $grey;
+      color: $white;
+      .black {
+        color: $black;
+      }
       .arrow{
         width: 32px;
       }
