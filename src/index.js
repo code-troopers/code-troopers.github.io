@@ -24,7 +24,7 @@ function updateMenu() {
     var links = document.querySelectorAll("nav a");
     for (var link of links) {
         link.classList.remove("active");
-        if (link.id.includes(selectedSectionId)) {
+        if (selectedSectionId !== "" && link.id.includes(selectedSectionId)) {
             link.classList.add("active");
         }
     }

@@ -1,0 +1,13 @@
+{{ define "main" }}
+
+<div class="team-container">
+    <section class="team-section">
+    {{ .Content }}
+
+    {{ partial "member" .}}
+
+    {{ partial "team-bottom" .}}
+
+    </section>
+</div>
+{{ end }}
