@@ -18,8 +18,13 @@ section#portfolio {
       .cover-head {
         overflow: hidden;
         padding: 0;
+        &:hover {
+          transition: 0.2s;
+          border-radius: 50%;
+        }
       }
       .img-container{
+        margin:auto;
         height: 330px;
         background-size: cover;
         background-position: 50%;
