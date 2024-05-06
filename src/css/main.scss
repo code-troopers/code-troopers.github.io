@@ -37,7 +37,9 @@ body {
   margin: 0;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -158,14 +160,14 @@ a {
 }
 
 .x3 {
-.icon-svg {
-  width: 3rem;
-  height: 3rem;
-  @media screen and (max-width: 767px) {
-    width: 2rem;
-    height: 2rem;
+  .icon-svg {
+    width: 3rem;
+    height: 3rem;
+    @media screen and (max-width: 767px) {
+      width: 2rem;
+      height: 2rem;
+    }
   }
-}
 }
 
 .subtitle {
@@ -173,6 +175,13 @@ a {
   font-size: 1.1rem;
 }
 
+.medium {
+  max-width: 500px;
+  max-height: 200px;
+  @media (max-width: 767px) {
+    max-width: 100%;
+  }
+}
 
 @keyframes fadeInRight {
     from {
