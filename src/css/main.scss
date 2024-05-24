@@ -1,26 +1,27 @@
 // TODO
 // @import '../../node_modules/normalize.css/normalize.css';
-@import '../../node_modules/highlight.js/styles/github-dark.css';
-@import '../../node_modules/lightbox2/dist/css/lightbox.css';
-@import 'variables';
-@import 'mixins';
-@import 'header';
-@import 'numbers';
-@import 'skills';
-@import 'contact';
-@import 'footer';
-@import 'portfolio';
-@import 'blog';
-@import 'casting';
-@import 'pagination';
-@import '404';
-@import 'share';
-@import 'swiper';
-@import 'legals';
-@import 'cloud';
-@import 'april';
-@import 'navig';
-@import 'team';
+@import "../../node_modules/highlight.js/styles/github-dark.css";
+@import "../../node_modules/lightbox2/dist/css/lightbox.css";
+@import "variables";
+@import "mixins";
+@import "header";
+@import "numbers";
+@import "skills";
+@import "contact";
+@import "footer";
+@import "portfolio";
+@import "blog";
+@import "casting";
+@import "pagination";
+@import "404";
+@import "share";
+@import "swiper";
+@import "legals";
+@import "cloud";
+@import "april";
+@import "navig";
+@import "team";
+@import "tips";
 
 :root {
   scroll-behavior: smooth;
@@ -149,14 +150,14 @@ a {
 }
 
 .x2 {
-.icon-svg {
-  width: 2rem;
-  height: 2rem;
-  @media screen and (max-width: 767px) {
-    width: 1.5rem;
-    height: 1.5rem;
+  .icon-svg {
+    width: 2rem;
+    height: 2rem;
+    @media screen and (max-width: 767px) {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
   }
-}
 }
 
 .x3 {
@@ -184,23 +185,23 @@ a {
 }
 
 @keyframes fadeInRight {
-    from {
-        transform: translateX(50px);
-        opacity: 0;
-    }
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
+  from {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 @keyframes slideInUp {
-    from {
-        transform: translateY(50px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
