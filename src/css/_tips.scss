@@ -4,7 +4,32 @@ section#tips {
     padding-bottom: 50px;
 
     .wrapper {
-        max-width: 800px;
+        max-width: 992px;
         margin: 0 auto;
+    }
+
+    .tips-snippet {
+        color: $darkgrey;
+        min-height: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        width: 100%;
+        padding: 35px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        border-radius: 20px;
+        background-color: rgba(255, 255, 255, 0.45);
+        box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+
+        backdrop-filter: blur(15px);
+
+        a {
+            color: $darkerblue;
+            text-decoration: underline;
+        }
     }
 }

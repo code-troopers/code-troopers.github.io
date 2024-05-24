@@ -2,7 +2,6 @@
 
 <div class="tips-snippet-container">
   <div class="tips-snippet">
-  <div>
     <h2>
       {{ if .Truncated }}
       <a aria-label="En savoir plus sur {{ .Title }}" href="{{ .Permalink }}">{{ .Title }}</a>
@@ -23,6 +22,5 @@
       {{ partial "arrow_right.html" . }}
     </a>
     {{ end }}
-  </div>
   </div>
 </div>
