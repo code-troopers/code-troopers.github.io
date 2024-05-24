@@ -9,7 +9,6 @@ section#tips {
     }
 
     .tips-snippet {
-        color: $darkgrey;
         min-height: 200px;
         display: flex;
         flex-direction: column;
@@ -20,16 +19,23 @@ section#tips {
         margin-top: 20px;
         margin-bottom: 20px;
 
-        border: 1px solid rgba(255, 255, 255, 0.25);
+        border: 1px solid rgba($lightblue, 0.25);
         border-radius: 20px;
-        background-color: rgba(255, 255, 255, 0.45);
-        box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+        background-color: rgba($darkerblue, 0.66);
+        box-shadow: 0 0 10px 1px rgba($lightblue, 0.25);
 
         backdrop-filter: blur(15px);
 
         a {
-            color: $darkerblue;
+            color: $nyanza;
             text-decoration: underline;
+            &:hover {
+                color: $lightblue;
+            }
+        }
+
+        h2 {
+            margin: 0;
         }
     }
 }
