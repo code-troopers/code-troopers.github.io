@@ -15,7 +15,9 @@
       <li><a aria-label="Tag {{ $tag }}" href="/tipstags/{{ $tag | urlize }}/">{{ $tag }}</a></li>
       {{ end }}
     </ul>
-    <p>{{ .Summary | truncate 100 }}</p>
+    <div class="content">
+        {{ .Content }}
+    </div>
     {{ if .Truncated }}
     <a aria-label="Voir tous les articles" class="read-more" href="{{ .Permalink }}">En savoir plus
       {{ partial "arrow_right.html" . }}

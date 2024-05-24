@@ -12,4 +12,4 @@ Un petit outil rapide pour mettre à jour toutes les dépendances NPM d'un proje
 ```
 npm install -g yarn-upgrade-all && yarn-upgrade-all
 ```
-Il va supprimer et réinstaller tous les paquets du package.json :) 
+Il va supprimer et réinstaller tous les paquets du package.json donc avec des versions à jour :) 
