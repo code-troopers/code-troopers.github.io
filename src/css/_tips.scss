@@ -1,3 +1,10 @@
 section#tips {
-    color: black;
+    background: $darkGradient;
+    color: $white;
+    padding-bottom: 50px;
+
+    .wrapper {
+        max-width: 800px;
+        margin: 0 auto;
+    }
 }
