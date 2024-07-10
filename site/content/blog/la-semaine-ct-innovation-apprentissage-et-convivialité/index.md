@@ -49,8 +49,8 @@ Mais d’ici quelques jours on devrait pouvoir obtenir quelque chose d’utilisa
 Pleins d’évolutions possibles : être capable de savoir contre qui tel Troopers a le plus gagné / perdu, obtenir des stats sur les meilleurs buteurs, les meilleures combinaisons de joueurs etc. 
 
 
-<a style="display: inline" href="image1.png" data-lightbox="babyfoot" title="Babyfoot">
-  <img class="medium" src="image1.png" alt="Babyfoot">
+<a style="display: inline" href="/2024/07/10/semainect2024/image1.png" data-lightbox="babyfoot" title="Babyfoot">
+  <img class="medium" src="/2024/07/10/semainect2024/image1.png" alt="Babyfoot">
 </a>
 
 
@@ -101,16 +101,16 @@ La semaine CT est toujours ponctuée d’activités de détente (ou pas ! Un tou
 🏆🏎️Tournoi de Mario Kart : Matthieu
 
 
-<a style="display: inline" href="image5.jpg" data-lightbox="mariokart" title="Mario Kart">
-  <img class="medium" src="image5.jpg" alt="Mario Kart">
+<a style="display: inline" href="/2024/07/10/semainect2024/image5.jpg" data-lightbox="mariokart" title="Mario Kart">
+  <img class="medium" src="/2024/07/10/semainect2024/image5.jpg" alt="Mario Kart">
 </a>
 
 
 On fait toujours aussi une grosse activité team building toute une après-midi. Cette année c’était KhoLanTours Organisé par Numatéra (on a fait du feu, cherché des objets dans la forêt, fais l’épreuve des poteaux, etc.) (Rouge 🏆)
 
 
-<a style="display: inline" href="image3.jpg" data-lightbox="kholantours" title="KohLanTours">
-  <img class="medium" src="image3.jpg" alt="KohLanTours">
+<a style="display: inline" href="/2024/07/10/semainect2024/image3.jpg" data-lightbox="kholantours" title="KohLanTours">
+  <img class="medium" src="/2024/07/10/semainect2024/image3.jpg" alt="KohLanTours">
 </a>
 
 
@@ -131,14 +131,14 @@ Cette semaine on peut dire que c’était varié :
 * Découvrir la technique cinématographique du Texas switch. Par Aimeric
 
 
-<a style="display: inline" href="image4.jpg" data-lightbox="demo" title="Démo 1">
-  <img class="medium" src="image4.jpg" alt="Démo 1">
+<a style="display: inline" href="/2024/07/10/semainect2024/image4.jpg" data-lightbox="demo" title="Démo 1">
+  <img class="medium" src="/2024/07/10/semainect2024/image4.jpg" alt="Démo 1">
 </a>
 
 
 
-<a style="display: inline" href="image2.jpg" data-lightbox="demo" title="Démo 2">
-  <img class="medium" src="image2.jpg" alt="Démo 2">
+<a style="display: inline" href="/2024/07/10/semainect2024/image2.jpg" data-lightbox="demo" title="Démo 2">
+  <img class="medium" src="/2024/07/10/semainect2024/image2.jpg" alt="Démo 2">
 </a>
 
 
