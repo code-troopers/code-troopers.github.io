@@ -1,5 +1,6 @@
 {{ define "main" }}
 
+{{ $paginator := .Paginate (where .Pages "Type" "blog") 8 }}
 <section id="tips">
     <h1>
         Tips
