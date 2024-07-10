@@ -1,12 +1,11 @@
 ---
 title: "« La Semaine CT » : innovation, apprentissage et convivialité"
 author: Nicolas
-url: /2014/05/14/semainect2024/
-aliases: 2014/05/14/semainect2024.html
-date: 2024-07-12
+url: /2024/07/10/semainect2024/
+aliases: 2024/07/10/semainect2024.html
+date: 2024-07-10
 expirydate: ""
 cover: image3.jpg
-draft: true
 ---
 Chez Code-Troopers chaque année, pendant 5 jours, le temps s’arrête. 
 
