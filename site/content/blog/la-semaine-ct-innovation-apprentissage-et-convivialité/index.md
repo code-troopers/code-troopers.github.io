@@ -40,6 +40,8 @@ Les Projets de la Semaine
 
 Ce projet avait pour but de développer un système de classement dynamique, pour nos parties de baby-foot quotidiennes. L’équipe a travaillé sur un algorithme de classement (ELO, un peu comme aux échecs), une interface utilisateurs intuitive et une intégration avec notre messagerie interne (Slack)
 
+<div style="display: flex; flex-wrap: wrap;">
+<div style="flex: 1; min-width: 300px;">
 L’équipe à décidé de créer une application Web permettant de saisir les matchs joués, consulter la liste des matchs et le classement. Afin de faciliter la création d’un match, l’équipe a décidé d'intégrer le processus dans Slack en ajoutant la création automatique des équipes selon l’ELO des joueurs. La stack qui a été utilisée est : Svelte / Spring Boot / Postgres. Il n’y a pas eu de difficulté particulière à la mise en place de ce projet.
 
 Le projet est fonctionnel même s’il reste des ajustements à faire au niveau du front et du calcul de l’ELO qui n’est pas encore satisfaisant !  
@@ -47,11 +49,13 @@ Le projet est fonctionnel même s’il reste des ajustements à faire au niveau 
 Mais d’ici quelques jours on devrait pouvoir obtenir quelque chose d’utilisable ! 
 
 Pleins d’évolutions possibles : être capable de savoir contre qui tel Troopers a le plus gagné / perdu, obtenir des stats sur les meilleurs buteurs, les meilleures combinaisons de joueurs etc. 
-
-
+</div>
+<div style="flex: 1; min-width: 300px;">
 <a style="display: inline" href="/2024/07/10/semainect2024/image1.png" data-lightbox="babyfoot" title="Babyfoot">
-  <img class="medium" src="/2024/07/10/semainect2024/image1.png" alt="Babyfoot">
+  <img style="max-width: 300px; margin-left: 2rem;" src="/2024/07/10/semainect2024/image1.png" alt="Babyfoot">
 </a>
+</div>
+</div>
 
 
 ### 🃏Un timeline en ligne :
@@ -119,6 +123,8 @@ On profite du fait que tout le monde soit présent pour partager les repas dans 
 Aussi, tous les matins la première heure est dédiée à un p’ti dej Démo !  Les démo sont libres, tech ou pas tech ! Le but est de partager un truc auquel on s’est intéressé récemment. 
 
 
+<div style="display: flex; flex-wrap: wrap;">
+<div style="flex: 1; min-width: 300px; margin-right: 2rem;">
 
 Cette semaine on peut dire que c’était varié : 
 
@@ -130,10 +136,13 @@ Cette semaine on peut dire que c’était varié :
 * Utiliser HomeAssistant pour se débarrasser de son trousseau de clés. Par Florian
 * Découvrir la technique cinématographique du Texas switch. Par Aimeric
 
-
-<a style="display: inline" href="/2024/07/10/semainect2024/image4.jpg" data-lightbox="demo" title="Démo 1">
-  <img class="medium" src="/2024/07/10/semainect2024/image4.jpg" alt="Démo 1">
+</div>
+<div style="flex: 1; min-width: 300px;">
+<a style="display: inline;" href="/2024/07/10/semainect2024/image4.jpg" data-lightbox="demo" title="Démo 1">
+  <img style="margin-top: 2rem" class="medium" src="/2024/07/10/semainect2024/image4.jpg" alt="Démo 1">
 </a>
+</div>
+</div>
 
 
 
