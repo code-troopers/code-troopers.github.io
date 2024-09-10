@@ -1,36 +1,31 @@
 {{ define "main" }}
 
-{{ $paginator := .Paginate (where .Pages "Type" "tips") 8 }}
-<section id="tips">
-    <div class="wrapper">
-        <h1>
-            Tips
-        </h1>
-    </div>
+<section id="tipstags">
+    <h1>
+        Tips
+    </h1>
 
-    <section id="articles">
-        <div class="wrapper">
-            {{ range $index, $page := .Paginator.Pages }}
+    <div class="wrapper">
+        {{ range $index, $page := .Paginator.Pages }}
             {{ .Render "li" }}
-            {{ end }}
-        </div>
-        {{ if or (.Paginator.HasPrev) (.Paginator.HasNext) }}
-        <div class="pagination">
-            {{ if .Paginator.HasPrev }}
-            <a href="{{ .Paginator.Prev.URL }}" class="previous-page">
-                <div class="arrow">{{ partial "arrow_left.html" . }}</div>
-                Page précédente
-            </a>
-            {{ end }}
-            {{ if .Paginator.HasNext }}
-            <a href="{{ .Paginator.Next.URL }}" class="next-page">
-                Page suivante
-                <div class="arrow">{{ partial "arrow_right.html" . }}</div>
-            </a>
-            {{ end }}
-        </div>
         {{ end }}
-    </section>
+    </div>
+    {{ if or (.Paginator.HasPrev) (.Paginator.HasNext) }}
+    <div class="pagination">
+        {{ if .Paginator.HasPrev }}
+        <a href="{{ .Paginator.Prev.URL }}" class="previous-page">
+            <div class="arrow">{{ partial "arrow_left.html" . }}</div>
+            Page précédente
+        </a>
+        {{ end }}
+        {{ if .Paginator.HasNext }}
+        <a href="{{ .Paginator.Next.URL }}" class="next-page">
+            Page suivante
+            <div class="arrow">{{ partial "arrow_right.html" . }}</div>
+        </a>
+        {{ end }}
+    </div>
+    {{ end }}
 
 </section>
 {{end}}

@@ -1,6 +1,5 @@
 {{ define "main" }}
 
-{{ $paginator := .Paginate (where .Pages "Type" "blog") 8 }}
 <section id="tips">
     <h1>
         Tips
@@ -8,7 +7,7 @@
 
     <div class="wrapper">
         {{ range $index, $page := .Paginator.Pages }}
-        {{ .Render "li" }}
+            {{ .Render "li" }}
         {{ end }}
     </div>
     {{ if or (.Paginator.HasPrev) (.Paginator.HasNext) }}

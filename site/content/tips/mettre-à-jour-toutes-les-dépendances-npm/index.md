@@ -4,7 +4,7 @@ author: mbollot
 date: 2024-05-23
 expirydate: ""
 draft: false
-tags:
+tipstags:
   - npm
 ---
 Un petit outil rapide pour mettre à jour toutes les dépendances NPM d'un projet :

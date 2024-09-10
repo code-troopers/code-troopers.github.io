@@ -35,7 +35,7 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Expiry Date", name: "expirydate", widget: "datetime", format: "YYYY-MM-DD", timeFormat: false, required: false, default: ''}
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Draft", name: "draft", widget: "boolean", default: true}
-      - {label: "Tags", name: "tags", widget: "list"}
+      - {label: "Tags", name: "tipstags", widget: "list"}
   - name: "post" # Used in routes, ie.: /admin/collections/:slug/edit
     label: "Post" # Used in the UI, ie.: "New Post"
     folder: "site/content/blog" # The path to the folder where the documents are stored

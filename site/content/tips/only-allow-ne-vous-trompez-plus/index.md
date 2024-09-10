@@ -4,7 +4,7 @@ author: probillard
 date: 2024-05-24
 expirydate: ""
 draft: false
-tags:
+tipstags:
   - npm
   - yarn
 ---
