@@ -1,0 +1,13 @@
+<section id="tips">
+    <h1>Tips</h1>
+
+    <div class="wrapper">
+
+                {{ range first 3 (where .Site.RegularPages "Section" "tips") }}
+                {{ .Render "li" }}
+                {{ end }}
+    </div>
+    <div class="wrapper-center">
+        <a href="/tips/" class="btn">Tous nos tips</a>
+    </div>
+</section>
