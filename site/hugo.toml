@@ -29,3 +29,10 @@ images = ["img/logo-code-troopers-tête-couleur.png"]
 
 [markup.goldmark.renderer]
 unsafe = true
+
+[taxonomies]
+  category = 'categories'
+  series = 'series'
+  tag = 'tags'
+  tipstag = 'tipstags'
+

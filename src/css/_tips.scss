@@ -1,0 +1,41 @@
+section#tips {
+    background: $darkGradient;
+    color: $white;
+    padding-bottom: 50px;
+
+    .wrapper {
+        max-width: 992px;
+        margin: 0 auto;
+    }
+
+    .tips-snippet {
+        min-height: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        width: 100%;
+        padding: 35px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+
+        border: 1px solid rgba($lightblue, 0.25);
+        border-radius: 20px;
+        background-color: rgba($darkerblue, 0.66);
+        box-shadow: 0 0 10px 1px rgba($lightblue, 0.25);
+
+        backdrop-filter: blur(15px);
+
+        a {
+            color: $nyanza;
+            text-decoration: underline;
+            &:hover {
+                color: $lightblue;
+            }
+        }
+
+        h2 {
+            margin: 0;
+        }
+    }
+}
