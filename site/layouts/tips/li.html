@@ -10,7 +10,7 @@
       {{ end }}
     </h2>
     <ul class="tags">
-      {{ range $index, $tag := .Params.tags }}
+      {{ range $index, $tag := .Params.tipstags }}
       <li><a aria-label="Tag {{ $tag }}" href="/tipstags/{{ $tag | urlize }}/">{{ $tag }}</a></li>
       {{ end }}
     </ul>
