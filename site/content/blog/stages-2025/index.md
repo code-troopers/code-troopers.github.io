@@ -5,7 +5,7 @@ url: /2024/10/18/stage-2025
 aliases: stage-2025
 date: 2024-10-18
 expirydate: 2025-09-01
-cover: stage-2025.png
+cover: 0m1a8025.jpg
 draft: false
 tags: []
 ---
