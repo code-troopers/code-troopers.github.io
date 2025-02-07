@@ -4,25 +4,22 @@
 @import "../../node_modules/lightbox2/dist/css/lightbox.css";
 @import "variables";
 @import "mixins";
-@import "header";
-@import "numbers";
-@import "skills";
-@import "contact";
-@import "footer";
+@import "header.css";
+@import "skills.css";
+@import "contact.css";
+@import "footer.css";
 @import "portfolio";
 @import "blog";
-@import "casting";
+@import "casting.css";
 @import "pagination";
-@import "404";
-@import "share";
-@import "swiper";
-@import "legals";
-@import "cloud";
-@import "april";
-@import "navig";
-@import "team";
-@import "tips";
-@import "tipstags";
+@import "share.css";
+@import "legals.css";
+@import "cloud.css";
+@import "april.css";
+@import "navig.css";
+@import "team.css";
+@import "tips.css";
+@import "tipstags.css";
 
 :root {
   scroll-behavior: smooth;
@@ -204,5 +201,59 @@ a {
   to {
     transform: translateY(0);
     opacity: 1;
+  }
+}
+
+.separator{
+  &::after {
+    content: ' ';
+    display: block;
+    padding-top: 0.8rem;
+    margin-left: -0.6rem;
+    border-bottom: 1px solid var(--separator-color);
+    width: 50px;
+    .center {
+      margin: auto;
+    }
+  }
+}
+/*
+($gradient, $bg : 'light')
+*/
+.gradient-text {
+  @supports(mix-blend-mode: lighten) {
+    overflow: hidden;
+    //fix when zooming blending can leak
+    border: 1px solid transparent;
+    display: inline-block;
+    position: relative;
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0; right: 0; left: 0; bottom: 0;
+
+      background: unquote(var(--gradient));
+      pointer-events: none;
+    }
+
+    color: #000;
+    background: #fff;
+    mix-blend-mode: multiply;
+
+    &::before {
+      mix-blend-mode: screen;
+    }
+
+    .dark {
+      color: #fff;
+      background: #000;
+      mix-blend-mode: lighten;
+
+      &::before {
+        mix-blend-mode: multiply;
+      }
+    }
   }
 }

@@ -1,9 +1,7 @@
-@import 'variables';
-@import 'mixins';
 
 section#contact {
-  background: $gradient;
-  color: $white;
+  background: var(--gradient);
+  color: var(--white);
   padding-bottom: 5rem;
 
   & > div {
@@ -11,17 +9,14 @@ section#contact {
 
     & > div {
       flex: 1;
-      background: $white;
-      color: $black;
+      background: var(--white);
+      color: var(--black);
     }
     & > div:first-child {
       max-height: 550px;
     }
     & > div:last-child {
       padding: 5rem;
-      h2 {
-        @include separator($black)
-      }
 
       p {
         line-height: 1.5rem;
@@ -32,17 +27,17 @@ section#contact {
       }
 
       a {
-        color: $black;
+        color: var(--black);
         &:hover {
-          color: $lightblue;
+          color: var(--lightblue);
         }
       }
       
       a.button {
         display: inline-block;
         width: auto;
-        background: $darkGradient;
-        color: $white;
+        background: var(--darkGradient);
+        color: var(--white);
         padding: 0.5rem 1rem;
         border-radius: 0.3rem;
         text-decoration: none;
@@ -50,19 +45,9 @@ section#contact {
       }
     }
   }
-
-  ul {
-    justify-content: center;
-    @media screen and (min-width: $tablet) {
-      width: 60%;
-    }
-    li {
-      @include socialBubble()
-    }
-  }
 }
 
-@media screen and (max-width: $tablet) {
+@media (width < var(--tablet)) {
   section#contact {
     letter-spacing: initial;
     & > div {

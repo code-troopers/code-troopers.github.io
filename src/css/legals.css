@@ -1,21 +1,20 @@
-@import "variables";
 
 section#text{
-  background: $white;
+  --separator-color: black;
+  background: var(--white);
   width: 1200px;
   margin: 0 auto;
-  h2{
-    @include separator($black);
-  }
+
   address{
     white-space: pre-wrap;
   }
 
+
   p, address, a{
-    color: $darkgrey;
+    color: var(--darkgrey);
   }
 
-  @media screen and (max-width: $desktop) {
+  @media (width < var(--desktop)) {
     width: 90%;
     letter-spacing: initial;
   }

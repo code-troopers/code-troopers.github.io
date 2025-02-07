@@ -1,12 +1,11 @@
-@import 'variables';
 
 footer {
-  background: $black;
+  background: var(--black);
 
   .wrapper {
     margin: auto;
     padding: 5rem 30px 2rem;
-    color: $lightgrey;
+    color: var(--lightgrey);
     font-size: 0.7rem;
 
     img{
@@ -42,7 +41,7 @@ footer {
   }
 }
 
-@media screen and (max-width: $tablet) {
+@media screen and (max-width: var(--tablet)) {
   footer{
     .wrapper{
       padding-bottom: 5rem;

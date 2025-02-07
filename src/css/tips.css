@@ -1,6 +1,6 @@
-section#tipstags {
-    background: $darkGradient;
-    color: $white;
+section#tips {
+    background: var(--darkGradient);
+    color: var(--white);
     padding-bottom: 50px;
 
     .wrapper {
@@ -19,18 +19,18 @@ section#tipstags {
         margin-top: 20px;
         margin-bottom: 20px;
 
-        border: 1px solid rgba($lightblue, 0.25);
+        border: 1px solid rgba(var(--lightblue), 0.25);
         border-radius: 20px;
-        background-color: rgba($darkerblue, 0.66);
-        box-shadow: 0 0 10px 1px rgba($lightblue, 0.25);
+        background-color: rgba(var(--darkerblue), 0.66);
+        box-shadow: 0 0 10px 1px rgba(var(--lightblue), 0.25);
 
         backdrop-filter: blur(15px);
 
         a {
-            color: $nyanza;
+            color: var(--nyanza);
             text-decoration: underline;
             &:hover {
-                color: $lightblue;
+                color: var(--lightblue);
             }
         }
 
