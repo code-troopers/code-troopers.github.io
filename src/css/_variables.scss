@@ -1,3 +1,40 @@
+:root {
+    --black: #000;
+    --darkgrey: #313131;
+    --grey: #959595;
+    --lightgrey: #EFEFEF;
+    --white: #FFF;
+    --greywhite: #F0F0F0;
+    --bloggrey: #323232;
+
+    --lightblue: #3BCCE5;
+    --darkblue: #409AD6;
+    --darkerblue: #46506d;
+
+    --avatarLightBlue: #3CCDE6;
+    --avatarDarkBlue: #419BD7;
+
+    --sandyBrown: #FA9F42;
+    --darkSandyBrown: #D68B2F;
+
+    --nyanza: #D6F6DD;
+    --darkNyanza: #3CCF6E;
+
+    --periwinki: #DAC4F7;
+    --darkPeriwinki: #6D3CCF;
+
+    --tablet: 768px;
+    --smalldesktop: 1024px;
+    --desktop: 1200px;
+    --phone: 512px;
+    --smallphone: 320px;
+
+    --gradient: linear-gradient(60deg, var(--lightblue) 0%,var(--darkblue) 100%);
+    --darkGradient: linear-gradient(60deg, var(--darkblue) 0%, var(--darkerblue) 100%);
+    --avatarGradient: linear-gradient(90deg, var(--avatarLightBlue) 0%, var(--avatarDarkBlue) 100%);
+}
+
+
 $black: #000;
 $darkgrey: #313131;
 $grey: #959595;
@@ -8,7 +45,6 @@ $bloggrey: #323232;
 
 $lightblue: #3BCCE5;
 $darkblue: #409AD6;
-// $darkerblue: #03045E;
 $darkerblue: #46506d;
 
 $avatarLightBlue: #3CCDE6;

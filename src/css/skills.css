@@ -1,9 +1,7 @@
-@import 'variables';
-@import 'mixins';
 
 section#skills{
-  background: $darkGradient;
-  color: $white;
+  background: var(--darkGradient);
+  color: var(--white);
 
   .wrapper{
     margin: auto;
@@ -15,14 +13,12 @@ section#skills{
       li{
         margin: 1rem;
 
-
-
-        @media screen and (max-width: $smalldesktop) {
+        @media (width < var(--smalldesktop)) {
             min-width: calc(50% - 2rem);
             max-width: calc(50% - 2rem);
         }
 
-        @media screen and (max-width: $phone) {
+        @media (width < var(--phone)) {
           min-width: 51%;
           max-width: 51%;
           margin: 1rem auto;
@@ -46,7 +42,7 @@ section#skills{
             display: block;
             padding-top: 0.8rem;
             margin: auto;
-            border-top: 1px solid $white;
+            border-top: 1px solid var(--white);
             width: 30px;
           }
           line-height: 1.4rem;

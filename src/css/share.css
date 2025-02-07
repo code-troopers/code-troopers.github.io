@@ -1,12 +1,11 @@
-@import "variables";
 .share{
   border-radius: 0.5rem;
-  border: 2px solid $lightgrey;
+  border: 2px solid var(--lightgrey);
   padding: 0.8rem;
   clear:both;
   font-size: 0.8rem;
   > span {
-    color: $grey;
+    color: var(--grey);
   }
   > ul {
     float: right;
@@ -16,11 +15,11 @@
       font-size: 1rem;
       padding: 0 0.8rem;
       &:hover {
-        color: $darkblue;
+        color: var(--darkblue);
         a{
           color: inherit;
           &:hover{
-            color: $darkblue !important;
+            color: var(--darkblue) !important;
           }
         }
       }

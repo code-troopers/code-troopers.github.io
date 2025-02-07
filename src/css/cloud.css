@@ -1,6 +1,6 @@
 section#cloud {
-  background: $darkGradient;
-  color: $white;
+  background: var(--darkGradient);
+  color: var(--white);
 
   .wrapper {
     margin: auto;
@@ -10,7 +10,7 @@ section#cloud {
 
     .cloud {
       position: relative;
-      @media screen and (max-width: 767px) {
+      @media (width < var(--tablet)) {
         width: 315px;
         height: 500px;
       }
@@ -48,13 +48,13 @@ section#cloud {
   }
 
   .w10 {
-    --word-color: #{$sandyBrown};
-    --bg-word-color: #{$sandyBrown};
+    --word-color: var(--sandyBrown);
+    --bg-word-color: var(--sandyBrown);
     font-size: 1.6rem;
   }
   .w9 {
-    --word-color: #{$nyanza};
-    --bg-word-color: #{$nyanza};
+    --word-color: var(--nyanza);
+    --bg-word-color: var(--nyanza);
     font-size: 1.5rem;
   }
   .w8 {
