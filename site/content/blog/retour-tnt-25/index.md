@@ -1,12 +1,12 @@
 ---
 title: Retour TNT#25
 author: L'équipe Code-Troopers
-url: retour_tnt25
-aliases: retour_tnt25
+url: /2025/03/05/retour-tnt-25/
+aliases: /2025/03/05/retourTNT25.html
 date: 2025-03-05
 expirydate: ""
 cover: 54340947961_25b4971b6e_c.jpg
-draft: true
+draft: false
 tags:
   - Confs
 ---
