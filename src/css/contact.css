@@ -1,8 +1,33 @@
-
 section#contact {
+  img {
+    &.cover {
+      height: 100%;
+      width: 100%;
+    }
+  }
+  a {
+    display: inline-block;
+  }
   background: var(--gradient);
   color: var(--white);
   padding-bottom: 5rem;
+
+  ul {
+    a {
+      border: 2px solid #fff;
+      border-radius: 50%;
+      position: relative;
+      height: 5rem;
+      width: 5rem;
+      @media screen and (max-width: 767px) {
+        height: 3rem;
+        width: 3rem;
+      }
+      &:hover {
+        background-color: #fff;
+      }
+    }
+  }
 
   & > div {
     display: flex;
@@ -32,7 +57,7 @@ section#contact {
           color: var(--lightblue);
         }
       }
-      
+
       a.button {
         display: inline-block;
         width: auto;
