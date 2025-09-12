@@ -162,9 +162,13 @@ a {
   .icon-svg {
     width: 3rem;
     height: 3rem;
+    margin-top: 0.8rem;
+    margin-left: auto;
+    margin-right: auto;
     @media screen and (max-width: 767px) {
       width: 2rem;
       height: 2rem;
+      margin-top: 0.4rem;
     }
   }
 }
@@ -204,9 +208,9 @@ a {
   }
 }
 
-.separator{
+.separator {
   &::after {
-    content: ' ';
+    content: " ";
     display: block;
     padding-top: 0.8rem;
     margin-left: -0.6rem;
@@ -221,7 +225,7 @@ a {
 ($gradient, $bg : 'light')
 */
 .gradient-text {
-  @supports(mix-blend-mode: lighten) {
+  @supports (mix-blend-mode: lighten) {
     overflow: hidden;
     //fix when zooming blending can leak
     border: 1px solid transparent;
@@ -229,10 +233,13 @@ a {
     position: relative;
 
     &::before {
-      content: '';
+      content: "";
       display: block;
       position: absolute;
-      top: 0; right: 0; left: 0; bottom: 0;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
 
       background: unquote(var(--gradient));
       pointer-events: none;
