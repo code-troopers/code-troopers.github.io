@@ -5,50 +5,73 @@ aliases: /navig.html
 type: product
 ---
 
-<div class="flex-1 flex items-center justify-center relative">
-  <div class="flex items-center justify-center w-full h-full">
-    <iframe
-      title="wireframe-paH4878E9lPSgfjirA9O"
-      srcdoc='<html><head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script> window.FontAwesomeConfig = { autoReplaceSvg: &apos;nest&apos;};</script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    
-    <style>
-        ::-webkit-scrollbar { display: none;}
-        body { font-family: &apos;Inter&apos;, sans-serif; }
-        .gradient-primary { background: linear-gradient(135deg, #05668D 0%, #427AA1 100%); }
-        .gradient-secondary { background: linear-gradient(135deg, #679436 0%, #A5BE00 100%); }
-        .text-primary { color: #05668D; }
-        .text-secondary { color: #427AA1; }
-        .bg-light { background-color: #EBF2FA; }
-        .text-accent { color: #679436; }
-        .bg-accent { background-color: #A5BE00; }
-    </style>
-    <script>tailwind.config = {
-  "theme": {
-    "extend": {
-      "colors": {
-        "navig-primary": "#05668D",
-        "navig-secondary": "#427AA1",
-        "navig-light": "#EBF2FA",
-        "navig-accent": "#679436",
-        "navig-bright": "#A5BE00"
-      },
-      "fontFamily": {
-        "sans": [
-          "Inter",
-          "sans-serif"
-        ]
-      }
-    }
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  window.FontAwesomeConfig = { autoReplaceSvg: "nest" };
+</script>
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+></script>
+
+<style>
+  ::-webkit-scrollbar {
+    display: none;
   }
-};</script>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;amp;display=swap"><style>
+  body {
+    font-family: "Inter", sans-serif;
+  }
+  .gradient-primary {
+    background: linear-gradient(135deg, #05668d 0%, #427aa1 100%);
+  }
+  .gradient-secondary {
+    background: linear-gradient(135deg, #679436 0%, #a5be00 100%);
+  }
+  .text-primary {
+    color: #05668d;
+  }
+  .text-secondary {
+    color: #427aa1;
+  }
+  .bg-light {
+    background-color: #ebf2fa;
+  }
+  .text-accent {
+    color: #679436;
+  }
+  .bg-accent {
+    background-color: #a5be00;
+  }
+</style>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          "navig-primary": "#05668D",
+          "navig-secondary": "#427AA1",
+          "navig-light": "#EBF2FA",
+          "navig-accent": "#679436",
+          "navig-bright": "#A5BE00",
+        },
+        fontFamily: {
+          sans: ["Inter", "sans-serif"],
+        },
+      },
+    },
+  };
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com" /><link
+  rel="preconnect"
+  href="https://fonts.gstatic.com"
+  crossorigin=""
+/><link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;amp;display=swap"
+/><style>
   .highlighted-section {
-    outline: 2px solid #3F20FB;
+    outline: 2px solid #3f20fb;
     background-color: rgba(63, 32, 251, 0.1);
   }
 
@@ -61,1175 +84,1558 @@ type: product
     display: none;
   }
 
-  html, body {
+  html,
+  body {
     -ms-overflow-style: none;
     scrollbar-width: none;
   }
-  </style></head>
-<body class="bg-white">
-
-<!-- Header Navigation -->
-<header id="header" class="bg-white shadow-sm sticky top-0 z-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between items-center h-16">
-            <div class="flex items-center">
-                <div class="bg-navig-primary rounded-lg p-2 mr-3">
-                    <i class="fas fa-route text-white text-xl"></i>
-                </div>
-                <span class="text-2xl font-bold text-navig-primary">Navig&apos;</span>
-            </div>
-            <nav class="hidden md:flex space-x-8">
-                <span class="text-gray-600 hover:text-navig-primary transition-colors cursor-pointer">Fonctionnalités</span>
-                <span class="text-gray-600 hover:text-navig-primary transition-colors cursor-pointer">Villes</span>
-                <span class="text-gray-600 hover:text-navig-primary transition-colors cursor-pointer">Expertise</span>
-                <span class="text-gray-600 hover:text-navig-primary transition-colors cursor-pointer">Collectivités</span>
-                <span class="text-gray-600 hover:text-navig-primary transition-colors cursor-pointer">Contact</span>
-            </nav>
-            <div class="flex items-center space-x-4">
-                <button class="gradient-primary text-white px-6 py-2 rounded-lg font-medium hover:opacity-90 transition-opacity">
-                    Télécharger
-                </button>
-                <button class="md:hidden">
-                    <i class="fas fa-bars text-gray-600"></i>
-                </button>
-            </div>
-        </div>
-    </div>
-</header>
+</style>
 
 <!-- Hero Section - Institutional Version -->
 <section id="hero-institutional" class="relative overflow-hidden h-[700px]">
-    <div class="absolute inset-0 gradient-primary"></div>
-    <div class="absolute inset-0 bg-black bg-opacity-10"></div>
-    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center w-full">
-            <div class="text-white">
-                <div class="flex items-center mb-6">
-                    <div class="bg-white bg-opacity-20 rounded-full px-4 py-2 text-sm font-medium">
-                        <i class="fas fa-shield-alt mr-2"></i>
-                        Application officielle
-                    </div>
-                </div>
-                <h1 class="text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-                    La mobilité urbaine
-                    <span class="text-navig-bright">intelligente</span>
-                </h1>
-                <p class="text-xl mb-8 text-blue-100 leading-relaxed">
-                    Solution officielle de transport public pour les collectivités modernes. 
-                    Fiable, sécurisée et adoptée par plus de 200 000 utilisateurs.
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4 mb-8">
-                    <button class="bg-white text-navig-primary px-8 py-4 rounded-lg font-semibold hover:bg-gray-50 transition-colors flex items-center justify-center">
-                        <i class="fab fa-apple mr-3 text-xl"></i>
-                        App Store
-                    </button>
-                    <button class="bg-navig-bright text-white px-8 py-4 rounded-lg font-semibold hover:opacity-90 transition-opacity flex items-center justify-center">
-                        <i class="fab fa-google-play mr-3 text-xl"></i>
-                        Google Play
-                    </button>
-                </div>
-                <div class="flex items-center space-x-6 text-blue-100">
-                    <div class="flex items-center">
-                        <i class="fas fa-users mr-2"></i>
-                        <span class="text-sm">+200k utilisateurs</span>
-                    </div>
-                    <div class="flex items-center">
-                        <i class="fas fa-city mr-2"></i>
-                        <span class="text-sm">2 villes partenaires</span>
-                    </div>
-                    <div class="flex items-center">
-                        <i class="fas fa-calendar mr-2"></i>
-                        <span class="text-sm">Depuis 2014</span>
-                    </div>
-                </div>
-            </div>
-            <div class="relative">
-                <div class="flex justify-center items-center">
-                    <img class="w-80 h-auto drop-shadow-2xl" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/ae77919837-5b2e6e59c87b60649456.png" alt="modern smartphone mockup showing public transport app interface with clean blue design, route planning screen">
-                </div>
-                <div class="absolute -top-10 -left-10 bg-white bg-opacity-20 rounded-full w-32 h-32 animate-pulse"></div>
-                <div class="absolute -bottom-10 -right-10 bg-navig-bright bg-opacity-30 rounded-full w-24 h-24 animate-pulse delay-1000"></div>
-            </div>
+  <div class="absolute inset-0 gradient-primary"></div>
+  <div class="absolute inset-0 bg-black bg-opacity-10"></div>
+  <div
+    class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center"
+  >
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center w-full">
+      <div class="text-white">
+        <div class="flex items-center mb-6">
+          <div
+            class="bg-white bg-opacity-20 rounded-full px-4 py-2 text-sm font-medium"
+          >
+            <i class="fas fa-shield-alt mr-2"></i>
+            Application officielle
+          </div>
         </div>
+        <h1 class="text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+          La mobilité urbaine
+          <span class="text-navig-bright">intelligente</span>
+        </h1>
+        <p class="text-xl mb-8 text-blue-100 leading-relaxed">
+          Solution officielle de transport public pour les collectivités
+          modernes. Fiable, sécurisée et adoptée par plus de 200 000
+          utilisateurs.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 mb-8">
+          <button
+            class="bg-white text-navig-primary px-8 py-4 rounded-lg font-semibold hover:bg-gray-50 transition-colors flex items-center justify-center"
+          >
+            <i class="fab fa-apple mr-3 text-xl"></i>
+            App Store
+          </button>
+          <button
+            class="bg-navig-bright text-white px-8 py-4 rounded-lg font-semibold hover:opacity-90 transition-opacity flex items-center justify-center"
+          >
+            <i class="fab fa-google-play mr-3 text-xl"></i>
+            Google Play
+          </button>
+        </div>
+        <div class="flex items-center space-x-6 text-blue-100">
+          <div class="flex items-center">
+            <i class="fas fa-users mr-2"></i>
+            <span class="text-sm">+200k utilisateurs</span>
+          </div>
+          <div class="flex items-center">
+            <i class="fas fa-city mr-2"></i>
+            <span class="text-sm">2 villes partenaires</span>
+          </div>
+          <div class="flex items-center">
+            <i class="fas fa-calendar mr-2"></i>
+            <span class="text-sm">Depuis 2014</span>
+          </div>
+        </div>
+      </div>
+      <div class="relative">
+        <div class="flex justify-center items-center">
+          <img
+            class="w-80 h-auto drop-shadow-2xl"
+            src="https://storage.googleapis.com/uxpilot-auth.appspot.com/ae77919837-5b2e6e59c87b60649456.png"
+            alt="modern smartphone mockup showing public transport app interface with clean blue design, route planning screen"
+          />
+        </div>
+        <div
+          class="absolute -top-10 -left-10 bg-white bg-opacity-20 rounded-full w-32 h-32 animate-pulse"
+        ></div>
+        <div
+          class="absolute -bottom-10 -right-10 bg-navig-bright bg-opacity-30 rounded-full w-24 h-24 animate-pulse delay-1000"
+        ></div>
+      </div>
     </div>
+  </div>
 </section>
 
 <!-- Hero Section - User-Focused Version (Alternative) -->
 <section id="hero-user" class="relative overflow-hidden h-[700px] hidden">
-    <div class="absolute inset-0 bg-gradient-to-br from-navig-light via-white to-navig-light"></div>
-    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center w-full">
-            <div>
-                <div class="flex items-center mb-6">
-                    <div class="gradient-secondary rounded-full px-4 py-2 text-white text-sm font-medium">
-                        <i class="fas fa-mobile-alt mr-2"></i>
-                        Gratuit et simple
-                    </div>
-                </div>
-                <h1 class="text-5xl lg:text-6xl font-bold mb-6 leading-tight text-navig-primary">
-                    Vos transports
-                    <span class="text-navig-accent">en temps réel</span>
-                </h1>
-                <p class="text-xl mb-8 text-gray-600 leading-relaxed">
-                    Planifiez vos trajets, suivez vos lignes préférées et restez informé 
-                    des perturbations en temps réel. Simple, rapide, efficace.
-                </p>
-                <div class="grid grid-cols-2 gap-4 mb-8">
-                    <div class="flex items-center text-navig-secondary">
-                        <i class="fas fa-route mr-3 text-navig-accent"></i>
-                        <span class="font-medium">Calcul d&apos;itinéraires</span>
-                    </div>
-                    <div class="flex items-center text-navig-secondary">
-                        <i class="fas fa-clock mr-3 text-navig-accent"></i>
-                        <span class="font-medium">Horaires temps réel</span>
-                    </div>
-                    <div class="flex items-center text-navig-secondary">
-                        <i class="fas fa-heart mr-3 text-navig-accent"></i>
-                        <span class="font-medium">Lignes favorites</span>
-                    </div>
-                    <div class="flex items-center text-navig-secondary">
-                        <i class="fas fa-bell mr-3 text-navig-accent"></i>
-                        <span class="font-medium">Alertes perturbations</span>
-                    </div>
-                </div>
-                <div class="flex flex-col sm:flex-row gap-4">
-                    <button class="gradient-primary text-white px-8 py-4 rounded-lg font-semibold hover:opacity-90 transition-opacity flex items-center justify-center">
-                        <i class="fab fa-apple mr-3 text-xl"></i>
-                        Télécharger sur App Store
-                    </button>
-                    <button class="border-2 border-navig-primary text-navig-primary px-8 py-4 rounded-lg font-semibold hover:bg-navig-primary hover:text-white transition-colors flex items-center justify-center">
-                        <i class="fab fa-google-play mr-3 text-xl"></i>
-                        Obtenir sur Google Play
-                    </button>
-                </div>
-            </div>
-            <div class="relative">
-                <img class="w-80 h-auto mx-auto" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/29fe542ae6-df7a1a0d1735eb1941bb.png" alt="smartphone showing transport app with route map, clean modern interface, real-time bus tracking">
-                <div class="absolute top-0 right-0 bg-navig-bright rounded-lg px-3 py-2 text-white text-sm font-medium shadow-lg">
-                    <i class="fas fa-star mr-1"></i>
-                    4.8/5
-                </div>
-            </div>
+  <div
+    class="absolute inset-0 bg-gradient-to-br from-navig-light via-white to-navig-light"
+  ></div>
+  <div
+    class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center"
+  >
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center w-full">
+      <div>
+        <div class="flex items-center mb-6">
+          <div
+            class="gradient-secondary rounded-full px-4 py-2 text-white text-sm font-medium"
+          >
+            <i class="fas fa-mobile-alt mr-2"></i>
+            Gratuit et simple
+          </div>
         </div>
+        <h1
+          class="text-5xl lg:text-6xl font-bold mb-6 leading-tight text-navig-primary"
+        >
+          Vos transports
+          <span class="text-navig-accent">en temps réel</span>
+        </h1>
+        <p class="text-xl mb-8 text-gray-600 leading-relaxed">
+          Planifiez vos trajets, suivez vos lignes préférées et restez informé
+          des perturbations en temps réel. Simple, rapide, efficace.
+        </p>
+        <div class="grid grid-cols-2 gap-4 mb-8">
+          <div class="flex items-center text-navig-secondary">
+            <i class="fas fa-route mr-3 text-navig-accent"></i>
+            <span class="font-medium">Calcul d'itinéraires</span>
+          </div>
+          <div class="flex items-center text-navig-secondary">
+            <i class="fas fa-clock mr-3 text-navig-accent"></i>
+            <span class="font-medium">Horaires temps réel</span>
+          </div>
+          <div class="flex items-center text-navig-secondary">
+            <i class="fas fa-heart mr-3 text-navig-accent"></i>
+            <span class="font-medium">Lignes favorites</span>
+          </div>
+          <div class="flex items-center text-navig-secondary">
+            <i class="fas fa-bell mr-3 text-navig-accent"></i>
+            <span class="font-medium">Alertes perturbations</span>
+          </div>
+        </div>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <button
+            class="gradient-primary text-white px-8 py-4 rounded-lg font-semibold hover:opacity-90 transition-opacity flex items-center justify-center"
+          >
+            <i class="fab fa-apple mr-3 text-xl"></i>
+            Télécharger sur App Store
+          </button>
+          <button
+            class="border-2 border-navig-primary text-navig-primary px-8 py-4 rounded-lg font-semibold hover:bg-navig-primary hover:text-white transition-colors flex items-center justify-center"
+          >
+            <i class="fab fa-google-play mr-3 text-xl"></i>
+            Obtenir sur Google Play
+          </button>
+        </div>
+      </div>
+      <div class="relative">
+        <img
+          class="w-80 h-auto mx-auto"
+          src="https://storage.googleapis.com/uxpilot-auth.appspot.com/29fe542ae6-df7a1a0d1735eb1941bb.png"
+          alt="smartphone showing transport app with route map, clean modern interface, real-time bus tracking"
+        />
+        <div
+          class="absolute top-0 right-0 bg-navig-bright rounded-lg px-3 py-2 text-white text-sm font-medium shadow-lg"
+        >
+          <i class="fas fa-star mr-1"></i>
+          4.8/5
+        </div>
+      </div>
     </div>
+  </div>
 </section>
 
 <!-- Trust Indicators -->
 <section id="trust-indicators" class="py-16 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center">
-            <div class="text-center">
-                <div class="text-3xl font-bold text-navig-primary mb-2">2014</div>
-                <div class="text-gray-600 text-sm">Année de création</div>
-            </div>
-            <div class="text-center">
-                <div class="text-3xl font-bold text-navig-primary mb-2">200k+</div>
-                <div class="text-gray-600 text-sm">Utilisateurs actifs</div>
-            </div>
-            <div class="text-center">
-                <div class="text-3xl font-bold text-navig-primary mb-2">2</div>
-                <div class="text-gray-600 text-sm">Villes partenaires</div>
-            </div>
-            <div class="text-center">
-                <div class="text-3xl font-bold text-navig-primary mb-2">4.8/5</div>
-                <div class="text-gray-600 text-sm">Note utilisateurs</div>
-            </div>
-        </div>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div
+      class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center"
+    >
+      <div class="text-center">
+        <div class="text-3xl font-bold text-navig-primary mb-2">2014</div>
+        <div class="text-gray-600 text-sm">Année de création</div>
+      </div>
+      <div class="text-center">
+        <div class="text-3xl font-bold text-navig-primary mb-2">200k+</div>
+        <div class="text-gray-600 text-sm">Utilisateurs actifs</div>
+      </div>
+      <div class="text-center">
+        <div class="text-3xl font-bold text-navig-primary mb-2">2</div>
+        <div class="text-gray-600 text-sm">Villes partenaires</div>
+      </div>
+      <div class="text-center">
+        <div class="text-3xl font-bold text-navig-primary mb-2">4.8/5</div>
+        <div class="text-gray-600 text-sm">Note utilisateurs</div>
+      </div>
     </div>
+  </div>
 </section>
 
 <!-- Features Section -->
 <section id="features" class="py-20 bg-navig-light">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16">
-            <h2 class="text-4xl font-bold text-navig-primary mb-6">
-                Une expérience utilisateur
-                <span class="text-navig-accent">exceptionnelle</span>
-            </h2>
-            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                Navig&apos; simplifie vos déplacements quotidiens grâce à des fonctionnalités 
-                pensées pour les utilisateurs des transports publics modernes.
-            </p>
-        </div>
-        
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-            <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
-                <div class="gradient-primary rounded-full w-16 h-16 flex items-center justify-center mb-6">
-                    <i class="fas fa-route text-white text-2xl"></i>
-                </div>
-                <h3 class="text-xl font-bold text-navig-primary mb-4">Calcul d&apos;itinéraires intelligent</h3>
-                <p class="text-gray-600 mb-4">
-                    Trouvez le meilleur trajet en quelques secondes avec notre algorithme 
-                    optimisé qui prend en compte les correspondances et les temps d&apos;attente.
-                </p>
-                <ul class="text-sm text-gray-500 space-y-2">
-                    <li class="flex items-center"><i class="fas fa-check text-navig-accent mr-2"></i>Trajets multimodaux</li>
-                    <li class="flex items-center"><i class="fas fa-check text-navig-accent mr-2"></i>Options alternatives</li>
-                    <li class="flex items-center"><i class="fas fa-check text-navig-accent mr-2"></i>Temps de marche optimisé</li>
-                </ul>
-            </div>
-            
-            <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
-                <div class="gradient-secondary rounded-full w-16 h-16 flex items-center justify-center mb-6">
-                    <i class="fas fa-clock text-white text-2xl"></i>
-                </div>
-                <h3 class="text-xl font-bold text-navig-primary mb-4">Horaires temps réel</h3>
-                <p class="text-gray-600 mb-4">
-                    Consultez les horaires de passage en temps réel et ne ratez plus jamais 
-                    votre bus ou tramway grâce aux données actualisées en continu.
-                </p>
-                <ul class="text-sm text-gray-500 space-y-2">
-                    <li class="flex items-center"><i class="fas fa-check text-navig-accent mr-2"></i>Données temps réel</li>
-                    <li class="flex items-center"><i class="fas fa-check text-navig-accent mr-2"></i>Prédictions précises</li>
-                    <li class="flex items-center"><i class="fas fa-check text-navig-accent mr-2"></i>Mise à jour automatique</li>
-                </ul>
-            </div>
-            
-            <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
-                <div class="bg-navig-accent rounded-full w-16 h-16 flex items-center justify-center mb-6">
-                    <i class="fas fa-heart text-white text-2xl"></i>
-                </div>
-                <h3 class="text-xl font-bold text-navig-primary mb-4">Lignes favorites</h3>
-                <p class="text-gray-600 mb-4">
-                    Enregistrez vos lignes les plus utilisées pour un accès rapide aux 
-                    informations qui vous intéressent vraiment.
-                </p>
-                <ul class="text-sm text-gray-500 space-y-2">
-                    <li class="flex items-center"><i class="fas fa-check text-navig-accent mr-2"></i>Accès rapide</li>
-                    <li class="flex items-center"><i class="fas fa-check text-navig-accent mr-2"></i>Personnalisation</li>
-                    <li class="flex items-center"><i class="fas fa-check text-navig-accent mr-2"></i>Synchronisation cloud</li>
-                </ul>
-            </div>
-            
-            <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
-                <div class="bg-navig-bright rounded-full w-16 h-16 flex items-center justify-center mb-6">
-                    <i class="fas fa-bell text-white text-2xl"></i>
-                </div>
-                <h3 class="text-xl font-bold text-navig-primary mb-4">Alertes perturbations</h3>
-                <p class="text-gray-600 mb-4">
-                    Restez informé en temps réel des perturbations, travaux et événements 
-                    qui peuvent impacter vos trajets habituels.
-                </p>
-                <ul class="text-sm text-gray-500 space-y-2">
-                    <li class="flex items-center"><i class="fas fa-check text-navig-accent mr-2"></i>Notifications push</li>
-                    <li class="flex items-center"><i class="fas fa-check text-navig-accent mr-2"></i>Alternatives proposées</li>
-                    <li class="flex items-center"><i class="fas fa-check text-navig-accent mr-2"></i>Alertes personnalisées</li>
-                </ul>
-            </div>
-            
-            <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
-                <div class="gradient-primary rounded-full w-16 h-16 flex items-center justify-center mb-6">
-                    <i class="fas fa-ticket-alt text-white text-2xl"></i>
-                </div>
-                <h3 class="text-xl font-bold text-navig-primary mb-4">M-Ticket intégré</h3>
-                <p class="text-gray-600 mb-4">
-                    Achetez et validez vos titres de transport directement depuis l&apos;application 
-                    pour une expérience fluide et sans contact.
-                </p>
-                <ul class="text-sm text-gray-500 space-y-2">
-                    <li class="flex items-center"><i class="fas fa-check text-navig-accent mr-2"></i>Achat sécurisé</li>
-                    <li class="flex items-center"><i class="fas fa-check text-navig-accent mr-2"></i>Validation QR Code</li>
-                    <li class="flex items-center"><i class="fas fa-check text-navig-accent mr-2"></i>Historique des achats</li>
-                </ul>
-            </div>
-            
-            <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
-                <div class="gradient-secondary rounded-full w-16 h-16 flex items-center justify-center mb-6">
-                    <i class="fas fa-map text-white text-2xl"></i>
-                </div>
-                <h3 class="text-xl font-bold text-navig-primary mb-4">Cartographie interactive</h3>
-                <p class="text-gray-600 mb-4">
-                    Explorez le réseau de transport avec notre carte interactive haute 
-                    définition et localisez facilement les arrêts à proximité.
-                </p>
-                <ul class="text-sm text-gray-500 space-y-2">
-                    <li class="flex items-center"><i class="fas fa-check text-navig-accent mr-2"></i>Géolocalisation GPS</li>
-                    <li class="flex items-center"><i class="fas fa-check text-navig-accent mr-2"></i>Points d&apos;intérêt</li>
-                    <li class="flex items-center"><i class="fas fa-check text-navig-accent mr-2"></i>Mode hors ligne</li>
-                </ul>
-            </div>
-        </div>
-        
-        <div class="bg-white rounded-3xl p-12 shadow-xl">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div>
-                    <h3 class="text-3xl font-bold text-navig-primary mb-6">
-                        Interface pensée pour tous
-                    </h3>
-                    <p class="text-lg text-gray-600 mb-8">
-                        Notre design épuré et intuitif garantit une prise en main immédiate, 
-                        quel que soit votre niveau de familiarité avec les applications mobiles.
-                    </p>
-                    <div class="grid grid-cols-2 gap-6">
-                        <div class="text-center">
-                            <div class="gradient-primary rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-3">
-                                <i class="fas fa-eye text-white"></i>
-                            </div>
-                            <div class="text-sm font-medium text-navig-primary">Design accessible</div>
-                        </div>
-                        <div class="text-center">
-                            <div class="gradient-secondary rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-3">
-                                <i class="fas fa-language text-white"></i>
-                            </div>
-                            <div class="text-sm font-medium text-navig-primary">Multilingue</div>
-                        </div>
-                        <div class="text-center">
-                            <div class="bg-navig-accent rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-3">
-                                <i class="fas fa-mobile-alt text-white"></i>
-                            </div>
-                            <div class="text-sm font-medium text-navig-primary">Responsive</div>
-                        </div>
-                        <div class="text-center">
-                            <div class="bg-navig-bright rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-3">
-                                <i class="fas fa-bolt text-white"></i>
-                            </div>
-                            <div class="text-sm font-medium text-navig-primary">Ultra rapide</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="text-center">
-                    <img class="w-full max-w-md mx-auto" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/343df20fda-1892ff5d42af2660ab65.png" alt="smartphone interface mockup showing clean modern transport app design with accessibility features">
-                </div>
-            </div>
-        </div>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold text-navig-primary mb-6">
+        Une expérience utilisateur
+        <span class="text-navig-accent">exceptionnelle</span>
+      </h2>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+        Navig' simplifie vos déplacements quotidiens grâce à des fonctionnalités
+        pensées pour les utilisateurs des transports publics modernes.
+      </p>
     </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+      <div
+        class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow"
+      >
+        <div
+          class="gradient-primary rounded-full w-16 h-16 flex items-center justify-center mb-6"
+        >
+          <i class="fas fa-route text-white text-2xl"></i>
+        </div>
+        <h3 class="text-xl font-bold text-navig-primary mb-4">
+          Calcul d'itinéraires intelligent
+        </h3>
+        <p class="text-gray-600 mb-4">
+          Trouvez le meilleur trajet en quelques secondes avec notre algorithme
+          optimisé qui prend en compte les correspondances et les temps
+          d'attente.
+        </p>
+        <ul class="text-sm text-gray-500 space-y-2">
+          <li class="flex items-center">
+            <i class="fas fa-check text-navig-accent mr-2"></i>Trajets
+            multimodaux
+          </li>
+          <li class="flex items-center">
+            <i class="fas fa-check text-navig-accent mr-2"></i>Options
+            alternatives
+          </li>
+          <li class="flex items-center">
+            <i class="fas fa-check text-navig-accent mr-2"></i>Temps de marche
+            optimisé
+          </li>
+        </ul>
+      </div>
+
+      <div
+        class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow"
+      >
+        <div
+          class="gradient-secondary rounded-full w-16 h-16 flex items-center justify-center mb-6"
+        >
+          <i class="fas fa-clock text-white text-2xl"></i>
+        </div>
+        <h3 class="text-xl font-bold text-navig-primary mb-4">
+          Horaires temps réel
+        </h3>
+        <p class="text-gray-600 mb-4">
+          Consultez les horaires de passage en temps réel et ne ratez plus
+          jamais votre bus ou tramway grâce aux données actualisées en continu.
+        </p>
+        <ul class="text-sm text-gray-500 space-y-2">
+          <li class="flex items-center">
+            <i class="fas fa-check text-navig-accent mr-2"></i>Données temps
+            réel
+          </li>
+          <li class="flex items-center">
+            <i class="fas fa-check text-navig-accent mr-2"></i>Prédictions
+            précises
+          </li>
+          <li class="flex items-center">
+            <i class="fas fa-check text-navig-accent mr-2"></i>Mise à jour
+            automatique
+          </li>
+        </ul>
+      </div>
+
+      <div
+        class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow"
+      >
+        <div
+          class="bg-navig-accent rounded-full w-16 h-16 flex items-center justify-center mb-6"
+        >
+          <i class="fas fa-heart text-white text-2xl"></i>
+        </div>
+        <h3 class="text-xl font-bold text-navig-primary mb-4">
+          Lignes favorites
+        </h3>
+        <p class="text-gray-600 mb-4">
+          Enregistrez vos lignes les plus utilisées pour un accès rapide aux
+          informations qui vous intéressent vraiment.
+        </p>
+        <ul class="text-sm text-gray-500 space-y-2">
+          <li class="flex items-center">
+            <i class="fas fa-check text-navig-accent mr-2"></i>Accès rapide
+          </li>
+          <li class="flex items-center">
+            <i class="fas fa-check text-navig-accent mr-2"></i>Personnalisation
+          </li>
+          <li class="flex items-center">
+            <i class="fas fa-check text-navig-accent mr-2"></i>Synchronisation
+            cloud
+          </li>
+        </ul>
+      </div>
+
+      <div
+        class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow"
+      >
+        <div
+          class="bg-navig-bright rounded-full w-16 h-16 flex items-center justify-center mb-6"
+        >
+          <i class="fas fa-bell text-white text-2xl"></i>
+        </div>
+        <h3 class="text-xl font-bold text-navig-primary mb-4">
+          Alertes perturbations
+        </h3>
+        <p class="text-gray-600 mb-4">
+          Restez informé en temps réel des perturbations, travaux et événements
+          qui peuvent impacter vos trajets habituels.
+        </p>
+        <ul class="text-sm text-gray-500 space-y-2">
+          <li class="flex items-center">
+            <i class="fas fa-check text-navig-accent mr-2"></i>Notifications
+            push
+          </li>
+          <li class="flex items-center">
+            <i class="fas fa-check text-navig-accent mr-2"></i>Alternatives
+            proposées
+          </li>
+          <li class="flex items-center">
+            <i class="fas fa-check text-navig-accent mr-2"></i>Alertes
+            personnalisées
+          </li>
+        </ul>
+      </div>
+
+      <div
+        class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow"
+      >
+        <div
+          class="gradient-primary rounded-full w-16 h-16 flex items-center justify-center mb-6"
+        >
+          <i class="fas fa-ticket-alt text-white text-2xl"></i>
+        </div>
+        <h3 class="text-xl font-bold text-navig-primary mb-4">
+          M-Ticket intégré
+        </h3>
+        <p class="text-gray-600 mb-4">
+          Achetez et validez vos titres de transport directement depuis
+          l'application pour une expérience fluide et sans contact.
+        </p>
+        <ul class="text-sm text-gray-500 space-y-2">
+          <li class="flex items-center">
+            <i class="fas fa-check text-navig-accent mr-2"></i>Achat sécurisé
+          </li>
+          <li class="flex items-center">
+            <i class="fas fa-check text-navig-accent mr-2"></i>Validation QR
+            Code
+          </li>
+          <li class="flex items-center">
+            <i class="fas fa-check text-navig-accent mr-2"></i>Historique des
+            achats
+          </li>
+        </ul>
+      </div>
+
+      <div
+        class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow"
+      >
+        <div
+          class="gradient-secondary rounded-full w-16 h-16 flex items-center justify-center mb-6"
+        >
+          <i class="fas fa-map text-white text-2xl"></i>
+        </div>
+        <h3 class="text-xl font-bold text-navig-primary mb-4">
+          Cartographie interactive
+        </h3>
+        <p class="text-gray-600 mb-4">
+          Explorez le réseau de transport avec notre carte interactive haute
+          définition et localisez facilement les arrêts à proximité.
+        </p>
+        <ul class="text-sm text-gray-500 space-y-2">
+          <li class="flex items-center">
+            <i class="fas fa-check text-navig-accent mr-2"></i>Géolocalisation
+            GPS
+          </li>
+          <li class="flex items-center">
+            <i class="fas fa-check text-navig-accent mr-2"></i>Points d'intérêt
+          </li>
+          <li class="flex items-center">
+            <i class="fas fa-check text-navig-accent mr-2"></i>Mode hors ligne
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-3xl p-12 shadow-xl">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <h3 class="text-3xl font-bold text-navig-primary mb-6">
+            Interface pensée pour tous
+          </h3>
+          <p class="text-lg text-gray-600 mb-8">
+            Notre design épuré et intuitif garantit une prise en main immédiate,
+            quel que soit votre niveau de familiarité avec les applications
+            mobiles.
+          </p>
+          <div class="grid grid-cols-2 gap-6">
+            <div class="text-center">
+              <div
+                class="gradient-primary rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-3"
+              >
+                <i class="fas fa-eye text-white"></i>
+              </div>
+              <div class="text-sm font-medium text-navig-primary">
+                Design accessible
+              </div>
+            </div>
+            <div class="text-center">
+              <div
+                class="gradient-secondary rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-3"
+              >
+                <i class="fas fa-language text-white"></i>
+              </div>
+              <div class="text-sm font-medium text-navig-primary">
+                Multilingue
+              </div>
+            </div>
+            <div class="text-center">
+              <div
+                class="bg-navig-accent rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-3"
+              >
+                <i class="fas fa-mobile-alt text-white"></i>
+              </div>
+              <div class="text-sm font-medium text-navig-primary">
+                Responsive
+              </div>
+            </div>
+            <div class="text-center">
+              <div
+                class="bg-navig-bright rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-3"
+              >
+                <i class="fas fa-bolt text-white"></i>
+              </div>
+              <div class="text-sm font-medium text-navig-primary">
+                Ultra rapide
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="text-center">
+          <img
+            class="w-full max-w-md mx-auto"
+            src="https://storage.googleapis.com/uxpilot-auth.appspot.com/343df20fda-1892ff5d42af2660ab65.png"
+            alt="smartphone interface mockup showing clean modern transport app design with accessibility features"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- Cities Covered Section -->
 <section id="cities" class="py-20 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16">
-            <h2 class="text-4xl font-bold text-navig-primary mb-6">
-                Nos villes
-                <span class="text-navig-accent">partenaires</span>
-            </h2>
-            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                Navig&apos; est la solution officielle adoptée par les collectivités qui font 
-                confiance à notre expertise technique et notre engagement qualité.
-            </p>
-        </div>
-        
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
-            <div class="bg-gradient-to-br from-navig-light to-white rounded-3xl p-12 shadow-xl">
-                <div class="text-center mb-8">
-                    <div class="bg-white rounded-2xl p-6 shadow-lg inline-block mb-6">
-                        <img class="w-24 h-24" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/b967d52c15-55e228e39becfde47596.png" alt="Tours city logo Fil Bleu public transport official logo">
-                    </div>
-                    <h3 class="text-3xl font-bold text-navig-primary mb-4">Tours</h3>
-                    <p class="text-lg text-gray-600 mb-6">
-                        Partenaire officiel Fil Bleu depuis 2018
-                    </p>
-                </div>
-                
-                <div class="grid grid-cols-2 gap-6 mb-8">
-                    <div class="text-center">
-                        <div class="text-3xl font-bold text-navig-primary mb-2">100k+</div>
-                        <div class="text-gray-600 text-sm">Utilisateurs actifs</div>
-                    </div>
-                    <div class="text-center">
-                        <div class="text-3xl font-bold text-navig-primary mb-2">5</div>
-                        <div class="text-gray-600 text-sm">Lignes de tramway</div>
-                    </div>
-                    <div class="text-center">
-                        <div class="text-3xl font-bold text-navig-primary mb-2">45</div>
-                        <div class="text-gray-600 text-sm">Lignes de bus</div>
-                    </div>
-                    <div class="text-center">
-                        <div class="text-3xl font-bold text-navig-primary mb-2">4.9/5</div>
-                        <div class="text-gray-600 text-sm">Satisfaction</div>
-                    </div>
-                </div>
-                
-                <div class="bg-white rounded-2xl p-6">
-                    <h4 class="font-bold text-navig-primary mb-4">Services disponibles</h4>
-                    <div class="grid grid-cols-2 gap-3 text-sm">
-                        <div class="flex items-center">
-                            <i class="fas fa-check text-navig-accent mr-2"></i>
-                            <span>Temps réel</span>
-                        </div>
-                        <div class="flex items-center">
-                            <i class="fas fa-check text-navig-accent mr-2"></i>
-                            <span>M-Ticket</span>
-                        </div>
-                        <div class="flex items-center">
-                            <i class="fas fa-check text-navig-accent mr-2"></i>
-                            <span>Perturbations</span>
-                        </div>
-                        <div class="flex items-center">
-                            <i class="fas fa-check text-navig-accent mr-2"></i>
-                            <span>Géolocalisation</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="bg-gradient-to-br from-navig-light to-white rounded-3xl p-12 shadow-xl">
-                <div class="text-center mb-8">
-                    <div class="bg-white rounded-2xl p-6 shadow-lg inline-block mb-6">
-                        <img class="w-24 h-24" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/afac9c3d2b-47ab928a025ac4d50362.png" alt="Orleans city logo TAO public transport official logo">
-                    </div>
-                    <h3 class="text-3xl font-bold text-navig-primary mb-4">Orléans</h3>
-                    <p class="text-lg text-gray-600 mb-6">
-                        Partenaire officiel TAO depuis 2020
-                    </p>
-                </div>
-                
-                <div class="grid grid-cols-2 gap-6 mb-8">
-                    <div class="text-center">
-                        <div class="text-3xl font-bold text-navig-primary mb-2">120k+</div>
-                        <div class="text-gray-600 text-sm">Utilisateurs actifs</div>
-                    </div>
-                    <div class="text-center">
-                        <div class="text-3xl font-bold text-navig-primary mb-2">2</div>
-                        <div class="text-gray-600 text-sm">Lignes de tramway</div>
-                    </div>
-                    <div class="text-center">
-                        <div class="text-3xl font-bold text-navig-primary mb-2">38</div>
-                        <div class="text-gray-600 text-sm">Lignes de bus</div>
-                    </div>
-                    <div class="text-center">
-                        <div class="text-3xl font-bold text-navig-primary mb-2">4.7/5</div>
-                        <div class="text-gray-600 text-sm">Satisfaction</div>
-                    </div>
-                </div>
-                
-                <div class="bg-white rounded-2xl p-6">
-                    <h4 class="font-bold text-navig-primary mb-4">Services disponibles</h4>
-                    <div class="grid grid-cols-2 gap-3 text-sm">
-                        <div class="flex items-center">
-                            <i class="fas fa-check text-navig-accent mr-2"></i>
-                            <span>Temps réel</span>
-                        </div>
-                        <div class="flex items-center">
-                            <i class="fas fa-check text-navig-accent mr-2"></i>
-                            <span>M-Ticket</span>
-                        </div>
-                        <div class="flex items-center">
-                            <i class="fas fa-check text-navig-accent mr-2"></i>
-                            <span>Perturbations</span>
-                        </div>
-                        <div class="flex items-center">
-                            <i class="fas fa-check text-navig-accent mr-2"></i>
-                            <span>Géolocalisation</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="bg-gradient-to-r from-navig-primary to-navig-secondary rounded-3xl p-12 text-white text-center">
-            <h3 class="text-3xl font-bold mb-6">Votre ville souhaite rejoindre Navig&apos; ?</h3>
-            <p class="text-xl mb-8 text-blue-100">
-                Découvrez comment nous pouvons adapter notre solution à votre réseau de transport
-            </p>
-            <button class="bg-white text-navig-primary px-8 py-4 rounded-lg font-semibold hover:bg-gray-50 transition-colors">
-                <i class="fas fa-envelope mr-2"></i>
-                Contactez-nous
-            </button>
-        </div>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold text-navig-primary mb-6">
+        Nos villes
+        <span class="text-navig-accent">partenaires</span>
+      </h2>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+        Navig' est la solution officielle adoptée par les collectivités qui font
+        confiance à notre expertise technique et notre engagement qualité.
+      </p>
     </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
+      <div
+        class="bg-gradient-to-br from-navig-light to-white rounded-3xl p-12 shadow-xl"
+      >
+        <div class="text-center mb-8">
+          <div class="bg-white rounded-2xl p-6 shadow-lg inline-block mb-6">
+            <img
+              class="w-24 h-24"
+              src="https://storage.googleapis.com/uxpilot-auth.appspot.com/b967d52c15-55e228e39becfde47596.png"
+              alt="Tours city logo Fil Bleu public transport official logo"
+            />
+          </div>
+          <h3 class="text-3xl font-bold text-navig-primary mb-4">Tours</h3>
+          <p class="text-lg text-gray-600 mb-6">
+            Partenaire officiel Fil Bleu depuis 2018
+          </p>
+        </div>
+
+        <div class="grid grid-cols-2 gap-6 mb-8">
+          <div class="text-center">
+            <div class="text-3xl font-bold text-navig-primary mb-2">100k+</div>
+            <div class="text-gray-600 text-sm">Utilisateurs actifs</div>
+          </div>
+          <div class="text-center">
+            <div class="text-3xl font-bold text-navig-primary mb-2">5</div>
+            <div class="text-gray-600 text-sm">Lignes de tramway</div>
+          </div>
+          <div class="text-center">
+            <div class="text-3xl font-bold text-navig-primary mb-2">45</div>
+            <div class="text-gray-600 text-sm">Lignes de bus</div>
+          </div>
+          <div class="text-center">
+            <div class="text-3xl font-bold text-navig-primary mb-2">4.9/5</div>
+            <div class="text-gray-600 text-sm">Satisfaction</div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl p-6">
+          <h4 class="font-bold text-navig-primary mb-4">
+            Services disponibles
+          </h4>
+          <div class="grid grid-cols-2 gap-3 text-sm">
+            <div class="flex items-center">
+              <i class="fas fa-check text-navig-accent mr-2"></i>
+              <span>Temps réel</span>
+            </div>
+            <div class="flex items-center">
+              <i class="fas fa-check text-navig-accent mr-2"></i>
+              <span>M-Ticket</span>
+            </div>
+            <div class="flex items-center">
+              <i class="fas fa-check text-navig-accent mr-2"></i>
+              <span>Perturbations</span>
+            </div>
+            <div class="flex items-center">
+              <i class="fas fa-check text-navig-accent mr-2"></i>
+              <span>Géolocalisation</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="bg-gradient-to-br from-navig-light to-white rounded-3xl p-12 shadow-xl"
+      >
+        <div class="text-center mb-8">
+          <div class="bg-white rounded-2xl p-6 shadow-lg inline-block mb-6">
+            <img
+              class="w-24 h-24"
+              src="https://storage.googleapis.com/uxpilot-auth.appspot.com/afac9c3d2b-47ab928a025ac4d50362.png"
+              alt="Orleans city logo TAO public transport official logo"
+            />
+          </div>
+          <h3 class="text-3xl font-bold text-navig-primary mb-4">Orléans</h3>
+          <p class="text-lg text-gray-600 mb-6">
+            Partenaire officiel TAO depuis 2020
+          </p>
+        </div>
+
+        <div class="grid grid-cols-2 gap-6 mb-8">
+          <div class="text-center">
+            <div class="text-3xl font-bold text-navig-primary mb-2">120k+</div>
+            <div class="text-gray-600 text-sm">Utilisateurs actifs</div>
+          </div>
+          <div class="text-center">
+            <div class="text-3xl font-bold text-navig-primary mb-2">2</div>
+            <div class="text-gray-600 text-sm">Lignes de tramway</div>
+          </div>
+          <div class="text-center">
+            <div class="text-3xl font-bold text-navig-primary mb-2">38</div>
+            <div class="text-gray-600 text-sm">Lignes de bus</div>
+          </div>
+          <div class="text-center">
+            <div class="text-3xl font-bold text-navig-primary mb-2">4.7/5</div>
+            <div class="text-gray-600 text-sm">Satisfaction</div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl p-6">
+          <h4 class="font-bold text-navig-primary mb-4">
+            Services disponibles
+          </h4>
+          <div class="grid grid-cols-2 gap-3 text-sm">
+            <div class="flex items-center">
+              <i class="fas fa-check text-navig-accent mr-2"></i>
+              <span>Temps réel</span>
+            </div>
+            <div class="flex items-center">
+              <i class="fas fa-check text-navig-accent mr-2"></i>
+              <span>M-Ticket</span>
+            </div>
+            <div class="flex items-center">
+              <i class="fas fa-check text-navig-accent mr-2"></i>
+              <span>Perturbations</span>
+            </div>
+            <div class="flex items-center">
+              <i class="fas fa-check text-navig-accent mr-2"></i>
+              <span>Géolocalisation</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="bg-gradient-to-r from-navig-primary to-navig-secondary rounded-3xl p-12 text-white text-center"
+    >
+      <h3 class="text-3xl font-bold mb-6">
+        Votre ville souhaite rejoindre Navig' ?
+      </h3>
+      <p class="text-xl mb-8 text-blue-100">
+        Découvrez comment nous pouvons adapter notre solution à votre réseau de
+        transport
+      </p>
+      <button
+        class="bg-white text-navig-primary px-8 py-4 rounded-lg font-semibold hover:bg-gray-50 transition-colors"
+      >
+        <i class="fas fa-envelope mr-2"></i>
+        Contactez-nous
+      </button>
+    </div>
+  </div>
 </section>
 
 <!-- Credibility &amp; Expertise Section -->
 <section id="expertise" class="py-20 bg-navig-light">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16">
-            <h2 class="text-4xl font-bold text-navig-primary mb-6">
-                Une expertise
-                <span class="text-navig-accent">reconnue</span>
-            </h2>
-            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                Depuis 2014, nous développons des solutions innovantes pour la mobilité urbaine, 
-                avec un focus sur la fiabilité, la sécurité et l&apos;expérience utilisateur.
-            </p>
-        </div>
-        
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
-            <div class="lg:col-span-2">
-                <div class="bg-white rounded-3xl p-12 shadow-xl h-full">
-                    <div class="flex items-start space-x-6 mb-8">
-                        <div class="gradient-primary rounded-full w-16 h-16 flex items-center justify-center flex-shrink-0">
-                            <i class="fas fa-award text-white text-2xl"></i>
-                        </div>
-                        <div>
-                            <h3 class="text-2xl font-bold text-navig-primary mb-4">10 ans d&apos;innovation</h3>
-                            <p class="text-gray-600 text-lg leading-relaxed">
-                                Depuis 2014, nous sommes pionniers dans le développement d&apos;applications 
-                                de transport public en France. Notre expérience nous permet de comprendre 
-                                les enjeux spécifiques des collectivités et des usagers.
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <div>
-                            <h4 class="font-bold text-navig-primary mb-4">Nos certifications</h4>
-                            <ul class="space-y-3">
-                                <li class="flex items-center">
-                                    <i class="fas fa-shield-alt text-navig-accent mr-3"></i>
-                                    <span class="text-gray-600">ISO 27001 - Sécurité</span>
-                                </li>
-                                <li class="flex items-center">
-                                    <i class="fas fa-lock text-navig-accent mr-3"></i>
-                                    <span class="text-gray-600">RGPD Compliant</span>
-                                </li>
-                                <li class="flex items-center">
-                                    <i class="fas fa-universal-access text-navig-accent mr-3"></i>
-                                    <span class="text-gray-600">WCAG 2.1 AA</span>
-                                </li>
-                                <li class="flex items-center">
-                                    <i class="fas fa-cloud text-navig-accent mr-3"></i>
-                                    <span class="text-gray-600">Hébergement France</span>
-                                </li>
-                            </ul>
-                        </div>
-                        
-                        <div>
-                            <h4 class="font-bold text-navig-primary mb-4">Technologies</h4>
-                            <ul class="space-y-3">
-                                <li class="flex items-center">
-                                    <i class="fas fa-mobile-alt text-navig-accent mr-3"></i>
-                                    <span class="text-gray-600">Native iOS/Android</span>
-                                </li>
-                                <li class="flex items-center">
-                                    <i class="fas fa-server text-navig-accent mr-3"></i>
-                                    <span class="text-gray-600">API REST Scalable</span>
-                                </li>
-                                <li class="flex items-center">
-                                    <i class="fas fa-database text-navig-accent mr-3"></i>
-                                    <span class="text-gray-600">Big Data Analytics</span>
-                                </li>
-                                <li class="flex items-center">
-                                    <i class="fas fa-sync text-navig-accent mr-3"></i>
-                                    <span class="text-gray-600">Temps réel GTFS-RT</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="space-y-8">
-                <div class="bg-white rounded-3xl p-8 shadow-xl text-center">
-                    <div class="gradient-secondary rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
-                        <i class="fas fa-users text-white text-3xl"></i>
-                    </div>
-                    <div class="text-3xl font-bold text-navig-primary mb-2">200k+</div>
-                    <div class="text-gray-600">Utilisateurs quotidiens</div>
-                </div>
-                
-                <div class="bg-white rounded-3xl p-8 shadow-xl text-center">
-                    <div class="bg-navig-accent rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
-                        <i class="fas fa-chart-line text-white text-3xl"></i>
-                    </div>
-                    <div class="text-3xl font-bold text-navig-primary mb-2">99.9%</div>
-                    <div class="text-gray-600">Disponibilité service</div>
-                </div>
-                
-                <div class="bg-white rounded-3xl p-8 shadow-xl text-center">
-                    <div class="bg-navig-bright rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
-                        <i class="fas fa-rocket text-white text-3xl"></i>
-                    </div>
-                    <div class="text-3xl font-bold text-navig-primary mb-2">&amp;lt;2s</div>
-                    <div class="text-gray-600">Temps de réponse</div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="bg-white rounded-3xl p-12 shadow-xl">
-            <h3 class="text-3xl font-bold text-navig-primary text-center mb-12">
-                Nos partenaires technologiques
-            </h3>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center opacity-60">
-                <img class="h-12 w-auto grayscale hover:grayscale-0 transition-all" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/ad8cbc48c7-6243a803c068b3bef9e8.png" alt="Google Cloud Platform logo">
-                <img class="h-12 w-auto grayscale hover:grayscale-0 transition-all" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/352df9d619-8e87bf0c2003040144f0.png" alt="Microsoft Azure logo">
-                <img class="h-12 w-auto grayscale hover:grayscale-0 transition-all" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/b92e18b0c1-371f8b0d88d6c517fa89.png" alt="AWS Amazon Web Services logo">
-                <img class="h-12 w-auto grayscale hover:grayscale-0 transition-all" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/4c4573aab0-f19d07530d2337d8f683.png" alt="Apple developer program logo">
-            </div>
-        </div>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold text-navig-primary mb-6">
+        Une expertise
+        <span class="text-navig-accent">reconnue</span>
+      </h2>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+        Depuis 2014, nous développons des solutions innovantes pour la mobilité
+        urbaine, avec un focus sur la fiabilité, la sécurité et l'expérience
+        utilisateur.
+      </p>
     </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+      <div class="lg:col-span-2">
+        <div class="bg-white rounded-3xl p-12 shadow-xl h-full">
+          <div class="flex items-start space-x-6 mb-8">
+            <div
+              class="gradient-primary rounded-full w-16 h-16 flex items-center justify-center flex-shrink-0"
+            >
+              <i class="fas fa-award text-white text-2xl"></i>
+            </div>
+            <div>
+              <h3 class="text-2xl font-bold text-navig-primary mb-4">
+                10 ans d'innovation
+              </h3>
+              <p class="text-gray-600 text-lg leading-relaxed">
+                Depuis 2014, nous sommes pionniers dans le développement
+                d'applications de transport public en France. Notre expérience
+                nous permet de comprendre les enjeux spécifiques des
+                collectivités et des usagers.
+              </p>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h4 class="font-bold text-navig-primary mb-4">
+                Nos certifications
+              </h4>
+              <ul class="space-y-3">
+                <li class="flex items-center">
+                  <i class="fas fa-shield-alt text-navig-accent mr-3"></i>
+                  <span class="text-gray-600">ISO 27001 - Sécurité</span>
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-lock text-navig-accent mr-3"></i>
+                  <span class="text-gray-600">RGPD Compliant</span>
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-universal-access text-navig-accent mr-3"></i>
+                  <span class="text-gray-600">WCAG 2.1 AA</span>
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-cloud text-navig-accent mr-3"></i>
+                  <span class="text-gray-600">Hébergement France</span>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 class="font-bold text-navig-primary mb-4">Technologies</h4>
+              <ul class="space-y-3">
+                <li class="flex items-center">
+                  <i class="fas fa-mobile-alt text-navig-accent mr-3"></i>
+                  <span class="text-gray-600">Native iOS/Android</span>
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-server text-navig-accent mr-3"></i>
+                  <span class="text-gray-600">API REST Scalable</span>
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-database text-navig-accent mr-3"></i>
+                  <span class="text-gray-600">Big Data Analytics</span>
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-sync text-navig-accent mr-3"></i>
+                  <span class="text-gray-600">Temps réel GTFS-RT</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="space-y-8">
+        <div class="bg-white rounded-3xl p-8 shadow-xl text-center">
+          <div
+            class="gradient-secondary rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6"
+          >
+            <i class="fas fa-users text-white text-3xl"></i>
+          </div>
+          <div class="text-3xl font-bold text-navig-primary mb-2">200k+</div>
+          <div class="text-gray-600">Utilisateurs quotidiens</div>
+        </div>
+
+        <div class="bg-white rounded-3xl p-8 shadow-xl text-center">
+          <div
+            class="bg-navig-accent rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6"
+          >
+            <i class="fas fa-chart-line text-white text-3xl"></i>
+          </div>
+          <div class="text-3xl font-bold text-navig-primary mb-2">99.9%</div>
+          <div class="text-gray-600">Disponibilité service</div>
+        </div>
+
+        <div class="bg-white rounded-3xl p-8 shadow-xl text-center">
+          <div
+            class="bg-navig-bright rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6"
+          >
+            <i class="fas fa-rocket text-white text-3xl"></i>
+          </div>
+          <div class="text-3xl font-bold text-navig-primary mb-2">
+            &amp;lt;2s
+          </div>
+          <div class="text-gray-600">Temps de réponse</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-3xl p-12 shadow-xl">
+      <h3 class="text-3xl font-bold text-navig-primary text-center mb-12">
+        Nos partenaires technologiques
+      </h3>
+      <div
+        class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center opacity-60"
+      >
+        <img
+          class="h-12 w-auto grayscale hover:grayscale-0 transition-all"
+          src="https://storage.googleapis.com/uxpilot-auth.appspot.com/ad8cbc48c7-6243a803c068b3bef9e8.png"
+          alt="Google Cloud Platform logo"
+        />
+        <img
+          class="h-12 w-auto grayscale hover:grayscale-0 transition-all"
+          src="https://storage.googleapis.com/uxpilot-auth.appspot.com/352df9d619-8e87bf0c2003040144f0.png"
+          alt="Microsoft Azure logo"
+        />
+        <img
+          class="h-12 w-auto grayscale hover:grayscale-0 transition-all"
+          src="https://storage.googleapis.com/uxpilot-auth.appspot.com/b92e18b0c1-371f8b0d88d6c517fa89.png"
+          alt="AWS Amazon Web Services logo"
+        />
+        <img
+          class="h-12 w-auto grayscale hover:grayscale-0 transition-all"
+          src="https://storage.googleapis.com/uxpilot-auth.appspot.com/4c4573aab0-f19d07530d2337d8f683.png"
+          alt="Apple developer program logo"
+        />
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- Value for Municipalities Section -->
 <section id="municipalities" class="py-20 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16">
-            <h2 class="text-4xl font-bold text-navig-primary mb-6">
-                La solution de référence pour les
-                <span class="text-navig-accent">collectivités</span>
-            </h2>
-            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                Navig&apos; accompagne les collectivités dans leur transformation numérique 
-                avec une solution complète, évolutive et parfaitement intégrée.
-            </p>
-        </div>
-        
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-16">
-            <div>
-                <h3 class="text-3xl font-bold text-navig-primary mb-8">
-                    Pourquoi choisir Navig&apos; ?
-                </h3>
-                
-                <div class="space-y-8">
-                    <div class="flex items-start space-x-4">
-                        <div class="gradient-primary rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
-                            <i class="fas fa-handshake text-white"></i>
-                        </div>
-                        <div>
-                            <h4 class="text-xl font-bold text-navig-primary mb-2">Partenariat durable</h4>
-                            <p class="text-gray-600">
-                                Nous nous engageons dans une relation à long terme avec nos collectivités 
-                                partenaires, avec un support technique et une évolution continue.
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <div class="flex items-start space-x-4">
-                        <div class="gradient-secondary rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
-                            <i class="fas fa-cogs text-white"></i>
-                        </div>
-                        <div>
-                            <h4 class="text-xl font-bold text-navig-primary mb-2">Solution sur mesure</h4>
-                            <p class="text-gray-600">
-                                Chaque déploiement est adapté aux spécificités de votre réseau, 
-                                de votre charte graphique et de vos besoins opérationnels.
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <div class="flex items-start space-x-4">
-                        <div class="bg-navig-accent rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
-                            <i class="fas fa-chart-bar text-white"></i>
-                        </div>
-                        <div>
-                            <h4 class="text-xl font-bold text-navig-primary mb-2">Analytics avancés</h4>
-                            <p class="text-gray-600">
-                                Tableaux de bord détaillés pour comprendre l&apos;usage de votre réseau 
-                                et optimiser l&apos;offre de transport en fonction des données réelles.
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <div class="flex items-start space-x-4">
-                        <div class="bg-navig-bright rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
-                            <i class="fas fa-euro-sign text-white"></i>
-                        </div>
-                        <div>
-                            <h4 class="text-xl font-bold text-navig-primary mb-2">ROI démontré</h4>
-                            <p class="text-gray-600">
-                                Augmentation de la fréquentation, réduction des coûts d&apos;information 
-                                voyageurs et amélioration de la satisfaction usagers.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="text-center">
-                <img class="w-full max-w-lg mx-auto" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/df2556e9f4-444181a967ba58f56539.png" alt="professional meeting between municipality officials and tech team discussing transport app implementation">
-            </div>
-        </div>
-        
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-            <div class="bg-gradient-to-br from-navig-light to-white rounded-3xl p-8 text-center shadow-xl">
-                <div class="gradient-primary rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
-                    <i class="fas fa-rocket text-white text-2xl"></i>
-                </div>
-                <h4 class="text-xl font-bold text-navig-primary mb-4">Déploiement rapide</h4>
-                <p class="text-gray-600 mb-4">
-                    Mise en service en moins de 3 mois avec notre méthodologie éprouvée
-                </p>
-                <div class="text-3xl font-bold text-navig-secondary">3 mois</div>
-            </div>
-            
-            <div class="bg-gradient-to-br from-navig-light to-white rounded-3xl p-8 text-center shadow-xl">
-                <div class="gradient-secondary rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
-                    <i class="fas fa-headset text-white text-2xl"></i>
-                </div>
-                <h4 class="text-xl font-bold text-navig-primary mb-4">Support dédié</h4>
-                <p class="text-gray-600 mb-4">
-                    Équipe technique dédiée disponible 7j/7 pour vos utilisateurs
-                </p>
-                <div class="text-3xl font-bold text-navig-secondary">24/7</div>
-            </div>
-            
-            <div class="bg-gradient-to-br from-navig-light to-white rounded-3xl p-8 text-center shadow-xl">
-                <div class="bg-navig-accent rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
-                    <i class="fas fa-sync-alt text-white text-2xl"></i>
-                </div>
-                <h4 class="text-xl font-bold text-navig-primary mb-4">Mises à jour</h4>
-                <p class="text-gray-600 mb-4">
-                    Évolutions fonctionnelles et correctifs inclus sans surcoût
-                </p>
-                <div class="text-3xl font-bold text-navig-secondary">Incluses</div>
-            </div>
-        </div>
-        
-        <div class="bg-gradient-to-r from-navig-primary to-navig-secondary rounded-3xl p-12 text-white">
-            <div class="text-center mb-12">
-                <h3 class="text-3xl font-bold mb-6">Processus de collaboration</h3>
-                <p class="text-xl text-blue-100">
-                    Notre approche structurée garantit un déploiement sans risque
-                </p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div class="text-center">
-                    <div class="bg-white bg-opacity-20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                        <span class="text-2xl font-bold">1</span>
-                    </div>
-                    <h4 class="font-bold mb-2">Audit technique</h4>
-                    <p class="text-sm text-blue-100">
-                        Analyse de votre infrastructure et définition des besoins
-                    </p>
-                </div>
-                
-                <div class="text-center">
-                    <div class="bg-white bg-opacity-20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                        <span class="text-2xl font-bold">2</span>
-                    </div>
-                    <h4 class="font-bold mb-2">Personnalisation</h4>
-                    <p class="text-sm text-blue-100">
-                        Adaptation de l&apos;interface et intégration de vos données
-                    </p>
-                </div>
-                
-                <div class="text-center">
-                    <div class="bg-white bg-opacity-20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                        <span class="text-2xl font-bold">3</span>
-                    </div>
-                    <h4 class="font-bold mb-2">Tests &amp;amp; formation</h4>
-                    <p class="text-sm text-blue-100">
-                        Phase de validation et formation de vos équipes
-                    </p>
-                </div>
-                
-                <div class="text-center">
-                    <div class="bg-white bg-opacity-20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                        <span class="text-2xl font-bold">4</span>
-                    </div>
-                    <h4 class="font-bold mb-2">Lancement</h4>
-                    <p class="text-sm text-blue-100">
-                        Déploiement progressif et accompagnement utilisateurs
-                    </p>
-                </div>
-            </div>
-        </div>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold text-navig-primary mb-6">
+        La solution de référence pour les
+        <span class="text-navig-accent">collectivités</span>
+      </h2>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+        Navig' accompagne les collectivités dans leur transformation numérique
+        avec une solution complète, évolutive et parfaitement intégrée.
+      </p>
     </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-16">
+      <div>
+        <h3 class="text-3xl font-bold text-navig-primary mb-8">
+          Pourquoi choisir Navig' ?
+        </h3>
+
+        <div class="space-y-8">
+          <div class="flex items-start space-x-4">
+            <div
+              class="gradient-primary rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0"
+            >
+              <i class="fas fa-handshake text-white"></i>
+            </div>
+            <div>
+              <h4 class="text-xl font-bold text-navig-primary mb-2">
+                Partenariat durable
+              </h4>
+              <p class="text-gray-600">
+                Nous nous engageons dans une relation à long terme avec nos
+                collectivités partenaires, avec un support technique et une
+                évolution continue.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex items-start space-x-4">
+            <div
+              class="gradient-secondary rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0"
+            >
+              <i class="fas fa-cogs text-white"></i>
+            </div>
+            <div>
+              <h4 class="text-xl font-bold text-navig-primary mb-2">
+                Solution sur mesure
+              </h4>
+              <p class="text-gray-600">
+                Chaque déploiement est adapté aux spécificités de votre réseau,
+                de votre charte graphique et de vos besoins opérationnels.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex items-start space-x-4">
+            <div
+              class="bg-navig-accent rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0"
+            >
+              <i class="fas fa-chart-bar text-white"></i>
+            </div>
+            <div>
+              <h4 class="text-xl font-bold text-navig-primary mb-2">
+                Analytics avancés
+              </h4>
+              <p class="text-gray-600">
+                Tableaux de bord détaillés pour comprendre l'usage de votre
+                réseau et optimiser l'offre de transport en fonction des données
+                réelles.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex items-start space-x-4">
+            <div
+              class="bg-navig-bright rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0"
+            >
+              <i class="fas fa-euro-sign text-white"></i>
+            </div>
+            <div>
+              <h4 class="text-xl font-bold text-navig-primary mb-2">
+                ROI démontré
+              </h4>
+              <p class="text-gray-600">
+                Augmentation de la fréquentation, réduction des coûts
+                d'information voyageurs et amélioration de la satisfaction
+                usagers.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center">
+        <img
+          class="w-full max-w-lg mx-auto"
+          src="https://storage.googleapis.com/uxpilot-auth.appspot.com/df2556e9f4-444181a967ba58f56539.png"
+          alt="professional meeting between municipality officials and tech team discussing transport app implementation"
+        />
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+      <div
+        class="bg-gradient-to-br from-navig-light to-white rounded-3xl p-8 text-center shadow-xl"
+      >
+        <div
+          class="gradient-primary rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6"
+        >
+          <i class="fas fa-rocket text-white text-2xl"></i>
+        </div>
+        <h4 class="text-xl font-bold text-navig-primary mb-4">
+          Déploiement rapide
+        </h4>
+        <p class="text-gray-600 mb-4">
+          Mise en service en moins de 3 mois avec notre méthodologie éprouvée
+        </p>
+        <div class="text-3xl font-bold text-navig-secondary">3 mois</div>
+      </div>
+
+      <div
+        class="bg-gradient-to-br from-navig-light to-white rounded-3xl p-8 text-center shadow-xl"
+      >
+        <div
+          class="gradient-secondary rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6"
+        >
+          <i class="fas fa-headset text-white text-2xl"></i>
+        </div>
+        <h4 class="text-xl font-bold text-navig-primary mb-4">Support dédié</h4>
+        <p class="text-gray-600 mb-4">
+          Équipe technique dédiée disponible 7j/7 pour vos utilisateurs
+        </p>
+        <div class="text-3xl font-bold text-navig-secondary">24/7</div>
+      </div>
+
+      <div
+        class="bg-gradient-to-br from-navig-light to-white rounded-3xl p-8 text-center shadow-xl"
+      >
+        <div
+          class="bg-navig-accent rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6"
+        >
+          <i class="fas fa-sync-alt text-white text-2xl"></i>
+        </div>
+        <h4 class="text-xl font-bold text-navig-primary mb-4">Mises à jour</h4>
+        <p class="text-gray-600 mb-4">
+          Évolutions fonctionnelles et correctifs inclus sans surcoût
+        </p>
+        <div class="text-3xl font-bold text-navig-secondary">Incluses</div>
+      </div>
+    </div>
+
+    <div
+      class="bg-gradient-to-r from-navig-primary to-navig-secondary rounded-3xl p-12 text-white"
+    >
+      <div class="text-center mb-12">
+        <h3 class="text-3xl font-bold mb-6">Processus de collaboration</h3>
+        <p class="text-xl text-blue-100">
+          Notre approche structurée garantit un déploiement sans risque
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div class="text-center">
+          <div
+            class="bg-white bg-opacity-20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4"
+          >
+            <span class="text-2xl font-bold">1</span>
+          </div>
+          <h4 class="font-bold mb-2">Audit technique</h4>
+          <p class="text-sm text-blue-100">
+            Analyse de votre infrastructure et définition des besoins
+          </p>
+        </div>
+
+        <div class="text-center">
+          <div
+            class="bg-white bg-opacity-20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4"
+          >
+            <span class="text-2xl font-bold">2</span>
+          </div>
+          <h4 class="font-bold mb-2">Personnalisation</h4>
+          <p class="text-sm text-blue-100">
+            Adaptation de l'interface et intégration de vos données
+          </p>
+        </div>
+
+        <div class="text-center">
+          <div
+            class="bg-white bg-opacity-20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4"
+          >
+            <span class="text-2xl font-bold">3</span>
+          </div>
+          <h4 class="font-bold mb-2">Tests &amp;amp; formation</h4>
+          <p class="text-sm text-blue-100">
+            Phase de validation et formation de vos équipes
+          </p>
+        </div>
+
+        <div class="text-center">
+          <div
+            class="bg-white bg-opacity-20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4"
+          >
+            <span class="text-2xl font-bold">4</span>
+          </div>
+          <h4 class="font-bold mb-2">Lancement</h4>
+          <p class="text-sm text-blue-100">
+            Déploiement progressif et accompagnement utilisateurs
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- Testimonials Section -->
 <section id="testimonials" class="py-20 bg-navig-light">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16">
-            <h2 class="text-4xl font-bold text-navig-primary mb-6">
-                Ils nous font
-                <span class="text-navig-accent">confiance</span>
-            </h2>
-            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                Découvrez les témoignages de nos partenaires collectivités et utilisateurs
-            </p>
-        </div>
-        
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="bg-white rounded-3xl p-8 shadow-xl">
-                <div class="flex items-center mb-6">
-                    <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-5.jpg" alt="Marie Dubois" class="w-12 h-12 rounded-full mr-4">
-                    <div>
-                        <div class="font-bold text-navig-primary">Marie Dubois</div>
-                        <div class="text-sm text-gray-600">Directrice Mobilité - Tours</div>
-                    </div>
-                </div>
-                <div class="flex mb-4">
-                    <i class="fas fa-star text-navig-bright"></i>
-                    <i class="fas fa-star text-navig-bright"></i>
-                    <i class="fas fa-star text-navig-bright"></i>
-                    <i class="fas fa-star text-navig-bright"></i>
-                    <i class="fas fa-star text-navig-bright"></i>
-                </div>
-                <p class="text-gray-600 italic">
-                    "Navig&apos; a transformé l&apos;expérience de nos usagers. L&apos;adoption a été immédiate 
-                    et les retours sont excellents. L&apos;équipe technique est très réactive."
-                </p>
-            </div>
-            
-            <div class="bg-white rounded-3xl p-8 shadow-xl">
-                <div class="flex items-center mb-6">
-                    <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-3.jpg" alt="Jean Martin" class="w-12 h-12 rounded-full mr-4">
-                    <div>
-                        <div class="font-bold text-navig-primary">Jean Martin</div>
-                        <div class="text-sm text-gray-600">Utilisateur quotidien</div>
-                    </div>
-                </div>
-                <div class="flex mb-4">
-                    <i class="fas fa-star text-navig-bright"></i>
-                    <i class="fas fa-star text-navig-bright"></i>
-                    <i class="fas fa-star text-navig-bright"></i>
-                    <i class="fas fa-star text-navig-bright"></i>
-                    <i class="fas fa-star text-navig-bright"></i>
-                </div>
-                <p class="text-gray-600 italic">
-                    "Application indispensable ! Les horaires temps réel sont très précis 
-                    et l&apos;interface est vraiment intuitive. Je recommande vivement."
-                </p>
-            </div>
-            
-            <div class="bg-white rounded-3xl p-8 shadow-xl">
-                <div class="flex items-center mb-6">
-                    <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-8.jpg" alt="Pierre Lefebvre" class="w-12 h-12 rounded-full mr-4">
-                    <div>
-                        <div class="font-bold text-navig-primary">Pierre Lefebvre</div>
-                        <div class="text-sm text-gray-600">DSI - Orléans Métropole</div>
-                    </div>
-                </div>
-                <div class="flex mb-4">
-                    <i class="fas fa-star text-navig-bright"></i>
-                    <i class="fas fa-star text-navig-bright"></i>
-                    <i class="fas fa-star text-navig-bright"></i>
-                    <i class="fas fa-star text-navig-bright"></i>
-                    <i class="fas fa-star text-navig-bright"></i>
-                </div>
-                <p class="text-gray-600 italic">
-                    "Intégration parfaite avec nos systèmes existants. L&apos;équipe Navig&apos; 
-                    maîtrise parfaitement les enjeux techniques des collectivités."
-                </p>
-            </div>
-        </div>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold text-navig-primary mb-6">
+        Ils nous font
+        <span class="text-navig-accent">confiance</span>
+      </h2>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+        Découvrez les témoignages de nos partenaires collectivités et
+        utilisateurs
+      </p>
     </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="bg-white rounded-3xl p-8 shadow-xl">
+        <div class="flex items-center mb-6">
+          <img
+            src="https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-5.jpg"
+            alt="Marie Dubois"
+            class="w-12 h-12 rounded-full mr-4"
+          />
+          <div>
+            <div class="font-bold text-navig-primary">Marie Dubois</div>
+            <div class="text-sm text-gray-600">Directrice Mobilité - Tours</div>
+          </div>
+        </div>
+        <div class="flex mb-4">
+          <i class="fas fa-star text-navig-bright"></i>
+          <i class="fas fa-star text-navig-bright"></i>
+          <i class="fas fa-star text-navig-bright"></i>
+          <i class="fas fa-star text-navig-bright"></i>
+          <i class="fas fa-star text-navig-bright"></i>
+        </div>
+        <p class="text-gray-600 italic">
+          "Navig' a transformé l'expérience de nos usagers. L'adoption a été
+          immédiate et les retours sont excellents. L'équipe technique est très
+          réactive."
+        </p>
+      </div>
+
+      <div class="bg-white rounded-3xl p-8 shadow-xl">
+        <div class="flex items-center mb-6">
+          <img
+            src="https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-3.jpg"
+            alt="Jean Martin"
+            class="w-12 h-12 rounded-full mr-4"
+          />
+          <div>
+            <div class="font-bold text-navig-primary">Jean Martin</div>
+            <div class="text-sm text-gray-600">Utilisateur quotidien</div>
+          </div>
+        </div>
+        <div class="flex mb-4">
+          <i class="fas fa-star text-navig-bright"></i>
+          <i class="fas fa-star text-navig-bright"></i>
+          <i class="fas fa-star text-navig-bright"></i>
+          <i class="fas fa-star text-navig-bright"></i>
+          <i class="fas fa-star text-navig-bright"></i>
+        </div>
+        <p class="text-gray-600 italic">
+          "Application indispensable ! Les horaires temps réel sont très précis
+          et l'interface est vraiment intuitive. Je recommande vivement."
+        </p>
+      </div>
+
+      <div class="bg-white rounded-3xl p-8 shadow-xl">
+        <div class="flex items-center mb-6">
+          <img
+            src="https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-8.jpg"
+            alt="Pierre Lefebvre"
+            class="w-12 h-12 rounded-full mr-4"
+          />
+          <div>
+            <div class="font-bold text-navig-primary">Pierre Lefebvre</div>
+            <div class="text-sm text-gray-600">DSI - Orléans Métropole</div>
+          </div>
+        </div>
+        <div class="flex mb-4">
+          <i class="fas fa-star text-navig-bright"></i>
+          <i class="fas fa-star text-navig-bright"></i>
+          <i class="fas fa-star text-navig-bright"></i>
+          <i class="fas fa-star text-navig-bright"></i>
+          <i class="fas fa-star text-navig-bright"></i>
+        </div>
+        <p class="text-gray-600 italic">
+          "Intégration parfaite avec nos systèmes existants. L'équipe Navig'
+          maîtrise parfaitement les enjeux techniques des collectivités."
+        </p>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- Contact Form Section -->
 <section id="contact" class="py-20 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16">
-            <h2 class="text-4xl font-bold text-navig-primary mb-6">
-                Vous êtes une collectivité ?
-                <span class="text-navig-accent">Parlons-en</span>
-            </h2>
-            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                Découvrez comment Navig&apos; peut s&apos;adapter à votre réseau de transport 
-                et améliorer l&apos;expérience de vos usagers.
-            </p>
-        </div>
-        
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-            <div>
-                <div class="bg-gradient-to-br from-navig-light to-white rounded-3xl p-12 shadow-xl">
-                    <h3 class="text-2xl font-bold text-navig-primary mb-8">
-                        Demandez votre démonstration personnalisée
-                    </h3>
-                    
-                    <form class="space-y-6">
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-2">Prénom *</label>
-                                <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-navig-primary focus:border-transparent" placeholder="Jean">
-                            </div>
-                            <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-2">Nom *</label>
-                                <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-navig-primary focus:border-transparent" placeholder="Martin">
-                            </div>
-                        </div>
-                        
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-2">Email professionnel *</label>
-                            <input type="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-navig-primary focus:border-transparent" placeholder="j.martin@collectivite.fr">
-                        </div>
-                        
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-2">Téléphone</label>
-                            <input type="tel" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-navig-primary focus:border-transparent" placeholder="01 23 45 67 89">
-                        </div>
-                        
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-2">Collectivité *</label>
-                                <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-navig-primary focus:border-transparent" placeholder="Ville de...">
-                            </div>
-                            <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-2">Fonction</label>
-                                <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-navig-primary focus:border-transparent">
-                                    <option>Directeur Mobilité</option>
-                                    <option>DSI</option>
-                                    <option>Chef de projet</option>
-                                    <option>Élu</option>
-                                    <option>Autre</option>
-                                </select>
-                            </div>
-                        </div>
-                        
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-2">Votre projet</label>
-                            <textarea rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-navig-primary focus:border-transparent" placeholder="Décrivez-nous votre projet et vos besoins..."></textarea>
-                        </div>
-                        
-                        <div class="flex items-start">
-                            <input type="checkbox" class="mt-1 mr-3">
-                            <label class="text-sm text-gray-600">
-                                J&apos;accepte d&apos;être recontacté par l&apos;équipe Navig&apos; concernant ma demande et de recevoir des informations sur les solutions proposées.
-                            </label>
-                        </div>
-                        
-                        <button type="submit" class="w-full gradient-primary text-white py-4 rounded-lg font-semibold hover:opacity-90 transition-opacity">
-                            <i class="fas fa-paper-plane mr-2"></i>
-                            Envoyer ma demande
-                        </button>
-                    </form>
-                </div>
-            </div>
-            
-            <div class="space-y-8">
-                <div class="bg-navig-light rounded-3xl p-8">
-                    <h4 class="text-xl font-bold text-navig-primary mb-6">Nos coordonnées</h4>
-                    <div class="space-y-4">
-                        <div class="flex items-center">
-                            <div class="gradient-primary rounded-full w-10 h-10 flex items-center justify-center mr-4">
-                                <i class="fas fa-envelope text-white"></i>
-                            </div>
-                            <div>
-                                <div class="font-medium text-navig-primary">Email</div>
-                                <div class="text-gray-600">contact@navig-app.fr</div>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-center">
-                            <div class="gradient-secondary rounded-full w-10 h-10 flex items-center justify-center mr-4">
-                                <i class="fas fa-phone text-white"></i>
-                            </div>
-                            <div>
-                                <div class="font-medium text-navig-primary">Téléphone</div>
-                                <div class="text-gray-600">02 47 XX XX XX</div>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-center">
-                            <div class="bg-navig-accent rounded-full w-10 h-10 flex items-center justify-center mr-4">
-                                <i class="fas fa-map-marker-alt text-white"></i>
-                            </div>
-                            <div>
-                                <div class="font-medium text-navig-primary">Adresse</div>
-                                <div class="text-gray-600">Tours, France</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="bg-white rounded-3xl p-8 shadow-xl">
-                    <h4 class="text-xl font-bold text-navig-primary mb-6">Pourquoi nous choisir ?</h4>
-                    <div class="space-y-4">
-                        <div class="flex items-start">
-                            <i class="fas fa-check text-navig-accent mr-3 mt-1"></i>
-                            <span class="text-gray-600">Expertise de 10 ans dans la mobilité urbaine</span>
-                        </div>
-                        <div class="flex items-start">
-                            <i class="fas fa-check text-navig-accent mr-3 mt-1"></i>
-                            <span class="text-gray-600">Solution éprouvée par 200k+ utilisateurs</span>
-                        </div>
-                        <div class="flex items-start">
-                            <i class="fas fa-check text-navig-accent mr-3 mt-1"></i>
-                            <span class="text-gray-600">Support technique dédié 24/7</span>
-                        </div>
-                        <div class="flex items-start">
-                            <i class="fas fa-check text-navig-accent mr-3 mt-1"></i>
-                            <span class="text-gray-600">Conformité RGPD et sécurité renforcée</span>
-                        </div>
-                        <div class="flex items-start">
-                            <i class="fas fa-check text-navig-accent mr-3 mt-1"></i>
-                            <span class="text-gray-600">Déploiement rapide en moins de 3 mois</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="text-center">
-                    <img class="w-full max-w-md mx-auto rounded-2xl shadow-lg" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/bd8af4c183-94ca6476de69164d4d4c.png" alt="professional team meeting discussing transport technology solutions in modern office">
-                </div>
-            </div>
-        </div>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold text-navig-primary mb-6">
+        Vous êtes une collectivité ?
+        <span class="text-navig-accent">Parlons-en</span>
+      </h2>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+        Découvrez comment Navig' peut s'adapter à votre réseau de transport et
+        améliorer l'expérience de vos usagers.
+      </p>
     </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+      <div>
+        <div
+          class="bg-gradient-to-br from-navig-light to-white rounded-3xl p-12 shadow-xl"
+        >
+          <h3 class="text-2xl font-bold text-navig-primary mb-8">
+            Demandez votre démonstration personnalisée
+          </h3>
+
+          <form class="space-y-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2"
+                  >Prénom *</label
+                >
+                <input
+                  type="text"
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-navig-primary focus:border-transparent"
+                  placeholder="Jean"
+                />
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2"
+                  >Nom *</label
+                >
+                <input
+                  type="text"
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-navig-primary focus:border-transparent"
+                  placeholder="Martin"
+                />
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2"
+                >Email professionnel *</label
+              >
+              <input
+                type="email"
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-navig-primary focus:border-transparent"
+                placeholder="j.martin@collectivite.fr"
+              />
+            </div>
+
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2"
+                >Téléphone</label
+              >
+              <input
+                type="tel"
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-navig-primary focus:border-transparent"
+                placeholder="01 23 45 67 89"
+              />
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2"
+                  >Collectivité *</label
+                >
+                <input
+                  type="text"
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-navig-primary focus:border-transparent"
+                  placeholder="Ville de..."
+                />
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2"
+                  >Fonction</label
+                >
+                <select
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-navig-primary focus:border-transparent"
+                >
+                  <option>Directeur Mobilité</option>
+                  <option>DSI</option>
+                  <option>Chef de projet</option>
+                  <option>Élu</option>
+                  <option>Autre</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2"
+                >Votre projet</label
+              >
+              <textarea
+                rows="4"
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-navig-primary focus:border-transparent"
+                placeholder="Décrivez-nous votre projet et vos besoins..."
+              ></textarea>
+            </div>
+
+            <div class="flex items-start">
+              <input type="checkbox" class="mt-1 mr-3" />
+              <label class="text-sm text-gray-600">
+                J'accepte d'être recontacté par l'équipe Navig' concernant ma
+                demande et de recevoir des informations sur les solutions
+                proposées.
+              </label>
+            </div>
+
+            <button
+              type="submit"
+              class="w-full gradient-primary text-white py-4 rounded-lg font-semibold hover:opacity-90 transition-opacity"
+            >
+              <i class="fas fa-paper-plane mr-2"></i>
+              Envoyer ma demande
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div class="space-y-8">
+        <div class="bg-navig-light rounded-3xl p-8">
+          <h4 class="text-xl font-bold text-navig-primary mb-6">
+            Nos coordonnées
+          </h4>
+          <div class="space-y-4">
+            <div class="flex items-center">
+              <div
+                class="gradient-primary rounded-full w-10 h-10 flex items-center justify-center mr-4"
+              >
+                <i class="fas fa-envelope text-white"></i>
+              </div>
+              <div>
+                <div class="font-medium text-navig-primary">Email</div>
+                <div class="text-gray-600">contact@navig-app.fr</div>
+              </div>
+            </div>
+
+            <div class="flex items-center">
+              <div
+                class="gradient-secondary rounded-full w-10 h-10 flex items-center justify-center mr-4"
+              >
+                <i class="fas fa-phone text-white"></i>
+              </div>
+              <div>
+                <div class="font-medium text-navig-primary">Téléphone</div>
+                <div class="text-gray-600">02 47 XX XX XX</div>
+              </div>
+            </div>
+
+            <div class="flex items-center">
+              <div
+                class="bg-navig-accent rounded-full w-10 h-10 flex items-center justify-center mr-4"
+              >
+                <i class="fas fa-map-marker-alt text-white"></i>
+              </div>
+              <div>
+                <div class="font-medium text-navig-primary">Adresse</div>
+                <div class="text-gray-600">Tours, France</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-3xl p-8 shadow-xl">
+          <h4 class="text-xl font-bold text-navig-primary mb-6">
+            Pourquoi nous choisir ?
+          </h4>
+          <div class="space-y-4">
+            <div class="flex items-start">
+              <i class="fas fa-check text-navig-accent mr-3 mt-1"></i>
+              <span class="text-gray-600"
+                >Expertise de 10 ans dans la mobilité urbaine</span
+              >
+            </div>
+            <div class="flex items-start">
+              <i class="fas fa-check text-navig-accent mr-3 mt-1"></i>
+              <span class="text-gray-600"
+                >Solution éprouvée par 200k+ utilisateurs</span
+              >
+            </div>
+            <div class="flex items-start">
+              <i class="fas fa-check text-navig-accent mr-3 mt-1"></i>
+              <span class="text-gray-600">Support technique dédié 24/7</span>
+            </div>
+            <div class="flex items-start">
+              <i class="fas fa-check text-navig-accent mr-3 mt-1"></i>
+              <span class="text-gray-600"
+                >Conformité RGPD et sécurité renforcée</span
+              >
+            </div>
+            <div class="flex items-start">
+              <i class="fas fa-check text-navig-accent mr-3 mt-1"></i>
+              <span class="text-gray-600"
+                >Déploiement rapide en moins de 3 mois</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center">
+          <img
+            class="w-full max-w-md mx-auto rounded-2xl shadow-lg"
+            src="https://storage.googleapis.com/uxpilot-auth.appspot.com/bd8af4c183-94ca6476de69164d4d4c.png"
+            alt="professional team meeting discussing transport technology solutions in modern office"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- Final CTA Section -->
-<section id="final-cta" class="py-20 bg-gradient-to-r from-navig-primary to-navig-secondary text-white relative overflow-hidden">
-    <div class="absolute inset-0 bg-black bg-opacity-10"></div>
-    <div class="absolute -top-24 -right-24 bg-white bg-opacity-10 rounded-full w-96 h-96"></div>
-    <div class="absolute -bottom-24 -left-24 bg-navig-bright bg-opacity-20 rounded-full w-80 h-80"></div>
-    
-    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 class="text-4xl lg:text-5xl font-bold mb-8">
-            Prêt à révolutionner la mobilité
-            <span class="text-navig-bright">de votre territoire ?</span>
-        </h2>
-        <p class="text-xl mb-12 text-blue-100 max-w-3xl mx-auto">
-            Rejoignez les collectivités qui font confiance à Navig&apos; pour offrir 
-            une expérience de transport public moderne et efficace à leurs citoyens.
+<section
+  id="final-cta"
+  class="py-20 bg-gradient-to-r from-navig-primary to-navig-secondary text-white relative overflow-hidden"
+>
+  <div class="absolute inset-0 bg-black bg-opacity-10"></div>
+  <div
+    class="absolute -top-24 -right-24 bg-white bg-opacity-10 rounded-full w-96 h-96"
+  ></div>
+  <div
+    class="absolute -bottom-24 -left-24 bg-navig-bright bg-opacity-20 rounded-full w-80 h-80"
+  ></div>
+
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h2 class="text-4xl lg:text-5xl font-bold mb-8">
+      Prêt à révolutionner la mobilité
+      <span class="text-navig-bright">de votre territoire ?</span>
+    </h2>
+    <p class="text-xl mb-12 text-blue-100 max-w-3xl mx-auto">
+      Rejoignez les collectivités qui font confiance à Navig' pour offrir une
+      expérience de transport public moderne et efficace à leurs citoyens.
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-12">
+      <div class="bg-white bg-opacity-10 rounded-2xl p-8 backdrop-blur-sm">
+        <h3 class="text-2xl font-bold mb-4">Vous êtes une collectivité ?</h3>
+        <p class="mb-6 text-blue-100">
+          Découvrez comment Navig' peut s'adapter à votre réseau
         </p>
-        
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-12">
-            <div class="bg-white bg-opacity-10 rounded-2xl p-8 backdrop-blur-sm">
-                <h3 class="text-2xl font-bold mb-4">Vous êtes une collectivité ?</h3>
-                <p class="mb-6 text-blue-100">
-                    Découvrez comment Navig&apos; peut s&apos;adapter à votre réseau
-                </p>
-                <button class="bg-white text-navig-primary px-8 py-4 rounded-lg font-semibold hover:bg-gray-50 transition-colors w-full">
-                    <i class="fas fa-handshake mr-2"></i>
-                    Demander une démonstration
-                </button>
-            </div>
-            
-            <div class="bg-white bg-opacity-10 rounded-2xl p-8 backdrop-blur-sm">
-                <h3 class="text-2xl font-bold mb-4">Vous êtes un usager ?</h3>
-                <p class="mb-6 text-blue-100">
-                    Téléchargez l&apos;app et simplifiez vos trajets
-                </p>
-                <div class="flex flex-col sm:flex-row gap-3">
-                    <button class="bg-navig-bright text-white px-6 py-3 rounded-lg font-medium hover:opacity-90 transition-opacity flex items-center justify-center flex-1">
-                        <i class="fab fa-apple mr-2"></i>
-                        App Store
-                    </button>
-                    <button class="border-2 border-white text-white px-6 py-3 rounded-lg font-medium hover:bg-white hover:text-navig-primary transition-colors flex items-center justify-center flex-1">
-                        <i class="fab fa-google-play mr-2"></i>
-                        Google Play
-                    </button>
-                </div>
-            </div>
+        <button
+          class="bg-white text-navig-primary px-8 py-4 rounded-lg font-semibold hover:bg-gray-50 transition-colors w-full"
+        >
+          <i class="fas fa-handshake mr-2"></i>
+          Demander une démonstration
+        </button>
+      </div>
+
+      <div class="bg-white bg-opacity-10 rounded-2xl p-8 backdrop-blur-sm">
+        <h3 class="text-2xl font-bold mb-4">Vous êtes un usager ?</h3>
+        <p class="mb-6 text-blue-100">
+          Téléchargez l'app et simplifiez vos trajets
+        </p>
+        <div class="flex flex-col sm:flex-row gap-3">
+          <button
+            class="bg-navig-bright text-white px-6 py-3 rounded-lg font-medium hover:opacity-90 transition-opacity flex items-center justify-center flex-1"
+          >
+            <i class="fab fa-apple mr-2"></i>
+            App Store
+          </button>
+          <button
+            class="border-2 border-white text-white px-6 py-3 rounded-lg font-medium hover:bg-white hover:text-navig-primary transition-colors flex items-center justify-center flex-1"
+          >
+            <i class="fab fa-google-play mr-2"></i>
+            Google Play
+          </button>
         </div>
-        
-        <div class="flex justify-center items-center space-x-8 text-blue-100">
-            <div class="flex items-center">
-                <i class="fas fa-shield-alt mr-2"></i>
-                <span class="text-sm">Solution sécurisée</span>
-            </div>
-            <div class="flex items-center">
-                <i class="fas fa-users mr-2"></i>
-                <span class="text-sm">200k+ utilisateurs</span>
-            </div>
-            <div class="flex items-center">
-                <i class="fas fa-star mr-2"></i>
-                <span class="text-sm">4.8/5 étoiles</span>
-            </div>
-        </div>
+      </div>
     </div>
+
+    <div class="flex justify-center items-center space-x-8 text-blue-100">
+      <div class="flex items-center">
+        <i class="fas fa-shield-alt mr-2"></i>
+        <span class="text-sm">Solution sécurisée</span>
+      </div>
+      <div class="flex items-center">
+        <i class="fas fa-users mr-2"></i>
+        <span class="text-sm">200k+ utilisateurs</span>
+      </div>
+      <div class="flex items-center">
+        <i class="fas fa-star mr-2"></i>
+        <span class="text-sm">4.8/5 étoiles</span>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- Footer -->
 <footer id="footer" class="bg-gray-900 text-white py-16">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
-            <div>
-                <div class="flex items-center mb-6">
-                    <div class="bg-navig-primary rounded-lg p-2 mr-3">
-                        <i class="fas fa-route text-white text-xl"></i>
-                    </div>
-                    <span class="text-2xl font-bold">Navig&apos;</span>
-                </div>
-                <p class="text-gray-400 mb-6">
-                    La solution de référence pour la mobilité urbaine intelligente. 
-                    Depuis 2014, nous accompagnons les collectivités dans leur transformation numérique.
-                </p>
-                <div class="flex space-x-4">
-                    <span class="bg-gray-800 hover:bg-navig-primary rounded-full w-10 h-10 flex items-center justify-center transition-colors cursor-pointer">
-                        <i class="fab fa-linkedin"></i>
-                    </span>
-                    <span class="bg-gray-800 hover:bg-navig-primary rounded-full w-10 h-10 flex items-center justify-center transition-colors cursor-pointer">
-                        <i class="fab fa-twitter"></i>
-                    </span>
-                    <span class="bg-gray-800 hover:bg-navig-primary rounded-full w-10 h-10 flex items-center justify-center transition-colors cursor-pointer">
-                        <i class="fab fa-facebook"></i>
-                    </span>
-                </div>
-            </div>
-            
-            <div>
-                <h4 class="text-lg font-bold mb-6">Solution</h4>
-                <ul class="space-y-3 text-gray-400">
-                    <li><span class="hover:text-white transition-colors cursor-pointer">Fonctionnalités</span></li>
-                    <li><span class="hover:text-white transition-colors cursor-pointer">Intégrations</span></li>
-                    <li><span class="hover:text-white transition-colors cursor-pointer">Sécurité</span></li>
-                    <li><span class="hover:text-white transition-colors cursor-pointer">Analytics</span></li>
-                    <li><span class="hover:text-white transition-colors cursor-pointer">Support</span></li>
-                </ul>
-            </div>
-            
-            <div>
-                <h4 class="text-lg font-bold mb-6">Entreprise</h4>
-                <ul class="space-y-3 text-gray-400">
-                    <li><span class="hover:text-white transition-colors cursor-pointer">À propos</span></li>
-                    <li><span class="hover:text-white transition-colors cursor-pointer">Équipe</span></li>
-                    <li><span class="hover:text-white transition-colors cursor-pointer">Carrières</span></li>
-                    <li><span class="hover:text-white transition-colors cursor-pointer">Presse</span></li>
-                    <li><span class="hover:text-white transition-colors cursor-pointer">Contact</span></li>
-                </ul>
-            </div>
-            
-            <div>
-                <h4 class="text-lg font-bold mb-6">Ressources</h4>
-                <ul class="space-y-3 text-gray-400">
-                    <li><span class="hover:text-white transition-colors cursor-pointer">Documentation</span></li>
-                    <li><span class="hover:text-white transition-colors cursor-pointer">API</span></li>
-                    <li><span class="hover:text-white transition-colors cursor-pointer">Guides</span></li>
-                    <li><span class="hover:text-white transition-colors cursor-pointer">Blog</span></li>
-                    <li><span class="hover:text-white transition-colors cursor-pointer">Statut</span></li>
-                </ul>
-            </div>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+      <div>
+        <div class="flex items-center mb-6">
+          <div class="bg-navig-primary rounded-lg p-2 mr-3">
+            <i class="fas fa-route text-white text-xl"></i>
+          </div>
+          <span class="text-2xl font-bold">Navig'</span>
         </div>
-        
-        <div class="border-t border-gray-800 pt-8">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="text-gray-400 text-sm mb-4 md:mb-0">
-                    © 2024 Navig&apos;. Tous droits réservés.
-                </div>
-                <div class="flex space-x-6 text-sm text-gray-400">
-                    <span class="hover:text-white transition-colors cursor-pointer">Mentions légales</span>
-                    <span class="hover:text-white transition-colors cursor-pointer">Politique de confidentialité</span>
-                    <span class="hover:text-white transition-colors cursor-pointer">CGU</span>
-                    <span class="hover:text-white transition-colors cursor-pointer">Cookies</span>
-                </div>
-            </div>
+        <p class="text-gray-400 mb-6">
+          La solution de référence pour la mobilité urbaine intelligente. Depuis
+          2014, nous accompagnons les collectivités dans leur transformation
+          numérique.
+        </p>
+        <div class="flex space-x-4">
+          <span
+            class="bg-gray-800 hover:bg-navig-primary rounded-full w-10 h-10 flex items-center justify-center transition-colors cursor-pointer"
+          >
+            <i class="fab fa-linkedin"></i>
+          </span>
+          <span
+            class="bg-gray-800 hover:bg-navig-primary rounded-full w-10 h-10 flex items-center justify-center transition-colors cursor-pointer"
+          >
+            <i class="fab fa-twitter"></i>
+          </span>
+          <span
+            class="bg-gray-800 hover:bg-navig-primary rounded-full w-10 h-10 flex items-center justify-center transition-colors cursor-pointer"
+          >
+            <i class="fab fa-facebook"></i>
+          </span>
         </div>
+      </div>
+
+      <div>
+        <h4 class="text-lg font-bold mb-6">Solution</h4>
+        <ul class="space-y-3 text-gray-400">
+          <li>
+            <span class="hover:text-white transition-colors cursor-pointer"
+              >Fonctionnalités</span
+            >
+          </li>
+          <li>
+            <span class="hover:text-white transition-colors cursor-pointer"
+              >Intégrations</span
+            >
+          </li>
+          <li>
+            <span class="hover:text-white transition-colors cursor-pointer"
+              >Sécurité</span
+            >
+          </li>
+          <li>
+            <span class="hover:text-white transition-colors cursor-pointer"
+              >Analytics</span
+            >
+          </li>
+          <li>
+            <span class="hover:text-white transition-colors cursor-pointer"
+              >Support</span
+            >
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-lg font-bold mb-6">Entreprise</h4>
+        <ul class="space-y-3 text-gray-400">
+          <li>
+            <span class="hover:text-white transition-colors cursor-pointer"
+              >À propos</span
+            >
+          </li>
+          <li>
+            <span class="hover:text-white transition-colors cursor-pointer"
+              >Équipe</span
+            >
+          </li>
+          <li>
+            <span class="hover:text-white transition-colors cursor-pointer"
+              >Carrières</span
+            >
+          </li>
+          <li>
+            <span class="hover:text-white transition-colors cursor-pointer"
+              >Presse</span
+            >
+          </li>
+          <li>
+            <span class="hover:text-white transition-colors cursor-pointer"
+              >Contact</span
+            >
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-lg font-bold mb-6">Ressources</h4>
+        <ul class="space-y-3 text-gray-400">
+          <li>
+            <span class="hover:text-white transition-colors cursor-pointer"
+              >Documentation</span
+            >
+          </li>
+          <li>
+            <span class="hover:text-white transition-colors cursor-pointer"
+              >API</span
+            >
+          </li>
+          <li>
+            <span class="hover:text-white transition-colors cursor-pointer"
+              >Guides</span
+            >
+          </li>
+          <li>
+            <span class="hover:text-white transition-colors cursor-pointer"
+              >Blog</span
+            >
+          </li>
+          <li>
+            <span class="hover:text-white transition-colors cursor-pointer"
+              >Statut</span
+            >
+          </li>
+        </ul>
+      </div>
     </div>
+
+    <div class="border-t border-gray-800 pt-8">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <div class="text-gray-400 text-sm mb-4 md:mb-0">
+          © 2024 Navig'. Tous droits réservés.
+        </div>
+        <div class="flex space-x-6 text-sm text-gray-400">
+          <span class="hover:text-white transition-colors cursor-pointer"
+            >Mentions légales</span
+          >
+          <span class="hover:text-white transition-colors cursor-pointer"
+            >Politique de confidentialité</span
+          >
+          <span class="hover:text-white transition-colors cursor-pointer"
+            >CGU</span
+          >
+          <span class="hover:text-white transition-colors cursor-pointer"
+            >Cookies</span
+          >
+        </div>
+      </div>
+    </div>
+  </div>
 </footer>
 
 <script>
-// Hero variant toggle (for demo purposes)
-function toggleHeroVariant() {
-    const institutional = document.getElementById(&apos;hero-institutional&apos;);
-    const userFocused = document.getElementById(&apos;hero-user&apos;);
-    
-    if (institutional.classList.contains(&apos;hidden&apos;)) {
-        institutional.classList.remove(&apos;hidden&apos;);
-        userFocused.classList.add(&apos;hidden&apos;);
+  // Hero variant toggle (for demo purposes)
+  function toggleHeroVariant() {
+    const institutional = document.getElementById("hero-institutional");
+    const userFocused = document.getElementById("hero-user");
+
+    if (institutional.classList.contains("hidden")) {
+      institutional.classList.remove("hidden");
+      userFocused.classList.add("hidden");
     } else {
-        institutional.classList.add(&apos;hidden&apos;);
-        userFocused.classList.remove(&apos;hidden&apos;);
+      institutional.classList.add("hidden");
+      userFocused.classList.remove("hidden");
     }
-}
+  }
 
-// Smooth scrolling for navigation links
-document.querySelectorAll(&apos;a[href^="#"]&apos;).forEach(anchor => {
-    anchor.addEventListener(&apos;click&apos;, function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute(&apos;href&apos;));
-        if (target) {
-            target.scrollIntoView({
-                behavior: &apos;smooth&apos;,
-                block: &apos;start&apos;
-            });
-        }
+  // Smooth scrolling for navigation links
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener("click", function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute("href"));
+      if (target) {
+        target.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }
     });
-});
+  });
 
-// Form submission handling
-document.querySelector(&apos;form&apos;).addEventListener(&apos;submit&apos;, function(e) {
+  // Form submission handling
+  document.querySelector("form").addEventListener("submit", function (e) {
     e.preventDefault();
-    alert(&apos;Merci pour votre demande ! Nous vous recontacterons dans les plus brefs délais.&apos;);
-});
+    alert(
+      "Merci pour votre demande ! Nous vous recontacterons dans les plus brefs délais."
+    );
+  });
 </script>
-
-
-</body></html>'
-      frameborder="0"
-      style="width: 1440px; height: 10376px"
-      class="border-2 border-carbon-200 rounded-lg bg-white w-full h-full"
-    ></iframe>
-  </div>
-</div>
