@@ -67,7 +67,7 @@
     "@babel/preset-react": "^7.17.12",
     "cypress": "^10.5.0",
     "date-fns": "^2.28.0",
-    "decap-cms-app": "^3.0.2",
+    "decap-cms-app": "3.0.12",
     "highlight.js": "^11.9.0",
     "immutable": "^4.1.0",
     "lightbox2": "^2.11.4",
