@@ -47,6 +47,7 @@
     "hugo-extended": "^0.151.0",
     "imports-loader": "^5.0.0",
     "mini-css-extract-plugin": "^2.9.4",
+    "node-polyfill-webpack-plugin": "^4.1.0",
     "npm-run-all": "^4.1.5",
     "postcss": "^8.5.6",
     "postcss-custom-media": "^11.0.6",
@@ -65,6 +66,7 @@
   },
   "dependencies": {
     "@babel/preset-react": "^7.27.1",
+    "buffer": "^6.0.3",
     "cypress": "^15.4.0",
     "date-fns": "^4.1.0",
     "decap-cms-app": "3.8.4",
@@ -72,8 +74,11 @@
     "immutable": "^5.1.4",
     "lightbox2": "^2.11.5",
     "netlify-plugin-cypress": "^2.2.1",
+    "path-browserify": "^1.0.1",
+    "process": "^0.11.10",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
-    "to-string-loader": "^1.2.0"
+    "to-string-loader": "^1.2.0",
+    "url": "^0.11.4"
   }
 }

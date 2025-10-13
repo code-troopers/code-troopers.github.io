@@ -3,6 +3,7 @@ const CopyWebpackPlugin = require("copy-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const AssetsPlugin = require("assets-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const NodePolyfillPlugin = require("node-polyfill-webpack-plugin");
 
 module.exports = {
   entry: {
@@ -12,20 +13,24 @@ module.exports = {
 
   output: {
     path: path.join(__dirname, "dist"),
-    publicPath: ""
+    publicPath: "",
   },
 
   module: {
     rules: [
       {
+        test: /\.m?js$/,
+        resolve: { fullySpecified: false }, // pour les .mjs
+      },
+      {
         test: /\.((png)|(eot)|(woff)|(woff2)|(ttf)|(svg)|(gif))(\?v=\d+\.\d+\.\d+)?$/,
-        type: "asset/resource"
+        type: "asset/resource",
       },
       {
         loader: "babel-loader",
         test: /\.js?$/,
         exclude: /node_modules/,
-        options: { cacheDirectory: true }
+        options: { cacheDirectory: true },
       },
       {
         test: /\.(sa|sc|c)ss$/,
@@ -35,8 +40,8 @@ module.exports = {
           {
             loader: MiniCssExtractPlugin.loader,
             options: {
-              esModule: false
-            }
+              esModule: false,
+            },
           },
           "css-loader",
           {
@@ -46,7 +51,7 @@ module.exports = {
             loader: "postcss-loader",
             options: {
               sourceMap: true,
-            }
+            },
           },
           {
             loader: "sass-loader",
@@ -56,32 +61,46 @@ module.exports = {
                 outputStyle: "expanded",
               },
             },
-          }
-        ]
-      }
-    ]
+          },
+        ],
+      },
+    ],
+  },
+  resolve: {
+    alias: {
+      "node:url": require.resolve("url/"),
+    },
+    fallback: {
+      buffer: require.resolve("buffer/"),
+      process: require.resolve("process/browser"),
+      url: require.resolve("url/"),
+      path: require.resolve("path-browserify"),
+    },
   },
 
   plugins: [
     new AssetsPlugin({
       filename: "webpack.json",
       path: path.join(process.cwd(), "site/data"),
-      prettyPrint: true
+      prettyPrint: true,
     }),
     new CopyWebpackPlugin({
-      patterns: [{
-        from: "./src/fonts/",
-        to: "fonts/",
-      },
-      {
-        from: "./site/data/cloud.json",
-        to: "data/cloud.json"
-      }]
+      patterns: [
+        {
+          from: "./src/fonts/",
+          to: "fonts/",
+        },
+        {
+          from: "./site/data/cloud.json",
+          to: "data/cloud.json",
+        },
+      ],
     }),
     new HtmlWebpackPlugin({
       filename: "admin/index.html",
       template: "src/cms.html",
       inject: true,
-    })
-  ]
+    }),
+    new NodePolyfillPlugin(),
+  ],
 };

@@ -58,8 +58,8 @@ section#cloud {
     font-size: 1.5rem;
   }
   .w8 {
-    --word-color: #{$periwinki};
-    --bg-word-color: #{$periwinki};
+    --word-color: var(--periwinki);
+    --bg-word-color: var(--periwinki);
     font-size: 1.4rem;
   }
   .w7 {

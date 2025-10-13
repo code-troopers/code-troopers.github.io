@@ -1,7 +1,7 @@
-@import 'variables';
+@use "sass:string";
 
-@mixin gradient-text($gradient, $bg : 'light') {
-  @supports(mix-blend-mode: lighten) {
+@mixin gradient-text($grad, $bg: "light") {
+  @supports (mix-blend-mode: lighten) {
     overflow: hidden;
     //fix when zooming blending can leak
     border: 1px solid transparent;
@@ -9,16 +9,19 @@
     position: relative;
 
     &::before {
-      content: '';
+      content: "";
       display: block;
       position: absolute;
-      top: 0; right: 0; left: 0; bottom: 0;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
 
-      background: unquote($gradient);
+      background: string.unquote($grad);
       pointer-events: none;
     }
 
-    @if ($bg == 'light') {
+    @if ($bg == "light") {
       color: #000;
       background: #fff;
       mix-blend-mode: multiply;
@@ -38,21 +41,21 @@
   }
 }
 
-@mixin separator($color, $center : false){
+@mixin separator($color, $center: false) {
   &::after {
-    content: ' ';
+    content: " ";
     display: block;
     padding-top: 0.8rem;
     margin-left: -0.6rem;
     border-bottom: 1px solid $color;
     width: 50px;
-    @if($center){
+    @if ($center) {
       margin: auto;
     }
   }
 }
 
-@mixin tags($color){
+@mixin tags($color) {
   ul.tags {
     li {
       border: 2px solid $color;
@@ -64,7 +67,7 @@
       font-size: 0.7rem;
 
       span::before {
-        content: ' ';
+        content: " ";
         background-size: 22px 22px;
         width: 22px;
         height: 22px;
@@ -74,29 +77,30 @@
         left: 4px;
       }
     }
-    li:hover{
-      background: $gradient;
-      color: $black;
-      a{
-        color: $black;
+    li:hover {
+      background: var(--gradient);
+      color: var(--black);
+      a {
+        color: var(--black);
       }
     }
-    &.float{
-      float:left;
+    &.float {
+      float: left;
     }
   }
 }
 
-@mixin arrows($color: black, $margin-top: 0.75rem, $thickness: 4px){
+@mixin arrows($color: black, $margin-top: 0.75rem, $thickness: 4px) {
   .arrow_box {
     transition: inherit;
     margin-top: $margin-top;
     position: relative;
     background: $color;
-    border: #{$thickness / 4} solid $color;
+    border: calc($thickness / 4) solid $color;
     width: 100%;
 
-    &:after, &:before {
+    &:after,
+    &:before {
       border: solid transparent;
       content: " ";
       height: 0;
@@ -118,8 +122,8 @@
   }
 
   .arrow_box_right {
-
-    &:after, &:before {
+    &:after,
+    &:before {
       left: 100%;
       top: 50%;
     }
@@ -131,7 +135,8 @@
     }
   }
   .arrow_box_left {
-    &:after, &:before {
+    &:after,
+    &:before {
       right: 100%;
       top: 50%;
     }
@@ -145,7 +150,7 @@
   }
 }
 
-@mixin socialBubble(){
+@mixin socialBubble() {
   a {
     position: relative;
     width: 5rem;
@@ -157,22 +162,21 @@
       width: 3rem;
       height: 3rem;
 
-      .fa-3x{
+      .fa-3x {
         font-size: 1.5em;
       }
-
     }
-    &:hover{
-      background-color: $white;
-      i{
-        color: $darkblue;
+    &:hover {
+      background-color: var(--white);
+      i {
+        color: var(--darkblue);
       }
     }
     svg {
-      position:absolute;
-      top:50%;
-      left:50%;
-      transform: translate(-50%,-50%);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
     }
   }
 }

@@ -1,25 +1,27 @@
+@use "sass:string";
+@use "blog";
+@use "mixins";
+@use "pagination";
+@use "portfolio";
+@use "variables";
+
 // TODO
 // @import '../../node_modules/normalize.css/normalize.css';
-@import "../../node_modules/highlight.js/styles/github-dark.css";
-@import "../../node_modules/lightbox2/dist/css/lightbox.css";
-@import "variables";
-@import "mixins";
-@import "header.css";
-@import "skills.css";
-@import "contact.css";
-@import "footer.css";
-@import "portfolio";
-@import "blog";
-@import "casting.css";
-@import "pagination";
-@import "share.css";
-@import "legals.css";
-@import "cloud.css";
-@import "april.css";
-@import "navig.css";
-@import "team.css";
-@import "tips.css";
-@import "tipstags.css";
+@use "../../node_modules/highlight.js/styles/github-dark.css";
+@use "../../node_modules/lightbox2/dist/css/lightbox.css";
+@use "header.css";
+@use "skills.css";
+@use "contact.css";
+@use "footer.css";
+@use "casting.css";
+@use "share.css";
+@use "legals.css";
+@use "cloud.css";
+@use "april.css";
+@use "navig.css";
+@use "team.css";
+@use "tips.css";
+@use "tipstags.css";
 
 :root {
   scroll-behavior: smooth;
@@ -29,7 +31,7 @@ html {
   box-sizing: border-box;
   font-family: "Montserrat", Helvetica, Arial, sans-serif;
   letter-spacing: 0.1rem;
-  background: $white;
+  background: variables.$white;
 }
 
 body {
@@ -75,20 +77,20 @@ ul.flex {
 
 a.btn {
   text-decoration: none !important;
-  border: 2px solid $white;
+  border: 2px solid variables.$white;
   padding: 1rem 2rem;
   border-radius: 0.5rem;
-  color: $white;
+  color: variables.$white;
   margin: 5rem auto;
   display: inline-block;
   &.dark:hover {
-    background: $darkGradient;
+    background: variables.$darkGradient;
   }
 
   &:hover {
-    background: $gradient;
-    border-color: $darkblue;
-    color: $white;
+    background: variables.$gradient;
+    border-color: variables.$darkblue;
+    color: variables.$white;
   }
 }
 
@@ -98,9 +100,9 @@ a.btn {
 
 a {
   text-decoration: none;
-  color: $white;
+  color: variables.$white;
   &:hover {
-    color: $lightblue;
+    color: variables.$lightblue;
   }
 }
 
@@ -113,18 +115,18 @@ a {
 .button-link {
   margin-top: 1rem;
   margin-bottom: 1rem;
-  border: 2px solid $darkgrey;
+  border: 2px solid variables.$darkgrey;
   border-radius: 0.5rem;
   width: auto;
   position: relative;
   display: inline-block;
   padding: 1rem;
-  color: $bloggrey;
+  color: variables.$bloggrey;
 
   &:hover {
-    background: $gradient;
+    background: variables.$gradient;
     border-color: transparent;
-    color: $white;
+    color: variables.$white;
   }
 }
 
@@ -241,7 +243,7 @@ a {
       left: 0;
       bottom: 0;
 
-      background: unquote(var(--gradient));
+      background: string.unquote(var(--gradient));
       pointer-events: none;
     }
 
