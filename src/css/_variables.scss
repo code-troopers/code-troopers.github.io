@@ -1,46 +1,57 @@
 :root {
-    --black: #000;
-    --darkgrey: #313131;
-    --grey: #959595;
-    --lightgrey: #EFEFEF;
-    --white: #FFF;
-    --greywhite: #F0F0F0;
-    --bloggrey: #323232;
+  --black: #000;
+  --darkgrey: #313131;
+  --grey: #959595;
+  --lightgrey: #efefef;
+  --white: #fff;
+  --greywhite: #f0f0f0;
+  --bloggrey: #323232;
 
-    --lightblue: #3BCCE5;
-    --darkblue: #409AD6;
-    --darkerblue: #46506d;
+  // --lightblue: #3BCCE5;
+  // --darkblue: #409AD6;
+  // --darkerblue: #46506d;
+  // --avatarLightBlue: #3CCDE6;
+  // --avatarDarkBlue: #419BD7;
+  --lightblue: #e39b36;
+  --darkblue: #db713b;
+  --darkerblue: #b85b2d;
+  --avatarLightBlue: #e39b36;
+  --avatarDarkBlue: #db713b;
 
-    --avatarLightBlue: #3CCDE6;
-    --avatarDarkBlue: #419BD7;
+  --sandyBrown: #fa9f42;
+  --darkSandyBrown: #d68b2f;
 
-    --sandyBrown: #FA9F42;
-    --darkSandyBrown: #D68B2F;
+  --nyanza: #d6f6dd;
+  --darkNyanza: #3ccf6e;
 
-    --nyanza: #D6F6DD;
-    --darkNyanza: #3CCF6E;
+  --periwinki: #dac4f7;
+  --darkPeriwinki: #6d3ccf;
 
-    --periwinki: #DAC4F7;
-    --darkPeriwinki: #6D3CCF;
+  --tablet: 768px;
+  --smalldesktop: 1024px;
+  --desktop: 1200px;
+  --phone: 512px;
+  --smallphone: 320px;
 
-    --tablet: 768px;
-    --smalldesktop: 1024px;
-    --desktop: 1200px;
-    --phone: 512px;
-    --smallphone: 320px;
-
-    --gradient: linear-gradient(60deg, var(--lightblue) 0%,var(--darkblue) 100%);
-    --darkGradient: linear-gradient(60deg, var(--darkblue) 0%, var(--darkerblue) 100%);
-    --avatarGradient: linear-gradient(90deg, var(--avatarLightBlue) 0%, var(--avatarDarkBlue) 100%);
+  --gradient: linear-gradient(60deg, var(--lightblue) 0%, var(--darkblue) 100%);
+  --darkGradient: linear-gradient(
+    60deg,
+    var(--darkblue) 0%,
+    var(--darkerblue) 100%
+  );
+  --avatarGradient: linear-gradient(
+    90deg,
+    var(--avatarLightBlue) 0%,
+    var(--avatarDarkBlue) 100%
+  );
 }
-
 
 $black: #000;
 $darkgrey: #313131;
 $grey: #959595;
-$lightgrey: #EFEFEF;
-$white: #FFF;
-$greywhite: #F0F0F0;
+$lightgrey: #efefef;
+$white: #fff;
+$greywhite: #f0f0f0;
 $bloggrey: #323232;
 
 //$lightblue: #3BCCE5;
@@ -51,22 +62,20 @@ $bloggrey: #323232;
 //$vatarDarkBlue: #419BD7;
 
 // halloween
-$lightblue: #E39B36;
-$darkblue: #DB713B;
-$darkerblue: #B85B2D;
-$avatarLightBlue: #E39B36;
-$avatarDarkBlue: #DB713B;
+$lightblue: #e39b36;
+$darkblue: #db713b;
+$darkerblue: #b85b2d;
+$avatarLightBlue: #e39b36;
+$avatarDarkBlue: #db713b;
 
+$sandyBrown: #fa9f42;
+$darkSandyBrown: #d68b2f;
 
-$sandyBrown: #FA9F42;
-$darkSandyBrown: #D68B2F;
+$nyanza: #d6f6dd;
+$darkNyanza: #3ccf6e;
 
-$nyanza: #D6F6DD;
-$darkNyanza: #3CCF6E;
-
-$periwinki: #DAC4F7;
-$darkPeriwinki: #6D3CCF;
-
+$periwinki: #dac4f7;
+$darkPeriwinki: #6d3ccf;
 
 $tablet: 768px;
 $smalldesktop: 1024px;
@@ -74,6 +83,10 @@ $desktop: 1200px;
 $phone: 512px;
 $smallphone: 320px;
 
-$gradient: linear-gradient(60deg, $lightblue 0%,$darkblue 100%);
-$darkGradient: linear-gradient(60deg, $darkblue 0%,$darkerblue 100%);
-$avatarGradient: linear-gradient(90deg, $avatarLightBlue 0%,$avatarDarkBlue 100%);
+$gradient: linear-gradient(60deg, $lightblue 0%, $darkblue 100%);
+$darkGradient: linear-gradient(60deg, $darkblue 0%, $darkerblue 100%);
+$avatarGradient: linear-gradient(
+  90deg,
+  $avatarLightBlue 0%,
+  $avatarDarkBlue 100%
+);
