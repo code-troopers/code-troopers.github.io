@@ -10,3 +10,4 @@ cypress/screenshots
 dist
 
 site/resources/_gen
+.idea
