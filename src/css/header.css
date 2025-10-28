@@ -61,7 +61,7 @@ header {
 #company {
   background-size: cover;
   background-image: url("../img/header_large.webp");
-  @media (width < var(--tablet)) {
+  @media (width < 768px) {
     background-image: url("../img/header_small.webp");
     background-attachment: inherit;
   }

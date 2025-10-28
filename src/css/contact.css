@@ -72,7 +72,7 @@ section#contact {
   }
 }
 
-@media (width < var(--tablet)) {
+@media (width < 768px) {
   section#contact {
     letter-spacing: initial;
     & > div {

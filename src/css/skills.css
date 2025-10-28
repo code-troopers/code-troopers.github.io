@@ -1,21 +1,20 @@
-
-section#skills{
+section#skills {
   background: var(--darkGradient);
   color: var(--white);
 
-  .wrapper{
+  .wrapper {
     margin: auto;
     width: 960px;
     max-width: 100%;
-    padding:30px;
+    padding: 30px;
 
-    ul{
-      li{
+    ul {
+      li {
         margin: 1rem;
 
-        @media (width < var(--smalldesktop)) {
-            min-width: calc(50% - 2rem);
-            max-width: calc(50% - 2rem);
+        @media (width < 1024px) {
+          min-width: calc(50% - 2rem);
+          max-width: calc(50% - 2rem);
         }
 
         @media (width < var(--phone)) {
@@ -24,21 +23,20 @@ section#skills{
           margin: 1rem auto;
         }
 
-
-        img{
+        img {
           height: 100px;
         }
 
-        .title{
+        .title {
           font-weight: bold;
           padding-top: 1rem;
           padding-bottom: 1rem;
           font-size: 1.3rem;
         }
 
-        div:last-child{
+        div:last-child {
           &:before {
-            content: ' ';
+            content: " ";
             display: block;
             padding-top: 0.8rem;
             margin: auto;
@@ -52,4 +50,3 @@ section#skills{
     }
   }
 }
-

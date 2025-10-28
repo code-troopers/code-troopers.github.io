@@ -1,4 +1,3 @@
-
 section#casting {
   background: var(--white);
   padding-bottom: 5rem;
@@ -19,7 +18,7 @@ section#casting {
     margin: auto;
 
     .casting-img-container {
-      @media (width < var(--tablet)) {
+      @media (width < 768px) {
         display: none;
       }
 
@@ -35,30 +34,34 @@ section#casting {
         border: 3px solid transparent;
         box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
         transition: border-color 0.3s ease, transform 0.3s ease;
-    
+
         &::before {
-          content: '';
+          content: "";
           position: absolute;
           top: 0;
           left: 0;
           width: 100%;
           height: 100%;
-          background: linear-gradient(60deg, var(--darkblue) 0%, var(--darkerblue) 100%);
+          background: linear-gradient(
+            60deg,
+            var(--darkblue) 0%,
+            var(--darkerblue) 100%
+          );
           opacity: 0.4;
           transition: opacity 0.3s ease;
         }
-    
+
         &:hover::before {
           opacity: 0;
         }
-    
+
         img {
           width: 100%;
           height: 100%;
           object-fit: cover;
           transition: transform 0.3s ease;
         }
-    
+
         &:hover {
           transform: scale(1.05);
           border-color: var(--lightblue);
@@ -79,6 +82,5 @@ section#casting {
       text-decoration: underline;
       color: var(--black);
     }
-
   }
 }

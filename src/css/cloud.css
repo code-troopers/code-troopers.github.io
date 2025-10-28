@@ -10,7 +10,7 @@ section#cloud {
 
     .cloud {
       position: relative;
-      @media (width < var(--tablet)) {
+      @media (width < 768px) {
         width: 315px;
         height: 500px;
       }
