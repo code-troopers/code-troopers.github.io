@@ -1,23 +1,21 @@
-
 header {
   position: sticky;
   top: 0;
   z-index: 100;
   width: 100%;
 
-  & ~ section{
+  & ~ section {
     &:target:before {
-      content:"";
-      display:block;
-      height:20px;
-      margin:-20px 0 0;
+      content: "";
+      display: block;
+      height: 20px;
+      margin: -20px 0 0;
     }
   }
 
   nav {
     background-color: var(--black);
     display: flex;
-
 
     a {
       color: var(--white);
@@ -62,9 +60,9 @@ header {
 
 #company {
   background-size: cover;
-  background-image: url('../img/header_large.webp');
+  background-image: url("../img/header_large.webp");
   @media (width < var(--tablet)) {
-    background-image: url('../img/header_small.webp');
+    background-image: url("../img/header_small.webp");
     background-attachment: inherit;
   }
   background-position: center center;
@@ -124,15 +122,15 @@ header {
       }
     }
   }
-
 }
 
-@media (width < var(--smalldesktop)) {
+@media (width < 1024px) {
   header {
     nav {
       a {
         display: none;
-        &#id-company, &#id-blogs {
+        &#id-company,
+        &#id-blogs {
           display: initial;
         }
       }
@@ -144,6 +142,6 @@ header {
       div:last-child {
         margin-left: 0;
       }
-      }
     }
+  }
 }
