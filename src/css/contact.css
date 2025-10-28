@@ -12,6 +12,13 @@ section#contact {
   color: var(--white);
   padding-bottom: 5rem;
 
+  @media screen and (max-width: 767px) {
+    ul a {
+      height: 3rem;
+      width: 3rem;
+    }
+  }
+
   ul {
     a {
       border: 2px solid #fff;
@@ -19,10 +26,6 @@ section#contact {
       position: relative;
       height: 5rem;
       width: 5rem;
-      @media screen and (max-width: 767px) {
-        height: 3rem;
-        width: 3rem;
-      }
       &:hover {
         background-color: #fff;
       }
