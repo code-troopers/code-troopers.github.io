@@ -7,9 +7,6 @@
     backdrop-filter: blur(2rem);
     max-width: 1200px;
     margin: 0 auto;
-    @media (width < 1024px) {
-      padding: 25px;
-    }
     padding: 80px;
     text-align: justify;
 
@@ -34,9 +31,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    @media (width < var(--phone)) {
-      min-width: 90%;
-    }
     padding: 16px;
     margin-bottom: 40px;
     text-align: center;
@@ -86,6 +80,19 @@
         color: var(--lightblue);
       }
     }
+  }
+}
+
+@media (width < 1024px) {
+  .team-container {
+    .team-section {
+      padding: 25px;
+    }
+  }
+}
+@media (width < 512px) {
+  .team-container .team-member {
+    min-width: 90%;
   }
 }
 
