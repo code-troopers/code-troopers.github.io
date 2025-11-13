@@ -1,9 +1,9 @@
-@import 'variables';
-@import 'mixins';
+@use 'variables';
+@use 'mixins';
 
 section#portfolio {
-  color: $white;
-  background: $black;
+  color: variables.$white;
+  background: variables.$black;
 
   .wrapper {
     display: flex;
@@ -48,7 +48,7 @@ section#portfolio {
       & > div {
         padding: 1rem 3rem;
         h2 {
-          @include separator($white);
+          @include mixins.separator(variables.$white);
           a{
             font-size: inherit;
           }
@@ -56,7 +56,7 @@ section#portfolio {
 
         p {
           font-size: 0.7rem;
-          color: $grey;
+          color: variables.$grey;
           line-height: 1.3rem;
         }
         a.read-more{
@@ -66,10 +66,10 @@ section#portfolio {
           .arrow_box{
             margin-left: -0.6rem;
           }
-          @include arrows($white);
+          @include mixins.arrows(variables.$white);
           &:hover{
             width:100%;
-            @include arrows($lightblue);
+            @include mixins.arrows(variables.$lightblue);
           }
         }
 
@@ -82,8 +82,8 @@ section#portfolio {
 }
 
 section#work{
-  background-color:$black;
-  color: $lightgrey;
+  background-color:variables.$black;
+  color: variables.$lightgrey;
 
   .wrapper{
     margin: auto;
@@ -91,7 +91,7 @@ section#work{
     flex-wrap: wrap;
     h1{
       flex:1;
-      color: $white;
+      color: variables.$white;
     }
     article{
       & > img{
@@ -104,16 +104,16 @@ section#work{
       margin-right: 1rem;
 
       & > h2, .content {
-        @include separator($lightgrey)
+        @include mixins.separator(variables.$lightgrey)
       }
     }
     .content-footer{
       padding: 1rem 0;
     }
     .share{
-      border-color: $darkgrey;
+      border-color: variables.$darkgrey;
       a{
-        color: $lightgrey;
+        color: variables.$lightgrey;
       }
     }
   }
@@ -122,14 +122,14 @@ section#work{
 section#work, section#portfolio{
   ul.skill {
     li {
-      border: 2px solid $darkgrey;
+      border: 2px solid variables.$darkgrey;
       border-radius: 0.5rem;
       width: auto;
       position: relative;
       display: inline-block;
       padding: 0.5rem;
       font-size: 0.7rem;
-      color: $lightgrey;
+      color: variables.$lightgrey;
       span::before {
         content: '';
         display: block;
@@ -140,15 +140,15 @@ section#work, section#portfolio{
       }
 
       &:hover{
-        background: $gradient;
+        background: variables.$gradient;
         border-color: transparent;
-        color: $white;
+        color: variables.$white;
       }
     }
   }
 }
 
-@media screen and (min-width: $tablet) {
+@media screen and (min-width: variables.$tablet) {
   section#portfolio {
 
     .wrapper {
@@ -159,7 +159,7 @@ section#work, section#portfolio{
     }
   }
 }
-@media screen and (max-width: $tablet) {
+@media screen and (max-width: variables.$tablet) {
   section#portfolio {
 
     .wrapper {
@@ -171,7 +171,7 @@ section#work, section#portfolio{
   }
 }
 
-@media screen and (min-width: $desktop) {
+@media screen and (min-width: variables.$desktop) {
   section#work{
     .wrapper {
       width: 1200px;
@@ -184,8 +184,8 @@ section#work, section#portfolio{
 
     .wrapper {
       & > div {
-        border: 1px solid $darkgrey;
-        background: $black;
+        border: 1px solid variables.$darkgrey;
+        background: variables.$black;
         min-width: 25%;
         max-width: 25%;
         img {

@@ -1,15 +1,13 @@
-@import 'variables';
-
 footer {
-  background: $black;
+  background: var(--black);
 
   .wrapper {
     margin: auto;
     padding: 5rem 30px 2rem;
-    color: $lightgrey;
+    color: var(--lightgrey);
     font-size: 0.7rem;
 
-    img{
+    img {
       display: block;
       height: 150px;
       width: 150px;
@@ -17,34 +15,34 @@ footer {
       margin: 5rem auto;
     }
 
-    img.arrow{
+    img.arrow {
       height: 70px;
       width: 21px;
       margin-top: 0;
     }
 
-    span:first-child{
-      float:left;
+    span:first-child {
+      float: left;
     }
 
-    span:last-child{
-      float:right;
+    span:last-child {
+      float: right;
     }
 
-    a{
+    a {
       text-decoration: underline;
       color: inherit;
 
-      &:hover{
+      &:hover {
         text-decoration: underline;
       }
     }
   }
 }
 
-@media screen and (max-width: $tablet) {
-  footer{
-    .wrapper{
+@media screen and (max-width: 768px) {
+  footer {
+    .wrapper {
       padding-bottom: 5rem;
     }
   }

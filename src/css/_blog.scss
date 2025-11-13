@@ -1,8 +1,10 @@
-@import "variables";
+@use "sass:color";
+@use "variables";
+@use "mixins";
 
 section#blogs {
-  background: $darkGradient;
-  color: $white;
+  background: var(--darkGradient);
+  color: variables.$white;
 
   & > * {
     margin: 0 auto;
@@ -31,14 +33,14 @@ section#articles {
       $backgroundColor: #243c54;
       $transitionDuration: 0.2s;
       $borderWidth: 2px;
-      $lazerColor: $lightblue;
+      $lazerColor: variables.$lightblue;
 
       flex: 1;
       min-width: 18.5rem;
       width: 100%;
       position: relative;
       background-color: $backgroundColor;
-      box-shadow: 0px -4px 10px $darkerblue;
+      box-shadow: 0px -4px 10px variables.$darkerblue;
       border-radius: $borderRadius;
       transition: box-shadow 0s;
       display: flex;
@@ -106,6 +108,7 @@ section#articles {
         z-index: 2;
         backdrop-filter: blur(25px);
         height: 100%;
+        width: 100%;
         padding-bottom: 60px;
 
         .read-more {
@@ -117,14 +120,14 @@ section#articles {
         a.read-more {
           display: inline-block;
           width: 40%;
-          @include arrows($white);
+          @include mixins.arrows(variables.$white);
           .arrow_box_right {
             margin-left: -0.6rem;
           }
           transition: width 1s ease-in-out;
           &:hover {
-            @include arrows($lightblue);
-            color: $lightblue;
+            @include mixins.arrows(variables.$lightblue);
+            color: variables.$lightblue;
             width: 75%;
           }
         }
@@ -144,7 +147,7 @@ section#articles {
         & > div {
           padding: 1rem 3rem;
           h2 {
-            @include separator($white);
+            @include mixins.separator(variables.$white);
           }
 
           p {
@@ -156,16 +159,16 @@ section#articles {
     }
   }
 
-  @include tags($lightgrey);
+  @include mixins.tags(variables.$lightgrey);
   ul.tags {
     li a {
-      color: $lightgrey;
+      color: variables.$lightgrey;
     }
   }
 }
 
 section#blog {
-  background: $white;
+  background: variables.$white;
   & > * {
     margin: 0 auto;
   }
@@ -180,7 +183,7 @@ section#blog {
       margin-right: 1rem;
 
       & > h2 {
-        @include separator($black);
+        @include mixins.separator(variables.$black);
         letter-spacing: initial;
       }
       .center {
@@ -189,15 +192,15 @@ section#blog {
       .content {
         letter-spacing: initial;
         a {
-          color: $lightblue;
+          color: variables.$lightblue;
           word-wrap: break-word;
 
           &:hover {
-            color: darken($lightblue, 10%);
+            color: color.adjust(variables.$lightblue, $lightness: -10%);
           }
         }
         margin: 0.5rem;
-        color: $darkgrey;
+        color: variables.$darkgrey;
         font-family: "Montserrat Light", "Helvetica Neue", Arial, sans-serif;
         h1,
         h2,
@@ -205,7 +208,7 @@ section#blog {
         h4,
         h5,
         h6 {
-          color: $black;
+          color: variables.$black;
           font-family: "Montserrat", Helvetica, Arial, sans-serif;
         }
         .hljs {
@@ -218,7 +221,7 @@ section#blog {
           border: 1px solid gainsboro;
         }
 
-        @include separator($black);
+        @include mixins.separator(variables.$black);
         pre {
           width: 100%;
           overflow: auto;
@@ -258,11 +261,11 @@ section#blog {
           text-align: right;
           align-self: center;
           flex: 0.5;
-          color: $darkgrey;
+          color: variables.$darkgrey;
           font-size: 0.7rem;
           .author-name {
-            background: $gradient;
-            color: $white;
+            background: var(--gradient);
+            color: variables.$white;
             padding: 0.5rem 1rem;
             border-radius: 0.75rem;
           }
@@ -271,13 +274,13 @@ section#blog {
     }
   }
   a {
-    color: $darkgrey;
+    color: variables.$darkgrey;
   }
 
-  @include tags($lightgrey);
+  @include mixins.tags(variables.$lightgrey);
 }
 
-@media screen and (max-width: $tablet) {
+@media screen and (max-width: variables.$tablet) {
   section#articles {
     .wrapper {
       & > div {
@@ -288,7 +291,7 @@ section#blog {
   }
 }
 
-@media screen and (min-width: $smalldesktop) {
+@media screen and (min-width: variables.$smalldesktop) {
   section#articles {
     .wrapper {
       justify-content: start;
@@ -300,7 +303,7 @@ section#blog {
   }
 }
 
-@media screen and (min-width: $desktop) {
+@media screen and (min-width: variables.$desktop) {
   section#articles {
     & > * {
       width: 1200px;
