@@ -82,4 +82,4 @@ CMS.registerEditorComponent({
   },
 });
 
-CMS.init();
+setTimeout(() => CMS.init(), 4000);
