@@ -1,13 +1,14 @@
 ---
-title: Stages 2025
+title: Stages 2026
 author: Benjamin Cousin
 url: /2024/10/18/stage-2025
-aliases: stage-2025
-date: 2024-10-18
-expirydate: 2025-09-01
+aliases: stage-2026
+date: 2025-11-14
+expirydate: 2026-07-31
 cover: 0m1a8025.jpg
 draft: false
-tags: []
+tags:
+  - job
 ---
 Chez **Code-Troopers**, cette période de l’année rime toujours avec nouvelles opportunités : nous sommes ravis de vous présenter nos offres de **stages** pour 2025 👩‍🎓👨‍🎓.
 
