@@ -27,7 +27,7 @@ module.exports = {
 
   output: {
     path: path.join(__dirname, "dist"),
-    publicPath: "",
+    publicPath: "/",
     clean: true,
   },
 
@@ -97,9 +97,6 @@ module.exports = {
   plugins: [
     new NodePolyfillPlugin(),
     new RemoveNodeSchemePlugin(),
-    new webpack.IgnorePlugin({
-      resourceRegExp: /^clean-stack$/,
-    }),
 
     new AssetsPlugin({
       filename: "webpack.json",
