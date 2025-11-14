@@ -1,7 +1,7 @@
 ---
 title: Stages 2026
 author: Benjamin Cousin
-url: /2024/10/18/stage-2025
+url: /2024/10/18/stage-2026
 aliases: stage-2026
 date: 2025-11-14
 expirydate: 2026-07-31
