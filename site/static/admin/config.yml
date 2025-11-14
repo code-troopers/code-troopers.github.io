@@ -16,8 +16,6 @@ backend:
   # name: git-gateway
   # branch: main
 
-
-
 media_folder: "site/static/img" # Folder where user uploaded files should go
 public_folder: "img"
 
@@ -29,13 +27,27 @@ collections: # A list of collections the CMS should be able to edit
     path: "{{slug}}/index" # Each document is inside a folder with the slug name.
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Author", name: "author", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD", timeFormat: false}
-      - {label: "Expiry Date", name: "expirydate", widget: "datetime", format: "YYYY-MM-DD", timeFormat: false, required: false, default: ''}
-      - {label: "Body", name: "body", widget: "markdown"}
-      - {label: "Draft", name: "draft", widget: "boolean", default: true}
-      - {label: "Tags", name: "tipstags", widget: "list"}
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Author", name: "author", widget: "string" }
+      - {
+          label: "Publish Date",
+          name: "date",
+          widget: "datetime",
+          format: "YYYY-MM-DD",
+          time_format: false,
+        }
+      - {
+          label: "Expiry Date",
+          name: "expirydate",
+          widget: "datetime",
+          format: "YYYY-MM-DD",
+          time_format: false,
+          required: false,
+          default: "",
+        }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Draft", name: "draft", widget: "boolean", default: true }
+      - { label: "Tags", name: "tipstags", widget: "list" }
   - name: "post" # Used in routes, ie.: /admin/collections/:slug/edit
     label: "Post" # Used in the UI, ie.: "New Post"
     folder: "site/content/blog" # The path to the folder where the documents are stored
@@ -43,16 +55,30 @@ collections: # A list of collections the CMS should be able to edit
     path: "{{slug}}/index" # Each document is inside a folder with the slug name.
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Author", name: "author", widget: "string"}
-      - {label: "Url", name: "url", widget: "string"}
-      - {label: "Aliases", name: "aliases", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD", timeFormat: false}
-      - {label: "Expiry Date", name: "expirydate", widget: "datetime", format: "YYYY-MM-DD", timeFormat: false, required: false, default: ''}
-      - {label: "Image", name: "cover", widget: "image", required: false}
-      - {label: "Body", name: "body", widget: "markdown"}
-      - {label: "Draft", name: "draft", widget: "boolean", default: true}
-      - {label: "Tags", name: "tags", widget: "list"}
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Author", name: "author", widget: "string" }
+      - { label: "Url", name: "url", widget: "string" }
+      - { label: "Aliases", name: "aliases", widget: "string" }
+      - {
+          label: "Publish Date",
+          name: "date",
+          widget: "datetime",
+          format: "YYYY-MM-DD",
+          time_format: false,
+        }
+      - {
+          label: "Expiry Date",
+          name: "expirydate",
+          widget: "datetime",
+          format: "YYYY-MM-DD",
+          time_format: false,
+          required: false,
+          default: "",
+        }
+      - { label: "Image", name: "cover", widget: "image", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Draft", name: "draft", widget: "boolean", default: true }
+      - { label: "Tags", name: "tags", widget: "list" }
   - name: "work" # Used in routes, ie.: /admin/collections/:slug/edit
     label: "Work" # Used in the UI, ie.: "New Post"
     folder: "site/content/work" # The path to the folder where the documents are stored
@@ -60,15 +86,29 @@ collections: # A list of collections the CMS should be able to edit
     path: "{{slug}}/index" # Each document is inside a folder with the slug name.
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Weight", name: "weight", widget: "number", required: false}
-      - {label: "Url", name: "url", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD", timeFormat: false}
-      - {label: "Expiry Date", name: "expirydate", widget: "datetime", format: "YYYY-MM-DD", timeFormat: false, required: false, default: ''}
-      - {label: "Image", name: "cover", widget: "image", required: false}
-      - {label: "Body", name: "body", widget: "markdown"}
-      - {label: "Draft", name: "draft", widget: "boolean", default: true}
-      - {label: "Tags", name: "tags", widget: "list"}
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Weight", name: "weight", widget: "number", required: false }
+      - { label: "Url", name: "url", widget: "string" }
+      - {
+          label: "Publish Date",
+          name: "date",
+          widget: "datetime",
+          format: "YYYY-MM-DD",
+          time_format: false,
+        }
+      - {
+          label: "Expiry Date",
+          name: "expirydate",
+          widget: "datetime",
+          format: "YYYY-MM-DD",
+          time_format: false,
+          required: false,
+          default: "",
+        }
+      - { label: "Image", name: "cover", widget: "image", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Draft", name: "draft", widget: "boolean", default: true }
+      - { label: "Tags", name: "tags", widget: "list" }
   - name: "home"
     label: "Home"
     files:
@@ -76,8 +116,8 @@ collections: # A list of collections the CMS should be able to edit
         label: "Home Page"
         name: "home"
         fields:
-          - {label: Title, name: title, widget: string}
-          - {label: Body, name: body, widget: text}
+          - { label: Title, name: title, widget: string }
+          - { label: Body, name: body, widget: text }
   - name: "team"
     label: "Team  settings"
     media_folder: "/site/content/team"
@@ -92,17 +132,37 @@ collections: # A list of collections the CMS should be able to edit
             name: team
             widget: list
             fields:
-              - {label: Name, name: name, widget: string}
-              - {label: Title, name: title, widget: string}
-              - {label: Description, name: description, widget: string, required: false}
-              - {label: Github, name: github, widget: string, required: false}
-              - {label: Gitlab, name: gitlab, widget: string, required: false}
-              - {label: Linkedin, name: linkedin, widget: string, required: false}
-              - {label: Malt, name: malt, widget: string, required: false}
-              - {label: Mastodon, name: mastodon, widget: string, required: false}
-              - {label: Photo, name: photo, widget: "image", required: false}
-              - {label: Steam, name: steam, widget: string, required: false}
-              - {label: Twitter, name: twitter, widget: string, required: false}
+              - { label: Name, name: name, widget: string }
+              - { label: Title, name: title, widget: string }
+              - {
+                  label: Description,
+                  name: description,
+                  widget: string,
+                  required: false,
+                }
+              - { label: Github, name: github, widget: string, required: false }
+              - { label: Gitlab, name: gitlab, widget: string, required: false }
+              - {
+                  label: Linkedin,
+                  name: linkedin,
+                  widget: string,
+                  required: false,
+                }
+              - { label: Malt, name: malt, widget: string, required: false }
+              - {
+                  label: Mastodon,
+                  name: mastodon,
+                  widget: string,
+                  required: false,
+                }
+              - { label: Photo, name: photo, widget: "image", required: false }
+              - { label: Steam, name: steam, widget: string, required: false }
+              - {
+                  label: Twitter,
+                  name: twitter,
+                  widget: string,
+                  required: false,
+                }
   - name: "site_settings"
     label: "Site Settings"
     files:
@@ -115,21 +175,31 @@ collections: # A list of collections the CMS should be able to edit
             name: cloud
             widget: list
             fields:
-              - {label: Text, name: text, widget: string}
-              - {label: Poids, name: weight, widget: number}
-              - {label: Réassurance, name: label, widget: string}
+              - { label: Text, name: text, widget: string }
+              - { label: Poids, name: weight, widget: number }
+              - { label: Réassurance, name: label, widget: string }
       - file: "site/data/menu.json"
         label: Menu
         name: menu
         fields:
-          - {label: Links, name: links, widget: list, fields: [{label: Name, name: name, widget: string}, {label: Id, name: id, widget: string}, {label: Url, name: url, widget: string}]}
+          - {
+              label: Links,
+              name: links,
+              widget: list,
+              fields:
+                [
+                  { label: Name, name: name, widget: string },
+                  { label: Id, name: id, widget: string },
+                  { label: Url, name: url, widget: string },
+                ],
+            }
       - file: "site/hugo.toml"
         label: Hugo Config
         name: config
         editor:
           preview: false
         fields:
-          - {label: Site Title, name: title, widget: string}
+          - { label: Site Title, name: title, widget: string }
           - label: Params
             name: params
             widget: object
