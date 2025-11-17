@@ -6,7 +6,7 @@ aliases: stage-2026
 date: 2025-11-13
 expirydate: 2026-07-31
 cover: 0m1a8025.jpg
-draft: false
+draft: true
 tags:
   - job
 ---
