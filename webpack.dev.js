@@ -10,7 +10,7 @@ module.exports = merge(common, {
 
   output: {
     filename: "[name].js",
-    chunkFilename: "[id].css",
+    chunkFilename: "[name].css",
   },
 
   devServer: {
@@ -36,7 +36,7 @@ module.exports = merge(common, {
 
     new MiniCssExtractPlugin({
       filename: "[name].css",
-      chunkFilename: "[id].css",
+      chunkFilename: "[name].css",
     }),
   ],
 });
