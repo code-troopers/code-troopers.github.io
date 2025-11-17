@@ -5,7 +5,7 @@ url: /2024/10/18/stages-2026/
 aliases: /2024/10/18/stages-2026.html
 date: 2024-10-18
 expirydate: 2026-07-31
-cover: https://code-troopers.com/2018/02/06/stages-2018/logo-banner_hu_42bf58c3c26aa15e.webp
+cover: logo-banner.png
 draft: false
 tags:
   - job
