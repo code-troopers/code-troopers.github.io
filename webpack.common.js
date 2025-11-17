@@ -20,6 +20,12 @@ class RemoveNodeSchemePlugin {
 }
 
 module.exports = {
+  ignoreWarnings: [
+    {
+      module: /@sveltia\/cms/,
+      message: /Critical dependency:/,
+    },
+  ],
   entry: {
     main: path.join(__dirname, "src", "index.js"),
     cms: path.join(__dirname, "src", "js", "cms.js"),
@@ -31,8 +37,20 @@ module.exports = {
     clean: true,
   },
 
+  stats: {
+    all: false,
+    assets: true,
+    chunks: false,
+    modules: false,
+  },
+
   module: {
     rules: [
+      {
+        test: /\.map$/,
+        enforce: "pre",
+        use: "ignore-loader",
+      },
       {
         test: /\.m?js$/,
         resolve: { fullySpecified: false },
@@ -50,7 +68,11 @@ module.exports = {
         },
       },
       {
-        test: /\.(sa|sc|c)ss$/,
+        test: /\.css$/,
+        use: [MiniCssExtractPlugin.loader, "css-loader", "postcss-loader"],
+      },
+      {
+        test: /\.(sa|sc)ss$/,
         exclude: /node_modules/,
         use: [
           MiniCssExtractPlugin.loader,
@@ -100,8 +122,9 @@ module.exports = {
 
     new AssetsPlugin({
       filename: "webpack.json",
-      path: path.join(process.cwd(), "site/data"),
+      path: path.join(process.cwd(), "site/static/assets"),
       prettyPrint: true,
+      includeAllFileTypes: false,
     }),
 
     new CopyWebpackPlugin({

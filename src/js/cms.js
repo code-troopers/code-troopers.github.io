@@ -1,4 +1,4 @@
-import CMS from "decap-cms-app";
+import CMS, { init } from '@sveltia/cms';
 
 // Import main site styles as a string to inject into the CMS preview pane
 // TODO fix import with resolve-url-loader
@@ -82,4 +82,4 @@ CMS.registerEditorComponent({
   },
 });
 
-setTimeout(() => CMS.init(), 4000);
+init();

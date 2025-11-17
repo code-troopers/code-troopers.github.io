@@ -1,4 +1,5 @@
 node_modules/
+site/static/assets/webpack.json
 site/data/webpack.json
 /npm-debug.log
 yarn-error.log
