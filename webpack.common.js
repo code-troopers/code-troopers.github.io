@@ -125,6 +125,12 @@ module.exports = {
       path: path.join(process.cwd(), "site/static/assets"),
       prettyPrint: true,
       includeAllFileTypes: false,
+      processOutput: (assets) => {
+        if (assets[""]) {
+          delete assets[""];
+        }
+        return JSON.stringify(assets, null, 2);
+      },
     }),
 
     new CopyWebpackPlugin({
