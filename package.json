@@ -69,12 +69,13 @@
     "@dnd-kit/core": "^6.3.1",
     "@dnd-kit/sortable": "^10.0.0",
     "@dnd-kit/utilities": "^3.2.2",
+    "@sveltia/cms": "^0.117.0",
     "buffer": "^6.0.3",
     "cypress": "^15.4.0",
     "date-fns": "^4.1.0",
-    "decap-cms-app": "^3.10.1",
     "highlight.js": "^11.11.1",
     "https-browserify": "^1.0.0",
+    "ignore-loader": "^0.1.2",
     "immutable": "^5.1.4",
     "lightbox2": "^2.11.5",
     "netlify-plugin-cypress": "^2.2.1",
@@ -86,8 +87,5 @@
     "stream-http": "^3.2.0",
     "to-string-loader": "^1.2.0",
     "url": "^0.11.4"
-  },
-  "resolutions": {
-    "clean-stack": "5.2.0"
   }
 }

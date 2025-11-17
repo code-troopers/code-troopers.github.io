@@ -1,4 +1,4 @@
-import CMS from "decap-cms-app";
+import CMS, { init } from '@sveltia/cms';
 
 import HomePreview from "./cms-preview-templates/home";
 import PostPreview from "./cms-preview-templates/post";
@@ -76,4 +76,4 @@ CMS.registerEditorComponent({
   },
 });
 
-setTimeout(() => CMS.init(), 4000);
+init();
