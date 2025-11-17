@@ -122,7 +122,7 @@ module.exports = {
 
     new AssetsPlugin({
       filename: "webpack.json",
-      path: path.join(process.cwd(), "site/static/assets"),
+      path: path.join(process.cwd(), "site/data"),
       prettyPrint: true,
       includeAllFileTypes: false,
       processOutput: (assets) => {
