@@ -11,8 +11,8 @@ module.exports = merge(common, {
   mode: "production",
 
   output: {
-    filename: "[name].[fullhash:8].js",
-    chunkFilename: "[name].[fullhash:8].js",
+    filename: "[name].[hash:8].js",
+    chunkFilename: "[name].[hash:5].js",
     path: path.resolve(__dirname, "dist"),
   },
 
@@ -30,8 +30,8 @@ module.exports = merge(common, {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: "[name].[fullhash:8].css",
-      chunkFilename: "[name].[fullhash:8].css",
+      filename: "[name].[contenthash:8].css",
+      chunkFilename: "[name].[contenthash:8].css",
     }),
   ],
 });
