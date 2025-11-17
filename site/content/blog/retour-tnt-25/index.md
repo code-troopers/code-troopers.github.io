@@ -4,7 +4,7 @@ author: L'équipe Code-Troopers
 url: /2025/03/05/retour-tnt-25/
 aliases: /2025/03/05/retourTNT25.html
 date: 2025-03-05
-expirydate: ""
+expirydate: ''
 cover: 54340947961_25b4971b6e_c.jpg
 draft: false
 tags:
@@ -54,7 +54,7 @@ Un retour d’expérience sur la résolution d’un bug dans la JVM => c’est s
 
 **🔗 Le cauchemar des attaquants : une infrastructure sans secret par Thibault Lengagne**
 
-Conférence sur la sécurité informatique portant sur la gestion des secrets. L’idée de ce talk est de donner quelques pistes pour limiter l’utilisation de secret long-terme. Avec l’utilisation de SSO, Workload identity, génération de secrets temporaires. 
+Conférence sur la sécurité informatique portant sur la gestion des secrets. L’idée de ce talk est de donner quelques pistes pour limiter l’utilisation de secret long-terme. Avec l’utilisation de SSO, Workload identity, génération de secrets temporaires.
 
 <https://youtu.be/W9rc3EmHJ4E>
 
@@ -64,7 +64,7 @@ Conférence sur l’architecture hexagonale, une approche différente de l’arc
 
 <https://youtu.be/vvEP8wZNFfQ>
 
-Et encore d’autres que vous pourrez retrouver ici <https://www.youtube.com/playlist?list=PLl0xIhYGSdm94h5lcrybZAsdGAfrpJx4y> : 
+Et encore d’autres que vous pourrez retrouver ici <https://www.youtube.com/playlist?list=PLl0xIhYGSdm94h5lcrybZAsdGAfrpJx4y> :
 
 * 🔗 Anatomie d'une faille par Olivier PONCET
 * 🔗 Les Méta-Lois, vous ne leur échapperez pas ! par Stéphane Trebel
@@ -74,6 +74,6 @@ Et encore d’autres que vous pourrez retrouver ici <https://www.youtube.com/pla
 
 Un immense merci à l’équipe de Touraine Tech pour l’organisation impeccable et l’accueil chaleureux 🙌
 
-En tant que sponsors, avoir un stand nous a permis de retrouver des développeurs avec qui nous échangeons depuis plusieurs années, mais aussi de faire de superbes nouvelles rencontres.
+En tant que sponsor, avoir un stand nous a permis de retrouver des développeurs avec qui nous échangeons depuis plusieurs années, mais aussi de faire de superbes nouvelles rencontres.
 
 Hâte de poursuivre les discussions et de revenir l’an prochain ! 👋
