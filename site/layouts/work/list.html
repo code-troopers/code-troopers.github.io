@@ -1,6 +1,6 @@
 {{ define "main" }}
 
-{{ $paginator := .Paginate (where .Pages.ByWeight "Type" "work") 8 }}
+{{ $paginator := .Paginate (where .Pages.ByWeight "Type" "work") 100 }}
 <section id="portfolio">
     <div class="wrapper">
         <h1>
