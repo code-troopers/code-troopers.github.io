@@ -35,9 +35,9 @@
                             {{ end }}
                         </ul>
                         {{ end }}
-                        <section id="author">
-                            <div class="date">Rédigé par <span class="author-name">{{ .Params.author}}</span></div>
-                        </section>
+                        <div id="author">
+                            <p class="date">Rédigé par <span class="author-name">{{ .Params.author}}</span></p>
+                        </div>
                     </div>
                     <div class="share">
                         <span>Partager</span>
@@ -61,21 +61,21 @@
                             </li>
                         </ul>
                     </div>
-                    <div style="clear:both"></div>
+                    <div class="clearfix"></div>
 
 
                     <div class="back">
                         <div class="pagination black">
                             {{ if .NextInSection }}
-                            <a href="{{ .NextInSection.Permalink }}" class="previous-page">
-                                <div class="arrow">{{ partial "arrow_left.html" . }}</div>
+                            <a href="{{ .NextInSection.Permalink }}" class="previous-page" aria-label="Article précédent : {{ .NextInSection.Title }}">
+                                <span class="arrow">{{ partial "arrow_left.html" . }}</span>
                                 Article précédent
                             </a>
                             {{ end }}
                             {{ if .PrevInSection }}
-                            <a href="{{ .PrevInSection.Permalink }}" class="next-page">
+                            <a href="{{ .PrevInSection.Permalink }}" class="next-page" aria-label="Article suivant : {{ .PrevInSection.Title }}">
                                 Article suivant
-                                <div class="arrow">{{ partial "arrow_right.html" . }}</div>
+                                <span class="arrow">{{ partial "arrow_right.html" . }}</span>
                             </a>
                             {{ end }}
                         </div>
