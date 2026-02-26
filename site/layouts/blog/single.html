@@ -44,19 +44,18 @@
                         <ul class="socials">
                             <li>
                                 <a target="_blank" rel="nofollow noopener"
-                                    aria-label="Partager sur Facebook (nouvelle fenêtre)"
-                                    href="https://www.facebook.com/sharer.php?u=http://code-troopers.com{{ .Permalink }}&t={{ .Title }}"
-                                    class="facebook-button"
+                                    aria-label="Partager sur Bluesky (nouvelle fenêtre)"
+                                    href="https://bsky.app/intent/compose?text={{ .Title }}+https://code-troopers.com{{ .RelPermalink }}"
                                     onclick="window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=500,width=700');return false;">
-                                    {{ partial "svg" "facebook-fill" }}
+                                    {{ partial "svg" "bluesky-fill" }}
                                 </a>
                             </li>
                             <li>
                                 <a target="_blank" rel="nofollow noopener"
-                                    aria-label="Partager sur X (nouvelle fenêtre)"
-                                    href="https://twitter.com/share?url=http://code-troopers.com{{ .Permalink }}&text={{ .Title }}&via=codetroopers"
-                                    onclick="window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=400,width=700');return false;">
-                                    {{ partial "svg" "twitter-x-fill" }}
+                                    aria-label="Partager sur LinkedIn (nouvelle fenêtre)"
+                                    href="https://www.linkedin.com/sharing/share-offsite/?url=https://code-troopers.com{{ .RelPermalink }}"
+                                    onclick="window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=500,width=700');return false;">
+                                    {{ partial "svg" "linkedin-fill" }}
                                 </a>
                             </li>
                         </ul>
