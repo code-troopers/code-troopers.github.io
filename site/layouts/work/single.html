@@ -11,7 +11,7 @@
             <article>
                 {{ with .Resources.GetMatch .Params.cover }}
                     {{ with .Process "webp q100" }}
-                        <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="">
+                        <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="Illustration de {{ $.Title }}">
                     {{ end }}
                 {{ end }}
 
