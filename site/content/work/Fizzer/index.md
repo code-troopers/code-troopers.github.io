@@ -1,6 +1,7 @@
 ---
 cover: fizzer.jpg
 date: '2017-12-15'
+description: "Développement de l'application Android et du site web Fizzer pour envoyer des cartes postales personnalisées depuis son smartphone."
 tags:
 - Android
 - Web

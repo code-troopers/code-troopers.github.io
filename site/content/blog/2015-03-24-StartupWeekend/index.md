@@ -6,6 +6,7 @@ tags:
 - startup
 - tours
 title: 'Retour sur le Second #SWTours'
+description: "Retour sur la 2e édition du Startup Weekend Tours à MAME : 4 Troopers répartis sur plusieurs projets pendant 54h intenses."
 url: /2015/03/24/startupweekend/
 aliases: 2015/03/24/StartupWeekend.html
 ---

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Festivals on Code-Troopers</title>
+    <link>/tags/festivals/</link>
+    <description>Recent content in Festivals on Code-Troopers</description>
+    <generator>Hugo</generator>
+    <language>fr-FR</language>
+    <lastBuildDate>Mon, 18 Jun 2018 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/festivals/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Projets internes, tu feras</title>
+      <link>/2018/06/18/projets-internes/</link>
+      <pubDate>Mon, 18 Jun 2018 00:00:00 +0000</pubDate>
+      <guid>/2018/06/18/projets-internes/</guid>
+      <description>&lt;div class=&#34;paragraph&#34;&gt;&#xA;&lt;p&gt;Il me parait indispensable que je me présente pour cet article de blog, vous allez vite comprendre pourquoi !&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;div class=&#34;paragraph&#34;&gt;&#xA;&lt;p&gt;Mais avant tout, petit rappel ! Code-Troopers a été créée il y a 3 ans par 7 &lt;strong&gt;développeurs&lt;/strong&gt; issus de Polytech’ Tours, l’entreprise se développe et réalise des projets pour des grands groupes, des PME, des start-ups… depuis peu l’entreprise embauche ; 1 CDI en &lt;strong&gt;développement&lt;/strong&gt;, 1 CDD de 6 mois en &lt;strong&gt;développement&lt;/strong&gt;, 1 alternant en &lt;strong&gt;développement&lt;/strong&gt; en formation à Polytech’ Tours et 1 alternant en &lt;em&gt;gestion &amp;amp; entrepreneuriat&lt;/em&gt; à l’IAE de Tours (je vous invite à vous rendre sur la page &lt;strong&gt;&lt;a href=&#34;https://www.code-troopers.com/#casting&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Casting&lt;/a&gt;&lt;/strong&gt; si vous voulez des précisions).&lt;/p&gt;&#xA;&lt;/div&gt;</description>
+    </item>
+  </channel>
+</rss>

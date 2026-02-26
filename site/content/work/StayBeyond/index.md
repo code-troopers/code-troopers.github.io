@@ -1,6 +1,7 @@
 ---
 cover: staybeyond.jpg
 date: '2017-11-10'
+description: "Développement de la plateforme web StayBeyond : recherche, réservation de propriétés de standing au Royaume-Uni et backoffice de gestion."
 tags:
 - Web
 title: 'StayBeyond'

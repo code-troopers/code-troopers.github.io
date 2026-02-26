@@ -8,6 +8,7 @@ tags:
 - Webhook Tester
 
 title: 'Tester ses webhooks avec RequestBin et ngrok'
+description: "Testez vos webhooks facilement avec RequestBin en local via Docker et exposez-les sur internet avec ngrok. Tutoriel rapide."
 url: /2018/05/02/requestbin-ngrok/
 ---
 

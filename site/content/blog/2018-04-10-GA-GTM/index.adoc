@@ -6,6 +6,7 @@ tags:
 - GA
 - GTM
 title: 'Google Analytics via Google Tag Manager'
+description: "Configurez Google Analytics via Google Tag Manager : balises, déclencheurs, variables et mode debug. Guide pratique pas à pas."
 url: /2018/04/09/ga-gtm/
 ---
 

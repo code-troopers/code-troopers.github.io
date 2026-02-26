@@ -1,0 +1,40 @@
+{{- $siteUrl := site.Params.siteUrl -}}
+{{- $pages := .Pages.ByDate.Reverse -}}
+{{- $limit := 20 -}}
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Code-Troopers - Blog</title>
+    <link>{{ $siteUrl }}/blog/</link>
+    <description>Articles techniques et retours d'expérience par l'équipe Code-Troopers</description>
+    <language>fr</language>
+    <atom:link href="{{ $siteUrl }}/blog/index.xml" rel="self" type="application/rss+xml" />
+    {{- with site.Params.images }}
+    <image>
+      <url>{{ $siteUrl }}/{{ index . 0 }}</url>
+      <title>Code-Troopers - Blog</title>
+      <link>{{ $siteUrl }}/blog/</link>
+    </image>
+    {{- end }}
+    {{- range first $limit $pages }}
+    <item>
+      <title>{{ .Title | htmlEscape }}</title>
+      <link>{{ $siteUrl }}{{ .RelPermalink }}</link>
+      <guid isPermaLink="true">{{ $siteUrl }}{{ .RelPermalink }}</guid>
+      <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" }}</pubDate>
+      {{- with .Params.author }}
+      <author>{{ . }}</author>
+      {{- end }}
+      {{- with .Description }}
+      <description>{{ . | htmlEscape }}</description>
+      {{- else }}
+      <description>{{ .Summary | plainify | htmlUnescape | htmlEscape }}</description>
+      {{- end }}
+      {{- with .Params.tags }}
+      {{- range . }}
+      <category>{{ . }}</category>
+      {{- end }}
+      {{- end }}
+    </item>
+    {{- end }}
+  </channel>
+</rss>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Play2 on Code-Troopers</title>
+    <link>/tags/play2/</link>
+    <description>Recent content in Play2 on Code-Troopers</description>
+    <generator>Hugo</generator>
+    <language>fr-FR</language>
+    <lastBuildDate>Mon, 05 May 2014 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/play2/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Play2 accéder à la base de donnée</title>
+      <link>/2014/05/05/playdbbrowser/</link>
+      <pubDate>Mon, 05 May 2014 00:00:00 +0000</pubDate>
+      <guid>/2014/05/05/playdbbrowser/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://www.playframework.com/&#34;&gt;Play2&lt;/a&gt;, c&amp;rsquo;est fun et c&amp;rsquo;est rapide !&#xA;Il suffit de quelques instants pour avoir une appli qui tourne en local sans rien avoir à configurer &lt;a href=&#34;http://www.playframework.com/documentation/2.2.x/NewApplication&#34;&gt;voir la doc de play&lt;/a&gt;.&#xA;En plus dès que l&amp;rsquo;on commence un peu à jouer, créer des entités, faire une page de CRUD, tout tourne toujours aussi bien. Il faut dire que c&amp;rsquo;est agréable, car &lt;a href=&#34;http://www.playframework.com/documentation/2.2.x/JavaEbean&#34;&gt;Ebean&lt;/a&gt; s&amp;rsquo;est occupé de générer les commandes sql dans le fichier &lt;em&gt;1.sql&lt;/em&gt; qui est joué automatiquement par play.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Sous le capot du Startup Weekend Tours</title>
+      <link>/2014/04/03/souslecapot-startupweekendtours/</link>
+      <pubDate>Thu, 03 Apr 2014 00:00:00 +0000</pubDate>
+      <guid>/2014/04/03/souslecapot-startupweekendtours/</guid>
+      <description>&lt;p&gt;Après l’article global d’impressions sur le Startup Weekend, nous sommes obligés de faire un court article précisant ce que nous avons implémenté et utilisé du point de vue technique (c’est ce qui nous intéresse beaucoup après tout).&lt;/p&gt;&#xA;&lt;h2 id=&#34;contenu-fonctionnel-&#34;&gt;Contenu fonctionnel :&lt;/h2&gt;&#xA;&lt;p&gt;Puisque nous avons pris le temps de faire une application entière en 54h, nous allons tout de même détailler les fonctionnalités qui existent dans ce que nous avons produit :&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;création de compte classique (avec validation par email obligatoire)&lt;/li&gt;&#xA;&lt;li&gt;création de compte via connexion Facebook&lt;/li&gt;&#xA;&lt;li&gt;proposition d’ajout de spectacle&lt;/li&gt;&#xA;&lt;li&gt;vote sur un spectacle existant&lt;/li&gt;&#xA;&lt;li&gt;duplication de spectacle (changement de ville)&lt;/li&gt;&#xA;&lt;li&gt;partage Twitter / Facebook / Google plus&lt;/li&gt;&#xA;&lt;li&gt;envoi de mail selon les statuts des événements&lt;/li&gt;&#xA;&lt;li&gt;&lt;em&gt;backoffice&lt;/em&gt; avec un tableau des événements et la possibilité de modifier leurs statuts&lt;/li&gt;&#xA;&lt;li&gt;modération des propositions de spectacle (avec remplissage automatique de la biographie / photo d’un artiste à partir de l’API &lt;a href=&#34;http://developer.echonest.com/&#34;&gt;EchoNest&lt;/a&gt;)&lt;/li&gt;&#xA;&lt;li&gt;recherche globale avec Elasticsearch (géolocalisation et &lt;em&gt;full-text&lt;/em&gt; sur artiste)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;contenu-technique-&#34;&gt;Contenu technique :&lt;/h2&gt;&#xA;&lt;p&gt;Les technologies utilisées dans le projet sont :&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Startup Weekend Tours</title>
+      <link>/2014/03/23/startupweekend/</link>
+      <pubDate>Sun, 23 Mar 2014 00:00:00 +0000</pubDate>
+      <guid>/2014/03/23/startupweekend/</guid>
+      <description>&lt;p&gt;Retour sur 54h de Startup Weekend pour la première édition à Tours &lt;a href=&#34;http://tours.startupweekend.org/&#34;&gt;#swtours&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;Les Startup Weekends ont pour but d’encourager les entrepreneurs à créer leur projet en les confortant dans la viabilité de leur idée et en leur permettant de rencontrer des co-fondateurs. C’est par exemple l’occasion pour un charpentier de rencontrer des informaticiens pour réaliser un site, de rencontrer des avocats pour être sûr de la légalité et des investisseurs pour étudier la viabilité de la startup. Le tout en 54h, il faut aller vite !&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Strength Password Indicator Pour Play2</title>
+      <link>/2014/03/05/passwordstrength/</link>
+      <pubDate>Wed, 05 Mar 2014 00:00:00 +0000</pubDate>
+      <guid>/2014/03/05/passwordstrength/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;Le grand public commence tout doucement à être sensibilisé à l’importance d’avoir un mot de passe &lt;b&gt;sécurisé&lt;/b&gt;, en partie grâce aux reportages TV de plus en plus nombreux sur ce domaine, mais surtout par les différentes fuites&#xA;ou vols de bases de données qui arrivent de plus en plus fréquemment.&lt;/p&gt;&#xA;&lt;p&gt;Il faut donc profiter de cette sensibiliation et en tant que développeurs, nous avons la possibilité d&amp;rsquo;inciter nos&#xA;utilisateurs à utiliser un bon mot de passe. Alors, au travail !&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

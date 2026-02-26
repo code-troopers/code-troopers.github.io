@@ -6,6 +6,7 @@ tags:
 - SEO
 - Angular
 title: 'SEO et Single Page Application'
+description: "Comment rendre une SPA Angular compatible SEO : balises meta, OpenGraph, Angular Universal et pré-rendu côté serveur."
 url: /2018/09/18/angular-seo/
 ---
 

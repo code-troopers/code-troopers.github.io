@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Trello on Code-Troopers</title>
+    <link>/tags/trello/</link>
+    <description>Recent content in Trello on Code-Troopers</description>
+    <generator>Hugo</generator>
+    <language>fr-FR</language>
+    <lastBuildDate>Mon, 09 Jul 2018 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/trello/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Faire du json comme si on faisait du sed (*)</title>
+      <link>/2018/07/09/jq/</link>
+      <pubDate>Mon, 09 Jul 2018 00:00:00 +0000</pubDate>
+      <guid>/2018/07/09/jq/</guid>
+      <description>&lt;div class=&#34;paragraph&#34;&gt;&#xA;&lt;p&gt;Nous usons et abusons de Trello pour nos projets. Pour un projet en particulier, je voulais retrouver certains commentaires répartis sur plusieurs mois.&#xA;Juste en regardant les cartes une par une ou en regardant l’historique serait trop fastidieux.&#xA;Heureusement chaque board Trello permet un export au format json qui nous permet de s’en servir à notre guise.&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;div class=&#34;paragraph&#34;&gt;&#xA;&lt;p&gt;Je veux juste sortir quelques données, je ne referai jamais la même chose plusieurs fois et je veux que ça me prenne 10 minutes max donc un projet java c’est juste impensable, un langage de script sera plus adapté et ça tombe bien car d’une part le shell (la ligne de commande) est un de mes langages préférés et j’ai découvert &lt;code&gt;jq&lt;/code&gt; il n’y a pas longtemps.&lt;/p&gt;&#xA;&lt;/div&gt;</description>
+    </item>
+  </channel>
+</rss>

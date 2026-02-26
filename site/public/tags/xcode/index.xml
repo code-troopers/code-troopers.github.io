@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>XCode on Code-Troopers</title>
+    <link>/tags/xcode/</link>
+    <description>Recent content in XCode on Code-Troopers</description>
+    <generator>Hugo</generator>
+    <language>fr-FR</language>
+    <lastBuildDate>Tue, 13 Mar 2018 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/xcode/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Firebase &#43; XCode</title>
+      <link>/2018/03/16/firebase-xcode-plist/</link>
+      <pubDate>Tue, 13 Mar 2018 00:00:00 +0000</pubDate>
+      <guid>/2018/03/16/firebase-xcode-plist/</guid>
+      <description>&lt;div class=&#34;paragraph&#34;&gt;&#xA;&lt;p&gt;Il est courant maintenant d’utiliser Firebase dans les applications mobiles.&#xA;Que ce soit pour la partie statistiques, les notifications ou le reporting des &lt;em&gt;crashes&lt;/em&gt;.&#xA;L’intégration est très facile, mais peut devenir compliquée dès lors qu’on manipule des &lt;em&gt;target&lt;/em&gt; différentes avec des configurations différentes.&#xA;Cet article va vous détailler une façon simple mais efficace de gérer ces différences.&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;div class=&#34;sect1&#34;&gt;&#xA;&lt;h2 id=&#34;_multiples_fichiers_plist&#34;&gt;Multiples fichiers &lt;code&gt;plist&lt;/code&gt;&lt;/h2&gt;&#xA;&lt;div class=&#34;sectionbody&#34;&gt;&#xA;&lt;div class=&#34;paragraph&#34;&gt;&#xA;&lt;p&gt;Les fichiers &lt;code&gt;plist&lt;/code&gt; sont des fichiers XML de configuration pour XCode.&#xA;Lors de la création d’un projet dans Firebase, il est possible de récupérer une version générée contenant les bonnes variables pour votre projet.&#xA;Le problème qui peut se produire est lorsqu’on génère plusieurs livrables avec des configurations qui doivent être différentes grace aux &lt;em&gt;target&lt;/em&gt;.&#xA;Il n’est pas possible, ni confortable, de gérer le cas de plusieurs fichiers &lt;code&gt;plist&lt;/code&gt; dans les sources.&#xA;La redéfinition du nom du fichier à faire utiliser par Firebase ne marche pas à tous les coups et il a tendance à aller lire la valeur par défaut &lt;code&gt;GoogleService-Info.plist&lt;/code&gt;.&lt;/p&gt;&#xA;&lt;/div&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -7,6 +7,7 @@ tags:
 - db
 - h2-browser
 title: Play2 accéder à la base de donnée
+description: "Comment visualiser les données de votre base H2 en mémoire dans Play2 grâce à la commande h2-browser. Astuce rapide et configuration."
 url: /2014/05/05/playdbbrowser/
 aliases: 2014/05/05/PlayDbBrowser.html
 ---

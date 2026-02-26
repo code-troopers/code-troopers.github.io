@@ -9,6 +9,7 @@ cover: logo-banner.png
 draft: false
 tags:
   - job
+description: "Code-Troopers recrute 2 stagiaires pour 2026 ! Stages fullstack sur des projets internes à Tours. Postulez avec votre CV à stage@code-troopers.com."
 ---
 Chez **Code-Troopers**, cette période de l’année rime toujours avec nouvelles opportunités : nous sommes ravis de vous présenter nos offres de **stages** pour 2026 👩‍🎓👨‍🎓.
 <!--more-->

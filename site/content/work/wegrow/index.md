@@ -4,6 +4,7 @@ weight: 1000
 url: /wegrow.html
 date: 2024-03-12
 cover: wegrow.webp
+description: "Développement de la plateforme web Wegrow en SpringBoot/Angular et d'un bot Teams : partage de bonnes pratiques commerciales entre équipes."
 tags:
   - web
 ---

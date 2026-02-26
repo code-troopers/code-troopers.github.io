@@ -2,21 +2,27 @@
 
 <section id="blog">
     <div class="wrapper">
-        <h1>
-            Blog
-        </h1>
+        <nav aria-label="Fil d'ariane" class="breadcrumb">
+            <a href="/">Accueil</a> &rsaquo; <a href="/blog/">Blog</a>
+        </nav>
     </div>
 
     <section id="article">
         <div class="wrapper">
             <article>
                 {{ with .Resources.GetMatch .Params.cover }}
-                    {{ with .Fill "900x500 Center webp q100" }}
-                        <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="Illustration de l'article {{ $.Title }}">
-                    {{ end }}
+                    {{ $img900 := .Fill "900x500 Center webp q80" }}
+                    {{ $img600 := .Fill "600x333 Center webp q80" }}
+                    {{ $img400 := .Fill "400x222 Center webp q80" }}
+                    <img
+                        src="{{ $img900.RelPermalink }}"
+                        srcset="{{ $img400.RelPermalink }} 400w, {{ $img600.RelPermalink }} 600w, {{ $img900.RelPermalink }} 900w"
+                        sizes="(max-width: 400px) 400px, (max-width: 768px) 600px, 900px"
+                        width="{{ $img900.Width }}" height="{{ $img900.Height }}"
+                        alt="Illustration de l'article {{ $.Title }}">
                 {{ end }}
                 <div class="wrapper-content">
-                    <h2>{{ .Title }}</h2>
+                    <h1>{{ .Title }}</h1>
                     {{if .Params.tags }}
                     <ul class="tags">
                         {{ range $index, $tag := .Params.tags }}

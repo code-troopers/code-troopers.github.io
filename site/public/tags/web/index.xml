@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Web on Code-Troopers</title>
+    <link>/tags/web/</link>
+    <description>Recent content in Web on Code-Troopers</description>
+    <generator>Hugo</generator>
+    <language>fr-FR</language>
+    <lastBuildDate>Tue, 16 Apr 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/web/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Navig&#39; - Votre compagnon pour les transports en commun</title>
+      <link>/navigtours.html</link>
+      <pubDate>Sat, 01 Jun 2019 00:00:00 +0000</pubDate>
+      <guid>/navigtours.html</guid>
+      <description>&lt;p&gt;Navig’ est une solution MaaS pensée pour fluidifier les déplacements urbains grâce à ses itinéraires intelligents, informations en temps réel, M-Ticket etc. Fiable et évolutive, elle offre une expérience connectée au service d’une mobilité urbaine plus simple et intuitive.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Chapitô</title>
+      <link>/chapito.html</link>
+      <pubDate>Mon, 01 Apr 2019 00:00:00 +0000</pubDate>
+      <guid>/chapito.html</guid>
+      <description>&lt;p&gt;Chapitô est LE projet des Code-Troopers. Il s’agit d’un outil 100% en ligne qui permet à tous les organisateurs de festivals de créer une application sur-mesure sans aucune connaissance en développement web &amp;amp; développement d’application.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Eutelmed</title>
+      <link>/eutelmed.html</link>
+      <pubDate>Sat, 01 Dec 2018 00:00:00 +0000</pubDate>
+      <guid>/eutelmed.html</guid>
+      <description>&lt;p&gt;Eutelmed est une plateforme de télé-médecine. Elle permet de faire de la vidéo-consultation, entre des patients et des professionnels de santé.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>DossierFacile</title>
+      <link>/dossierfacile.html</link>
+      <pubDate>Wed, 06 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>/dossierfacile.html</guid>
+      <description>&lt;p&gt;DossierFacile est une Startup d&amp;rsquo;État. Son objectif est d&amp;rsquo;aider les usagers à faire un dossier de location clair, complet et cohérent.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Wegrow</title>
+      <link>/wegrow.html</link>
+      <pubDate>Tue, 12 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>/wegrow.html</guid>
+      <description>&lt;p&gt;Wegrow est une plateforme où les équipes partagent des expériences utiles pour obtenir de meilleurs résultats plus rapidement. L&amp;rsquo;objectif est simple, faire un stackoverflow pour les bizdev&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Site web, l&#39;envers du décor avec Hugo et DecapCMS</title>
+      <link>/2024/04/30/siteweb/</link>
+      <pubDate>Tue, 16 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>/2024/04/30/siteweb/</guid>
+      <description>&lt;h1 id=&#34;explorez-les-dessous-de-notre-site-web&#34;&gt;Explorez les dessous de notre site web&lt;/h1&gt;&#xA;&lt;h2 id=&#34;pourquoi-hugo--&#34;&gt;Pourquoi Hugo ? 🤔&lt;/h2&gt;&#xA;&lt;p&gt;Lorsque nous avons célébré l&amp;rsquo;anniversaire de notre blog, nous avons révélé un secret : rendre notre site éditable sans nécessiter de compétences en développement. Mais, bien sûr, savoir ce qui se cache derrière est essentiel pour comprendre pourquoi c&amp;rsquo;est intéressant.&lt;/p&gt;&#xA;&lt;p&gt;Nous avons opté pour &lt;a href=&#34;https://gohugo.io&#34;&gt;Hugo&lt;/a&gt;, un générateur de sites qui crée des fichiers HTML/CSS statiques. Pourquoi Hugo ? Tout simplement parce que c&amp;rsquo;est rapide, polyvalent sur toutes les plateformes, intuitif, et offre une multitude de possibilités. Alors, pourquoi ne pas choisir une plateforme nocode comme Webflow ou Wix ? Parce que, pour être honnête, ce n&amp;rsquo;est tout simplement pas aussi amusant. Ces solutions ne nous permettent pas la liberté créative que nous recherchons. De même, les CMS classiques comme WordPress ou Drupal ne nous ont jamais vraiment séduits. Ils sont souvent développés en PHP ou en Python, nécessitent un hébergement spécifique, et, avouons-le, manquent parfois de flexibilité pour les développeurs qui aiment personnaliser chaque détail. En plus c&amp;rsquo;est payant, alors que nous hébergeons notre site gratuitement depuis 11 ans sur les github pages ! (téma la taille du rat) Et puis il y a un autre point à prendre en compte, pour de l&amp;rsquo;auto hébergement, personne ne va pirater un site en html/css c&amp;rsquo;est juste (presque) pas possible. Alors qu&amp;rsquo;un wordpress, il vaut mieux le faire héberger chez quelqu&amp;rsquo;un dont c&amp;rsquo;est le métier et qui va s&amp;rsquo;en occuper à plein temps.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Virtuo</title>
+      <link>/virtuo.html</link>
+      <pubDate>Thu, 31 Aug 2023 00:00:00 +0000</pubDate>
+      <guid>/virtuo.html</guid>
+      <description>&lt;p&gt;Virtuo est une entreprise française innovante qui redéfinit le secteur de la location de voitures.&lt;/p&gt;&#xA;&lt;p&gt;Virtuo se distingue par son modèle entièrement dématérialisé, éliminant la nécessité de comptoirs physiques et offrant une expérience utilisateur fluide grâce à l&amp;rsquo;accès aux véhicules par Bluetooth.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Conseil Constitutionnel</title>
+      <link>/conseil-constitutionnel.html</link>
+      <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>/conseil-constitutionnel.html</guid>
+      <description>&lt;p&gt;Applications Android et iOS de consultation des décisions et actualités du conseil constitutionnel.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WeGuide</title>
+      <link>/weguide.html</link>
+      <pubDate>Tue, 26 Dec 2017 00:00:00 +0000</pubDate>
+      <guid>/weguide.html</guid>
+      <description>&lt;p&gt;We Guide est la plateforme de mise en relation entre Touristes et Guides professionnels et entre Touristes et Particuliers locaux.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Ideas</title>
+      <link>/ideas.html</link>
+      <pubDate>Tue, 19 Dec 2017 00:00:00 +0000</pubDate>
+      <guid>/ideas.html</guid>
+      <description>&lt;p&gt;Ideas est un ERP utilisé en interne chez Leroy-Somer pour la gestion des incidents de l&amp;rsquo;entreprise dans chacun des pays où Leroy-Somer est implanté.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Roadflore</title>
+      <link>/roadflore.html</link>
+      <pubDate>Tue, 19 Dec 2017 00:00:00 +0000</pubDate>
+      <guid>/roadflore.html</guid>
+      <description>&lt;p&gt;Roadflore est l&amp;rsquo;application mobile Android et iOS natif du végétal et de la biodiversité en ville. Elle met en relation&#xA;les utilisateurs entre eux et donne des informations sur les plantes de son jardin.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Fizzer</title>
+      <link>/fizzer.html</link>
+      <pubDate>Fri, 15 Dec 2017 00:00:00 +0000</pubDate>
+      <guid>/fizzer.html</guid>
+      <description>&lt;p&gt;Fizzer est l&amp;rsquo;appli vous permettant d’envoyer des cartes postales personnalisées ! Créez votre carte postale directement depuis votre téléphone en prennant une photo.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>StayBeyond</title>
+      <link>/staybeyond.html</link>
+      <pubDate>Fri, 10 Nov 2017 00:00:00 +0000</pubDate>
+      <guid>/staybeyond.html</guid>
+      <description>&lt;p&gt;StayBeyond est une plateforme de réservation de propriétés de standing au Royaume-Uni. Nous sommes intervenus sur&#xA;la vitrine permettant la recherche, consultation et réservation d&amp;rsquo;une propriété ainsi que sur le backoffice permettant&#xA;de gérer toutes ces propriétés, bookings ainsi que tout ce qui tourne autour.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

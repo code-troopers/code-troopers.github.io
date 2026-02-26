@@ -7,6 +7,7 @@ tags:
 - Windows
 - Tips
 title: Babun un shell sous Windows
+description: "Babun offre un shell zsh complet sous Windows avec oh-my-zsh, tmux et un gestionnaire de paquets. Installation sans droits admin."
 url: /2014/10/01/babun/
 aliases: 2014/10/01/babun.html
 ---

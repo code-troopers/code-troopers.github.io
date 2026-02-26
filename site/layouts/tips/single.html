@@ -2,17 +2,17 @@
 
 <section id="tips">
     <div class="wrapper">
-        <h1>
-            Tips
-        </h1>
+        <nav aria-label="Fil d'ariane" class="breadcrumb">
+            <a href="/">Accueil</a> &rsaquo; <a href="/tips/">Tips</a>
+        </nav>
     </div>
 
     <section id="article">
         <div class="wrapper">
             <article>
                 <div class="wrapper-content">
-                    <h2>{{ .Title }}</h2>
-                    {{if .Params.tags }}
+                    <h1>{{ .Title }}</h1>
+                    {{if .Params.tipstags }}
                     <ul class="tags">
                         {{ range $index, $tag := .Params.tipstags }}
                         <li><a href="/tipstags/{{ $tag | urlize }}/">{{ $tag }}</a></li>
@@ -23,9 +23,9 @@
                         {{ .Content }}
                     </div>
                     <div class="content-footer">
-                        {{if .Params.tags }}
+                        {{if .Params.tipstags }}
                         <ul class="tags float">
-                            {{ range $index, $tag := .Params.tags }}
+                            {{ range $index, $tag := .Params.tipstags }}
                             <li><a href="/tipstags/{{ $tag | urlize }}/">{{ $tag }}</a></li>
                             {{ end }}
                         </ul>

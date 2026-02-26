@@ -5,6 +5,7 @@ date: '2019-10-22'
 tags:
 - Stage
 title: 'Stages 2020'
+description: "Offres de stages 2020 chez Code-Troopers à MAME : développement Frontend, Backend et IoT. Postulez dès maintenant !"
 url: /2019/10/22/stages-2020/
 aliases: 2019/10/22/stages-2020.html
 expirydate: '2018-12-19'

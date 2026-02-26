@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Db on Code-Troopers</title>
+    <link>/tags/db/</link>
+    <description>Recent content in Db on Code-Troopers</description>
+    <generator>Hugo</generator>
+    <language>fr-FR</language>
+    <lastBuildDate>Mon, 05 May 2014 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/db/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Play2 accéder à la base de donnée</title>
+      <link>/2014/05/05/playdbbrowser/</link>
+      <pubDate>Mon, 05 May 2014 00:00:00 +0000</pubDate>
+      <guid>/2014/05/05/playdbbrowser/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://www.playframework.com/&#34;&gt;Play2&lt;/a&gt;, c&amp;rsquo;est fun et c&amp;rsquo;est rapide !&#xA;Il suffit de quelques instants pour avoir une appli qui tourne en local sans rien avoir à configurer &lt;a href=&#34;http://www.playframework.com/documentation/2.2.x/NewApplication&#34;&gt;voir la doc de play&lt;/a&gt;.&#xA;En plus dès que l&amp;rsquo;on commence un peu à jouer, créer des entités, faire une page de CRUD, tout tourne toujours aussi bien. Il faut dire que c&amp;rsquo;est agréable, car &lt;a href=&#34;http://www.playframework.com/documentation/2.2.x/JavaEbean&#34;&gt;Ebean&lt;/a&gt; s&amp;rsquo;est occupé de générer les commandes sql dans le fichier &lt;em&gt;1.sql&lt;/em&gt; qui est joué automatiquement par play.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,6 +1,7 @@
 ---
 cover: toosla.jpg
 date: '2017-12-19'
+description: "Application Android Toosla pour la location de voitures dématérialisée : déverrouillage et démarrage des véhicules par Bluetooth sans clés."
 tags:
 - Android
 title: 'Toosla'

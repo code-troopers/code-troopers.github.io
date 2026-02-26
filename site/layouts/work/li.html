@@ -3,9 +3,9 @@
 <div class="work-container">
   <div class="cover-head">
   {{ with .Resources.GetMatch .Params.cover }}
-    {{ with .Fill "400x300 Center webp q100" }}
+    {{ with .Fill "400x300 Center webp q80" }}
     <div class="img-container">
-      <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="" loading="lazy">
+      <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="Illustration de {{ $.Title }}" loading="lazy">
     </div>
     {{ end }}
   {{ end }}

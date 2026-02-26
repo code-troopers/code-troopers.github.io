@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hugo on Code-Troopers</title>
+    <link>/tags/hugo/</link>
+    <description>Recent content in Hugo on Code-Troopers</description>
+    <generator>Hugo</generator>
+    <language>fr-FR</language>
+    <lastBuildDate>Tue, 16 Apr 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Site web, l&#39;envers du décor avec Hugo et DecapCMS</title>
+      <link>/2024/04/30/siteweb/</link>
+      <pubDate>Tue, 16 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>/2024/04/30/siteweb/</guid>
+      <description>&lt;h1 id=&#34;explorez-les-dessous-de-notre-site-web&#34;&gt;Explorez les dessous de notre site web&lt;/h1&gt;&#xA;&lt;h2 id=&#34;pourquoi-hugo--&#34;&gt;Pourquoi Hugo ? 🤔&lt;/h2&gt;&#xA;&lt;p&gt;Lorsque nous avons célébré l&amp;rsquo;anniversaire de notre blog, nous avons révélé un secret : rendre notre site éditable sans nécessiter de compétences en développement. Mais, bien sûr, savoir ce qui se cache derrière est essentiel pour comprendre pourquoi c&amp;rsquo;est intéressant.&lt;/p&gt;&#xA;&lt;p&gt;Nous avons opté pour &lt;a href=&#34;https://gohugo.io&#34;&gt;Hugo&lt;/a&gt;, un générateur de sites qui crée des fichiers HTML/CSS statiques. Pourquoi Hugo ? Tout simplement parce que c&amp;rsquo;est rapide, polyvalent sur toutes les plateformes, intuitif, et offre une multitude de possibilités. Alors, pourquoi ne pas choisir une plateforme nocode comme Webflow ou Wix ? Parce que, pour être honnête, ce n&amp;rsquo;est tout simplement pas aussi amusant. Ces solutions ne nous permettent pas la liberté créative que nous recherchons. De même, les CMS classiques comme WordPress ou Drupal ne nous ont jamais vraiment séduits. Ils sont souvent développés en PHP ou en Python, nécessitent un hébergement spécifique, et, avouons-le, manquent parfois de flexibilité pour les développeurs qui aiment personnaliser chaque détail. En plus c&amp;rsquo;est payant, alors que nous hébergeons notre site gratuitement depuis 11 ans sur les github pages ! (téma la taille du rat) Et puis il y a un autre point à prendre en compte, pour de l&amp;rsquo;auto hébergement, personne ne va pirater un site en html/css c&amp;rsquo;est juste (presque) pas possible. Alors qu&amp;rsquo;un wordpress, il vaut mieux le faire héberger chez quelqu&amp;rsquo;un dont c&amp;rsquo;est le métier et qui va s&amp;rsquo;en occuper à plein temps.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, viewport-fit=cover"
+  />
+
+  <title>Site web, l&#39;envers du décor avec Hugo et DecapCMS - Code-Troopers</title>
+  <meta name="description" content="Comment nous avons construit le site Code-Troopers avec Hugo et DecapCMS. Pourquoi un générateur statique plutôt que WordPress, et comment ça fonctionne." />
+  <link rel="canonical" href="https://code-troopers.com/2024/04/30/siteweb/" />
+
+  
+  <link rel="dns-prefetch" href="//matomo.chapi.to" />
+  <link rel="preconnect" href="https://matomo.chapi.to" crossorigin />
+
+     
+  <link href="/main.488c56f9070ea7a180e8.css" rel="stylesheet" />
+  
+  <link href="/main.css" rel="stylesheet" />
+    
+
+  <base href="/" />
+  
+  <link rel="icon" href="/favicon.png" />
+  <link rel="manifest" href="/manifest.json" />
+  <link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#ff4400" />
+  <meta name="theme-color" content="#fff" />
+
+  
+  
+
+
+
+<meta property="og:title" content="Site web, l&#39;envers du décor avec Hugo et DecapCMS" />
+<meta property="og:description" content="Comment nous avons construit le site Code-Troopers avec Hugo et DecapCMS. Pourquoi un générateur statique plutôt que WordPress, et comment ça fonctionne." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://code-troopers.com/2024/04/30/siteweb/" />
+<meta property="og:locale" content="fr_FR" />
+<meta property="og:image" content="https://code-troopers.com/2024/04/30/siteweb/image_hu_1d342ee135a86ca2.png" />
+<meta property="og:site_name" content="Code-Troopers" />
+<meta property="article:published_time" content="2024-04-16T00:00:00&#43;00:00" />
+<meta property="article:author" content="Matthieu Bollot" />
+<meta property="article:tag" content="Hugo" />
+<meta property="article:tag" content="Blog" />
+<meta property="article:tag" content="Web" />
+
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Site web, l&#39;envers du décor avec Hugo et DecapCMS" />
+<meta name="twitter:description" content="Comment nous avons construit le site Code-Troopers avec Hugo et DecapCMS. Pourquoi un générateur statique plutôt que WordPress, et comment ça fonctionne." />
+<meta name="twitter:image" content="https://code-troopers.com/2024/04/30/siteweb/image_hu_1d342ee135a86ca2.png" />
+
+
+  
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "author": {
+    "@type": "Person",
+    "name": "Matthieu Bollot",
+    "url": "https://www.linkedin.com/in/matthieu-bollot-6639231"
+  },
+  "dateModified": "2024-04-16T00:00:00+00:00",
+  "datePublished": "2024-04-16T00:00:00+00:00",
+  "description": "Comment nous avons construit le site Code-Troopers avec Hugo et DecapCMS. Pourquoi un générateur statique plutôt que WordPress, et comment ça fonctionne.",
+  "headline": "Site web, l'envers du décor avec Hugo et DecapCMS",
+  "image": "https://code-troopers.com/2024/04/30/siteweb/image_hu_1d342ee135a86ca2.png",
+  "publisher": {
+    "@type": "Organization",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://code-troopers.com/img/logo-code-troopers-tête-couleur.png"
+    },
+    "name": "Code-Troopers"
+  },
+  "url": "https://code-troopers.com/2024/04/30/siteweb/"
+}
+</script>
+
+  
+  
+  <link rel="alternate" type="application/rss+xml" title="Code-Troopers - Blog" href="https://code-troopers.com/blog/index.xml" />
+  
+
+  
+</head>
+
+  <body id="top" class="sans-serif">
+    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
+    <header>
+  <nav aria-label="Navigation principale">
+    <ul>
+      
+      <li><a id="id-company" href="/"><span>Code-Troopers</span></a></li>
+      
+      <li><a id="id-skills" href="/#skills"><span>Compétences</span></a></li>
+      
+      <li><a id="id-portfolio" href="/#portfolio"><span>Réalisations</span></a></li>
+      
+      <li><a id="id-casting" href="/#casting"><span>L&#39;équipe</span></a></li>
+      
+      <li><a id="id-blogs" href="/blog"><span>Blog</span></a></li>
+      
+      <li><a id="id-contact" href="/#contact"><span>Contact</span></a></li>
+      
+    </ul>
+    <button class="hamburger" aria-label="Menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+</header>
+
+
+    <main id="main-content">
+      
+
+<section id="blog">
+    <div class="wrapper">
+        <nav aria-label="Fil d'ariane" class="breadcrumb">
+            <a href="/">Accueil</a> &rsaquo; <a href="/blog/">Blog</a>
+        </nav>
+    </div>
+
+    <section id="article">
+        <div class="wrapper">
+            <article>
+                
+                    
+                    
+                    
+                    <img
+                        src="/2024/04/30/siteweb/image_hu_723989b02f6e6de5.webp"
+                        srcset="/2024/04/30/siteweb/image_hu_32a586c0579be42f.webp 400w, /2024/04/30/siteweb/image_hu_b09e09dfb97e2517.webp 600w, /2024/04/30/siteweb/image_hu_723989b02f6e6de5.webp 900w"
+                        sizes="(max-width: 400px) 400px, (max-width: 768px) 600px, 900px"
+                        width="900" height="500"
+                        alt="Illustration de l'article Site web, l&#39;envers du décor avec Hugo et DecapCMS">
+                
+                <div class="wrapper-content">
+                    <h1>Site web, l&#39;envers du décor avec Hugo et DecapCMS</h1>
+                    
+                    <ul class="tags">
+                        
+                        <li><a href="/tags/hugo/">Hugo</a></li>
+                        
+                        <li><a href="/tags/blog/">Blog</a></li>
+                        
+                        <li><a href="/tags/web/">Web</a></li>
+                        
+                    </ul>
+                    
+                    <div class="content">
+                        <h1 id="explorez-les-dessous-de-notre-site-web">Explorez les dessous de notre site web</h1>
+<h2 id="pourquoi-hugo--">Pourquoi Hugo ? 🤔</h2>
+<p>Lorsque nous avons célébré l&rsquo;anniversaire de notre blog, nous avons révélé un secret : rendre notre site éditable sans nécessiter de compétences en développement. Mais, bien sûr, savoir ce qui se cache derrière est essentiel pour comprendre pourquoi c&rsquo;est intéressant.</p>
+<p>Nous avons opté pour <a href="https://gohugo.io">Hugo</a>, un générateur de sites qui crée des fichiers HTML/CSS statiques. Pourquoi Hugo ? Tout simplement parce que c&rsquo;est rapide, polyvalent sur toutes les plateformes, intuitif, et offre une multitude de possibilités. Alors, pourquoi ne pas choisir une plateforme nocode comme Webflow ou Wix ? Parce que, pour être honnête, ce n&rsquo;est tout simplement pas aussi amusant. Ces solutions ne nous permettent pas la liberté créative que nous recherchons. De même, les CMS classiques comme WordPress ou Drupal ne nous ont jamais vraiment séduits. Ils sont souvent développés en PHP ou en Python, nécessitent un hébergement spécifique, et, avouons-le, manquent parfois de flexibilité pour les développeurs qui aiment personnaliser chaque détail. En plus c&rsquo;est payant, alors que nous hébergeons notre site gratuitement depuis 11 ans sur les github pages ! (téma la taille du rat) Et puis il y a un autre point à prendre en compte, pour de l&rsquo;auto hébergement, personne ne va pirater un site en html/css c&rsquo;est juste (presque) pas possible. Alors qu&rsquo;un wordpress, il vaut mieux le faire héberger chez quelqu&rsquo;un dont c&rsquo;est le métier et qui va s&rsquo;en occuper à plein temps.</p>
+<h2 id="comment-ça-marche--">Comment ça marche ? 🛠️</h2>
+<p>Hugo fonctionne sur la base de répertoires et de fichiers pour générer des sites statiques, sans nécessiter de base de données. Le processus est simple : une fois les fichiers générés, il suffit de les servir.</p>
+<p>Dans notre configuration, le répertoire &ldquo;content&rdquo; contient notamment un sous-répertoire &ldquo;blog&rdquo;, où chaque article de blog est représenté par un répertoire individuel contenant un fichier index et une image de bannière. Ces fichiers index peuvent être écrits en HTML, Markdown ou AsciiDoc, offrant une flexibilité totale. Pour créer un nouvel article, il suffit de créer un répertoire, un fichier markdown, y écrire le contenu et voilà !</p>
+<p>Les contenus sont ensuite utilisés par des &ldquo;layouts&rdquo;. Par exemple, dans nos fichiers index, nous définissons un titre, qui est ensuite affiché à l&rsquo;aide d&rsquo;un modèle prédéfini.</p>
+<p>De plus, nous utilisons des &ldquo;partials&rdquo; pour rendre certaines parties du site réutilisables, comme le footer ou le menu. C&rsquo;est l&rsquo;équivalent d&rsquo;une directive Vue ou Angular.</p>
+<p>Pour finir, les layouts ou les partials peuvent contenir des shortcodes. Par exemple sur la page d&rsquo;accueil il y a une boucle pour afficher les 3 derniers articles. Un autre exemple concernant les articles de blog, les bannières sont toutes converties en webp et re-taillées en 900x500. Si on décide de changer un jour de résolution, il suffira de mettre à jour une ligne de code et le laisser faire les resize sur les images.</p>
+<h2 id="est-ce-accessible-à-tous--">Est-ce accessible à tous ? 🌟</h2>
+<p>Vous vous demandez peut-être si cette approche est adaptée aux non-techniciens. Pas tout à fait ! Écrire du markdown pourquoi pas, mais le fait de ne pas avoir de retour direct, de savoir si on crée le fichier au bon endroit, de faire des commits… Ce n&rsquo;est pas adapté et c&rsquo;est pourquoi nous avons ajouté <a href="https://decapcms.org/">DecapCMS</a> !</p>
+<h2 id="quest-ce-que-decapcms-">Qu&rsquo;est-ce que DecapCMS ?</h2>
+<p>DecapCMS, comme son nom l&rsquo;indique c&rsquo;est un CMS mais qui a la particularité de se baser sur des fichiers, il fait aussi des commits pour mettre à jour comme il faut.</p>
+<p>Pour l&rsquo;utiliser il faut d&rsquo;abord l&rsquo;installer, avec un package npm dans notre cas et le configurer. Dans le fichier de configuration, nous allons détailler tout ce qu&rsquo;il peut éditer, sachant qu&rsquo;il peut éditer du html, du markdown, du json. Voici un exemple de configuration pour les articles de blog :</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">collections:</span> <span style="color:#960050;background-color:#1e0010">#</span> <span style="color:#960050;background-color:#1e0010">A</span> <span style="color:#960050;background-color:#1e0010">list</span> <span style="color:#960050;background-color:#1e0010">of</span> <span style="color:#960050;background-color:#1e0010">collections</span> <span style="color:#960050;background-color:#1e0010">the</span> <span style="color:#960050;background-color:#1e0010">CMS</span> <span style="color:#960050;background-color:#1e0010">should</span> <span style="color:#960050;background-color:#1e0010">be</span> <span style="color:#960050;background-color:#1e0010">able</span> <span style="color:#960050;background-color:#1e0010">to</span> <span style="color:#960050;background-color:#1e0010">edit</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#960050;background-color:#1e0010">-</span> <span style="color:#960050;background-color:#1e0010">name:</span> <span style="color:#e6db74">&#34;post&#34;</span> <span style="color:#960050;background-color:#1e0010">#</span> <span style="color:#960050;background-color:#1e0010">Used</span> <span style="color:#960050;background-color:#1e0010">in</span> <span style="color:#960050;background-color:#1e0010">routes,</span> <span style="color:#960050;background-color:#1e0010">ie.:</span> <span style="color:#960050;background-color:#1e0010">/admin/collections/:slug/edit</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#960050;background-color:#1e0010">label:</span> <span style="color:#e6db74">&#34;Post&#34;</span> <span style="color:#960050;background-color:#1e0010">#</span> <span style="color:#960050;background-color:#1e0010">Used</span> <span style="color:#960050;background-color:#1e0010">in</span> <span style="color:#960050;background-color:#1e0010">the</span> <span style="color:#960050;background-color:#1e0010">UI,</span> <span style="color:#960050;background-color:#1e0010">ie.:</span> <span style="color:#e6db74">&#34;New Post&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#960050;background-color:#1e0010">folder:</span> <span style="color:#e6db74">&#34;site/content/blog&#34;</span> <span style="color:#960050;background-color:#1e0010">#</span> <span style="color:#960050;background-color:#1e0010">The</span> <span style="color:#960050;background-color:#1e0010">path</span> <span style="color:#960050;background-color:#1e0010">to</span> <span style="color:#960050;background-color:#1e0010">the</span> <span style="color:#960050;background-color:#1e0010">folder</span> <span style="color:#960050;background-color:#1e0010">where</span> <span style="color:#960050;background-color:#1e0010">the</span> <span style="color:#960050;background-color:#1e0010">documents</span> <span style="color:#960050;background-color:#1e0010">are</span> <span style="color:#960050;background-color:#1e0010">stored</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#960050;background-color:#1e0010">media_folder:</span> <span style="color:#e6db74">&#34;.&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#960050;background-color:#1e0010">path:</span> <span style="color:#e6db74">&#34;{{slug}}/index&#34;</span> <span style="color:#960050;background-color:#1e0010">#</span> <span style="color:#960050;background-color:#1e0010">Each</span> <span style="color:#960050;background-color:#1e0010">document</span> <span style="color:#960050;background-color:#1e0010">is</span> <span style="color:#960050;background-color:#1e0010">inside</span> <span style="color:#960050;background-color:#1e0010">a</span> <span style="color:#960050;background-color:#1e0010">folder</span> <span style="color:#960050;background-color:#1e0010">with</span> <span style="color:#960050;background-color:#1e0010">the</span> <span style="color:#960050;background-color:#1e0010">slug</span> <span style="color:#960050;background-color:#1e0010">name.</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#960050;background-color:#1e0010">create:</span> <span style="color:#66d9ef">true</span> <span style="color:#960050;background-color:#1e0010">#</span> <span style="color:#960050;background-color:#1e0010">Allow</span> <span style="color:#960050;background-color:#1e0010">users</span> <span style="color:#960050;background-color:#1e0010">to</span> <span style="color:#960050;background-color:#1e0010">create</span> <span style="color:#960050;background-color:#1e0010">new</span> <span style="color:#960050;background-color:#1e0010">documents</span> <span style="color:#960050;background-color:#1e0010">in</span> <span style="color:#960050;background-color:#1e0010">this</span> <span style="color:#960050;background-color:#1e0010">collection</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#960050;background-color:#1e0010">fields:</span> <span style="color:#960050;background-color:#1e0010">#</span> <span style="color:#960050;background-color:#1e0010">The</span> <span style="color:#960050;background-color:#1e0010">fields</span> <span style="color:#960050;background-color:#1e0010">each</span> <span style="color:#960050;background-color:#1e0010">document</span> <span style="color:#960050;background-color:#1e0010">in</span> <span style="color:#960050;background-color:#1e0010">this</span> <span style="color:#960050;background-color:#1e0010">collection</span> <span style="color:#960050;background-color:#1e0010">have</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#960050;background-color:#1e0010">-</span> {<span style="color:#960050;background-color:#1e0010">label:</span> <span style="color:#f92672">&#34;Title&#34;</span>, <span style="color:#960050;background-color:#1e0010">name:</span> <span style="color:#f92672">&#34;title&#34;</span>, <span style="color:#960050;background-color:#1e0010">widget:</span> <span style="color:#f92672">&#34;string&#34;</span>}
+</span></span><span style="display:flex;"><span>      <span style="color:#960050;background-color:#1e0010">-</span> {<span style="color:#960050;background-color:#1e0010">label:</span> <span style="color:#f92672">&#34;Author&#34;</span>, <span style="color:#960050;background-color:#1e0010">name:</span> <span style="color:#f92672">&#34;author&#34;</span>, <span style="color:#960050;background-color:#1e0010">widget:</span> <span style="color:#f92672">&#34;string&#34;</span>}
+</span></span><span style="display:flex;"><span>      <span style="color:#960050;background-color:#1e0010">-</span> {<span style="color:#960050;background-color:#1e0010">label:</span> <span style="color:#f92672">&#34;Publish Date&#34;</span>, <span style="color:#960050;background-color:#1e0010">name:</span> <span style="color:#f92672">&#34;date&#34;</span>, <span style="color:#960050;background-color:#1e0010">widget:</span> <span style="color:#f92672">&#34;datetime&#34;</span>, <span style="color:#960050;background-color:#1e0010">format:</span> <span style="color:#f92672">&#34;YYYY-MM-DD&#34;</span>, <span style="color:#960050;background-color:#1e0010">timeFormat:</span> <span style="color:#960050;background-color:#1e0010">false</span>}
+</span></span><span style="display:flex;"><span>      <span style="color:#960050;background-color:#1e0010">-</span> {<span style="color:#960050;background-color:#1e0010">label:</span> <span style="color:#f92672">&#34;Image&#34;</span>, <span style="color:#960050;background-color:#1e0010">name:</span> <span style="color:#f92672">&#34;cover&#34;</span>, <span style="color:#960050;background-color:#1e0010">widget:</span> <span style="color:#f92672">&#34;image&#34;</span>, <span style="color:#960050;background-color:#1e0010">required:</span> <span style="color:#960050;background-color:#1e0010">false</span>}
+</span></span><span style="display:flex;"><span>      <span style="color:#960050;background-color:#1e0010">-</span> {<span style="color:#960050;background-color:#1e0010">label:</span> <span style="color:#f92672">&#34;Body&#34;</span>, <span style="color:#960050;background-color:#1e0010">name:</span> <span style="color:#f92672">&#34;body&#34;</span>, <span style="color:#960050;background-color:#1e0010">widget:</span> <span style="color:#f92672">&#34;markdown&#34;</span>}
+</span></span><span style="display:flex;"><span>      <span style="color:#960050;background-color:#1e0010">-</span> {<span style="color:#960050;background-color:#1e0010">label:</span> <span style="color:#f92672">&#34;Tags&#34;</span>, <span style="color:#960050;background-color:#1e0010">name:</span> <span style="color:#f92672">&#34;tags&#34;</span>, <span style="color:#960050;background-color:#1e0010">widget:</span> <span style="color:#f92672">&#34;list&#34;</span>}
+</span></span></code></pre></div><p>Ici on définit où se trouvent les fichiers à l&rsquo;aide du folder et du path ainsi que tous les champs à éditer, pour un article on retrouve donc le titre, l&rsquo;auteur, la date de publication, une image de bannière, le contenu de l&rsquo;article et une liste de tags associés. Pour chaque champ, on associe un widget, par exemple la date de publication c&rsquo;est un widget &ldquo;datetime&rdquo; ce qui va permettre d&rsquo;avoir un beau datepicker dans le CMS. Le body est associé au widget markdown, qui va permettre d&rsquo;avoir un éditeur de texte riche.</p>
+<p>Mais on peut aller encore plus loin ! Par exemple, nous pour nos images on utilise lightbox qui permet de faire un truc un peu joli pour afficher les images et les regrouper quand on en a plusieurs. Dans ce cas on peut enregistrer un <a href="https://decapcms.org/docs/custom-widgets/#registereditorcomponent">composant</a> en détaillant simplement les champs que l&rsquo;on souhaite (pour une image on veut un titre pour l&rsquo;accessibilité, un nom de groupe et l&rsquo;image elle-même) et enfin on lui décrit comment transformer le contenu saisi en html, donc là on écrit les balises, comme on le souhaite.</p>
+<a style="display: inline" href="/2024/04/30/siteweb/decapcms.png" data-lightbox="group-0" title="Image d'illustration du widget Rich Text de DecapCMS">
+  <img class="medium" src="/2024/04/30/siteweb/decapcms.png" alt="Image d'illustration du widget Rich Text de DecapCMS">
+</a>
+<p>Avec Hugo et DecapCMS, la création et la modification de notre site web deviennent à la fois accessibles et passionnantes.</p>
+<p>L&rsquo;article présente succintement l&rsquo;aspect technique, j&rsquo;espère qu&rsquo;il vous donnera l&rsquo;envie d&rsquo;aller voir plus en profondeur les projets, c&rsquo;est vraiment une stack que je trouve agréable à la fois côté rédacteur de blog et côté développeur pour l&rsquo;aspect technique donc si jamais vous avez besoin de mettre en place un blog ou un CMS, regardez cette alternative.</p>
+<p>Vous pouvez explorer les coulisses de notre site, disponible en open source sur <a href="https://github.com/code-troopers/code-troopers.github.io">GitHub</a>.</p>
+
+                    </div>
+                    <div class="content-footer">
+                        
+                        <ul class="tags float">
+                            
+                            <li><a href="/tags/hugo/">Hugo</a></li>
+                            
+                            <li><a href="/tags/blog/">Blog</a></li>
+                            
+                            <li><a href="/tags/web/">Web</a></li>
+                            
+                        </ul>
+                        
+                        <div id="author">
+                            <p class="date">Rédigé par <span class="author-name">Matthieu Bollot</span></p>
+                        </div>
+                    </div>
+                    <div class="share">
+                        <span>Partager</span>
+                        <ul class="socials">
+                            <li>
+                                <a target="_blank" rel="nofollow noopener"
+                                    aria-label="Partager sur Bluesky (nouvelle fenêtre)"
+                                    href="https://bsky.app/intent/compose?text=Site%20web%2c%20l%27envers%20du%20d%c3%a9cor%20avec%20Hugo%20et%20DecapCMS+https://code-troopers.com%2f2024%2f04%2f30%2fsiteweb%2f"
+                                    onclick="window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=500,width=700');return false;">
+                                    <svg class="icon-svg bluesky-fill-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 11.3884C11.0942 9.62673 8.62833 6.34423 6.335 4.7259C4.13833 3.17506 3.30083 3.4434 2.75167 3.69256C2.11583 3.9784 2 4.95506 2 5.52839C2 6.10339 2.315 10.2367 2.52 10.9276C3.19917 13.2076 5.61417 13.9776 7.83917 13.7309C4.57917 14.2142 1.68333 15.4017 5.48083 19.6292C9.65833 23.9542 11.2058 18.7017 12 16.0392C12.7942 18.7017 13.7083 23.7651 18.4442 19.6292C22 16.0392 19.4208 14.2142 16.1608 13.7309C18.3858 13.9784 20.8008 13.2076 21.48 10.9276C21.685 10.2376 22 6.10256 22 5.52923C22 4.95423 21.8842 3.97839 21.2483 3.6909C20.6992 3.44256 19.8617 3.17423 17.665 4.72423C15.3717 6.34506 12.9058 9.62756 12 11.3884Z"/></svg>
+
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_blank" rel="nofollow noopener"
+                                    aria-label="Partager sur LinkedIn (nouvelle fenêtre)"
+                                    href="https://www.linkedin.com/sharing/share-offsite/?url=https://code-troopers.com%2f2024%2f04%2f30%2fsiteweb%2f"
+                                    onclick="window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=500,width=700');return false;">
+                                    <svg class="icon-svg linkedin-fill-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M6.94048 4.99993C6.94011 5.81424 6.44608 6.54702 5.69134 6.85273C4.9366 7.15845 4.07187 6.97605 3.5049 6.39155C2.93793 5.80704 2.78195 4.93715 3.1105 4.19207C3.43906 3.44699 4.18654 2.9755 5.00048 2.99993C6.08155 3.03238 6.94097 3.91837 6.94048 4.99993ZM7.00048 8.47993H3.00048V20.9999H7.00048V8.47993ZM13.3205 8.47993H9.34048V20.9999H13.2805V14.4299C13.2805 10.7699 18.0505 10.4299 18.0505 14.4299V20.9999H22.0005V13.0699C22.0005 6.89993 14.9405 7.12993 13.2805 10.1599L13.3205 8.47993Z"></path></svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="clearfix"></div>
+
+
+                    <div class="back">
+                        <div class="pagination black">
+                            
+                            <a href="/2024/07/10/semainect2024/" class="previous-page" aria-label="Article précédent : « La Semaine CT » : innovation, apprentissage et convivialité">
+                                <span class="arrow"><div class="arrow_box_left arrow_box" aria-hidden="true">
+</div>
+</span>
+                                Article précédent
+                            </a>
+                            
+                            
+                            <a href="/2024/03/31/11-ans/" class="next-page" aria-label="Article suivant : Déjà 11 ans !">
+                                Article suivant
+                                <span class="arrow"><div class="arrow_box_right arrow_box" aria-hidden="true">
+</div>
+</span>
+                            </a>
+                            
+                        </div>
+                    </div>
+
+                    <nav id="menu" aria-label="Taxonomies">
+                        <ul>
+                            
+                        </ul>
+                    </nav>
+                </div>
+            </article>
+        </div>
+    </section>
+</section>
+
+    </main>
+
+    <section id="contact">
+  <p class="section-title">Contact</p>
+  <div>
+    <div>
+      <img
+        class="cover"
+        loading="lazy"
+        src="/img/legos_contact.webp"
+        alt="Figurines Lego Code-Troopers"
+      />
+    </div>
+    <div>
+      <p class="section-title">Code-Troopers</p>
+      <address>
+        <p>
+          26 bis rue Abraham Bosse<br />
+          37000 Tours - Fr
+        </p>
+        <p>
+          <a href="mailto:contact@code-troopers.com">contact@code-troopers.com</a>
+        </p>
+        <p>
+          <a class="button" href="tel:+33782287216">07 82 28 72 16</a>
+        </p>
+      </address>
+    </div>
+  </div>
+
+  <div class="socials-follow">
+    <p class="section-title">Suivez nos actualités</p>
+    <ul class="x2">
+      <li>
+        <a
+          aria-label="Linkedin Code-Troopers (nouvelle fenêtre)"
+          href="https://www.linkedin.com/company/codetroopers"
+          target="_blank"
+          rel="noopener"
+        >
+          <svg class="icon-svg linkedin-fill-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M6.94048 4.99993C6.94011 5.81424 6.44608 6.54702 5.69134 6.85273C4.9366 7.15845 4.07187 6.97605 3.5049 6.39155C2.93793 5.80704 2.78195 4.93715 3.1105 4.19207C3.43906 3.44699 4.18654 2.9755 5.00048 2.99993C6.08155 3.03238 6.94097 3.91837 6.94048 4.99993ZM7.00048 8.47993H3.00048V20.9999H7.00048V8.47993ZM13.3205 8.47993H9.34048V20.9999H13.2805V14.4299C13.2805 10.7699 18.0505 10.4299 18.0505 14.4299V20.9999H22.0005V13.0699C22.0005 6.89993 14.9405 7.12993 13.2805 10.1599L13.3205 8.47993Z"></path></svg>
+        </a>
+      </li>
+      <li>
+        <a
+          aria-label="Github Code-Troopers (nouvelle fenêtre)"
+          href="https://github.com/code-troopers"
+          target="_blank"
+          rel="noopener"
+        >
+          <svg class="icon-svg github-fill-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12.001 2C6.47598 2 2.00098 6.475 2.00098 12C2.00098 16.425 4.86348 20.1625 8.83848 21.4875C9.33848 21.575 9.52598 21.275 9.52598 21.0125C9.52598 20.775 9.51348 19.9875 9.51348 19.15C7.00098 19.6125 6.35098 18.5375 6.15098 17.975C6.03848 17.6875 5.55098 16.8 5.12598 16.5625C4.77598 16.375 4.27598 15.9125 5.11348 15.9C5.90098 15.8875 6.46348 16.625 6.65098 16.925C7.55098 18.4375 8.98848 18.0125 9.56348 17.75C9.65098 17.1 9.91348 16.6625 10.201 16.4125C7.97598 16.1625 5.65098 15.3 5.65098 11.475C5.65098 10.3875 6.03848 9.4875 6.67598 8.7875C6.57598 8.5375 6.22598 7.5125 6.77598 6.1375C6.77598 6.1375 7.61348 5.875 9.52598 7.1625C10.326 6.9375 11.176 6.825 12.026 6.825C12.876 6.825 13.726 6.9375 14.526 7.1625C16.4385 5.8625 17.276 6.1375 17.276 6.1375C17.826 7.5125 17.476 8.5375 17.376 8.7875C18.0135 9.4875 18.401 10.375 18.401 11.475C18.401 15.3125 16.0635 16.1625 13.8385 16.4125C14.201 16.725 14.5135 17.325 14.5135 18.2625C14.5135 19.6 14.501 20.675 14.501 21.0125C14.501 21.275 14.6885 21.5875 15.1885 21.4875C19.259 20.1133 21.9999 16.2963 22.001 12C22.001 6.475 17.526 2 12.001 2Z"></path></svg>
+        </a>
+      </li>
+      <li>
+        <a
+          aria-label="Profil Sortlist Code-Troopers (nouvelle fenêtre)"
+          href="https://www.sortlist.com/fr/agency/code-troopers"
+          target="_blank"
+          rel="noopener"
+          class="sortlist-badge"
+        >
+          Sortlist
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  <div class="wrapper">
+    <a href="#top" class="scroll-to-top" aria-label="Retourner en haut de la page">
+      <img
+        class="arrow"
+        loading="lazy"
+        src="/img/arrow.webp"
+        alt="Retourner en haut"
+      />
+    </a>
+    <img src="/img/footer_logo.webp" alt="logo Code-Troopers" />
+    <div>
+      <span
+        >©2014 — 2026 Code-Troopers |
+        <a href="/legals">Mentions légales</a></span
+      >
+      <span
+        >Design : <a href="https://www.descheval.com/">descheval.com</a> |
+        Développement : Code-Troopers</span
+      >
+    </div>
+  </div>
+</footer>
+
+
+    
+    
+      <script src="/main.js"></script>
+    
+    <script>
+      (function() {
+        var d = new Date();
+        
+        if (d.getMonth() === 9) {
+          document.documentElement.classList.add("halloween");
+        }
+        
+        if (d.getMonth() === 3 && d.getDate() === 1) {
+          var s = document.createElement('script');
+          s.src = 'https://code.jquery.com/jquery-3.7.1.min.js';
+          s.integrity = 'sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=';
+          s.crossOrigin = 'anonymous';
+          s.onload = function() {
+            var a = document.createElement('script');
+            a.src = '/js/april.js';
+            document.body.appendChild(a);
+          };
+          document.body.appendChild(s);
+        }
+      })();
+      
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", function(user) {
+          if (!user) {
+            window.netlifyIdentity.on("login", function() {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

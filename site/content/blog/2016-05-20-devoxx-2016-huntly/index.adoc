@@ -6,6 +6,7 @@ tags:
 - Devoxx
 - Gamification
 title: 'Devoxx 2016 : Huntly ou rien !'
+description: "Retour sur Devoxx Huntly, le jeu de gamification de Devoxx France 2016 : chasse aux NFC, quêtes et comment gagner des places."
 url: /2016/05/20/devoxx-2016-huntly/
 aliases: 2016/05/20/devoxx-2016-huntly.html
 ---

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>GIT on Code-Troopers</title>
+    <link>/tags/git/</link>
+    <description>Recent content in GIT on Code-Troopers</description>
+    <generator>Hugo</generator>
+    <language>fr-FR</language>
+    <lastBuildDate>Thu, 16 Jul 2015 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GIT-SVN comment survivre dans un environnement hostile</title>
+      <link>/2015/07/16/gitsvn/</link>
+      <pubDate>Thu, 16 Jul 2015 00:00:00 +0000</pubDate>
+      <guid>/2015/07/16/gitsvn/</guid>
+      <description>&lt;p&gt;Git c’est cool, Git c’est Hype, Git c’est tout récent (&lt;a href=&#34;http://git-scm.com/book/fr/v1/D%C3%A9marrage-rapide-Une-rapide-histoire-de-Git&#34;&gt;enfin presque&lt;/a&gt;) et c’est pour ça qu’on aime bien.&#xA;Mais pour beaucoup Git c’est nouveau, donc c’est le changement, donc c’est compliqué, et c’est pour ça que plein de boîtes préfèrent garder leur serveur svn.&lt;/p&gt;&#xA;&lt;p&gt;Je vais tenter ici, de vous donner les principales commandes de &lt;code&gt;Git-SVN&lt;/code&gt;. Ainsi si vous vous trouvez dans une boîte qui ne veut pas changer son scm mais que vous, vous avez envie de changement,&#xA;vous pourrez donc utiliser la puissance de Git.&#xA;Et ce sans aucun impact sur le gestionnaire de sources de la société dans laquelle vous êtes. C&amp;rsquo;est génial non ?&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>git : quelques astuces de configuration pour vos dotfiles</title>
+      <link>/2015/05/22/dotfiles-git/</link>
+      <pubDate>Fri, 22 May 2015 00:00:00 +0000</pubDate>
+      <guid>/2015/05/22/dotfiles-git/</guid>
+      <description>&lt;p&gt;Cet article est le deuxième de la série des &lt;em&gt;dotfiles&lt;/em&gt;. Voir l&amp;rsquo;article sur &lt;a href=&#34;code-troopers.com/2015/05/15/Dotfiles-vim.html&#34;&gt;vimrc&lt;/a&gt;. Nous allons ici aborder quelques configurations indispensables de git.&lt;/p&gt;&#xA;&lt;h1 id=&#34;la-base&#34;&gt;La base&lt;/h1&gt;&#xA;&lt;p&gt;Si vous utilisez git, vous avez forcément fait des commandes de base pour rentrer votre nom et votre email (indispensable pour pusher vos commits)&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;$ git config --global user.name &amp;quot;Jango Fett&amp;quot;&#xA;$ git config --global user.email &amp;quot;jango.fett@code-troopers.com&amp;quot;&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;Ceci a pour but d&amp;rsquo;écrire dans votre fichier ~/.gitconfig ces simples lignes :&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>k is the new l, yo</title>
+      <link>/2014/05/14/kisthenewl/</link>
+      <pubDate>Wed, 14 May 2014 00:00:00 +0000</pubDate>
+      <guid>/2014/05/14/kisthenewl/</guid>
+      <description>&lt;p&gt;xiau depuis les années 70 elle a très peu changé. Bien sûr, il y a de nombreuses options, citons &lt;code&gt;ls -a&lt;/code&gt; pour afficher les fichiers cachés, &lt;code&gt;ls -l&lt;/code&gt; pour afficher plus d&amp;rsquo;informations, &lt;code&gt;ls --color&lt;/code&gt; pour afficher deux couleurs, une pour les fichiers et une pour les répertoires, ou encore &lt;code&gt;ls -rtl&lt;/code&gt; pour trier le contenu par date et afficher le plus récent en dernier.&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;ls&lt;/code&gt; est donc une commande utile et pratique mais elle n&amp;rsquo;est pas folichonne. D&amp;rsquo;où la naissance de &lt;code&gt;k&lt;/code&gt; qui a pour but de remplacer &lt;code&gt;ls&lt;/code&gt; avec quelques killer features. Il ne s&amp;rsquo;agit pas d&amp;rsquo;une surcouche de &lt;code&gt;ls&lt;/code&gt; mais d&amp;rsquo;une commande complète, s&amp;rsquo;appuyant directement sur &lt;code&gt;stat&lt;/code&gt; par exemple. À ce jour, les nouvelles fonctionnalités sont les suivantes :&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

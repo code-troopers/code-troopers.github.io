@@ -7,6 +7,7 @@ tags:
 - Tours
 - startup
 title: Encore un podium pour MyBandMyCity
+description: "My Band My City décroche la 3e place au concours Tours de la Création parmi 25 projets. Le projet confirme son potentiel entrepreneurial."
 url: /2014/04/28/concoursaccede/
 aliases: 2014/04/28/ConcoursAccede.html
 ---

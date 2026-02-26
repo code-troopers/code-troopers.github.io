@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Google Tag Manager on Code-Troopers</title>
+    <link>/tags/google-tag-manager/</link>
+    <description>Recent content in Google Tag Manager on Code-Troopers</description>
+    <generator>Hugo</generator>
+    <language>fr-FR</language>
+    <lastBuildDate>Wed, 30 Mar 2016 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/google-tag-manager/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Android : Feature Toggle avec Google Tag Manager</title>
+      <link>/2016/03/30/android_google_tag_manager_feature_toggle/</link>
+      <pubDate>Wed, 30 Mar 2016 00:00:00 +0000</pubDate>
+      <guid>/2016/03/30/android_google_tag_manager_feature_toggle/</guid>
+      <description>&lt;div class=&#34;paragraph&#34;&gt;&#xA;&lt;p&gt;Le concept de &lt;code&gt;feature toggle&lt;/code&gt; est bien pratique en tant que développeur si l’on souhaite faire évoluer sa base de code source à un rythme différent de celui des livraisons et des fonctionnalités.&#xA;C’est souvent le cas lorsqu’il y a autour du produit une équipe marketing / communication qui s’occupe d’annoncer telle ou telle nouvelle fonctionnalité.&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;div class=&#34;paragraph&#34;&gt;&#xA;&lt;p&gt;Le problème avec Android c’est qu’il peut être vite problématique d’utiliser ces features toggle, car une fois l’application arrivée sur le téléphone des utilisateurs le développeur n’a plus&#xA;la possibilité de changer la valeur des flags autrement qu’en relivrant l’application, ce qui peut vite se terminer par du spam d’updates si les activations/désactivations sont trop fréquentes ou trop rapprochées.&lt;/p&gt;&#xA;&lt;/div&gt;</description>
+    </item>
+  </channel>
+</rss>

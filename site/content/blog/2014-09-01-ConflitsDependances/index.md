@@ -7,6 +7,7 @@ tags:
 - Dependances
 - Tips
 title: Résoudre les conflits de dépendances
+description: "Comment résoudre un conflit de versions Lucene entre Neo4J et ElasticSearch avec le plugin maven-shade et la relocation de packages."
 url: /2014/09/01/conflitsdependances/
 aliases: 2014/09/01/ConflitsDependances.html
 ---

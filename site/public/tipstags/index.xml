@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tipstags on Code-Troopers</title>
+    <link>/tipstags/</link>
+    <description>Recent content in Tipstags on Code-Troopers</description>
+    <generator>Hugo</generator>
+    <language>fr-FR</language>
+    <lastBuildDate>Fri, 24 May 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tipstags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Chrome</title>
+      <link>/tipstags/chrome/</link>
+      <pubDate>Fri, 24 May 2024 00:00:00 +0000</pubDate>
+      <guid>/tipstags/chrome/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Npm</title>
+      <link>/tipstags/npm/</link>
+      <pubDate>Fri, 24 May 2024 00:00:00 +0000</pubDate>
+      <guid>/tipstags/npm/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Yarn</title>
+      <link>/tipstags/yarn/</link>
+      <pubDate>Fri, 24 May 2024 00:00:00 +0000</pubDate>
+      <guid>/tipstags/yarn/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

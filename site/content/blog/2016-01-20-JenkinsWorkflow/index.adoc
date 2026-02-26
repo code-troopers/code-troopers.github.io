@@ -6,6 +6,7 @@ tags:
 - Jenkins
 - Docker
 title: Jenkins Workflow Plugin
+description: "Versionnez vos builds Jenkins avec le Workflow Plugin : configuration as code en Groovy avec Docker. Fini le click-click !"
 url: /2016/01/20/jenkinsworkflow/
 aliases: 2016/01/20/JenkinsWorkflow.html
 ---

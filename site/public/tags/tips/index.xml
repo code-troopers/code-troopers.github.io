@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tips on Code-Troopers</title>
+    <link>/tags/tips/</link>
+    <description>Recent content in Tips on Code-Troopers</description>
+    <generator>Hugo</generator>
+    <language>fr-FR</language>
+    <lastBuildDate>Wed, 11 May 2016 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/tips/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Macro Vim : C&#39;est trop génial</title>
+      <link>/2016/05/11/vim_macro/</link>
+      <pubDate>Wed, 11 May 2016 00:00:00 +0000</pubDate>
+      <guid>/2016/05/11/vim_macro/</guid>
+      <description>&lt;div class=&#34;paragraph&#34;&gt;&#xA;&lt;p&gt;Comme certains d’entre vous le savent, j’aime beaucoup Vim. Il n’y a pas très longtemps au Tours JUG, je disais que je n’avais pas de cas d’utilisation des macro dans Vim dont certains disent que c’est LA killer feature. Et bien j’ai trouvé un use case et « c’est trop génial ! » comme dirait Agnès.&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;div class=&#34;paragraph&#34;&gt;&#xA;&lt;p&gt;&lt;/p&gt;&lt;div style=&#34;text-align : center&#34;&gt;&#xA;&lt;a class=&#34;inlineBoxes&#34; href=&#34;/images/posts/2016-05-VimMacro/trop_genial.gif&#34; data-lightbox=&#34;0&#34; title=&#34;trop génial&#34;&gt;&#xA;        &lt;img class=&#34;medium&#34; src=&#34;/images/posts/2016-05-VimMacro/trop_genial.gif&#34; alt=&#34;trop génial&#34;/&gt;&#xA;&lt;/a&gt;&#xA;&lt;/div&gt;&lt;p&gt;&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;div class=&#34;sect1&#34;&gt;&#xA;&lt;h2 id=&#34;_angular2_et_macros_vim&#34;&gt;Angular2 et macros Vim&lt;/h2&gt;&#xA;&lt;div class=&#34;sectionbody&#34;&gt;&#xA;&lt;div class=&#34;paragraph&#34;&gt;&#xA;&lt;p&gt;Les vidéos de Devoxx 2016 sont sorties, dont &lt;a href=&#34;https://www.youtube.com/watch?v=5U4OasGuo0o&#34;&gt;Angular 2 : Préparez vous dès maintenant à la migration (Benoit Lemoine)&lt;/a&gt;. Une des étapes est de passer par les ControllerAs, je ne vais pas refaire la conf ce n’est pas le but. Bref, je travaille sur un projet qui définit les controllers comme ceci :&lt;/p&gt;&#xA;&lt;/div&gt;</description>
+    </item>
+    <item>
+      <title>Installer votre dépot privé Docker</title>
+      <link>/2015/06/25/installdockerregistry/</link>
+      <pubDate>Thu, 25 Jun 2015 00:00:00 +0000</pubDate>
+      <guid>/2015/06/25/installdockerregistry/</guid>
+      <description>&lt;p&gt;Petit à petit chez Code-Troopers, nous migrons tous nos développements pour utiliser Docker.&#xA;Cela fait quelque temps que nous l&amp;rsquo;utilisons pour des projets &amp;ldquo;public&amp;rdquo;, auquel cas le registry public Docker est largement suffisant (et immédiat à utiliser).&lt;/p&gt;&#xA;&lt;p&gt;En revanche, nous commençons à migrer nos applications de production également vers Docker, et nous ne pouvons pas utiliser le mode public du registry public.&#xA;Nous nous sommes donc mis à déployer un dépôt privé, authentifié par utilisateur / mot de passe.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Babun un shell sous Windows</title>
+      <link>/2014/10/01/babun/</link>
+      <pubDate>Wed, 01 Oct 2014 00:00:00 +0000</pubDate>
+      <guid>/2014/10/01/babun/</guid>
+      <description>&lt;h2 id=&#34;oh-non-mon-client-moblige-à-être-sous-windows&#34;&gt;Oh non, mon client m&amp;rsquo;oblige à être sous Windows&lt;/h2&gt;&#xA;&lt;p&gt;Malheureusement, il est fréquent que nous soyons forcés de travailler sous un environnement que nous n&amp;rsquo;aimons pas. Les raisons sont souvent diverses mais sont presque toujours inflexibles. Le problème est que lorsqu&amp;rsquo;on est habitué à une ligne de commande puissante, le fait d&amp;rsquo;être sous Windows devient un réel handicap.&lt;/p&gt;&#xA;&lt;h2 id=&#34;donnez-moi-un-shell-&#34;&gt;Donnez moi un shell !&lt;/h2&gt;&#xA;&lt;p&gt;Bien sûr, la plupart d&amp;rsquo;entre vous connaîssent Cygwin, qui permet de résoudre bien des problèmes, mais qui en créé aussi un paquet avant d&amp;rsquo;avoir une installation complète et qui fonctionne comme attendu.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Résoudre les conflits de dépendances</title>
+      <link>/2014/09/01/conflitsdependances/</link>
+      <pubDate>Mon, 01 Sep 2014 00:00:00 +0000</pubDate>
+      <guid>/2014/09/01/conflitsdependances/</guid>
+      <description>&lt;p&gt;Lors de nos développements, nous reposons beaucoup sur des projets externes qui nous fournissent énormément de services&#xA;utiles. Dans un récent projet, nous avons eu besoin de faire fonctionner Neo4j conjointement à ElasticSearch. Jusqu&amp;rsquo;ici,&#xA;aucun soucis n&amp;rsquo;est à déplorer, mais nous avions une exigence particulière : il fallait que l&amp;rsquo;application puisse&#xA;démarrer automatiquement un serveur Neo4J ainsi qu&amp;rsquo;un serveur ElasticSearch sur les postes de développements (ainsi que&#xA;pour les tests d&amp;rsquo;intégration).&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

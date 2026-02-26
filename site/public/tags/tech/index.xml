@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tech on Code-Troopers</title>
+    <link>/tags/tech/</link>
+    <description>Recent content in Tech on Code-Troopers</description>
+    <generator>Hugo</generator>
+    <language>fr-FR</language>
+    <lastBuildDate>Thu, 14 Jan 2016 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/tech/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Startup Weekend : côté perdant</title>
+      <link>/2016/01/14/startupweekend-coteperdant/</link>
+      <pubDate>Thu, 14 Jan 2016 00:00:00 +0000</pubDate>
+      <guid>/2016/01/14/startupweekend-coteperdant/</guid>
+      <description>&lt;h2 id=&#34;ou--yo--angularjs-le-meilleur-ami-des-mvp&#34;&gt;Ou : Yo ! AngularJS, le meilleur ami des MVP&lt;/h2&gt;&#xA;&lt;p&gt;Le week-end du 5 décembre a eu lieu un Startup Weekend édition tourisme à Tours où 6 troopers étaient présents. 3 d&amp;rsquo;entres nous ont choisi l&amp;rsquo;équipe &lt;code&gt;We Guide&lt;/code&gt; composée de 3 développeurs, 3 designers et 3 profils business (les 3 autres ont choisi &lt;a href=&#34;https://twitter.com/shakemytours&#34;&gt;@shakemytours&lt;/a&gt; et ont gagné le Startup Weekend).&#xA;L&amp;rsquo;idée de base est de découvrir une région à l&amp;rsquo;aide d&amp;rsquo;un guide local, officiel ou non. Quelqu&amp;rsquo;un qui emmène les touristes aussi bien dans les bars, restaurants, parcs que dans les monuments plus habituels de touraine comme les châteaux, la &lt;a href=&#34;http://basiliquesaintmartin.fr/&#34;&gt;basilique Saint-Martin&lt;/a&gt; ou le &lt;a href=&#34;http://www.decouvrez-levaldeloire.com/#grand-aquarium-actualites&#34;&gt;Grand Aquarium de Touraine&lt;/a&gt;. Un peu à l&amp;rsquo;image des &lt;a href=&#34;http://www.tours-greeters.fr/&#34;&gt;greeters&lt;/a&gt; mais rémunérés pour motiver plus de guides et permettre de promouvoir cette pratique.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Sous le capot du Startup Weekend Tours</title>
+      <link>/2014/04/03/souslecapot-startupweekendtours/</link>
+      <pubDate>Thu, 03 Apr 2014 00:00:00 +0000</pubDate>
+      <guid>/2014/04/03/souslecapot-startupweekendtours/</guid>
+      <description>&lt;p&gt;Après l’article global d’impressions sur le Startup Weekend, nous sommes obligés de faire un court article précisant ce que nous avons implémenté et utilisé du point de vue technique (c’est ce qui nous intéresse beaucoup après tout).&lt;/p&gt;&#xA;&lt;h2 id=&#34;contenu-fonctionnel-&#34;&gt;Contenu fonctionnel :&lt;/h2&gt;&#xA;&lt;p&gt;Puisque nous avons pris le temps de faire une application entière en 54h, nous allons tout de même détailler les fonctionnalités qui existent dans ce que nous avons produit :&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;création de compte classique (avec validation par email obligatoire)&lt;/li&gt;&#xA;&lt;li&gt;création de compte via connexion Facebook&lt;/li&gt;&#xA;&lt;li&gt;proposition d’ajout de spectacle&lt;/li&gt;&#xA;&lt;li&gt;vote sur un spectacle existant&lt;/li&gt;&#xA;&lt;li&gt;duplication de spectacle (changement de ville)&lt;/li&gt;&#xA;&lt;li&gt;partage Twitter / Facebook / Google plus&lt;/li&gt;&#xA;&lt;li&gt;envoi de mail selon les statuts des événements&lt;/li&gt;&#xA;&lt;li&gt;&lt;em&gt;backoffice&lt;/em&gt; avec un tableau des événements et la possibilité de modifier leurs statuts&lt;/li&gt;&#xA;&lt;li&gt;modération des propositions de spectacle (avec remplissage automatique de la biographie / photo d’un artiste à partir de l’API &lt;a href=&#34;http://developer.echonest.com/&#34;&gt;EchoNest&lt;/a&gt;)&lt;/li&gt;&#xA;&lt;li&gt;recherche globale avec Elasticsearch (géolocalisation et &lt;em&gt;full-text&lt;/em&gt; sur artiste)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;contenu-technique-&#34;&gt;Contenu technique :&lt;/h2&gt;&#xA;&lt;p&gt;Les technologies utilisées dans le projet sont :&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

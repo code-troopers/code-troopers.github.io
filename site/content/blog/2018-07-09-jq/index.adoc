@@ -8,6 +8,7 @@ tags:
 - jq
 - trello
 title: 'Faire du json comme si on faisait du sed (*)'
+description: "Apprenez jq par l'exemple : filtrer, transformer et extraire des données JSON en ligne de commande. Cas pratique avec un export Trello."
 url: /2018/07/09/jq/
 ---
 

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Yarn on Code-Troopers</title>
+    <link>/tipstags/yarn/</link>
+    <description>Recent content in Yarn on Code-Troopers</description>
+    <generator>Hugo</generator>
+    <language>fr-FR</language>
+    <lastBuildDate>Fri, 24 May 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tipstags/yarn/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>only-allow : ne vous trompez plus</title>
+      <link>/tips/only-allow-ne-vous-trompez-plus/</link>
+      <pubDate>Fri, 24 May 2024 00:00:00 +0000</pubDate>
+      <guid>/tips/only-allow-ne-vous-trompez-plus/</guid>
+      <description>&lt;p&gt;Ça vous arrive de switcher de projet et de vous tromper entre npm et yarn ? Plus maintenant, grâce à &lt;a href=&#34;https://www.npmjs.com/package/only-allow&#34;&gt;only-allow&lt;/a&gt; !&lt;/p&gt;&#xA;&lt;p&gt;Ajoutez juste une commande en preinstall (plus d&amp;rsquo;info sur le readme) et c&amp;rsquo;est parti&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;{&#xA;  &amp;#34;scripts&amp;#34;: {&#xA;    &amp;#34;preinstall&amp;#34;: &amp;#34;npx only-allow npm&amp;#34;&#xA;  }&#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -4,6 +4,7 @@ weight: 100
 url: /chapito.html
 date: 2019-04-01
 cover: chapito.jpg
+description: "Chapitô : plateforme SaaS permettant aux organisateurs de festivals de créer des applications mobiles Android et iOS sur-mesure sans développement."
 tags:
   - Web
   - Android

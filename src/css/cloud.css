@@ -1,5 +1,5 @@
 section#cloud {
-  background: var(--darkGradient);
+  background: linear-gradient(160deg, #1a2a4a 0%, #2a3a5a 100%);
   color: var(--white);
 
   .wrapper {
@@ -18,8 +18,14 @@ section#cloud {
     }
   }
 
-  .cspan {
-    transition: all 0.3s ease;
+  .cloud-static {
+    text-align: center;
+    line-height: 2.2;
+
+    .cspan {
+      display: inline;
+      padding: 0 0.3rem;
+    }
   }
 
   .word {

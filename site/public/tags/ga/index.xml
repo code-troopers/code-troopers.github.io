@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>GA on Code-Troopers</title>
+    <link>/tags/ga/</link>
+    <description>Recent content in GA on Code-Troopers</description>
+    <generator>Hugo</generator>
+    <language>fr-FR</language>
+    <lastBuildDate>Tue, 10 Apr 2018 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/ga/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Google Analytics via Google Tag Manager</title>
+      <link>/2018/04/09/ga-gtm/</link>
+      <pubDate>Tue, 10 Apr 2018 00:00:00 +0000</pubDate>
+      <guid>/2018/04/09/ga-gtm/</guid>
+      <description>&lt;div class=&#34;paragraph&#34;&gt;&#xA;&lt;p&gt;C’est en branchant &lt;a href=&#34;https://www.facebook.com/business/a/facebook-pixel&#34;&gt;Facebook PIXEL&lt;/a&gt; sur un projet, que j’ai enfin compris et vraiment utilisé &lt;strong&gt;Google Tag Manager&lt;/strong&gt;.&#xA;L’aide très bien faite de la mise en place de &lt;strong&gt;PIXEL&lt;/strong&gt; préconise celui-ci pour activer et configurer le traqueur Facebook et cela m’a donné envie d’en faire de même pour &lt;strong&gt;Google Analytics&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;div class=&#34;paragraph&#34;&gt;&#xA;&lt;p&gt;Pour ceux qui ne connaissent pas &lt;strong&gt;Google Tag Manager&lt;/strong&gt;, c’est un outil permettant d’ajouter, modifier des bouts de Javascript (tags) afin de gérer les analytics ou la pub par exemple à l’aide du back office, et tout ça sans avoir à modifier ou relivrer son application.&lt;/p&gt;&#xA;&lt;/div&gt;</description>
+    </item>
+  </channel>
+</rss>

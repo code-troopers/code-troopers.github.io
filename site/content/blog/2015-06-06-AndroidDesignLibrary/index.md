@@ -6,6 +6,7 @@ tags:
 - Android
 - Librairie
 title: Android Support Design Library
+description: "Découvrez la nouvelle Android Design Support Library de Google : FAB, Snackbar, TabLayout et NavigationView enfin officiels."
 url: /2015/06/06/androiddesignlibrary/
 aliases: 2015/06/06/AndroidDesignLibrary.html
 ---

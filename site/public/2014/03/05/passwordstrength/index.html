@@ -1,0 +1,459 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, viewport-fit=cover"
+  />
+
+  <title>Strength Password Indicator Pour Play2 - Code-Troopers</title>
+  <meta name="description" content="Comment intégrer un indicateur de robustesse de mot de passe dans Play2 avec la librairie zxcvbn. Tutoriel complet avec code source." />
+  <link rel="canonical" href="https://code-troopers.com/2014/03/05/passwordstrength/" />
+
+  
+  <link rel="dns-prefetch" href="//matomo.chapi.to" />
+  <link rel="preconnect" href="https://matomo.chapi.to" crossorigin />
+
+     
+  <link href="/main.488c56f9070ea7a180e8.css" rel="stylesheet" />
+  
+  <link href="/main.css" rel="stylesheet" />
+    
+
+  <base href="/" />
+  
+  <link rel="icon" href="/favicon.png" />
+  <link rel="manifest" href="/manifest.json" />
+  <link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#ff4400" />
+  <meta name="theme-color" content="#fff" />
+
+  
+  
+
+
+
+<meta property="og:title" content="Strength Password Indicator Pour Play2" />
+<meta property="og:description" content="Comment intégrer un indicateur de robustesse de mot de passe dans Play2 avec la librairie zxcvbn. Tutoriel complet avec code source." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://code-troopers.com/2014/03/05/passwordstrength/" />
+<meta property="og:locale" content="fr_FR" />
+<meta property="og:image" content="https://code-troopers.com/2014/03/05/passwordstrength/passwordStrength-banner_hu_e33e9fe2d2414731.png" />
+<meta property="og:site_name" content="Code-Troopers" />
+<meta property="article:published_time" content="2014-03-05T00:00:00&#43;00:00" />
+<meta property="article:author" content="Florian" />
+<meta property="article:tag" content="Security" />
+<meta property="article:tag" content="Play2" />
+
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Strength Password Indicator Pour Play2" />
+<meta name="twitter:description" content="Comment intégrer un indicateur de robustesse de mot de passe dans Play2 avec la librairie zxcvbn. Tutoriel complet avec code source." />
+<meta name="twitter:image" content="https://code-troopers.com/2014/03/05/passwordstrength/passwordStrength-banner_hu_e33e9fe2d2414731.png" />
+
+
+  
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "author": {
+    "@type": "Person",
+    "name": "Florian"
+  },
+  "dateModified": "2014-03-05T00:00:00+00:00",
+  "datePublished": "2014-03-05T00:00:00+00:00",
+  "description": "Comment intégrer un indicateur de robustesse de mot de passe dans Play2 avec la librairie zxcvbn. Tutoriel complet avec code source.",
+  "headline": "Strength Password Indicator Pour Play2",
+  "image": "https://code-troopers.com/2014/03/05/passwordstrength/passwordStrength-banner_hu_e33e9fe2d2414731.png",
+  "publisher": {
+    "@type": "Organization",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://code-troopers.com/img/logo-code-troopers-tête-couleur.png"
+    },
+    "name": "Code-Troopers"
+  },
+  "url": "https://code-troopers.com/2014/03/05/passwordstrength/"
+}
+</script>
+
+  
+  
+  <link rel="alternate" type="application/rss+xml" title="Code-Troopers - Blog" href="https://code-troopers.com/blog/index.xml" />
+  
+
+  
+</head>
+
+  <body id="top" class="sans-serif">
+    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
+    <header>
+  <nav aria-label="Navigation principale">
+    <ul>
+      
+      <li><a id="id-company" href="/"><span>Code-Troopers</span></a></li>
+      
+      <li><a id="id-skills" href="/#skills"><span>Compétences</span></a></li>
+      
+      <li><a id="id-portfolio" href="/#portfolio"><span>Réalisations</span></a></li>
+      
+      <li><a id="id-casting" href="/#casting"><span>L&#39;équipe</span></a></li>
+      
+      <li><a id="id-blogs" href="/blog"><span>Blog</span></a></li>
+      
+      <li><a id="id-contact" href="/#contact"><span>Contact</span></a></li>
+      
+    </ul>
+    <button class="hamburger" aria-label="Menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+</header>
+
+
+    <main id="main-content">
+      
+
+<section id="blog">
+    <div class="wrapper">
+        <nav aria-label="Fil d'ariane" class="breadcrumb">
+            <a href="/">Accueil</a> &rsaquo; <a href="/blog/">Blog</a>
+        </nav>
+    </div>
+
+    <section id="article">
+        <div class="wrapper">
+            <article>
+                
+                    
+                    
+                    
+                    <img
+                        src="/2014/03/05/passwordstrength/passwordStrength-banner_hu_8dc13837daec1257.webp"
+                        srcset="/2014/03/05/passwordstrength/passwordStrength-banner_hu_133e44da624a2995.webp 400w, /2014/03/05/passwordstrength/passwordStrength-banner_hu_7fc8edeabc9e56b1.webp 600w, /2014/03/05/passwordstrength/passwordStrength-banner_hu_8dc13837daec1257.webp 900w"
+                        sizes="(max-width: 400px) 400px, (max-width: 768px) 600px, 900px"
+                        width="900" height="500"
+                        alt="Illustration de l'article Strength Password Indicator Pour Play2">
+                
+                <div class="wrapper-content">
+                    <h1>Strength Password Indicator Pour Play2</h1>
+                    
+                    <ul class="tags">
+                        
+                        <li><a href="/tags/security/">Security</a></li>
+                        
+                        <li><a href="/tags/play2/">Play2</a></li>
+                        
+                    </ul>
+                    
+                    <div class="content">
+                        <h2 id="introduction">Introduction</h2>
+<p>Le grand public commence tout doucement à être sensibilisé à l’importance d’avoir un mot de passe <b>sécurisé</b>, en partie grâce aux reportages TV de plus en plus nombreux sur ce domaine, mais surtout par les différentes fuites
+ou vols de bases de données qui arrivent de plus en plus fréquemment.</p>
+<p>Il faut donc profiter de cette sensibiliation et en tant que développeurs, nous avons la possibilité d&rsquo;inciter nos
+utilisateurs à utiliser un bon mot de passe. Alors, au travail !</p>
+<p>Quoi de mieux pour faire passer un message simple à un utilisateur qu&rsquo;un peu de couleur (savamment dosée bien sûr).
+Nous allons donc parler de feedback visuel. Prenons par exemple une création de compte Google.
+Lorsqu&rsquo;on entre le mot de passe, Google nous informe de la qualité de la chaîne saisie via un pop-up contenant une progressbar de couleur, accompagnée d&rsquo;un petit commentaire.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/images/posts/2014-03-05-passwordStrength/googleWay.png&#34;</span> <span style="color:#a6e22e">data-lightbox</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;image-1&#34;</span>
+</span></span><span style="display:flex;"><span>   <span style="color:#a6e22e">title</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Indicateur de niveau de sécurité by Google&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">img</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;mini&#34;</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/images/posts/2014-03-05-passwordStrength/googleWay.png&#34;</span>
+</span></span><span style="display:flex;"><span>         <span style="color:#a6e22e">alt</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Indicateur de niveau de sécurité by Google&#34;</span>/&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">a</span>&gt;
+</span></span></code></pre></div><p>À mon goût, c&rsquo;est déjà trop, car c&rsquo;est bien connu, aucun utilisateur ne lit les informations qu&rsquo;on lui donne.
+Donc se contenter d&rsquo;une barre de progression qui change de couleur sera très bien pour rapidement améliorer l&rsquo;expérience utilisateur.</p>
+<h2 id="zxcvbn--la-lib-qui-va-bien">zxcvbn : la lib qui va bien</h2>
+<p>Il existe déjà de nombreux algorithmes qui essaient de calculer la complexité d’un mot de passe.
+Donc au lieu de tenter d&rsquo;inventer un truc bancal, j’ai décidé d’en utiliser un qui semble plutôt abouti : <a href="https://github.com/lowe/zxcvbn">zxcvbn</a>.</p>
+<p>Derrière ce nom barbare on retrouve dans ce projet plusieurs éléments intéressants.
+L’avantage de celui-ci de mon point de vue est qu’en plus de calculer la complexité, il utilise aussi un
+dictionnaire des mauvais mots de passe. Ainsi ‘123456’ ou ‘password’ seront directement qualifés de mauvais mots de passe.</p>
+<h2 id="branchement-dans-play">Branchement dans play</h2>
+<p>Le branchement dans play, va consister en l&rsquo;ajout de bases au niveau de l&rsquo;input password que l&rsquo;on veux customiser,
+puis l&rsquo;appel de la fonction javascript de zxcvbn qui se charge de calculer le niveau de complexité de la chaîne de caractère qui est saisie par l&rsquo;utilisateur.</p>
+<p>Pour cela, on va dans un premier temps inclure les libs qui vont bien :</p>
+<ul>
+<li>zxcvbn (à récupérer sur <a href="https://github.com/lowe/zxcvbn">github</a>).</li>
+<li>jquery et bootstrap pour l&rsquo;affichage du feedback</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/javascript&#34;</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/assets/js/zxcvbn-async.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;//code.jquery.com/jquery-2.0.3.min.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css&#34;</span>&gt;
+</span></span></code></pre></div><p>Ensuite, il faut customiser le champ password en question, pour lui ajouter les quelques attributs qui seront affichés en fonction de la saisie utilisateur</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;col-md-6&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    @input(
+</span></span><span style="display:flex;"><span>    fakeForm(&#34;password&#34;),
+</span></span><span style="display:flex;"><span>    &#39;_label -&gt; Messages(&#34;Password&#34;),
+</span></span><span style="display:flex;"><span>    &#39;class -&gt; &#34;form-control&#34;) { (id, name, value, args) =&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;password&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;@name&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;@id&#34;</span> <span style="color:#960050;background-color:#1e0010">@</span><span style="color:#a6e22e">toHtmlArgs</span><span style="color:#960050;background-color:#1e0010">(</span><span style="color:#a6e22e">args</span><span style="color:#960050;background-color:#1e0010">)</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;progress&#34;</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;height: 5px; margin-bottom: 0px;&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;progress-bar&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;pwdStrengthProgress&#34;</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;width: 0%;&#34;</span>&gt;&lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">span</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;label&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;pwdStrengthLabel&#34;</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;position: relative;float: right;&#34;</span>&gt;&lt;/<span style="color:#f92672">span</span>&gt;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">div</span>&gt;
+</span></span></code></pre></div><p>Et pour finir, le script qui, lors de la saisie utilisateur, va faire appel à zxcvbn pour savoir ce qu&rsquo;il faut afficher comme feedback</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">$</span>(document).<span style="color:#a6e22e">ready</span>(<span style="color:#66d9ef">function</span> () {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">$</span>(<span style="color:#e6db74">&#39;#password&#39;</span>).<span style="color:#a6e22e">keyup</span>(<span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">event</span>) {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">password</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">$</span>(<span style="color:#e6db74">&#39;#password&#39;</span>).<span style="color:#a6e22e">val</span>();
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">result</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">zxcvbn</span>(<span style="color:#a6e22e">password</span>);
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">$</span>(<span style="color:#e6db74">&#39;#entropy&#39;</span>).<span style="color:#a6e22e">html</span>(<span style="color:#a6e22e">result</span>.<span style="color:#a6e22e">entropy</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// label based on score (0,1=weak; 2=ok; 3 =good; 4=great)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">$label</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">$</span>(<span style="color:#e6db74">&#39;#pwdStrengthLabel&#39;</span>);
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">password</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">===</span> <span style="color:#ae81ff">0</span>) {
+</span></span><span style="display:flex;"><span>                <span style="color:#a6e22e">$label</span>.<span style="color:#a6e22e">hide</span>();
+</span></span><span style="display:flex;"><span>            } <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>                <span style="color:#a6e22e">$label</span>.<span style="color:#a6e22e">show</span>();
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">$label</span>.<span style="color:#a6e22e">html</span>(<span style="color:#a6e22e">result</span>.<span style="color:#a6e22e">entropy</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">33</span> <span style="color:#f92672">?</span> <span style="color:#e6db74">&#34;Faible&#34;</span> <span style="color:#f92672">:</span> <span style="color:#a6e22e">result</span>.<span style="color:#a6e22e">entropy</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">66</span> <span style="color:#f92672">?</span> <span style="color:#e6db74">&#34;Moyen&#34;</span> <span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>                                                       <span style="color:#a6e22e">result</span>.<span style="color:#a6e22e">entropy</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">80</span> <span style="color:#f92672">?</span> <span style="color:#e6db74">&#34;Bon&#34;</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Excellent&#34;</span>);
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">$label</span>.<span style="color:#a6e22e">removeClass</span>(<span style="color:#e6db74">&#34;label-danger label-warning label-success&#34;</span>)
+</span></span><span style="display:flex;"><span>                    .<span style="color:#a6e22e">addClass</span>(<span style="color:#a6e22e">result</span>.<span style="color:#a6e22e">entropy</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">33</span> <span style="color:#f92672">?</span> <span style="color:#e6db74">&#34;label-danger&#34;</span> <span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>                              <span style="color:#a6e22e">result</span>.<span style="color:#a6e22e">entropy</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">66</span> <span style="color:#f92672">?</span> <span style="color:#e6db74">&#34;label-warning&#34;</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;label-success&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// progress bar based on entropy (tops out at 100)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">$progress</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">$</span>(<span style="color:#e6db74">&#39;#pwdStrengthProgress&#39;</span>);
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">$progress</span>.<span style="color:#a6e22e">css</span>(<span style="color:#e6db74">&#39;width&#39;</span>, <span style="color:#a6e22e">result</span>.<span style="color:#a6e22e">entropy</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;%&#39;</span>);
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">$progress</span>.<span style="color:#a6e22e">removeClass</span>(<span style="color:#e6db74">&#34;progress-bar-danger progress-bar-warning progress-bar-success&#34;</span>)
+</span></span><span style="display:flex;"><span>                    .<span style="color:#a6e22e">addClass</span>(<span style="color:#a6e22e">result</span>.<span style="color:#a6e22e">entropy</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">33</span> <span style="color:#f92672">?</span> <span style="color:#e6db74">&#34;progress-bar-danger&#34;</span> <span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>                              <span style="color:#a6e22e">result</span>.<span style="color:#a6e22e">entropy</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">66</span> <span style="color:#f92672">?</span> <span style="color:#e6db74">&#34;progress-bar-warning&#34;</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;progress-bar-success&#34;</span>);
+</span></span><span style="display:flex;"><span>        });
+</span></span><span style="display:flex;"><span>    });
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span></code></pre></div><p>Ce script est largement inspiré de : <a href="https://github.com/johnbeil/bootstrap3-zxcvbn/blob/master/index.html"><a href="https://github.com/johnbeil/bootstrap3-zxcvbn/blob/master/index.html">https://github.com/johnbeil/bootstrap3-zxcvbn/blob/master/index.html</a></a></p>
+<h2 id="résultats">Résultats</h2>
+<p>Comme vous pouvez le voir dans le js qui traite le retour de la fonction zxcvbn, il y a 3 niveaux de couleurs qui se déclenchent à différents niveaux, combinés à un simple label</p>
+<p><a href="/images/posts/2014-03-05-passwordStrength/weak.png" data-lightbox="image-1"
+title="Feedback pour un mauvais mot de passe">
+<img class="mini" src="/images/posts/2014-03-05-passwordStrength/weak.png" alt="Feedback pour un mauvais mot de passe"/>
+</a>
+<a href="/images/posts/2014-03-05-passwordStrength/fair.png" data-lightbox="image-1"
+title="Feedback pour un mot de passe moyen">
+<img class="mini" src="/images/posts/2014-03-05-passwordStrength/fair.png" alt="Feedback pour un mot de passe moyen"/>
+</a>
+<a href="/images/posts/2014-03-05-passwordStrength/good.png" data-lightbox="image-1"
+title="Feedback pour un bon mot de passe">
+<img class="mini" src="/images/posts/2014-03-05-passwordStrength/good.png" alt="Feedback pour un bon mot de passe"/>
+</a>
+<a href="/images/posts/2014-03-05-passwordStrength/great.png" data-lightbox="image-1"
+title="Feedback pour un mot de passe parfait">
+<img class="mini" src="/images/posts/2014-03-05-passwordStrength/great.png" alt="Feedback pour un mot de passe parfait"/>
+</a></p>
+<h2 id="sources">Sources</h2>
+<p>Vous pouvez retrouver les sources correspondants à cet exemple dans un projet play sur github à cette adresse : <a href="https://github.com/fchauveau/passwordStrengthBar"><a href="https://github.com/fchauveau/passwordStrengthBar">https://github.com/fchauveau/passwordStrengthBar</a></a></p>
+<h2 id="pour-aller-plus-loin">Pour aller plus loin</h2>
+<p>zxcvbn propose 6 indicateurs (<b>entropy, crack_time, crack_time_display, score, match_sequence, calculation_time</b>)
+lors de son contrôle du mot de passe. Dans mon cas je n&rsquo;ai utilisé que l&rsquo;entropie
+pour mes niveaux d&rsquo;indicateurs.</p>
+
+                    </div>
+                    <div class="content-footer">
+                        
+                        <ul class="tags float">
+                            
+                            <li><a href="/tags/security/">Security</a></li>
+                            
+                            <li><a href="/tags/play2/">Play2</a></li>
+                            
+                        </ul>
+                        
+                        <div id="author">
+                            <p class="date">Rédigé par <span class="author-name">Florian</span></p>
+                        </div>
+                    </div>
+                    <div class="share">
+                        <span>Partager</span>
+                        <ul class="socials">
+                            <li>
+                                <a target="_blank" rel="nofollow noopener"
+                                    aria-label="Partager sur Bluesky (nouvelle fenêtre)"
+                                    href="https://bsky.app/intent/compose?text=Strength%20Password%20Indicator%20Pour%20Play2+https://code-troopers.com%2f2014%2f03%2f05%2fpasswordstrength%2f"
+                                    onclick="window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=500,width=700');return false;">
+                                    <svg class="icon-svg bluesky-fill-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 11.3884C11.0942 9.62673 8.62833 6.34423 6.335 4.7259C4.13833 3.17506 3.30083 3.4434 2.75167 3.69256C2.11583 3.9784 2 4.95506 2 5.52839C2 6.10339 2.315 10.2367 2.52 10.9276C3.19917 13.2076 5.61417 13.9776 7.83917 13.7309C4.57917 14.2142 1.68333 15.4017 5.48083 19.6292C9.65833 23.9542 11.2058 18.7017 12 16.0392C12.7942 18.7017 13.7083 23.7651 18.4442 19.6292C22 16.0392 19.4208 14.2142 16.1608 13.7309C18.3858 13.9784 20.8008 13.2076 21.48 10.9276C21.685 10.2376 22 6.10256 22 5.52923C22 4.95423 21.8842 3.97839 21.2483 3.6909C20.6992 3.44256 19.8617 3.17423 17.665 4.72423C15.3717 6.34506 12.9058 9.62756 12 11.3884Z"/></svg>
+
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_blank" rel="nofollow noopener"
+                                    aria-label="Partager sur LinkedIn (nouvelle fenêtre)"
+                                    href="https://www.linkedin.com/sharing/share-offsite/?url=https://code-troopers.com%2f2014%2f03%2f05%2fpasswordstrength%2f"
+                                    onclick="window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=500,width=700');return false;">
+                                    <svg class="icon-svg linkedin-fill-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M6.94048 4.99993C6.94011 5.81424 6.44608 6.54702 5.69134 6.85273C4.9366 7.15845 4.07187 6.97605 3.5049 6.39155C2.93793 5.80704 2.78195 4.93715 3.1105 4.19207C3.43906 3.44699 4.18654 2.9755 5.00048 2.99993C6.08155 3.03238 6.94097 3.91837 6.94048 4.99993ZM7.00048 8.47993H3.00048V20.9999H7.00048V8.47993ZM13.3205 8.47993H9.34048V20.9999H13.2805V14.4299C13.2805 10.7699 18.0505 10.4299 18.0505 14.4299V20.9999H22.0005V13.0699C22.0005 6.89993 14.9405 7.12993 13.2805 10.1599L13.3205 8.47993Z"></path></svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="clearfix"></div>
+
+
+                    <div class="back">
+                        <div class="pagination black">
+                            
+                            <a href="/2014/03/17/aucard/" class="previous-page" aria-label="Article précédent : Code-Troopers &#43; Aucard de Tours = Appli Android">
+                                <span class="arrow"><div class="arrow_box_left arrow_box" aria-hidden="true">
+</div>
+</span>
+                                Article précédent
+                            </a>
+                            
+                            
+                            <a href="/2014/01/01/cestreparti/" class="next-page" aria-label="Article suivant : C&#39;est reparti pour un tour">
+                                Article suivant
+                                <span class="arrow"><div class="arrow_box_right arrow_box" aria-hidden="true">
+</div>
+</span>
+                            </a>
+                            
+                        </div>
+                    </div>
+
+                    <nav id="menu" aria-label="Taxonomies">
+                        <ul>
+                            
+                        </ul>
+                    </nav>
+                </div>
+            </article>
+        </div>
+    </section>
+</section>
+
+    </main>
+
+    <section id="contact">
+  <p class="section-title">Contact</p>
+  <div>
+    <div>
+      <img
+        class="cover"
+        loading="lazy"
+        src="/img/legos_contact.webp"
+        alt="Figurines Lego Code-Troopers"
+      />
+    </div>
+    <div>
+      <p class="section-title">Code-Troopers</p>
+      <address>
+        <p>
+          26 bis rue Abraham Bosse<br />
+          37000 Tours - Fr
+        </p>
+        <p>
+          <a href="mailto:contact@code-troopers.com">contact@code-troopers.com</a>
+        </p>
+        <p>
+          <a class="button" href="tel:+33782287216">07 82 28 72 16</a>
+        </p>
+      </address>
+    </div>
+  </div>
+
+  <div class="socials-follow">
+    <p class="section-title">Suivez nos actualités</p>
+    <ul class="x2">
+      <li>
+        <a
+          aria-label="Linkedin Code-Troopers (nouvelle fenêtre)"
+          href="https://www.linkedin.com/company/codetroopers"
+          target="_blank"
+          rel="noopener"
+        >
+          <svg class="icon-svg linkedin-fill-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M6.94048 4.99993C6.94011 5.81424 6.44608 6.54702 5.69134 6.85273C4.9366 7.15845 4.07187 6.97605 3.5049 6.39155C2.93793 5.80704 2.78195 4.93715 3.1105 4.19207C3.43906 3.44699 4.18654 2.9755 5.00048 2.99993C6.08155 3.03238 6.94097 3.91837 6.94048 4.99993ZM7.00048 8.47993H3.00048V20.9999H7.00048V8.47993ZM13.3205 8.47993H9.34048V20.9999H13.2805V14.4299C13.2805 10.7699 18.0505 10.4299 18.0505 14.4299V20.9999H22.0005V13.0699C22.0005 6.89993 14.9405 7.12993 13.2805 10.1599L13.3205 8.47993Z"></path></svg>
+        </a>
+      </li>
+      <li>
+        <a
+          aria-label="Github Code-Troopers (nouvelle fenêtre)"
+          href="https://github.com/code-troopers"
+          target="_blank"
+          rel="noopener"
+        >
+          <svg class="icon-svg github-fill-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12.001 2C6.47598 2 2.00098 6.475 2.00098 12C2.00098 16.425 4.86348 20.1625 8.83848 21.4875C9.33848 21.575 9.52598 21.275 9.52598 21.0125C9.52598 20.775 9.51348 19.9875 9.51348 19.15C7.00098 19.6125 6.35098 18.5375 6.15098 17.975C6.03848 17.6875 5.55098 16.8 5.12598 16.5625C4.77598 16.375 4.27598 15.9125 5.11348 15.9C5.90098 15.8875 6.46348 16.625 6.65098 16.925C7.55098 18.4375 8.98848 18.0125 9.56348 17.75C9.65098 17.1 9.91348 16.6625 10.201 16.4125C7.97598 16.1625 5.65098 15.3 5.65098 11.475C5.65098 10.3875 6.03848 9.4875 6.67598 8.7875C6.57598 8.5375 6.22598 7.5125 6.77598 6.1375C6.77598 6.1375 7.61348 5.875 9.52598 7.1625C10.326 6.9375 11.176 6.825 12.026 6.825C12.876 6.825 13.726 6.9375 14.526 7.1625C16.4385 5.8625 17.276 6.1375 17.276 6.1375C17.826 7.5125 17.476 8.5375 17.376 8.7875C18.0135 9.4875 18.401 10.375 18.401 11.475C18.401 15.3125 16.0635 16.1625 13.8385 16.4125C14.201 16.725 14.5135 17.325 14.5135 18.2625C14.5135 19.6 14.501 20.675 14.501 21.0125C14.501 21.275 14.6885 21.5875 15.1885 21.4875C19.259 20.1133 21.9999 16.2963 22.001 12C22.001 6.475 17.526 2 12.001 2Z"></path></svg>
+        </a>
+      </li>
+      <li>
+        <a
+          aria-label="Profil Sortlist Code-Troopers (nouvelle fenêtre)"
+          href="https://www.sortlist.com/fr/agency/code-troopers"
+          target="_blank"
+          rel="noopener"
+          class="sortlist-badge"
+        >
+          Sortlist
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  <div class="wrapper">
+    <a href="#top" class="scroll-to-top" aria-label="Retourner en haut de la page">
+      <img
+        class="arrow"
+        loading="lazy"
+        src="/img/arrow.webp"
+        alt="Retourner en haut"
+      />
+    </a>
+    <img src="/img/footer_logo.webp" alt="logo Code-Troopers" />
+    <div>
+      <span
+        >©2014 — 2026 Code-Troopers |
+        <a href="/legals">Mentions légales</a></span
+      >
+      <span
+        >Design : <a href="https://www.descheval.com/">descheval.com</a> |
+        Développement : Code-Troopers</span
+      >
+    </div>
+  </div>
+</footer>
+
+
+    
+    
+      <script src="/main.js"></script>
+    
+    <script>
+      (function() {
+        var d = new Date();
+        
+        if (d.getMonth() === 9) {
+          document.documentElement.classList.add("halloween");
+        }
+        
+        if (d.getMonth() === 3 && d.getDate() === 1) {
+          var s = document.createElement('script');
+          s.src = 'https://code.jquery.com/jquery-3.7.1.min.js';
+          s.integrity = 'sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=';
+          s.crossOrigin = 'anonymous';
+          s.onload = function() {
+            var a = document.createElement('script');
+            a.src = '/js/april.js';
+            document.body.appendChild(a);
+          };
+          document.body.appendChild(s);
+        }
+      })();
+      
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", function(user) {
+          if (!user) {
+            window.netlifyIdentity.on("login", function() {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

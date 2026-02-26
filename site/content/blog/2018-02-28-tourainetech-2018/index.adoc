@@ -5,6 +5,7 @@ date: '2018-02-28'
 tags:
 - Conférences
 title: 'TouraineTech'
+description: "Retour sur la première édition de TouraineTech, la conférence tech de Tours co-organisée par Code-Troopers. Bilan et perspectives 2019."
 url: /2018/02/28/tourainetech-2018/
 aliases: 2018/02/28/tourainetech-2018.html
 ---

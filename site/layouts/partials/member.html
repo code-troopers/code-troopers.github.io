@@ -9,7 +9,7 @@
         {{ if $member.photo }}
         <li class="team-member">
             {{ with $pageResource.GetMatch $member.photo }}
-            {{ with .Process "webp q100" }}
+            {{ with .Process "webp q80" }}
             <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}"
                 alt="Photo de {{ $member.name }}">
             {{ end }}
@@ -67,8 +67,8 @@
         {{ end }}
         {{ end }}
     </ul>
-    <button onclick="handleClick('previous')" class="carrousel-button carrousel-button--previous" type="button" aria-label="Membre précédent">&#10140;</button>
-    <button onclick="handleClick('next')" class="carrousel-button carrousel-button--next" type="button" aria-label="Membre suivant">&#10140;</button>
+    <button onclick="handleClick('previous')" class="carrousel-button carrousel-button--previous" type="button" aria-label="Membre précédent">&#10094;</button>
+    <button onclick="handleClick('next')" class="carrousel-button carrousel-button--next" type="button" aria-label="Membre suivant">&#10095;</button>
 </div>
 
 <script>

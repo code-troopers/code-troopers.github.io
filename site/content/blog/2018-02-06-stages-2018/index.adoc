@@ -5,6 +5,7 @@ date: '2018-02-06'
 tags:
 - Stage
 title: 'Stage 2018'
+description: "Offres de stages 2018 chez Code-Troopers à MAME : administration système, développement Frontend et Backend sur des projets en production."
 url: /2018/02/06/stages-2018/
 aliases: 2018/02/06/stage-2018.html
 ---

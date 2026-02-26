@@ -8,6 +8,7 @@ tags:
 - Outils
 - Productivité
 title: GIT-SVN comment survivre dans un environnement hostile
+description: "Les commandes essentielles de Git-SVN pour utiliser Git au quotidien tout en restant compatible avec un serveur SVN en entreprise."
 url: /2015/07/16/gitsvn/
 aliases: 2015/07/16/GITSVN.html
 ---

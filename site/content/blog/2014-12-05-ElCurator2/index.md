@@ -7,6 +7,7 @@ tags:
 - Curation
 - Partage
 title: elCurator devient payant !
+description: "ElCurator passe à 660 euros par an : retour sur ce changement de modèle et les alternatives gratuites comme Stample pour la veille en équipe."
 url: /2014/12/05/elcurator2/
 aliases: 2014/12/05/ElCurator2.html
 ---

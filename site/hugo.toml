@@ -2,9 +2,12 @@ languageCode = "fr-FR"
 defaultContentLang = "fr"
 languageLang = "fr"
 defaultContentLanguage = "fr"
-disableKinds = ["RSS", "taxonomy", "taxonomyTerm"]
 title = "Code-Troopers"
 baseurl = "/"
+
+[outputs]
+home = ["HTML"]
+section = ["HTML", "RSS"]
 
 [security]
 enableInlineShortcodes = false
@@ -22,7 +25,7 @@ urls = [".*"]
 
 [params]
 siteUrl = "https://code-troopers.com"
-images = ["img/logo-code-troopers-tête-couleur.png"]
+images = ["img/logo-code-troopers-tete-couleur.png"]
 
 [markup]
 

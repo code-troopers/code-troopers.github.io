@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Zsh on Code-Troopers</title>
+    <link>/tags/zsh/</link>
+    <description>Recent content in Zsh on Code-Troopers</description>
+    <generator>Hugo</generator>
+    <language>fr-FR</language>
+    <lastBuildDate>Wed, 17 Sep 2014 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/zsh/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>oh-my-zsh : l&#39;outil indispensable pour avoir un zsh bien configuré.</title>
+      <link>/2014/09/17/ohmyzsh/</link>
+      <pubDate>Wed, 17 Sep 2014 00:00:00 +0000</pubDate>
+      <guid>/2014/09/17/ohmyzsh/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;Que l&amp;rsquo;on soit dev, ops, sysadmin ou autre pour effectuer nos tâches répétitives et quotidiennes on a généralement deux possibilités : une première communément appelée &amp;ldquo;clic-clic&amp;rdquo; qui consiste à utiliser les interfaces graphiques aussi souvent que possible (afin de perdre un maximum de temps) ; et une seconde qualifiée de &amp;ldquo;barbue&amp;rdquo; qui elle est orientée ligne de commande, scripting et automatisation.&#xA;Nous les Code-Troopers, on est plutôt technique de barbus ! Et donc peut importe l&amp;rsquo;OS qu&amp;rsquo;on utilise on cherche toujours à avoir le meilleur terminal possible.&#xA;Par défaut sous linux ou mac OS on trouvera souvent &lt;em&gt;bash&lt;/em&gt;, sous windows ce sera &lt;em&gt;powershell&lt;/em&gt; mais il en existe d’autres comme &lt;em&gt;csh&lt;/em&gt;, &lt;em&gt;ksh&lt;/em&gt; ou dans le cas qui nous intéresse &lt;em&gt;zsh&lt;/em&gt;.&#xA;&lt;em&gt;zsh&lt;/em&gt; est puissant mais ce n’est pas le sujet du jour de dire pourquoi il serait mieux qu’un autre. En revanche, qui dit puissance dit difficultés de paramétrage ;&#xA;d’ailleurs à la première utilisation lorsque l’on n’a pas de fichier de configuration il commence par dire qu’il peut en créer un pour nous mais qu’il faudra le modifier à la main.&#xA;Ce sera inutile grâce à &lt;em&gt;oh-my-zsh&lt;/em&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>k is the new l, yo</title>
+      <link>/2014/05/14/kisthenewl/</link>
+      <pubDate>Wed, 14 May 2014 00:00:00 +0000</pubDate>
+      <guid>/2014/05/14/kisthenewl/</guid>
+      <description>&lt;p&gt;xiau depuis les années 70 elle a très peu changé. Bien sûr, il y a de nombreuses options, citons &lt;code&gt;ls -a&lt;/code&gt; pour afficher les fichiers cachés, &lt;code&gt;ls -l&lt;/code&gt; pour afficher plus d&amp;rsquo;informations, &lt;code&gt;ls --color&lt;/code&gt; pour afficher deux couleurs, une pour les fichiers et une pour les répertoires, ou encore &lt;code&gt;ls -rtl&lt;/code&gt; pour trier le contenu par date et afficher le plus récent en dernier.&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;ls&lt;/code&gt; est donc une commande utile et pratique mais elle n&amp;rsquo;est pas folichonne. D&amp;rsquo;où la naissance de &lt;code&gt;k&lt;/code&gt; qui a pour but de remplacer &lt;code&gt;ls&lt;/code&gt; avec quelques killer features. Il ne s&amp;rsquo;agit pas d&amp;rsquo;une surcouche de &lt;code&gt;ls&lt;/code&gt; mais d&amp;rsquo;une commande complète, s&amp;rsquo;appuyant directement sur &lt;code&gt;stat&lt;/code&gt; par exemple. À ce jour, les nouvelles fonctionnalités sont les suivantes :&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SEO on Code-Troopers</title>
+    <link>/tags/seo/</link>
+    <description>Recent content in SEO on Code-Troopers</description>
+    <generator>Hugo</generator>
+    <language>fr-FR</language>
+    <lastBuildDate>Tue, 18 Sep 2018 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/seo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SEO et Single Page Application</title>
+      <link>/2018/09/18/angular-seo/</link>
+      <pubDate>Tue, 18 Sep 2018 00:00:00 +0000</pubDate>
+      <guid>/2018/09/18/angular-seo/</guid>
+      <description>&lt;div class=&#34;paragraph&#34;&gt;&#xA;&lt;p&gt;Lorsque nous avons commencé à développer &lt;a href=&#34;https://www.weguide.fr&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;We Guide&lt;/a&gt;, nous avons pas mal réfléchi à quel framework utiliser pour réaliser la partie front et, du fait de notre expérience, avons choisi &lt;strong&gt;Angular&lt;/strong&gt;.&#xA;Nous connaissions les problèmes liés aux &lt;strong&gt;Single Page Application&lt;/strong&gt; et au &lt;strong&gt;SEO&lt;/strong&gt; mais nous pensions pouvoir les résoudre facilement par la suite.&#xA;Au final, c’était un peu plus compliqué que prévu et nous allons expliquer pourquoi dans la suite de cet article.&lt;/p&gt;&#xA;&lt;/div&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tips on Code-Troopers</title>
+    <link>/tips/</link>
+    <description>Recent content in Tips on Code-Troopers</description>
+    <generator>Hugo</generator>
+    <language>fr-FR</language>
+    <lastBuildDate>Fri, 24 May 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tips/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>easy window resize</title>
+      <link>/tips/easy-window-resize/</link>
+      <pubDate>Fri, 24 May 2024 00:00:00 +0000</pubDate>
+      <guid>/tips/easy-window-resize/</guid>
+      <description>&lt;p&gt;Un plugin pour retailler rapidement sa fenêtre chrome, toujours utile quand on fait du dév front !&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://chromewebstore.google.com/detail/easy-window-resize/cfpenpohaapdgnkglcbgjiooipcbcebi?pli=1&#34;&gt;https://chromewebstore.google.com/detail/easy-window-resize&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Faire des commits conventionnels</title>
+      <link>/tips/faire-des-commits-conventionnels/</link>
+      <pubDate>Fri, 24 May 2024 00:00:00 +0000</pubDate>
+      <guid>/tips/faire-des-commits-conventionnels/</guid>
+      <description>&lt;p&gt;commitizen est un outil en ligne de commande pour faire des commit, quand on le lance il demande si c&amp;rsquo;est une feature, un bug etc. quelle catégorie est concernée, quel est le message de commit, si cela ferme un ticket… Bref quelques questions et il va créer un joli commit bien formaté, avec un emoji.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://github.com/commitizen/cz-cli&#34;&gt;https://github.com/commitizen/cz-cli&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Faire un audit de sécurité</title>
+      <link>/tips/faire-un-audit-de-s%C3%A9curit%C3%A9/</link>
+      <pubDate>Fri, 24 May 2024 00:00:00 +0000</pubDate>
+      <guid>/tips/faire-un-audit-de-s%C3%A9curit%C3%A9/</guid>
+      <description>&lt;p&gt;Vous êtes piraté ! Ou au moins vous êtes piratable ! Bon, peut-être pas mais comment savoir sans faire un audit ? Alors c&amp;rsquo;est parti grâce à &lt;a href=&#34;https://github.com/CISOfy/lynis&#34;&gt;lynis&lt;/a&gt;. Lancez `lynis audit system` et regardez le résultat. Disponible sur linux, macOS, BSD.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>only-allow : ne vous trompez plus</title>
+      <link>/tips/only-allow-ne-vous-trompez-plus/</link>
+      <pubDate>Fri, 24 May 2024 00:00:00 +0000</pubDate>
+      <guid>/tips/only-allow-ne-vous-trompez-plus/</guid>
+      <description>&lt;p&gt;Ça vous arrive de switcher de projet et de vous tromper entre npm et yarn ? Plus maintenant, grâce à &lt;a href=&#34;https://www.npmjs.com/package/only-allow&#34;&gt;only-allow&lt;/a&gt; !&lt;/p&gt;&#xA;&lt;p&gt;Ajoutez juste une commande en preinstall (plus d&amp;rsquo;info sur le readme) et c&amp;rsquo;est parti&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;{&#xA;  &amp;#34;scripts&amp;#34;: {&#xA;    &amp;#34;preinstall&amp;#34;: &amp;#34;npx only-allow npm&amp;#34;&#xA;  }&#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    <item>
+      <title>Mettre à jour toutes les dépendances NPM</title>
+      <link>/tips/mettre-%C3%A0-jour-toutes-les-d%C3%A9pendances-npm/</link>
+      <pubDate>Thu, 23 May 2024 00:00:00 +0000</pubDate>
+      <guid>/tips/mettre-%C3%A0-jour-toutes-les-d%C3%A9pendances-npm/</guid>
+      <description>&lt;p&gt;Un petit outil rapide pour mettre à jour toutes les dépendances NPM d&amp;rsquo;un projet :&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;npm install -g yarn-upgrade-all &amp;amp;&amp;amp; yarn-upgrade-all&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Il va supprimer et réinstaller tous les paquets du package.json donc avec des versions à jour :)&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

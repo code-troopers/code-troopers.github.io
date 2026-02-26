@@ -1,6 +1,7 @@
 ---
 cover: soletanche.jpg
 date: '2017-12-19'
+description: "Développement web pour Soletanche Bachy (groupe VINCI), entreprise spécialisée en fondations spéciales et technologies du sol."
 tags:
 - Web
 title: 'Soletanche'

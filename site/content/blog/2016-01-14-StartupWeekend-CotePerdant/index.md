@@ -7,6 +7,7 @@ tags:
 - AngularJS
 - Tech
 title: 'Startup Weekend : côté perdant'
+description: "Startup Weekend tourisme à Tours : retour technique sur We Guide, un MVP AngularJS développé en 54h pour découvrir une région avec un guide."
 url: /2016/01/14/startupweekend-coteperdant/
 aliases: 2016/01/14/StartupWeekend-CotePerdant.html
 ---

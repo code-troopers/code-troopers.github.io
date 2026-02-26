@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Shell on Code-Troopers</title>
+    <link>/tags/shell/</link>
+    <description>Recent content in Shell on Code-Troopers</description>
+    <generator>Hugo</generator>
+    <language>fr-FR</language>
+    <lastBuildDate>Mon, 09 Jul 2018 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/shell/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Faire du json comme si on faisait du sed (*)</title>
+      <link>/2018/07/09/jq/</link>
+      <pubDate>Mon, 09 Jul 2018 00:00:00 +0000</pubDate>
+      <guid>/2018/07/09/jq/</guid>
+      <description>&lt;div class=&#34;paragraph&#34;&gt;&#xA;&lt;p&gt;Nous usons et abusons de Trello pour nos projets. Pour un projet en particulier, je voulais retrouver certains commentaires répartis sur plusieurs mois.&#xA;Juste en regardant les cartes une par une ou en regardant l’historique serait trop fastidieux.&#xA;Heureusement chaque board Trello permet un export au format json qui nous permet de s’en servir à notre guise.&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;div class=&#34;paragraph&#34;&gt;&#xA;&lt;p&gt;Je veux juste sortir quelques données, je ne referai jamais la même chose plusieurs fois et je veux que ça me prenne 10 minutes max donc un projet java c’est juste impensable, un langage de script sera plus adapté et ça tombe bien car d’une part le shell (la ligne de commande) est un de mes langages préférés et j’ai découvert &lt;code&gt;jq&lt;/code&gt; il n’y a pas longtemps.&lt;/p&gt;&#xA;&lt;/div&gt;</description>
+    </item>
+    <item>
+      <title>vim : 10 astuces de configuration pour vos dotfiles</title>
+      <link>/2015/05/15/dotfiles-vim/</link>
+      <pubDate>Fri, 15 May 2015 00:00:00 +0000</pubDate>
+      <guid>/2015/05/15/dotfiles-vim/</guid>
+      <description>&lt;p&gt;Cet article sera le premier d&amp;rsquo;une série consacrée aux &lt;em&gt;dotfiles&lt;/em&gt;. Alors les &lt;em&gt;dotfiles&lt;/em&gt;, qu&amp;rsquo;est-ce que c&amp;rsquo;est Obi-Wan ? Les &lt;em&gt;dotfiles&lt;/em&gt;, ce sont tous les fichiers texte de configuration que l&amp;rsquo;on peut retrouver dans son répertoire utilisateur pour sauvegarder ses préférences. De nombreux logiciels utilisent cette méthode. On peut citer gnome, IntelliJ, Maven,  ssh, git, bash et tant d&amp;rsquo;autres. On les appelle &lt;em&gt;dotfiles&lt;/em&gt; −que l&amp;rsquo;on peut traduire par fichiers point− parce qu&amp;rsquo;ils ont un nom qui commence par un point, ce qui correspond aux fichiers cachés sous linux.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>ct - alias de projets</title>
+      <link>/2014/12/15/ct_project_alias/</link>
+      <pubDate>Mon, 15 Dec 2014 00:00:00 +0000</pubDate>
+      <guid>/2014/12/15/ct_project_alias/</guid>
+      <description>&lt;p&gt;Dans l’équipe Code-Troopers, nous manipulons des technos qui sont assez différentes et qui possèdent chacune un vocabulaire différent qui leur permet de fonctionner en ligne de commande.&#xA;Du coup, un de nos problèmes récurrents est de se rappeler quelle commande dois-je lancer lorsque je veux travailler sur tel projet (&lt;code&gt;mvn jetty:run&lt;/code&gt;, &lt;code&gt;gradle assemble&lt;/code&gt;, &lt;code&gt;grunt serve&lt;/code&gt;…).&lt;/p&gt;&#xA;&lt;p&gt;Un autre aspect pénible à avoir plein de façons différentes de fonctionner est qu’il est quasiment impossible d’avoir des alias pertinents dans son shell préféré.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Babun un shell sous Windows</title>
+      <link>/2014/10/01/babun/</link>
+      <pubDate>Wed, 01 Oct 2014 00:00:00 +0000</pubDate>
+      <guid>/2014/10/01/babun/</guid>
+      <description>&lt;h2 id=&#34;oh-non-mon-client-moblige-à-être-sous-windows&#34;&gt;Oh non, mon client m&amp;rsquo;oblige à être sous Windows&lt;/h2&gt;&#xA;&lt;p&gt;Malheureusement, il est fréquent que nous soyons forcés de travailler sous un environnement que nous n&amp;rsquo;aimons pas. Les raisons sont souvent diverses mais sont presque toujours inflexibles. Le problème est que lorsqu&amp;rsquo;on est habitué à une ligne de commande puissante, le fait d&amp;rsquo;être sous Windows devient un réel handicap.&lt;/p&gt;&#xA;&lt;h2 id=&#34;donnez-moi-un-shell-&#34;&gt;Donnez moi un shell !&lt;/h2&gt;&#xA;&lt;p&gt;Bien sûr, la plupart d&amp;rsquo;entre vous connaîssent Cygwin, qui permet de résoudre bien des problèmes, mais qui en créé aussi un paquet avant d&amp;rsquo;avoir une installation complète et qui fonctionne comme attendu.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>oh-my-zsh : l&#39;outil indispensable pour avoir un zsh bien configuré.</title>
+      <link>/2014/09/17/ohmyzsh/</link>
+      <pubDate>Wed, 17 Sep 2014 00:00:00 +0000</pubDate>
+      <guid>/2014/09/17/ohmyzsh/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;Que l&amp;rsquo;on soit dev, ops, sysadmin ou autre pour effectuer nos tâches répétitives et quotidiennes on a généralement deux possibilités : une première communément appelée &amp;ldquo;clic-clic&amp;rdquo; qui consiste à utiliser les interfaces graphiques aussi souvent que possible (afin de perdre un maximum de temps) ; et une seconde qualifiée de &amp;ldquo;barbue&amp;rdquo; qui elle est orientée ligne de commande, scripting et automatisation.&#xA;Nous les Code-Troopers, on est plutôt technique de barbus ! Et donc peut importe l&amp;rsquo;OS qu&amp;rsquo;on utilise on cherche toujours à avoir le meilleur terminal possible.&#xA;Par défaut sous linux ou mac OS on trouvera souvent &lt;em&gt;bash&lt;/em&gt;, sous windows ce sera &lt;em&gt;powershell&lt;/em&gt; mais il en existe d’autres comme &lt;em&gt;csh&lt;/em&gt;, &lt;em&gt;ksh&lt;/em&gt; ou dans le cas qui nous intéresse &lt;em&gt;zsh&lt;/em&gt;.&#xA;&lt;em&gt;zsh&lt;/em&gt; est puissant mais ce n’est pas le sujet du jour de dire pourquoi il serait mieux qu’un autre. En revanche, qui dit puissance dit difficultés de paramétrage ;&#xA;d’ailleurs à la première utilisation lorsque l’on n’a pas de fichier de configuration il commence par dire qu’il peut en créer un pour nous mais qu’il faudra le modifier à la main.&#xA;Ce sera inutile grâce à &lt;em&gt;oh-my-zsh&lt;/em&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>k is the new l, yo</title>
+      <link>/2014/05/14/kisthenewl/</link>
+      <pubDate>Wed, 14 May 2014 00:00:00 +0000</pubDate>
+      <guid>/2014/05/14/kisthenewl/</guid>
+      <description>&lt;p&gt;xiau depuis les années 70 elle a très peu changé. Bien sûr, il y a de nombreuses options, citons &lt;code&gt;ls -a&lt;/code&gt; pour afficher les fichiers cachés, &lt;code&gt;ls -l&lt;/code&gt; pour afficher plus d&amp;rsquo;informations, &lt;code&gt;ls --color&lt;/code&gt; pour afficher deux couleurs, une pour les fichiers et une pour les répertoires, ou encore &lt;code&gt;ls -rtl&lt;/code&gt; pour trier le contenu par date et afficher le plus récent en dernier.&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;ls&lt;/code&gt; est donc une commande utile et pratique mais elle n&amp;rsquo;est pas folichonne. D&amp;rsquo;où la naissance de &lt;code&gt;k&lt;/code&gt; qui a pour but de remplacer &lt;code&gt;ls&lt;/code&gt; avec quelques killer features. Il ne s&amp;rsquo;agit pas d&amp;rsquo;une surcouche de &lt;code&gt;ls&lt;/code&gt; mais d&amp;rsquo;une commande complète, s&amp;rsquo;appuyant directement sur &lt;code&gt;stat&lt;/code&gt; par exemple. À ce jour, les nouvelles fonctionnalités sont les suivantes :&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

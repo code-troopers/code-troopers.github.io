@@ -3,6 +3,7 @@ header {
   top: 0;
   z-index: 100;
   width: 100%;
+  transition: background-color 300ms ease;
 
   & ~ section {
     &:target:before {
@@ -68,6 +69,8 @@ header {
 }
 
 #company {
+  position: relative;
+  z-index: 0;
   background-size: cover;
   background-image: url("../img/header_large.webp");
   @media (width < 768px) {
@@ -77,80 +80,193 @@ header {
   background-position: center center;
   background-color: var(--darkgrey);
   background-attachment: fixed;
-  padding-bottom: 5rem;
-  padding-top: 5rem;
+  min-height: calc(100vh - 60px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-  .logo {
-    display: inherit;
-    padding: 2rem;
-    max-width: 100%;
-    margin: 0 auto;
-    text-align: center;
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(170deg, rgba(10,20,50,0.78) 0%, rgba(10,20,50,0.55) 50%, rgba(0,0,0,0.40) 100%),
+      radial-gradient(ellipse at 70% 30%, rgba(0,0,0,0) 20%, rgba(0,0,0,0.50) 100%);
+    z-index: 1;
+    pointer-events: none;
   }
 
-  .introduction {
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
     color: var(--white);
-    margin: auto;
-    width: 960px;
-    max-width: 100%;
+    max-width: 800px;
+    padding: 0 2rem;
+  }
+
+  .logo {
+    width: 80px;
+    height: auto;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-text {
+    margin-bottom: 2rem;
+  }
+
+  .hero-headline {
+    font-size: 2.8rem;
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -0.03em;
+    margin: 0 0 1rem;
+  }
+
+  .hero-sub {
+    font-size: 1.15rem;
+    line-height: 1.6;
+    opacity: 0.88;
+    max-width: 550px;
+    margin: 0 auto;
+  }
+
+  .key-figures {
     display: flex;
-    padding-left: 30px;
-    padding-right: 30px;
-    line-height: 1.6rem;
+    justify-content: center;
+    gap: 3rem;
+    margin: 2rem 0;
 
-    h2 {
-      --separator-color: var(--white);
+    div {
+      text-align: center;
     }
 
-    div:first-child {
-      flex: 1;
-
-      p {
-        font-size: 1.3rem;
-        line-height: 2rem;
-      }
+    strong {
+      display: block;
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: var(--lightblue);
+      letter-spacing: -0.02em;
     }
 
-    div:last-child {
-      margin-left: 5rem;
-      flex: 2;
-    }
-
-    a {
-      text-transform: uppercase;
-      text-decoration: none;
-      color: var(--white);
-      letter-spacing: 0.2rem;
+    span {
       font-size: 0.8rem;
-      padding-bottom: 0.1rem;
-      border-bottom: 1px dotted var(--white);
+      opacity: 0.75;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+  }
 
-      &:hover {
-        color: var(--lightblue);
-        border-color: var(--lightblue);
+  .cta-hero {
+    background: var(--accent);
+    border: 2px solid var(--accent);
+    color: var(--white);
+    padding: 1rem 2.5rem;
+    border-radius: 0.5rem;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background 220ms ease-out, border-color 220ms ease-out, transform 220ms ease-out, box-shadow 220ms ease-out;
+
+    &:hover {
+      background: var(--accentHover);
+      border-color: var(--accentHover);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(249,115,22,0.50);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  #company {
+    .hero-headline {
+      font-size: 1.8rem;
+    }
+    .hero-sub {
+      font-size: 1rem;
+    }
+    .key-figures {
+      gap: 1.5rem;
+      strong {
+        font-size: 1.8rem;
       }
     }
   }
 }
 
-@media (width < 1024px) {
-  header {
-    nav {
-      li {
-        display: none;
-      }
-      li:has(#id-company),
-      li:has(#id-blogs) {
-        display: initial;
-      }
+/* Hamburger button */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.8rem;
+  position: absolute;
+  right: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+
+  span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--white);
+    margin: 5px 0;
+    transition: transform 300ms ease, opacity 300ms ease;
+  }
+
+  &.open span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  &.open span:nth-child(2) {
+    opacity: 0;
+  }
+  &.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+}
+
+@media (max-width: 1023px) {
+  header nav {
+    position: relative;
+
+    .hamburger {
+      display: block;
+    }
+
+    ul {
+      display: none;
+      flex-direction: column;
+      background: var(--black);
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      z-index: 99;
+    }
+
+    ul.open {
+      display: flex;
+    }
+
+    li {
+      display: block !important;
+    }
+
+    a {
+      border-left: none !important;
+      border-right: none !important;
+      padding: 1rem 0;
     }
   }
+}
+
+@media (max-width: 1023px) {
   #company {
-    .introduction {
-      flex-direction: column;
-      div:last-child {
-        margin-left: 0;
-      }
+    .key-figures {
+      flex-wrap: wrap;
     }
   }
 }

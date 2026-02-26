@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Aucard on Code-Troopers</title>
+    <link>/tags/aucard/</link>
+    <description>Recent content in Aucard on Code-Troopers</description>
+    <generator>Hugo</generator>
+    <language>fr-FR</language>
+    <lastBuildDate>Mon, 14 Apr 2014 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/aucard/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Sortie de l&#39;appli Aucard de Tours</title>
+      <link>/2014/04/14/aucard2/</link>
+      <pubDate>Mon, 14 Apr 2014 00:00:00 +0000</pubDate>
+      <guid>/2014/04/14/aucard2/</guid>
+      <description>&lt;p&gt;Suite à notre &lt;a href=&#34;http://code-troopers.com/2014/03/17/Aucard.html&#34;&gt;partenariat avec Radio Béton&lt;/a&gt;, nous vous annonçons la mise à disposition sur le Play Store de l&amp;rsquo;application officielle du festival Aucard de Tours 2014.&lt;/p&gt;&#xA;&lt;p&gt;Comme vous le savez sûrement le festival Aucard de Tours, qui souhaite favoriser la découverte, ne divulgue pas la programmation heure par heure. C&amp;rsquo;est pourquoi ce n&amp;rsquo;est qu&amp;rsquo;une fois rentrés dans l&amp;rsquo;enceinte du festival que vous prenez connaissance du programme de la soirée &lt;a href=&#34;/images/posts/2014-04-14-Aucard2/aucard_tableau.jpg&#34; title=&#34;Tableau de la programmation&#34; data-lightbox=&#34;image-1&#34; class=&#34;inlineBoxes&#34;&gt; sur le tableau&lt;/a&gt;. Grâce à l&amp;rsquo;application Android, vous pourrez scanner un QR code (sur ce même tableau) pour disposer du programme complet de la soirée sur votre mobile. Fini les allers-retours au tableau pour savoir quel est le prochain concert.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Code-Troopers &#43; Aucard de Tours = Appli Android</title>
+      <link>/2014/03/17/aucard/</link>
+      <pubDate>Mon, 17 Mar 2014 00:00:00 +0000</pubDate>
+      <guid>/2014/03/17/aucard/</guid>
+      <description>&lt;p&gt;&#xA;   L&#39;équipe Code-Troopers est fière de vous annoncer son implication dans la vie tourangelle via la réalisation de&#xA;   l&#39;application officielle du festival &lt;a href=&#34;http://www.radiobeton.com/aucard/&#34; &gt;Aucard de Tours&lt;/a&gt;.&#xA;&lt;/p&gt;&#xA;&#xA;&#xA;&lt;a href=&#34;/images/posts/2014-03-17-Aucard/aucard2014.jpg&#34; data-lightbox=&#34;image-1&#34; title=&#34;Affiche du festival Aucard de Tours 2014&#34;&gt;&#xA;    &lt;img class=&#34;mini&#34; src=&#34;/images/posts/2014-03-17-Aucard/aucard2014.jpg&#34; alt=&#34;Affiche du festival Aucard de Tours 2014&#34;/&gt;&#xA;&lt;/a&gt;&#xA;&#xA;&lt;p&gt;&#xA;    Ainsi cette année, pour la 29ème édition d&#39;Aucard, vous pourrez tous avoir le programme dans votre poche.&#xA;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;   En plus d&#39;avoir accès au programme de chaque soirée, vous pourrez consulter les fiches des artistes.&#xA;   Celles ci seront agrémentées d&#39;un player deezer pour écouter toutes les chansons.&#xA;   Vous n&#39;aurez donc aucune excuse pour ne pas connaître tous les refrains par coeur.&#xA;   L&#39;application vous donnera aussi des infos sur les apérock qui se passent en ville.&#xA;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

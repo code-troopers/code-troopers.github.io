@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Librairie on Code-Troopers</title>
+    <link>/tags/librairie/</link>
+    <description>Recent content in Librairie on Code-Troopers</description>
+    <generator>Hugo</generator>
+    <language>fr-FR</language>
+    <lastBuildDate>Sat, 06 Jun 2015 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/librairie/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Android Support Design Library</title>
+      <link>/2015/06/06/androiddesignlibrary/</link>
+      <pubDate>Sat, 06 Jun 2015 00:00:00 +0000</pubDate>
+      <guid>/2015/06/06/androiddesignlibrary/</guid>
+      <description>&lt;p&gt;Avez-vous déjà essayé de transformer vos applications Android pour les rendre conformes aux &lt;a href=&#34;http://www.google.com/design/spec/material-design/introduction.html&#34;&gt;guidelines Material&lt;/a&gt;, si oui, vous avez dû comme nous, vous retrouver à importer plein de librairies tierces pour implémenter par exemple le &lt;code&gt;FAB button&lt;/code&gt;, ou même personnaliser le code pour rendre le &lt;code&gt;NavigationDrawer&lt;/code&gt; conforme (comme ce qui a pu être fait sur le squelette d&amp;rsquo;un &lt;a href=&#34;http://code-troopers.com/2014/11/26/SqueletteAndroid5.html&#34;&gt;précédent article&lt;/a&gt;. Et bien tout ceci est fini (enfin en partie), grâce à la nouvelle librairie Android de Google &lt;a href=&#34;http://developer.android.com/tools/support-library/features.html#design&#34;&gt;Design Support&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

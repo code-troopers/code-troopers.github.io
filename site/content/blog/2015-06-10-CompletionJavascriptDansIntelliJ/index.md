@@ -7,6 +7,7 @@ tags:
 - JavaScript
 - tip
 title: Améliorer la complétion JavaScript d'IntelliJ IDEA
+description: "Astuce pour améliorer l'autocomplétion JavaScript dans IntelliJ IDEA grâce aux librairies TypeScript DefinitelyTyped."
 url: /2015/06/10/completionjavascriptdansintellij/
 aliases: 2015/06/10/CompletionJavascriptDansIntelliJ.html
 ---

@@ -1,6 +1,7 @@
 ---
 cover: ideas.jpg
 date: '2017-12-19'
+description: "Développement de l'ERP web Ideas pour Leroy-Somer : gestion des incidents d'entreprise à l'échelle internationale."
 tags:
 - Web
 title: 'Ideas'

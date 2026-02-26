@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Conférences on Code-Troopers</title>
+    <link>/tags/conf%C3%A9rences/</link>
+    <description>Recent content in Conférences on Code-Troopers</description>
+    <generator>Hugo</generator>
+    <language>fr-FR</language>
+    <lastBuildDate>Wed, 28 Feb 2018 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/conf%C3%A9rences/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>TouraineTech</title>
+      <link>/2018/02/28/tourainetech-2018/</link>
+      <pubDate>Wed, 28 Feb 2018 00:00:00 +0000</pubDate>
+      <guid>/2018/02/28/tourainetech-2018/</guid>
+      <description>&lt;div class=&#34;paragraph&#34;&gt;&#xA;&lt;p&gt;La semaine dernière (vendredi 23 février pour être précis) a eu lieu la première édition de la conférence TouraineTech.&#xA;Ce fut le fruit de presque un an de travail de plusieurs bénévoles et acteurs du numérique de Tours.&#xA;En effet c’est en partie la réunion des leaders des différents UserGroups de Tours qui a permis la naissance de cet évènement.&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;div class=&#34;paragraph&#34;&gt;&#xA;&lt;p&gt;Et nous avons participé activement à son organisation, car dans les 11 membres principaux nous pouvons compter 3 Code-Troopers qui sont Cedric, Benjamin et Florian.&#xA;Et ce n’est pas tout car nous étions aussi sponsors, parce que oui, en plus du temps, il faut de l’argent $_$&lt;/p&gt;&#xA;&lt;/div&gt;</description>
+    </item>
+  </channel>
+</rss>

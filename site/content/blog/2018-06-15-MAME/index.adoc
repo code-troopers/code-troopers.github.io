@@ -6,6 +6,7 @@ tags:
 - Locaux
 - MAME
 title: 'On a déménagé !'
+description: "Code-Troopers déménage dans la tour de MAME à Tours ! Découvrez nos nouveaux bureaux dans cette ancienne imprimerie historique."
 url: /2018/06/11/mame/
 ---
 

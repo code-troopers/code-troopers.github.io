@@ -6,6 +6,7 @@ aliases: 2024/07/10/semainect2024.html
 date: 2024-07-10
 expirydate: ""
 cover: image3.jpg
+description: "Découvrez la Semaine CT, le séminaire annuel de Code-Troopers : 5 jours de projets internes, démos, activités d'équipe et convivialité entre développeurs."
 ---
 Chez Code-Troopers chaque année, pendant 5 jours, le temps s’arrête. 
 

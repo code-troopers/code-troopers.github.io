@@ -21,19 +21,30 @@
 @use "tips.css";
 @use "tipstags.css";
 
-:root {
-  scroll-behavior: smooth;
-}
-
 html {
   box-sizing: border-box;
-  font-family: "Montserrat", Helvetica, Arial, sans-serif;
+  font-family: system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
   letter-spacing: 0.1rem;
   background: variables.$white;
+  line-height: 1.7;
+  overflow-x: hidden;
 }
 
 body {
   margin: 0;
+  overflow-x: hidden;
+}
+
+/* Focus-visible ring for keyboard navigation */
+:focus-visible {
+  outline: 2px solid var(--lightblue);
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+
+/* Remove outline for mouse clicks */
+:focus:not(:focus-visible) {
+  outline: none;
 }
 
 .skip-link {
@@ -81,13 +92,13 @@ body {
 
 section h1,
 section > h2 {
-  font-family: "Montserrat Black", Helvetica, Arial, sans-serif;
+  font-family: system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
   text-align: center;
-  font-size: 3rem;
+  font-size: 2.5rem;
   margin: 0;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-  letter-spacing: initial;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  letter-spacing: -0.02em;
 }
 
 ul {
@@ -111,20 +122,35 @@ ul.flex {
 
 a.btn {
   text-decoration: none !important;
-  border: 2px solid variables.$white;
+  background: rgba(255,255,255,0.10);
+  border: 2px solid rgba(255,255,255,0.5);
   padding: 1rem 2rem;
   border-radius: 0.5rem;
   color: variables.$white;
   margin: 5rem auto;
   display: inline-block;
-  &.dark:hover {
-    background: variables.$darkGradient;
+  font-weight: bold;
+  backdrop-filter: blur(4px);
+  transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease, transform 0.2s ease, box-shadow 0.2s ease;
+
+  &.dark {
+    background: rgba(0,0,0,0.15);
+    border-color: rgba(0,0,0,0.3);
+    color: variables.$darkgrey;
+
+    &:hover {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: white;
+    }
   }
 
   &:hover {
-    background: variables.$gradient;
-    border-color: var(--darkblue);
-    color: variables.$white;
+    background: var(--accent);
+    border-color: var(--accent);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(249,115,22,0.40);
   }
 }
 
@@ -143,7 +169,7 @@ a {
 @media screen and (max-width: 767px) {
   section h1,
   section > h2 {
-    font-size: 2rem;
+    font-size: 1.75rem;
   }
 }
 
@@ -157,11 +183,14 @@ a {
   display: inline-block;
   padding: 1rem;
   color: variables.$bloggrey;
+  transition: background 0.22s ease, color 0.22s ease, border-color 0.22s ease, transform 0.2s ease, box-shadow 0.2s ease;
 
   &:hover {
     background: variables.$gradient;
     border-color: transparent;
     color: variables.$white;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(64,154,214,0.3);
   }
 }
 

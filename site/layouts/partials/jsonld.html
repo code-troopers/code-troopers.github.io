@@ -1,0 +1,131 @@
+{{- $siteUrl := site.Params.siteUrl -}}
+
+{{- if .IsHome -}}
+{{/* Organization schema for homepage */}}
+{{- $address := dict
+  "@type" "PostalAddress"
+  "streetAddress" "2 Allée Jean Rostand"
+  "addressLocality" "Tours"
+  "postalCode" "37000"
+  "addressCountry" "FR"
+-}}
+{{- $sameAs := slice "https://www.linkedin.com/company/code-troopers/" "https://github.com/code-troopers" -}}
+{{- $schema := dict
+  "@context" "https://schema.org"
+  "@type" "Organization"
+  "name" "Code-Troopers"
+  "url" $siteUrl
+  "logo" (printf "%s/img/logo-code-troopers-tête-couleur.png" $siteUrl)
+  "address" $address
+  "sameAs" $sameAs
+-}}
+<script type="application/ld+json">
+{{ $schema | jsonify (dict "indent" "  ") | safeJS }}
+</script>
+
+{{- else if and .IsPage (eq .Section "blog") -}}
+{{/* BlogPosting schema for blog articles */}}
+{{- $description := .Description -}}
+{{- if not $description -}}
+  {{- $description = .Summary | plainify | htmlUnescape -}}
+{{- end -}}
+
+{{/* Resolve image */}}
+{{- $image := "" -}}
+{{- with .Params.cover -}}
+  {{- with $.Resources.GetMatch . -}}
+    {{- with .Fill "1200x630 Center" -}}
+      {{- $image = printf "%s%s" $siteUrl .RelPermalink -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- if not $image -}}
+  {{- with site.Params.images -}}
+    {{- $image = printf "%s/%s" $siteUrl (index . 0) -}}
+  {{- end -}}
+{{- end -}}
+
+{{/* Author lookup from team.json */}}
+{{- $authorName := .Params.author | default "Code-Troopers" -}}
+{{- $authorUrl := "" -}}
+{{- range site.Data.team.team -}}
+  {{- if eq .name $authorName -}}
+    {{- if .linkedin -}}
+      {{- $authorUrl = printf "https://www.linkedin.com/in/%s" .linkedin -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- $author := dict "@type" "Person" "name" $authorName -}}
+{{- with $authorUrl -}}
+  {{- $author = merge $author (dict "url" .) -}}
+{{- end -}}
+
+{{- $publisher := dict
+  "@type" "Organization"
+  "name" "Code-Troopers"
+  "logo" (dict "@type" "ImageObject" "url" (printf "%s/img/logo-code-troopers-tête-couleur.png" $siteUrl))
+-}}
+
+{{- $schema := dict
+  "@context" "https://schema.org"
+  "@type" "BlogPosting"
+  "headline" .Title
+  "description" $description
+  "url" (printf "%s%s" $siteUrl .RelPermalink)
+  "datePublished" (.Date.Format "2006-01-02T15:04:05-07:00")
+  "dateModified" (.Lastmod.Format "2006-01-02T15:04:05-07:00")
+  "author" $author
+  "publisher" $publisher
+-}}
+{{- with $image -}}
+  {{- $schema = merge $schema (dict "image" .) -}}
+{{- end -}}
+<script type="application/ld+json">
+{{ $schema | jsonify (dict "indent" "  ") | safeJS }}
+</script>
+
+{{- else if and .IsPage (eq .Section "tips") -}}
+{{/* Article schema for tips */}}
+{{- $description := .Description -}}
+{{- if not $description -}}
+  {{- $description = .Summary | plainify | htmlUnescape -}}
+{{- end -}}
+
+{{/* Author lookup from team.json */}}
+{{- $authorName := .Params.author | default "Code-Troopers" -}}
+{{- $authorUrl := "" -}}
+{{- range site.Data.team.team -}}
+  {{- if eq .name $authorName -}}
+    {{- if .linkedin -}}
+      {{- $authorUrl = printf "https://www.linkedin.com/in/%s" .linkedin -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- $author := dict "@type" "Person" "name" $authorName -}}
+{{- with $authorUrl -}}
+  {{- $author = merge $author (dict "url" .) -}}
+{{- end -}}
+
+{{- $publisher := dict
+  "@type" "Organization"
+  "name" "Code-Troopers"
+  "logo" (dict "@type" "ImageObject" "url" (printf "%s/img/logo-code-troopers-tête-couleur.png" $siteUrl))
+-}}
+
+{{- $schema := dict
+  "@context" "https://schema.org"
+  "@type" "Article"
+  "headline" .Title
+  "description" $description
+  "url" (printf "%s%s" $siteUrl .RelPermalink)
+  "datePublished" (.Date.Format "2006-01-02T15:04:05-07:00")
+  "dateModified" (.Lastmod.Format "2006-01-02T15:04:05-07:00")
+  "author" $author
+  "publisher" $publisher
+-}}
+<script type="application/ld+json">
+{{ $schema | jsonify (dict "indent" "  ") | safeJS }}
+</script>
+{{- end -}}

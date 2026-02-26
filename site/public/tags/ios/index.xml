@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>IOS on Code-Troopers</title>
+    <link>/tags/ios/</link>
+    <description>Recent content in IOS on Code-Troopers</description>
+    <generator>Hugo</generator>
+    <language>fr-FR</language>
+    <lastBuildDate>Sat, 01 Jun 2019 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/ios/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Navig&#39; - Votre compagnon pour les transports en commun</title>
+      <link>/navigtours.html</link>
+      <pubDate>Sat, 01 Jun 2019 00:00:00 +0000</pubDate>
+      <guid>/navigtours.html</guid>
+      <description>&lt;p&gt;Navig’ est une solution MaaS pensée pour fluidifier les déplacements urbains grâce à ses itinéraires intelligents, informations en temps réel, M-Ticket etc. Fiable et évolutive, elle offre une expérience connectée au service d’une mobilité urbaine plus simple et intuitive.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Chapitô</title>
+      <link>/chapito.html</link>
+      <pubDate>Mon, 01 Apr 2019 00:00:00 +0000</pubDate>
+      <guid>/chapito.html</guid>
+      <description>&lt;p&gt;Chapitô est LE projet des Code-Troopers. Il s’agit d’un outil 100% en ligne qui permet à tous les organisateurs de festivals de créer une application sur-mesure sans aucune connaissance en développement web &amp;amp; développement d’application.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Geovelo</title>
+      <link>/geovelo.html</link>
+      <pubDate>Wed, 01 May 2019 00:00:00 +0000</pubDate>
+      <guid>/geovelo.html</guid>
+      <description>&lt;p&gt;Reprise et refonte visuelle complète de la version iOS de Geovelo.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Conseil Constitutionnel</title>
+      <link>/conseil-constitutionnel.html</link>
+      <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>/conseil-constitutionnel.html</guid>
+      <description>&lt;p&gt;Applications Android et iOS de consultation des décisions et actualités du conseil constitutionnel.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>GecoAir</title>
+      <link>/gecoair.html</link>
+      <pubDate>Sun, 15 Apr 2018 00:00:00 +0000</pubDate>
+      <guid>/gecoair.html</guid>
+      <description>&lt;p&gt;Amélioration de l&amp;rsquo;application d&amp;rsquo;éco-conduite GécoAir proposé par l&amp;rsquo;IFPEN.&lt;/p&gt;&#xA;&lt;p&gt;Divers correctifs ainsi que l&amp;rsquo;ajout d&amp;rsquo;un écran de &lt;em&gt;gamification&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Roadflore</title>
+      <link>/roadflore.html</link>
+      <pubDate>Tue, 19 Dec 2017 00:00:00 +0000</pubDate>
+      <guid>/roadflore.html</guid>
+      <description>&lt;p&gt;Roadflore est l&amp;rsquo;application mobile Android et iOS natif du végétal et de la biodiversité en ville. Elle met en relation&#xA;les utilisateurs entre eux et donne des informations sur les plantes de son jardin.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

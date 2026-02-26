@@ -7,6 +7,7 @@ tags:
 - Festival
 - Terres du son
 title: L'application Terres du Son est disponible
+description: "L'appli Android Terres du Son 2014 est sur le Play Store : programme, notifications concerts et navettes, playlist et fiches artistes."
 url: /2014/06/24/tds2/
 aliases: 2014/06/24/TDS2.html
 ---

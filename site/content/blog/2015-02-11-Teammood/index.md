@@ -7,6 +7,7 @@ tags:
 - Agilité
 - Happiness Chart
 title: Suivre l'humeur de son équipe avec TeamMood
+description: "Retour sur 6 mois d'utilisation de TeamMood chez Code-Troopers : un outil agile simple pour suivre le bonheur de son équipe au quotidien."
 url: /2015/02/11/teammood/
 aliases: 2015/02/11/Teammood.html
 ---

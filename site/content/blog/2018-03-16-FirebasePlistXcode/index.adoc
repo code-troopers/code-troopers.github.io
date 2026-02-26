@@ -6,6 +6,7 @@ tags:
 - XCode
 - Firebase
 title: 'Firebase + XCode'
+description: "Gérez facilement plusieurs configurations Firebase dans XCode avec des targets différentes grâce à un script de build et un plist variabilisé."
 url: /2018/03/16/firebase-xcode-plist/
 aliases: 2018/03/16/firebase-xcode-plist.html
 ---

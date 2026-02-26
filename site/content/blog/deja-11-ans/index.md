@@ -10,6 +10,7 @@ draft: false
 tags:
   - NoESN
   - NoSSII
+description: "Code-Troopers fête ses 11 ans ! Retour sur notre parcours depuis 2013, nos réalisations pour Barrière, Vinci, Géovélo, Fizzer et notre croissance de 7 à 15 passionnés."
 ---
 # 🎉🎂 Célébrons 11 ans d'innovation avec Code-Troopers ! 🎂🎉
 

@@ -1,6 +1,7 @@
 ---
 cover: conseil-constitutionnel-v2.jpg
 date: '2019-03-01'
+description: "Applications Android et iOS du Conseil Constitutionnel pour consulter les décisions, actualités et audiences filmées en temps réel."
 tags:
 - Android
 - iOS

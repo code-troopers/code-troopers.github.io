@@ -1,6 +1,7 @@
 ---
 cover: weguide.jpg
 date: '2017-12-26'
+description: "Développement de la plateforme web WeGuide, mise en relation entre touristes, guides professionnels et ambassadeurs locaux pour des visites personnalisées."
 tags:
 - Web
 title: 'WeGuide'

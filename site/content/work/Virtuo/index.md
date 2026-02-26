@@ -5,6 +5,7 @@ date: 2023-08-31
 expirydate: ""
 cover: virtuo.png
 draft: false
+description: "Développement des API mobiles, B2B et backoffices pour Virtuo, leader de la location de voitures dématérialisée avec accès Bluetooth."
 tags:
   - Web
 ---

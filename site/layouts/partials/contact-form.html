@@ -1,29 +1,29 @@
-<!-- Contact -->
-<div class="mb4">
-  <h4 class="f3 b lh-title mb3 tc">Envoyez-nous un message</h4>
+<!-- Contact Form (Netlify Forms) -->
+<div class="contact-form">
+  <h4>Envoyez-nous un message</h4>
 
-  <form action="">
-    <div class="flex-l mhn1-l">
-      <!-- Nom -->
-      <div class="ph1-l w-50-l">
-        <label for="name">Nom</label>
-        <input type="text" id="name" name="name" placeholder="Votre nom" autocomplete="name" required aria-required="true" class="w-100 mb2">
+  <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+    <p class="hidden" aria-hidden="true">
+      <label>Ne pas remplir si vous êtes humain : <input name="bot-field" tabindex="-1" autocomplete="off"></label>
+    </p>
+    <div class="form-row">
+      <div>
+        <label for="contact-name">Nom</label>
+        <input type="text" id="contact-name" name="name" placeholder="Votre nom" autocomplete="name" required aria-required="true">
       </div>
-      <!-- E-mail -->
-      <div class="ph1-l w-50-l">
-        <label for="email">E-mail</label>
-        <input type="email" id="email" name="email" placeholder="Votre e-mail" autocomplete="email" required aria-required="true" class="w-100 mb2">
+      <div>
+        <label for="contact-email">E-mail</label>
+        <input type="email" id="contact-email" name="email" placeholder="Votre e-mail" autocomplete="email" required aria-required="true">
       </div>
     </div>
 
-    <!-- Message -->
     <div>
-      <label for="message">Votre message</label>
-      <textarea id="message" name="message" placeholder="Votre message" rows="8" cols="80" required aria-required="true" class="w-100"></textarea>
+      <label for="contact-message">Votre message</label>
+      <textarea id="contact-message" name="message" placeholder="Votre message" rows="6" required aria-required="true"></textarea>
     </div>
-    <!-- Bouton -->
-    <div class="tc">
-      <button type="submit" class="btn w-100 w-auto-ns raise">Envoyer</button>
+
+    <div class="form-submit">
+      <button type="submit" class="btn">Envoyer</button>
     </div>
   </form>
 </div>

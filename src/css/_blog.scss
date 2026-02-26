@@ -42,7 +42,7 @@ section#articles {
       background-color: $backgroundColor;
       box-shadow: 0px -4px 10px var(--darkerblue);
       border-radius: $borderRadius;
-      transition: box-shadow 0s;
+      transition: box-shadow 0s, transform 300ms ease-out;
       display: flex;
       flex-flow: column;
       align-items: center;
@@ -50,7 +50,17 @@ section#articles {
 
       &:hover {
         box-shadow: none;
-        transition: box-shadow calc($transitionDuration * 3) ease-in;
+        transform: translateY(-4px);
+        transition: box-shadow calc($transitionDuration * 3) ease-in, transform 300ms ease-out;
+
+        .blog-snippet .img-container img {
+          transform: scale(1.04);
+          filter: brightness(1.08);
+        }
+
+        .blog-snippet > div:not(.img-container) h2 {
+          color: var(--lightblue);
+        }
 
         &::before {
           width: calc(100% + calc(2 * $borderWidth));
@@ -81,7 +91,7 @@ section#articles {
         border-radius: calc($borderRadius * 1.1);
         transition: height calc($transitionDuration * 1.5) ease-out,
           width $transitionDuration calc($transitionDuration * 1.2);
-        background-color: red;
+        background-color: transparent;
       }
 
       &::after {
@@ -143,6 +153,8 @@ section#articles {
             height: 100%;
             object-fit: cover;
             display: block;
+            transition: transform 400ms cubic-bezier(0.25, 0.46, 0.45, 0.94), filter 300ms ease-out;
+            will-change: transform;
           }
         }
 
@@ -204,7 +216,8 @@ section#blog {
         }
         margin: 0.5rem;
         color: variables.$darkgrey;
-        font-family: "Montserrat Light", "Helvetica Neue", Arial, sans-serif;
+        font-family: system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+        font-weight: 300;
         h1,
         h2,
         h3,
@@ -212,7 +225,7 @@ section#blog {
         h5,
         h6 {
           color: variables.$black;
-          font-family: "Montserrat", Helvetica, Arial, sans-serif;
+          font-family: system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
         }
         .hljs {
           font-size: 1rem;

@@ -1,0 +1,85 @@
+/* Smooth scroll global */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Scroll reveal base — only when JS is active */
+.js [data-reveal] {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 520ms cubic-bezier(0.22, 1, 0.36, 1),
+              transform 520ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.js [data-reveal].revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger delays — generer data-reveal-delay="1" a "6" */
+/* Chaque increment ajoute 80ms */
+.js [data-reveal][data-reveal-delay="1"] { transition-delay: 80ms; }
+.js [data-reveal][data-reveal-delay="2"] { transition-delay: 160ms; }
+.js [data-reveal][data-reveal-delay="3"] { transition-delay: 240ms; }
+.js [data-reveal][data-reveal-delay="4"] { transition-delay: 320ms; }
+.js [data-reveal][data-reveal-delay="5"] { transition-delay: 400ms; }
+.js [data-reveal][data-reveal-delay="6"] { transition-delay: 480ms; }
+
+/* Hero entrance animation — only when JS is active */
+.js .hero-enter {
+  opacity: 0;
+  transform: translateY(24px);
+}
+
+.js .hero-enter.visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 600ms cubic-bezier(0.22, 1, 0.36, 1),
+              transform 600ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Stagger for hero elements */
+.js .hero-enter[data-hero-delay="1"] { transition-delay: 200ms; }
+.js .hero-enter[data-hero-delay="2"] { transition-delay: 400ms; }
+.js .hero-enter[data-hero-delay="3"] { transition-delay: 600ms; }
+.js .hero-enter[data-hero-delay="4"] { transition-delay: 800ms; }
+
+/* Nav scrolled state (JS adds .nav-scrolled to header) */
+header {
+  transition: background-color 300ms ease, box-shadow 300ms ease;
+}
+
+header.nav-scrolled {
+  background: rgba(10, 15, 30, 0.92) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Counter animation */
+[data-count] {
+  /* Counter targets will have their text replaced by JS */
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .js [data-reveal] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .js .hero-enter {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  header {
+    transition: none;
+  }
+}

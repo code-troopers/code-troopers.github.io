@@ -6,6 +6,7 @@ tags:
 - Android
 - Material design
 title: Squelette Android 5.0
+description: "Un squelette d'application Android 5.0 Material Design prêt à l'emploi avec NavigationDrawer, librairies favorites et thème personnalisé."
 url: /2014/11/26/squeletteandroid5/
 aliases: 2014/11/26/SqueletteAndroid5.html
 ---

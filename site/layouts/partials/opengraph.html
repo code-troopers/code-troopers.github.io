@@ -25,6 +25,7 @@
 <meta property="og:description" content="{{ $description }}" />
 <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}" />
 <meta property="og:url" content="{{ $url }}" />
+<meta property="og:locale" content="fr_FR" />
 {{- with $image }}
 <meta property="og:image" content="{{ . }}" />
 {{- end }}
@@ -46,6 +47,7 @@
 {{- end }}
 {{- end }}
 
+{{/* twitter:card is also used by LinkedIn, Slack, Discord, etc. */}}
 <meta name="twitter:card" content="{{ if $image }}summary_large_image{{ else }}summary{{ end }}" />
 <meta name="twitter:title" content="{{ $title }}" />
 <meta name="twitter:description" content="{{ $description }}" />

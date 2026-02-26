@@ -3,17 +3,17 @@
 <div class="blog-snippet-container">
   <div class="blog-snippet">
     {{ with .Resources.GetMatch .Params.cover }}
-      {{ with .Fill "336x200 Center webp q100" }}
+      {{ $img336 := .Fill "336x200 Center webp q80" }}
+      {{ $img200 := .Fill "200x119 Center webp q80" }}
       <div class="img-container">
         {{ if $.Truncated }}
         <a href="{{ $.Permalink }}" aria-hidden="true" tabindex="-1">
-          <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="" loading="lazy">
+          <img src="{{ $img336.RelPermalink }}" srcset="{{ $img200.RelPermalink }} 200w, {{ $img336.RelPermalink }} 336w" sizes="(max-width: 768px) 200px, 336px" width="{{ $img336.Width }}" height="{{ $img336.Height }}" alt="Illustration de {{ $.Title }}" loading="lazy">
         </a>
         {{ else }}
-        <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="" loading="lazy">
+        <img src="{{ $img336.RelPermalink }}" srcset="{{ $img200.RelPermalink }} 200w, {{ $img336.RelPermalink }} 336w" sizes="(max-width: 768px) 200px, 336px" width="{{ $img336.Width }}" height="{{ $img336.Height }}" alt="Illustration de {{ $.Title }}" loading="lazy">
         {{ end }}
       </div>
-      {{ end }}
     {{ end }}
     <div>
       <h2>

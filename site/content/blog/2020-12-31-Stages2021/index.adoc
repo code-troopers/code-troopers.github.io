@@ -5,6 +5,7 @@ date: '2020-12-31'
 tags:
 - Stage
 title: 'Stages 2021'
+description: "4 offres de stages 2021 chez Code-Troopers à Tours : développement web Chapito, Frontend/Backend, Ops et communication."
 url: /2020/12/31/stages-2021/
 aliases: 2020/12/31/stages-2021.html
 expirydate: '2018-12-19'

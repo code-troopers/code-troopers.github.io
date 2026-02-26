@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tours on Code-Troopers</title>
+    <link>/tags/tours/</link>
+    <description>Recent content in Tours on Code-Troopers</description>
+    <generator>Hugo</generator>
+    <language>fr-FR</language>
+    <lastBuildDate>Thu, 07 Jul 2016 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/tours/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Nous sommes à MAME !</title>
+      <link>/2016/07/07/mame/</link>
+      <pubDate>Thu, 07 Jul 2016 00:00:00 +0000</pubDate>
+      <guid>/2016/07/07/mame/</guid>
+      <description>&lt;div class=&#34;paragraph&#34;&gt;&#xA;&lt;p&gt;Cela fait maintenant un mois que nous avons pris place dans nos nouveaux bureaux situés dans l’ancienne &lt;a href=&#34;https://www.google.fr/maps/place/MAME/@47.3911602,0.6688206,17z/data=!4m8!1m2!2m1!1smame+tours!3m4!1s0x47fcd5940908fa51:0x9c4f1c3309229360!8m2!3d47.3927031!4d0.6685181?hl=en&#34;&gt;imprimerie MAME&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;div class=&#34;paragraph&#34;&gt;&#xA;&lt;p&gt;Vous avez probablement vu passer quelques informations lors de l’inauguration qui a eu lieu le vendredi 10 juin.&lt;br/&gt;&#xA;Ce fut notamment l’occasion pour nous de rencontrer beaucoup de monde dont M. le Maire de Tours.&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;div class=&#34;paragraph&#34;&gt;&#xA;&lt;p&gt;Maintenant que nous sommes bien installés voici un petit tour du propriétaire.&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;div class=&#34;sect1&#34;&gt;&#xA;&lt;h2 id=&#34;_notre_local&#34;&gt;Notre local&lt;/h2&gt;&#xA;&lt;div class=&#34;sectionbody&#34;&gt;&#xA;&lt;div class=&#34;paragraph&#34;&gt;&#xA;&lt;p&gt;&lt;/p&gt;&lt;div style=&#34;text-align : center&#34;&gt;&#xA;&lt;a class=&#34;inlineBoxes&#34; href=&#34;/images/posts/2016-07-Mame/photo_mame_ct_04.jpg&#34; data-lightbox=&#34;1&#34; title=&#34;Local Code-Troopers&#34;&gt;&#xA;        &lt;img class=&#34;medium&#34; src=&#34;/images/posts/2016-07-Mame/photo_mame_ct_04_min.jpg&#34; alt=&#34;Local Code-Troopers&#34;/&gt;&#xA;&lt;/a&gt;&#xA;&lt;a class=&#34;inlineBoxes&#34; href=&#34;/images/posts/2016-07-Mame/photo_mame_ct_02.jpg&#34; data-lightbox=&#34;1&#34; title=&#34;Local Code-Troopers&#34;&gt;&#xA;        &lt;img class=&#34;medium&#34; src=&#34;/images/posts/2016-07-Mame/photo_mame_ct_02_min.jpg&#34; alt=&#34;Local Code-Troopers&#34;/&gt;&#xA;&lt;/a&gt;&#xA;&lt;a class=&#34;inlineBoxes&#34; href=&#34;/images/posts/2016-07-Mame/photo_mame_ct_14.jpg&#34; data-lightbox=&#34;1&#34; title=&#34;Local Code-Troopers&#34;&gt;&#xA;        &lt;img class=&#34;medium&#34; src=&#34;/images/posts/2016-07-Mame/photo_mame_ct_14_min.jpg&#34; alt=&#34;Local Code-Troopers&#34;/&gt;&#xA;&lt;/a&gt;&#xA;&lt;a class=&#34;inlineBoxes&#34; href=&#34;/images/posts/2016-07-Mame/photo_mame_ct_11.jpg&#34; data-lightbox=&#34;1&#34; title=&#34;Local Code-Troopers&#34;&gt;&#xA;        &lt;img class=&#34;medium&#34; src=&#34;/images/posts/2016-07-Mame/photo_mame_ct_11_min.jpg&#34; alt=&#34;Local Code-Troopers&#34;/&gt;&#xA;&lt;/a&gt;&#xA;&lt;a class=&#34;inlineBoxes&#34; href=&#34;/images/posts/2016-07-Mame/photo_mame_ct_12.jpg&#34; data-lightbox=&#34;1&#34; title=&#34;Local Code-Troopers&#34;&gt;&#xA;        &lt;img class=&#34;medium&#34; src=&#34;/images/posts/2016-07-Mame/photo_mame_ct_12_min.jpg&#34; alt=&#34;Local Code-Troopers&#34;/&gt;&#xA;&lt;/a&gt;&#xA;&lt;a class=&#34;inlineBoxes&#34; href=&#34;/images/posts/2016-07-Mame/photo_mame_ct_13.jpg&#34; data-lightbox=&#34;1&#34; title=&#34;Local Code-Troopers&#34;&gt;&#xA;        &lt;img class=&#34;medium&#34; src=&#34;/images/posts/2016-07-Mame/photo_mame_ct_13_min.jpg&#34; alt=&#34;Local Code-Troopers&#34;/&gt;&#xA;&lt;/a&gt;&#xA;&lt;/div&gt;</description>
+    </item>
+    <item>
+      <title>Retour sur le Second #SWTours</title>
+      <link>/2015/03/24/startupweekend/</link>
+      <pubDate>Tue, 24 Mar 2015 00:00:00 +0000</pubDate>
+      <guid>/2015/03/24/startupweekend/</guid>
+      <description>&lt;p&gt;Ce weekend a eu lieu la seconde édition du Startup Weekend Tours, organisé par Palo Altours.&#xA;Cette année nous avons pris possession du futur lieu emblématique de l’activité numérique tourangelle : le site de l’ancienne imprimerie MAME.&lt;/p&gt;&#xA;&lt;p&gt;Nous étions 4 Troopers venus pour apporter un soutien technique aux pitchs les plus funs et les plus intéressants du weekend.&#xA;Premier changement pour nous par rapport à l’an dernier, nous avions décidé de ne pas tous travailler sur le même projet.&#xA;Un petit challenge en plus car en divisant nos forces on savait qu’on allait perdre en efficacité et en rapidité de développement, ce qui peut être déterminant en 54h.&#xA;Nous n’étions pas non plus venus avec une idée de pitch, ce qui nous a permis de nous concentrer sur la partie technique.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Encore un podium pour MyBandMyCity</title>
+      <link>/2014/04/28/concoursaccede/</link>
+      <pubDate>Mon, 28 Apr 2014 00:00:00 +0000</pubDate>
+      <guid>/2014/04/28/concoursaccede/</guid>
+      <description>&lt;p&gt;Si vous nous suivez, vous savez sûrement que notre équipe a participé et est arrivée 3&lt;sup&gt;ème&lt;/sup&gt; du &lt;em&gt;Startup Weekend&lt;/em&gt; qui s&amp;rsquo;est déroulé à Tours les 21-22-23 mars 2014 (&lt;a href=&#34;http://code-troopers.com/2014/03/23/StartupWeekend.html&#34;&gt;un petit résumé de ce weekend intense&lt;/a&gt;). Et bien ça continue, François, Fabian et Julien, les 3 étudiants de &lt;em&gt;FBS&lt;/em&gt;, porteurs du projet, ont présenté &lt;strong&gt;My Band My City&lt;/strong&gt; au concours de création d&amp;rsquo;entreprises le &lt;em&gt;&amp;quot;&lt;a href=&#34;http://accede-entreprendre.fr/le-tours-de-la-creation/&#34;&gt;Tours de la Création&lt;/a&gt;&amp;quot;&lt;/em&gt; qui se déroulait le jeudi 17 avril 2014 et, une fois de plus, le projet est arrivé 3&lt;sup&gt;ème&lt;/sup&gt; sur un total de 25 projets.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Sous le capot du Startup Weekend Tours</title>
+      <link>/2014/04/03/souslecapot-startupweekendtours/</link>
+      <pubDate>Thu, 03 Apr 2014 00:00:00 +0000</pubDate>
+      <guid>/2014/04/03/souslecapot-startupweekendtours/</guid>
+      <description>&lt;p&gt;Après l’article global d’impressions sur le Startup Weekend, nous sommes obligés de faire un court article précisant ce que nous avons implémenté et utilisé du point de vue technique (c’est ce qui nous intéresse beaucoup après tout).&lt;/p&gt;&#xA;&lt;h2 id=&#34;contenu-fonctionnel-&#34;&gt;Contenu fonctionnel :&lt;/h2&gt;&#xA;&lt;p&gt;Puisque nous avons pris le temps de faire une application entière en 54h, nous allons tout de même détailler les fonctionnalités qui existent dans ce que nous avons produit :&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;création de compte classique (avec validation par email obligatoire)&lt;/li&gt;&#xA;&lt;li&gt;création de compte via connexion Facebook&lt;/li&gt;&#xA;&lt;li&gt;proposition d’ajout de spectacle&lt;/li&gt;&#xA;&lt;li&gt;vote sur un spectacle existant&lt;/li&gt;&#xA;&lt;li&gt;duplication de spectacle (changement de ville)&lt;/li&gt;&#xA;&lt;li&gt;partage Twitter / Facebook / Google plus&lt;/li&gt;&#xA;&lt;li&gt;envoi de mail selon les statuts des événements&lt;/li&gt;&#xA;&lt;li&gt;&lt;em&gt;backoffice&lt;/em&gt; avec un tableau des événements et la possibilité de modifier leurs statuts&lt;/li&gt;&#xA;&lt;li&gt;modération des propositions de spectacle (avec remplissage automatique de la biographie / photo d’un artiste à partir de l’API &lt;a href=&#34;http://developer.echonest.com/&#34;&gt;EchoNest&lt;/a&gt;)&lt;/li&gt;&#xA;&lt;li&gt;recherche globale avec Elasticsearch (géolocalisation et &lt;em&gt;full-text&lt;/em&gt; sur artiste)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;contenu-technique-&#34;&gt;Contenu technique :&lt;/h2&gt;&#xA;&lt;p&gt;Les technologies utilisées dans le projet sont :&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Startup Weekend Tours</title>
+      <link>/2014/03/23/startupweekend/</link>
+      <pubDate>Sun, 23 Mar 2014 00:00:00 +0000</pubDate>
+      <guid>/2014/03/23/startupweekend/</guid>
+      <description>&lt;p&gt;Retour sur 54h de Startup Weekend pour la première édition à Tours &lt;a href=&#34;http://tours.startupweekend.org/&#34;&gt;#swtours&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;Les Startup Weekends ont pour but d’encourager les entrepreneurs à créer leur projet en les confortant dans la viabilité de leur idée et en leur permettant de rencontrer des co-fondateurs. C’est par exemple l’occasion pour un charpentier de rencontrer des informaticiens pour réaliser un site, de rencontrer des avocats pour être sûr de la légalité et des investisseurs pour étudier la viabilité de la startup. Le tout en 54h, il faut aller vite !&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

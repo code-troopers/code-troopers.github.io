@@ -1,6 +1,25 @@
 <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, viewport-fit=cover"
+  />
+
   <title>{{ .Title }} - {{ $.Site.Title }}</title>
-  <meta name="description" content="{{ .Description }}" />
+
+  {{- $description := .Description }}
+  {{- if not $description }}
+    {{- $description = .Summary | plainify | htmlUnescape | truncate 160 }}
+  {{- end }}
+  <meta name="description" content="{{ $description }}" />
+
+  {{- $siteUrl := site.Params.siteUrl }}
+  <link rel="canonical" href="{{ $siteUrl }}{{ .RelPermalink }}" />
+
+  <!-- Preconnect hints -->
+  <link rel="dns-prefetch" href="//matomo.chapi.to" />
+  <link rel="preconnect" href="https://matomo.chapi.to" crossorigin />
 
   {{ $stylesheet := .Site.Data.webpack.main }} {{ with $stylesheet.css }} {{ if
   (reflect.IsSlice .) }} {{ range . }}
@@ -8,12 +27,7 @@
   {{ end }} {{ else }}
   <link href="{{ . | relURL }}" rel="stylesheet" />
   {{ end }} {{ end }}
-  <meta charset="utf-8" />
-  <meta http-equiv="x-ua-compatible" content="ie=edge" />
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1, viewport-fit=cover"
-  />
+
   <base href="{{ $.Site.BaseURL }}" />
   <!-- Favicons -->
   <link rel="icon" href="/favicon.png" />
@@ -22,12 +36,17 @@
   <meta name="theme-color" content="#fff" />
 
   <!-- Open Graph + Twitter Card -->
-  {{ partial "opengraph.html" . }} {{ if .IsHome }}
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  {{ partial "opengraph.html" . }}
+
+  <!-- JSON-LD Structured Data -->
+  {{ partial "jsonld.html" . }}
+
+  <!-- RSS Feed -->
+  {{ if or .IsHome (eq .Section "blog") }}
+  <link rel="alternate" type="application/rss+xml" title="Code-Troopers - Blog" href="{{ $siteUrl }}/blog/index.xml" />
   {{ end }}
-  <script
-    src="https://code.jquery.com/jquery-3.7.1.min.js"
-    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
-    crossorigin="anonymous"
-  ></script>
+
+  {{ if .IsHome }}
+  <script async src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  {{ end }}
 </head>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Stage on Code-Troopers</title>
+    <link>/tags/stage/</link>
+    <description>Recent content in Stage on Code-Troopers</description>
+    <generator>Hugo</generator>
+    <language>fr-FR</language>
+    <lastBuildDate>Tue, 06 Feb 2018 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/stage/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Stage 2018</title>
+      <link>/2018/02/06/stages-2018/</link>
+      <pubDate>Tue, 06 Feb 2018 00:00:00 +0000</pubDate>
+      <guid>/2018/02/06/stages-2018/</guid>
+      <description>&lt;div class=&#34;paragraph&#34;&gt;&#xA;&lt;p&gt;Avec un peu de retard, voici nos offres de stages pour 2018, ça se passe toujours à MAME, le baby-foot est toujours à proximité pour se détendre entre deux lignes de codes.&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;div class=&#34;ulist&#34;&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;span class=&#34;line-through&#34;&gt;Administration système : &lt;a href=&#34;https://code-troopers.com/files/Stage_2018_4DMIN.pdf&#34;&gt;Stage_2018_4DMIN&lt;/a&gt;&lt;/span&gt; : &lt;strong&gt;Attribué&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;span class=&#34;line-through&#34;&gt;Développement Frontend et/ou Backend : &lt;a href=&#34;https://code-troopers.com/files/Stage_2018_CR4.pdf&#34;&gt;Stage_2018_CR4&lt;/a&gt;&lt;/span&gt;&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;span class=&#34;line-through&#34;&gt;Développement Frontend et/ou Backend : &lt;a href=&#34;https://code-troopers.com/files/Stage_2018_W3.pdf&#34;&gt;Stage_2018_W3&lt;/a&gt;&lt;/span&gt;&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/div&gt;&#xA;&lt;div class=&#34;paragraph&#34;&gt;&#xA;&lt;p&gt;Il s’agit pour la plupart de projets déjà en production donc du travail de qualité est attendu ! Et on fera tout pour que le résultat du stage soit intégré directement en production.&lt;/p&gt;&#xA;&lt;/div&gt;</description>
+    </item>
+    <item>
+      <title>Stage 2017</title>
+      <link>/2016/12/21/stages-2017/</link>
+      <pubDate>Wed, 21 Dec 2016 00:00:00 +0000</pubDate>
+      <guid>/2016/12/21/stages-2017/</guid>
+      <description>&lt;div class=&#34;paragraph&#34;&gt;&#xA;&lt;p&gt;&lt;strong&gt;[EDIT]&lt;/strong&gt; : nous ne cherchons plus de stagiaires pour cette année. Rendez-vous l’année prochaine.&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;div class=&#34;paragraph&#34;&gt;&#xA;&lt;p&gt;C’est une première depuis la création de Code-Troopers, nous sommes prêts à accueillir, encadrer et former des stagiaires !&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;div class=&#34;paragraph&#34;&gt;&#xA;&lt;p&gt;En effet, maintenant que nous sommes bien au chaud dans nos locaux à MAME nous avons assez de place pour recevoir du monde.&#xA;Nous souhaitons donc offrir l’opportunité à ceux qui le souhaitent de venir travailler pour un temps avec nous.&lt;/p&gt;&#xA;&lt;/div&gt;</description>
+    </item>
+  </channel>
+</rss>

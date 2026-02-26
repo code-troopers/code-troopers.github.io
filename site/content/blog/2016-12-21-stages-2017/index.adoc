@@ -5,6 +5,7 @@ date: '2016-12-21'
 tags:
 - Stage
 title: 'Stage 2017'
+description: "Code-Troopers propose ses premières offres de stages 2017 à MAME : développement Android, iOS, Frontend et Backend sur des projets en production."
 url: /2016/12/21/stages-2017/
 aliases: 2016/12/21/stage-2017.html
 ---

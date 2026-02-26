@@ -7,6 +7,7 @@ tags:
 - Tips
 - Macro
 title: 'Macro Vim : C''est trop génial'
+description: "Découvrez la puissance des macros Vim avec un cas concret de migration Angular 2 : enregistrer, rejouer et automatiser vos modifications."
 url: /2016/05/11/vim_macro/
 aliases: 2016/05/11/Vim_Macro.html
 ---

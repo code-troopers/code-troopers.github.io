@@ -7,6 +7,7 @@ tags:
 - Outil
 - Curation
 title: Elcurator, le nouvel outil de curation par Octo
+description: "Test d'ElCurator par Octo Technology : un outil de veille technologique simple et efficace pour partager des liens en entreprise."
 url: /2014/08/08/elcurator/
 aliases: 2014/08/08/ElCurator.html
 ---

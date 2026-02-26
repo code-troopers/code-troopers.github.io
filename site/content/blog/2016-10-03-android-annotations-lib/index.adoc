@@ -8,6 +8,7 @@ tags:
 - Tools
 - Design
 title: 'Android Annotations : Abusez-en !'
+description: "Tour d'horizon des annotations Android Support : @Nullable, @StringRes, @IntDef et plus. Améliorez la qualité de votre code Android."
 url: /2016/10/03/android-annotations-lib/
 aliases: 2016/10/03/android-annotations-lib.html
 ---

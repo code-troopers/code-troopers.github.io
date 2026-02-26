@@ -1,6 +1,7 @@
 ---
 cover: geovelo.jpg
 date: '2019-05-01'
+description: "Refonte complète de l'application iOS Geovelo, le GPS du cycliste : navigation, trajets favoris et détection automatique d'activité vélo."
 tags:
 - iOS
 title: 'Geovelo'

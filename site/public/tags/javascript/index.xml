@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>JavaScript on Code-Troopers</title>
+    <link>/tags/javascript/</link>
+    <description>Recent content in JavaScript on Code-Troopers</description>
+    <generator>Hugo</generator>
+    <language>fr-FR</language>
+    <lastBuildDate>Wed, 10 Jun 2015 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Améliorer la complétion JavaScript d&#39;IntelliJ IDEA</title>
+      <link>/2015/06/10/completionjavascriptdansintellij/</link>
+      <pubDate>Wed, 10 Jun 2015 00:00:00 +0000</pubDate>
+      <guid>/2015/06/10/completionjavascriptdansintellij/</guid>
+      <description>&lt;h1 id=&#34;intellij-idea&#34;&gt;IntelliJ IDEA&lt;/h1&gt;&#xA;&lt;p&gt;Tout le monde sait que nous adorons utiliser IntelliJ IDEA pour développer.&#xA;Peu importe le langage IntelliJ est vraiment un excellent IDE qui nous permet d&amp;rsquo;être efficaces quasiment instantanément.&lt;/p&gt;&#xA;&lt;p&gt;Par contre, quand on arrive dans le monde du JavaScript on peut avoir quelques soucis pour être&#xA;dans un environnement suffisamment typé où l&amp;rsquo;on sait ce qu&amp;rsquo;on va faire sans se poser trop de questions,&#xA;ou tout simplement pouvoir bénéficier de l&amp;rsquo;aide de l&amp;rsquo;IDE pour savoir de quelles méthodes on dispose.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>jsTrac l&#39;outil de déclaration de ticket à plugger</title>
+      <link>/2013/07/08/2013-07-08-postJsTrac/</link>
+      <pubDate>Mon, 08 Jul 2013 00:00:00 +0000</pubDate>
+      <guid>/2013/07/08/2013-07-08-postJsTrac/</guid>
+      <description>&lt;h3&gt;Introduction&lt;/h3&gt;&#xA;&#xA;&lt;p&gt;&#xA;    Comme tout développeur le sait (mais ne l&#39;admettra jamais), son travail n&#39;est pas parfait.&#xA;    Il est donc nécessaire de réaliser une phase de recette de nos applications avant de les livrer.&#xA;    Même si de nombreux outils existent pour référencer les bugs (trac, jira...), cette phase est souvent laborieuse.&#xA;    Nous avons donc décidé de simplifier ce processus en créant &lt;b&gt;jsTrac&lt;/b&gt;.&#xA;&lt;/p&gt;&#xA;&#xA;&lt;br/&gt;&#xA;&lt;h3&gt;jsTrac&lt;/h3&gt;&#xA;&#xA;&lt;p&gt;&#xA;    Il s&#39;agit d&#39;un outil visant à fluidifier la recette de sites web en créant rapidement des rapports de bug sur le&#xA;    logiciel&#xA;    de gestion des tickets &lt;a href=&#34;http://trac.edgewall.org/&#34;&gt;trac&lt;/a&gt;.&#xA;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

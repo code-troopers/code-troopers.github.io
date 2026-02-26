@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Macro on Code-Troopers</title>
+    <link>/tags/macro/</link>
+    <description>Recent content in Macro on Code-Troopers</description>
+    <generator>Hugo</generator>
+    <language>fr-FR</language>
+    <lastBuildDate>Wed, 11 May 2016 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/macro/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Macro Vim : C&#39;est trop génial</title>
+      <link>/2016/05/11/vim_macro/</link>
+      <pubDate>Wed, 11 May 2016 00:00:00 +0000</pubDate>
+      <guid>/2016/05/11/vim_macro/</guid>
+      <description>&lt;div class=&#34;paragraph&#34;&gt;&#xA;&lt;p&gt;Comme certains d’entre vous le savent, j’aime beaucoup Vim. Il n’y a pas très longtemps au Tours JUG, je disais que je n’avais pas de cas d’utilisation des macro dans Vim dont certains disent que c’est LA killer feature. Et bien j’ai trouvé un use case et « c’est trop génial ! » comme dirait Agnès.&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;div class=&#34;paragraph&#34;&gt;&#xA;&lt;p&gt;&lt;/p&gt;&lt;div style=&#34;text-align : center&#34;&gt;&#xA;&lt;a class=&#34;inlineBoxes&#34; href=&#34;/images/posts/2016-05-VimMacro/trop_genial.gif&#34; data-lightbox=&#34;0&#34; title=&#34;trop génial&#34;&gt;&#xA;        &lt;img class=&#34;medium&#34; src=&#34;/images/posts/2016-05-VimMacro/trop_genial.gif&#34; alt=&#34;trop génial&#34;/&gt;&#xA;&lt;/a&gt;&#xA;&lt;/div&gt;&lt;p&gt;&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;div class=&#34;sect1&#34;&gt;&#xA;&lt;h2 id=&#34;_angular2_et_macros_vim&#34;&gt;Angular2 et macros Vim&lt;/h2&gt;&#xA;&lt;div class=&#34;sectionbody&#34;&gt;&#xA;&lt;div class=&#34;paragraph&#34;&gt;&#xA;&lt;p&gt;Les vidéos de Devoxx 2016 sont sorties, dont &lt;a href=&#34;https://www.youtube.com/watch?v=5U4OasGuo0o&#34;&gt;Angular 2 : Préparez vous dès maintenant à la migration (Benoit Lemoine)&lt;/a&gt;. Une des étapes est de passer par les ControllerAs, je ne vais pas refaire la conf ce n’est pas le but. Bref, je travaille sur un projet qui définit les controllers comme ceci :&lt;/p&gt;&#xA;&lt;/div&gt;</description>
+    </item>
+  </channel>
+</rss>

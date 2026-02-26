@@ -6,6 +6,7 @@ tags:
 - Docker
 - Owncloud
 title: 'Owncloud : solution de cloud en 5 min avec Docker'
+description: "Déployez votre propre cloud Owncloud en 5 minutes avec Docker et nginx-proxy. Alternative auto-hébergée à Dropbox et Google Drive."
 url: /2015/09/09/ownclouddocker/
 aliases: 2015/09/09/OwncloudDocker.html
 ---

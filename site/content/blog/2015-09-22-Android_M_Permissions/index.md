@@ -6,6 +6,7 @@ tags:
 - Android
 - Permission
 title: Android M - Nouvelle gestion de permission
+description: "Android 6.0 Marshmallow change la gestion des permissions : demandes contextuelles, mode dégradé et bonnes pratiques pour développeurs."
 url: /2015/09/22/android_m_permissions/
 aliases: 2015/09/22/Android_M_Permissions.html
 ---

@@ -7,6 +7,7 @@ tags:
 - Java
 - Conférence
 title: 'Devoxx 2015 : c''était bien, mais...'
+description: "Retour critique sur Devoxx France 2015 au Palais des Congrès : les points positifs et les axes d'amélioration de la conférence Java."
 url: /2015/04/15/devoxxfr-2015/
 aliases: 2015/04/15/DevoxxFR-2015.html
 ---

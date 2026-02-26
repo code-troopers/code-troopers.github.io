@@ -1,5 +1,6 @@
 ---
 title: Startup Weekend Tours
+description: "Retour sur 54h de Startup Weekend Tours : Code-Troopers décroche la 3e place avec My Band My City, une appli de billetterie participative."
 author: Code-Troopers
 url: /2014/03/23/startupweekend/
 aliases: 2014/03/23/StartupWeekend.html

@@ -7,6 +7,7 @@ tags:
 - New Relic
 - Monitoring
 title: Monitorer ses conteneurs Docker avec New Relic
+description: "Comment surveiller vos conteneurs Docker avec New Relic Server Monitoring : installation, configuration et métriques en temps réel."
 url: /2015/09/30/newrelicdocker/
 aliases: 2015/09/30/NewRelicDocker.html
 ---

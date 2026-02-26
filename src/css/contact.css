@@ -10,7 +10,8 @@ section#contact {
   }
   background: var(--gradient);
   color: var(--white);
-  padding-bottom: 1rem;
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
 
   .socials-follow {
     display: flex;
@@ -41,6 +42,16 @@ section#contact {
       justify-content: center;
       &:hover {
         background-color: #fff;
+        color: var(--darkerblue);
+      }
+
+      &.sortlist-badge {
+        border-radius: 1.5rem;
+        width: auto;
+        padding: 0 1rem;
+        font-size: 0.8rem;
+        font-weight: bold;
+        letter-spacing: 0.05rem;
       }
     }
   }
@@ -86,6 +97,7 @@ section#contact {
       }
     }
   }
+
 }
 
 @media (width < 768px) {
@@ -102,5 +114,6 @@ section#contact {
         padding: 2rem;
       }
     }
+
   }
 }

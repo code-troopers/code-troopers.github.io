@@ -1,5 +1,6 @@
 ---
 title: k is the new l, yo
+description: "Découvrez k, le remplaçant de ls pour zsh : intégration git status, dégradés de couleurs pour taille et date. Plus lisible, plus pratique."
 author: Matthieu
 url: /2014/05/14/kisthenewl/
 aliases: 2014/05/14/kIsTheNewL.html

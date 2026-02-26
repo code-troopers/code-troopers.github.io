@@ -6,6 +6,7 @@ tags:
 - Android
 - Fil Bleu
 title: Navig'Tours est disponible
+description: "Navig'Tours est disponible sur le Play Store : consultez les horaires des bus et tram Fil Bleu de Tours avec cette appli Android gratuite."
 url: /2014/12/05/navigtours_application_android_disponible/
 aliases: 2014/12/05/NavigTours_Application_Android_Disponible.html
 ---

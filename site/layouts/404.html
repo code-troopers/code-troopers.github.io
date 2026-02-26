@@ -1,6 +1,20 @@
 {{ define "main" }}
 
-<h1>Page non trouvée</h1>
-<p><a href="{{ "/" | relURL }}">Retour à l'accueil</a></p>
+<section id="404">
+  <div class="wrapper" style="text-align: center; padding: 4rem 1rem;">
+    <h1>Page non trouvée</h1>
+    <p>La page que vous cherchez n'existe pas ou a été déplacée.</p>
+    <p style="margin-top: 2rem;">
+      <a href="/" class="btn dark">Retour à l'accueil</a>
+    </p>
+    <nav aria-label="Liens utiles" style="margin-top: 3rem;">
+      <ul style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;">
+        <li><a href="/work/" class="button-link">Nos réalisations</a></li>
+        <li><a href="/blog/" class="button-link">Notre blog</a></li>
+        <li><a href="/#contact" class="button-link">Nous contacter</a></li>
+      </ul>
+    </nav>
+  </div>
+</section>
 
 {{ end }}

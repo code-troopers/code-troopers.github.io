@@ -1,5 +1,6 @@
 ---
 title: Sortie de l'appli Aucard de Tours
+description: "L'appli Android officielle d'Aucard de Tours est sur le Play Store : programme via QR code, fiches artistes, playlist Deezer et notifications."
 author: Joris
 url: /2014/04/14/aucard2/
 aliases: 2014/04/14/Aucard2.html

@@ -7,6 +7,7 @@ tags:
 - Intellj
 - live-coding
 title: 'Retour de devoxx : Améliorer son live-coding'
+description: "Astuce Devoxx : utilisez le mode présentation d'IntelliJ IDEA pour un live-coding lisible par toute l'audience. Activation et raccourcis."
 url: /2014/04/21/devoxx1/
 aliases: 2014/04/21/devoxx1.html
 ---

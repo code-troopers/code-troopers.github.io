@@ -6,6 +6,7 @@ tags:
 - Shell
 - Helper
 title: ct - alias de projets
+description: "ct, notre outil shell pour normaliser les commandes entre projets : un vocabulaire commun quel que soit le build tool (Maven, Gradle, Grunt)."
 url: /2014/12/15/ct_project_alias/
 aliases: 2014/12/15/CT_Project_Alias.html
 ---

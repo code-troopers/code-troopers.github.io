@@ -7,6 +7,7 @@ tags:
 - docker
 - tips
 title: Installer votre dépot privé Docker
+description: "Guide pas à pas pour déployer un registre Docker privé authentifié avec nginx. Idéal pour vos images de production."
 url: /2015/06/25/installdockerregistry/
 aliases: 2015/06/25/InstallDockerRegistry.html
 ---

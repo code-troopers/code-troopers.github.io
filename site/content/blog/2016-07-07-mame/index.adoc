@@ -6,6 +6,7 @@ tags:
 - Tours
 - MAME
 title: 'Nous sommes à MAME !'
+description: "Code-Troopers s'installe dans ses nouveaux bureaux à MAME, l'ancienne imprimerie de Tours devenue pôle numérique. Visite guidée !"
 url: /2016/07/07/mame/
 aliases: 2016/07/07/mame.html
 ---

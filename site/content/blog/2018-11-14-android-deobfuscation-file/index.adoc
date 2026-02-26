@@ -7,6 +7,7 @@ tags:
 - PlayStore
 - APK
 title: 'Android - Obfuscation et Désobfuscation'
+description: "Protégez votre code Android avec ProGuard : activation de l'obfuscation, configuration des règles et désobfuscation des crash reports."
 url: /2018/11/14/android-deobfuscation/
 ---
 

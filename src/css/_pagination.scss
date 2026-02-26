@@ -8,7 +8,8 @@
   &.black {
     @include mixins.arrows(variables.$black, -0.33rem, 3px);
   }
-  font-family: "Montserrat Light", "Helvetica Neue", Arial, sans-serif;
+  font-family: system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-weight: 300;
   .next-page {
     float: right;
   }

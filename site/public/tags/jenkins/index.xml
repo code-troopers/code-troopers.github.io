@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jenkins on Code-Troopers</title>
+    <link>/tags/jenkins/</link>
+    <description>Recent content in Jenkins on Code-Troopers</description>
+    <generator>Hugo</generator>
+    <language>fr-FR</language>
+    <lastBuildDate>Wed, 20 Jan 2016 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/jenkins/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Jenkins Workflow Plugin</title>
+      <link>/2016/01/20/jenkinsworkflow/</link>
+      <pubDate>Wed, 20 Jan 2016 00:00:00 +0000</pubDate>
+      <guid>/2016/01/20/jenkinsworkflow/</guid>
+      <description>&lt;div class=&#34;paragraph&#34;&gt;&#xA;&lt;p&gt;Un des points génants lors de l’utilisation de Jenkins est le coté volatile de la configuration des jobs de builds.&#xA;Il est souvent nécessaire de jouer de click-click pour faire la configuration des jobs sur Jenkins et de se reposer sur un plugin permettant de versionner,&#xA;autant que possible, les configurations utilisées.&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;div class=&#34;paragraph&#34;&gt;&#xA;&lt;p&gt;Mais, une fois que vous aurez lu cet article, vous vous rendrez compte que c’est le passé.&#xA;Attention toutefois, cet article parle de Jenkins, de Docker et de Groovy, n’ayez pas peur, tout est &lt;em&gt;presque&lt;/em&gt; trop simple…​&lt;/p&gt;&#xA;&lt;/div&gt;</description>
+    </item>
+  </channel>
+</rss>

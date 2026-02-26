@@ -11,6 +11,7 @@ tags:
   - Hugo
   - Blog
   - Web
+description: "Comment nous avons construit le site Code-Troopers avec Hugo et DecapCMS. Pourquoi un générateur statique plutôt que WordPress, et comment ça fonctionne."
 ---
 # Explorez les dessous de notre site web
 

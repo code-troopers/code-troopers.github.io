@@ -2,6 +2,7 @@
 cover: nowly.jpg
 date: '2015-12-29'
 draft: true
+description: "Conversion de l'application iPhone Nowly vers Android natif. Application de géolocalisation sociale pour trouver des contacts disponibles à proximité."
 tags:
 - Android
 title: 'Nowly'

@@ -5,6 +5,7 @@ date: '2021-10-25'
 tags:
 - Stage
 title: 'Stages 2022'
+description: "4 offres de stages 2022 chez Code-Troopers à Tours : Ops, développement web Matomo, Navig'Tours, Wakiki et gestion."
 url: /2021/10/25/stages-2022/
 aliases: 2021/10/25/stages-2022.html
 expirydate: '2018-12-19'

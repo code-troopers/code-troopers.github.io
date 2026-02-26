@@ -8,6 +8,7 @@ tags:
 - Gradle
 - Livraison
 title: 'Android : Publier son apk en ligne de commande'
+description: "Publiez vos APK Android sur le Play Store en ligne de commande avec le plugin Gradle play-publisher. Guide de configuration pas à pas."
 url: /2015/11/04/android_publier_apk_avec_gradle/
 aliases: 2015/11/04/Android_publier_apk_avec_gradle.html
 ---

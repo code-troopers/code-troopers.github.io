@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Material Design on Code-Troopers</title>
+    <link>/tags/material-design/</link>
+    <description>Recent content in Material Design on Code-Troopers</description>
+    <generator>Hugo</generator>
+    <language>fr-FR</language>
+    <lastBuildDate>Wed, 26 Nov 2014 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/material-design/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Squelette Android 5.0</title>
+      <link>/2014/11/26/squeletteandroid5/</link>
+      <pubDate>Wed, 26 Nov 2014 00:00:00 +0000</pubDate>
+      <guid>/2014/11/26/squeletteandroid5/</guid>
+      <description>&lt;h2 id=&#34;pourquoi-&#34;&gt;Pourquoi ?&lt;/h2&gt;&#xA;&lt;p&gt;Chez Code-Troopers, nous avons pas mal de projets &lt;strong&gt;Android&lt;/strong&gt;. Au début du projet, on fait toujours la même chose :&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;on lance &lt;strong&gt;Android Studio&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;li&gt;on créé un nouveau projet&lt;/li&gt;&#xA;&lt;li&gt;on choisit parmi les templates qu&amp;rsquo;il nous propose&lt;/li&gt;&#xA;&lt;li&gt;on ajoute nos librairies favorites&lt;/li&gt;&#xA;&lt;li&gt;on modifie le thème&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;Toutes ces étapes sont répétitives. De plus, avec l&amp;rsquo;arrivée du &lt;strong&gt;Material Design&lt;/strong&gt; et&#xA;les nouvelles libraires de compatibilités, les templates que propose &lt;strong&gt;Android Studio&lt;/strong&gt; ne sont plus d&amp;rsquo;actualité. Par exemple si l&amp;rsquo;on choisit un template avec le &lt;strong&gt;NavigationDrawer&lt;/strong&gt;, il faut presque tout changer pour que celui-ci colle au nouveau standard &lt;strong&gt;Material Design&lt;/strong&gt;.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

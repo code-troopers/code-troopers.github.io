@@ -1,8 +1,8 @@
-<section id="cloud">
+<section id="cloud" data-reveal>
     <div class="wrapper">
-        <div>
+        <div class="cloud-static">
             {{ range (shuffle (.Site.Data.cloud.cloud)) }}
-                <span class="cspan" id="{{ .id }}" title="{{ .label }}">{{ .text }}</span>
+                <span class="cspan w{{ .weight }}" id="{{ .id }}" title="{{ .label }}">{{ .text }}</span>
             {{ end }}
         </div>
         <div class="cloud">

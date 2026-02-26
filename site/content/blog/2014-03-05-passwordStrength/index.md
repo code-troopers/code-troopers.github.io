@@ -6,6 +6,7 @@ tags:
 - Security
 - Play2
 title: Strength Password Indicator Pour Play2
+description: "Comment intégrer un indicateur de robustesse de mot de passe dans Play2 avec la librairie zxcvbn. Tutoriel complet avec code source."
 url: /2014/03/05/passwordstrength/
 aliases: 2014/03/05/passwordStrength.html
 ---

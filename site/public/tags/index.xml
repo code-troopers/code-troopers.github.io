@@ -1,0 +1,761 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Code-Troopers</title>
+    <link>/tags/</link>
+    <description>Recent content in Tags on Code-Troopers</description>
+    <generator>Hugo</generator>
+    <language>fr-FR</language>
+    <lastBuildDate>Wed, 05 Mar 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Confs</title>
+      <link>/tags/confs/</link>
+      <pubDate>Wed, 05 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>/tags/confs/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Job</title>
+      <link>/tags/job/</link>
+      <pubDate>Fri, 18 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>/tags/job/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Blog</title>
+      <link>/tags/blog/</link>
+      <pubDate>Tue, 16 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>/tags/blog/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Hugo</title>
+      <link>/tags/hugo/</link>
+      <pubDate>Tue, 16 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>/tags/hugo/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Web</title>
+      <link>/tags/web/</link>
+      <pubDate>Tue, 16 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>/tags/web/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>NoESN</title>
+      <link>/tags/noesn/</link>
+      <pubDate>Sun, 31 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>/tags/noesn/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>NoSSII</title>
+      <link>/tags/nossii/</link>
+      <pubDate>Sun, 31 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>/tags/nossii/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Android</title>
+      <link>/tags/android/</link>
+      <pubDate>Sat, 01 Jun 2019 00:00:00 +0000</pubDate>
+      <guid>/tags/android/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>IOS</title>
+      <link>/tags/ios/</link>
+      <pubDate>Sat, 01 Jun 2019 00:00:00 +0000</pubDate>
+      <guid>/tags/ios/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>APK</title>
+      <link>/tags/apk/</link>
+      <pubDate>Wed, 14 Nov 2018 00:00:00 +0000</pubDate>
+      <guid>/tags/apk/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>PlayStore</title>
+      <link>/tags/playstore/</link>
+      <pubDate>Wed, 14 Nov 2018 00:00:00 +0000</pubDate>
+      <guid>/tags/playstore/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Angular</title>
+      <link>/tags/angular/</link>
+      <pubDate>Tue, 18 Sep 2018 00:00:00 +0000</pubDate>
+      <guid>/tags/angular/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>SEO</title>
+      <link>/tags/seo/</link>
+      <pubDate>Tue, 18 Sep 2018 00:00:00 +0000</pubDate>
+      <guid>/tags/seo/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Jq</title>
+      <link>/tags/jq/</link>
+      <pubDate>Mon, 09 Jul 2018 00:00:00 +0000</pubDate>
+      <guid>/tags/jq/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Json</title>
+      <link>/tags/json/</link>
+      <pubDate>Mon, 09 Jul 2018 00:00:00 +0000</pubDate>
+      <guid>/tags/json/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Shell</title>
+      <link>/tags/shell/</link>
+      <pubDate>Mon, 09 Jul 2018 00:00:00 +0000</pubDate>
+      <guid>/tags/shell/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Trello</title>
+      <link>/tags/trello/</link>
+      <pubDate>Mon, 09 Jul 2018 00:00:00 +0000</pubDate>
+      <guid>/tags/trello/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Chapitô</title>
+      <link>/tags/chapit%C3%B4/</link>
+      <pubDate>Mon, 18 Jun 2018 00:00:00 +0000</pubDate>
+      <guid>/tags/chapit%C3%B4/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Concepts Innovants</title>
+      <link>/tags/concepts-innovants/</link>
+      <pubDate>Mon, 18 Jun 2018 00:00:00 +0000</pubDate>
+      <guid>/tags/concepts-innovants/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Croissance</title>
+      <link>/tags/croissance/</link>
+      <pubDate>Mon, 18 Jun 2018 00:00:00 +0000</pubDate>
+      <guid>/tags/croissance/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Festivals</title>
+      <link>/tags/festivals/</link>
+      <pubDate>Mon, 18 Jun 2018 00:00:00 +0000</pubDate>
+      <guid>/tags/festivals/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Navig&#39;Tours</title>
+      <link>/tags/navigtours/</link>
+      <pubDate>Mon, 18 Jun 2018 00:00:00 +0000</pubDate>
+      <guid>/tags/navigtours/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Projets Internes</title>
+      <link>/tags/projets-internes/</link>
+      <pubDate>Mon, 18 Jun 2018 00:00:00 +0000</pubDate>
+      <guid>/tags/projets-internes/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>We Guide</title>
+      <link>/tags/we-guide/</link>
+      <pubDate>Mon, 18 Jun 2018 00:00:00 +0000</pubDate>
+      <guid>/tags/we-guide/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Locaux</title>
+      <link>/tags/locaux/</link>
+      <pubDate>Mon, 11 Jun 2018 00:00:00 +0000</pubDate>
+      <guid>/tags/locaux/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>MAME</title>
+      <link>/tags/mame/</link>
+      <pubDate>Mon, 11 Jun 2018 00:00:00 +0000</pubDate>
+      <guid>/tags/mame/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ngrok</title>
+      <link>/tags/ngrok/</link>
+      <pubDate>Wed, 02 May 2018 00:00:00 +0000</pubDate>
+      <guid>/tags/ngrok/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>RequestBin</title>
+      <link>/tags/requestbin/</link>
+      <pubDate>Wed, 02 May 2018 00:00:00 +0000</pubDate>
+      <guid>/tags/requestbin/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Webhook Tester</title>
+      <link>/tags/webhook-tester/</link>
+      <pubDate>Wed, 02 May 2018 00:00:00 +0000</pubDate>
+      <guid>/tags/webhook-tester/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>GA</title>
+      <link>/tags/ga/</link>
+      <pubDate>Tue, 10 Apr 2018 00:00:00 +0000</pubDate>
+      <guid>/tags/ga/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>GTM</title>
+      <link>/tags/gtm/</link>
+      <pubDate>Tue, 10 Apr 2018 00:00:00 +0000</pubDate>
+      <guid>/tags/gtm/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Firebase</title>
+      <link>/tags/firebase/</link>
+      <pubDate>Tue, 13 Mar 2018 00:00:00 +0000</pubDate>
+      <guid>/tags/firebase/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>XCode</title>
+      <link>/tags/xcode/</link>
+      <pubDate>Tue, 13 Mar 2018 00:00:00 +0000</pubDate>
+      <guid>/tags/xcode/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Conférences</title>
+      <link>/tags/conf%C3%A9rences/</link>
+      <pubDate>Wed, 28 Feb 2018 00:00:00 +0000</pubDate>
+      <guid>/tags/conf%C3%A9rences/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Stage</title>
+      <link>/tags/stage/</link>
+      <pubDate>Tue, 06 Feb 2018 00:00:00 +0000</pubDate>
+      <guid>/tags/stage/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Design</title>
+      <link>/tags/design/</link>
+      <pubDate>Mon, 03 Oct 2016 00:00:00 +0000</pubDate>
+      <guid>/tags/design/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tools</title>
+      <link>/tags/tools/</link>
+      <pubDate>Mon, 03 Oct 2016 00:00:00 +0000</pubDate>
+      <guid>/tags/tools/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>XML</title>
+      <link>/tags/xml/</link>
+      <pubDate>Mon, 03 Oct 2016 00:00:00 +0000</pubDate>
+      <guid>/tags/xml/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tours</title>
+      <link>/tags/tours/</link>
+      <pubDate>Thu, 07 Jul 2016 00:00:00 +0000</pubDate>
+      <guid>/tags/tours/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Devoxx</title>
+      <link>/tags/devoxx/</link>
+      <pubDate>Fri, 20 May 2016 00:00:00 +0000</pubDate>
+      <guid>/tags/devoxx/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Gamification</title>
+      <link>/tags/gamification/</link>
+      <pubDate>Fri, 20 May 2016 00:00:00 +0000</pubDate>
+      <guid>/tags/gamification/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Macro</title>
+      <link>/tags/macro/</link>
+      <pubDate>Wed, 11 May 2016 00:00:00 +0000</pubDate>
+      <guid>/tags/macro/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tips</title>
+      <link>/tags/tips/</link>
+      <pubDate>Wed, 11 May 2016 00:00:00 +0000</pubDate>
+      <guid>/tags/tips/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Vim</title>
+      <link>/tags/vim/</link>
+      <pubDate>Wed, 11 May 2016 00:00:00 +0000</pubDate>
+      <guid>/tags/vim/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Feature Toggle</title>
+      <link>/tags/feature-toggle/</link>
+      <pubDate>Wed, 30 Mar 2016 00:00:00 +0000</pubDate>
+      <guid>/tags/feature-toggle/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Google Tag Manager</title>
+      <link>/tags/google-tag-manager/</link>
+      <pubDate>Wed, 30 Mar 2016 00:00:00 +0000</pubDate>
+      <guid>/tags/google-tag-manager/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Docker</title>
+      <link>/tags/docker/</link>
+      <pubDate>Wed, 20 Jan 2016 00:00:00 +0000</pubDate>
+      <guid>/tags/docker/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Jenkins</title>
+      <link>/tags/jenkins/</link>
+      <pubDate>Wed, 20 Jan 2016 00:00:00 +0000</pubDate>
+      <guid>/tags/jenkins/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>AngularJS</title>
+      <link>/tags/angularjs/</link>
+      <pubDate>Thu, 14 Jan 2016 00:00:00 +0000</pubDate>
+      <guid>/tags/angularjs/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Startup</title>
+      <link>/tags/startup/</link>
+      <pubDate>Thu, 14 Jan 2016 00:00:00 +0000</pubDate>
+      <guid>/tags/startup/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tech</title>
+      <link>/tags/tech/</link>
+      <pubDate>Thu, 14 Jan 2016 00:00:00 +0000</pubDate>
+      <guid>/tags/tech/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Archi</title>
+      <link>/tags/archi/</link>
+      <pubDate>Mon, 04 Jan 2016 00:00:00 +0000</pubDate>
+      <guid>/tags/archi/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Java8</title>
+      <link>/tags/java8/</link>
+      <pubDate>Mon, 04 Jan 2016 00:00:00 +0000</pubDate>
+      <guid>/tags/java8/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>NavigTours</title>
+      <link>/tags/navigtours/</link>
+      <pubDate>Mon, 04 Jan 2016 00:00:00 +0000</pubDate>
+      <guid>/tags/navigtours/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Restx</title>
+      <link>/tags/restx/</link>
+      <pubDate>Mon, 04 Jan 2016 00:00:00 +0000</pubDate>
+      <guid>/tags/restx/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Gradle</title>
+      <link>/tags/gradle/</link>
+      <pubDate>Wed, 04 Nov 2015 00:00:00 +0000</pubDate>
+      <guid>/tags/gradle/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Livraison</title>
+      <link>/tags/livraison/</link>
+      <pubDate>Wed, 04 Nov 2015 00:00:00 +0000</pubDate>
+      <guid>/tags/livraison/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Monitoring</title>
+      <link>/tags/monitoring/</link>
+      <pubDate>Wed, 30 Sep 2015 00:00:00 +0000</pubDate>
+      <guid>/tags/monitoring/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>New Relic</title>
+      <link>/tags/new-relic/</link>
+      <pubDate>Wed, 30 Sep 2015 00:00:00 +0000</pubDate>
+      <guid>/tags/new-relic/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Permission</title>
+      <link>/tags/permission/</link>
+      <pubDate>Tue, 22 Sep 2015 00:00:00 +0000</pubDate>
+      <guid>/tags/permission/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Owncloud</title>
+      <link>/tags/owncloud/</link>
+      <pubDate>Wed, 09 Sep 2015 00:00:00 +0000</pubDate>
+      <guid>/tags/owncloud/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>GIT</title>
+      <link>/tags/git/</link>
+      <pubDate>Thu, 16 Jul 2015 00:00:00 +0000</pubDate>
+      <guid>/tags/git/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>GIT-SVN</title>
+      <link>/tags/git-svn/</link>
+      <pubDate>Thu, 16 Jul 2015 00:00:00 +0000</pubDate>
+      <guid>/tags/git-svn/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Outils</title>
+      <link>/tags/outils/</link>
+      <pubDate>Thu, 16 Jul 2015 00:00:00 +0000</pubDate>
+      <guid>/tags/outils/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Productivité</title>
+      <link>/tags/productivit%C3%A9/</link>
+      <pubDate>Thu, 16 Jul 2015 00:00:00 +0000</pubDate>
+      <guid>/tags/productivit%C3%A9/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Guide</title>
+      <link>/tags/guide/</link>
+      <pubDate>Thu, 25 Jun 2015 00:00:00 +0000</pubDate>
+      <guid>/tags/guide/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>IntelliJ</title>
+      <link>/tags/intellij/</link>
+      <pubDate>Wed, 10 Jun 2015 00:00:00 +0000</pubDate>
+      <guid>/tags/intellij/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>JavaScript</title>
+      <link>/tags/javascript/</link>
+      <pubDate>Wed, 10 Jun 2015 00:00:00 +0000</pubDate>
+      <guid>/tags/javascript/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tip</title>
+      <link>/tags/tip/</link>
+      <pubDate>Wed, 10 Jun 2015 00:00:00 +0000</pubDate>
+      <guid>/tags/tip/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Librairie</title>
+      <link>/tags/librairie/</link>
+      <pubDate>Sat, 06 Jun 2015 00:00:00 +0000</pubDate>
+      <guid>/tags/librairie/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Gitconfig</title>
+      <link>/tags/gitconfig/</link>
+      <pubDate>Fri, 22 May 2015 00:00:00 +0000</pubDate>
+      <guid>/tags/gitconfig/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Hook</title>
+      <link>/tags/hook/</link>
+      <pubDate>Fri, 22 May 2015 00:00:00 +0000</pubDate>
+      <guid>/tags/hook/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Vimrc</title>
+      <link>/tags/vimrc/</link>
+      <pubDate>Fri, 15 May 2015 00:00:00 +0000</pubDate>
+      <guid>/tags/vimrc/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Conférence</title>
+      <link>/tags/conf%C3%A9rence/</link>
+      <pubDate>Wed, 15 Apr 2015 00:00:00 +0000</pubDate>
+      <guid>/tags/conf%C3%A9rence/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Java</title>
+      <link>/tags/java/</link>
+      <pubDate>Wed, 15 Apr 2015 00:00:00 +0000</pubDate>
+      <guid>/tags/java/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Agilité</title>
+      <link>/tags/agilit%C3%A9/</link>
+      <pubDate>Wed, 11 Feb 2015 00:00:00 +0000</pubDate>
+      <guid>/tags/agilit%C3%A9/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Happiness Chart</title>
+      <link>/tags/happiness-chart/</link>
+      <pubDate>Wed, 11 Feb 2015 00:00:00 +0000</pubDate>
+      <guid>/tags/happiness-chart/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Helper</title>
+      <link>/tags/helper/</link>
+      <pubDate>Mon, 15 Dec 2014 00:00:00 +0000</pubDate>
+      <guid>/tags/helper/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Curation</title>
+      <link>/tags/curation/</link>
+      <pubDate>Fri, 05 Dec 2014 00:00:00 +0000</pubDate>
+      <guid>/tags/curation/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Fil Bleu</title>
+      <link>/tags/fil-bleu/</link>
+      <pubDate>Fri, 05 Dec 2014 00:00:00 +0000</pubDate>
+      <guid>/tags/fil-bleu/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Partage</title>
+      <link>/tags/partage/</link>
+      <pubDate>Fri, 05 Dec 2014 00:00:00 +0000</pubDate>
+      <guid>/tags/partage/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Veille</title>
+      <link>/tags/veille/</link>
+      <pubDate>Fri, 05 Dec 2014 00:00:00 +0000</pubDate>
+      <guid>/tags/veille/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Material Design</title>
+      <link>/tags/material-design/</link>
+      <pubDate>Wed, 26 Nov 2014 00:00:00 +0000</pubDate>
+      <guid>/tags/material-design/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Windows</title>
+      <link>/tags/windows/</link>
+      <pubDate>Wed, 01 Oct 2014 00:00:00 +0000</pubDate>
+      <guid>/tags/windows/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Palo Altech</title>
+      <link>/tags/palo-altech/</link>
+      <pubDate>Tue, 23 Sep 2014 00:00:00 +0000</pubDate>
+      <guid>/tags/palo-altech/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Oh-My-Zsh</title>
+      <link>/tags/oh-my-zsh/</link>
+      <pubDate>Wed, 17 Sep 2014 00:00:00 +0000</pubDate>
+      <guid>/tags/oh-my-zsh/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Zsh</title>
+      <link>/tags/zsh/</link>
+      <pubDate>Wed, 17 Sep 2014 00:00:00 +0000</pubDate>
+      <guid>/tags/zsh/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Add-Ons</title>
+      <link>/tags/add-ons/</link>
+      <pubDate>Thu, 04 Sep 2014 00:00:00 +0000</pubDate>
+      <guid>/tags/add-ons/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Heroku</title>
+      <link>/tags/heroku/</link>
+      <pubDate>Thu, 04 Sep 2014 00:00:00 +0000</pubDate>
+      <guid>/tags/heroku/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Dependances</title>
+      <link>/tags/dependances/</link>
+      <pubDate>Mon, 01 Sep 2014 00:00:00 +0000</pubDate>
+      <guid>/tags/dependances/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Maven</title>
+      <link>/tags/maven/</link>
+      <pubDate>Mon, 01 Sep 2014 00:00:00 +0000</pubDate>
+      <guid>/tags/maven/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Outil</title>
+      <link>/tags/outil/</link>
+      <pubDate>Fri, 08 Aug 2014 00:00:00 +0000</pubDate>
+      <guid>/tags/outil/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Coursera</title>
+      <link>/tags/coursera/</link>
+      <pubDate>Wed, 23 Jul 2014 00:00:00 +0000</pubDate>
+      <guid>/tags/coursera/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Festival</title>
+      <link>/tags/festival/</link>
+      <pubDate>Tue, 24 Jun 2014 00:00:00 +0000</pubDate>
+      <guid>/tags/festival/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Terres Du Son</title>
+      <link>/tags/terres-du-son/</link>
+      <pubDate>Tue, 24 Jun 2014 00:00:00 +0000</pubDate>
+      <guid>/tags/terres-du-son/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Db</title>
+      <link>/tags/db/</link>
+      <pubDate>Mon, 05 May 2014 00:00:00 +0000</pubDate>
+      <guid>/tags/db/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>H2-Browser</title>
+      <link>/tags/h2-browser/</link>
+      <pubDate>Mon, 05 May 2014 00:00:00 +0000</pubDate>
+      <guid>/tags/h2-browser/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Play2</title>
+      <link>/tags/play2/</link>
+      <pubDate>Mon, 05 May 2014 00:00:00 +0000</pubDate>
+      <guid>/tags/play2/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Accede</title>
+      <link>/tags/accede/</link>
+      <pubDate>Mon, 28 Apr 2014 00:00:00 +0000</pubDate>
+      <guid>/tags/accede/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Intellj</title>
+      <link>/tags/intellj/</link>
+      <pubDate>Mon, 21 Apr 2014 00:00:00 +0000</pubDate>
+      <guid>/tags/intellj/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Live-Coding</title>
+      <link>/tags/live-coding/</link>
+      <pubDate>Mon, 21 Apr 2014 00:00:00 +0000</pubDate>
+      <guid>/tags/live-coding/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Aucard</title>
+      <link>/tags/aucard/</link>
+      <pubDate>Mon, 14 Apr 2014 00:00:00 +0000</pubDate>
+      <guid>/tags/aucard/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Bibliothèque</title>
+      <link>/tags/biblioth%C3%A8que/</link>
+      <pubDate>Wed, 19 Mar 2014 00:00:00 +0000</pubDate>
+      <guid>/tags/biblioth%C3%A8que/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>OSS</title>
+      <link>/tags/oss/</link>
+      <pubDate>Wed, 19 Mar 2014 00:00:00 +0000</pubDate>
+      <guid>/tags/oss/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Security</title>
+      <link>/tags/security/</link>
+      <pubDate>Wed, 05 Mar 2014 00:00:00 +0000</pubDate>
+      <guid>/tags/security/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Développement</title>
+      <link>/tags/d%C3%A9veloppement/</link>
+      <pubDate>Wed, 01 Jan 2014 00:00:00 +0000</pubDate>
+      <guid>/tags/d%C3%A9veloppement/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Trac</title>
+      <link>/tags/trac/</link>
+      <pubDate>Mon, 08 Jul 2013 00:00:00 +0000</pubDate>
+      <guid>/tags/trac/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

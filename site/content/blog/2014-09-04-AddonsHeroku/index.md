@@ -6,6 +6,7 @@ tags:
 - Heroku
 - Add-ons
 title: Top 3 add-ons Heroku
+description: "Nos 3 add-ons Heroku indispensables : Papertrail pour les logs, SendGrid pour les mails et New Relic pour le monitoring. Tous gratuits !"
 url: /2014/09/04/addonsheroku/
 aliases: 2014/09/04/AddonsHeroku.html
 ---

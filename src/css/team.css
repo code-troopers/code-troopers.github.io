@@ -37,7 +37,13 @@
     border: 1px solid var(--greywhite);
     border-radius: 15px;
     backdrop-filter: blur(10px);
-    transition: background-color 0.3s ease-in-out;
+    transition: background-color 300ms ease-out;
+    overflow: hidden;
+
+    &:hover {
+      background-color: rgba(255,255,255,0.06);
+    }
+
     .full-member {
       height: 100%;
       display: flex;
@@ -51,7 +57,13 @@
       border-radius: 50%;
       object-fit: cover;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease-in-out;
+      transition: transform 300ms ease-out, box-shadow 300ms ease-out, filter 300ms ease-out;
+
+      &:hover {
+        transform: scale(1.08);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+        filter: brightness(1.05);
+      }
     }
 
     h3 {

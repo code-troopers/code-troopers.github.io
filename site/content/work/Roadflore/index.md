@@ -1,6 +1,7 @@
 ---
 cover: roadflore.jpg
 date: '2017-12-19'
+description: "Développement de l'application mobile Android et iOS Roadflore dédiée au végétal et à la biodiversité urbaine. Mise en relation entre jardiniers."
 tags:
 - Android
 - iOS

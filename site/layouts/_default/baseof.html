@@ -17,10 +17,35 @@
       <script src="{{ relURL . }}"></script>
     {{ end }}
     <script>
-      const d = new Date();
-      // Show April Fools' joke
-      if (d.getMonth() === 3 && d.getDate() === 1) {
-          $.getScript("/js/april.js");
+      (function() {
+        var d = new Date();
+        // Halloween theme: October 1-31
+        if (d.getMonth() === 9) {
+          document.documentElement.classList.add("halloween");
+        }
+        // April Fools
+        if (d.getMonth() === 3 && d.getDate() === 1) {
+          var s = document.createElement('script');
+          s.src = 'https://code.jquery.com/jquery-3.7.1.min.js';
+          s.integrity = 'sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=';
+          s.crossOrigin = 'anonymous';
+          s.onload = function() {
+            var a = document.createElement('script');
+            a.src = '/js/april.js';
+            document.body.appendChild(a);
+          };
+          document.body.appendChild(s);
+        }
+      })();
+      // Netlify Identity: redirect to CMS after login
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", function(user) {
+          if (!user) {
+            window.netlifyIdentity.on("login", function() {
+              document.location.href = "/admin/";
+            });
+          }
+        });
       }
     </script>
   </body>

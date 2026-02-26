@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Gamification on Code-Troopers</title>
+    <link>/tags/gamification/</link>
+    <description>Recent content in Gamification on Code-Troopers</description>
+    <generator>Hugo</generator>
+    <language>fr-FR</language>
+    <lastBuildDate>Fri, 20 May 2016 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/gamification/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Devoxx 2016 : Huntly ou rien !</title>
+      <link>/2016/05/20/devoxx-2016-huntly/</link>
+      <pubDate>Fri, 20 May 2016 00:00:00 +0000</pubDate>
+      <guid>/2016/05/20/devoxx-2016-huntly/</guid>
+      <description>&lt;div class=&#34;paragraph&#34;&gt;&#xA;&lt;p&gt;An english version of this blogpost is published on Michaël Bitard’s blog at &lt;a href=&#34;https://agileek.github.io/java/2016/05/19/devoxx_2016_huntly/&#34;&gt;agileek.github.io&lt;/a&gt;&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;div class=&#34;paragraph&#34;&gt;&#xA;&lt;p&gt;Cette année pour Devoxx, j’étais le seul Code-Troopers disponible mais ce n’est pas grave car j’y ai retrouvé Michaël, ancien collègue tourangeau maintenant basé à Toulouse.&#xA;On va vous raconter ici comment on s’est bien amusés pendant ces 3 jours.&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;div class=&#34;paragraph&#34;&gt;&#xA;&lt;p&gt;Pour l’édition 2016 de DevoxxFR, il y avait une nouveauté qui aurait probablement dû arriver bien plus tôt, il s’agit des applications mobiles officielles.&lt;br/&gt;&#xA;Rien de bien révolutionnaire à ça vous allez me dire, et je suis d’accord car les années précédentes des âmes charitables prenaient de leur temps pour sortir une application permettant d’avoir le programme dans sa poche.&lt;br/&gt;&#xA;Mais en plus de l’application permettant de voir et gérer le programme &lt;a href=&#34;https://play.google.com/store/apps/details?id=com.devoxx&#34;&gt;My devoxx&lt;/a&gt;,&lt;br/&gt;&#xA;il y a eu de publié sur les stores l’application &lt;a href=&#34;https://play.google.com/store/apps/details?id=com.devoxx.huntly&#34;&gt;Devoxx Huntly&lt;/a&gt; qui a pour tag line “Win tickets for devoxx events”. Autant le dire tout de suite, jouer pour gagner des places pour Devoxx, ça mérite un peu plus d’attention.&lt;/p&gt;&#xA;&lt;/div&gt;</description>
+    </item>
+  </channel>
+</rss>

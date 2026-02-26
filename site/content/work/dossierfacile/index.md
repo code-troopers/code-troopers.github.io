@@ -4,6 +4,7 @@ weight: 500
 url: /dossierfacile.html
 date: 2024-03-06
 cover: justif_dossierfacile.jpg
+description: "Contribution à DossierFacile, Startup d'État aidant les locataires à constituer un dossier de location sécurisé, accessible et conforme au RGAA."
 tags:
   - Web
 ---

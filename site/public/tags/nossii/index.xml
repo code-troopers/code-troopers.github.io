@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>NoSSII on Code-Troopers</title>
+    <link>/tags/nossii/</link>
+    <description>Recent content in NoSSII on Code-Troopers</description>
+    <generator>Hugo</generator>
+    <language>fr-FR</language>
+    <lastBuildDate>Sun, 31 Mar 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/nossii/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Déjà 11 ans !</title>
+      <link>/2024/03/31/11-ans/</link>
+      <pubDate>Sun, 31 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>/2024/03/31/11-ans/</guid>
+      <description>&lt;h1 id=&#34;-célébrons-11-ans-dinnovation-avec-code-troopers--&#34;&gt;🎉🎂 Célébrons 11 ans d&amp;rsquo;innovation avec Code-Troopers ! 🎂🎉&lt;/h1&gt;&#xA;&lt;p&gt;Il y a de cela onze ans &lt;a href=&#34;http://code-troopers.com/2013/03/31/premierarticle/&#34;&gt;exactement&lt;/a&gt;, un petit groupe d&amp;rsquo;aspirants développeurs osait se lancer dans une aventure technologique passionnante. Aujourd&amp;rsquo;hui, nous célébrons non seulement nos débuts, mais aussi nos accomplissements et notre croissance !&lt;/p&gt;&#xA;&lt;p&gt;À l&amp;rsquo;origine une équipe de sept, nous sommes désormais une famille de quinze passionnés, dont treize développeurs déterminés à repousser les frontières de la technologie. Depuis nos modestes débuts, nous avons évolué avec le paysage technologique, embrassant de nouvelles langues et frameworks pour rester à la pointe de l&amp;rsquo;innovation.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Début d&#39;activité</title>
+      <link>/2013/03/31/premierarticle/</link>
+      <pubDate>Sun, 31 Mar 2013 00:00:00 +0000</pubDate>
+      <guid>/2013/03/31/premierarticle/</guid>
+      <description>&lt;p&gt;Nous sommes &lt;a href=&#34;https://code-troopers.com/#team&#34;&gt;7 troopers&lt;/a&gt; issus de Polytech’Tours, une école d’ingénieur située à&#xA;   Tours. Nous sommes spécialisés dans la conception de sites internet à valeur ajoutée&#xA;   (application web).&#xA;&lt;/p&gt;&#xA;&#xA;&lt;p&gt;Depuis 2008 toute l&#39;équipe s&#39;est concentrée sur la réalisation de la solution &lt;a href=&#34;https://www.srmvision.com&#34;&gt;SRMvision&lt;/a&gt;, une&#xA;   plateforme de gestion des services IT.&#xA;   Il s’agit d’un logiciel en tant que service (SaaS) comportant de la gestion d’équipements, de projets, d’incidents etc. Cette application a été réalisée principalement en Java à l’aide&#xA;   de &lt;a href=&#34;https://wicket.apache.org/&#34;&gt;Apache Wicket&lt;/a&gt;.&#xA;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Outils on Code-Troopers</title>
+    <link>/tags/outils/</link>
+    <description>Recent content in Outils on Code-Troopers</description>
+    <generator>Hugo</generator>
+    <language>fr-FR</language>
+    <lastBuildDate>Thu, 16 Jul 2015 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/outils/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GIT-SVN comment survivre dans un environnement hostile</title>
+      <link>/2015/07/16/gitsvn/</link>
+      <pubDate>Thu, 16 Jul 2015 00:00:00 +0000</pubDate>
+      <guid>/2015/07/16/gitsvn/</guid>
+      <description>&lt;p&gt;Git c’est cool, Git c’est Hype, Git c’est tout récent (&lt;a href=&#34;http://git-scm.com/book/fr/v1/D%C3%A9marrage-rapide-Une-rapide-histoire-de-Git&#34;&gt;enfin presque&lt;/a&gt;) et c’est pour ça qu’on aime bien.&#xA;Mais pour beaucoup Git c’est nouveau, donc c’est le changement, donc c’est compliqué, et c’est pour ça que plein de boîtes préfèrent garder leur serveur svn.&lt;/p&gt;&#xA;&lt;p&gt;Je vais tenter ici, de vous donner les principales commandes de &lt;code&gt;Git-SVN&lt;/code&gt;. Ainsi si vous vous trouvez dans une boîte qui ne veut pas changer son scm mais que vous, vous avez envie de changement,&#xA;vous pourrez donc utiliser la puissance de Git.&#xA;Et ce sans aucun impact sur le gestionnaire de sources de la société dans laquelle vous êtes. C&amp;rsquo;est génial non ?&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Suivre l&#39;humeur de son équipe avec TeamMood</title>
+      <link>/2015/02/11/teammood/</link>
+      <pubDate>Wed, 11 Feb 2015 00:00:00 +0000</pubDate>
+      <guid>/2015/02/11/teammood/</guid>
+      <description>&lt;p&gt;Depuis bientôt 6 mois l&amp;rsquo;équipe des Code-Troopers utilise &lt;a href=&#34;https://www.teammood.com/&#34;&gt;TeamMood&lt;/a&gt; pour suivre son bonheur au quotidien. Retour sur l&amp;rsquo;utilisation d&amp;rsquo;un outil fort sympathique.&lt;/p&gt;&#xA;&lt;p&gt;Si l&amp;rsquo;on remonte quelques années en arrière, lorsque nous travaillions encore tous les 7 pour SRMvision,&#xA;nous avions expérimenté un outil sur un grand tableau blanc pour connaître notre état d&amp;rsquo;esprit à la fin de chaque journée de travail.&#xA;Nous l&amp;rsquo;appelions à l&amp;rsquo;époque &lt;code&gt;happiness chart&lt;/code&gt; (d&amp;rsquo;autres l&amp;rsquo;appellent aussi &lt;code&gt;niko-niko&lt;/code&gt;).&#xA;Toute l&amp;rsquo;équipe a rapidement adhéré au principe, car, dans la façon dont nous avions établi les règles, nous pouvions dessiner ce que l&amp;rsquo;on souhaitait dans notre case, seule la couleur importait :&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

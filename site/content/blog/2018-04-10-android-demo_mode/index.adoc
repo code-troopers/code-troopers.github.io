@@ -5,6 +5,7 @@ date: '2018-04-27'
 tags:
 - Android
 title: 'Android - Demo mode'
+description: "Le mode démonstration Android 6.0+ nettoie la barre de statut pour vos screenshots : notifications masquées, batterie et signal à 100%."
 url: /2018/04/27/android-demo-mode/
 aliases: 2018/04/27/android-demo-mode.html
 ---

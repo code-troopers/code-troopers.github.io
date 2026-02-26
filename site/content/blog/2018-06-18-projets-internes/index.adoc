@@ -12,6 +12,7 @@ tags:
  - Navig'Tours
 
 title: 'Projets internes, tu feras'
+description: "Pourquoi Code-Troopers investit dans ses projets internes : Navig'Tours, Chapito, We Guide. Le regard d'un non-développeur sur l'équipe."
 url: /2018/06/18/projets-internes/
 ---
 

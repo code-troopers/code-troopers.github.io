@@ -8,6 +8,7 @@ tags:
 - Play2
 - tech
 title: Sous le capot du Startup Weekend Tours
+description: "Détails techniques de My Band My City : Play Framework, Elasticsearch, Bootstrap et les outils utilisés en 54h de Startup Weekend Tours."
 url: /2014/04/03/souslecapot-startupweekendtours/
 aliases: 2014/04/03/SousLeCapot-StartupWeekEndTours.html
 ---

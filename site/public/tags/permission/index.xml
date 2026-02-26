@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Permission on Code-Troopers</title>
+    <link>/tags/permission/</link>
+    <description>Recent content in Permission on Code-Troopers</description>
+    <generator>Hugo</generator>
+    <language>fr-FR</language>
+    <lastBuildDate>Tue, 22 Sep 2015 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/permission/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Android M - Nouvelle gestion de permission</title>
+      <link>/2015/09/22/android_m_permissions/</link>
+      <pubDate>Tue, 22 Sep 2015 00:00:00 +0000</pubDate>
+      <guid>/2015/09/22/android_m_permissions/</guid>
+      <description>&lt;h1 id=&#34;nouvelle-approche&#34;&gt;Nouvelle approche&lt;/h1&gt;&#xA;&lt;p&gt;Avec la prochaine release d&amp;rsquo;&lt;code&gt;Android 6.0 Marshmallow&lt;/code&gt;, il va y avoir du changement au niveau de la gestion des permissions.&#xA;Terminé la popup qui demande les 10 autorisations au moment du téléchargement de l&amp;rsquo;appli, maintenant les développeurs vont pouvoir demander les permissions au moment où elles seront nécessaires.&lt;/p&gt;&#xA;&lt;h3 id=&#34;permissions-irrévocables&#34;&gt;Permissions irrévocables&lt;/h3&gt;&#xA;&lt;p&gt;Puisqu&amp;rsquo;il va falloir demander à l&amp;rsquo;utilisateur pour chaque permission, Google a décidé que certaines anciennes permissions n&amp;rsquo;auront plus besoin d&amp;rsquo;être demandées,&#xA;ce sont les &lt;code&gt;Normal Permissions&lt;/code&gt;. Il s&amp;rsquo;agit des permissions qui n&amp;rsquo;engendrent pas de risque sur la vie privée ou sur la sécurité de l&amp;rsquo;utilisateur comme c&amp;rsquo;est par exemple le cas pour l&amp;rsquo;accès à internet ou l&amp;rsquo;accès au vibreur :&#xA;la liste complète est disponible &lt;a href=&#34;https://developer.android.com/preview/features/runtime-permissions.html#normal&#34;&gt;ici&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

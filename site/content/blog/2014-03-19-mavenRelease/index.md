@@ -7,6 +7,7 @@ tags:
 - OSS
 - Maven
 title: Distribuer sur Maven Central ses bibliothèques
+description: "Guide complet pour publier vos bibliothèques open source sur Maven Central via Sonatype : signature GnuPG, configuration et déploiement."
 url: /2014/03/19/mavenrelease/
 aliases: 2014/03/19/mavenRelease.html
 ---

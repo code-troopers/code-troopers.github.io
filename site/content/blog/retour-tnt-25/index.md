@@ -9,6 +9,7 @@ cover: 54340947961_25b4971b6e_c.jpg
 draft: false
 tags:
   - Confs
+description: "Retour de Code-Troopers sur Touraine Tech 2025 : nos coups de cœur, les conférences marquantes et les rencontres de cette 25e édition à Tours."
 ---
 Touraine Tech, Comme d’hab. deux jours intenses et passionnants !
 

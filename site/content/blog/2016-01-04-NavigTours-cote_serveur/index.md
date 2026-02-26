@@ -9,6 +9,7 @@ tags:
 - Java8
 - Restx
 title: 'Navig''Tours : côté serveur'
+description: "Architecture serveur de Navig'Tours : Java 8, RestX, Docker et les choix techniques derrière l'appli de transport tourangelle."
 url: /2016/01/04/navigtours-cote_serveur/
 aliases: 2016/01/04/NavigTours-cote_serveur.html
 ---

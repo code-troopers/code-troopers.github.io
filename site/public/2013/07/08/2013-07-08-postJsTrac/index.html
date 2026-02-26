@@ -1,0 +1,478 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, viewport-fit=cover"
+  />
+
+  <title>jsTrac l&#39;outil de déclaration de ticket à plugger - Code-Troopers</title>
+  <meta name="description" content="jsTrac simplifie la recette de sites web : capture d&#39;écran annotée, création de tickets Trac en un clic. Découvrez cet outil open source." />
+  <link rel="canonical" href="https://code-troopers.com/2013/07/08/2013-07-08-postJsTrac/" />
+
+  
+  <link rel="dns-prefetch" href="//matomo.chapi.to" />
+  <link rel="preconnect" href="https://matomo.chapi.to" crossorigin />
+
+     
+  <link href="/main.488c56f9070ea7a180e8.css" rel="stylesheet" />
+  
+  <link href="/main.css" rel="stylesheet" />
+    
+
+  <base href="/" />
+  
+  <link rel="icon" href="/favicon.png" />
+  <link rel="manifest" href="/manifest.json" />
+  <link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#ff4400" />
+  <meta name="theme-color" content="#fff" />
+
+  
+  
+
+
+
+<meta property="og:title" content="jsTrac l&#39;outil de déclaration de ticket à plugger" />
+<meta property="og:description" content="jsTrac simplifie la recette de sites web : capture d&#39;écran annotée, création de tickets Trac en un clic. Découvrez cet outil open source." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://code-troopers.com/2013/07/08/2013-07-08-postJsTrac/" />
+<meta property="og:locale" content="fr_FR" />
+<meta property="og:image" content="https://code-troopers.com/2013/07/08/2013-07-08-postJsTrac/jstrac-banner_hu_3596cc94bd58794e.png" />
+<meta property="og:site_name" content="Code-Troopers" />
+<meta property="article:published_time" content="2013-07-08T00:00:00&#43;00:00" />
+<meta property="article:author" content="Matthieu" />
+<meta property="article:tag" content="javascript" />
+<meta property="article:tag" content="trac" />
+
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="jsTrac l&#39;outil de déclaration de ticket à plugger" />
+<meta name="twitter:description" content="jsTrac simplifie la recette de sites web : capture d&#39;écran annotée, création de tickets Trac en un clic. Découvrez cet outil open source." />
+<meta name="twitter:image" content="https://code-troopers.com/2013/07/08/2013-07-08-postJsTrac/jstrac-banner_hu_3596cc94bd58794e.png" />
+
+
+  
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "author": {
+    "@type": "Person",
+    "name": "Matthieu"
+  },
+  "dateModified": "2013-07-08T00:00:00+00:00",
+  "datePublished": "2013-07-08T00:00:00+00:00",
+  "description": "jsTrac simplifie la recette de sites web : capture d'écran annotée, création de tickets Trac en un clic. Découvrez cet outil open source.",
+  "headline": "jsTrac l'outil de déclaration de ticket à plugger",
+  "image": "https://code-troopers.com/2013/07/08/2013-07-08-postJsTrac/jstrac-banner_hu_3596cc94bd58794e.png",
+  "publisher": {
+    "@type": "Organization",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://code-troopers.com/img/logo-code-troopers-tête-couleur.png"
+    },
+    "name": "Code-Troopers"
+  },
+  "url": "https://code-troopers.com/2013/07/08/2013-07-08-postJsTrac/"
+}
+</script>
+
+  
+  
+  <link rel="alternate" type="application/rss+xml" title="Code-Troopers - Blog" href="https://code-troopers.com/blog/index.xml" />
+  
+
+  
+</head>
+
+  <body id="top" class="sans-serif">
+    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
+    <header>
+  <nav aria-label="Navigation principale">
+    <ul>
+      
+      <li><a id="id-company" href="/"><span>Code-Troopers</span></a></li>
+      
+      <li><a id="id-skills" href="/#skills"><span>Compétences</span></a></li>
+      
+      <li><a id="id-portfolio" href="/#portfolio"><span>Réalisations</span></a></li>
+      
+      <li><a id="id-casting" href="/#casting"><span>L&#39;équipe</span></a></li>
+      
+      <li><a id="id-blogs" href="/blog"><span>Blog</span></a></li>
+      
+      <li><a id="id-contact" href="/#contact"><span>Contact</span></a></li>
+      
+    </ul>
+    <button class="hamburger" aria-label="Menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+</header>
+
+
+    <main id="main-content">
+      
+
+<section id="blog">
+    <div class="wrapper">
+        <nav aria-label="Fil d'ariane" class="breadcrumb">
+            <a href="/">Accueil</a> &rsaquo; <a href="/blog/">Blog</a>
+        </nav>
+    </div>
+
+    <section id="article">
+        <div class="wrapper">
+            <article>
+                
+                    
+                    
+                    
+                    <img
+                        src="/2013/07/08/2013-07-08-postJsTrac/jstrac-banner_hu_13b22e10fddbcf26.webp"
+                        srcset="/2013/07/08/2013-07-08-postJsTrac/jstrac-banner_hu_66dbe944da8d7463.webp 400w, /2013/07/08/2013-07-08-postJsTrac/jstrac-banner_hu_f6fd47c25bcee0f5.webp 600w, /2013/07/08/2013-07-08-postJsTrac/jstrac-banner_hu_13b22e10fddbcf26.webp 900w"
+                        sizes="(max-width: 400px) 400px, (max-width: 768px) 600px, 900px"
+                        width="900" height="500"
+                        alt="Illustration de l'article jsTrac l&#39;outil de déclaration de ticket à plugger">
+                
+                <div class="wrapper-content">
+                    <h1>jsTrac l&#39;outil de déclaration de ticket à plugger</h1>
+                    
+                    <ul class="tags">
+                        
+                        <li><a href="/tags/javascript/">javascript</a></li>
+                        
+                        <li><a href="/tags/trac/">trac</a></li>
+                        
+                    </ul>
+                    
+                    <div class="content">
+                        
+
+<h3>Introduction</h3>
+
+<p>
+    Comme tout développeur le sait (mais ne l'admettra jamais), son travail n'est pas parfait.
+    Il est donc nécessaire de réaliser une phase de recette de nos applications avant de les livrer.
+    Même si de nombreux outils existent pour référencer les bugs (trac, jira...), cette phase est souvent laborieuse.
+    Nous avons donc décidé de simplifier ce processus en créant <b>jsTrac</b>.
+</p>
+
+<br/>
+<h3>jsTrac</h3>
+
+<p>
+    Il s'agit d'un outil visant à fluidifier la recette de sites web en créant rapidement des rapports de bug sur le
+    logiciel
+    de gestion des tickets <a href="http://trac.edgewall.org/">trac</a>.
+</p>
+
+<p>
+Les principales fonctionnalités sont les suivantes :
+<ul>
+    <li>impression d'écran de la page visionnée ;</li>
+    <li>mise en évidence de zones à l'aide de rectangles colorés et de flèches ;</li>
+    <li>ajout d'annotations ;</li>
+    <li>masquage d'informations ;</li>
+    <li>pré-remplissage du formulaire de création du ticket avec des informations utiles (url,login…) ;</li>
+    <li>mise-à-jour des tickets.</li>
+</ul>
+</p>
+
+<br/>
+<h3>Comment ça marche ?</h3>
+<h4>1. Déclarer un bug</h4>
+<p>
+    Pour pouvoir déclarer un bug, il suffit d'ajouter un bouton dans votre page. Celui-ci devra exécuter une fonction
+    javascript permettant d'appeler l'interface de <b>jsTrac</b>.
+    <br/>
+    <a href="/images/posts/2013-07-08-postJsTrac/altS.png" data-lightbox="image-1" title="Bouton de lancement de jsTrac">
+        <img class="mini" src="/images/posts/2013-07-08-postJsTrac/altS.png" alt="Bouton de lancement de jsTrac"/>
+    </a>
+
+</p>
+<p>
+    De notre côté, nous l'avons aussi associé à un raccourci clavier.
+    On pourrait aussi l'imaginer sous forme d'un bookmarklet ou d'un script grease-monkey, donc complètement
+    décorellé du site à recetter.
+</p>
+
+<h4>2. Annoter le screenshot</h4>
+<p>
+    Lorsque le script est exécuté, une boîte à outils s'ouvre offrant la possibilité d'ajouter des informations sur la
+    page courante.
+    Il est alors possible d'ajouter des cadres, flêches, et même du texte. Dans un souci de confidentialité, il est
+    aussi possible de noircir certaines zones de la page afin d'en masquer le contenu.
+</p>
+<p>
+<a href="/images/posts/2013-07-08-postJsTrac/dessin.png" data-lightbox="image-2" title="Création flèche et rectangle">
+    <img class="mini" src="/images/posts/2013-07-08-postJsTrac/dessin.png" alt="Création flèche et rectangle"/>
+</a>
+</p>
+
+
+<h4>3. Création du ticket</h4>
+
+<p>
+    Une fois les modifications validées, l'image est générée, et le formulaire de création du ticket apparait.
+    Les deux champs principaux à remplir sont le nom et la description du ticket. En fonction de la configuration
+    utilisée, certain champs peuvent être pré-rempli, comme le jalon et le composant (qui sont également dépendant
+    de la configuration du serveur Trac).
+</p>
+<p>
+<a href="/images/posts/2013-07-08-postJsTrac/creation_ticket.png" data-lightbox="image-3" title="Création ticket trac">
+    <img class="mini" src="/images/posts/2013-07-08-postJsTrac/creation_ticket.png" alt="Création ticket trac"/>
+</a>
+</p>
+
+<h4>4. Le ticket dans Trac</h4>
+<p>
+    Les personnes en charge de la résolution des tickets verront apparaître le nouveau ticket dans trac avec le
+    screenshot lié. De plus dans notre utilisation, le ticket contient des informations supplémentaires telles que l'url
+    de la page consultée, la personne connectée, la société… Il est possible d'adapter le contenu du ticket à vos
+    besoins.
+</p>
+<p>
+<a href="/images/posts/2013-07-08-postJsTrac/ticket_trac.png" data-lightbox="image-4" title="ticket trac créé">
+    <img class="mini" src="/images/posts/2013-07-08-postJsTrac/ticket_trac.png" alt="ticket trac créé"/>
+</a>
+</p>
+
+<br/>
+<h3>Bénéfices</h3>
+<p>Suite à l'utilisation quotidienne de <b>jsTrac</b>, nous avons constaté :</p>
+<p>
+    <ul>
+        <li>Gain de temps à la déclaration des tickets</li>
+        <ul>
+            <li>Pas besoins de faire le screenshot</li>
+            <li>Pas besoins d'ouvrir "paint" pour y ajouter des informations</li>
+            <li>Pas besoins de se connecter sur une autre page pour créer un ticket</li>
+            <li>Réduit la perte du contexte lors de la recette</li>
+        </ul>
+        <li>Traitement des tickets améliorés</li>
+        <ul>
+            <li>La présence systématique d'un screenshot aide à la compréhension du bug</li>
+            <li>Les informations supplémentaires aident à la résolution</li>
+        </ul>
+    </ul>
+</p>
+
+<br/>
+<h3>Comment installer jsTrac ?</h3>
+
+<p>
+    <b>jsTrac</b> est disponible sur <a href="https://github.com/srmvision/jsTrac">GitHub</a>.
+</p>
+<p>
+    Pour la mise en place et la configuration les informations nécessaires se trouvent dans la description du projet.
+</p>
+
+                    </div>
+                    <div class="content-footer">
+                        
+                        <ul class="tags float">
+                            
+                            <li><a href="/tags/javascript/">javascript</a></li>
+                            
+                            <li><a href="/tags/trac/">trac</a></li>
+                            
+                        </ul>
+                        
+                        <div id="author">
+                            <p class="date">Rédigé par <span class="author-name">Matthieu</span></p>
+                        </div>
+                    </div>
+                    <div class="share">
+                        <span>Partager</span>
+                        <ul class="socials">
+                            <li>
+                                <a target="_blank" rel="nofollow noopener"
+                                    aria-label="Partager sur Bluesky (nouvelle fenêtre)"
+                                    href="https://bsky.app/intent/compose?text=jsTrac%20l%27outil%20de%20d%c3%a9claration%20de%20ticket%20%c3%a0%20plugger+https://code-troopers.com%2f2013%2f07%2f08%2f2013-07-08-postJsTrac%2f"
+                                    onclick="window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=500,width=700');return false;">
+                                    <svg class="icon-svg bluesky-fill-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 11.3884C11.0942 9.62673 8.62833 6.34423 6.335 4.7259C4.13833 3.17506 3.30083 3.4434 2.75167 3.69256C2.11583 3.9784 2 4.95506 2 5.52839C2 6.10339 2.315 10.2367 2.52 10.9276C3.19917 13.2076 5.61417 13.9776 7.83917 13.7309C4.57917 14.2142 1.68333 15.4017 5.48083 19.6292C9.65833 23.9542 11.2058 18.7017 12 16.0392C12.7942 18.7017 13.7083 23.7651 18.4442 19.6292C22 16.0392 19.4208 14.2142 16.1608 13.7309C18.3858 13.9784 20.8008 13.2076 21.48 10.9276C21.685 10.2376 22 6.10256 22 5.52923C22 4.95423 21.8842 3.97839 21.2483 3.6909C20.6992 3.44256 19.8617 3.17423 17.665 4.72423C15.3717 6.34506 12.9058 9.62756 12 11.3884Z"/></svg>
+
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_blank" rel="nofollow noopener"
+                                    aria-label="Partager sur LinkedIn (nouvelle fenêtre)"
+                                    href="https://www.linkedin.com/sharing/share-offsite/?url=https://code-troopers.com%2f2013%2f07%2f08%2f2013-07-08-postJsTrac%2f"
+                                    onclick="window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=500,width=700');return false;">
+                                    <svg class="icon-svg linkedin-fill-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M6.94048 4.99993C6.94011 5.81424 6.44608 6.54702 5.69134 6.85273C4.9366 7.15845 4.07187 6.97605 3.5049 6.39155C2.93793 5.80704 2.78195 4.93715 3.1105 4.19207C3.43906 3.44699 4.18654 2.9755 5.00048 2.99993C6.08155 3.03238 6.94097 3.91837 6.94048 4.99993ZM7.00048 8.47993H3.00048V20.9999H7.00048V8.47993ZM13.3205 8.47993H9.34048V20.9999H13.2805V14.4299C13.2805 10.7699 18.0505 10.4299 18.0505 14.4299V20.9999H22.0005V13.0699C22.0005 6.89993 14.9405 7.12993 13.2805 10.1599L13.3205 8.47993Z"></path></svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="clearfix"></div>
+
+
+                    <div class="back">
+                        <div class="pagination black">
+                            
+                            <a href="/2014/01/01/cestreparti/" class="previous-page" aria-label="Article précédent : C&#39;est reparti pour un tour">
+                                <span class="arrow"><div class="arrow_box_left arrow_box" aria-hidden="true">
+</div>
+</span>
+                                Article précédent
+                            </a>
+                            
+                            
+                            <a href="/2013/03/31/premierarticle/" class="next-page" aria-label="Article suivant : Début d&#39;activité">
+                                Article suivant
+                                <span class="arrow"><div class="arrow_box_right arrow_box" aria-hidden="true">
+</div>
+</span>
+                            </a>
+                            
+                        </div>
+                    </div>
+
+                    <nav id="menu" aria-label="Taxonomies">
+                        <ul>
+                            
+                        </ul>
+                    </nav>
+                </div>
+            </article>
+        </div>
+    </section>
+</section>
+
+    </main>
+
+    <section id="contact">
+  <p class="section-title">Contact</p>
+  <div>
+    <div>
+      <img
+        class="cover"
+        loading="lazy"
+        src="/img/legos_contact.webp"
+        alt="Figurines Lego Code-Troopers"
+      />
+    </div>
+    <div>
+      <p class="section-title">Code-Troopers</p>
+      <address>
+        <p>
+          26 bis rue Abraham Bosse<br />
+          37000 Tours - Fr
+        </p>
+        <p>
+          <a href="mailto:contact@code-troopers.com">contact@code-troopers.com</a>
+        </p>
+        <p>
+          <a class="button" href="tel:+33782287216">07 82 28 72 16</a>
+        </p>
+      </address>
+    </div>
+  </div>
+
+  <div class="socials-follow">
+    <p class="section-title">Suivez nos actualités</p>
+    <ul class="x2">
+      <li>
+        <a
+          aria-label="Linkedin Code-Troopers (nouvelle fenêtre)"
+          href="https://www.linkedin.com/company/codetroopers"
+          target="_blank"
+          rel="noopener"
+        >
+          <svg class="icon-svg linkedin-fill-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M6.94048 4.99993C6.94011 5.81424 6.44608 6.54702 5.69134 6.85273C4.9366 7.15845 4.07187 6.97605 3.5049 6.39155C2.93793 5.80704 2.78195 4.93715 3.1105 4.19207C3.43906 3.44699 4.18654 2.9755 5.00048 2.99993C6.08155 3.03238 6.94097 3.91837 6.94048 4.99993ZM7.00048 8.47993H3.00048V20.9999H7.00048V8.47993ZM13.3205 8.47993H9.34048V20.9999H13.2805V14.4299C13.2805 10.7699 18.0505 10.4299 18.0505 14.4299V20.9999H22.0005V13.0699C22.0005 6.89993 14.9405 7.12993 13.2805 10.1599L13.3205 8.47993Z"></path></svg>
+        </a>
+      </li>
+      <li>
+        <a
+          aria-label="Github Code-Troopers (nouvelle fenêtre)"
+          href="https://github.com/code-troopers"
+          target="_blank"
+          rel="noopener"
+        >
+          <svg class="icon-svg github-fill-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12.001 2C6.47598 2 2.00098 6.475 2.00098 12C2.00098 16.425 4.86348 20.1625 8.83848 21.4875C9.33848 21.575 9.52598 21.275 9.52598 21.0125C9.52598 20.775 9.51348 19.9875 9.51348 19.15C7.00098 19.6125 6.35098 18.5375 6.15098 17.975C6.03848 17.6875 5.55098 16.8 5.12598 16.5625C4.77598 16.375 4.27598 15.9125 5.11348 15.9C5.90098 15.8875 6.46348 16.625 6.65098 16.925C7.55098 18.4375 8.98848 18.0125 9.56348 17.75C9.65098 17.1 9.91348 16.6625 10.201 16.4125C7.97598 16.1625 5.65098 15.3 5.65098 11.475C5.65098 10.3875 6.03848 9.4875 6.67598 8.7875C6.57598 8.5375 6.22598 7.5125 6.77598 6.1375C6.77598 6.1375 7.61348 5.875 9.52598 7.1625C10.326 6.9375 11.176 6.825 12.026 6.825C12.876 6.825 13.726 6.9375 14.526 7.1625C16.4385 5.8625 17.276 6.1375 17.276 6.1375C17.826 7.5125 17.476 8.5375 17.376 8.7875C18.0135 9.4875 18.401 10.375 18.401 11.475C18.401 15.3125 16.0635 16.1625 13.8385 16.4125C14.201 16.725 14.5135 17.325 14.5135 18.2625C14.5135 19.6 14.501 20.675 14.501 21.0125C14.501 21.275 14.6885 21.5875 15.1885 21.4875C19.259 20.1133 21.9999 16.2963 22.001 12C22.001 6.475 17.526 2 12.001 2Z"></path></svg>
+        </a>
+      </li>
+      <li>
+        <a
+          aria-label="Profil Sortlist Code-Troopers (nouvelle fenêtre)"
+          href="https://www.sortlist.com/fr/agency/code-troopers"
+          target="_blank"
+          rel="noopener"
+          class="sortlist-badge"
+        >
+          Sortlist
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  <div class="wrapper">
+    <a href="#top" class="scroll-to-top" aria-label="Retourner en haut de la page">
+      <img
+        class="arrow"
+        loading="lazy"
+        src="/img/arrow.webp"
+        alt="Retourner en haut"
+      />
+    </a>
+    <img src="/img/footer_logo.webp" alt="logo Code-Troopers" />
+    <div>
+      <span
+        >©2014 — 2026 Code-Troopers |
+        <a href="/legals">Mentions légales</a></span
+      >
+      <span
+        >Design : <a href="https://www.descheval.com/">descheval.com</a> |
+        Développement : Code-Troopers</span
+      >
+    </div>
+  </div>
+</footer>
+
+
+    
+    
+      <script src="/main.js"></script>
+    
+    <script>
+      (function() {
+        var d = new Date();
+        
+        if (d.getMonth() === 9) {
+          document.documentElement.classList.add("halloween");
+        }
+        
+        if (d.getMonth() === 3 && d.getDate() === 1) {
+          var s = document.createElement('script');
+          s.src = 'https://code.jquery.com/jquery-3.7.1.min.js';
+          s.integrity = 'sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=';
+          s.crossOrigin = 'anonymous';
+          s.onload = function() {
+            var a = document.createElement('script');
+            a.src = '/js/april.js';
+            document.body.appendChild(a);
+          };
+          document.body.appendChild(s);
+        }
+      })();
+      
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", function(user) {
+          if (!user) {
+            window.netlifyIdentity.on("login", function() {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

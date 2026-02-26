@@ -1,6 +1,7 @@
 ---
 cover: navigtours.jpg
 date: "2019-06-01"
+description: "Développement de Navig', application MaaS Android, iOS et web pour les transports en commun de Tours et Orléans : itinéraires, temps réel, M-Ticket."
 tags:
   - Android
   - iOS

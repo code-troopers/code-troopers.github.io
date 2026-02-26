@@ -1,0 +1,218 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Code-Troopers - Blog</title>
+    <link>https://code-troopers.com/blog/</link>
+    <description>Articles techniques et retours d'expérience par l'équipe Code-Troopers</description>
+    <language>fr</language>
+    <atom:link href="https://code-troopers.com/blog/index.xml" rel="self" type="application/rss+xml" />
+    <image>
+      <url>https://code-troopers.com/img/logo-code-troopers-tete-couleur.png</url>
+      <title>Code-Troopers - Blog</title>
+      <link>https://code-troopers.com/blog/</link>
+    </image>
+    <item>
+      <title>Retour TNT#25</title>
+      <link>https://code-troopers.com/2025/03/05/retour-tnt-25/</link>
+      <guid isPermaLink="true">https://code-troopers.com/2025/03/05/retour-tnt-25/</guid>
+      <pubDate>Wed, 05 Mar 2025 00:00:00 &#43;0000</pubDate>
+      <author>L&#39;équipe Code-Troopers</author>
+      <description>Retour de Code-Troopers sur Touraine Tech 2025 : nos coups de cœur, les conférences marquantes et les rencontres de cette 25e édition à Tours.</description>
+      <category>Confs</category>
+    </item>
+    <item>
+      <title>Stages 2026</title>
+      <link>https://code-troopers.com/2024/10/18/stages-2026/</link>
+      <guid isPermaLink="true">https://code-troopers.com/2024/10/18/stages-2026/</guid>
+      <pubDate>Fri, 18 Oct 2024 00:00:00 &#43;0000</pubDate>
+      <author>Benjamin Cousin</author>
+      <description>Code-Troopers recrute 2 stagiaires pour 2026 ! Stages fullstack sur des projets internes à Tours. Postulez avec votre CV à stage@code-troopers.com.</description>
+      <category>job</category>
+    </item>
+    <item>
+      <title>« La Semaine CT » : innovation, apprentissage et convivialité</title>
+      <link>https://code-troopers.com/2024/07/10/semainect2024/</link>
+      <guid isPermaLink="true">https://code-troopers.com/2024/07/10/semainect2024/</guid>
+      <pubDate>Wed, 10 Jul 2024 00:00:00 &#43;0000</pubDate>
+      <author>Nicolas</author>
+      <description>Découvrez la Semaine CT, le séminaire annuel de Code-Troopers : 5 jours de projets internes, démos, activités d&amp;#39;équipe et convivialité entre développeurs.</description>
+    </item>
+    <item>
+      <title>Site web, l&amp;#39;envers du décor avec Hugo et DecapCMS</title>
+      <link>https://code-troopers.com/2024/04/30/siteweb/</link>
+      <guid isPermaLink="true">https://code-troopers.com/2024/04/30/siteweb/</guid>
+      <pubDate>Tue, 16 Apr 2024 00:00:00 &#43;0000</pubDate>
+      <author>Matthieu Bollot</author>
+      <description>Comment nous avons construit le site Code-Troopers avec Hugo et DecapCMS. Pourquoi un générateur statique plutôt que WordPress, et comment ça fonctionne.</description>
+      <category>Hugo</category>
+      <category>Blog</category>
+      <category>Web</category>
+    </item>
+    <item>
+      <title>Déjà 11 ans !</title>
+      <link>https://code-troopers.com/2024/03/31/11-ans/</link>
+      <guid isPermaLink="true">https://code-troopers.com/2024/03/31/11-ans/</guid>
+      <pubDate>Sun, 31 Mar 2024 00:00:00 &#43;0000</pubDate>
+      <author>Troopers</author>
+      <description>Code-Troopers fête ses 11 ans ! Retour sur notre parcours depuis 2013, nos réalisations pour Barrière, Vinci, Géovélo, Fizzer et notre croissance de 7 à 15 passionnés.</description>
+      <category>NoESN</category>
+      <category>NoSSII</category>
+    </item>
+    <item>
+      <title>Android - Obfuscation et Désobfuscation</title>
+      <link>https://code-troopers.com/2018/11/14/android-deobfuscation/</link>
+      <guid isPermaLink="true">https://code-troopers.com/2018/11/14/android-deobfuscation/</guid>
+      <pubDate>Wed, 14 Nov 2018 00:00:00 &#43;0000</pubDate>
+      <author>Florian</author>
+      <description>Protégez votre code Android avec ProGuard : activation de l&amp;#39;obfuscation, configuration des règles et désobfuscation des crash reports.</description>
+      <category>Android</category>
+      <category>PlayStore</category>
+      <category>APK</category>
+    </item>
+    <item>
+      <title>SEO et Single Page Application</title>
+      <link>https://code-troopers.com/2018/09/18/angular-seo/</link>
+      <guid isPermaLink="true">https://code-troopers.com/2018/09/18/angular-seo/</guid>
+      <pubDate>Tue, 18 Sep 2018 00:00:00 &#43;0000</pubDate>
+      <author>Benjamin</author>
+      <description>Comment rendre une SPA Angular compatible SEO : balises meta, OpenGraph, Angular Universal et pré-rendu côté serveur.</description>
+      <category>SEO</category>
+      <category>Angular</category>
+    </item>
+    <item>
+      <title>Faire du json comme si on faisait du sed (*)</title>
+      <link>https://code-troopers.com/2018/07/09/jq/</link>
+      <guid isPermaLink="true">https://code-troopers.com/2018/07/09/jq/</guid>
+      <pubDate>Mon, 09 Jul 2018 00:00:00 &#43;0000</pubDate>
+      <author>Matthieu</author>
+      <description>Apprenez jq par l&amp;#39;exemple : filtrer, transformer et extraire des données JSON en ligne de commande. Cas pratique avec un export Trello.</description>
+      <category>shell</category>
+      <category>json</category>
+      <category>jq</category>
+      <category>trello</category>
+    </item>
+    <item>
+      <title>Projets internes, tu feras</title>
+      <link>https://code-troopers.com/2018/06/18/projets-internes/</link>
+      <guid isPermaLink="true">https://code-troopers.com/2018/06/18/projets-internes/</guid>
+      <pubDate>Mon, 18 Jun 2018 00:00:00 &#43;0000</pubDate>
+      <author>Nicolas</author>
+      <description>Pourquoi Code-Troopers investit dans ses projets internes : Navig&amp;#39;Tours, Chapito, We Guide. Le regard d&amp;#39;un non-développeur sur l&amp;#39;équipe.</description>
+      <category>Projets internes</category>
+      <category>Concepts innovants</category>
+      <category>Croissance</category>
+      <category>Festivals</category>
+      <category>Chapitô</category>
+      <category>We Guide</category>
+      <category>Navig&#39;Tours</category>
+    </item>
+    <item>
+      <title>On a déménagé !</title>
+      <link>https://code-troopers.com/2018/06/11/mame/</link>
+      <guid isPermaLink="true">https://code-troopers.com/2018/06/11/mame/</guid>
+      <pubDate>Mon, 11 Jun 2018 00:00:00 &#43;0000</pubDate>
+      <author>Romain</author>
+      <description>Code-Troopers déménage dans la tour de MAME à Tours ! Découvrez nos nouveaux bureaux dans cette ancienne imprimerie historique.</description>
+      <category>Locaux</category>
+      <category>MAME</category>
+    </item>
+    <item>
+      <title>Tester ses webhooks avec RequestBin et ngrok</title>
+      <link>https://code-troopers.com/2018/05/02/requestbin-ngrok/</link>
+      <guid isPermaLink="true">https://code-troopers.com/2018/05/02/requestbin-ngrok/</guid>
+      <pubDate>Wed, 02 May 2018 00:00:00 &#43;0000</pubDate>
+      <author>Joris</author>
+      <description>Testez vos webhooks facilement avec RequestBin en local via Docker et exposez-les sur internet avec ngrok. Tutoriel rapide.</description>
+      <category>RequestBin</category>
+      <category>ngrok</category>
+      <category>Webhook Tester</category>
+    </item>
+    <item>
+      <title>Android - Demo mode</title>
+      <link>https://code-troopers.com/2018/04/27/android-demo-mode/</link>
+      <guid isPermaLink="true">https://code-troopers.com/2018/04/27/android-demo-mode/</guid>
+      <pubDate>Fri, 27 Apr 2018 00:00:00 &#43;0000</pubDate>
+      <author>Florian</author>
+      <description>Le mode démonstration Android 6.0&#43; nettoie la barre de statut pour vos screenshots : notifications masquées, batterie et signal à 100%.</description>
+      <category>Android</category>
+    </item>
+    <item>
+      <title>Google Analytics via Google Tag Manager</title>
+      <link>https://code-troopers.com/2018/04/09/ga-gtm/</link>
+      <guid isPermaLink="true">https://code-troopers.com/2018/04/09/ga-gtm/</guid>
+      <pubDate>Tue, 10 Apr 2018 00:00:00 &#43;0000</pubDate>
+      <author>Benjamin</author>
+      <description>Configurez Google Analytics via Google Tag Manager : balises, déclencheurs, variables et mode debug. Guide pratique pas à pas.</description>
+      <category>GA</category>
+      <category>GTM</category>
+    </item>
+    <item>
+      <title>Firebase &#43; XCode</title>
+      <link>https://code-troopers.com/2018/03/16/firebase-xcode-plist/</link>
+      <guid isPermaLink="true">https://code-troopers.com/2018/03/16/firebase-xcode-plist/</guid>
+      <pubDate>Tue, 13 Mar 2018 00:00:00 &#43;0000</pubDate>
+      <author>Cedric</author>
+      <description>Gérez facilement plusieurs configurations Firebase dans XCode avec des targets différentes grâce à un script de build et un plist variabilisé.</description>
+      <category>XCode</category>
+      <category>Firebase</category>
+    </item>
+    <item>
+      <title>TouraineTech</title>
+      <link>https://code-troopers.com/2018/02/28/tourainetech-2018/</link>
+      <guid isPermaLink="true">https://code-troopers.com/2018/02/28/tourainetech-2018/</guid>
+      <pubDate>Wed, 28 Feb 2018 00:00:00 &#43;0000</pubDate>
+      <author>Florian</author>
+      <description>Retour sur la première édition de TouraineTech, la conférence tech de Tours co-organisée par Code-Troopers. Bilan et perspectives 2019.</description>
+      <category>Conférences</category>
+    </item>
+    <item>
+      <title>Stage 2018</title>
+      <link>https://code-troopers.com/2018/02/06/stages-2018/</link>
+      <guid isPermaLink="true">https://code-troopers.com/2018/02/06/stages-2018/</guid>
+      <pubDate>Tue, 06 Feb 2018 00:00:00 &#43;0000</pubDate>
+      <author>Benjamin</author>
+      <description>Offres de stages 2018 chez Code-Troopers à MAME : administration système, développement Frontend et Backend sur des projets en production.</description>
+      <category>Stage</category>
+    </item>
+    <item>
+      <title>Stage 2017</title>
+      <link>https://code-troopers.com/2016/12/21/stages-2017/</link>
+      <guid isPermaLink="true">https://code-troopers.com/2016/12/21/stages-2017/</guid>
+      <pubDate>Wed, 21 Dec 2016 00:00:00 &#43;0000</pubDate>
+      <author>Florian</author>
+      <description>Code-Troopers propose ses premières offres de stages 2017 à MAME : développement Android, iOS, Frontend et Backend sur des projets en production.</description>
+      <category>Stage</category>
+    </item>
+    <item>
+      <title>Android Annotations : Abusez-en !</title>
+      <link>https://code-troopers.com/2016/10/03/android-annotations-lib/</link>
+      <guid isPermaLink="true">https://code-troopers.com/2016/10/03/android-annotations-lib/</guid>
+      <pubDate>Mon, 03 Oct 2016 00:00:00 &#43;0000</pubDate>
+      <author>Florian</author>
+      <description>Tour d&amp;#39;horizon des annotations Android Support : @Nullable, @StringRes, @IntDef et plus. Améliorez la qualité de votre code Android.</description>
+      <category>Android</category>
+      <category>XML</category>
+      <category>Tools</category>
+      <category>Design</category>
+    </item>
+    <item>
+      <title>Nous sommes à MAME !</title>
+      <link>https://code-troopers.com/2016/07/07/mame/</link>
+      <guid isPermaLink="true">https://code-troopers.com/2016/07/07/mame/</guid>
+      <pubDate>Thu, 07 Jul 2016 00:00:00 &#43;0000</pubDate>
+      <author>Florian</author>
+      <description>Code-Troopers s&amp;#39;installe dans ses nouveaux bureaux à MAME, l&amp;#39;ancienne imprimerie de Tours devenue pôle numérique. Visite guidée !</description>
+      <category>Tours</category>
+      <category>MAME</category>
+    </item>
+    <item>
+      <title>Devoxx 2016 : Huntly ou rien !</title>
+      <link>https://code-troopers.com/2016/05/20/devoxx-2016-huntly/</link>
+      <guid isPermaLink="true">https://code-troopers.com/2016/05/20/devoxx-2016-huntly/</guid>
+      <pubDate>Fri, 20 May 2016 00:00:00 &#43;0000</pubDate>
+      <author>Florian</author>
+      <description>Retour sur Devoxx Huntly, le jeu de gamification de Devoxx France 2016 : chasse aux NFC, quêtes et comment gagner des places.</description>
+      <category>Devoxx</category>
+      <category>Gamification</category>
+    </item>
+  </channel>
+</rss>
