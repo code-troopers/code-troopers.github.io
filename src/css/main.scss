@@ -81,7 +81,8 @@ body {
   box-sizing: inherit;
 }
 
-section h1 {
+section h1,
+section > h2 {
   font-family: "Montserrat Black", Helvetica, Arial, sans-serif;
   text-align: center;
   font-size: 3rem;
@@ -144,7 +145,8 @@ a {
 }
 
 @media screen and (max-width: 767px) {
-  section h1 {
+  section h1,
+  section > h2 {
     font-size: 2rem;
   }
 }
