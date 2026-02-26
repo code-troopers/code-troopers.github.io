@@ -59,18 +59,19 @@
                         </ul>
                     </div>
 
-                    <section id="menu">
+                    <nav id="menu" aria-label="Taxonomies">
                         <ul>
                             {{ range $key, $taxonomy := .Site.Taxonomies.featured }}
-                            <li> {{ $key }}</li>
-                            <ul>
-                                {{ range $taxonomy.Pages }}
-                                <li hugo-nav="{{ .RelPermalink}}"><a href="{{ .Permalink}}"> {{ .LinkTitle }} </a></li>
-                                {{ end }}
-                            </ul>
+                            <li>{{ $key }}
+                                <ul>
+                                    {{ range $taxonomy.Pages }}
+                                    <li data-nav="{{ .RelPermalink}}"><a href="{{ .Permalink}}"> {{ .LinkTitle }} </a></li>
+                                    {{ end }}
+                                </ul>
+                            </li>
                             {{ end }}
                         </ul>
-                    </section>
+                    </nav>
                 </div>
             </article>
         </div>
