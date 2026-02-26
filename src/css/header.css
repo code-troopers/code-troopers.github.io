@@ -15,7 +15,17 @@ header {
 
   nav {
     background-color: var(--black);
-    display: flex;
+
+    ul {
+      display: flex;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    li {
+      flex: 1;
+    }
 
     a {
       color: var(--white);
@@ -26,7 +36,6 @@ header {
       text-transform: uppercase;
       text-decoration: none;
       font-weight: bold;
-      flex: 1;
       text-align: center;
       letter-spacing: 0.2rem;
       font-size: 0.8rem;
@@ -34,10 +43,10 @@ header {
       max-height: 60px;
     }
 
-    a:last-child {
+    li:last-child a {
       border-right: none;
     }
-    a:first-child {
+    li:first-child a {
       border-left: none;
     }
 
@@ -127,12 +136,12 @@ header {
 @media (width < 1024px) {
   header {
     nav {
-      a {
+      li {
         display: none;
-        &#id-company,
-        &#id-blogs {
-          display: initial;
-        }
+      }
+      li:has(#id-company),
+      li:has(#id-blogs) {
+        display: initial;
       }
     }
   }
