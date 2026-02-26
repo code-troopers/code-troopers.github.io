@@ -8,17 +8,17 @@
     {
       "name": "Compétences",
       "id": "id-skills",
-      "url": "#skills"
+      "url": "/#skills"
     },
     {
       "name": "Réalisations",
       "id": "id-portfolio",
-      "url": "#portfolio"
+      "url": "/#portfolio"
     },
     {
       "name": "L'équipe",
       "id": "id-casting",
-      "url": "#casting"
+      "url": "/#casting"
     },
     {
       "name": "Blog",
@@ -28,7 +28,7 @@
     {
       "name": "Contact",
       "id": "id-contact",
-      "url": "#contact"
+      "url": "/#contact"
     }
   ]
 }
