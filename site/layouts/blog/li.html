@@ -2,38 +2,30 @@
 
 <div class="blog-snippet-container">
   <div class="blog-snippet">
-    {{ if .Truncated }}
-    <a title="En savoir plus sur {{ .Title }}" href="{{ .Permalink }}">
-      {{ end }} {{ with .Resources.GetMatch .Params.cover }} {{ with .Fill
-      "336x200 Center webp q100" }}
-      <div
-        class="img-container"
-        style="background-image: url('{{ .RelPermalink }}')"
-      ></div>
-      {{ end }} {{ end }} {{ if .Truncated }}
-    </a>
+    {{ with .Resources.GetMatch .Params.cover }}
+      {{ with .Fill "336x200 Center webp q100" }}
+      <div class="img-container">
+        <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="" loading="lazy">
+      </div>
+      {{ end }}
     {{ end }}
     <div>
       <h2>
         {{ if .Truncated }}
-        <a aria-label="En savoir plus sur {{ .Title }}" href="{{ .Permalink }}"
-          >{{ .Title }}</a
-        >
+        <a href="{{ .Permalink }}">{{ .Title }}</a>
         {{ else }} {{ .Title }} {{ end }}
       </h2>
       <ul class="tags">
         {{ range $index, $tag := .Params.tags }}
         <li>
-          <a aria-label="Tag {{ $tag }}" href="/tags/{{ $tag | urlize }}/"
-            >{{ $tag }}</a
-          >
+          <a href="/tags/{{ $tag | urlize }}/">{{ $tag }}</a>
         </li>
         {{ end }}
       </ul>
       <p>{{ .Summary | plainify | truncate 100 }}</p>
       {{ if .Truncated }}
       <a
-        aria-label="Voir tous les articles"
+        aria-label="En savoir plus sur {{ .Title }}"
         class="read-more"
         href="{{ .Permalink }}"
         >En savoir plus {{ partial "arrow_right.html" . }}
