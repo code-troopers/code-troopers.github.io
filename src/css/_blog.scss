@@ -192,11 +192,12 @@ section#blog {
       .content {
         letter-spacing: initial;
         a {
-          color: variables.$lightblue;
+          color: #0b7b8c;
           word-wrap: break-word;
+          text-decoration: underline;
 
           &:hover {
-            color: color.adjust(variables.$lightblue, $lightness: -10%);
+            color: color.adjust(#0b7b8c, $lightness: -10%);
           }
         }
         margin: 0.5rem;
@@ -257,7 +258,7 @@ section#blog {
           flex: 1;
         }
 
-        section#author {
+        #author {
           text-align: right;
           align-self: center;
           flex: 0.5;
