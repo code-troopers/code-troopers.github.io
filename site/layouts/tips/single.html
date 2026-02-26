@@ -38,18 +38,19 @@
                         <span>Partager</span>
                         <ul class="socials">
                             <li>
-                                <a target="_blank" title="Facebook"
+                                <a target="_blank" rel="nofollow noopener"
+                                    aria-label="Partager sur Facebook (nouvelle fenêtre)"
                                     href="https://www.facebook.com/sharer.php?u=http://code-troopers.com{{ .Permalink }}&t={{ .Title }}"
-                                    class="facebook-button" rel="nofollow"
-                                    onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=500,width=700');return false;">
+                                    class="facebook-button"
+                                    onclick="window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=500,width=700');return false;">
                                     {{ partial "svg" "facebook-fill" }}
                                 </a>
                             </li>
                             <li>
-                                <a target="_blank" title="Twitter"
+                                <a target="_blank" rel="nofollow noopener"
+                                    aria-label="Partager sur X (nouvelle fenêtre)"
                                     href="https://twitter.com/share?url=http://code-troopers.com{{ .Permalink }}&text={{ .Title }}&via=codetroopers"
-                                    rel="nofollow"
-                                    onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=400,width=700');return false;">
+                                    onclick="window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=400,width=700');return false;">
                                     {{ partial "svg" "twitter-x-fill" }}
                                 </a>
                             </li>
