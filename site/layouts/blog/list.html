@@ -14,20 +14,20 @@
             {{ end }}
         </div>
         {{ if or (.Paginator.HasPrev) (.Paginator.HasNext) }}
-        <div class="pagination">
+        <nav class="pagination" aria-label="Pagination">
             {{ if .Paginator.HasPrev }}
             <a href="{{ .Paginator.Prev.URL }}" class="previous-page">
-                <div class="arrow">{{ partial "arrow_left.html" . }}</div>
+                <span class="arrow">{{ partial "arrow_left.html" . }}</span>
                 Page précédente
             </a>
             {{ end }}
             {{ if .Paginator.HasNext }}
             <a href="{{ .Paginator.Next.URL }}" class="next-page">
                 Page suivante
-                <div class="arrow">{{ partial "arrow_right.html" . }}</div>
+                <span class="arrow">{{ partial "arrow_right.html" . }}</span>
             </a>
             {{ end }}
-        </div>
+        </nav>
         {{ end }}
     </section>
 

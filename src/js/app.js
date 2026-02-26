@@ -8,3 +8,18 @@ if (window.netlifyIdentity) {
     }
   });
 }
+
+// A11y: add accessible labels to lightbox2 buttons
+document.addEventListener("DOMContentLoaded", () => {
+  const observer = new MutationObserver(() => {
+    const cancel = document.querySelector(".lb-cancel");
+    const close = document.querySelector(".lb-close");
+    if (cancel && !cancel.getAttribute("aria-label")) {
+      cancel.setAttribute("aria-label", "Annuler");
+    }
+    if (close && !close.getAttribute("aria-label")) {
+      close.setAttribute("aria-label", "Fermer la lightbox");
+    }
+  });
+  observer.observe(document.body, { childList: true, subtree: true });
+});

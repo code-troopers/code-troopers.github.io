@@ -5,7 +5,7 @@
   clear:both;
   font-size: 0.8rem;
   > span {
-    color: var(--grey);
+    color: var(--darkgrey);
   }
   > ul {
     float: right;

@@ -1,11 +1,14 @@
 <!doctype html>
 <html lang="{{ $.Site.Language.Lang }}">
   {{ partial "head" . }}
-  <body class="sans-serif">
+  <body id="top" class="sans-serif">
+    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
 
     {{ block "header" . }}{{ partial "nav" . }}{{end}}
 
-    {{ block "main" . }}{{ end }}
+    <main id="main-content">
+      {{ block "main" . }}{{ end }}
+    </main>
 
     {{ block "footer" . }}{{ partial "footer" . }}{{end}}
 

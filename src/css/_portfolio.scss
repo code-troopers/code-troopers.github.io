@@ -25,24 +25,22 @@ section#portfolio {
       .img-container{
         margin:auto;
         height: 330px;
-        background-size: cover;
-        background-position: 50%;
+        overflow: hidden;
         &:hover {
           transition: 0.5s;
           transform: scale(1.1);
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
         }
       }
 
       a{
         font-size: 0.7rem;
-      }
-
-      img {
-        max-width: 100%;
-        min-width: 220px;
-        min-height: 330px;
-        object-fit: cover;
-
       }
 
       & > div {
