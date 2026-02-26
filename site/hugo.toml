@@ -21,6 +21,7 @@ methods = ["(?i)GET|POST"]
 urls = [".*"]
 
 [params]
+siteUrl = "https://code-troopers.com"
 images = ["img/logo-code-troopers-tête-couleur.png"]
 
 [markup]

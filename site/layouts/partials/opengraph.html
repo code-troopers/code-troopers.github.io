@@ -1,0 +1,54 @@
+{{- $siteUrl := site.Params.siteUrl }}
+{{- $title := .Title }}
+{{- $description := .Description }}
+{{- if not $description }}
+  {{- $description = .Summary | plainify | htmlUnescape }}
+{{- end }}
+{{- $url := printf "%s%s" $siteUrl .RelPermalink }}
+
+{{/* Resolve image: use cover page resource, fall back to site default */}}
+{{- $image := "" }}
+{{- with .Params.cover }}
+  {{- with $.Resources.GetMatch . }}
+    {{- with .Fill "1200x630 Center" }}
+      {{- $image = printf "%s%s" $siteUrl .RelPermalink }}
+    {{- end }}
+  {{- end }}
+{{- end }}
+{{- if not $image }}
+  {{- with site.Params.images }}
+    {{- $image = printf "%s/%s" $siteUrl (index . 0) }}
+  {{- end }}
+{{- end }}
+
+<meta property="og:title" content="{{ $title }}" />
+<meta property="og:description" content="{{ $description }}" />
+<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}" />
+<meta property="og:url" content="{{ $url }}" />
+{{- with $image }}
+<meta property="og:image" content="{{ . }}" />
+{{- end }}
+{{- with site.Title }}
+<meta property="og:site_name" content="{{ . }}" />
+{{- end }}
+
+{{- if .IsPage }}
+{{- with .Date }}
+<meta property="article:published_time" content="{{ .Format "2006-01-02T15:04:05-07:00" }}" />
+{{- end }}
+{{- with .Params.author }}
+<meta property="article:author" content="{{ . }}" />
+{{- end }}
+{{- with .Params.tags }}
+{{- range . }}
+<meta property="article:tag" content="{{ . }}" />
+{{- end }}
+{{- end }}
+{{- end }}
+
+<meta name="twitter:card" content="{{ if $image }}summary_large_image{{ else }}summary{{ end }}" />
+<meta name="twitter:title" content="{{ $title }}" />
+<meta name="twitter:description" content="{{ $description }}" />
+{{- with $image }}
+<meta name="twitter:image" content="{{ . }}" />
+{{- end }}
