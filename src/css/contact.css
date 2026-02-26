@@ -10,22 +10,35 @@ section#contact {
   }
   background: var(--gradient);
   color: var(--white);
-  padding-bottom: 5rem;
+  padding-bottom: 1rem;
 
-  @media screen and (max-width: 767px) {
-    ul a {
-      height: 3rem;
-      width: 3rem;
+  .socials-follow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 2rem 0;
+
+    h2 {
+      margin: 0;
     }
-  }
 
-  ul {
+    ul {
+      display: flex;
+      gap: 1rem;
+      margin: 0;
+      list-style: none;
+      padding: 0;
+    }
+
     a {
       border: 2px solid #fff;
       border-radius: 50%;
-      position: relative;
-      height: 5rem;
-      width: 5rem;
+      height: 3rem;
+      width: 3rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       &:hover {
         background-color: #fff;
       }
