@@ -1,5 +1,5 @@
 <head>
-  <title>{{ $.Site.Title }} - {{ .Title }}</title>
+  <title>{{ .Title }} - {{ $.Site.Title }}</title>
   <meta name="description" content="{{ .Description }}" />
 
   {{ $stylesheet := .Site.Data.webpack.main }} {{ with $stylesheet.css }} {{ if
