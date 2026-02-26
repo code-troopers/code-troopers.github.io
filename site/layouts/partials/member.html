@@ -2,8 +2,8 @@
 <p>
     Découvrez certains des membres talentueux qui composent notre équipe dévouée et passionnée :
 </p>
-<div class="team-members-wrapper">
-    <ul class="team-members">
+<div class="team-members-wrapper" role="region" aria-roledescription="carrousel" aria-label="Membres de l'équipe">
+    <ul class="team-members" aria-live="polite">
         {{ $pageResource := .Resources }}
         {{ range $member := (shuffle (.Site.Data.team.team)) }}
         {{ if $member.photo }}
@@ -21,43 +21,43 @@
                 <p>{{ $member.description }}</p>
                 <div class="team-member-links x2">
                     {{ if $member.github }}
-                    <a href="https://www.github.com/{{ $member.github }}" title="Github de {{ $member.name }}"
+                    <a href="https://www.github.com/{{ $member.github }}" aria-label="Github de {{ $member.name }} (nouvelle fenêtre)"
                         target="_blank" rel="noopener">
                         {{ partial "svg" "github-fill" }}
                     </a>
                     {{ end }}
                     {{ if $member.gitlab }}
-                    <a href="https://www.gitlab.com/{{ $member.gitlab }}" title="Gitlab de {{ $member.name }}"
+                    <a href="https://www.gitlab.com/{{ $member.gitlab }}" aria-label="Gitlab de {{ $member.name }} (nouvelle fenêtre)"
                         target="_blank" rel="noopener">
                         {{ partial "svg" "gitlab-fill" }}
                     </a>
                     {{ end }}
                     {{ if $member.malt }}
-                    <a href="https://www.malt.com/{{ $member.malt }}" title="Malt de {{ $member.name }}" target="_blank"
-                        rel="noopener">
+                    <a href="https://www.malt.com/{{ $member.malt }}" aria-label="Malt de {{ $member.name }} (nouvelle fenêtre)"
+                        target="_blank" rel="noopener">
                         {{ partial "svg" "malt" }}
                     </a>
                     {{ end }}
                     {{ if $member.steam }}
-                    <a href="https://steamcommunity.com/id/{{ $member.steam }}" title="Steam de {{ $member.name }}"
+                    <a href="https://steamcommunity.com/id/{{ $member.steam }}" aria-label="Steam de {{ $member.name }} (nouvelle fenêtre)"
                         target="_blank" rel="noopener">
                         {{ partial "svg" "steam-fill" }}
                     </a>
                     {{ end }}
                     {{ if $member.twitter }}
-                    <a href="https://www.x.com/{{ $member.twitter }}" title="X de {{ $member.name }}" target="_blank"
-                        rel="noopener">
+                    <a href="https://www.x.com/{{ $member.twitter }}" aria-label="X de {{ $member.name }} (nouvelle fenêtre)"
+                        target="_blank" rel="noopener">
                         {{ partial "svg" "twitter-x-fill" }}
                     </a>
                     {{ end }}
                     {{ if $member.mastodon }}
-                    <a href="{{ $member.mastodon }}" title="Mastodon de {{ $member.name }}" target="_blank"
-                        rel="noopener">
+                    <a href="{{ $member.mastodon }}" aria-label="Mastodon de {{ $member.name }} (nouvelle fenêtre)"
+                        target="_blank" rel="noopener">
                         {{ partial "svg" "mastodon-fill" }}
                     </a>
                     {{ end }}
                     {{ if $member.linkedin }}
-                    <a href="https://www.linkedin.com/in/{{ $member.linkedin }}" title="LinkedIn de {{ $member.name }}"
+                    <a href="https://www.linkedin.com/in/{{ $member.linkedin }}" aria-label="LinkedIn de {{ $member.name }} (nouvelle fenêtre)"
                         target="_blank" rel="noopener">
                         {{ partial "svg" "linkedin-fill" }}
                     </a>
@@ -67,14 +67,15 @@
         {{ end }}
         {{ end }}
     </ul>
-    <button onclick="handleClick('previous')" class="carrousel-button carrousel-button--previous" type="button">➜</button>
-    <button onclick="handleClick('next')" class="carrousel-button carrousel-button--next" type="button">➜</button>
+    <button onclick="handleClick('previous')" class="carrousel-button carrousel-button--previous" type="button" aria-label="Membre précédent">&#10140;</button>
+    <button onclick="handleClick('next')" class="carrousel-button carrousel-button--next" type="button" aria-label="Membre suivant">&#10140;</button>
 </div>
 
 <script>
     const list = document.querySelector(".team-members");
     const item = document.querySelector(".team-member");
     const itemWidth = item.offsetWidth;
+    const wrapper = document.querySelector(".team-members-wrapper");
 
     function handleClick(direction) {
         if (direction === "previous") {
@@ -83,4 +84,14 @@
             list.scrollBy({ left: itemWidth * 2, behavior: "smooth" });
         }
     }
+
+    wrapper.addEventListener("keydown", function(e) {
+        if (e.key === "ArrowLeft") {
+            handleClick("previous");
+            e.preventDefault();
+        } else if (e.key === "ArrowRight") {
+            handleClick("next");
+            e.preventDefault();
+        }
+    });
 </script>
