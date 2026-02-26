@@ -5,7 +5,13 @@
     {{ with .Resources.GetMatch .Params.cover }}
       {{ with .Fill "336x200 Center webp q100" }}
       <div class="img-container">
+        {{ if $.Truncated }}
+        <a href="{{ $.Permalink }}" aria-hidden="true" tabindex="-1">
+          <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="" loading="lazy">
+        </a>
+        {{ else }}
         <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="" loading="lazy">
+        {{ end }}
       </div>
       {{ end }}
     {{ end }}
