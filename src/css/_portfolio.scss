@@ -67,7 +67,7 @@ section#portfolio {
           @include mixins.arrows(variables.$white);
           &:hover{
             width:100%;
-            @include mixins.arrows(variables.$lightblue);
+            @include mixins.arrows(var(--lightblue));
           }
         }
 
