@@ -1,3 +1,8 @@
+// Halloween theme: October 1-31
+if (new Date().getMonth() === 9) {
+  document.documentElement.classList.add("halloween");
+}
+
 // JS Goes here - ES6 supported
 if (window.netlifyIdentity) {
   window.netlifyIdentity.on("init", (user) => {
