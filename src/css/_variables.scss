@@ -12,11 +12,6 @@
   --darkerblue: #46506d;
   --avatarLightBlue: #3ccde6;
   --avatarDarkBlue: #419bd7;
-  // --lightblue: #e39b36;
-  // --darkblue: #db713b;
-  // --darkerblue: #b85b2d;
-  // --avatarLightBlue: #e39b36;
-  // --avatarDarkBlue: #db713b;
 
   --sandyBrown: #fa9f42;
   --darkSandyBrown: #d68b2f;
@@ -46,6 +41,14 @@
   );
 }
 
+:root.halloween {
+  --lightblue: #e39b36;
+  --darkblue: #db713b;
+  --darkerblue: #b85b2d;
+  --avatarLightBlue: #e39b36;
+  --avatarDarkBlue: #db713b;
+}
+
 $black: #000;
 $darkgrey: #313131;
 $grey: #959595;
@@ -59,13 +62,6 @@ $darkblue: #409ad6;
 $darkerblue: #46506d;
 $avatarLightBlue: #3ccde6;
 $avatarDarkBlue: #419bd7;
-
-// halloween
-// $lightblue: #e39b36;
-// $darkblue: #db713b;
-// $darkerblue: #b85b2d;
-// $avatarLightBlue: #e39b36;
-// $avatarDarkBlue: #db713b;
 
 $sandyBrown: #fa9f42;
 $darkSandyBrown: #d68b2f;
