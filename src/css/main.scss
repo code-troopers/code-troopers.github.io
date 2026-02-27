@@ -5,8 +5,6 @@
 @use "portfolio";
 @use "variables";
 
-// TODO
-// @import '../../node_modules/normalize.css/normalize.css';
 @use "../../node_modules/highlight.js/styles/github-dark.css";
 @use "../../node_modules/lightbox2/dist/css/lightbox.css";
 @use "header.css";
@@ -54,7 +52,7 @@ body {
     width: auto;
     height: auto;
     padding: 0.75rem 1.5rem;
-    background: variables.$darkblue;
+    background: var(--darkblue);
     color: variables.$white;
     font-size: 1rem;
     font-weight: bold;
@@ -99,8 +97,6 @@ ul {
   -webkit-margin-before: 0;
   -webkit-padding-start: 0;
 
-  li {
-  }
 }
 
 ul.flex {
@@ -127,7 +123,7 @@ a.btn {
 
   &:hover {
     background: variables.$gradient;
-    border-color: variables.$darkblue;
+    border-color: var(--darkblue);
     color: variables.$white;
   }
 }
@@ -140,7 +136,7 @@ a {
   text-decoration: none;
   color: variables.$white;
   &:hover {
-    color: variables.$lightblue;
+    color: var(--lightblue);
   }
 }
 
