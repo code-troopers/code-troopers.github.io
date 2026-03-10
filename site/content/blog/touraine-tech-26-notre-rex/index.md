@@ -84,15 +84,15 @@ Cette année, à Touraine Tech 2026, nous avions une nouvelle fois installé un 
 
 C’est toujours un moment qu’on apprécie particulièrement. Avoir un stand permet de prendre le temps de discuter avec les visiteurs, d’échanger avec d’autres passionnés de tech et de présenter ce que nous faisons chez Code-Troopers.
 
-### Un thème spécial vendredi 13
+### 🍀 Un thème spécial vendredi 13
 
 Comme l’événement tombait un vendredi 13, nous avons décidé de jouer avec le thème de la chance et des probabilités. Pour l’occasion, nous avions préparé deux petits jeux pour les visiteurs.
 
-* Un jeu fait maison 
+** 🃏 Un jeu fait maison ** 
 
 Le but ? Placer correctement différentes probabilités sans se tromper. Parmi les exemples proposés, il fallait par exemple estimer et ordonner des événements comme faire un Yahtzee en un seul lancer (0,00077%), le fait que deux personnes aient le même anniversaire dans un groupe de 23 (50%), ou encore la probabilité d’une collision entre deux hash MD5 128 bits, (on vous laisse chercher la proba). La personne qui s’en est le mieux sortie est repartie avec une édition collector de Clair Obscur.
 
-* ### Une roue de la chance et des goodies
+** 🎁 Une roue de la chance et des goodies **
 
 Gros succès ! Une roue de la chance permettant de gagner différents goodies Code-Troopers, et quelques super Lego pour les plus chanceux. Elle a tourné toute la journée ! 
 
@@ -102,6 +102,6 @@ Bref, une fois encore, cette édition de Touraine Tech 2026 a été une réussit
 
 Deux jours riches, des speakers de qualité, et une ligne éditoriale qui confirme pourquoi Touraine Tech reste une conférence à ne pas manquer. Que ce soit sur des sujets proches de nos pratiques quotidiennes (accessibilité, pairing, onboarding) ou sur des explorations plus techniques ou conceptuelles (kernel Linux, signaux, MCP), chaque talk a apporté quelque chose.
 
-Côté Code-Troopers, on repart fiers : fiers de soutenir cette aventure depuis le début, fiers d'avoir eu deux des nôtres sur scène, et fiers de faire partie d'une communauté tech locale qui grandit édition après édition.
+Côté **Code-Troopers**, on repart fiers : fiers de soutenir cette aventure depuis le début, fiers d'avoir eu deux des nôtres sur scène, et fiers de faire partie d'une communauté tech locale qui grandit édition après édition.
 
 On revient l'an prochain, avec le stand, des cadeaux, nos sweats, la roue et probablement de nouvelles propositions de talks. Et en attendant, on a quelques parties de Factorio à rattraper.
