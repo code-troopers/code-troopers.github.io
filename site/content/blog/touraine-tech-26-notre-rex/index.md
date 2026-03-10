@@ -5,7 +5,10 @@ url: /2026/03/10/rex-tnt-26/
 aliases: /2026/03/10/rexTNT26.html
 date: 2026-03-10
 expirydate: ""
-draft: true
+cover: 55128563125_7073979977_b.jpg
+draft: false
+tags:
+  - Confs
 ---
 Deux jours de talks, des rencontres et des idées plein la tête. Voilà ce qu'on retient de cette 8ème édition de Touraine Tech. 
 
