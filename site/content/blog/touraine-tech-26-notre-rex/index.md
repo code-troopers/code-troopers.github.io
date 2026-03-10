@@ -91,11 +91,11 @@ C’est toujours un moment qu’on apprécie particulièrement. Avoir un stand p
 
 Comme l’événement tombait un vendredi 13, nous avons décidé de jouer avec le thème de la chance et des probabilités. Pour l’occasion, nous avions préparé deux petits jeux pour les visiteurs.
 
-** 🃏 Un jeu fait maison ** 
+### ** 🃏 Un jeu fait maison ** 
 
 Le but ? Placer correctement différentes probabilités sans se tromper. Parmi les exemples proposés, il fallait par exemple estimer et ordonner des événements comme faire un Yahtzee en un seul lancer (0,00077%), le fait que deux personnes aient le même anniversaire dans un groupe de 23 (50%), ou encore la probabilité d’une collision entre deux hash MD5 128 bits, (on vous laisse chercher la proba). La personne qui s’en est le mieux sortie est repartie avec une édition collector de Clair Obscur.
 
-** 🎁 Une roue de la chance et des goodies **
+### ** 🎁 Une roue de la chance et des goodies **
 
 Gros succès ! Une roue de la chance permettant de gagner différents goodies Code-Troopers, et quelques super Lego pour les plus chanceux. Elle a tourné toute la journée ! 
 
