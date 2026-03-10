@@ -18,10 +18,6 @@ Cette année encore, nous tenions un stand, l'occasion d'échanger avec la commu
 
 *On vous partage ici notre sélection des talks qui nous ont marqués, avec nos impressions à chaud.*
 
-
-
-
-
 ## **🏆 Mention spéciale : nos speakers maison**
 
 Cette année deux Troopers ont postulé et ont été sélectionnés en tant que speaker pour présenter un quickie.
@@ -66,7 +62,6 @@ Un talk qui sort des sentiers battus. Bien présenté, avec des schémas explica
 
 ### **🔍 Lorsqu'un simple bug réseau vous emmène dans les entrailles de Linux… — Florian Forestier — [ 📹 Voir la vidéo](https://www.youtube.com/watch?v=XjWj5c255XU)**
 
-
 Une conf façon enquête policière. Le speaker part d'un bug réseau à priori banal et remonte progressivement jusqu'aux couches basses du kernel Linux. C'est le genre de présentation qui démystifie sans simplifier à outrance, et qui donne envie de creuser un peu plus la prochaine fois qu'on sera face à un problème incompréhensible.
 
 ## **🛠️ Outillage & bonnes pratiques**
@@ -91,11 +86,11 @@ C’est toujours un moment qu’on apprécie particulièrement. Avoir un stand p
 
 Comme l’événement tombait un vendredi 13, nous avons décidé de jouer avec le thème de la chance et des probabilités. Pour l’occasion, nous avions préparé deux petits jeux pour les visiteurs.
 
-### ** 🃏 Un jeu fait maison ** 
+### **🃏 Un jeu fait maison** 
 
 Le but ? Placer correctement différentes probabilités sans se tromper. Parmi les exemples proposés, il fallait par exemple estimer et ordonner des événements comme faire un Yahtzee en un seul lancer (0,00077%), le fait que deux personnes aient le même anniversaire dans un groupe de 23 (50%), ou encore la probabilité d’une collision entre deux hash MD5 128 bits, (on vous laisse chercher la proba). La personne qui s’en est le mieux sortie est repartie avec une édition collector de Clair Obscur.
 
-### ** 🎁 Une roue de la chance et des goodies **
+### **🎁 Une roue de la chance et des goodies** 
 
 Gros succès ! Une roue de la chance permettant de gagner différents goodies Code-Troopers, et quelques super Lego pour les plus chanceux. Elle a tourné toute la journée ! 
 
