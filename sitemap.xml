@@ -45,7 +45,13 @@
     
     <url>
         <loc>https://code-troopers.com/tags/confs/</loc>
-        <lastmod>2025-03-05T00:00:00+00:00</lastmod>
+        <lastmod>2026-03-10T00:00:00+00:00</lastmod>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://code-troopers.com/2026/03/10/rex-tnt-26/</loc>
+        <lastmod>2026-03-10T00:00:00+00:00</lastmod>
         <priority>0.8</priority>
     </url>
     
