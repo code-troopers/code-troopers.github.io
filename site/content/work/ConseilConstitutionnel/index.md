@@ -2,7 +2,7 @@
 title: Conseil Constitutionnel
 url: /conseil-constitutionnel.html
 date: 2019-03-01
-cover: conseil-constitutionnel-v2.jpg
+cover: conseil-constitutionnel.png
 draft: false
 tags:
   - Android
