@@ -3,7 +3,7 @@ title: Chapitô
 weight: 100
 url: /chapito.html
 date: 2019-04-01
-cover: chapito.jpg
+cover: chapitô.png
 draft: false
 tags:
   - Web
