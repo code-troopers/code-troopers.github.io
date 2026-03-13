@@ -28,7 +28,7 @@
 
 
 <meta property="og:title" content="Conseil Constitutionnel" />
-<meta property="og:description" content="Applications Android et iOS de consultation des décisions et actualités du conseil constitutionnel.
+<meta property="og:description" content="Le Conseil constitutionnel souhaitait disposer d’une application mobile officielle afin de rendre ses contenus plus accessibles au grand public, aussi bien sur iOS que sur Android. Le projet a été lancé à partir d’une feuille blanche, sans application existante ni architecture technique définie, avec un fort enjeu de fiabilité, de conformité et d’image institutionnelle.
 " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://code-troopers.com/conseil-constitutionnel.html" />
@@ -41,7 +41,7 @@
 
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Conseil Constitutionnel" />
-<meta name="twitter:description" content="Applications Android et iOS de consultation des décisions et actualités du conseil constitutionnel.
+<meta name="twitter:description" content="Le Conseil constitutionnel souhaitait disposer d’une application mobile officielle afin de rendre ses contenus plus accessibles au grand public, aussi bien sur iOS que sur Android. Le projet a été lancé à partir d’une feuille blanche, sans application existante ni architecture technique définie, avec un fort enjeu de fiabilité, de conformité et d’image institutionnelle.
 " />
 <meta name="twitter:image" content="https://code-troopers.com/conseil-constitutionnel/conseil-constitutionnel-v2_hu_3a5863b0664e3caf.jpg" />
  
@@ -132,10 +132,23 @@
                     </ul>
                     
                     <div class="content">
-                        <p>Applications Android et iOS de consultation des décisions et actualités du conseil constitutionnel.</p>
-<p>Depuis longtemps le conseil constitutionnel a besoin d&rsquo;informer et de communiquer sur les décisions prises.</p>
-<p>Les applications mobiles développées par Code-Troopers sont nées de ce besoin. En plus de pouvoir consulter toutes les informations disponibles sur le site web via une navigation repensée pour les téléphones, l&rsquo;app mobile du conseil constitutionnel vous permet d&rsquo;être alerté dès qu&rsquo;une nouvelle décision est rendue !</p>
-<p>Et le petit bonus : vous pouvez suivre en direct les audiences filmées du conseil !</p>
+                        <p>Le Conseil constitutionnel souhaitait disposer d’une application mobile officielle afin de rendre ses contenus plus accessibles au grand public, aussi bien sur iOS que sur Android. Le projet a été lancé à partir d’une feuille blanche, sans application existante ni architecture technique définie, avec un fort enjeu de fiabilité, de conformité et d’image institutionnelle.</p>
+<h3 id="défis-"><strong>Défis :</strong></h3>
+<p>Le principal défi résidait dans l’absence de cadre technique initial. Il a donc fallu, en collaboration étroite avec les équipes du Conseil constitutionnel, clarifier les besoins fonctionnels, définir les parcours utilisateurs et comparer différentes approches techniques, tout en respectant des délais de mise en œuvre courts.</p>
+<p>Les contraintes clés étaient :</p>
+<ul>
+<li>Définir une architecture pérenne et sécurisée dès le démarrage du projet.</li>
+<li>Garantir une compatibilité complète avec les écosystèmes iOS et Android.</li>
+<li>Intégrer des contenus existants, uniquement disponibles au format HTML, sans multiplier les coûts de refonte.</li>
+<li>Respecter les exigences élevées propres à une institution publique en termes de stabilité, de maintenance et de qualité.</li>
+</ul>
+<h3 id="solution-"><strong>Solution :</strong></h3>
+<p>Nous avons conçu une architecture hybride combinant le meilleur du natif et du web.</p>
+<p>Une couche de code natif a été développée pour s’interfacer efficacement avec les systèmes d’exploitation iOS et Android, notamment pour la gestion des notifications push, des deeplinks et des fonctionnalités propres à chaque OS.</p>
+<p>Pour l’affichage des contenus éditoriaux, nous avons intégré des webviews permettant de réutiliser les pages HTML existantes, tout en les encapsulant dans une expérience mobile cohérente et maîtrisée. Cette approche a permis de réduire les délais de développement, de limiter les coûts et de garantir une grande souplesse d’évolution.</p>
+<p><strong>Impact :</strong> </p>
+<p>Les applications iOS et Android du Conseil constitutionnel ont été livrées dans le respect des délais et du budget initial. Elles ont ensuite été maintenues en conditions opérationnelles pendant plusieurs années, assurant un accès fiable et continu aux contenus institutionnels pour les utilisateurs.</p>
+<p>Ce projet illustre notre capacité à concevoir des applications mobiles robustes, adaptées à des contextes institutionnels exigeants, tout en conciliant contraintes techniques, budgétaires et calendaires.</p>
                     </div>
                     <div class="content-footer">
                         
