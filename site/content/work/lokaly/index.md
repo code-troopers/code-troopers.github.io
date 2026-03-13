@@ -13,6 +13,7 @@ tags:
 ---
 Nous avons accompagné Lokaly dans le développement complet de sa plateforme, depuis les premières lignes de code jusqu’au déploiement d’un écosystème complet. Sur la base de maquettes existantes, nous avons conçu et développé l’ensemble des applications (web et mobile) ainsi que l’outil de gestion interne, en adaptant le design et l’expérience utilisateur aux besoins spécifiques du projet. Il s’agissait d’une collaboration sur le long terme, avec une approche progressive et itérative.
 
+<!--more-->
 
 **Défis :** 
 
