@@ -76,4 +76,4 @@ CMS.registerEditorComponent({
   },
 });
 
-setTimeout(() => CMS.init(), 4000);
+CMS.init();
