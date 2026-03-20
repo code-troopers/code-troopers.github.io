@@ -3,19 +3,38 @@ title: DossierFacile
 weight: 500
 url: /dossierfacile.html
 date: 2024-03-06
-cover: justif_dossierfacile.jpg
+cover: dossierfacile.png
+draft: false
 tags:
   - Web
 ---
-DossierFacile est une Startup d'État. Son objectif est d'aider les usagers à faire un dossier de location clair, complet et cohérent. 
+DossierFacile est la plateforme numérique de l’État permettant de constituer un dossier de location complet et sécurisé, afin de faciliter la recherche de logement pour les locataires tout en rassurant les propriétaires.
 
 <!--more-->
 
-Étant un service de l'état traitant de documents personnels, beaucoup de contraintes sont à prendre en compte. À commencer par la sécurité des données personnelles et de tous les documents, mais également par exemple pour respecter les normes d'accessibilité RGAA. Rattaché au ministère de la transition écologique, une attention est portée sur l'ecoIndex.
+**Défis :** 
 
-Le site est grand public, il y a plus de 200 000 visiteurs unique par mois pour 2 millions de pages vues et environ 30 000 dossiers créés.
+* Permettre aux locataires de fournir un dossier de location complet, cohérent et fiable, sans erreurs ou pièces manquantes, ce qui augmente leurs chances auprès des propriétaires.
+* Garantir la sécurité et la confidentialité des documents sensibles (pièces d’identité, justificatifs de revenus, etc.).
+* Offrir une solution simple et rapide, évitant les démarches papier longues et les échanges multiples.
+* Assurer la confiance des propriétaires dans la validité des dossiers.
 
-Pour tout savoir sur le projet :
+**Solution :** 
+
+* Mise en place d’un parcours utilisateur structuré : téléchargement des pièces nécessaires, vérification par des agents, et génération d’un dossier prêt à envoyer sous forme de lien sécurisé ou PDF. ￼
+* Application d’un label de l’État pour certifier la qualité du dossier et rassurer les propriétaires. ￼
+* Sécurité renforcée : filigranes sur les documents, contrôle des accès, suppression possible du lien dossier, etc. ￼
+
+**Impact :** 
+
+* Plus de 116 000 dossiers labellisés grâce à DossierFacile. ￼
+* Les locataires utilisent un outil qui réduit les oublis, accélère les démarches et améliore la crédibilité de leur dossier.
+* Les propriétaires reçoivent des dossiers complets et vérifiés, ce qui simplifie leur processus de sélection.
+
+
+
+
+**Pour tout savoir sur le projet :**
 
 * page d'accueil : <https://www.dossierfacile.logement.gouv.fr>
 * statistiques publiques sur les dossiers : [dashboard metabase](https://www.dossierfacile.logement.gouv.fr/stats)
