@@ -21,13 +21,41 @@
   <link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#ff4400" />
   <meta name="theme-color" content="#fff" />
 
+  <link rel="canonical" href="{{ printf "%s%s" site.Params.siteUrl .RelPermalink }}" />
+
   <!-- Open Graph + Twitter Card -->
   {{ partial "opengraph.html" . }} {{ if .IsHome }}
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   {{ end }}
+
+  {{ if and .IsPage (eq .Section "blog") }}
+  {{ $cover := "" }}
+  {{ with .Resources.GetMatch .Params.cover }}
+    {{ with .Fill "1200x630 Center" }}
+      {{ $cover = printf "%s%s" site.Params.siteUrl .RelPermalink }}
+    {{ end }}
+  {{ end }}
+  {{ $pageUrl := printf "%s%s" site.Params.siteUrl .RelPermalink }}
+  {{ $ld := dict
+    "@context" "https://schema.org"
+    "@type" "BlogPosting"
+    "headline" .Title
+    "description" .Description
+    "image" $cover
+    "datePublished" (.Date.Format "2006-01-02")
+    "dateModified" (.Lastmod.Format "2006-01-02")
+    "inLanguage" "fr-FR"
+    "author" (dict "@type" "Organization" "name" (.Params.author | default "Code-Troopers") "url" "https://code-troopers.com/")
+    "publisher" (dict "@type" "Organization" "name" "Code-Troopers" "url" "https://code-troopers.com/" "logo" (dict "@type" "ImageObject" "url" "https://code-troopers.com/img/Code-Troopers.png"))
+    "mainEntityOfPage" (dict "@type" "WebPage" "@id" $pageUrl)
+  }}
+  <script type="application/ld+json">{{ $ld | jsonify | safeJS }}</script>
+  {{ end }}
+
   <script
     src="https://code.jquery.com/jquery-3.7.1.min.js"
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
     crossorigin="anonymous"
+    defer
   ></script>
 </head>
