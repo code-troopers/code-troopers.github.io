@@ -7,11 +7,8 @@
   "scripts": {
     "lint": "eslint src cypress",
     "start": "run-p start:**",
-    "start:hugo": "hugo -d ../dist -s site -w --logLevel debug",
+    "start:hugo": "hugo -d ../dist -s site -w --logLevel debug -D -F",
     "start:webpack": "webpack-dev-server --config webpack.dev.js --hot",
-    "preview": "run-p preview:**",
-    "preview:hugo": "npm run start:hugo -- -D -F",
-    "preview:webpack": "npm run start:webpack",
     "prebuild": "rimraf dist",
     "build": "npm run build:webpack && npm run build:hugo",
     "build:preview": "npm run build:webpack && npm run build:hugo:preview",
