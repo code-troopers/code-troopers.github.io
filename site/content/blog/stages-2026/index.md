@@ -2,7 +2,6 @@
 title: Stages 2026
 author: Benjamin Cousin
 url: /2024/10/18/stages-2026/
-aliases: /2024/10/18/stages-2026.html
 date: 2024-10-18
 expirydate: 2026-07-31
 cover: logo-banner.png

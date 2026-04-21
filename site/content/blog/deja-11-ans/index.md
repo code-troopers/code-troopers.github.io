@@ -2,7 +2,6 @@
 title: Déjà 11 ans !
 author: Troopers
 url: /2024/03/31/11-ans/
-aliases: /2024/03/31/11-ans.html
 date: 2024-03-31
 expirydate: ""
 cover: blog-11ans.jpg

@@ -3,7 +3,6 @@ title: "Trois projets de 2014 qui tournent toujours en 2026"
 description: "En creusant nos git logs, on a trouvé trois projets dont les premiers commits datent de 2014 et qui tournent encore en production aujourd'hui. L'un d'eux n'a même pas été démarré par nous."
 author: Troopers
 url: /2026/04/20/trois-projets-de-2014/
-aliases: /2026/04/20/trois-projets-de-2014.html
 date: 2026-04-20
 expirydate: ""
 cover: cover.jpg

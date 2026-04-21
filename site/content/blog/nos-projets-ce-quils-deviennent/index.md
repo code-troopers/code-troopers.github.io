@@ -3,7 +3,6 @@ title: "Nos projets, 13 ans après : ce qu'ils deviennent"
 description: "Chez Code-Troopers, ESN basée à Tours, on fait le bilan 2026 d'une sélection de nos projets clients (DossierFacile, Wegrow, Fizzer, Géovélo, Navig', Eutelmed…) : la majorité tourne encore, plusieurs ont scalé."
 author: Troopers
 url: /2026/04/20/nos-projets-ce-quils-deviennent/
-aliases: /2026/04/20/nos-projets-ce-quils-deviennent.html
 date: 2026-04-20
 expirydate: ""
 cover: cover.jpg
