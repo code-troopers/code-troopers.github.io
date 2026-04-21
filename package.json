@@ -90,7 +90,6 @@
     "tar-fs": "^2.1.4",
     "ws": "^8.18.0",
     "serialize-javascript": "^7.0.5",
-    "file-type": "^21.3.2",
     "debug": "^4.3.7",
     "got": "^11.8.6",
     "@koa/cors": "^5.0.0",
