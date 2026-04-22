@@ -11,7 +11,7 @@ tags:
   - NoESN
   - NoSSII
 ---
-Chez Code-Troopers, ESN basée à Tours, on aime les projets qui durent. Depuis nos premiers projets en 2014, **la quasi-totalité des produits qu'on a accompagnés tournent encore en 2026**, certains avec des chiffres qui font sourire ceux qui étaient là au premier commit.
+Chez Code-Troopers, on aime les projets qui durent. Depuis nos premiers projets en 2014, **la quasi-totalité des produits qu'on a accompagnés tournent encore en 2026**, certains avec des chiffres qui font sourire ceux qui étaient là au premier commit.
 
 *Tu peux aussi lire notre [zoom narratif sur nos trois plus vieux projets encore en production](/2026/04/20/trois-projets-de-2014/), tous datés de 2014.*
 
@@ -25,13 +25,13 @@ Place aux survivants et aux champions.
 
 ## 🚗 Mobilité
 
-**[Navig'](/navigtours.html)** fête ses **12 ans** cette année. Depuis 2014, nous développons et faisons évoluer l'application, pendant que Keolis fournit le calculateur d'itinéraires et le temps réel. Ce sont aujourd'hui les applications officielles de deux réseaux de transport distincts (Fil Bleu à Tours, Tao à Orléans), qui partagent une partie de leur code.
+**[Navig'](/navigtours.html)** fête ses **12 ans** cette année. Depuis 2014, nous développons et faisons évoluer l'application voyageur (pendant que d'autres acteurs fournissent calculateur d'itinéraires et temps réel). Ce sont aujourd'hui les applications officielles de deux réseaux de transport prochent de nous (Fil Bleu à Tours, Tao à Orléans), qui partagent une partie de leur code.
 
 **[Geovelo](/geovelo.html)**, qu'on a accompagnée à partir de 2017, est devenue une référence incontournable du vélo en France et au-delà, avec **13 millions de trajets enregistrés chaque année** et plus de 3 millions de téléchargements. L'application est certifiée B Corp et portée par des challenges internationaux, comme celui du Grand Genève qui relance son édition en mai 2026.
 
-**[Toosla](/toosla.html)**, qu'on a accompagnée en 2016 sur sa brique Bluetooth de déverrouillage sans clé, a levé **15 M€** sur trois tours de table et exploite aujourd'hui une dizaine de stations spécialisées dans la location haut de gamme (Mercedes, BMW).
+**[Toosla](/toosla.html)**, qu'on a accompagnée en 2016 sur sa la mise en place de l'application Android avec notamment la brique Bluetooth de déverrouillage sans clé, a levé **15 M€** sur trois tours de table et exploite aujourd'hui une dizaine de stations spécialisées dans la location haut de gamme (Mercedes, BMW).
 
-*Mentions plus rapides dans ce secteur : **[GécoAir](/gecoair.html)** (IFPEN), toujours disponible et régulièrement enrichie. **[Virtuo](/virtuo.html)** est en redressement judiciaire ; notre intervention y est restée ponctuelle il y a plus de deux ans, on garde un bon souvenir de la collaboration technique et on souhaite une belle reprise à leurs équipes.*
+*Mentions plus rapides dans ce secteur : **[GécoAir](/gecoair.html)** (IFPEN), toujours disponible et régulièrement enrichie. **[Virtuo](/virtuo.html)** intervention sur la durée, on garde un bon souvenir de la collaboration technique et on souhaite une belle reprise à leurs équipes.*
 
 ## 💊 Santé & qualité de vie au travail
 
