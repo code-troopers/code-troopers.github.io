@@ -7,7 +7,7 @@ draft: false
 tags:
   - iOS
 ---
-GéoVélo souhaitait faire évoluer son application web, dédiée au calcul d’itinéraires cyclables, afin d’améliorer l’expérience utilisateur et de faciliter l’intégration de sa solution chez des partenaires institutionnels et touristiques.
+Geovelo souhaitait faire évoluer son application web, dédiée au calcul d’itinéraires cyclables, afin d’améliorer l’expérience utilisateur et de faciliter l’intégration de sa solution chez des partenaires institutionnels et touristiques.
 
 <!--more-->
 
@@ -25,6 +25,6 @@ Application Angular, intégration de l’API Mapillary, développement frontend 
 
 **Impact :** 
 
-Ces évolutions ont permis à GéoVélo d’enrichir l’expérience utilisateur avec une fonctionnalité immersive, tout en ouvrant la voie à de nouveaux partenariats grâce à une solution facilement intégrable sur des plateformes externes. La portée de l’application s’est élargie et son adoption a été facilitée auprès de collectivités, offices de tourisme et acteurs du vélo.
+Ces évolutions ont permis à Geovelo d’enrichir l’expérience utilisateur avec une fonctionnalité immersive, tout en ouvrant la voie à de nouveaux partenariats grâce à une solution facilement intégrable sur des plateformes externes. La portée de l’application s’est élargie et son adoption a été facilitée auprès de collectivités, offices de tourisme et acteurs du vélo.
 
 Environnement : Angular, Angular Elements

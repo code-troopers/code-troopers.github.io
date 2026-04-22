@@ -16,7 +16,7 @@ Il y a de cela onze ans [exactement](http://code-troopers.com/2013/03/31/premier
 
 À l'origine une équipe de sept, nous sommes désormais une famille de quinze passionnés, dont treize développeurs déterminés à repousser les frontières de la technologie. Depuis nos modestes débuts, nous avons évolué avec le paysage technologique, embrassant de nouvelles langues et frameworks pour rester à la pointe de l'innovation.
 
-Nos réalisations parlent d'elles-mêmes. Que ce soit pour des géants de l'industrie comme Barrière, Vinci, et Renault, ou des startups en plein essor telles que Géovélo, Fizzer, Wegrow et Eutelmed, nous avons laissé notre empreinte sur une multitude de projets divers et passionnants.
+Nos réalisations parlent d'elles-mêmes. Que ce soit pour des géants de l'industrie comme Barrière, Vinci, et Renault, ou des startups en plein essor telles que Geovelo, Fizzer, Wegrow et Eutelmed, nous avons laissé notre empreinte sur une multitude de projets divers et passionnants.
 
 Mais notre parcours ne s'arrête pas là. Nous avons créé des produits à fort impact, comme Navig'Tours, qui est devenu l'application officielle de Filbleu, et avons développé des solutions sur mesure pour des événements emblématiques tels que la Fête de l'Humanité, le Printemps de Bourges et Aucard de Tours.
 
