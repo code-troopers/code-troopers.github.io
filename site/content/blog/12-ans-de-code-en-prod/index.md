@@ -22,7 +22,7 @@ En remontant dans nos plus vieux dépôts git, on a retrouvé **trois projets do
 
 **[L'ERP de Leroy-Somer](/ideas.html)**, premier commit le **27 mai 2014**, signé François Robert, qu'on croise toujours du côté de l'organisation de [Touraine Tech](https://touraine.tech/). François a posé le tout premier fichier, Florian Roulet (autre organisateur de TnT et partenaire régulier de Futsal) a construit les fondations. On a ensuite livré **trois lots sur quatre ans** pour cet ERP Play Framework Java + jQuery, avant de passer en mode maintenance tranquille : redémarrer les serveurs, mettre à jour les librairies, accompagner les migrations d'infra. Il tourne toujours dans les ateliers de maintenance des moteurs électriques chez Nidec Leroy-Somer, douze ans après le premier commit.
 
-**[Chapitô](/chapito.html)**, notre produit maison, premier commit le **15 novembre 2014**, signé Benjamin Cousin. À l'origine : RESTX + Angular côté back, natif Android/iOS côté apps. Aujourd'hui : Spring Boot + Vue.js côté back, React Native côté apps. Les apps ont été complètement réécrites à un moment, le back a traversé toutes ces montées de version sans rater une édition de festival.
+**[Chapitô](/chapito.html)**, notre produit maison, premier commit le **15 novembre 2014**, signé Benjamin Cousin. À l'origine : RESTX + AngularJS côté back, natif Android/iOS côté apps. Aujourd'hui : Spring Boot + Vue.js côté back, React Native côté apps. Les apps ont été complètement réécrites à un moment, le back a traversé toutes ces montées de version sans rater une édition de festival.
 
 Trois projets, trois clients, trois trajectoires différentes. Un point commun : ils sont encore là.
 
@@ -32,7 +32,7 @@ Trois projets, trois clients, trois trajectoires différentes. Un point commun 
 
 **On ne signe pas pour une mission, on signe pour durer.** Les équipes tournent (c'est inévitable, on est humains), mais il y a toujours quelqu'un qui connaît le code. Quand un Trooper quitte un projet, celui qui reprend a déjà plusieurs mois de pair programming dans les pattes.
 
-**Le travail change de forme, pas d'importance.** Un projet de douze ans, c'est rarement douze ans de build intense. Chez Leroy-Somer, on a construit fort pendant quatre ans, puis on a basculé dans le soin régulier. Chez Navig', c'est de la feature ajoutée en continu, avec quelques piques d'activité. Chez Chapitô, il y a eu un gros chantier de réécriture des apps. Les phases s'enchaînent, on s'adapte. Ce qui ne change pas, c'est qu'on est là.
+**Le travail change de forme, pas d'importance.** Un projet de douze ans, c'est rarement douze ans de build intense. Chez Leroy-Somer, on a construit fort pendant quatre ans, puis on a basculé dans le soin régulier. Chez Navig', c'est de la feature ajoutée en continu, avec quelques pics d'activité. Chez Chapitô, il y a eu un gros chantier de réécriture des apps. Les phases s'enchaînent, on s'adapte. Ce qui ne change pas, c'est qu'on est là.
 
 ## Et pour le reste
 
