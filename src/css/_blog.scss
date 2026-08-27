@@ -249,7 +249,118 @@ section#blog {
         iframe {
           max-width: 100%;
         }
-      }
+        // gradient darkened to keep white text above 4.5:1 (WCAG AA)
+        --accessibleGradient: linear-gradient(
+          60deg,
+          color-mix(in srgb, var(--darkblue) 65%, black) 0%,
+          var(--darkerblue) 100%
+        );
+
+        .lede {
+          font-size: 1.2rem;
+          line-height: 1.7rem;
+          color: #667085;
+          margin-bottom: 2rem;
+        }
+
+        hr {
+          border: none;
+          height: 4px;
+          width: 80px;
+          margin: 2.5rem auto 2rem;
+          border-radius: 2px;
+          background: var(--gradient);
+        }
+
+        .cta {
+          text-align: center;
+          background: #f5f9fb;
+          border: 1px solid #e3edf3;
+          border-radius: 0.75rem;
+          padding: 1.5rem 2rem;
+          font-size: 1.05rem;
+          line-height: 2.2rem;
+
+          a {
+            display: inline-block;
+            background: var(--accessibleGradient);
+            color: variables.$white;
+            font-style: normal;
+            font-weight: 600;
+            text-decoration: none;
+            line-height: normal;
+            padding: 0.5rem 1.25rem;
+            border-radius: 2rem;
+            margin: 0 0.25rem;
+            box-shadow: 0 2px 8px rgba(64, 154, 214, 0.35);
+            transition: transform 0.15s ease, box-shadow 0.15s ease;
+
+            &:hover {
+              color: variables.$white;
+              transform: translateY(-2px);
+              box-shadow: 0 4px 12px rgba(64, 154, 214, 0.5);
+            }
+          }
+        }
+
+        .cta-note {
+          text-align: center;
+          font-size: 0.9rem;
+          color: #667085;
+          max-width: 40rem;
+          margin: 1rem auto 0;
+        }
+
+        table {
+          width: 100%;
+          border-collapse: separate;
+          border-spacing: 0;
+          margin: 1.5rem 0;
+          font-size: 0.95rem;
+          border: 1px solid #d9d9d9;
+          border-radius: 0.75rem;
+          overflow: hidden;
+          box-shadow: 0 3px 10px rgba(70, 80, 109, 0.15);
+
+          th,
+          td {
+            padding: 0.65rem 0.9rem;
+            text-align: left;
+            vertical-align: top;
+
+            &:not(:first-child) {
+              border-left: 1px solid #d9d9d9;
+            }
+          }
+
+          thead th {
+            background: var(--accessibleGradient);
+            color: variables.$white;
+            font-family: "Montserrat", Helvetica, Arial, sans-serif;
+            padding-top: 0.8rem;
+            padding-bottom: 0.8rem;
+
+            &:not(:first-child) {
+              border-left-color: rgba(255, 255, 255, 0.3);
+            }
+          }
+
+          tbody td {
+            border-top: 1px solid #d9d9d9;
+          }
+
+          tbody tr {
+            transition: background 0.15s ease;
+
+            &:nth-child(even) {
+              background: #f5f9fb;
+            }
+
+            &:hover {
+              background: #e4eff8;
+            }
+          }
+        }      }
       .content-footer {
         margin: 1rem 0;
         display: flex;
@@ -284,6 +395,68 @@ section#blog {
 }
 
 @media screen and (max-width: variables.$tablet) {
+  section#blog {
+    article > .wrapper-content .content table {
+      // fallback when JS did not stack the table: allow horizontal scroll
+      display: block;
+      overflow-x: auto;
+
+      // rows become labeled cards, no horizontal scroll needed
+      &.stacked {
+        overflow: visible;
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+
+        thead {
+          display: none; // column labels are repeated on each cell
+        }
+
+        tbody,
+        tr,
+        td {
+          display: block;
+        }
+
+        tr {
+          margin-bottom: 1rem;
+          border: 1px solid #d9d9d9;
+          border-radius: 0.75rem;
+          overflow: hidden;
+          box-shadow: 0 3px 10px rgba(70, 80, 109, 0.15);
+        }
+
+        tbody tr:nth-child(even) {
+          background: variables.$white;
+        }
+
+        td {
+          &:not(:first-child) {
+            border-left: none;
+          }
+
+          &:first-child {
+            background: var(--accessibleGradient);
+            color: variables.$white;
+            border-top: none;
+          }
+
+          &::before {
+            content: attr(data-label);
+            display: block;
+            font-size: 0.75rem;
+            font-weight: 600;
+            opacity: 0.7;
+            margin-bottom: 0.1rem;
+          }
+
+          &:first-child::before {
+            display: none;
+          }
+        }
+      }
+    }
+  }
   section#articles {
     .wrapper {
       & > div {

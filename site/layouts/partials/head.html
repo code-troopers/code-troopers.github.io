@@ -24,9 +24,7 @@
   <link rel="canonical" href="{{ printf "%s%s" site.Params.siteUrl .RelPermalink }}" />
 
   <!-- Open Graph + Twitter Card -->
-  {{ partial "opengraph.html" . }} {{ if .IsHome }}
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-  {{ end }}
+  {{ partial "opengraph.html" . }}
 
   {{ if and .IsPage (eq .Section "blog") }}
   {{ $cover := "" }}
