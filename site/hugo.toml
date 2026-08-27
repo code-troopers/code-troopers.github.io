@@ -8,6 +8,8 @@ baseurl = "/"
 
 [security]
 enableInlineShortcodes = false
+# Hugo >= 0.164 denies text/html content files by default; the homepage is content/_index.html
+allowContent = ["^text/(markdown|html|asciidoc)$"]
 
 [security.exec]
 allow = ["^dart-sass-embedded$", "^go$", "^npx$", "^postcss$", "^asciidoctor$"]
