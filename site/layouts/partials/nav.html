@@ -1,7 +1,7 @@
 <header>
   <nav aria-label="Navigation principale">
     <ul>
-      {{ range .Site.Data.menu.links }}
+      {{ range hugo.Data.menu.links }}
       <li><a id="{{ .id }}" href="{{ .url }}"><span>{{ .name }}</span></a></li>
       {{ end }}
     </ul>

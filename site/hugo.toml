@@ -1,8 +1,6 @@
-languageCode = "fr-FR"
-defaultContentLang = "fr"
-languageLang = "fr"
+locale = "fr-FR"
 defaultContentLanguage = "fr"
-disableKinds = ["RSS", "taxonomy", "taxonomyTerm"]
+disableKinds = ["RSS", "taxonomy"]
 title = "Code-Troopers"
 baseurl = "/"
 

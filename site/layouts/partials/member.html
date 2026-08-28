@@ -5,7 +5,7 @@
 <div class="team-members-wrapper" role="region" aria-roledescription="carrousel" aria-label="Membres de l'équipe">
     <ul class="team-members" aria-live="polite">
         {{ $pageResource := .Resources }}
-        {{ range $member := (shuffle (.Site.Data.team.team)) }}
+        {{ range $member := (shuffle (hugo.Data.team.team)) }}
         {{ if $member.photo }}
         <li class="team-member">
             {{ with $pageResource.GetMatch $member.photo }}

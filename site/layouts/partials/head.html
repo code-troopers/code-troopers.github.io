@@ -2,7 +2,7 @@
   <title>{{ .Title }} - {{ $.Site.Title }}</title>
   <meta name="description" content="{{ .Description }}" />
 
-  {{ $stylesheet := .Site.Data.webpack.main }} {{ with $stylesheet.css }} {{ if
+  {{ $stylesheet := hugo.Data.webpack.main }} {{ with $stylesheet.css }} {{ if
   (reflect.IsSlice .) }} {{ range . }}
   <link href="{{ . | relURL }}" rel="stylesheet" />
   {{ end }} {{ else }}
