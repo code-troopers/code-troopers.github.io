@@ -5,9 +5,9 @@
   <meta name="description" content="" />
 
      
-  <link href="/main.144ee.css" rel="stylesheet" />
+  <link href="/main.44025.css" rel="stylesheet" />
   
-  <link href="/main.2e60a1aff866aa5b20a4.css" rel="stylesheet" />
+  <link href="/main.832dc4e1ba6bbe5ee2ee.css" rel="stylesheet" />
     
   <meta charset="utf-8" />
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
@@ -22,6 +22,8 @@
   <link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#ff4400" />
   <meta name="theme-color" content="#fff" />
 
+  <link rel="canonical" href="https://code-troopers.com/2018/09/18/angular-seo/" />
+
   
   
 
@@ -32,7 +34,8 @@
 " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://code-troopers.com/2018/09/18/angular-seo/" />
-<meta property="og:image" content="https://code-troopers.com/2018/09/18/angular-seo/angularseo-banner_hu_af3d2f4f77e39081.png" />
+<meta property="og:locale" content="fr_FR" />
+<meta property="og:image" content="https://code-troopers.com/2018/09/18/angular-seo/angularseo-banner_hu_99b67896e199124d.png" />
 <meta property="og:site_name" content="Code-Troopers" />
 <meta property="article:published_time" content="2018-09-18T00:00:00&#43;00:00" />
 <meta property="article:author" content="Benjamin" />
@@ -43,12 +46,26 @@
 <meta name="twitter:title" content="SEO et Single Page Application" />
 <meta name="twitter:description" content=" Lorsque nous avons commencé à développer We Guide, nous avons pas mal réfléchi à quel framework utiliser pour réaliser la partie front et, du fait de notre expérience, avons choisi Angular. Nous connaissions les problèmes liés aux Single Page Application et au SEO mais nous pensions pouvoir les résoudre facilement par la suite. Au final, c’était un peu plus compliqué que prévu et nous allons expliquer pourquoi dans la suite de cet article.
 " />
-<meta name="twitter:image" content="https://code-troopers.com/2018/09/18/angular-seo/angularseo-banner_hu_af3d2f4f77e39081.png" />
- 
+<meta name="twitter:image" content="https://code-troopers.com/2018/09/18/angular-seo/angularseo-banner_hu_99b67896e199124d.png" />
+
+
+  
+  
+  
+    
+      
+    
+  
+  
+  
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Organization","name":"Benjamin","url":"https://code-troopers.com/"},"dateModified":"2018-09-18","datePublished":"2018-09-18","description":"","headline":"SEO et Single Page Application","image":"https://code-troopers.com/2018/09/18/angular-seo/angularseo-banner_hu_99b67896e199124d.png","inLanguage":"fr-FR","mainEntityOfPage":{"@id":"https://code-troopers.com/2018/09/18/angular-seo/","@type":"WebPage"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://code-troopers.com/img/Code-Troopers.png"},"name":"Code-Troopers","url":"https://code-troopers.com/"}}</script>
+  
+
   <script
     src="https://code.jquery.com/jquery-3.7.1.min.js"
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
     crossorigin="anonymous"
+    defer
   ></script>
 </head>
 
@@ -91,7 +108,7 @@
             <article>
                 
                     
-                        <img src="/2018/09/18/angular-seo/angularseo-banner_hu_b3c1b62da89bc104.webp" width="900" height="500" alt="Illustration de l'article SEO et Single Page Application">
+                        <img src="/2018/09/18/angular-seo/angularseo-banner_hu_9633eaf445a3349d.webp" width="900" height="500" alt="Illustration de l'article SEO et Single Page Application">
                     
                 
                 <div class="wrapper-content">
@@ -107,7 +124,7 @@
                     
                     <div class="content">
                         <div class="paragraph">
-<p>Lorsque nous avons commencé à développer <a href="https://www.weguide.fr" target="_blank" rel="noopener">We Guide</a>, nous avons pas mal réfléchi à quel framework utiliser pour réaliser la partie front et, du fait de notre expérience, avons choisi <strong>Angular</strong>.
+<p>Lorsque nous avons commencé à développer <a href="https://www.weguide.fr" rel="noopener" target="_blank">We Guide</a>, nous avons pas mal réfléchi à quel framework utiliser pour réaliser la partie front et, du fait de notre expérience, avons choisi <strong>Angular</strong>.
 Nous connaissions les problèmes liés aux <strong>Single Page Application</strong> et au <strong>SEO</strong> mais nous pensions pouvoir les résoudre facilement par la suite.
 Au final, c’était un peu plus compliqué que prévu et nous allons expliquer pourquoi dans la suite de cet article.</p>
 </div>
@@ -201,7 +218,7 @@ class SitemapController(@Autowired val sitemapView: SitemapView) {
 </div>
 </div>
 <div class="paragraph">
-<p>Pour générer le fichier <strong>XML</strong>, nous avons utilisé cette librairie <a href="https://github.com/lgraubner/sitemap-generator" target="_blank" rel="noopener">https://github.com/lgraubner/sitemap-generator</a>.</p>
+<p>Pour générer le fichier <strong>XML</strong>, nous avons utilisé cette librairie <a href="https://github.com/lgraubner/sitemap-generator" rel="noopener" target="_blank">https://github.com/lgraubner/sitemap-generator</a>.</p>
 </div>
 </div>
 </div>
@@ -213,10 +230,10 @@ class SitemapController(@Autowired val sitemapView: SitemapView) {
 Il faut ajouter une logique au niveau du serveur front qui, si l’appel vient d’un robot, le redirige vers un service permettant de générer le code <strong>HTML</strong> final de notre page car le problème des robots c’est que un, ils n’aiment pas le javascript (le moteur utilisé n’est pas récent) et deux, ils n’aiment pas attendre.</p>
 </div>
 <div class="paragraph">
-<p>Le service en question que nous avons choisi se nomme <strong>Rendertron</strong> (<a href="https://github.com/GoogleChrome/rendertron" target="_blank" rel="noopener">https://github.com/GoogleChrome/rendertron</a>). Ce n’est rien d’autre qu’un <strong>Google Chrome</strong> headless auquel on envoie l’url de la page que l’on désire et nous renvoie le code <strong>HTML</strong> en réponse.</p>
+<p>Le service en question que nous avons choisi se nomme <strong>Rendertron</strong> (<a href="https://github.com/GoogleChrome/rendertron" rel="noopener" target="_blank">https://github.com/GoogleChrome/rendertron</a>). Ce n’est rien d’autre qu’un <strong>Google Chrome</strong> headless auquel on envoie l’url de la page que l’on désire et nous renvoie le code <strong>HTML</strong> en réponse.</p>
 </div>
 <div class="paragraph">
-<p>Pour décider si l’on doit faire du rendu côté serveur ou du rendu côté client, nous nous sommes inspirés d’une librairie Java <a href="https://github.com/greengerong/prerender-java" target="_blank" rel="noopener">https://github.com/greengerong/prerender-java</a>.
+<p>Pour décider si l’on doit faire du rendu côté serveur ou du rendu côté client, nous nous sommes inspirés d’une librairie Java <a href="https://github.com/greengerong/prerender-java" rel="noopener" target="_blank">https://github.com/greengerong/prerender-java</a>.
 Cette librairie fournit directement un filtre <strong>HTTP</strong> permettant de rediriger vers une url si le <code>User-Agent</code> est compris dans la liste des robots de crawling.</p>
 </div>
 <div class="paragraph">
@@ -251,10 +268,10 @@ public FilterRegistrationBean registerSeoFilter() {
 <div class="ulist">
 <ul>
 <li>
-<p><a href="https://cards-dev.twitter.com/validator" target="_blank" rel="noopener">https://cards-dev.twitter.com/validator</a> : le système de <strong>Twitter</strong> pour vérifier l’aperçu d’un lien quand on le partage dans un tweet.</p>
+<p><a href="https://cards-dev.twitter.com/validator" rel="noopener" target="_blank">https://cards-dev.twitter.com/validator</a> : le système de <strong>Twitter</strong> pour vérifier l’aperçu d’un lien quand on le partage dans un tweet.</p>
 </li>
 <li>
-<p><a href="https://search.google.com/search-console" target="_blank" rel="noopener">https://search.google.com/search-console</a> : la <strong>Google Search Console</strong>, l’outil de <strong>Google</strong> vous permet de voir le <strong>HTML</strong> ou même une capture d’écran d’une URL de votre site de la façon dont voit le robot d’indexation de <strong>Google</strong>. Il vous permet aussi de consulter le sitemap et voir si ses urls ont bien été indexées.</p>
+<p><a href="https://search.google.com/search-console" rel="noopener" target="_blank">https://search.google.com/search-console</a> : la <strong>Google Search Console</strong>, l’outil de <strong>Google</strong> vous permet de voir le <strong>HTML</strong> ou même une capture d’écran d’une URL de votre site de la façon dont voit le robot d’indexation de <strong>Google</strong>. Il vous permet aussi de consulter le sitemap et voir si ses urls ont bien été indexées.</p>
 </li>
 </ul>
 </div>
@@ -417,7 +434,7 @@ public FilterRegistrationBean registerSeoFilter() {
 
     
     
-      <script src="/main.144ee.js"></script>
+      <script src="/main.44025.js"></script>
     
     <script>
       const d = new Date();

@@ -5,9 +5,9 @@
   <meta name="description" content="" />
 
      
-  <link href="/main.144ee.css" rel="stylesheet" />
+  <link href="/main.44025.css" rel="stylesheet" />
   
-  <link href="/main.2e60a1aff866aa5b20a4.css" rel="stylesheet" />
+  <link href="/main.832dc4e1ba6bbe5ee2ee.css" rel="stylesheet" />
     
   <meta charset="utf-8" />
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
@@ -22,6 +22,8 @@
   <link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#ff4400" />
   <meta name="theme-color" content="#fff" />
 
+  <link rel="canonical" href="https://code-troopers.com/2018/11/14/android-deobfuscation/" />
+
   
   
 
@@ -32,7 +34,8 @@
 " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://code-troopers.com/2018/11/14/android-deobfuscation/" />
-<meta property="og:image" content="https://code-troopers.com/2018/11/14/android-deobfuscation/android-rocket-banner_hu_e97e0f0c2f156282.png" />
+<meta property="og:locale" content="fr_FR" />
+<meta property="og:image" content="https://code-troopers.com/2018/11/14/android-deobfuscation/android-rocket-banner_hu_42a78468082e0f64.png" />
 <meta property="og:site_name" content="Code-Troopers" />
 <meta property="article:published_time" content="2018-11-14T00:00:00&#43;00:00" />
 <meta property="article:author" content="Florian" />
@@ -44,12 +47,26 @@
 <meta name="twitter:title" content="Android - Obfuscation et Désobfuscation" />
 <meta name="twitter:description" content=" C’est un fait, décompiler une application android (le fichier apk) pour en examiner le code source est une chose plutôt simple. Il existe de nombreux outils permettant de le faire et c’est logique car, grossièrement, l’apk n’est qu’une archive contenant le code source de l’application et les différentes ressources utilisées dans celle-ci (images, fichiers de langue, layouts de vue…​). Les motivations pour cela peuvent être nombreuses et variées et ce n’est d’ailleurs pas très important car, à partir du moment où c’est faisable, des personnes le feront.
 " />
-<meta name="twitter:image" content="https://code-troopers.com/2018/11/14/android-deobfuscation/android-rocket-banner_hu_e97e0f0c2f156282.png" />
- 
+<meta name="twitter:image" content="https://code-troopers.com/2018/11/14/android-deobfuscation/android-rocket-banner_hu_42a78468082e0f64.png" />
+
+
+  
+  
+  
+    
+      
+    
+  
+  
+  
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Organization","name":"Florian","url":"https://code-troopers.com/"},"dateModified":"2018-11-14","datePublished":"2018-11-14","description":"","headline":"Android - Obfuscation et Désobfuscation","image":"https://code-troopers.com/2018/11/14/android-deobfuscation/android-rocket-banner_hu_42a78468082e0f64.png","inLanguage":"fr-FR","mainEntityOfPage":{"@id":"https://code-troopers.com/2018/11/14/android-deobfuscation/","@type":"WebPage"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://code-troopers.com/img/Code-Troopers.png"},"name":"Code-Troopers","url":"https://code-troopers.com/"}}</script>
+  
+
   <script
     src="https://code.jquery.com/jquery-3.7.1.min.js"
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
     crossorigin="anonymous"
+    defer
   ></script>
 </head>
 
@@ -92,7 +109,7 @@
             <article>
                 
                     
-                        <img src="/2018/11/14/android-deobfuscation/android-rocket-banner_hu_612c2503928ec98.webp" width="900" height="500" alt="Illustration de l'article Android - Obfuscation et Désobfuscation">
+                        <img src="/2018/11/14/android-deobfuscation/android-rocket-banner_hu_274e48a95dc0c673.webp" width="900" height="500" alt="Illustration de l'article Android - Obfuscation et Désobfuscation">
                     
                 
                 <div class="wrapper-content">
@@ -149,7 +166,7 @@ Or, si le code source présent sur le device d’un utilisateur est obfusqué, l
 <div class="paragraph">
 <p>Et voilà à quoi cela peut ressembler :
 </p><div style="text-align : center">
-<a class="inlineBoxes" href="/images/posts/2018-11-14-Android-Deobfuscation/android-playstore-stacktrace.png" data-lightbox="1">
+<a class="inlineBoxes" data-lightbox="1" href="/images/posts/2018-11-14-Android-Deobfuscation/android-playstore-stacktrace.png">
         <img class="medium" src="/images/posts/2018-11-14-Android-Deobfuscation/android-playstore-stacktrace.png"/>
 </a>
 </div><p></p>
@@ -164,7 +181,7 @@ Elle va nous permettre d’ajouter un fichier de mapping qui va faire le lien en
 </div>
 <div class="paragraph">
 <p></p><div style="text-align : center">
-<a class="inlineBoxes" href="/images/posts/2018-11-14-Android-Deobfuscation/android-playstore-deobfuscation.png" data-lightbox="1">
+<a class="inlineBoxes" data-lightbox="1" href="/images/posts/2018-11-14-Android-Deobfuscation/android-playstore-deobfuscation.png">
         <img class="medium" src="/images/posts/2018-11-14-Android-Deobfuscation/android-playstore-deobfuscation.png"/>
 </a>
 </div><p></p>
@@ -215,7 +232,7 @@ Voici donc la même erreur mais avec le fichier de mapping uploadé :</p>
 </div>
 <div class="paragraph">
 <p></p><div style="text-align : center">
-<a class="inlineBoxes" href="/images/posts/2018-11-14-Android-Deobfuscation/android-playstore-stacktrace-deobfuscated.png" data-lightbox="1">
+<a class="inlineBoxes" data-lightbox="1" href="/images/posts/2018-11-14-Android-Deobfuscation/android-playstore-stacktrace-deobfuscated.png">
         <img class="medium" src="/images/posts/2018-11-14-Android-Deobfuscation/android-playstore-stacktrace-deobfuscated.png"/>
 </a>
 </div><p></p>
@@ -430,7 +447,7 @@ Ces outils sont <a href="https://fastlane.tools/">Fastlane</a> et le <a href="ht
 
     
     
-      <script src="/main.144ee.js"></script>
+      <script src="/main.44025.js"></script>
     
     <script>
       const d = new Date();

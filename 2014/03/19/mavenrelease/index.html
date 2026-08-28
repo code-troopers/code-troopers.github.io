@@ -5,9 +5,9 @@
   <meta name="description" content="" />
 
      
-  <link href="/main.144ee.css" rel="stylesheet" />
+  <link href="/main.44025.css" rel="stylesheet" />
   
-  <link href="/main.2e60a1aff866aa5b20a4.css" rel="stylesheet" />
+  <link href="/main.832dc4e1ba6bbe5ee2ee.css" rel="stylesheet" />
     
   <meta charset="utf-8" />
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
@@ -22,6 +22,8 @@
   <link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#ff4400" />
   <meta name="theme-color" content="#fff" />
 
+  <link rel="canonical" href="https://code-troopers.com/2014/03/19/mavenrelease/" />
+
   
   
 
@@ -34,7 +36,8 @@ En fait, il est bon de savoir que Sonatype permet la mise à disposition de n’
 " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://code-troopers.com/2014/03/19/mavenrelease/" />
-<meta property="og:image" content="https://code-troopers.com/2014/03/19/mavenrelease/mavenRelease-banner_hu_1399b32ca83fb201.png" />
+<meta property="og:locale" content="fr_FR" />
+<meta property="og:image" content="https://code-troopers.com/2014/03/19/mavenrelease/mavenRelease-banner_hu_2735109670c49081.png" />
 <meta property="og:site_name" content="Code-Troopers" />
 <meta property="article:published_time" content="2014-03-19T00:00:00&#43;00:00" />
 <meta property="article:author" content="Cedric" />
@@ -48,12 +51,26 @@ En fait, il est bon de savoir que Sonatype permet la mise à disposition de n’
 Souvent un des freins à la libre distribution de ces sources très utiles n’est pas la mise à disposition des sources (Github a bien aidé dans ce sens ces dernières années), mais la distribution sur un des dépôts Maven accessible au tout venant.
 En fait, il est bon de savoir que Sonatype permet la mise à disposition de n’importe quelle bibliothèque ( open source ) dans les dépôts centraux de Maven. Pour ce faire il suffit de suivre quelques étapes.
 " />
-<meta name="twitter:image" content="https://code-troopers.com/2014/03/19/mavenrelease/mavenRelease-banner_hu_1399b32ca83fb201.png" />
- 
+<meta name="twitter:image" content="https://code-troopers.com/2014/03/19/mavenrelease/mavenRelease-banner_hu_2735109670c49081.png" />
+
+
+  
+  
+  
+    
+      
+    
+  
+  
+  
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Organization","name":"Cedric","url":"https://code-troopers.com/"},"dateModified":"2014-03-19","datePublished":"2014-03-19","description":"","headline":"Distribuer sur Maven Central ses bibliothèques","image":"https://code-troopers.com/2014/03/19/mavenrelease/mavenRelease-banner_hu_2735109670c49081.png","inLanguage":"fr-FR","mainEntityOfPage":{"@id":"https://code-troopers.com/2014/03/19/mavenrelease/","@type":"WebPage"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://code-troopers.com/img/Code-Troopers.png"},"name":"Code-Troopers","url":"https://code-troopers.com/"}}</script>
+  
+
   <script
     src="https://code.jquery.com/jquery-3.7.1.min.js"
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
     crossorigin="anonymous"
+    defer
   ></script>
 </head>
 
@@ -96,7 +113,7 @@ En fait, il est bon de savoir que Sonatype permet la mise à disposition de n’
             <article>
                 
                     
-                        <img src="/2014/03/19/mavenrelease/mavenRelease-banner_hu_2f3e46f66b4cc4b5.webp" width="900" height="500" alt="Illustration de l'article Distribuer sur Maven Central ses bibliothèques">
+                        <img src="/2014/03/19/mavenrelease/mavenRelease-banner_hu_d3016afe7e79986e.webp" width="900" height="500" alt="Illustration de l'article Distribuer sur Maven Central ses bibliothèques">
                     
                 
                 <div class="wrapper-content">
@@ -122,7 +139,7 @@ En fait, il est bon de savoir que Sonatype permet la mise à disposition de n’
 <p>Ainsi il va être nécessaire de signer tous les binaires que vous allez produire, ceci passe par l&rsquo;utilisation de <a href="http://www.gnupg.org/">GnuPG</a> et de la mise à disposition de votre clef publique.</p>
 <h3 id="installation-de-gnupg">Installation de GnuPG</h3>
 <p>L&rsquo;installation passe par votre gestionnaire de package classique (<code>apt-get install gpg</code>, <code>brew install gpg</code>, <code>install-gpg-on-my-os.exe</code>&hellip;). De là, vous pourrez vérifier dans un <em>shell</em> que vous avez une version d&rsquo;accessible en tapant par exemple la commande suivante:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ gpg --version
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ gpg --version
 </span></span><span style="display:flex;"><span>gpg <span style="color:#f92672">(</span>GnuPG<span style="color:#f92672">)</span> 1.4.16
 </span></span><span style="display:flex;"><span>Copyright <span style="color:#f92672">(</span>C<span style="color:#f92672">)</span> <span style="color:#ae81ff">2013</span> Free Software Foundation, Inc.
 </span></span><span style="display:flex;"><span>License GPLv3+: GNU GPL version <span style="color:#ae81ff">3</span> or later &lt;http://gnu.org/licenses/gpl.html&gt;
@@ -139,18 +156,18 @@ En fait, il est bon de savoir que Sonatype permet la mise à disposition de n’
 </span></span></code></pre></div><h3 id="génération-de-la-clef">Génération de la clef</h3>
 <p>GnuPG est un mécanisme de chiffrement impliquant une clef publique (distribuée librement) associée à une clef privée (à garder précieusement). Avant de pouvoir prétendre distribuer des binaires chiffrés, il convient donc de générer le couple clef privée/publique et de distribuer la clef publique sur les serveurs appropriés.
 Ainsi, après avoir fourni nom, email et commentaire pour votre clef, vous serez prêt à la distribuer au plus grand nombre :</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ gpg --gen-key
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ gpg --gen-key
 </span></span></code></pre></div><p>Dans les écrans qui apparaissent, vous pouvez conserver les valeurs par défaut pour la plupart des éléments (type, taille et durée de validité). Enfin, vous allez devoir spécifier la <em>passphrase</em> de votre clef. N&rsquo;hésitez pas à utiliser une phrase : elle sera plus difficilement &ldquo;cassable&rdquo; et vous vous en rappelerez certainement mieux qu&rsquo;un mot de passe complexe.</p>
 <h3 id="vérification-de-la-clef">Vérification de la clef</h3>
 <p>Pour vérifier que votre clef est correctement installée, vous pouvez récupérer la liste des clefs connues par votre système. Ainsi pour connaître les clefs publiques vous pouvez taper :</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ gpg --list-keys
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ gpg --list-keys
 </span></span><span style="display:flex;"><span>/Users/cgatay/.gnupg/pubring.gpg
 </span></span><span style="display:flex;"><span>--------------------------------
 </span></span><span style="display:flex;"><span>pub   2048R/CE236D5E 2013-04-28
 </span></span><span style="display:flex;"><span>uid                  Cedric Gatay &lt;cedric@gatay.fr&gt;
 </span></span><span style="display:flex;"><span>sub   2048R/08130909 2013-04-28
 </span></span></code></pre></div><p>Et pour les clefs privées :</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ gpg --list-secret-keys
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ gpg --list-secret-keys
 </span></span><span style="display:flex;"><span>/Users/cgatay/.gnupg/secring.gpg
 </span></span><span style="display:flex;"><span>--------------------------------
 </span></span><span style="display:flex;"><span>sec   2048R/CE236D5E 2013-04-28
@@ -160,9 +177,9 @@ Ainsi, après avoir fourni nom, email et commentaire pour votre clef, vous serez
 <h3 id="distribution-de-la-clef-publique">Distribution de la clef publique</h3>
 <p>Pour que tout le monde soit à même de vérifier votre &ldquo;identité&rdquo;, il faut distribuer votre clef publique sur les dépôts reconnus. L&rsquo;un d&rsquo;eux est <code>hkp://pool.sks-keyservers.net</code> qui fera la distribution auprès des différents serveurs OpenPGP.
 Pour se faire, il suffit de lancer la synchronisation vers ce serveur, en remplaçant <code>${KEY_ID}</code> par l&rsquo;id de votre clef publique tel que récupéré lors de la commande précédente (dans mon cas il s&rsquo;agit de <code>CE236D5E</code>):</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>    $ gpg --keyserver hkp://pool.sks-keyservers.net --send-keys <span style="color:#e6db74">${</span>KEY_ID<span style="color:#e6db74">}</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>    $ gpg --keyserver hkp://pool.sks-keyservers.net --send-keys <span style="color:#e6db74">${</span>KEY_ID<span style="color:#e6db74">}</span>
 </span></span></code></pre></div><p>Pour vérifier que l&rsquo;envoi s&rsquo;est fait comme attendu, vous pouvez demander à récupérer la clef par la commande suivante :</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>    $ gpg --keyserver hkp://pool.sks-keyservers.net --recv-keys <span style="color:#e6db74">${</span>KEY_ID<span style="color:#e6db74">}</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>    $ gpg --keyserver hkp://pool.sks-keyservers.net --recv-keys <span style="color:#e6db74">${</span>KEY_ID<span style="color:#e6db74">}</span>
 </span></span></code></pre></div><h2 id="création-dun-compte-sur-sonatype">Création d&rsquo;un compte sur Sonatype</h2>
 <p>La distribution de binaires passe par la création d&rsquo;un compte sur le <a href="https://issues.sonatype.org">JIRA de Sonatype</a>. La procédure est assez simple, elle ne vaut pas la peine d&rsquo;être détaillée plus avant.
 Ensuite, pour faire vous autoriser à distribuer vos applicatifs, il est nécessaire de créer un ticket pour demander les droits correspondants. Ce ticket doit être du type <em>Support - Open Source Project Repository Hosting</em> - <em>New Project</em> dans le JIRA OSSRH.
@@ -198,7 +215,7 @@ Il vous faudra ensuite remplir les champs suivants :</p>
 <h3 id="modification-de-votre-projet">Modification de votre projet</h3>
 <p>De plus il est indispensable d&rsquo;hériter du <a href="http://repo1.maven.org/maven2/org/sonatype/oss/oss-parent/7/oss-parent-7.pom">projet parent de Sonatype</a>, celui-ci décrit en fait les plugins ainsi que les dépôts qui vont être utilisés pour la livraison.</p>
 <p>Vous devez donc ajouter dans votre descripteur le lien avec le parent Sonatype :</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#f92672">&lt;project&gt;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#f92672">&lt;project&gt;</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;parent&gt;</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;groupId&gt;</span>org.sonatype.oss<span style="color:#f92672">&lt;/groupId&gt;</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;artifactId&gt;</span>oss-parent<span style="color:#f92672">&lt;/artifactId&gt;</span>
@@ -207,7 +224,7 @@ Il vous faudra ensuite remplir les champs suivants :</p>
 </span></span><span style="display:flex;"><span>  <span style="color:#75715e">&lt;!-- le reste de votre descripteur --&gt;</span>
 </span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/project&gt;</span>
 </span></span></code></pre></div><p>Pour le remplissage des informations de votre dépôt de sources, plusieurs façon de les remplir s&rsquo;offrent à vous en fonction du type de dépôt que vous utilisez, dans la majorité des cas pour les projets récents, le système de gestion de version utilisé est Git, la partie correspondant dans le <code>pom.xml</code>sera donc de la forme suivante (en ajustant <code>${USER}</code> et <code>${PROJECT}</code> bien entendu) :</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#f92672">&lt;scm&gt;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#f92672">&lt;scm&gt;</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;connection&gt;</span>scm:git:git@github.com:${USER}/${PROJECT}.git<span style="color:#f92672">&lt;/connection&gt;</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;developerConnection&gt;</span>scm:git:git@github.com:${USER}/${PROJECT}.git<span style="color:#f92672">&lt;/developerConnection&gt;</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;url&gt;</span>git@github.com:${USER}/${PROJECT}.git<span style="color:#f92672">&lt;/url&gt;</span>
@@ -219,7 +236,7 @@ Il vous faudra ensuite remplir les champs suivants :</p>
 <li>vous ne voulez pas passer sur chacun des projets si vous les changez</li>
 </ul>
 <p>La technique est donc d&rsquo;utiliser le fichier de configuration global de Maven en définissant des paramètres. Ainsi, en éditant le fichier <code>~/.m2/settings.xml</code> vous allez ajouter vos identifiants (encore une fois, en ajustant <code>${USER}</code> et <code>${PASSWORD}</code>):</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span>  <span style="color:#f92672">&lt;servers&gt;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span>  <span style="color:#f92672">&lt;servers&gt;</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;server&gt;</span>
 </span></span><span style="display:flex;"><span>      <span style="color:#f92672">&lt;id&gt;</span>sonatype-nexus-snapshots<span style="color:#f92672">&lt;/id&gt;</span>
 </span></span><span style="display:flex;"><span>      <span style="color:#f92672">&lt;username&gt;</span>${USER}<span style="color:#f92672">&lt;/username&gt;</span>
@@ -234,7 +251,7 @@ Il vous faudra ensuite remplir les champs suivants :</p>
 </span></span></code></pre></div><h2 id="distribution-dune-version-snapshot">Distribution d&rsquo;une version <code>SNAPSHOT</code></h2>
 <p>Si vous désirez distribuer vos bibliothèques sur des dépôts centraux, vous devez connaître les notions de <code>SNAPSHOT</code> et <em>release</em> propres à Maven. Pour faire un bref rappel, les versions <code>SNAPSHOT</code> sont des versions en développement alors que les versions <em>release</em> sont les versions finales. Ainsi, dépendre d&rsquo;une version <code>SNAPSHOT</code> déclenchera des vérifications régulières par l&rsquo;outil de construction pour récupérer toujours la dernière version alors qu&rsquo;une version <em>release</em> ne sera rapatriée qu&rsquo;une et une seule fois (en assurant la stabilité de la construction).</p>
 <p>Sonatype fourni un dépôt pour de telles versions de développement ainsi qu&rsquo;un dépôt pour les versions stables. Dans un premier temps et pour tester que votre système est correctement configuré, vous allez déployer une version <code>SNAPSHOT</code> de votre librairie :</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ mvn clean deploy
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ mvn clean deploy
 </span></span></code></pre></div><p>Si tout se passe comme prévu, votre livrable sera visible et disponible sur le dépôt SNAPSHOT de Sonatype : <a href="https://oss.sonatype.org/content/repositories/snapshots">https://oss.sonatype.org/content/repositories/snapshots</a>
 En cas d&rsquo;erreur <code>401 Unauthorized</code>, vérifiez que vos identifiants JIRA sont corrects (en vous connectant sur <a href="https://issues.sonatype.org">https://issues.sonatype.org</a>).</p>
 <h2 id="préparation-et-distribution-dune-release">Préparation et distribution d&rsquo;une <em>release</em></h2>
@@ -409,7 +426,7 @@ Dans la partie <em>Staging Repositories</em>, vous verrez une ligne correspondan
 
     
     
-      <script src="/main.144ee.js"></script>
+      <script src="/main.44025.js"></script>
     
     <script>
       const d = new Date();

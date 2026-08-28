@@ -5,9 +5,9 @@
   <meta name="description" content="" />
 
      
-  <link href="/main.144ee.css" rel="stylesheet" />
+  <link href="/main.44025.css" rel="stylesheet" />
   
-  <link href="/main.2e60a1aff866aa5b20a4.css" rel="stylesheet" />
+  <link href="/main.832dc4e1ba6bbe5ee2ee.css" rel="stylesheet" />
     
   <meta charset="utf-8" />
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
@@ -22,6 +22,8 @@
   <link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#ff4400" />
   <meta name="theme-color" content="#fff" />
 
+  <link rel="canonical" href="https://code-troopers.com/2018/04/09/ga-gtm/" />
+
   
   
 
@@ -33,7 +35,8 @@ Pour ceux qui ne connaissent pas Google Tag Manager, c’est un outil permettant
 " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://code-troopers.com/2018/04/09/ga-gtm/" />
-<meta property="og:image" content="https://code-troopers.com/2018/04/09/ga-gtm/ga-gtm-banner_hu_341ea423ae25d288.png" />
+<meta property="og:locale" content="fr_FR" />
+<meta property="og:image" content="https://code-troopers.com/2018/04/09/ga-gtm/ga-gtm-banner_hu_ea25454a9806dbd6.png" />
 <meta property="og:site_name" content="Code-Troopers" />
 <meta property="article:published_time" content="2018-04-10T00:00:00&#43;00:00" />
 <meta property="article:author" content="Benjamin" />
@@ -45,12 +48,26 @@ Pour ceux qui ne connaissent pas Google Tag Manager, c’est un outil permettant
 <meta name="twitter:description" content=" C’est en branchant Facebook PIXEL sur un projet, que j’ai enfin compris et vraiment utilisé Google Tag Manager. L’aide très bien faite de la mise en place de PIXEL préconise celui-ci pour activer et configurer le traqueur Facebook et cela m’a donné envie d’en faire de même pour Google Analytics.
 Pour ceux qui ne connaissent pas Google Tag Manager, c’est un outil permettant d’ajouter, modifier des bouts de Javascript (tags) afin de gérer les analytics ou la pub par exemple à l’aide du back office, et tout ça sans avoir à modifier ou relivrer son application.
 " />
-<meta name="twitter:image" content="https://code-troopers.com/2018/04/09/ga-gtm/ga-gtm-banner_hu_341ea423ae25d288.png" />
- 
+<meta name="twitter:image" content="https://code-troopers.com/2018/04/09/ga-gtm/ga-gtm-banner_hu_ea25454a9806dbd6.png" />
+
+
+  
+  
+  
+    
+      
+    
+  
+  
+  
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Organization","name":"Benjamin","url":"https://code-troopers.com/"},"dateModified":"2018-04-10","datePublished":"2018-04-10","description":"","headline":"Google Analytics via Google Tag Manager","image":"https://code-troopers.com/2018/04/09/ga-gtm/ga-gtm-banner_hu_ea25454a9806dbd6.png","inLanguage":"fr-FR","mainEntityOfPage":{"@id":"https://code-troopers.com/2018/04/09/ga-gtm/","@type":"WebPage"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://code-troopers.com/img/Code-Troopers.png"},"name":"Code-Troopers","url":"https://code-troopers.com/"}}</script>
+  
+
   <script
     src="https://code.jquery.com/jquery-3.7.1.min.js"
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
     crossorigin="anonymous"
+    defer
   ></script>
 </head>
 
@@ -93,7 +110,7 @@ Pour ceux qui ne connaissent pas Google Tag Manager, c’est un outil permettant
             <article>
                 
                     
-                        <img src="/2018/04/09/ga-gtm/ga-gtm-banner_hu_431e44c13bba38d0.webp" width="900" height="500" alt="Illustration de l'article Google Analytics via Google Tag Manager">
+                        <img src="/2018/04/09/ga-gtm/ga-gtm-banner_hu_565ef35e584a2ce3.webp" width="900" height="500" alt="Illustration de l'article Google Analytics via Google Tag Manager">
                     
                 
                 <div class="wrapper-content">
@@ -119,7 +136,7 @@ L’aide très bien faite de la mise en place de <strong>PIXEL</strong> préconi
 <h2 id="_1ère_étape_configurer_google_tag_manager">1ère étape : Configurer Google Tag Manager</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>C’est un jeu d’enfants, il suffit de vous rendre sur l’interface d’administration (<a href="https://tagmanager.google.com" class="bare">https://tagmanager.google.com</a>), de créer un conteneur et d’ajouter deux bouts de code JS dans votre site et c’est normalement la seule modification qui sera faite dans votre code.
+<p>C’est un jeu d’enfants, il suffit de vous rendre sur l’interface d’administration (<a class="bare" href="https://tagmanager.google.com">https://tagmanager.google.com</a>), de créer un conteneur et d’ajouter deux bouts de code JS dans votre site et c’est normalement la seule modification qui sera faite dans votre code.
 Je ne m’attarde pas sur cette étape qui est assez simple et déjà très bien documentée.
 Pour tester si votre conteneur est bien configuré sur votre site, avec <strong>GTM</strong> vous avez la possibilité de lancer un mode debug avec le bouton <code>PRÉVISUALISER</code>.
 Cette action permet d’ajouter un panel de debug sur votre site dès lors que vous naviguez avec le même navigateur sur le site où le conteneur <strong>GTM</strong> est activé.
@@ -127,7 +144,7 @@ Nous reviendrons sur ce panel de debug par la suite.</p>
 </div>
 <div class="paragraph">
 <p></p><div style="text-align : center">
-<a style="display: inline" href="/images/posts/2018-03-22_GA-GTM/debug_panel.png" data-lightbox="0" title="Panel de debug">
+<a data-lightbox="0" href="/images/posts/2018-03-22_GA-GTM/debug_panel.png" style="display: inline" title="Panel de debug">
         <img class="medium" src="/images/posts/2018-03-22_GA-GTM/debug_panel_min.png" alt="Panel de debug"/>
 </a>
 </div>
@@ -160,12 +177,12 @@ Nous reviendrons sur ce panel de debug par la suite.</p>
 <div class="paragraph">
 <p>Normalement pour ajouter <strong>Google Analytics</strong> à votre application, vous auriez dû (de la même manière qu’on a ajouté <strong>GTM</strong> juste avant), suivre les instructions de <strong>Google Analytics</strong> à la création du projet sur celui-ci et copier-coller un bout de code pour l’activer.
 Mais vous l’avez compris, ce n’est pas ce qu’il va se passer vu qu’on ne va plus toucher au code.
-Premièrement, vous devez quand même créer le projet sur <a href="https://analytics.google.com/" class="bare">https://analytics.google.com/</a> et garder dans un coin le <code>trackingId</code>, ensuite, tout se passe dans <strong>Google Tag Manager</strong>.</p>
+Premièrement, vous devez quand même créer le projet sur <a class="bare" href="https://analytics.google.com/">https://analytics.google.com/</a> et garder dans un coin le <code>trackingId</code>, ensuite, tout se passe dans <strong>Google Tag Manager</strong>.</p>
 </div>
 <div class="paragraph">
 <p>Le principe premier de <strong>Google Analytics</strong> est de traquer les différentes pages consultées par l’utilisateur.
 Cette information se trouve normalement dans la variable <code>Page Path</code> qui fait partie des variables activées par défaut à la création du conteneur.
-Mais si, comme nous, vous faites beaucoup d&#39;<strong>Angular</strong>, vous avez à faire avec des urls du type <code><a href="http://localhost:9000/#/home" class="bare">http://localhost:9000/#/home</a></code>.
+Mais si, comme nous, vous faites beaucoup d&#39;<strong>Angular</strong>, vous avez à faire avec des urls du type <code><a class="bare" href="http://localhost:9000/#/home">http://localhost:9000/#/home</a></code>.
 Vous savez que ce n’est pas aussi simple et vous avez déjà dû vous retrouver à mettre ce genre de code pour traquer exactement la page visualisée et pas tout le temps <code>/</code>.</p>
 </div>
 <div class="listingblock">
@@ -199,7 +216,7 @@ Il faut cocher <code>Enable overriding settings in this tag</code>, déplier <co
 </div>
 <div class="paragraph">
 <p></p><div style="text-align : center">
-<a style="display: inline" href="/images/posts/2018-03-22_GA-GTM/debug_panel_1.png" data-lightbox="0" title="Panel de debug">
+<a data-lightbox="0" href="/images/posts/2018-03-22_GA-GTM/debug_panel_1.png" style="display: inline" title="Panel de debug">
         <img class="medium" src="/images/posts/2018-03-22_GA-GTM/debug_panel_1_min.png" alt="Panel de debug"/>
 </a>
 </div>
@@ -383,7 +400,7 @@ Vous pouvez :</p>
 
     
     
-      <script src="/main.144ee.js"></script>
+      <script src="/main.44025.js"></script>
     
     <script>
       const d = new Date();

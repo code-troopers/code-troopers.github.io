@@ -5,9 +5,9 @@
   <meta name="description" content="" />
 
      
-  <link href="/main.144ee.css" rel="stylesheet" />
+  <link href="/main.44025.css" rel="stylesheet" />
   
-  <link href="/main.2e60a1aff866aa5b20a4.css" rel="stylesheet" />
+  <link href="/main.832dc4e1ba6bbe5ee2ee.css" rel="stylesheet" />
     
   <meta charset="utf-8" />
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
@@ -22,6 +22,8 @@
   <link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#ff4400" />
   <meta name="theme-color" content="#fff" />
 
+  <link rel="canonical" href="https://code-troopers.com/2014/05/05/playdbbrowser/" />
+
   
   
 
@@ -32,7 +34,8 @@
 " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://code-troopers.com/2014/05/05/playdbbrowser/" />
-<meta property="og:image" content="https://code-troopers.com/2014/05/05/playdbbrowser/play_hu_3bf6a3b2f22a8299.png" />
+<meta property="og:locale" content="fr_FR" />
+<meta property="og:image" content="https://code-troopers.com/2014/05/05/playdbbrowser/play_hu_2ad3fd2773117f65.png" />
 <meta property="og:site_name" content="Code-Troopers" />
 <meta property="article:published_time" content="2014-05-05T00:00:00&#43;00:00" />
 <meta property="article:author" content="Florian" />
@@ -44,12 +47,26 @@
 <meta name="twitter:title" content="Play2 accéder à la base de donnée" />
 <meta name="twitter:description" content="Play2, c’est fun et c’est rapide ! Il suffit de quelques instants pour avoir une appli qui tourne en local sans rien avoir à configurer voir la doc de play. En plus dès que l’on commence un peu à jouer, créer des entités, faire une page de CRUD, tout tourne toujours aussi bien. Il faut dire que c’est agréable, car Ebean s’est occupé de générer les commandes sql dans le fichier 1.sql qui est joué automatiquement par play.
 " />
-<meta name="twitter:image" content="https://code-troopers.com/2014/05/05/playdbbrowser/play_hu_3bf6a3b2f22a8299.png" />
- 
+<meta name="twitter:image" content="https://code-troopers.com/2014/05/05/playdbbrowser/play_hu_2ad3fd2773117f65.png" />
+
+
+  
+  
+  
+    
+      
+    
+  
+  
+  
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Organization","name":"Florian","url":"https://code-troopers.com/"},"dateModified":"2014-05-05","datePublished":"2014-05-05","description":"","headline":"Play2 accéder à la base de donnée","image":"https://code-troopers.com/2014/05/05/playdbbrowser/play_hu_2ad3fd2773117f65.png","inLanguage":"fr-FR","mainEntityOfPage":{"@id":"https://code-troopers.com/2014/05/05/playdbbrowser/","@type":"WebPage"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://code-troopers.com/img/Code-Troopers.png"},"name":"Code-Troopers","url":"https://code-troopers.com/"}}</script>
+  
+
   <script
     src="https://code.jquery.com/jquery-3.7.1.min.js"
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
     crossorigin="anonymous"
+    defer
   ></script>
 </head>
 
@@ -92,7 +109,7 @@
             <article>
                 
                     
-                        <img src="/2014/05/05/playdbbrowser/play_hu_23a3b0836955b68d.webp" width="900" height="500" alt="Illustration de l'article Play2 accéder à la base de donnée">
+                        <img src="/2014/05/05/playdbbrowser/play_hu_a601d83eb3f46349.webp" width="900" height="500" alt="Illustration de l'article Play2 accéder à la base de donnée">
                     
                 
                 <div class="wrapper-content">
@@ -121,15 +138,15 @@ Mais pour pouvoir l&rsquo;utiliser, il va falloir se discipliner un tout petit p
 <ul>
 <li>lancer la console play</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>    $ play
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>    $ play
 </span></span></code></pre></div><ul>
 <li>lancer le visualiseur de bdd (qui ouvre une fenêtre dans votre navigateur web)</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>    $ h2-browser
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>    $ h2-browser
 </span></span></code></pre></div><ul>
 <li>démarrer votre serveur.</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>    $ run
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>    $ run
 </span></span></code></pre></div><p>Lorsqu&rsquo;il se lance h2-browser devrait vous présenter une fenêtre de connexion comme celle-ci :</p>
 <div style="text-align : center">
     <a style="display: inline" href="/images/posts/2014-05-05-PlayDbBrowser/h2-browser.png" data-lightbox="image-0" title="Fenêtre de connection h2-browser">
@@ -299,7 +316,7 @@ db.default.password=
 
     
     
-      <script src="/main.144ee.js"></script>
+      <script src="/main.44025.js"></script>
     
     <script>
       const d = new Date();

@@ -5,9 +5,9 @@
   <meta name="description" content="" />
 
      
-  <link href="/main.144ee.css" rel="stylesheet" />
+  <link href="/main.44025.css" rel="stylesheet" />
   
-  <link href="/main.2e60a1aff866aa5b20a4.css" rel="stylesheet" />
+  <link href="/main.832dc4e1ba6bbe5ee2ee.css" rel="stylesheet" />
     
   <meta charset="utf-8" />
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
@@ -22,6 +22,8 @@
   <link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#ff4400" />
   <meta name="theme-color" content="#fff" />
 
+  <link rel="canonical" href="https://code-troopers.com/2024/04/30/siteweb/" />
+
   
   
 
@@ -33,7 +35,8 @@ Nous avons opté pour Hugo, un générateur de sites qui crée des fichiers HTML
 " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://code-troopers.com/2024/04/30/siteweb/" />
-<meta property="og:image" content="https://code-troopers.com/2024/04/30/siteweb/image_hu_1d342ee135a86ca2.png" />
+<meta property="og:locale" content="fr_FR" />
+<meta property="og:image" content="https://code-troopers.com/2024/04/30/siteweb/image_hu_de914ff6a65e353e.png" />
 <meta property="og:site_name" content="Code-Troopers" />
 <meta property="article:published_time" content="2024-04-16T00:00:00&#43;00:00" />
 <meta property="article:author" content="Matthieu Bollot" />
@@ -46,12 +49,26 @@ Nous avons opté pour Hugo, un générateur de sites qui crée des fichiers HTML
 <meta name="twitter:description" content="Explorez les dessous de notre site web Pourquoi Hugo ? 🤔 Lorsque nous avons célébré l’anniversaire de notre blog, nous avons révélé un secret : rendre notre site éditable sans nécessiter de compétences en développement. Mais, bien sûr, savoir ce qui se cache derrière est essentiel pour comprendre pourquoi c’est intéressant.
 Nous avons opté pour Hugo, un générateur de sites qui crée des fichiers HTML/CSS statiques. Pourquoi Hugo ? Tout simplement parce que c’est rapide, polyvalent sur toutes les plateformes, intuitif, et offre une multitude de possibilités. Alors, pourquoi ne pas choisir une plateforme nocode comme Webflow ou Wix ? Parce que, pour être honnête, ce n’est tout simplement pas aussi amusant. Ces solutions ne nous permettent pas la liberté créative que nous recherchons. De même, les CMS classiques comme WordPress ou Drupal ne nous ont jamais vraiment séduits. Ils sont souvent développés en PHP ou en Python, nécessitent un hébergement spécifique, et, avouons-le, manquent parfois de flexibilité pour les développeurs qui aiment personnaliser chaque détail. En plus c’est payant, alors que nous hébergeons notre site gratuitement depuis 11 ans sur les github pages ! (téma la taille du rat) Et puis il y a un autre point à prendre en compte, pour de l’auto hébergement, personne ne va pirater un site en html/css c’est juste (presque) pas possible. Alors qu’un wordpress, il vaut mieux le faire héberger chez quelqu’un dont c’est le métier et qui va s’en occuper à plein temps.
 " />
-<meta name="twitter:image" content="https://code-troopers.com/2024/04/30/siteweb/image_hu_1d342ee135a86ca2.png" />
- 
+<meta name="twitter:image" content="https://code-troopers.com/2024/04/30/siteweb/image_hu_de914ff6a65e353e.png" />
+
+
+  
+  
+  
+    
+      
+    
+  
+  
+  
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Organization","name":"Matthieu Bollot","url":"https://code-troopers.com/"},"dateModified":"2024-04-16","datePublished":"2024-04-16","description":"","headline":"Site web, l'envers du décor avec Hugo et DecapCMS","image":"https://code-troopers.com/2024/04/30/siteweb/image_hu_de914ff6a65e353e.png","inLanguage":"fr-FR","mainEntityOfPage":{"@id":"https://code-troopers.com/2024/04/30/siteweb/","@type":"WebPage"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://code-troopers.com/img/Code-Troopers.png"},"name":"Code-Troopers","url":"https://code-troopers.com/"}}</script>
+  
+
   <script
     src="https://code.jquery.com/jquery-3.7.1.min.js"
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
     crossorigin="anonymous"
+    defer
   ></script>
 </head>
 
@@ -94,7 +111,7 @@ Nous avons opté pour Hugo, un générateur de sites qui crée des fichiers HTML
             <article>
                 
                     
-                        <img src="/2024/04/30/siteweb/image_hu_962e235a66178e0e.webp" width="900" height="500" alt="Illustration de l'article Site web, l&#39;envers du décor avec Hugo et DecapCMS">
+                        <img src="/2024/04/30/siteweb/image_hu_32bbb6b7ee274dbb.webp" width="900" height="500" alt="Illustration de l'article Site web, l&#39;envers du décor avec Hugo et DecapCMS">
                     
                 
                 <div class="wrapper-content">
@@ -126,7 +143,7 @@ Nous avons opté pour Hugo, un générateur de sites qui crée des fichiers HTML
 <h2 id="quest-ce-que-decapcms-">Qu&rsquo;est-ce que DecapCMS ?</h2>
 <p>DecapCMS, comme son nom l&rsquo;indique c&rsquo;est un CMS mais qui a la particularité de se baser sur des fichiers, il fait aussi des commits pour mettre à jour comme il faut.</p>
 <p>Pour l&rsquo;utiliser il faut d&rsquo;abord l&rsquo;installer, avec un package npm dans notre cas et le configurer. Dans le fichier de configuration, nous allons détailler tout ce qu&rsquo;il peut éditer, sachant qu&rsquo;il peut éditer du html, du markdown, du json. Voici un exemple de configuration pour les articles de blog :</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">collections:</span> <span style="color:#960050;background-color:#1e0010">#</span> <span style="color:#960050;background-color:#1e0010">A</span> <span style="color:#960050;background-color:#1e0010">list</span> <span style="color:#960050;background-color:#1e0010">of</span> <span style="color:#960050;background-color:#1e0010">collections</span> <span style="color:#960050;background-color:#1e0010">the</span> <span style="color:#960050;background-color:#1e0010">CMS</span> <span style="color:#960050;background-color:#1e0010">should</span> <span style="color:#960050;background-color:#1e0010">be</span> <span style="color:#960050;background-color:#1e0010">able</span> <span style="color:#960050;background-color:#1e0010">to</span> <span style="color:#960050;background-color:#1e0010">edit</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">collections:</span> <span style="color:#960050;background-color:#1e0010">#</span> <span style="color:#960050;background-color:#1e0010">A</span> <span style="color:#960050;background-color:#1e0010">list</span> <span style="color:#960050;background-color:#1e0010">of</span> <span style="color:#960050;background-color:#1e0010">collections</span> <span style="color:#960050;background-color:#1e0010">the</span> <span style="color:#960050;background-color:#1e0010">CMS</span> <span style="color:#960050;background-color:#1e0010">should</span> <span style="color:#960050;background-color:#1e0010">be</span> <span style="color:#960050;background-color:#1e0010">able</span> <span style="color:#960050;background-color:#1e0010">to</span> <span style="color:#960050;background-color:#1e0010">edit</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#960050;background-color:#1e0010">-</span> <span style="color:#960050;background-color:#1e0010">name:</span> <span style="color:#e6db74">&#34;post&#34;</span> <span style="color:#960050;background-color:#1e0010">#</span> <span style="color:#960050;background-color:#1e0010">Used</span> <span style="color:#960050;background-color:#1e0010">in</span> <span style="color:#960050;background-color:#1e0010">routes,</span> <span style="color:#960050;background-color:#1e0010">ie.:</span> <span style="color:#960050;background-color:#1e0010">/admin/collections/:slug/edit</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#960050;background-color:#1e0010">label:</span> <span style="color:#e6db74">&#34;Post&#34;</span> <span style="color:#960050;background-color:#1e0010">#</span> <span style="color:#960050;background-color:#1e0010">Used</span> <span style="color:#960050;background-color:#1e0010">in</span> <span style="color:#960050;background-color:#1e0010">the</span> <span style="color:#960050;background-color:#1e0010">UI,</span> <span style="color:#960050;background-color:#1e0010">ie.:</span> <span style="color:#e6db74">&#34;New Post&#34;</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#960050;background-color:#1e0010">folder:</span> <span style="color:#e6db74">&#34;site/content/blog&#34;</span> <span style="color:#960050;background-color:#1e0010">#</span> <span style="color:#960050;background-color:#1e0010">The</span> <span style="color:#960050;background-color:#1e0010">path</span> <span style="color:#960050;background-color:#1e0010">to</span> <span style="color:#960050;background-color:#1e0010">the</span> <span style="color:#960050;background-color:#1e0010">folder</span> <span style="color:#960050;background-color:#1e0010">where</span> <span style="color:#960050;background-color:#1e0010">the</span> <span style="color:#960050;background-color:#1e0010">documents</span> <span style="color:#960050;background-color:#1e0010">are</span> <span style="color:#960050;background-color:#1e0010">stored</span>
@@ -301,7 +318,7 @@ Nous avons opté pour Hugo, un générateur de sites qui crée des fichiers HTML
 
     
     
-      <script src="/main.144ee.js"></script>
+      <script src="/main.44025.js"></script>
     
     <script>
       const d = new Date();

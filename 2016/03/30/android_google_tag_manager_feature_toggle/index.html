@@ -5,9 +5,9 @@
   <meta name="description" content="" />
 
      
-  <link href="/main.144ee.css" rel="stylesheet" />
+  <link href="/main.44025.css" rel="stylesheet" />
   
-  <link href="/main.2e60a1aff866aa5b20a4.css" rel="stylesheet" />
+  <link href="/main.832dc4e1ba6bbe5ee2ee.css" rel="stylesheet" />
     
   <meta charset="utf-8" />
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
@@ -22,6 +22,8 @@
   <link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#ff4400" />
   <meta name="theme-color" content="#fff" />
 
+  <link rel="canonical" href="https://code-troopers.com/2016/03/30/android_google_tag_manager_feature_toggle/" />
+
   
   
 
@@ -33,7 +35,8 @@ Le problème avec Android c’est qu’il peut être vite problématique d’uti
 " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://code-troopers.com/2016/03/30/android_google_tag_manager_feature_toggle/" />
-<meta property="og:image" content="https://code-troopers.com/2016/03/30/android_google_tag_manager_feature_toggle/android-banner_hu_5d2acb652a0caf18.png" />
+<meta property="og:locale" content="fr_FR" />
+<meta property="og:image" content="https://code-troopers.com/2016/03/30/android_google_tag_manager_feature_toggle/android-banner_hu_47336ead53b362c6.png" />
 <meta property="og:site_name" content="Code-Troopers" />
 <meta property="article:published_time" content="2016-03-30T00:00:00&#43;00:00" />
 <meta property="article:author" content="Florian" />
@@ -46,12 +49,26 @@ Le problème avec Android c’est qu’il peut être vite problématique d’uti
 <meta name="twitter:description" content=" Le concept de feature toggle est bien pratique en tant que développeur si l’on souhaite faire évoluer sa base de code source à un rythme différent de celui des livraisons et des fonctionnalités. C’est souvent le cas lorsqu’il y a autour du produit une équipe marketing / communication qui s’occupe d’annoncer telle ou telle nouvelle fonctionnalité.
 Le problème avec Android c’est qu’il peut être vite problématique d’utiliser ces features toggle, car une fois l’application arrivée sur le téléphone des utilisateurs le développeur n’a plus la possibilité de changer la valeur des flags autrement qu’en relivrant l’application, ce qui peut vite se terminer par du spam d’updates si les activations/désactivations sont trop fréquentes ou trop rapprochées.
 " />
-<meta name="twitter:image" content="https://code-troopers.com/2016/03/30/android_google_tag_manager_feature_toggle/android-banner_hu_5d2acb652a0caf18.png" />
- 
+<meta name="twitter:image" content="https://code-troopers.com/2016/03/30/android_google_tag_manager_feature_toggle/android-banner_hu_47336ead53b362c6.png" />
+
+
+  
+  
+  
+    
+      
+    
+  
+  
+  
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Organization","name":"Florian","url":"https://code-troopers.com/"},"dateModified":"2016-03-30","datePublished":"2016-03-30","description":"","headline":"Android : Feature Toggle avec Google Tag Manager","image":"https://code-troopers.com/2016/03/30/android_google_tag_manager_feature_toggle/android-banner_hu_47336ead53b362c6.png","inLanguage":"fr-FR","mainEntityOfPage":{"@id":"https://code-troopers.com/2016/03/30/android_google_tag_manager_feature_toggle/","@type":"WebPage"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://code-troopers.com/img/Code-Troopers.png"},"name":"Code-Troopers","url":"https://code-troopers.com/"}}</script>
+  
+
   <script
     src="https://code.jquery.com/jquery-3.7.1.min.js"
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
     crossorigin="anonymous"
+    defer
   ></script>
 </head>
 
@@ -94,7 +111,7 @@ Le problème avec Android c’est qu’il peut être vite problématique d’uti
             <article>
                 
                     
-                        <img src="/2016/03/30/android_google_tag_manager_feature_toggle/android-banner_hu_e61356919d9225bb.webp" width="900" height="500" alt="Illustration de l'article Android : Feature Toggle avec Google Tag Manager">
+                        <img src="/2016/03/30/android_google_tag_manager_feature_toggle/android-banner_hu_f680ccb61ab4b9ee.webp" width="900" height="500" alt="Illustration de l'article Android : Feature Toggle avec Google Tag Manager">
                     
                 
                 <div class="wrapper-content">
@@ -171,25 +188,25 @@ C’est via cette IHM et avec les informations que l’on va y ajouter que l’o
 </div>
 <div class="paragraph">
 <p></p><div style="text-align : center">
-<a class="inlineBoxes" href="/images/posts/2016-03-AndroidGoogleTagManager/GoogleTagManager_containerCreation1.png" data-lightbox="0" title="Création du container">
+<a class="inlineBoxes" data-lightbox="0" href="/images/posts/2016-03-AndroidGoogleTagManager/GoogleTagManager_containerCreation1.png" title="Création du container">
         <img class="medium" src="/images/posts/2016-03-AndroidGoogleTagManager/GoogleTagManager_containerCreation1_min.png" alt="Création du container"/>
 </a>
-<a class="inlineBoxes" href="/images/posts/2016-03-AndroidGoogleTagManager/GoogleTagManager_containerCreation2.png" data-lightbox="0" title="Création du container - Nom et type">
+<a class="inlineBoxes" data-lightbox="0" href="/images/posts/2016-03-AndroidGoogleTagManager/GoogleTagManager_containerCreation2.png" title="Création du container - Nom et type">
         <img class="medium" src="/images/posts/2016-03-AndroidGoogleTagManager/GoogleTagManager_containerCreation2_min.png" alt="Création du container - Nom et type"/>
 </a>
-<a class="inlineBoxes" href="/images/posts/2016-03-AndroidGoogleTagManager/GoogleTagManager_gtmIdGenerated.png" data-lightbox="0" title="GTM id généré">
+<a class="inlineBoxes" data-lightbox="0" href="/images/posts/2016-03-AndroidGoogleTagManager/GoogleTagManager_gtmIdGenerated.png" title="GTM id généré">
         <img class="medium" src="/images/posts/2016-03-AndroidGoogleTagManager/GoogleTagManager_gtmIdGenerated_min.png" alt="GTM id généré"/>
 </a>
-<a class="inlineBoxes" href="/images/posts/2016-03-AndroidGoogleTagManager/GoogleTagManager_screenVariables.png" data-lightbox="0" title="Écran &#39;Variables&#39;">
+<a class="inlineBoxes" data-lightbox="0" href="/images/posts/2016-03-AndroidGoogleTagManager/GoogleTagManager_screenVariables.png" title="Écran &#39;Variables&#39;">
         <img class="medium" src="/images/posts/2016-03-AndroidGoogleTagManager/GoogleTagManager_screenVariables_min.png" alt="Écran &#39;Variables&#39;"/>
 </a>
-<a class="inlineBoxes" href="/images/posts/2016-03-AndroidGoogleTagManager/GoogleTagManager_createVariable.png" data-lightbox="0" title="Création d’une nouvelle variable">
+<a class="inlineBoxes" data-lightbox="0" href="/images/posts/2016-03-AndroidGoogleTagManager/GoogleTagManager_createVariable.png" title="Création d’une nouvelle variable">
         <img class="medium" src="/images/posts/2016-03-AndroidGoogleTagManager/GoogleTagManager_createVariable_min.png" alt="Création d’une nouvelle variable"/>
 </a>
-<a class="inlineBoxes" href="/images/posts/2016-03-AndroidGoogleTagManager/GoogleTagManager_publishContainer.png" data-lightbox="0" title="Publication du container">
+<a class="inlineBoxes" data-lightbox="0" href="/images/posts/2016-03-AndroidGoogleTagManager/GoogleTagManager_publishContainer.png" title="Publication du container">
         <img class="medium" src="/images/posts/2016-03-AndroidGoogleTagManager/GoogleTagManager_publishContainer_min.png" alt="Publication du container"/>
 </a>
-<a class="inlineBoxes" href="/images/posts/2016-03-AndroidGoogleTagManager/GoogleTagManager_downloadContainer.png" data-lightbox="0" title="Téléchargement du container">
+<a class="inlineBoxes" data-lightbox="0" href="/images/posts/2016-03-AndroidGoogleTagManager/GoogleTagManager_downloadContainer.png" title="Téléchargement du container">
         <img class="medium" src="/images/posts/2016-03-AndroidGoogleTagManager/GoogleTagManager_downloadContainer_min.png" alt="Téléchargement du container"/>
 </a><p></p>
 </div>
@@ -336,9 +353,9 @@ Un autre point très intéressant (et non abordé ici) est la publication d’un
 <h2 id="_liens">Liens</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Code sources d’exemple : <a href="https://github.com/fchauveau/blog-android-tag-manager" class="bare">https://github.com/fchauveau/blog-android-tag-manager</a><br/>
-Documentation Google officielle : <a href="https://developers.google.com/tag-manager/android/v4/" class="bare">https://developers.google.com/tag-manager/android/v4/</a><br/>
-Cours Udacity d’explication : <a href="https://www.udacity.com/course/viewer#!/c-ud876-2/l-4027658558/m-4328729937" class="bare">https://www.udacity.com/course/viewer#!/c-ud876-2/l-4027658558/m-4328729937</a></p>
+<p>Code sources d’exemple : <a class="bare" href="https://github.com/fchauveau/blog-android-tag-manager">https://github.com/fchauveau/blog-android-tag-manager</a><br/>
+Documentation Google officielle : <a class="bare" href="https://developers.google.com/tag-manager/android/v4/">https://developers.google.com/tag-manager/android/v4/</a><br/>
+Cours Udacity d’explication : <a class="bare" href="https://www.udacity.com/course/viewer#!/c-ud876-2/l-4027658558/m-4328729937">https://www.udacity.com/course/viewer#!/c-ud876-2/l-4027658558/m-4328729937</a></p>
 </div>
 </div>
 </div>
@@ -495,7 +512,7 @@ Cours Udacity d’explication : <a href="https://www.udacity.com/course/viewer#!
 
     
     
-      <script src="/main.144ee.js"></script>
+      <script src="/main.44025.js"></script>
     
     <script>
       const d = new Date();
