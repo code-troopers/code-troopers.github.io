@@ -23,6 +23,23 @@ if (document.querySelector("[data-lightbox]")) {
   lightboxA11yObserver.observe(document.body, {childList: true, subtree: true});
 }
 
+const navToggle = document.querySelector(".nav-toggle");
+if (navToggle) {
+  const nav = navToggle.closest("nav");
+  navToggle.addEventListener("click", () => {
+    const open = nav.classList.toggle("open");
+    navToggle.setAttribute("aria-expanded", String(open));
+    navToggle.setAttribute("aria-label", open ? "Fermer le menu" : "Ouvrir le menu");
+  });
+  nav.addEventListener("click", (event) => {
+    if (event.target.closest("a")) {
+      nav.classList.remove("open");
+      navToggle.setAttribute("aria-expanded", "false");
+      navToggle.setAttribute("aria-label", "Ouvrir le menu");
+    }
+  });
+}
+
 // Halloween theme: October 1-31
 if (new Date().getMonth() === 9) {
   document.documentElement.classList.add("halloween");

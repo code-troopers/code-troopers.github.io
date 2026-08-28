@@ -1,9 +1,17 @@
 <header>
   <nav aria-label="Navigation principale">
-    <ul>
+    <ul id="primary-menu">
       {{ range hugo.Data.menu.links }}
       <li><a id="{{ .id }}" href="{{ .url }}"><span>{{ .name }}</span></a></li>
       {{ end }}
     </ul>
+    <button
+      class="nav-toggle"
+      aria-expanded="false"
+      aria-controls="primary-menu"
+      aria-label="Ouvrir le menu"
+    >
+      <span></span><span></span><span></span>
+    </button>
   </nav>
 </header>

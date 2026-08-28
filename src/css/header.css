@@ -64,6 +64,26 @@ header {
         border-color: var(--lightblue);
       }
     }
+
+    .nav-toggle {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      gap: 5px;
+      background: none;
+      border: none;
+      border-left: 1px solid var(--darkgrey);
+      border-bottom: 2px solid var(--darkgrey);
+      padding: 0 1.5rem;
+      cursor: pointer;
+
+      span {
+        display: block;
+        width: 22px;
+        height: 2px;
+        background: var(--white);
+      }
+    }
   }
 }
 
@@ -136,12 +156,34 @@ header {
 @media (width < 1024px) {
   header {
     nav {
+      display: flex;
+      align-items: stretch;
+
+      ul {
+        flex: 1;
+        flex-direction: column;
+      }
+
       li {
         display: none;
       }
-      li:has(#id-company),
-      li:has(#id-blogs) {
-        display: initial;
+      li:has(#id-company) {
+        display: block;
+      }
+
+      a {
+        border-left: none;
+        border-right: none;
+      }
+
+      .nav-toggle {
+        display: flex;
+      }
+
+      &.open {
+        li {
+          display: block;
+        }
       }
     }
   }
