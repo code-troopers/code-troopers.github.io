@@ -2,7 +2,7 @@ import React from "react";
 
 export default class Jumbotron extends React.Component {
   render() {
-    const { title, subtitle } = this.props;
+    const {title, subtitle} = this.props;
     return <div>
       <h1>
         {title}
@@ -11,6 +11,6 @@ export default class Jumbotron extends React.Component {
         {subtitle}
       </h2>
     </div>
-      ;
+    ;
   }
 }

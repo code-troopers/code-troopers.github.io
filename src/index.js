@@ -1,6 +1,6 @@
 // JS Goes here - ES6 supported
 import process from "process";
-import { Buffer } from "buffer";
+import {Buffer} from "buffer";
 
 window.process = process;
 window.Buffer = Buffer;
@@ -27,7 +27,7 @@ const lightboxA11yObserver = new MutationObserver(() => {
     close.setAttribute("aria-label", "Fermer la lightbox");
   }
 });
-lightboxA11yObserver.observe(document.body, { childList: true, subtree: true });
+lightboxA11yObserver.observe(document.body, {childList: true, subtree: true});
 
 // Responsive tables: copy column headers onto each cell so _blog.scss can
 // stack rows as labeled cards on small screens
