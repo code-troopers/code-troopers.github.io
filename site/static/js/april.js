@@ -1,19 +1,25 @@
+(function() {
 
-(async function($) {
+  const disableButton = document.createElement("a");
+  disableButton.href = "#";
+  disableButton.id = "disable-spotlight";
+  disableButton.className = "btn dark";
+  disableButton.textContent = "Désactiver le mode sombre";
 
-  $("body").append("<a href='#' id='disable-spotlight' class='btn dark'>Désactiver le mode sombre</a><div id='spotlight'></div>");
+  const spotlight = document.createElement("div");
+  spotlight.id = "spotlight";
 
-  const spotlightEl = $("#spotlight");
+  document.body.append(disableButton, spotlight);
 
   function handleMouseMove(event) {
     const {clientX, clientY} = event;
 
-    spotlightEl[0].style.background = `radial-gradient(circle at ${clientX}px ${clientY}px, #00000000 10px, #000000FF 100px)`;
+    spotlight.style.background = `radial-gradient(circle at ${clientX}px ${clientY}px, #00000000 10px, #000000FF 100px)`;
   }
 
-  $("body").on("mousemove", handleMouseMove);
+  document.body.addEventListener("mousemove", handleMouseMove);
 
-  $("#disable-spotlight").on("click", () => {
+  disableButton.addEventListener("click", () => {
     disableApril();
     localStorage.setItem("disable-april", "true");
   });
@@ -23,8 +29,8 @@
   }
 
   function disableApril() {
-    $("#spotlight")[0].style.display = "none";
-    $("#disable-spotlight")[0].style.display = "none";
-    $("body").off("mousemove", handleMouseMove);
+    spotlight.style.display = "none";
+    disableButton.style.display = "none";
+    document.body.removeEventListener("mousemove", handleMouseMove);
   }
-})(jQuery);
+})();

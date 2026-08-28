@@ -20,7 +20,9 @@
       const d = new Date();
       // Show April Fools' joke
       if (d.getMonth() === 3 && d.getDate() === 1) {
-          $.getScript("/js/april.js");
+        const april = document.createElement("script");
+        april.src = "/js/april.js";
+        document.body.appendChild(april);
       }
     </script>
   </body>
