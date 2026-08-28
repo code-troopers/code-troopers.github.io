@@ -1,33 +1,32 @@
 // JS Goes here - ES6 supported
-import process from "process";
-import {Buffer} from "buffer";
-
-window.process = process;
-window.Buffer = Buffer;
-
 import "./css/main.scss";
-import "../node_modules/lightbox2/dist/js/lightbox-plus-jquery";
 
-const hljs = require("../node_modules/highlight.js/lib/common");
-hljs.highlightAll();
+if (document.querySelector("pre code")) {
+  import(/* webpackChunkName: "highlight" */ "../node_modules/highlight.js/lib/common")
+    .then((mod) => (mod.default || mod).highlightAll());
+}
+
+if (document.querySelector("[data-lightbox]")) {
+  import(/* webpackChunkName: "lightbox" */ "../node_modules/lightbox2/dist/js/lightbox-plus-jquery");
+
+  // lightbox2 renders its close/cancel buttons without accessible labels
+  const lightboxA11yObserver = new MutationObserver(() => {
+    const cancel = document.querySelector(".lb-cancel");
+    const close = document.querySelector(".lb-close");
+    if (cancel && !cancel.getAttribute("aria-label")) {
+      cancel.setAttribute("aria-label", "Annuler");
+    }
+    if (close && !close.getAttribute("aria-label")) {
+      close.setAttribute("aria-label", "Fermer la lightbox");
+    }
+  });
+  lightboxA11yObserver.observe(document.body, {childList: true, subtree: true});
+}
 
 // Halloween theme: October 1-31
 if (new Date().getMonth() === 9) {
   document.documentElement.classList.add("halloween");
 }
-
-// A11y: add accessible labels to lightbox2 buttons
-const lightboxA11yObserver = new MutationObserver(() => {
-  const cancel = document.querySelector(".lb-cancel");
-  const close = document.querySelector(".lb-close");
-  if (cancel && !cancel.getAttribute("aria-label")) {
-    cancel.setAttribute("aria-label", "Annuler");
-  }
-  if (close && !close.getAttribute("aria-label")) {
-    close.setAttribute("aria-label", "Fermer la lightbox");
-  }
-});
-lightboxA11yObserver.observe(document.body, {childList: true, subtree: true});
 
 // Responsive tables: copy column headers onto each cell so _blog.scss can
 // stack rows as labeled cards on small screens
