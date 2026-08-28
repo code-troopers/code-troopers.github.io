@@ -40,7 +40,6 @@
     "eslint-plugin-react": "^7.37.5",
     "exports-loader": "^5.0.0",
     "html-webpack-plugin": "^5.6.4",
-    "hugo-bin": "^0.149.0",
     "hugo-extended": "^0.164.0",
     "imports-loader": "^5.0.0",
     "mini-css-extract-plugin": "^2.9.4",
