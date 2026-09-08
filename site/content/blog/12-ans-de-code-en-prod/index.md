@@ -1,16 +1,19 @@
 ---
-title: "Trois projets de 2014 qui tournent toujours en 2026"
-description: "En creusant nos git logs, on a trouvé trois projets dont les premiers commits datent de 2014 et qui tournent encore en production aujourd'hui. L'un d'eux n'a même pas été démarré par nous."
+title: Trois projets de 2014 qui tournent toujours en 2026
 author: Troopers
 url: /2026/04/20/trois-projets-de-2014/
 date: 2026-04-20
 expirydate: ""
 cover: cover.jpg
-draft: true
+draft: false
 tags:
   - NoESN
   - NoSSII
   - Longévité
+description: En creusant nos git logs, on a trouvé trois projets dont les
+  premiers commits datent de 2014 et qui tournent encore en production
+  aujourd'hui. L'un d'eux n'a même pas été démarré par nous.
+aliases: /2026/04/20/troisprojetsde2014.html
 ---
 En remontant dans nos plus vieux dépôts git, on a retrouvé **trois projets dont les premiers commits datent de 2014**. Ils tournent tous en production en 2026. L'un d'eux d'ailleurs n'a même pas été démarré par nous : on a repris un existant, et il vit toujours douze ans plus tard.
 
