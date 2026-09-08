@@ -4,11 +4,9 @@
   <title>Heroku - Code-Troopers</title>
   <meta name="description" content="" />
 
-     
-  <link href="/main.44025.css" rel="stylesheet" />
-  
-  <link href="/main.832dc4e1ba6bbe5ee2ee.css" rel="stylesheet" />
     
+  <link href="/main.05a62d27a251bffe67fe.css" rel="stylesheet" />
+   
   <meta charset="utf-8" />
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
   <meta
@@ -45,12 +43,6 @@
 
   
 
-  <script
-    src="https://code.jquery.com/jquery-3.7.1.min.js"
-    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
-    crossorigin="anonymous"
-    defer
-  ></script>
 </head>
 
   <body id="top" class="sans-serif">
@@ -222,13 +214,15 @@
 
     
     
-      <script src="/main.44025.js"></script>
+      <script src="/main.5d36d.js"></script>
     
     <script>
       const d = new Date();
       
       if (d.getMonth() === 3 && d.getDate() === 1) {
-          $.getScript("/js/april.js");
+        const april = document.createElement("script");
+        april.src = "/js/april.js";
+        document.body.appendChild(april);
       }
     </script>
   </body>

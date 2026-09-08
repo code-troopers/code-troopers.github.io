@@ -4,11 +4,9 @@
   <title>Application officielle Android pour Terres du son 2014 - Code-Troopers</title>
   <meta name="description" content="" />
 
-     
-  <link href="/main.44025.css" rel="stylesheet" />
-  
-  <link href="/main.832dc4e1ba6bbe5ee2ee.css" rel="stylesheet" />
     
+  <link href="/main.05a62d27a251bffe67fe.css" rel="stylesheet" />
+   
   <meta charset="utf-8" />
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
   <meta
@@ -64,12 +62,6 @@ Si vous êtes à Tours, vous connaissez sûrement ce festival qui se déroule ce
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Organization","name":"Benjamin","url":"https://code-troopers.com/"},"dateModified":"2014-04-08","datePublished":"2014-04-08","description":"","headline":"Application officielle Android pour Terres du son 2014","image":"https://code-troopers.com/2014/04/08/terresduson/tds-banner_hu_3e2a38b9daa977f3.png","inLanguage":"fr-FR","mainEntityOfPage":{"@id":"https://code-troopers.com/2014/04/08/terresduson/","@type":"WebPage"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://code-troopers.com/img/Code-Troopers.png"},"name":"Code-Troopers","url":"https://code-troopers.com/"}}</script>
   
 
-  <script
-    src="https://code.jquery.com/jquery-3.7.1.min.js"
-    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
-    crossorigin="anonymous"
-    defer
-  ></script>
 </head>
 
   <body id="top" class="sans-serif">
@@ -291,13 +283,15 @@ Si vous êtes à Tours, vous connaissez sûrement ce festival qui se déroule ce
 
     
     
-      <script src="/main.44025.js"></script>
+      <script src="/main.5d36d.js"></script>
     
     <script>
       const d = new Date();
       
       if (d.getMonth() === 3 && d.getDate() === 1) {
-          $.getScript("/js/april.js");
+        const april = document.createElement("script");
+        april.src = "/js/april.js";
+        document.body.appendChild(april);
       }
     </script>
   </body>

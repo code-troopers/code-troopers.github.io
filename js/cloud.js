@@ -1,31 +1,28 @@
-
-(async function($) {
+(async function() {
 
   const isOverlapping = function(element, otherElements) {
-    const isOverlapping = (first, second) => {
+    const overlaps = (first, second) => {
       const fLeft = first.offsetLeft, fRight = fLeft + first.offsetWidth,
         sLeft = second.offsetLeft, sRight = sLeft + second.offsetWidth;
       const fTop = first.offsetTop, fBottom = fTop + first.offsetHeight,
         sTop = second.offsetTop, sBottom = sTop + second.offsetHeight;
       return !(fLeft >= sRight || sLeft >= fRight || fTop >= sBottom || sTop >= fBottom);
     };
-    return otherElements.some((otherElement) => isOverlapping(element, otherElement));
+    return otherElements.some((otherElement) => overlaps(element, otherElement));
   };
 
   function isIntoView(elem)
   {
-    var documentViewTop = $(window).scrollTop();
-    var documentViewBottom = documentViewTop + $(window).height();
-
-    var elementTop = $(elem).offset().top;
-    var elementBottom = elementTop + $(elem).height();
-    return ((elementBottom >= documentViewTop) && (elementTop <= documentViewBottom));
+    if (!elem) {
+      return false;
+    }
+    const rect = elem.getBoundingClientRect();
+    return rect.bottom >= 0 && rect.top <= window.innerHeight;
   }
 
-  $.fn.wordCloud = function(word_array) {
-    var $this = this;
-    var width = $this.width();
-    var height = $this.height();
+  function wordCloud(container, word_array) {
+    var width = container.clientWidth;
+    var height = container.clientHeight;
     var center = {
       x: width / 2.0,
       y: height / 2.0
@@ -36,27 +33,35 @@
     var ratio = width / height;
 
     var drawTag = function(word) {
-      $(`#${word.id}`).fadeOut(500, function() {
-        $(`#${word.id}`).remove();
-      });
+      var previous = document.getElementById(word.id);
+      if (previous) {
+        previous.style.transition = "opacity 0.5s";
+        previous.style.opacity = "0";
+        setTimeout(() => previous.remove(), 500);
+      }
       var radius = Math.random();
 
-      var wSpan = $("<span>").addClass("word w" + word.weight).append($("<span>").addClass("word-text").text(word.text));
+      var wSpan = document.createElement("span");
+      wSpan.className = "word w" + word.weight;
+      var wText = document.createElement("span");
+      wText.className = "word-text";
+      wText.textContent = word.text;
+      wSpan.appendChild(wText);
 
-      $this.append(wSpan);
+      container.appendChild(wSpan);
 
-      var wWidth = wSpan.width();
-      var wHeight = wSpan.height();
+      var wWidth = wSpan.offsetWidth;
+      var wHeight = wSpan.offsetHeight;
       var left = center.x - wWidth / 2.0;
       var top = center.y - wHeight / 2.0;
 
-      var word_style = wSpan[0].style;
+      var word_style = wSpan.style;
       word_style.transitionDuration = "0.0s";
       word_style.position = "absolute";
       word_style.left = left + "px";
       word_style.top = top + "px";
 
-      while (isOverlapping(wSpan[0], placedWords)) {
+      while (isOverlapping(wSpan, placedWords)) {
         word_style.opacity = "0";
         radius += step;
         left = center.x - (wWidth / 2.0) + (radius * Math.cos(radius)) * ratio;
@@ -68,14 +73,14 @@
       word_style.transitionDuration = "1.0s";
       word_style.opacity = "1";
 
-      placedWords.push(wSpan[0]);
+      placedWords.push(wSpan);
     };
 
     var runWord = function(i) {
       if (i >= word_array.length) {
         return;
       }
-      if (isIntoView($(".cloud"))) {
+      if (isIntoView(container)) {
         drawTag(word_array[i]);
         setTimeout(() => {
           runWord(i + 1);
@@ -87,23 +92,25 @@
       }
     };
     runWord(0);
+  }
 
-    return $this;
-  };
+  const cloudElement = document.querySelector(".cloud");
+  if (!cloudElement) {
+    return;
+  }
 
   const data = await (await fetch("/data/cloud.json")).json();
   const cloud = data.cloud.sort(function(a, b) { return a.text < b.text ? 1 : -1; });
   var started = false;
 
   const runWhenInView = function() {
-    if (isIntoView($(".cloud")) && !started) {
+    if (isIntoView(cloudElement) && !started) {
       started = true;
-      $(".cloud").wordCloud(cloud);
+      wordCloud(cloudElement, cloud);
     }
   };
 
   runWhenInView();
-  $(window).on("scroll", runWhenInView);
+  window.addEventListener("scroll", runWhenInView, { passive: true });
 
-
-})(jQuery);
+})();
