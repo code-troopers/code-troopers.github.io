@@ -1,14 +1,18 @@
 ---
-title: "Freelance ou agence de développement : comment choisir pour votre projet web ou mobile ?"
+title: "Freelance ou agence de développement : comment choisir pour votre projet
+  web ou mobile ?"
 author: Nicolas
 url: /2026/08/27/freelance-vs-agence/
 date: 2026-08-27
 expirydate: ""
 cover: cover.jpg
-description: "Freelance ou agence de développement web et mobile : différences, prix, avantages, risques et critères pour faire le bon choix selon votre projet. Guide complet 2026."
-draft: true
+draft: false
 tags:
   - Agence
+description: "Freelance ou agence de développement web et mobile : différences,
+  prix, avantages, risques et critères pour faire le bon choix selon votre
+  projet. Guide complet 2026."
+aliases: /2026/08/27/freelancevsagence.html
 ---
 *Ce que vous gagnez (vraiment) à travailler avec une équipe*
 {.lede}
