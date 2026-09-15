@@ -12,9 +12,81 @@ section#skills {
       li {
         margin: 1rem;
 
-        img {
+        .icon-svg {
           height: 100px;
+          width: auto;
+          overflow: visible;
         }
+
+        .px-rn, .px-rf, .px-line, .px-wn, .px-wf {
+          opacity: 0;
+        }
+
+        @media (prefers-reduced-motion: no-preference) {
+          &:hover {
+            /* ampoule : le jus petille, la lumiere grandit en deux crans */
+            .px-b1, .px-b2, .px-b3, .px-rn, .px-rf {
+              fill: var(--sandyBrown);
+            }
+            .px-b1 {
+              animation: px-fizz 0.7s steps(1) infinite;
+            }
+            .px-b2 {
+              animation: px-fizz 0.7s steps(1) 0.16s infinite;
+            }
+            .px-b3 {
+              animation: px-fizz 0.7s steps(1) 0.32s infinite;
+            }
+            .px-rn {
+              animation: px-appear 1ms linear 0.14s forwards;
+            }
+            .px-rf {
+              animation: px-appear 1ms linear 0.3s forwards;
+            }
+
+            /* code : coloration syntaxique, curseur au rythme d'un terminal */
+            .px-chev {
+              fill: var(--lightblue);
+            }
+            .px-cursor {
+              animation: px-caret 1.06s steps(1) infinite;
+            }
+
+            /* crayon : la feuille defile sous la pointe, le crayon se leve pendant les blancs */
+            .px-line {
+              opacity: 1;
+              fill: var(--lightblue);
+            }
+            .px-paper {
+              animation: px-paper 0.9s steps(1) infinite;
+            }
+            .px-pen {
+              animation: px-pendown 0.9s steps(1) infinite;
+            }
+
+            /* casque : ondes sonores depuis les ecouteurs */
+            .px-wn {
+              fill: var(--lightblue);
+              animation: px-wavebeat 0.8s steps(1) infinite;
+            }
+            .px-wf {
+              fill: var(--lightblue);
+              animation: px-wavebeat 0.8s steps(1) 0.2s infinite;
+            }
+          }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+          &:hover {
+            .px-b1, .px-b2, .px-b3, .px-rn, .px-rf {
+              fill: var(--sandyBrown);
+              opacity: 1;
+            }
+          }
+        }
+
+
+
 
         .title {
           font-weight: bold;
@@ -55,5 +127,74 @@ section#skills {
         }
       }
     }
+  }
+}
+
+@keyframes px-appear {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes px-fizz {
+  0%, 55% {
+    opacity: 1;
+  }
+  56%, 100% {
+    opacity: 0.25;
+  }
+}
+
+@keyframes px-caret {
+  0%, 49% {
+    opacity: 1;
+  }
+  50%, 100% {
+    opacity: 0;
+  }
+}
+
+@keyframes px-wavebeat {
+  0%, 55% {
+    opacity: 1;
+  }
+  56%, 100% {
+    opacity: 0;
+  }
+}
+
+@keyframes px-paper {
+  0% {
+    transform: translateX(0);
+  }
+  16.6% {
+    transform: translateX(-1px);
+  }
+  33.3% {
+    transform: translateX(-2px);
+  }
+  50% {
+    transform: translateX(-3px);
+  }
+  66.6% {
+    transform: translateX(-4px);
+  }
+  83.3% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(-6px);
+  }
+}
+
+@keyframes px-pendown {
+  0%, 16.5% {
+    transform: translate(1.2px, -1.2px);
+  }
+  16.6%, 66.5% {
+    transform: translate(0, 0);
+  }
+  66.6%, 100% {
+    transform: translate(1.2px, -1.2px);
   }
 }
