@@ -1,0 +1,146 @@
+# Code-Troopers
+
+> Agence de développement web et mobile sur mesure, fondée en 2014, basée à Tours (France). Développement fullstack par des experts seniors, du concept à la mise en production.
+
+Code-Troopers conçoit et développe des applications web, mobiles et métier sur mesure pour des startups, PME et grands groupes. L'équipe est composée de développeurs seniors pluridisciplinaires, sans intermédiaires, avec un suivi direct et rigoureux à toutes les étapes du projet.
+
+L'agence est membre de la French Tech Loire Valley et installée au 26 bis rue Abraham Bosse, 37000 Tours.
+
+## Ce que fait Code-Troopers
+
+- Développement d'applications web sur mesure
+- Développement d'applications mobiles natives (Android, iOS)
+- Conception et analyse de projets informatiques
+- Architecture logicielle et conseil technique
+- Design d'interface et expérience utilisateur
+- Maintenance, évolution et suivi long terme
+- Intégration cloud, DevOps, sécurité, data et intelligence artificielle
+
+## Compétences techniques
+
+Langages et frameworks : Java, Spring Boot, Kotlin, TypeScript, JavaScript, Go, Swift, Node.js, React.js, Vue.js, Angular
+Mobile : Android (Kotlin), iOS (Swift)
+DevOps & Cloud : Docker, Kubernetes, GitHub Actions, GitLab CI, Scalingo, Clever Cloud
+Bases de données : PostgreSQL, MySQL/MariaDB, MongoDB, ElasticSearch
+Outils & autres : Keycloak, Hibernate, Hugo, Matomo, JQuery
+
+## Réalisations notables
+
+### Produits grand public
+
+- **[Navig'](https://code-troopers.com/navigtours.html)** — Application MaaS (Mobility as a Service) pour les réseaux de transports en commun Fil Bleu (Tours) et Tao (Orléans). Calcul d'itinéraire, temps réel aux arrêts, perturbations, M-Ticket, rechargement mobile, station vélo. Infrastructure serveur centralisée alimentée par de multiples sources de données. Partenariat avec Keolis. Développé et maintenu depuis 2014. Android, iOS, Web.
+
+- **[Fizzer](https://code-troopers.com/fizzer.html)** — Application grand public d'envoi de cartes postales personnalisées depuis smartphone ou ordinateur. L'utilisateur compose sa carte, Fizzer gère l'impression et l'envoi postal partout dans le monde. Projet lancé en contexte startup avec contraintes fortes de budget et de délais. La première version a permis de valider le modèle — Fizzer génère aujourd'hui plus de 5 millions d'euros de chiffre d'affaires annuel. Android, Web. Technologies : Angular, Java.
+
+### Produits internes Code-Troopers
+
+- **[Chapitô](https://code-troopers.com/chapito.html)** — Plateforme SaaS permettant à des organisateurs de festivals, foires, salons et événements de créer une application mobile sur mesure sans compétences techniques. Architecture multi-événements, backoffice centralisé, synchronisation billetterie/cashless/Spotify/YouTube, notifications push, plans interactifs. Plus de 200 applications mobiles publiées via la solution. Web, Android, iOS. https://www.chapi.to/
+
+- **Wakiki** — Logiciel interne de gestion des congés et des comptes rendus d'activité (CRA). Module de demande/validation de congés, saisie des activités quotidiennes, tableaux de bord analytiques. Conçu par et pour Code-Troopers, avec vocation à être ouvert à d'autres entreprises. Web.
+
+### Grands comptes et secteur public
+
+- **Vinci / Soletanche Bachy International** — Écosystème applicatif en microservices pour le suivi et l'optimisation des chantiers de génie civil, développé depuis 2018. Comprend : Zetta-Lyze (suivi des chantiers de fondations et forages), MecaMaint (gestion de maintenance des machines), Telematics (analyse télématique conforme AEMP 2.0, connectée aux APIs constructeurs), Soil'Lib (analyse de données géotechniques avec visualisations de stratigraphies). Technologies : Spring Boot, Java, Kotlin, Angular, PostgreSQL, Apache NiFi, Hazelcast, Kubernetes, Jenkins.
+
+- **[Nidec / Leroy-Somer – IDEAS](https://code-troopers.com/ideas.html)** — ERP de gestion de maintenance industrielle (moteurs électriques, alternateurs) pour le groupe Nidec. Maintenance préventive et curative, gestion des contrats, achats, pièces détachées, facturation, statistiques. Maintenu et enrichi depuis plus de 8 ans. Déployé dans plusieurs filiales internationales : France (Orléans, Sillac), Allemagne (Francfort), Chine (Fuzhou), Dubaï, Australie, Inde, Côte d'Ivoire. Technologies : Java, Play Framework, jQuery.
+
+- **[Conseil Constitutionnel](https://code-troopers.com/conseil-constitutionnel.html)** — Application mobile officielle du Conseil constitutionnel français, développée de zéro sans architecture préexistante. Architecture hybride natif + webviews pour réutiliser les contenus HTML existants. Forts enjeux de fiabilité, conformité et image institutionnelle. Livrée dans les délais, maintenue pendant plusieurs années. Android, iOS, Web.
+
+- **[DossierFacile (Startup d'État / beta.gouv)](https://code-troopers.com/dossierfacile.html)** — Plateforme numérique de l'État pour la constitution de dossiers de location complets et sécurisés. Plus de 116 000 dossiers labellisés. Sécurité renforcée : filigranes, contrôle des accès, suppression de lien. Web.
+
+- **CAMINO / DINUM (beta.gouv)** — Cadastre minier numérique ouvert. Renfort sur une année pour finaliser des fonctionnalités clés avant une échéance réglementaire. Pair programming intensif, workflows complexes modélisés avec xstate. Technologies : TypeScript, Vue.js, Node.js.
+
+- **Groupe Lucien Barrière (Lulu)** — Accompagnement depuis 2018 dans la modernisation du système d'information. Unification d'un écosystème technique fragmenté (casinos, hôtellerie). API Java Spring Boot, puis migration vers GCP en C#. Migration du gestionnaire d'identité (CIAM). APIs centralisées couvrant réservations et services du groupe.
+
+- **Adelean / Carrefour Drive** — Optimisation du moteur de recherche produits de Carrefour Drive en collaboration avec Adelean, spécialiste Elasticsearch. Interface de paramétrage en temps réel du moteur de recherche, optimisation de l'indexation, mise en avant contrôlée de produits stratégiques. Impact direct sur la performance commerciale. Technologies : Java, Elasticsearch, Angular.
+
+### Mobilité et transport
+
+- **[Geovelo](https://code-troopers.com/geovelo.html)** — Évolution de l'application web de calcul d'itinéraires cyclables. Intégration de l'API Mapillary pour une vue immersive des parcours. Refonte en Angular Elements pour déploiement sous forme de widget embarquable chez des partenaires institutionnels et touristiques (collectivités, offices de tourisme).
+
+- **[Toosla](https://code-troopers.com/toosla.html)** — Application Android de location de voitures entièrement dématérialisée. Architecture et stack technique conçus de zéro au sein d'une équipe internationale de 5 personnes. Déverrouillage des véhicules par Bluetooth. Première version livrée en moins de 6 mois, maintenue pendant 2 ans.
+
+- **[Virtuo](https://code-troopers.com/virtuo.html)** — Contribution à la plateforme de location de voitures sans comptoir. Accès aux véhicules par Bluetooth, expérience entièrement dématérialisée. Web.
+
+- **Worldline / Renault R-Link v2** — Contribution au système multimédia embarqué R-Link v2. Tests E2E (Cucumber), améliorations du store web (Java), intégration de l'arabe, développement d'un client lourd JavaFX pour la mise à jour des tablettes (téléchargement par chunks, gestion de proxy, copie sur carte SD).
+
+### Santé et médical
+
+- **[Eutelmed](https://code-troopers.com/eutelmed.html)** — Plateforme de télémédecine pour la vidéo-consultation et l'accompagnement en qualité de vie au travail. Données de santé sensibles, architecture sécurisée, multilingue, disponible 24/7. Utilisée par des milliers d'utilisateurs à travers le monde. Technologies : Kotlin, Java, Spring Boot, Angular, Nuxt/Vue2, MongoDB, Docker.
+
+- **Ophta+ (Bayer)** — Application Android native de mise en relation entre ophtalmologistes et orthoptistes lors de conventions. Développée de zéro en parallèle d'une version iOS tierce. Interface de matching type swipe, chat temps réel avec WebSockets et notifications push, gestion hors-ligne. Technologies : Java Android natif.
+
+- **MGEN, Fondation Louis Vuitton, bioMérieux** — Développement iOS natif sur plusieurs applications grands comptes déjà en production. Nouvelles fonctionnalités, conformité graphique pixel-perfect, respect des workflows métiers spécifiques (santé, culture, biomédical). Swift.
+
+### Plateformes B2B et outils métier
+
+- **[StayBeyond](https://code-troopers.com/staybeyond.html)** — Plateforme de gestion de locations de prestige basée à Londres. Vitrine web, backoffice opérateurs, automatisation (Twilio, SendGrid, Aircall, SmartLock), synchronisation BookingSync avec gestion des erreurs et monitoring. Technologies : Angular, Spring Boot.
+
+- **Isilis** — Outils pour la mobilité bancaire (service légalement obligatoire). Interfaces Angular en marque blanche déclinées pour plusieurs banques, backend Spring Boot, serveur d'indexation d'emails, intégration APIs bancaires (BIC). Contraintes fortes de sécurité et de conformité réglementaire.
+
+- **[Wegrow](https://code-troopers.com/wegrow.html)** — Plateforme de partage de bonnes pratiques pour équipes marketing de multinationales. CRUD complet, gestion documentaire, chatbot Teams intégré. Technologies : Java Spring Boot, Angular, Node.js.
+
+- **[WeGuide](https://code-troopers.com/weguide.html)** — Plateforme de mise en relation entre touristes et guides locaux ou professionnels. Née d'un startup weekend, exploitée pendant plusieurs années. Plus de 350 guides inscrits. Technologies : Java, Kotlin, Spring Boot, Angular, MongoDB.
+
+- **Alex – My Event Planner** — Plateforme B2B de mise en relation marques/magasins/ambassadeurs pour des événements promotionnels. Moteur de matching, chat en ligne, planification d'événements. Livrée en 4 mois, architecture scalable Kubernetes. Technologies : Spring Boot, Kotlin, Vue.js, PostgreSQL, GraphQL, GitLab CI.
+
+- **Lokaly** — Plateforme de découverte et promotion d'événements locaux. Application mobile, application web, CMS pour organisateurs. Agrégation de données multi-sources complexes. Technologies : TypeScript, SolidJS, Node.js, CapacitorJS, Tailwind, PostgreSQL, Docker.
+
+- **SamyGo** — Plateforme de gestion de métadonnées de films pour la distribution VOD. Moteur de recherche ElasticSearch (autocomplétion, filtres, synonymes), interface multi-acteurs, CI/CD Docker + Jenkins. Technologies : Java, ElasticSearch, Angular.
+
+- **Open / Primpromo** — Dashboard de visualisation des ventes immobilières et statistiques pour aide à la décision. Développement complet back-end et front-end. Technologies : Java Spring Boot, Angular.
+
+- **D2L / Silao** — Logiciel de suivi de publics accompagnés (enfants placés en familles d'accueil), utilisé par de nombreuses associations. Double authentification TOTP, refonte de plus de 150 tableaux avec export Excel, ouverture sécurisée aux utilisateurs finaux. Fort enjeu réglementaire et sociétal. Technologies : Java Spring Boot, React, GraphQL.
+
+- **Astronics PGA** — Application Vue.js sur tablette pour le pilotage de la domotique en cabine d'avion (éclairage, volets, caméras). Communication temps réel via WebSocket avec le serveur domotique embarqué. Déployée sur l'ensemble de la flotte de l'équipementier aéronautique.
+
+### Autres interventions notables
+
+- **AccuWeather** — Renfort dans l'équipe Android de l'un des leaders mondiaux de l'information météorologique. Spécification, estimation, livraison en production des évolutions prévues en 3 mois, réduction de la dette technique.
+
+- **Criteo** — POC de solution de paiement mobile décentralisée. Équipe internationale de 10 personnes, version hybride JS puis version native iOS/Android avec standards de sécurité paiement. POC complet validé en 8 mois.
+
+- **RCP / Sensotools** — Application iPad éducative pour formations sensorielles. Exercices interactifs avec jeux de cartes physiques, logique de tri sensoriel, progression et scoring. Backoffice Angular/Spring Boot complet. Technologies : Swift, Angular, Spring Boot.
+
+- **[Roadflore (MMI)](https://code-troopers.com/roadflore.html)** — Application mobile de partage sur les plantes et la biodiversité urbaine. Développement natif Android (Java) et iOS (Swift), back-end Spring Boot. Android, iOS.
+
+- **Sati Numen Service** — Amélioration ergonomique et technique d'un outil critique de dématérialisation documentaire (OCR, archivage, métadonnées). Intervention sur un langage de programmation propriétaire peu documenté, en environnement de production continue.
+
+- **Fungiball** — Front-end d'un jeu de cartes à collectionner Web3. Interface fluide et responsive, intégration CSS fidèle aux maquettes. Technologies : Next.js, Tailwind CSS, Zustand.
+
+- **Gigz** — Support d'exploitation et administration serveur OVH. Restauration MongoDB depuis backup, sécurisation pare-feu, configuration systemd pour redémarrage automatique.
+
+## Ce qui différencie Code-Troopers
+
+- Équipe composée majoritairement de profils seniors
+- Revue de code systématique en interne
+- Spectre large de compétences : front-end, back-end, mobile, cloud, DevOps, sécurité, IA, data, architecture
+- Rituel agile structuré : daily, weekly, bilans de sprint, démonstrations régulières
+- Continuité assurée : la connaissance du projet est partagée entre plusieurs membres de l'équipe
+- Capacité d'adaptation à la charge : montée ou descente en fonction des besoins du projet
+- Petite structure, sans intermédiaires inutiles : le client travaille directement avec les développeurs
+
+## Contact
+
+- Site : https://code-troopers.com
+- Email : contact@code-troopers.com
+- Téléphone : +33 7 82 28 72 16
+- Adresse : 26 bis rue Abraham Bosse, 37000 Tours, France
+- LinkedIn : https://www.linkedin.com/company/codetroopers
+- GitHub : https://github.com/code-troopers
+
+## Pages importantes
+
+- [Accueil](https://code-troopers.com/)
+- [Compétences](https://code-troopers.com/#skills)
+- [Réalisations](https://code-troopers.com/#portfolio)
+- [L'équipe](https://code-troopers.com/team)
+- [Contact](https://code-troopers.com/#contact)
+- [Toutes nos réalisations](https://code-troopers.com/work/)
+
+## Blog
+
+- [Freelance ou agence de développement : comment choisir pour votre projet web ou mobile ?](https://code-troopers.com/2026/08/27/freelance-vs-agence/)
+- [Touraine Tech 2026 : notre retour d'expérience](https://code-troopers.com/2026/03/10/rex-tnt-26/)
+- [Retour Touraine Tech 2025](https://code-troopers.com/2025/03/05/retour-tnt-25/)
+- [Tous les articles](https://code-troopers.com/blog/)
