@@ -31,11 +31,18 @@ if (navToggle) {
     navToggle.setAttribute("aria-expanded", String(open));
     navToggle.setAttribute("aria-label", open ? "Fermer le menu" : "Ouvrir le menu");
   });
+  const closeNav = () => {
+    nav.classList.remove("open");
+    navToggle.setAttribute("aria-expanded", "false");
+    navToggle.setAttribute("aria-label", "Ouvrir le menu");
+  };
   nav.addEventListener("click", (event) => {
-    if (event.target.closest("a")) {
-      nav.classList.remove("open");
-      navToggle.setAttribute("aria-expanded", "false");
-      navToggle.setAttribute("aria-label", "Ouvrir le menu");
+    if (event.target.closest("a")) closeNav();
+  });
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && nav.classList.contains("open")) {
+      closeNav();
+      navToggle.focus();
     }
   });
 }
@@ -88,7 +95,20 @@ function updateMenu() {
     }
   }
 }
-window.addEventListener("scroll", updateMenu);
+// one menu update per frame at most
+let menuUpdateQueued = false;
+window.addEventListener(
+  "scroll",
+  () => {
+    if (menuUpdateQueued) return;
+    menuUpdateQueued = true;
+    requestAnimationFrame(() => {
+      updateMenu();
+      menuUpdateQueued = false;
+    });
+  },
+  {passive: true}
+);
 window.addEventListener("load", updateMenu);
 
 // Matomo

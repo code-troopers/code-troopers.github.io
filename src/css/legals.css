@@ -14,7 +14,7 @@ section#text{
     color: var(--darkgrey);
   }
 
-  @media (width < var(--desktop)) {
+  @media (width < 1200px) {
     width: 90%;
     letter-spacing: initial;
   }

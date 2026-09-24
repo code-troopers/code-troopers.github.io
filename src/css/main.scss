@@ -17,13 +17,31 @@
 @use "legals.css";
 @use "cloud.css";
 @use "april.css";
-@use "navig.css";
 @use "team.css";
 @use "tips.css";
 @use "tipstags.css";
 
-:root {
-  scroll-behavior: smooth;
+@media (prefers-reduced-motion: no-preference) {
+  :root {
+    scroll-behavior: smooth;
+  }
+}
+
+// reduced motion: drop movement, keep color and state feedback
+@media (prefers-reduced-motion: reduce) {
+  section#portfolio .img-container,
+  section#casting .photo,
+  section#casting .photo img,
+  section#articles .blog-snippet-container,
+  section#articles .blog-snippet-container::before,
+  section#articles .blog-snippet-container::after,
+  a.read-more,
+  .pagination a,
+  #blog .content .cta a,
+  #cloud .word::before {
+    transition-duration: 0s !important;
+    transform: none !important;
+  }
 }
 
 html {
@@ -35,6 +53,40 @@ html {
 
 body {
   margin: 0;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+::selection {
+  background: var(--lightblue);
+  color: var(--black);
+}
+
+// cyan ring on dark bands; light surfaces override --focus-ring
+:focus-visible {
+  outline: 2px solid var(--focus-ring, var(--lightblue));
+  outline-offset: 3px;
+}
+
+// light surfaces: cyan fails on white
+section#casting,
+section#contact,
+section#blog,
+section#legals,
+section#text {
+  --focus-ring: var(--black);
+  --link-hover: var(--readingTeal);
+}
+
+h1,
+h2,
+h3 {
+  overflow-wrap: break-word;
 }
 
 .skip-link {
@@ -82,7 +134,7 @@ body {
 
 section h1,
 section > h2 {
-  font-family: "Montserrat Black", Helvetica, Arial, sans-serif;
+  font-weight: 900;
   text-align: center;
   font-size: 3rem;
   margin: 0;
@@ -118,13 +170,16 @@ a.btn {
   color: variables.$white;
   margin: 5rem auto;
   display: inline-block;
-  &.dark:hover {
-    background: variables.$darkGradient;
+  &:hover,
+  &:focus-visible {
+    background: var(--gradient);
+    border-color: var(--darkblue);
+    color: var(--black);
   }
 
-  &:hover {
-    background: variables.$gradient;
-    border-color: var(--darkblue);
+  &.dark:hover,
+  &.dark:focus-visible {
+    background: var(--darkGradient);
     color: variables.$white;
   }
 }
@@ -136,8 +191,9 @@ a.btn {
 a {
   text-decoration: none;
   color: variables.$white;
-  &:hover {
-    color: var(--lightblue);
+  &:hover,
+  &:focus-visible {
+    color: var(--link-hover, var(--lightblue));
   }
 }
 
@@ -159,10 +215,11 @@ a {
   padding: 1rem;
   color: variables.$bloggrey;
 
-  &:hover {
-    background: variables.$gradient;
+  &:hover,
+  &:focus-visible {
+    background: var(--gradient);
     border-color: transparent;
-    color: variables.$white;
+    color: var(--black);
   }
 }
 

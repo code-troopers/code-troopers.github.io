@@ -64,7 +64,7 @@
       position: relative;
       display: inline-block;
       padding: 0.5rem 0.5rem 0.5rem 0.5rem;
-      font-size: 0.7rem;
+      font-size: var(--fs-caption);
 
       span::before {
         content: " ";
@@ -77,7 +77,8 @@
         left: 4px;
       }
     }
-    li:hover {
+    li:hover,
+    li:focus-within {
       background: var(--gradient);
       color: var(--black);
       a {
@@ -166,7 +167,8 @@
         font-size: 1.5em;
       }
     }
-    &:hover {
+    &:hover,
+    &:focus-visible {
       background-color: var(--white);
       i {
         color: var(--darkblue);

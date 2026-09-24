@@ -9,7 +9,7 @@ section#contact {
     display: inline-block;
   }
   background: var(--gradient);
-  color: var(--white);
+  color: var(--black);
   padding-bottom: 1rem;
 
   .socials-follow {
@@ -32,15 +32,18 @@ section#contact {
     }
 
     a {
-      border: 2px solid #fff;
+      color: var(--black);
+      border: 2px solid var(--black);
       border-radius: 50%;
       height: 3rem;
       width: 3rem;
       display: flex;
       align-items: center;
       justify-content: center;
-      &:hover {
-        background-color: #fff;
+      &:hover,
+      &:focus-visible {
+        background-color: var(--black);
+        color: var(--lightblue);
       }
     }
   }
@@ -69,8 +72,9 @@ section#contact {
 
       a {
         color: var(--black);
-        &:hover {
-          color: var(--lightblue);
+        &:hover,
+        &:focus-visible {
+          color: var(--readingTeal);
         }
       }
 
@@ -83,6 +87,12 @@ section#contact {
         border-radius: 0.3rem;
         text-decoration: none;
         font-weight: bold;
+
+        &:hover,
+        &:focus-visible {
+          background: var(--gradient);
+          color: var(--black);
+        }
       }
     }
   }

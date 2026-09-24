@@ -56,16 +56,24 @@ header {
       border-bottom: none;
     }
 
-    a:hover {
+    a:hover,
+    a:focus-visible {
       background: var(--white);
+      color: var(--readingTeal);
+      outline-offset: -5px;
+      --focus-ring: var(--readingTeal);
 
       &.active {
-        color: var(--lightblue);
-        border-color: var(--lightblue);
+        border-color: var(--readingTeal);
       }
     }
 
+    .nav-toggle:focus-visible {
+      outline-offset: -5px;
+    }
+
     .nav-toggle {
+      order: 1;
       display: none;
       flex-direction: column;
       justify-content: center;
@@ -104,6 +112,7 @@ header {
     display: inherit;
     padding: 2rem;
     max-width: 100%;
+    height: auto;
     margin: 0 auto;
     text-align: center;
   }
@@ -145,11 +154,26 @@ header {
       padding-bottom: 0.1rem;
       border-bottom: 1px dotted var(--white);
 
-      &:hover {
+      &:hover,
+      &:focus-visible {
         color: var(--lightblue);
         border-color: var(--lightblue);
       }
     }
+  }
+}
+
+/* collapse only when JS is there to reopen the menu */
+@media (width < 1024px) {
+  .js header nav li {
+    display: none;
+  }
+  .js header nav li:has(#id-company),
+  .js header nav.open li {
+    display: block;
+  }
+  .js header nav .nav-toggle {
+    display: flex;
   }
 }
 
@@ -164,26 +188,9 @@ header {
         flex-direction: column;
       }
 
-      li {
-        display: none;
-      }
-      li:has(#id-company) {
-        display: block;
-      }
-
       a {
         border-left: none;
         border-right: none;
-      }
-
-      .nav-toggle {
-        display: flex;
-      }
-
-      &.open {
-        li {
-          display: block;
-        }
       }
     }
   }

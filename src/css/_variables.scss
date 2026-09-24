@@ -29,9 +29,25 @@
   --smallphone: 320px;
 
   --gradient: linear-gradient(60deg, var(--lightblue) 0%, var(--darkblue) 100%);
+  --readingTeal: #0b7b8c;
+  --readingTealDeep: #07515d;
+  --nightNavy: #243c54;
+  --mutedText: #667085;
+  --hairline: #d9d9d9;
+  --tintSurface: #f5f9fb;
+  --tintSurfaceStrong: #e4eff8;
+  --tintBorder: #e3edf3;
+  --deepNight: #101c2c;
+  --deepNightSurface: #15253a;
+  --deepNightBorder: #2a3b52;
+  --nightText: #d9e3ec;
+
+  --fs-caption: 0.875rem;
+
+  // start darkened so white text stays above 4.5:1 (WCAG AA)
   --darkGradient: linear-gradient(
     60deg,
-    var(--darkblue) 0%,
+    color-mix(in srgb, var(--darkblue) 65%, black) 0%,
     var(--darkerblue) 100%
   );
   --avatarGradient: linear-gradient(
@@ -49,39 +65,20 @@
   --avatarDarkBlue: #db713b;
 }
 
-$black: #000;
-$darkgrey: #313131;
-$grey: #959595;
-$lightgrey: #efefef;
-$white: #fff;
-$greywhite: #f0f0f0;
-$bloggrey: #323232;
+// Sass aliases: the custom properties above are the single source of truth
+$black: var(--black);
+$darkgrey: var(--darkgrey);
+$grey: var(--grey);
+$lightgrey: var(--lightgrey);
+$white: var(--white);
+$bloggrey: var(--bloggrey);
+$readingTeal: var(--readingTeal);
+$gradient: var(--gradient);
+$darkGradient: var(--darkGradient);
 
-$lightblue: #3bcce5;
-$darkblue: #409ad6;
-$darkerblue: #46506d;
-$avatarLightBlue: #3ccde6;
-$avatarDarkBlue: #419bd7;
-
-$sandyBrown: #fa9f42;
-$darkSandyBrown: #d68b2f;
-
-$nyanza: #d6f6dd;
-$darkNyanza: #3ccf6e;
-
-$periwinki: #dac4f7;
-$darkPeriwinki: #6d3ccf;
-
+// media queries cannot read custom properties
 $tablet: 768px;
 $smalldesktop: 1024px;
 $desktop: 1200px;
 $phone: 512px;
 $smallphone: 320px;
-
-$gradient: linear-gradient(60deg, $lightblue 0%, $darkblue 100%);
-$darkGradient: linear-gradient(60deg, $darkblue 0%, $darkerblue 100%);
-$avatarGradient: linear-gradient(
-  90deg,
-  $avatarLightBlue 0%,
-  $avatarDarkBlue 100%
-);

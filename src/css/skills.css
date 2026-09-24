@@ -86,8 +86,8 @@ section#skills {
             border-top: 1px solid var(--white);
             width: 30px;
           }
-          line-height: 1.4rem;
-          font-size: 0.8rem;
+          line-height: 1.6;
+          font-size: var(--fs-caption);
         }
       }
     }
@@ -106,6 +106,11 @@ section#skills {
           hyphens: auto;
           overflow-wrap: break-word;
           word-break: normal;
+
+          .title {
+            font-size: 1.1rem;
+            letter-spacing: 0.02em;
+          }
         }
       }
     }

@@ -1,24 +1,31 @@
 .team-container {
-  background: var(--darkGradient);
-  color: var(--white);
+  background: var(--deepNight);
+  color: var(--nightText);
 
   .team-section {
-    background-color: rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(2rem);
-    max-width: 1200px;
+    max-width: 900px;
     margin: 0 auto;
     padding: 80px;
-    text-align: justify;
+    letter-spacing: 0.01em;
+    line-height: 1.7;
 
-    strong {
-      color: #d5a419;
+    li {
+      margin-bottom: 1.1rem;
+    }
+
+    li > strong {
+      display: block;
+      margin-bottom: 0.15rem;
+      color: var(--lightblue);
+      letter-spacing: 0.04em;
     }
   }
 
   h1,
   h2,
   h3 {
-    color: #fff7d6;
+    color: var(--white);
+    line-height: 1.15;
     text-align: center;
   }
 
@@ -34,9 +41,9 @@
     padding: 16px;
     margin-bottom: 40px;
     text-align: center;
-    border: 1px solid var(--greywhite);
+    background: var(--deepNightSurface);
+    border: 1px solid var(--deepNightBorder);
     border-radius: 15px;
-    backdrop-filter: blur(10px);
     transition: background-color 0.3s ease-in-out;
     .full-member {
       height: 100%;
@@ -57,8 +64,7 @@
     h3 {
       margin-top: 10px;
       font-size: 1.5rem;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-      color: var(--lightgrey);
+      color: var(--white);
     }
 
     p {
@@ -76,7 +82,8 @@
     justify-content: center;
     a {
       color: var(--greywhite);
-      &:hover {
+      &:hover,
+      &:focus-visible {
         color: var(--lightblue);
       }
     }
@@ -131,11 +138,27 @@
 .carrousel-button {
   position: absolute;
   top: 50%;
+  display: grid;
+  place-items: center;
 
   width: 3rem;
   height: 3rem;
+  padding: 0;
+
+  color: var(--white);
+  background: rgba(0, 0, 0, 0.45);
+  border: 2px solid var(--white);
+  border-radius: 50%;
+  cursor: pointer;
 
   transform: translateY(-50%);
+
+  &:hover,
+  &:focus-visible {
+    color: var(--black);
+    background: var(--gradient);
+    border-color: var(--darkblue);
+  }
 }
 
 .carrousel-button--previous {
@@ -145,4 +168,36 @@
 
 .carrousel-button--next {
   right: -2rem;
+}
+
+@media (width < 1024px) {
+  .carrousel-button--previous {
+    left: 0.25rem;
+  }
+
+  .carrousel-button--next {
+    right: 0.25rem;
+  }
+}
+
+/* phones: cards fill the width, so the buttons sit below them */
+@media (width < 512px) {
+  .team-members-wrapper {
+    padding-bottom: 4rem;
+  }
+
+  .carrousel-button {
+    top: auto;
+    bottom: 0;
+    transform: none;
+  }
+
+  .carrousel-button--previous {
+    left: calc(50% - 3.5rem);
+    transform: rotate(180deg);
+  }
+
+  .carrousel-button--next {
+    right: calc(50% - 3.5rem);
+  }
 }

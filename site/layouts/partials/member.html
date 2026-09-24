@@ -9,7 +9,7 @@
         {{ if $member.photo }}
         <li class="team-member">
             {{ with $pageResource.GetMatch $member.photo }}
-            {{ with .Process "webp q100" }}
+            {{ with .Process "webp q80" }}
             <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}"
                 alt="Photo de {{ $member.name }}">
             {{ end }}
@@ -67,22 +67,20 @@
         {{ end }}
         {{ end }}
     </ul>
-    <button onclick="handleClick('previous')" class="carrousel-button carrousel-button--previous" type="button" aria-label="Membre précédent">&#10140;</button>
-    <button onclick="handleClick('next')" class="carrousel-button carrousel-button--next" type="button" aria-label="Membre suivant">&#10140;</button>
+    <button onclick="handleClick('previous')" class="carrousel-button carrousel-button--previous" type="button" aria-label="Membre précédent"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+    <button onclick="handleClick('next')" class="carrousel-button carrousel-button--next" type="button" aria-label="Membre suivant"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
 </div>
 
 <script>
     const list = document.querySelector(".team-members");
-    const item = document.querySelector(".team-member");
-    const itemWidth = item.offsetWidth;
     const wrapper = document.querySelector(".team-members-wrapper");
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
     function handleClick(direction) {
-        if (direction === "previous") {
-            list.scrollBy({ left: -itemWidth * 2, behavior: "smooth" });
-        } else {
-            list.scrollBy({ left: itemWidth * 2, behavior: "smooth" });
-        }
+        const item = list && list.querySelector(".team-member");
+        if (!item) return;
+        const step = item.offsetWidth * 2 * (direction === "previous" ? -1 : 1);
+        list.scrollBy({ left: step, behavior: reduceMotion.matches ? "auto" : "smooth" });
     }
 
     wrapper.addEventListener("keydown", function(e) {

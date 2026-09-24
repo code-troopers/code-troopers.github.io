@@ -8,7 +8,7 @@
   &.black {
     @include mixins.arrows(variables.$black, -0.33rem, 3px);
   }
-  font-family: "Montserrat Light", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 300;
   .next-page {
     float: right;
   }
@@ -25,6 +25,7 @@
       width: 24px;
     }
     &:hover,
+    &:focus-visible,
     &:visited {
       color: variables.$white;
       .black {
@@ -34,12 +35,14 @@
         width: 32px;
       }
     }
-    &.previous-page:hover {
+    &.previous-page:hover,
+    &.previous-page:focus-visible {
       .arrow {
         margin-left: -8px;
       }
     }
-    &.next-page:hover {
+    &.next-page:hover,
+    &.next-page:focus-visible {
       margin-right: -8px;
     }
   }
@@ -50,7 +53,8 @@
     a {
       &.next-page {
         margin-right: 0.8rem;
-        &:hover {
+        &:hover,
+        &:focus-visible {
           margin-right: 8px;
         }
       }

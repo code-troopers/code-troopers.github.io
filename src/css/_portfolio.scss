@@ -18,16 +18,14 @@ section#portfolio {
       .cover-head {
         overflow: hidden;
         padding: 0;
-        &:hover {
-          transition: 0.2s;
-        }
       }
       .img-container{
         margin:auto;
         height: 330px;
         overflow: hidden;
-        &:hover {
-          transition: 0.5s;
+        transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        &:hover,
+        &:focus-within {
           transform: scale(1.1);
         }
 
@@ -40,7 +38,7 @@ section#portfolio {
       }
 
       a{
-        font-size: 0.7rem;
+        font-size: var(--fs-caption);
       }
 
       & > div {
@@ -53,19 +51,20 @@ section#portfolio {
         }
 
         p {
-          font-size: 0.7rem;
+          font-size: var(--fs-caption);
           color: variables.$grey;
-          line-height: 1.3rem;
+          line-height: 1.5;
         }
         a.read-more{
           display: inline-block;
           width: 40%;
-          transition: width 1s ease-in-out;
+          transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1);
           .arrow_box{
             margin-left: -0.6rem;
           }
           @include mixins.arrows(variables.$white);
-          &:hover{
+          &:hover,
+          &:focus-visible {
             width:100%;
             @include mixins.arrows(var(--lightblue));
           }
@@ -126,7 +125,7 @@ section#work, section#portfolio{
       position: relative;
       display: inline-block;
       padding: 0.5rem;
-      font-size: 0.7rem;
+      font-size: var(--fs-caption);
       color: variables.$lightgrey;
       span::before {
         content: '';
@@ -137,10 +136,11 @@ section#work, section#portfolio{
         font-size: 18px;
       }
 
-      &:hover{
-        background: variables.$gradient;
+      &:hover,
+      &:focus-visible {
+        background: var(--gradient);
         border-color: transparent;
-        color: variables.$white;
+        color: var(--black);
       }
     }
   }

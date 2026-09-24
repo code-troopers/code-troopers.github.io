@@ -69,14 +69,6 @@ section#casting {
       }
     }
 
-    > p {
-      letter-spacing: initial;
-    }
-    p {
-      color: var(--grey);
-      text-align: center;
-      line-height: 1.5rem;
-    }
 
     a {
       text-decoration: underline;
