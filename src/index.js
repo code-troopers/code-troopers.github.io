@@ -47,6 +47,28 @@ if (navToggle) {
   });
 }
 
+// Skills: play each pixel animation once, staggered, when the section scrolls in
+const skillItems = document.querySelectorAll("#skills li");
+const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+if (skillItems.length && "IntersectionObserver" in window && !reduceMotion.matches) {
+  const cycle = 3600;
+  const stagger = 400;
+  const skillsObserver = new IntersectionObserver(
+    (entries) => {
+      if (!entries.some((entry) => entry.isIntersecting)) return;
+      skillsObserver.disconnect();
+      skillItems.forEach((item, index) => {
+        setTimeout(() => {
+          item.classList.add("is-playing");
+          setTimeout(() => item.classList.remove("is-playing"), cycle);
+        }, index * stagger);
+      });
+    },
+    {threshold: 0.5}
+  );
+  skillsObserver.observe(skillItems[0].parentElement);
+}
+
 // Halloween theme: October 1-31
 if (new Date().getMonth() === 9) {
   document.documentElement.classList.add("halloween");

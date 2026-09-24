@@ -1,4 +1,5 @@
 section#skills {
+  --px-cycle: 3.6s;
   background: var(--darkGradient);
   color: var(--white);
 
@@ -22,50 +23,52 @@ section#skills {
           opacity: 0;
         }
 
-        .px-lit {
-          transition: opacity 0.3s ease;
-        }
-
+        /* reduced motion: hover shows the end state without movement */
         &:hover {
           .px-lit, .px-applied, .px-w1, .px-w2 {
             opacity: 1;
           }
         }
 
+        /* every cycle starts and ends on the resting frame */
         @media (prefers-reduced-motion: no-preference) {
-          &:hover {
+          &:hover,
+          &.is-playing {
+            .px-lit {
+              animation: px-flicker var(--px-cycle) linear infinite;
+            }
             .px-fetch {
-              animation: px-fetchwin 3.6s linear infinite;
+              animation: px-fetchwin var(--px-cycle) linear infinite;
             }
             .px-boot {
-              animation: px-bootwin 3.6s linear infinite;
+              animation: px-bootwin var(--px-cycle) linear infinite;
             }
             .px-bt1 {
-              animation: px-bt1 3.6s linear infinite;
+              animation: px-bt1 var(--px-cycle) linear infinite;
             }
             .px-bt2 {
-              animation: px-bt2 3.6s linear infinite;
+              animation: px-bt2 var(--px-cycle) linear infinite;
             }
             .px-bt3 {
-              animation: px-bt3 3.6s linear infinite;
+              animation: px-bt3 var(--px-cycle) linear infinite;
             }
             .px-bcur {
-              animation: px-badvance 3.6s linear infinite, px-caret 1.06s steps(1) infinite;
+              animation: px-badvance var(--px-cycle) linear infinite, px-caret 1.06s steps(1) infinite;
             }
             .px-mouse {
-              animation: px-journey 3.6s linear infinite;
+              animation: px-journey var(--px-cycle) linear infinite;
             }
             .px-press {
-              animation: px-click 3.6s linear infinite;
+              animation: px-click var(--px-cycle) linear infinite;
             }
             .px-applied {
-              animation: px-apply 3.6s linear infinite;
+              animation: px-apply var(--px-cycle) linear infinite;
             }
             .px-w1 {
-              animation: px-sound 1.6s ease-in-out infinite;
+              animation: px-sound var(--px-cycle) linear infinite;
             }
             .px-w2 {
-              animation: px-sound 1.6s ease-in-out 0.25s infinite;
+              animation: px-sound-echo var(--px-cycle) linear infinite;
             }
           }
         }
@@ -126,119 +129,96 @@ section#skills {
   }
 }
 
+/* conception: the bulb sputters on, stays lit, then goes back off */
+@keyframes px-flicker {
+  0%, 7% { opacity: 0; }
+  8%, 10% { opacity: 1; }
+  11%, 13% { opacity: 0; }
+  14%, 16% { opacity: 1; }
+  17%, 18% { opacity: 0.4; }
+  19%, 92% { opacity: 1; }
+  93%, 100% { opacity: 0; }
+}
+
+/* dev: the trooper screen reboots over itself, then comes back */
 @keyframes px-fetchwin {
-  0%, 54% {
-    opacity: 0;
-  }
-  55%, 100% {
-    opacity: 1;
-  }
+  0%, 11% { opacity: 1; }
+  12%, 59% { opacity: 0; }
+  60%, 100% { opacity: 1; }
 }
 
 @keyframes px-bootwin {
-  0%, 54% {
-    opacity: 1;
-  }
-  55%, 100% {
-    opacity: 0;
-  }
+  0%, 11% { opacity: 0; }
+  12%, 59% { opacity: 1; }
+  60%, 100% { opacity: 0; }
 }
 
 @keyframes px-bt1 {
-  0%, 7% {
-    opacity: 0;
-  }
-  8%, 100% {
-    opacity: 1;
-  }
+  0%, 21% { opacity: 0; }
+  22%, 100% { opacity: 1; }
 }
 
 @keyframes px-bt2 {
-  0%, 19% {
-    opacity: 0;
-  }
-  20%, 100% {
-    opacity: 1;
-  }
+  0%, 33% { opacity: 0; }
+  34%, 100% { opacity: 1; }
 }
 
 @keyframes px-bt3 {
-  0%, 31% {
-    opacity: 0;
-  }
-  32%, 100% {
-    opacity: 1;
-  }
+  0%, 45% { opacity: 0; }
+  46%, 100% { opacity: 1; }
 }
 
 @keyframes px-badvance {
-  0%, 7% {
-    transform: translateX(-10px);
-  }
-  8%, 19% {
-    transform: translateX(-7px);
-  }
-  20%, 31% {
-    transform: translateX(-3px);
-  }
-  32%, 100% {
-    transform: translateX(0);
-  }
+  0%, 21% { transform: translateX(-10px); }
+  22%, 33% { transform: translateX(-7px); }
+  34%, 45% { transform: translateX(-3px); }
+  46%, 100% { transform: translateX(0); }
 }
 
+/* design: the cursor leaves the button, comes back, clicks, the image fills */
 @keyframes px-journey {
-  0%, 19% {
-    transform: translate(5px, -8px);
-  }
-  20%, 29% {
-    transform: translate(3px, -5px);
-  }
-  30%, 39% {
-    transform: translate(1px, -2px);
-  }
-  40%, 44% {
-    transform: translate(0, 0);
-  }
-  45%, 59% {
-    transform: translate(1px, 1px);
-  }
-  60%, 89% {
-    transform: translate(0, 0);
-  }
-  90%, 100% {
-    transform: translate(5px, -8px);
-  }
+  0%, 11% { transform: translate(0, 0); }
+  12%, 19% { transform: translate(1px, -2px); }
+  20%, 27% { transform: translate(3px, -5px); }
+  28%, 35% { transform: translate(5px, -8px); }
+  36%, 43% { transform: translate(3px, -5px); }
+  44%, 49% { transform: translate(1px, -2px); }
+  50%, 54% { transform: translate(0, 0); }
+  55%, 64% { transform: translate(1px, 1px); }
+  65%, 100% { transform: translate(0, 0); }
 }
 
 @keyframes px-click {
-  0%, 44% {
-    opacity: 0;
-  }
-  45%, 59% {
-    opacity: 1;
-  }
-  60%, 100% {
-    opacity: 0;
-  }
+  0%, 54% { opacity: 0; }
+  55%, 64% { opacity: 1; }
+  65%, 100% { opacity: 0; }
 }
 
 @keyframes px-apply {
-  0%, 59% {
-    opacity: 0;
-  }
-  60%, 89% {
-    opacity: 1;
-  }
-  90%, 100% {
-    opacity: 0;
-  }
+  0%, 64% { opacity: 0; }
+  65%, 92% { opacity: 1; }
+  93%, 100% { opacity: 0; }
 }
 
+/* maintenance: three stepped pulses, the outer wave one beat behind */
 @keyframes px-sound {
-  0%, 100% {
-    opacity: 0.3;
-  }
-  50% {
-    opacity: 1;
-  }
+  0%, 9% { opacity: 0; }
+  10%, 19% { opacity: 0.35; }
+  20%, 34% { opacity: 1; }
+  35%, 44% { opacity: 0.35; }
+  45%, 59% { opacity: 1; }
+  60%, 69% { opacity: 0.35; }
+  70%, 84% { opacity: 1; }
+  85%, 100% { opacity: 0; }
+}
+
+@keyframes px-sound-echo {
+  0%, 14% { opacity: 0; }
+  15%, 24% { opacity: 0.35; }
+  25%, 39% { opacity: 1; }
+  40%, 49% { opacity: 0.35; }
+  50%, 64% { opacity: 1; }
+  65%, 74% { opacity: 0.35; }
+  75%, 89% { opacity: 1; }
+  90%, 100% { opacity: 0; }
 }
