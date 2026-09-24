@@ -13,80 +13,62 @@ section#skills {
         margin: 1rem;
 
         .icon-svg {
-          height: 100px;
+          /* 3 x 32px for right size */
+          height: 96px;
           width: auto;
-          overflow: visible;
         }
 
-        .px-rn, .px-rf, .px-line, .px-wn, .px-wf {
+        .px-lit, .px-press, .px-applied, .px-w1, .px-w2, .px-boot {
           opacity: 0;
+        }
+
+        .px-lit {
+          transition: opacity 0.3s ease;
+        }
+
+        &:hover {
+          .px-lit, .px-applied, .px-w1, .px-w2 {
+            opacity: 1;
+          }
         }
 
         @media (prefers-reduced-motion: no-preference) {
           &:hover {
-            /* ampoule : le jus petille, la lumiere grandit en deux crans */
-            .px-b1, .px-b2, .px-b3, .px-rn, .px-rf {
-              fill: var(--sandyBrown);
+            .px-fetch {
+              animation: px-fetchwin 3.6s linear infinite;
             }
-            .px-b1 {
-              animation: px-fizz 0.7s steps(1) infinite;
+            .px-boot {
+              animation: px-bootwin 3.6s linear infinite;
             }
-            .px-b2 {
-              animation: px-fizz 0.7s steps(1) 0.16s infinite;
+            .px-bt1 {
+              animation: px-bt1 3.6s linear infinite;
             }
-            .px-b3 {
-              animation: px-fizz 0.7s steps(1) 0.32s infinite;
+            .px-bt2 {
+              animation: px-bt2 3.6s linear infinite;
             }
-            .px-rn {
-              animation: px-appear 1ms linear 0.14s forwards;
+            .px-bt3 {
+              animation: px-bt3 3.6s linear infinite;
             }
-            .px-rf {
-              animation: px-appear 1ms linear 0.3s forwards;
+            .px-bcur {
+              animation: px-badvance 3.6s linear infinite, px-caret 1.06s steps(1) infinite;
             }
-
-            /* code : coloration syntaxique, curseur au rythme d'un terminal */
-            .px-chev {
-              fill: var(--lightblue);
+            .px-mouse {
+              animation: px-journey 3.6s linear infinite;
             }
-            .px-cursor {
-              animation: px-caret 1.06s steps(1) infinite;
+            .px-press {
+              animation: px-click 3.6s linear infinite;
             }
-
-            /* crayon : la feuille defile sous la pointe, le crayon se leve pendant les blancs */
-            .px-line {
-              opacity: 1;
-              fill: var(--lightblue);
+            .px-applied {
+              animation: px-apply 3.6s linear infinite;
             }
-            .px-paper {
-              animation: px-paper 0.9s steps(1) infinite;
+            .px-w1 {
+              animation: px-sound 1.6s ease-in-out infinite;
             }
-            .px-pen {
-              animation: px-pendown 0.9s steps(1) infinite;
-            }
-
-            /* casque : ondes sonores depuis les ecouteurs */
-            .px-wn {
-              fill: var(--lightblue);
-              animation: px-wavebeat 0.8s steps(1) infinite;
-            }
-            .px-wf {
-              fill: var(--lightblue);
-              animation: px-wavebeat 0.8s steps(1) 0.2s infinite;
+            .px-w2 {
+              animation: px-sound 1.6s ease-in-out 0.25s infinite;
             }
           }
         }
-
-        @media (prefers-reduced-motion: reduce) {
-          &:hover {
-            .px-b1, .px-b2, .px-b3, .px-rn, .px-rf {
-              fill: var(--sandyBrown);
-              opacity: 1;
-            }
-          }
-        }
-
-
-
 
         .title {
           font-weight: bold;
@@ -130,21 +112,6 @@ section#skills {
   }
 }
 
-@keyframes px-appear {
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes px-fizz {
-  0%, 55% {
-    opacity: 1;
-  }
-  56%, 100% {
-    opacity: 0.25;
-  }
-}
-
 @keyframes px-caret {
   0%, 49% {
     opacity: 1;
@@ -154,47 +121,119 @@ section#skills {
   }
 }
 
-@keyframes px-wavebeat {
-  0%, 55% {
+@keyframes px-fetchwin {
+  0%, 54% {
+    opacity: 0;
+  }
+  55%, 100% {
     opacity: 1;
   }
-  56%, 100% {
+}
+
+@keyframes px-bootwin {
+  0%, 54% {
+    opacity: 1;
+  }
+  55%, 100% {
     opacity: 0;
   }
 }
 
-@keyframes px-paper {
-  0% {
-    transform: translateX(0);
+@keyframes px-bt1 {
+  0%, 7% {
+    opacity: 0;
   }
-  16.6% {
-    transform: translateX(-1px);
-  }
-  33.3% {
-    transform: translateX(-2px);
-  }
-  50% {
-    transform: translateX(-3px);
-  }
-  66.6% {
-    transform: translateX(-4px);
-  }
-  83.3% {
-    transform: translateX(-5px);
-  }
-  100% {
-    transform: translateX(-6px);
+  8%, 100% {
+    opacity: 1;
   }
 }
 
-@keyframes px-pendown {
-  0%, 16.5% {
-    transform: translate(1.2px, -1.2px);
+@keyframes px-bt2 {
+  0%, 19% {
+    opacity: 0;
   }
-  16.6%, 66.5% {
+  20%, 100% {
+    opacity: 1;
+  }
+}
+
+@keyframes px-bt3 {
+  0%, 31% {
+    opacity: 0;
+  }
+  32%, 100% {
+    opacity: 1;
+  }
+}
+
+@keyframes px-badvance {
+  0%, 7% {
+    transform: translateX(-10px);
+  }
+  8%, 19% {
+    transform: translateX(-7px);
+  }
+  20%, 31% {
+    transform: translateX(-3px);
+  }
+  32%, 100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes px-journey {
+  0%, 19% {
+    transform: translate(5px, -8px);
+  }
+  20%, 29% {
+    transform: translate(3px, -5px);
+  }
+  30%, 39% {
+    transform: translate(1px, -2px);
+  }
+  40%, 44% {
     transform: translate(0, 0);
   }
-  66.6%, 100% {
-    transform: translate(1.2px, -1.2px);
+  45%, 59% {
+    transform: translate(1px, 1px);
+  }
+  60%, 89% {
+    transform: translate(0, 0);
+  }
+  90%, 100% {
+    transform: translate(5px, -8px);
+  }
+}
+
+@keyframes px-click {
+  0%, 44% {
+    opacity: 0;
+  }
+  45%, 59% {
+    opacity: 1;
+  }
+  60%, 100% {
+    opacity: 0;
+  }
+}
+
+@keyframes px-apply {
+  0%, 59% {
+    opacity: 0;
+  }
+  60%, 89% {
+    opacity: 1;
+  }
+  90%, 100% {
+    opacity: 0;
+  }
+}
+
+@keyframes px-sound {
+  0%, 100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 1;
   }
 }
