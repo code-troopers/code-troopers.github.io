@@ -56,7 +56,11 @@ module.exports = {
           MiniCssExtractPlugin.loader,
           {
             loader: "css-loader",
-            options: { sourceMap: true },
+            options: {
+              sourceMap: true,
+              // root-relative URLs point to site/static, served as-is by Hugo
+              url: {filter: (url) => !url.startsWith("/")},
+            },
           },
           {
             loader: "resolve-url-loader",

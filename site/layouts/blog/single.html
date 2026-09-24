@@ -11,7 +11,7 @@
         <div class="wrapper">
             <article>
                 {{ with .Resources.GetMatch .Params.cover }}
-                    {{ with .Fill "900x500 Center webp q100" }}
+                    {{ with .Fill "900x500 Center webp q80" }}
                         <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="Illustration de l'article {{ $.Title }}">
                     {{ end }}
                 {{ end }}

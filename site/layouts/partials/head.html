@@ -50,4 +50,9 @@
   <script type="application/ld+json">{{ $ld | jsonify | safeJS }}</script>
   {{ end }}
 
+  {{ if .IsHome }}
+  <link rel="preload" as="image" href="/img/header_large.webp" media="(min-width: 768px)" fetchpriority="high" />
+  <link rel="preload" as="image" href="/img/header_small.webp" media="(max-width: 767px)" fetchpriority="high" />
+  {{ end }}
+  <script>document.documentElement.classList.add("js");</script>
 </head>

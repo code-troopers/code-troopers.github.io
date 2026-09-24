@@ -3,7 +3,7 @@
 <div class="blog-snippet-container">
   <div class="blog-snippet">
     {{ with .Resources.GetMatch .Params.cover }}
-      {{ with .Fill "336x200 Center webp q100" }}
+      {{ with .Fill "336x200 Center webp q80" }}
       <div class="img-container">
         {{ if $.Truncated }}
         <a href="{{ $.Permalink }}" aria-hidden="true" tabindex="-1">

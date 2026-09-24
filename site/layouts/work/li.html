@@ -1,11 +1,18 @@
 {{ $baseurl := .Site.BaseURL }}
 
+{{ $first := index (where .Site.RegularPages.ByWeight "Type" "work") 0 }}
 <div class="work-container">
   <div class="cover-head">
   {{ with .Resources.GetMatch .Params.cover }}
-    {{ with .Fill "400x300 Center webp q100" }}
+    {{ $src := . }}
+    {{ with .Fill "400x300 Center webp q80" }}
+    {{ $srcset := "" }}
+    {{ if and (ge $src.Width 800) (ge $src.Height 600) }}
+      {{ $retina := $src.Fill "800x600 Center webp q80" }}
+      {{ $srcset = printf "%s 1x, %s 2x" .RelPermalink $retina.RelPermalink }}
+    {{ end }}
     <div class="img-container">
-      <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="" loading="lazy">
+      <img src="{{ .RelPermalink }}"{{ with $srcset }} srcset="{{ . }}"{{ end }} width="{{ .Width }}" height="{{ .Height }}" alt=""{{ if eq $.RelPermalink $first.RelPermalink }} fetchpriority="high"{{ else }} loading="lazy"{{ end }}>
     </div>
     {{ end }}
   {{ end }}
