@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint src cypress",
-    "start": "run-p start:**",
+    "start": "run-p 'start:**'",
     "start:hugo": "hugo -d ../dist -s site -w --logLevel debug -D -F",
     "start:webpack": "webpack-dev-server --config webpack.dev.js --hot",
     "prebuild": "rimraf dist",
@@ -78,6 +78,7 @@
     "process": "^0.11.10",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
+    "react-immutable-proptypes": "^2.2.0",
     "stream-browserify": "^3.0.0",
     "stream-http": "^3.2.0",
     "to-string-loader": "^1.2.0",
@@ -95,5 +96,6 @@
     "@tootallnate/once": "^3.0.1",
     "qs": "^6.15.3",
     "adm-zip": "^0.6.0"
-  }
+  },
+  "packageManager": "yarn@4.18.1"
 }
