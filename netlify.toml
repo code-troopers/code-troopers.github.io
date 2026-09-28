@@ -1,6 +1,6 @@
 [build.environment]
   NETLIFY_USE_YARN = "true"
-  YARN_VERSION = "1.22.17"
+  YARN_VERSION = "4.18.1"
 
 [build]
   command = "yarn build"
