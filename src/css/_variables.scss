@@ -39,6 +39,11 @@
     var(--avatarLightBlue) 0%,
     var(--avatarDarkBlue) 100%
   );
+
+  --nightCard: #243c54;
+  --tintSurface: #f5f9fb;
+  --tintSurfaceStrong: #e4eff8;
+  --tintBorder: #e3edf3;
 }
 
 :root.halloween {
@@ -47,6 +52,10 @@
   --darkerblue: #b85b2d;
   --avatarLightBlue: #e39b36;
   --avatarDarkBlue: #db713b;
+  --nightCard: #3b2618;
+  --tintSurface: #fcf7f2;
+  --tintSurfaceStrong: #f8e7da;
+  --tintBorder: #f2e2d5;
 }
 
 $black: #000;
@@ -78,10 +87,7 @@ $desktop: 1200px;
 $phone: 512px;
 $smallphone: 320px;
 
-$gradient: linear-gradient(60deg, $lightblue 0%, $darkblue 100%);
-$darkGradient: linear-gradient(60deg, $darkblue 0%, $darkerblue 100%);
-$avatarGradient: linear-gradient(
-  90deg,
-  $avatarLightBlue 0%,
-  $avatarDarkBlue 100%
-);
+// themable: resolve at runtime so the halloween palette applies
+$gradient: var(--gradient);
+$darkGradient: var(--darkGradient);
+$avatarGradient: var(--avatarGradient);

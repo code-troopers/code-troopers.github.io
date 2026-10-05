@@ -30,7 +30,7 @@ section#articles {
     .blog-snippet-container {
       $lazerHeight: 10px;
       $borderRadius: 15px;
-      $backgroundColor: #243c54;
+      $backgroundColor: var(--nightCard);
       $transitionDuration: 0.2s;
       $borderWidth: 2px;
       $lazerColor: var(--lightblue);
@@ -274,8 +274,8 @@ section#blog {
 
         .cta {
           text-align: center;
-          background: #f5f9fb;
-          border: 1px solid #e3edf3;
+          background: var(--tintSurface);
+          border: 1px solid var(--tintBorder);
           border-radius: 0.75rem;
           padding: 1.5rem 2rem;
           font-size: 1.05rem;
@@ -292,13 +292,13 @@ section#blog {
             padding: 0.5rem 1.25rem;
             border-radius: 2rem;
             margin: 0 0.25rem;
-            box-shadow: 0 2px 8px rgba(64, 154, 214, 0.35);
+            box-shadow: 0 2px 8px color-mix(in srgb, var(--darkblue) 35%, transparent);
             transition: transform 0.15s ease, box-shadow 0.15s ease;
 
             &:hover {
               color: variables.$white;
               transform: translateY(-2px);
-              box-shadow: 0 4px 12px rgba(64, 154, 214, 0.5);
+              box-shadow: 0 4px 12px color-mix(in srgb, var(--darkblue) 50%, transparent);
             }
           }
         }
@@ -320,7 +320,7 @@ section#blog {
           border: 1px solid #d9d9d9;
           border-radius: 0.75rem;
           overflow: hidden;
-          box-shadow: 0 3px 10px rgba(70, 80, 109, 0.15);
+          box-shadow: 0 3px 10px color-mix(in srgb, var(--darkerblue) 15%, transparent);
 
           th,
           td {
@@ -353,11 +353,11 @@ section#blog {
             transition: background 0.15s ease;
 
             &:nth-child(even) {
-              background: #f5f9fb;
+              background: var(--tintSurface);
             }
 
             &:hover {
-              background: #e4eff8;
+              background: var(--tintSurfaceStrong);
             }
           }
         }      }
@@ -423,7 +423,7 @@ section#blog {
           border: 1px solid #d9d9d9;
           border-radius: 0.75rem;
           overflow: hidden;
-          box-shadow: 0 3px 10px rgba(70, 80, 109, 0.15);
+          box-shadow: 0 3px 10px color-mix(in srgb, var(--darkerblue) 15%, transparent);
         }
 
         tbody tr:nth-child(even) {

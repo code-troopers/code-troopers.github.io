@@ -43,6 +43,8 @@ if (navToggle) {
 // Halloween theme: October 1-31
 if (new Date().getMonth() === 9) {
   document.documentElement.classList.add("halloween");
+  const logo = document.querySelector("#company img.logo");
+  if (logo) logo.src = "/header_logo_halloween.png";
 }
 
 // Responsive tables: copy column headers onto each cell so _blog.scss can

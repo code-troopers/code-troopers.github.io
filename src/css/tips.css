@@ -19,10 +19,10 @@ section#tips {
         margin-top: 20px;
         margin-bottom: 20px;
 
-        border: 1px solid rgba(var(--lightblue), 0.25);
+        border: 1px solid color-mix(in srgb, var(--lightblue) 25%, transparent);
         border-radius: 20px;
-        background-color: rgba(var(--darkerblue), 0.66);
-        box-shadow: 0 0 10px 1px rgba(var(--lightblue), 0.25);
+        background-color: color-mix(in srgb, var(--darkerblue) 66%, transparent);
+        box-shadow: 0 0 10px 1px color-mix(in srgb, var(--lightblue) 25%, transparent);
 
         backdrop-filter: blur(15px);
 
