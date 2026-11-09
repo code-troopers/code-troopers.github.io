@@ -51,19 +51,25 @@
     
     <url>
         <loc>https://code-troopers.com/tags/agence/</loc>
-        <lastmod>2026-08-27T00:00:00+00:00</lastmod>
+        <lastmod>2026-11-09T00:00:00+00:00</lastmod>
         <priority>0.8</priority>
     </url>
     
     <url>
         <loc>https://code-troopers.com/</loc>
-        <lastmod>2026-08-27T00:00:00+00:00</lastmod>
+        <lastmod>2026-11-09T00:00:00+00:00</lastmod>
         <priority>1</priority>
     </url>
     
     <url>
         <loc>https://code-troopers.com/blog/</loc>
-        <lastmod>2026-08-27T00:00:00+00:00</lastmod>
+        <lastmod>2026-11-09T00:00:00+00:00</lastmod>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://code-troopers.com/2026/11/09/developpeur-senior-7-signaux/</loc>
+        <lastmod>2026-11-09T00:00:00+00:00</lastmod>
         <priority>0.8</priority>
     </url>
     
