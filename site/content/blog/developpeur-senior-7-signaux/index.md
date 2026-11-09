@@ -4,6 +4,7 @@ author: Nicolas
 url: /2026/11/09/developpeur-senior-7-signaux/
 date: 2026-11-09
 expirydate: ""
+cover: cover.jpg
 draft: false
 tags:
   - Agence
