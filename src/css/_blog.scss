@@ -205,12 +205,16 @@ section#blog {
         margin: 0.5rem;
         color: variables.$darkgrey;
         font-family: "Montserrat Light", "Helvetica Neue", Arial, sans-serif;
+        text-align: justify;
+        hyphens: auto;
         h1,
         h2,
         h3,
         h4,
         h5,
         h6 {
+          text-align: left;
+          hyphens: manual;
           color: variables.$black;
           font-family: "Montserrat", Helvetica, Arial, sans-serif;
         }
