@@ -6,8 +6,8 @@ Instructions pour tout agent IA (Codex, Claude, Copilot, Cursor, Gemini…) qui 
 
 - Site vitrine de **Code-Troopers**, agence de développement web et mobile à Tours : https://code-troopers.com
 - Site statique **Hugo** (gabarits + contenu Markdown) et **Webpack** (CSS/JS). Site entièrement en français (`fr-FR`).
-- La personne qui te parle n'est **pas forcément développeuse** (par exemple Nicolas, commercial). Elle ne verra pas si tu ajoutes une librairie, casses un gabarit ou dégrades le style. **C'est à toi d'être prudent à sa place.**
-- Relecteurs techniques : l'équipe GitHub `@code-troopers/owners` (développeurs seniors, dont Matthieu). Toute modification technique passe par leur relecture.
+- La personne qui te parle n'est **pas forcément développeuse** (par exemple une personne de l'équipe commerciale). Elle ne verra pas si tu ajoutes une librairie, casses un gabarit ou dégrades le style. **C'est à toi d'être prudent à sa place.**
+- Relecteurs techniques : l'équipe GitHub `@code-troopers/owners` (développeurs seniors). Toute modification technique passe par leur relecture.
 
 ## 2. Règle d'or : classer la demande avant d'agir
 
@@ -94,7 +94,7 @@ yarn check:content    # seulement le contrôle du contenu (rapide)
    - `fix(content): fix typo on homepage`
    - `feat(blog): add article on senior developers`
    - `feat(work): add Fizzer case study`
-   - `chore(team): update Nicolas photo`
+   - `chore(team): update team member photo`
 6. Pousser et ouvrir une PR vers `main` en remplissant le modèle (`.github/PULL_REQUEST_TEMPLATE.md`). Le dépôt est public : **titre et description de la PR en anglais**, sans mention d'IA :
    ```bash
    git push -u origin HEAD
@@ -142,7 +142,7 @@ Dans les fichiers HTML de `site/content/`, ne change **que le texte** : pas de 
 ```yaml
 ---
 title: "Titre de l'article"
-author: Nicolas
+author: Prénom
 url: /2026/11/09/mon-slug/
 date: 2026-11-09
 expirydate: ""
@@ -163,7 +163,7 @@ Corps de l'article…
 Règles :
 
 - `url` : `/AAAA/MM/JJ/<slug>/` avec **la même date** que `date`. `aliases` : même date + slug sans tirets + `.html` (convention historique, à conserver).
-- `author` : prénom de l'auteur, comme dans les articles existants (`Nicolas`, `Matthieu`, `Florian`…), ou `Troopers` pour un article collectif.
+- `author` : prénom de l'auteur, écrit comme dans ses articles existants (vérifier le champ `author` des autres articles), ou `Troopers` pour un article collectif.
 - `tags` : **réutiliser l'orthographe exacte d'un tag existant** (majuscules comprises). Liste des tags avec leur nombre d'utilisations : `yarn check:content --tags`. Un tag écrit de deux façons (`Javascript` / `JavaScript`) rend le titre de la page de tag aléatoire.
 - `<!--more-->` sépare l'accroche (affichée dans les listes) du reste de l'article.
 - `date` dans le futur : l'article n'apparaîtra **pas** tout seul à cette date (le site n'est reconstruit qu'à chaque merge). Publier à la date voulue, ou prévenir l'utilisateur qu'un nouveau merge sera nécessaire.
