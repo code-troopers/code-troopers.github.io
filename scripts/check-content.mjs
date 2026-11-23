@@ -1,5 +1,6 @@
 // Sanity checks on blog and work entries, run in CI before the Hugo build.
 // Errors fail the build; warnings are only printed.
+// --tags lists existing tags with their usage count.
 import {readdirSync, readFileSync, existsSync, statSync} from "node:fs";
 import {join, relative} from "node:path";
 import yaml from "js-yaml";
@@ -8,16 +9,19 @@ const CONTENT = "site/content";
 const SECTIONS = ["blog", "work"];
 const MAX_IMAGE_BYTES = 1024 * 1024;
 const IMAGE_EXT = /\.(png|jpe?g|webp|gif)$/i;
+// <base href="/"> makes relative image paths resolve from the site root
+const RELATIVE_IMAGE = /(?:\]\(|src=")(?!\/|https?:|#)([^)"\s]+\.(?:png|jpe?g|webp|gif|svg))/gi;
 
 const errors = [];
 const warnings = [];
 const urls = new Map();
 const tags = new Map();
 
-function frontmatter(file) {
-  const match = readFileSync(file, "utf8").match(/^---\r?\n([\s\S]*?)\r?\n---/);
+function parse(file) {
+  const text = readFileSync(file, "utf8");
+  const match = text.match(/^---\r?\n([\s\S]*?)\r?\n---/);
   if (!match) throw new Error("frontmatter YAML manquant (bloc --- en tête de fichier)");
-  return yaml.load(match[1]) || {};
+  return {fm: yaml.load(match[1]) || {}, body: text.slice(match[0].length)};
 }
 
 for (const section of SECTIONS) {
@@ -32,9 +36,9 @@ for (const section of SECTIONS) {
     }
     const file = join(dir, index);
 
-    let fm;
+    let fm, body;
     try {
-      fm = frontmatter(file);
+      ({fm, body} = parse(file));
     } catch (e) {
       errors.push(`${file}: ${e.message}`);
       continue;
@@ -72,8 +76,14 @@ for (const section of SECTIONS) {
     }
     for (const tag of Array.isArray(fm.tags) ? fm.tags : []) {
       const key = String(tag).toLowerCase();
-      if (!tags.has(key)) tags.set(key, new Set());
-      tags.get(key).add(String(tag));
+      if (!tags.has(key)) tags.set(key, new Map());
+      const spellings = tags.get(key);
+      spellings.set(String(tag), (spellings.get(String(tag)) || 0) + 1);
+    }
+    if (!index.endsWith(".adoc")) {
+      for (const [, src] of body.matchAll(RELATIVE_IMAGE)) {
+        errors.push(`${file}: image « ${src} » en chemin relatif, utiliser ${fm.url || "/<url de la page>/"}${src}`);
+      }
     }
 
     for (const f of readdirSync(dir)) {
@@ -85,9 +95,15 @@ for (const section of SECTIONS) {
   }
 }
 
+if (process.argv.includes("--tags")) {
+  const all = [...tags.values()].flatMap((spellings) => [...spellings]).sort((a, b) => b[1] - a[1]);
+  for (const [tag, count] of all) console.log(`${String(count).padStart(3)}  ${tag}`);
+  process.exit(0);
+}
+
 for (const spellings of tags.values()) {
   if (spellings.size > 1) {
-    warnings.push(`tag écrit de plusieurs façons : ${[...spellings].join(" / ")} (réutiliser l'orthographe existante)`);
+    warnings.push(`tag écrit de plusieurs façons : ${[...spellings.keys()].join(" / ")} (réutiliser l'orthographe existante)`);
   }
 }
 

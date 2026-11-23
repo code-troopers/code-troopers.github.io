@@ -1,60 +1,37 @@
-# Hugo template for Decap CMS with Netlify Identity
+# code-troopers.com
 
-This is a small business template built with [Hugo](https://gohugo.io) and [Decap CMS](https://github.com/decaporg/decap-cms), designed and developed by [Darin Dimitroff](https://twitter.com/deezel), [spacefarm.digital](https://www.spacefarm.digital).
+Site vitrine de [Code-Troopers](https://code-troopers.com), agence de développement web et mobile à Tours.
 
-## Getting started
+Site statique [Hugo](https://gohugo.io) (contenu en Markdown, gabarits) et Webpack (CSS et JavaScript), publié sur GitHub Pages.
 
-Use our deploy button to get your own copy of the repository. 
+## Démarrer
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/mattboll/one-click-hugo-cms&stack=cms)
+Prérequis : Node.js 24 (`.nvmrc`), Corepack (`corepack enable`) et [Asciidoctor](https://asciidoctor.org) (`brew install asciidoctor` ou `sudo apt install asciidoctor`).
 
-This will setup everything needed for running the CMS:
-
-* A new repository in your GitHub account with the code
-* Full Continuous Deployment to Netlify's global CDN network
-* Control users and access with Netlify Identity
-* Manage content with Decap CMS
-
-Once the initial build finishes, you can invite yourself as a user. Go to the Identity tab in your new site, click "Invite" and send yourself an invite.
-
-Now you're all set, and you can start editing content!
-
-## Local Development
-
-Clone this repository, and run `yarn` or `npm install` from the new folder to install all required dependencies.
-
-Then start the development server with `yarn start` or `npm start`.
-
-## Testing
-
-With the development server running, run the tests locally
-with `yarn cypress:run` or `npm run cypress:run`.
-Or use `yarn cypress:open` or `npm run cypress:open` to run interactively.
-
-Cypress tests also run on deploy with the [Cypress Netlify integration](https://www.netlify.com/integrations/cypress/).
-
-## Layouts
-
-The template is based on small, content-agnostic partials that can be mixed and matched. The pre-built pages showcase just a few of the possible combinations. Refer to the `site/layouts/partials` folder for all available partials.
-
-Use Hugo’s `dict` functionality to feed content into partials and avoid repeating yourself and creating discrepancies.
-
-## CSS
-
-The template uses a custom fork of Tachyons and PostCSS with cssnext and cssnano. To customize the template for your brand, refer to `src/css/imports/_variables.css` where most of the important global variables like colors and spacing are stored.
-
-## SVG Social Icons
-
-The social media icons are in `site/assets/img`.
-Make sure you use consistent icons in terms of viewport and art direction for optimal results.
-For an icon named `icons-facebook.svg`, refer to the SVG `social-icon` partial like so:
-
-```
-{{ partial "social-icon" (dict "link" "#" "svg" "icons-facebook" "alt" "Kaldi on Facebook") }}
+```bash
+yarn install
+yarn start     # http://localhost:3000, avec brouillons et articles datés dans le futur
+yarn verify    # lint + contrôle du contenu + build de production, comme la CI
 ```
 
+## Modifier le site
 
-Se logger en local :
+Tout est décrit dans [`AGENTS.md`](AGENTS.md), à destination des humains comme des agents IA : où se trouve chaque texte, comment ajouter un article ou une réalisation, conventions, workflow Git et ce qui demande une relecture technique.
+
+En bref :
+
+1. une branche depuis `main`, une PR vers `main` ;
+2. la CI vérifie le build et le contenu, Netlify publie une preview de la PR ;
+3. les PR de contenu (`site/content/`, images, PDF, `team.json`, `cloud.json`) peuvent être mergées dès que tout est vert ; les autres demandent l'approbation des propriétaires du code (`.github/CODEOWNERS`) ;
+4. un merge dans `main` met le site en ligne automatiquement.
+
+## Structure
+
 ```
-npx netlify-cms-proxy-server
+site/content/   contenu : accueil, blog/, work/ (réalisations), team/, pages HTML
+site/layouts/   gabarits Hugo et partials
+site/data/      données : équipe, nuage de technologies, menu
+site/static/    fichiers servis tels quels : images, PDF, llms.txt
+src/            CSS (SCSS) et JavaScript compilés par Webpack
+scripts/        contrôle du contenu exécuté par la CI
 ```
