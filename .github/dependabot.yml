@@ -1,0 +1,21 @@
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    target-branch: main
+    schedule:
+      interval: monthly
+    groups:
+      build-tooling:
+        update-types: [minor, patch]
+    ignore:
+      # Hugo >= 0.165 changes automatic summaries (.Truncated) and breaks
+      # blog card links; upgrade manually together with the templates.
+      - dependency-name: hugo-extended
+        update-types: [version-update:semver-minor]
+
+  - package-ecosystem: github-actions
+    directory: /
+    target-branch: main
+    schedule:
+      interval: monthly

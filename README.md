@@ -1,60 +1,37 @@
-# Hugo template for Decap CMS with Netlify Identity
+# code-troopers.com
 
-This is a small business template built with [Hugo](https://gohugo.io) and [Decap CMS](https://github.com/decaporg/decap-cms), designed and developed by [Darin Dimitroff](https://twitter.com/deezel), [spacefarm.digital](https://www.spacefarm.digital).
+Website of [Code-Troopers](https://code-troopers.com), a web and mobile development agency based in Tours, France. The site itself is in French.
+
+Static site built with [Hugo](https://gohugo.io) (Markdown content, templates) and Webpack (CSS and JavaScript), published on GitHub Pages.
 
 ## Getting started
 
-Use our deploy button to get your own copy of the repository. 
+Requirements: Node.js 24 (`.nvmrc`) and Corepack (`corepack enable`).
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/mattboll/one-click-hugo-cms&stack=cms)
-
-This will setup everything needed for running the CMS:
-
-* A new repository in your GitHub account with the code
-* Full Continuous Deployment to Netlify's global CDN network
-* Control users and access with Netlify Identity
-* Manage content with Decap CMS
-
-Once the initial build finishes, you can invite yourself as a user. Go to the Identity tab in your new site, click "Invite" and send yourself an invite.
-
-Now you're all set, and you can start editing content!
-
-## Local Development
-
-Clone this repository, and run `yarn` or `npm install` from the new folder to install all required dependencies.
-
-Then start the development server with `yarn start` or `npm start`.
-
-## Testing
-
-With the development server running, run the tests locally
-with `yarn cypress:run` or `npm run cypress:run`.
-Or use `yarn cypress:open` or `npm run cypress:open` to run interactively.
-
-Cypress tests also run on deploy with the [Cypress Netlify integration](https://www.netlify.com/integrations/cypress/).
-
-## Layouts
-
-The template is based on small, content-agnostic partials that can be mixed and matched. The pre-built pages showcase just a few of the possible combinations. Refer to the `site/layouts/partials` folder for all available partials.
-
-Use Hugo’s `dict` functionality to feed content into partials and avoid repeating yourself and creating discrepancies.
-
-## CSS
-
-The template uses a custom fork of Tachyons and PostCSS with cssnext and cssnano. To customize the template for your brand, refer to `src/css/imports/_variables.css` where most of the important global variables like colors and spacing are stored.
-
-## SVG Social Icons
-
-The social media icons are in `site/assets/img`.
-Make sure you use consistent icons in terms of viewport and art direction for optimal results.
-For an icon named `icons-facebook.svg`, refer to the SVG `social-icon` partial like so:
-
-```
-{{ partial "social-icon" (dict "link" "#" "svg" "icons-facebook" "alt" "Kaldi on Facebook") }}
+```bash
+yarn install
+yarn start     # http://localhost:3000, including drafts and future-dated posts
+yarn verify    # lint + content checks + production build, same as CI
 ```
 
+## Editing the site
 
-Se logger en local :
+Everything is described in [`AGENTS.md`](AGENTS.md) (in French), written for humans and AI agents alike: where each piece of text lives, how to add a blog post or a case study, conventions, Git workflow and what requires a technical review.
+
+In short:
+
+1. branch off `main`, open a PR against `main`;
+2. CI checks the build and the content, Netlify publishes a preview of the PR;
+3. content PRs (`site/content/`, images, PDFs, `team.json`, `cloud.json`) can be merged once everything is green; other PRs need approval from the code owners (`.github/CODEOWNERS`);
+4. merging into `main` deploys the site automatically.
+
+## Structure
+
 ```
-npx netlify-cms-proxy-server
+site/content/   content: homepage, blog/, work/ (case studies), team/, HTML pages
+site/layouts/   Hugo templates and partials
+site/data/      data: team, technology cloud, menu
+site/static/    files served as-is: images, PDFs, llms.txt
+src/            CSS (SCSS) and JavaScript bundled by Webpack
+scripts/        content checks run by CI
 ```

@@ -1,6 +1,5 @@
 const {merge} = require("webpack-merge");
 const path = require("path");
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 const common = require("./webpack.common");
 
@@ -22,14 +21,5 @@ module.exports = merge(common, {
     historyApiFallback: {
       rewrites: [{from: /./, to: "404.html"}]
     }
-  },
-
-  plugins: [
-    new CleanWebpackPlugin({
-      cleanOnceBeforeBuildPatterns: [
-        "dist/**/*.js",
-        "dist/**/*.css",
-        "site/data/webpack.json"
-      ]})
-  ]
+  }
 });

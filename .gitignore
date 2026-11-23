@@ -13,3 +13,4 @@ site/resources/_gen
 .idea
 
 .yarn
+.DS_Store

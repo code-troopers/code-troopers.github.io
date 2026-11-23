@@ -1,35 +1,14 @@
-<!--
-Thanks for submitting a pull request!
+## What and why
 
-Please make sure you've read and understood our contributing guidelines;
-https://github.com/decaporg/one-click-hugo-cms/blob/main/CONTRIBUTING.md
+<!-- One or two sentences: what changes on the site and why. -->
 
-If this is a bug fix, make sure your description includes "fixes #xxxx", or
-"closes #xxxx", where #xxxx is the issue number.
+## Type of change
 
-Please provide enough information so that others can review your pull request.
-The first three fields are mandatory:
--->
+- [ ] **Content only** (text, blog post, case study, team member, image, PDF): can be merged once CI is green and the Netlify preview has been reviewed
+- [ ] **Code, style, template, dependency or configuration**: technical review required (requested automatically)
 
-**- Summary**
+## Checklist
 
-<!--
-Explain the **motivation** for making this change.
-What existing problem does the pull request solve?
--->
-
-**- Test plan**
-
-<!--
-Demonstrate the code is solid.
-Example: The exact commands you ran and their output, screenshots / videos if the pull request changes UI.
--->
-
-**- Description for the changelog**
-
-<!--
-Write a short (one line) summary that describes the changes in this
-pull request for inclusion in the changelog:
--->
-
-**- A picture of a cute animal (not mandatory but encouraged)**
+- [ ] `yarn verify` passes locally (or CI is green)
+- [ ] The Netlify preview has been reviewed on the affected pages, on desktop and mobile
+- [ ] No dependency added or updated (otherwise, tick "Code" above)

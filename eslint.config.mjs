@@ -1,27 +1,15 @@
-import babelParser from "@babel/eslint-parser";
-import react from "eslint-plugin-react";
-import cypress from "eslint-plugin-cypress";
 import globals from "globals";
 
 export default [
-  react.configs.flat.recommended,
   {
     languageOptions: {
-      parser: babelParser,
+      ecmaVersion: "latest",
       sourceType: "module",
       globals: {
         ...globals.browser
       }
     },
-    settings: {
-      react: {
-        version: "detect"
-      }
-    },
     rules: {
-      // Decap preview components don't use PropTypes
-      "react/prop-types": 0,
-
       // Possible Errors
       "no-control-regex": 2,
       "no-console": 1,
@@ -62,7 +50,14 @@ export default [
     }
   },
   {
-    files: ["cypress/**/*.js"],
-    ...cypress.configs.recommended
+    files: ["scripts/**/*.mjs"],
+    languageOptions: {
+      globals: {
+        ...globals.node
+      }
+    },
+    rules: {
+      "no-console": 0
+    }
   }
 ];
