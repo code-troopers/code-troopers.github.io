@@ -47,6 +47,14 @@ if (new Date().getMonth() === 9) {
   if (logo) logo.src = "/header_logo_halloween.png";
 }
 
+// Carousels: a [data-carousel] holds a scrollable [data-carousel-track] and prev/next buttons
+document.querySelectorAll("[data-carousel]").forEach((carousel) => {
+  const track = carousel.querySelector("[data-carousel-track]");
+  const scroll = (direction) => track.scrollBy({left: direction * track.clientWidth, behavior: "smooth"});
+  carousel.querySelector("[data-carousel-prev]")?.addEventListener("click", () => scroll(-1));
+  carousel.querySelector("[data-carousel-next]")?.addEventListener("click", () => scroll(1));
+});
+
 // Responsive tables: copy column headers onto each cell so _blog.scss can
 // stack rows as labeled cards on small screens
 function stackContentTables() {

@@ -1,0 +1,33 @@
+{{ define "main" }}
+<div id="job" class="join">
+  {{ $section := .Parent }}
+  {{ $hero := "" }}
+  {{ with $section.Resources.GetMatch $section.Params.offerHeroPhoto }}{{ $hero = (.Resize "1920x webp q75").RelPermalink }}{{ end }}
+  <section class="join-hero job-hero" style="{{ printf "--join-hero: url('%s')" $hero | safeCSS }}">
+    <div class="join-wrap">
+      <img class="job-logo" src="/img/logo-code-troopers-tête-couleur.png" width="60" height="60" alt="">
+      <h1>{{ .Params.tagline | default .Title }}</h1>
+      <hr class="join-divider">
+      <p class="job-name">{{ .Title }}</p>
+      <ul class="job-facts">
+        {{ with .Params.contract }}<li>📄 {{ . }}</li>{{ end }}
+        {{ with .Params.location }}<li>🗺️ {{ . }}</li>{{ end }}
+        {{ with .Params.salary }}<li>💰 {{ . }}</li>{{ end }}
+        {{ with .Params.profile }}<li>🧳 {{ . }}</li>{{ end }}
+      </ul>
+    </div>
+  </section>
+
+  <section class="job-body">
+    <div class="join-wrap">
+      <div class="job-content">
+        {{ .Content }}
+      </div>
+      {{ with .Params.applyEmail }}
+      <p class="job-apply"><a href="mailto:{{ . }}" class="join-button job-apply-button">Postuler</a></p>
+      {{ end }}
+      <p class="job-back"><a href="/rejoindre/#offres">Toutes nos offres</a></p>
+    </div>
+  </section>
+</div>
+{{ end }}

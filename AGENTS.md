@@ -122,6 +122,9 @@ Une PR = un sujet. Ne mélange pas une correction de typo et un nouvel article.
 | Nuage de technologies | `site/data/cloud.json` | 1 |
 | Équipe (membres) | `site/data/team.json` + photo dans `site/content/team/` | 1 |
 | Équipe (texte de la page) | `site/content/team/_index.html` | 1 |
+| Page Rejoindre (`/rejoindre/`) : présentation, valeurs, journée type, photos des bureaux | frontmatter de `site/content/rejoindre/_index.md` | 1 |
+| Offres d'emploi, de stage, d'alternance | `site/content/rejoindre/<offre>/index.md` | 1 |
+| Cartes de contact individuelles (QR code de carte de visite) | `site/content/<prenom-nom>/index.md` (`type: contact-card`) | 1 |
 | Articles de blog | `site/content/blog/<slug>/index.md` | 1 |
 | Page Navig' | `site/content/navig.html` (long fichier HTML, prudence) | 1 |
 | Mentions légales | `site/content/legals.html` | 1 |
@@ -222,6 +225,32 @@ Technologies utilisées
 - `weight` : ordre d'affichage, **le plus petit en premier**. Les 4 premières apparaissent sur l'accueil. Regarder les `weight` existants avant d'en choisir un.
 - `tags` : plateformes (`Android`, `iOS`, `Web`…), même orthographe que les réalisations existantes.
 - Ajouter aussi la réalisation dans `site/static/llms.txt`, section « Réalisations notables », au même format que les autres.
+
+### Publier, modifier ou clore une offre d'emploi
+
+Chaque offre est un dossier `site/content/rejoindre/<slug>/` avec un `index.md` (et ses images éventuelles) :
+
+```yaml
+---
+title: Développeur (H/F)
+tagline: À la recherche d'un nouveau Trooper
+date: 2026-11-23
+weight: 10
+contract: CDI
+location: Tours
+profile: Min. 2-3 ans XP
+salary: ≃ 47k
+applyEmail: adresse-de-candidature@code-troopers.com
+---
+Texte de l'offre en Markdown (titres `##`, listes, tableaux)…
+```
+
+- `contract`, `location`, `profile`, `salary` s'affichent en tête de l'offre et sur sa carte dans `/rejoindre/`. `salary` est facultatif, les autres sont obligatoires (le contrôle du contenu le vérifie).
+- `applyEmail` : adresse du bouton « Postuler ».
+- `weight` : ordre d'affichage dans la liste, le plus petit en premier.
+- **Clore une offre** : ajouter `expirydate: AAAA-MM-JJ` (une date passée). L'offre disparaît du site mais reste dans le dépôt pour l'historique. Ne pas supprimer le dossier.
+- Une page liée depuis une offre mais qui ne doit pas apparaître dans la liste (comme `exemple-de-mission`) utilise `build: {list: never}`.
+- Les textes de la page `/rejoindre/` (intro, chiffres clés, valeurs, témoignages, promesse, journée type, année, agence, photos) sont dans le frontmatter de `site/content/rejoindre/_index.md`. Les témoignages y sont écrits pour des candidats : ils sont volontairement distincts de ceux de `site/data/team.json`, écrits pour des clients.
 
 ### Ajouter ou modifier un membre de l'équipe
 
