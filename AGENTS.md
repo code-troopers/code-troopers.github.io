@@ -90,7 +90,11 @@ yarn check:content    # seulement le contrôle du contenu (rapide)
 1. Partir de `main` à jour : `git switch main && git pull`.
 2. Créer une branche courte et explicite : `content/article-xxx`, `content/typo-accueil`, `fix/…`, `feat/…`.
 3. Faire la modification, puis `yarn verify`. Corriger toute erreur avant d'aller plus loin. Le contrôle du contenu affiche aussi des avertissements déjà connus sur d'anciens contenus : ils ne bloquent pas, mais **ta modification ne doit en ajouter aucun**.
-4. Vérifier visuellement avec `yarn start` les pages touchées, en largeur ordinateur **et** mobile.
+4. **Faire valider en local par l'utilisateur, avant tout commit** :
+   - Lancer `yarn start` en arrière-plan : le serveur tourne en continu, ne pas attendre qu'il se termine. Si l'outil ne permet pas de laisser tourner une commande, demander à l'utilisateur de lancer `yarn start` dans un terminal.
+   - Donner l'adresse exacte de chaque page modifiée (par exemple `http://localhost:3000/rejoindre/`) et demander de la vérifier sur ordinateur et en largeur mobile (fenêtre étroite ou mode « appareil » du navigateur). `yarn start` ouvre tout seul un onglet sur l'accueil du site.
+   - **Attendre l'accord explicite de l'utilisateur avant de committer.** S'il demande une retouche, la faire et lui redemander de vérifier.
+   - Arrêter le serveur une fois la modification validée.
 5. Committer avec un message en anglais au format Conventional Commits, sans mention d'IA ni trailer `Co-Authored-By` :
    - `fix(content): fix typo on homepage`
    - `feat(blog): add article on senior developers`
