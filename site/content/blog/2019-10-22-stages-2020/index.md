@@ -7,7 +7,7 @@ tags:
 title: 'Stages 2020'
 url: /2019/10/22/stages-2020/
 aliases: 2019/10/22/stages-2020.html
-expirydate: '2018-12-19'
+expirydate: '2023-01-01'
 ---
 
 👩‍🎓👨‍🎓 Voici nos offres de stages pour 2020, ça se passe à MAME et le baby-foot ⚽ est pas loin pour se détendre entre deux lignes de codes.

@@ -7,7 +7,7 @@ tags:
 title: 'Stages 2022'
 url: /2021/10/25/stages-2022/
 aliases: 2021/10/25/stages-2022.html
-expirydate: '2018-12-19'
+expirydate: '2023-01-01'
 ---
 
 Ça y est, le mois d'octobre touche bientôt à sa fin, l'automne 🍂 est bien installé et c'est la période favorite chez

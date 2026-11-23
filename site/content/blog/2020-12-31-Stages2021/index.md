@@ -7,7 +7,7 @@ tags:
 title: 'Stages 2021'
 url: /2020/12/31/stages-2021/
 aliases: 2020/12/31/stages-2021.html
-expirydate: '2018-12-19'
+expirydate: '2023-01-01'
 ---
 
 Après une année un peu compliquée pour tout le monde, nous souhaitons repartir sur de bonnes bases pour 2021 et aider 
