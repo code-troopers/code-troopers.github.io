@@ -1,37 +1,37 @@
 # code-troopers.com
 
-Site vitrine de [Code-Troopers](https://code-troopers.com), agence de développement web et mobile à Tours.
+Website of [Code-Troopers](https://code-troopers.com), a web and mobile development agency based in Tours, France. The site itself is in French.
 
-Site statique [Hugo](https://gohugo.io) (contenu en Markdown, gabarits) et Webpack (CSS et JavaScript), publié sur GitHub Pages.
+Static site built with [Hugo](https://gohugo.io) (Markdown content, templates) and Webpack (CSS and JavaScript), published on GitHub Pages.
 
-## Démarrer
+## Getting started
 
-Prérequis : Node.js 24 (`.nvmrc`) et Corepack (`corepack enable`).
+Requirements: Node.js 24 (`.nvmrc`) and Corepack (`corepack enable`).
 
 ```bash
 yarn install
-yarn start     # http://localhost:3000, avec brouillons et articles datés dans le futur
-yarn verify    # lint + contrôle du contenu + build de production, comme la CI
+yarn start     # http://localhost:3000, including drafts and future-dated posts
+yarn verify    # lint + content checks + production build, same as CI
 ```
 
-## Modifier le site
+## Editing the site
 
-Tout est décrit dans [`AGENTS.md`](AGENTS.md), à destination des humains comme des agents IA : où se trouve chaque texte, comment ajouter un article ou une réalisation, conventions, workflow Git et ce qui demande une relecture technique.
+Everything is described in [`AGENTS.md`](AGENTS.md) (in French), written for humans and AI agents alike: where each piece of text lives, how to add a blog post or a case study, conventions, Git workflow and what requires a technical review.
 
-En bref :
+In short:
 
-1. une branche depuis `main`, une PR vers `main` ;
-2. la CI vérifie le build et le contenu, Netlify publie une preview de la PR ;
-3. les PR de contenu (`site/content/`, images, PDF, `team.json`, `cloud.json`) peuvent être mergées dès que tout est vert ; les autres demandent l'approbation des propriétaires du code (`.github/CODEOWNERS`) ;
-4. un merge dans `main` met le site en ligne automatiquement.
+1. branch off `main`, open a PR against `main`;
+2. CI checks the build and the content, Netlify publishes a preview of the PR;
+3. content PRs (`site/content/`, images, PDFs, `team.json`, `cloud.json`) can be merged once everything is green; other PRs need approval from the code owners (`.github/CODEOWNERS`);
+4. merging into `main` deploys the site automatically.
 
 ## Structure
 
 ```
-site/content/   contenu : accueil, blog/, work/ (réalisations), team/, pages HTML
-site/layouts/   gabarits Hugo et partials
-site/data/      données : équipe, nuage de technologies, menu
-site/static/    fichiers servis tels quels : images, PDF, llms.txt
-src/            CSS (SCSS) et JavaScript compilés par Webpack
-scripts/        contrôle du contenu exécuté par la CI
+site/content/   content: homepage, blog/, work/ (case studies), team/, HTML pages
+site/layouts/   Hugo templates and partials
+site/data/      data: team, technology cloud, menu
+site/static/    files served as-is: images, PDFs, llms.txt
+src/            CSS (SCSS) and JavaScript bundled by Webpack
+scripts/        content checks run by CI
 ```
