@@ -15,100 +15,93 @@ Il est souvent nécessaire de jouer de click-click pour faire la configuration d
 autant que possible, les configurations utilisées.
 
 Mais, une fois que vous aurez lu cet article, vous vous rendrez compte que c'est le passé.
-Attention toutefois, cet article parle de Jenkins, de Docker et de Groovy, n'ayez pas peur, tout est _presque_ trop simple...
-
-
+Attention toutefois, cet article parle de Jenkins, de Docker et de Groovy, n'ayez pas peur, tout est _presque_ trop simple…
 
 ## Prérequis Jenkins
-
 
 ### Jenkins avec accès à Docker
 
 Nous avons l'habitude d'utiliser un Jenkins lancé dans un container depuis quelques temps.
 
-Nous utilisons l'image maintenue par https://agileek.github.io/[Michael Bitard] https://hub.docker.com/r/agileek/docker-jenkins/[`agileek/docker-jenkins`].
+Nous utilisons l'image maintenue par [Michael Bitard](https://agileek.github.io/) [`agileek/docker-jenkins`](https://hub.docker.com/r/agileek/docker-jenkins/).
 
 Nous lançons cette image en lui fournissant de quoi exécuter le binaire docker client sans soucis :
 
-[source,bash]
------
+```bash
 docker run
        -d --restart="always" --name jenkins
-       -u $(id -u):$(getent group docker | cut -d: -f3) # <1>
+       -u $(id -u):$(getent group docker | cut -d: -f3) # (1)
        -p 8080:8080
-       -v /var/jenkins_home:/var/jenkins_home # <2>
-       -v $(which docker):/usr/bin/docker # <3>
-       -v /var/run/docker.sock:/var/run/docker.sock # <4>
-       -v /usr/lib/x86_64-linux-gnu/libapparmor.so.1:/lib/x86_64-linux-gnu/libapparmor.so.1 # <5>
-       agileek/docker-jenkins # <6>
------
+       -v /var/jenkins_home:/var/jenkins_home # (2)
+       -v $(which docker):/usr/bin/docker # (3)
+       -v /var/run/docker.sock:/var/run/docker.sock # (4)
+       -v /usr/lib/x86_64-linux-gnu/libapparmor.so.1:/lib/x86_64-linux-gnu/libapparmor.so.1 # (5)
+       agileek/docker-jenkins # (6)
+```
 
-<1> Le container est lancé avec l'utilisateur courant et le groupe `docker` pour pouvoir accéder au `docker.sock`
-<2> Pour éviter les incohérences de chemin, le chemin racine du jenkins est le même en dehors et dans le container
-<3> Le binaire docker du système est fourni dans l'image
-<4> Le socket docker est également fourni pour que le client puisse "parler" au démon
-<5> La bibliotheque apparmor est nécessaire pour le bon fonctionnement de docker client
+1. Le container est lancé avec l'utilisateur courant et le groupe `docker` pour pouvoir accéder au `docker.sock`
+2. Pour éviter les incohérences de chemin, le chemin racine du jenkins est le même en dehors et dans le container
+3. Le binaire docker du système est fourni dans l'image
+4. Le socket docker est également fourni pour que le client puisse "parler" au démon
+5. La bibliotheque apparmor est nécessaire pour le bon fonctionnement de docker client
 
 ### Jenkins workflow plugin
 
 Pour utiliser la suite des éléments, vous aurez besoin des plugins gérant la notion de _workflow_ dans Jenkins :
 
-:lightboxGroup: 0
-:lightboxImage: 2016-01-JenkinsWorkflow/Workflow-Plugin
-:lightboxImageTitle: Plugin workflow
-
-include::site/static/lightbox.adoc[]
-
+<div style="text-align : center">
+<a style="display: inline" href="/images/posts/2016-01-JenkinsWorkflow/Workflow-Plugin.png" data-lightbox="0" title="Plugin workflow">
+        <img class="medium" src="/images/posts/2016-01-JenkinsWorkflow/Workflow-Plugin_min.png" alt="Plugin workflow"/>
+</a>
+</div>
+<br/>
 
 Ensuite, il nous est possible de créer un job de construction de type _workflow_ :
 
-:lightboxImage: 2016-01-JenkinsWorkflow/Workflow-Plugin_JobCreation
-:lightboxImageTitle: Création de job
-
-include::site/static/lightbox.adoc[]
-
-
+<div style="text-align : center">
+<a style="display: inline" href="/images/posts/2016-01-JenkinsWorkflow/Workflow-Plugin_JobCreation.png" data-lightbox="0" title="Création de job">
+        <img class="medium" src="/images/posts/2016-01-JenkinsWorkflow/Workflow-Plugin_JobCreation_min.png" alt="Création de job"/>
+</a>
+</div>
+<br/>
 
 ## Premier job _Workflow_
 
 Ensuite, c'est là que la magie opère, plutôt que de devoir sélectionner les n-items voulus et remplir chaque étape du build, nous pouvons maintenant le décrire en utilisant du code !
 Ainsi, en copiant/collant le script suivant dans la partie idoine, vous devriez avoir un job bien configuré qui marche, du premier coup !
 
-[source,groovy]
------
-def m2Repo = '-v /var/jenkins_home/.m2:/home/jenkins/.m2' //  # <1>
-def timezone = '-e TZ=Europe/Paris' // # <2>
+```groovy
+def m2Repo = '-v /var/jenkins_home/.m2:/home/jenkins/.m2' //  # (1)
+def timezone = '-e TZ=Europe/Paris' // # (2)
 docker.image("codetroopers/jenkins-slave-jdk8-restx")
-    .inside("${m2Repo} ${timezone}"){ //  # <3>
-    git branch: 'master', url: 'https://github.com/code-troopers/jenkins-workflow-demo-repo.git' // # <4>
-    sh "MAVEN_OPTS=-Dfile.encoding=UTF-8 mvn clean install -B -Ppackage" // # <5>
-    step([$class: 'ArtifactArchiver', artifacts: 'srv/target/dependency/webapp-runner.jar, srv/target/*.war, run.sh']) // # <6>
-    step([$class: 'JUnitResultArchiver', testResults: '**/target/surefire-reports/TEST-*.xml']) // # <7>
+    .inside("${m2Repo} ${timezone}"){ //  # (3)
+    git branch: 'master', url: 'https://github.com/code-troopers/jenkins-workflow-demo-repo.git' // # (4)
+    sh "MAVEN_OPTS=-Dfile.encoding=UTF-8 mvn clean install -B -Ppackage" // # (5)
+    step([$class: 'ArtifactArchiver', artifacts: 'srv/target/dependency/webapp-runner.jar, srv/target/*.war, run.sh']) // # (6)
+    step([$class: 'JUnitResultArchiver', testResults: '**/target/surefire-reports/TEST-*.xml']) // # (7)
 }
------
+```
 
-<1> Partage du dépôt Maven local (pour gagner en temps de build)
-<2> Export de la timezone (pour les tests unitaires de l'exemple)
-<3> Démarrage du conteneur de build avec la bonne timezone ainsi que le dépôt partagé
-<4> Clonage des sources
-<5> Lancement du build (en forçant l'UTF-8)
-<6> Archivage des produits du build
-<7> Archivage des résultats des tests
+1. Partage du dépôt Maven local (pour gagner en temps de build)
+2. Export de la timezone (pour les tests unitaires de l'exemple)
+3. Démarrage du conteneur de build avec la bonne timezone ainsi que le dépôt partagé
+4. Clonage des sources
+5. Lancement du build (en forçant l'UTF-8)
+6. Archivage des produits du build
+7. Archivage des résultats des tests
 
 Comme vous pouvez le voir, le script est relativement parlant et permet en plus de s'affranchir du clickodrome de configuration dans l'interface de Jenkins !
 
 Il est intéressant de noter que l'image Docker qui sert au build est une image personnalisée. Ce n'est pas parce qu'elle inclut un quelconque fonctionnement permettant de builder
 en utilisant le plugin Workflow. Elle sert de base uniquement car elle met à disposition la partie `npm` nécessaire au build de la partie _frontend_ de l'application RestX.
 
-
 ## Grouper les étapes
 
 Le plugin workflow permet en plus de grouper les différentes étapes d'un build pour permettre, par exemple, de le lancer sur plusieurs environnement différents.
 Ici nous ajoutons simplement un nom de groupe pour notre étape de build.
 
-[source,groovy]
------
-stage 'build' // # <1>
+```groovy
+stage 'build' // # (1)
     def m2Repo = '-v /var/jenkins_home/.m2:/home/jenkins/.m2'
     def timezone = '-e TZ=Europe/Paris'
     docker.image("codetroopers/jenkins-slave-jdk8-restx").inside("${m2Repo} ${timezone}"){
@@ -117,8 +110,8 @@ stage 'build' // # <1>
         step([$class: 'ArtifactArchiver', artifacts: 'srv/target/dependency/webapp-runner.jar, srv/target/*.war, run.sh'])
         step([$class: 'JUnitResultArchiver', testResults: '**/target/surefire-reports/TEST-*.xml'])
     }
------
-<1> Étape nommée pour l'exécution de la construction de l'application
+```
+1. Étape nommée pour l'exécution de la construction de l'application
 
 ## Mettre de côté les fichiers pour plus tard
 
@@ -126,8 +119,7 @@ La notion de _stash_ bien connue des utilisateurs de git est également présent
 Elle permet de mettre de côté des fichiers pour les réutiliser à une étape ultérieure du _workflow_ de build.
 Ceci permet d'éviter l'archivage de produits du build pour des raisons "techniques".
 
-[source,groovy]
------
+```groovy
 stage 'build'
     def m2Repo = '-v /var/jenkins_home/.m2:/home/jenkins/.m2'
     def timezone = '-e TZ=Europe/Paris'
@@ -136,29 +128,27 @@ stage 'build'
         sh "MAVEN_OPTS=-Dfile.encoding=UTF-8 mvn clean install -B -Ppackage"
         step([$class: 'ArtifactArchiver', artifacts: 'srv/target/dependency/webapp-runner.jar, srv/target/*.war, run.sh'])
         step([$class: 'JUnitResultArchiver', testResults: '**/target/surefire-reports/TEST-*.xml'])
-        stash includes: 'run.sh,srv/target/dependency/webapp-runner.jar,srv/target/*.war,Dockerfile', name: 'dockerBuild' // # <1>
+        stash includes: 'run.sh,srv/target/dependency/webapp-runner.jar,srv/target/*.war,Dockerfile', name: 'dockerBuild' // # (1)
     }
------
-<1> Enregistrement d'une liste de fichiers associée à un nom pour une utilisation ultérieure
+```
+1. Enregistrement d'une liste de fichiers associée à un nom pour une utilisation ultérieure
 
 ## Étape de construction d'une image Docker
 
-
-[source,groovy]
------
-stage 'docker' // # <1>
-node{ // # <2>
-  ws{ // # <3>
-    unstash 'dockerBuild' // # <4>
-    docker.build("codetroopers/jenkins-workflow-demo:${env.BUILD_ID}") // # <5>
+```groovy
+stage 'docker' // # (1)
+node{ // # (2)
+  ws{ // # (3)
+    unstash 'dockerBuild' // # (4)
+    docker.build("codetroopers/jenkins-workflow-demo:${env.BUILD_ID}") // # (5)
   }
 }
------
-<1> Création d'une nouvelle étape
-<2> Permet de distinguer un ensemble d'opération de build (peut accepter les labels pour restreindre sur des noeuds)
-<3> Déclenche la création d'un nouveau _workspace_
-<4> Récupère les fichiers mis de côté sous le nom `dockerBuild`
-<5> Construction d'une image docker avec pour tag le numéro de build en cours (`$BUILD_ID`)
+```
+1. Création d'une nouvelle étape
+2. Permet de distinguer un ensemble d'opération de build (peut accepter les labels pour restreindre sur des noeuds)
+3. Déclenche la création d'un nouveau _workspace_
+4. Récupère les fichiers mis de côté sous le nom `dockerBuild`
+5. Construction d'une image docker avec pour tag le numéro de build en cours (`$BUILD_ID`)
 
 ## Workflow et gestion multibranche
 
@@ -168,13 +158,12 @@ Un des points fastidieux est de configurer un nouveau job Jenkins pour chaque br
 Le plugin 'Workflow Multibranch' simplifie de façon drastique ce genre de cas, il suffit de rajouter un descripteur de build dans les sources.
 Le fichier correspondant est tout simplement appelé `Jenkinsfile`.
 
-[source,groovy]
------
+```groovy
 stage 'build'
     def m2Repo = '-v /var/jenkins_home/.m2:/home/jenkins/.m2'
     def timezone = '-e TZ=Europe/Paris'
     docker.image("codetroopers/jenkins-slave-jdk8-restx").inside("${m2Repo} ${timezone}"){
-        checkout scm // # <1>
+        checkout scm // # (1)
         sh "MAVEN_OPTS=-Dfile.encoding=UTF-8 mvn clean install -B -Ppackage"
         step([$class: 'ArtifactArchiver', artifacts: 'srv/target/dependency/webapp-runner.jar, srv/target/*.war, run.sh'])
         step([$class: 'JUnitResultArchiver', testResults: '**/target/surefire-reports/TEST-*.xml'])
@@ -188,8 +177,8 @@ node{
     docker.build("codetroopers/jenkins-workflow-demo:${env.BUILD_ID}")
   }
 }
------
-<1> Il faut bien entendu remplacer l'endroit où nous faisions le git clone pour qu'il soit dynamique par rapport à ce qu'on
+```
+1. Il faut bien entendu remplacer l'endroit où nous faisions le git clone pour qu'il soit dynamique par rapport à ce qu'on
 construit. Le terme `checkout scm` permet de s'assurer de ce fonctionnement.
 
 L'intérêt est que chaque branche qui sera buildée n'aura pas son historique mélangé avec une autre (là où les jobs de validation de Pull Request ont tendance à tout mélanger).
@@ -201,8 +190,7 @@ Il n'y aura donc pas besoin de penser à éditer le job lors du merge sur `maste
 Un des points intéressant de ce plugin est qu'il permet la mise en pause des constructions.
 Ainsi, il est possible de mettre en pause une construction correspondant à une livraison et de lui faire attendre une validation manuelle par exemple.
 
-[source,groovy]
------
+```groovy
 stage 'build'
     def m2Repo = '-v /var/jenkins_home/.m2:/home/jenkins/.m2'
     def timezone = '-e TZ=Europe/Paris'
@@ -219,18 +207,17 @@ node{
     ws{
         unstash 'dockerBuild'
         def built = docker.build("codetroopers/jenkins-workflow-demo:${env.BUILD_ID}")
-        input 'Is everything ok ? Run app ?' // # <1>
+        input 'Is everything ok ? Run app ?' // # (1)
         echo "We can run the docker-compose up here"
-        def outcome = input message: 'We can even have parameters to answer this question', parameters: [ // # <2>
+        def outcome = input message: 'We can even have parameters to answer this question', parameters: [ // # (2)
             [name: 'myChoice', description: 'My choice', choices: 'Choice 1\nChoice 2\nChoice 3', $class: 'ChoiceParameterDefinition']
         ]
-        echo "You have chosen ${outcome}" // # <3>
+        echo "You have chosen ${outcome}" // # (3)
     }
 }
------
-<1> `input` met en pause la construction et permet de continuer ou interrompre celle-ci
-<2> Il est également possible de permettre à l'utilisateur de faire un choix
-<3> Ici la valeur sélectionnée par l'utilisateur est écrite dans la sortie du build.
+```
+1. `input` met en pause la construction et permet de continuer ou interrompre celle-ci
+2. Il est également possible de permettre à l'utilisateur de faire un choix
+3. Ici la valeur sélectionnée par l'utilisateur est écrite dans la sortie du build.
 
-
-__J'espère que cet article vous donnera l'envie d'essayer de rationnaliser un peu plus la configuration de vos job Jenkins en les stockant dans votre SCM__
+_J'espère que cet article vous donnera l'envie d'essayer de rationnaliser un peu plus la configuration de vos job Jenkins en les stockant dans votre SCM_

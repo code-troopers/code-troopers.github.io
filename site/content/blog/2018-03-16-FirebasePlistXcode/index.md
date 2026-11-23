@@ -25,26 +25,25 @@ La redéfinition du nom du fichier à faire utiliser par Firebase ne marche pas 
 
 L'idée est donc d'utiliser un script au build qui se chargera de configurer correctement le fichier `plist` qui sera inclu dans le livrable.
 
-
 ## Première étape : variabilisation
 
 Pour être capable de générer le fichier `plist` correctement, il est nécessaire de le variabiliser.
 Dans mon cas, j'ai identifié les valeurs suivantes qui devaient être variabilisées: 
- 
- * GOOGLE_APP_ID
- * BUNDLE_ID
- * CLIENT_ID
- * REVERSED_CLIENT_ID
- 
+
+* GOOGLE_APP_ID
+* BUNDLE_ID
+* CLIENT_ID
+* REVERSED_CLIENT_ID
+
 J'ai donc ajouté des variables à la configuration de mon build pour représenter ces valeurs qui doivent être personnalisées.
 J'utilise des fichiers `.xcconfig` mais ceci fonctionne également avec l'ajout manuel (dans `Build Settings > + > Add User-Defined settings`)
 
-
-:lightboxGroup: 0
-:lightboxImage: 2018-03-16_FirebasePlistXcode/xcode_firebase_config
-:lightboxImageTitle: XCode target configuration
-
-include::site/static/lightbox.adoc[]
+<div style="text-align : center">
+<a style="display: inline" href="/images/posts/2018-03-16_FirebasePlistXcode/xcode_firebase_config.png" data-lightbox="0" title="XCode target configuration">
+        <img class="medium" src="/images/posts/2018-03-16_FirebasePlistXcode/xcode_firebase_config_min.png" alt="XCode target configuration"/>
+</a>
+</div>
+<br/>
 
 En plus de ça, j'ai modifié le fichier `GoogleService-Info.plist` téléchargé sur Firebase pour enlever les éléments qui allaient être remplacés à terme.
 Plus exactement, j'ai remplacé les valeurs par des chaînes du type `WILL BE REPLACED AT BUILD TIME`, qui me permettent facilement de me rendre compte d'un oubli de configuration.
@@ -57,23 +56,21 @@ Les variables définies dans la configuration du projet sont en effet disponible
 En utilisant l'outil `defaults` inclu dans macOS pour la manipulation des fichiers `plist`, il est donc facile de définir les valeurs attendues dans le fichier.
 J'ai ainsi rajouté une étape _shell_ script correspondant à ceci dans le processus de _build_.
 
-
-[source, shell]
-----
+```shell
 defaults write "${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.app/GoogleService-Info.plist" GOOGLE_APP_ID ${GOOGLE_APP_ID}
 defaults write "${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.app/GoogleService-Info.plist" BUNDLE_ID ${PKG_IDENTIFIER}
 defaults write "${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.app/GoogleService-Info.plist" CLIENT_ID ${CLIENT_ID}
 defaults write "${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.app/GoogleService-Info.plist" REVERSED_CLIENT_ID ${REVERSED_CLIENT_ID}
-----
-
+```
 
 Enfin, il faut ordonner cette étape de _build_ après celle de copie des ressources, pour effectuer la modification uniquement dans le fichier binaire de l'application et non dans les sources du projet.
 
-:lightboxGroup: 0
-:lightboxImage: 2018-03-16_FirebasePlistXcode/xcode_firebase_build_script
-:lightboxImageTitle: XCode build script configuration
-
-include::site/static/lightbox.adoc[]
+<div style="text-align : center">
+<a style="display: inline" href="/images/posts/2018-03-16_FirebasePlistXcode/xcode_firebase_build_script.png" data-lightbox="0" title="XCode build script configuration">
+        <img class="medium" src="/images/posts/2018-03-16_FirebasePlistXcode/xcode_firebase_build_script_min.png" alt="XCode build script configuration"/>
+</a>
+</div>
+<br/>
 
 ## Bénéfices
 

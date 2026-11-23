@@ -11,7 +11,7 @@ url: /2018/11/14/android-deobfuscation/
 ---
 
 C'est un fait, décompiler une application android (le fichier apk) pour en examiner le code source est une chose plutôt simple. 
-Il existe de nombreux outils permettant de le faire et c'est logique car, grossièrement, l'apk n'est qu'une archive contenant le code source de l'application et les différentes ressources utilisées dans celle-ci (images, fichiers de langue, layouts de vue...). 
+Il existe de nombreux outils permettant de le faire et c'est logique car, grossièrement, l'apk n'est qu'une archive contenant le code source de l'application et les différentes ressources utilisées dans celle-ci (images, fichiers de langue, layouts de vue…). 
 Les motivations pour cela peuvent être nombreuses et variées et ce n'est d'ailleurs pas très important car, à partir du moment où c'est faisable, des personnes le feront.
 
 Le petit problème, c'est qu'en tant que développeur qui a passé de longs mois à bosser sur son appli, on n'a pas forcément envie de tout se faire copier par le premier venu. 
@@ -31,33 +31,32 @@ Et c'est assez simple, il faut juste le déclarer dans le fichier gradle :
 Le processus de build va donc avoir une étape supplémentaire. 
 Mais comme rien n'est jamais aussi simple, il faut faire attention à correctement configurer son ficher proguard (qui décrit les règles à appliquer lors de l'obfuscation) afin de ne pas nuire au bon fonctionnement de son application. 
 
-La https://developer.android.com/studio/build/shrink-code[doc officielle de Google] en parle, tout comme de nombreux articles de https://blog.octo.com/demystifier-proguard-pour-les-developpeurs-android/[blogs].
-
+La [doc officielle de Google](https://developer.android.com/studio/build/shrink-code) en parle, tout comme de nombreux articles de [blogs](https://blog.octo.com/demystifier-proguard-pour-les-developpeurs-android/).
 
 Une fois que tout ce travail de configuration est terminé, que notre code source de prod est correctement obfusqué, la partie intéressante commence : 
-les __stacktraces__...
+les _stacktraces_…
 
 Les crashs remontés par store sont en fait le résultat d'une stacktrace qui a été générée car une erreur est survenue pendant l'exécution du code de l'application sur un device utilisateur.
 Or, si le code source présent sur le device d'un utilisateur est obfusqué, la stacktrace qui est générée le sera aussi. 
 
 Et voilà à quoi cela peut ressembler :
-{lt}div style="text-align : center"{gt}
-{lt}a class="inlineBoxes" href="/images/posts/2018-11-14-Android-Deobfuscation/android-playstore-stacktrace.png" data-lightbox="1" {gt}
-        {lt}img class="medium" src="/images/posts/2018-11-14-Android-Deobfuscation/android-playstore-stacktrace.png" /{gt}
-{lt}/a{gt}
-{lt}/div{gt}
+<div style="text-align : center">
+<a class="inlineBoxes" href="/images/posts/2018-11-14-Android-Deobfuscation/android-playstore-stacktrace.png" data-lightbox="1" >
+        <img class="medium" src="/images/posts/2018-11-14-Android-Deobfuscation/android-playstore-stacktrace.png" />
+</a>
+</div>
 
 Même si on arrive à identifier certaines lignes ou actions, ça ne sera pas très pratique à débugger car les numéros de ligne ou les noms de classe ne sont pas toujours pertinents. 
 Ici, impossible de trouver dans quelle classe s'est produite l'erreur car je ne sais pas a quoi correspond ni `a` ni `b`.
 
-Mais tout n'est pas perdu. Il y a une section dans le PlayStore qui se nomme __Deobfuscation files__. 
+Mais tout n'est pas perdu. Il y a une section dans le PlayStore qui se nomme _Deobfuscation files_. 
 Elle va nous permettre d'ajouter un fichier de mapping qui va faire le lien entre le code obfusqué et le code réel tel qu'il est dans mon IDE.
 
-{lt}div style="text-align : center"{gt}
-{lt}a class="inlineBoxes" href="/images/posts/2018-11-14-Android-Deobfuscation/android-playstore-deobfuscation.png" data-lightbox="1" {gt}
-        {lt}img class="medium" src="/images/posts/2018-11-14-Android-Deobfuscation/android-playstore-deobfuscation.png" /{gt}
-{lt}/a{gt}
-{lt}/div{gt}
+<div style="text-align : center">
+<a class="inlineBoxes" href="/images/posts/2018-11-14-Android-Deobfuscation/android-playstore-deobfuscation.png" data-lightbox="1" >
+        <img class="medium" src="/images/posts/2018-11-14-Android-Deobfuscation/android-playstore-deobfuscation.png" />
+</a>
+</div>
 
 Ce fichier est généré automatiquement lors de la phase de build. 
 Il se trouve normalement là : 
@@ -66,8 +65,7 @@ Il se trouve normalement là :
 
 et ressemble à ça (en beaucoup plus long) :
 
-[source]
-----
+```
 android.arch.core.internal.FastSafeIterableMap -> android.arch.a.a.a:
     java.util.HashMap mHashMap -> a
     void <init>() -> <init>
@@ -94,16 +92,16 @@ android.arch.core.internal.SafeIterableMap$AscendingIterator -> android.arch.a.a
 android.arch.core.internal.SafeIterableMap$DescendingIterator -> android.arch.a.a.b$b:
     void <init>(android.arch.core.internal.SafeIterableMap$Entry,android.arch.core.internal.SafeIterableMap$Entry) -> <init>
     android.arch.core.internal.SafeIterableMap$Entry forward(android.arch.core.internal.SafeIterableMap$Entry) -> a
-----
+```
 
 Lorsque qu'il est ajouté dans le PlayStore les stacktraces redeviennent intéligibles. 
 Voici donc la même erreur mais avec le fichier de mapping uploadé :
 
-{lt}div style="text-align : center"{gt}
-{lt}a class="inlineBoxes" href="/images/posts/2018-11-14-Android-Deobfuscation/android-playstore-stacktrace-deobfuscated.png" data-lightbox="1" {gt}
-        {lt}img class="medium" src="/images/posts/2018-11-14-Android-Deobfuscation/android-playstore-stacktrace-deobfuscated.png" /{gt}
-{lt}/a{gt}
-{lt}/div{gt}
+<div style="text-align : center">
+<a class="inlineBoxes" href="/images/posts/2018-11-14-Android-Deobfuscation/android-playstore-stacktrace-deobfuscated.png" data-lightbox="1" >
+        <img class="medium" src="/images/posts/2018-11-14-Android-Deobfuscation/android-playstore-stacktrace-deobfuscated.png" />
+</a>
+</div>
 
 Attention cela ne fonctionne que pour les stacktraces survenues après l'ajout du ficher, ce n'est malheureusement pas rétroactif.
 
@@ -113,9 +111,9 @@ Et pour faire cela on va avoir plusieurs solutions :
 
 1. la première est de se connecter au PlayStore et d'aller dans la bonne section pour ajouter le fichier à la main. Même si ça va fonctionner, il faut espérer ne pas oublier de le faire à chaque fois. Et cela rend le processus de livraison encore plus fastidieux, pas franchement génial. 
 2. la deuxième solution est donc de le faire automatiquement. Sachant que l'on utilise déjà des outils pour faire l'upload des apk en automatique et pour ne pas avoir à se connecter à l'interface, ça semble être une bonne idée.
-Ces outils sont https://fastlane.tools/[Fastlane] et le https://github.com/Triple-T/gradle-play-publisher[plugin Gradle play-publisher]
+Ces outils sont [Fastlane](https://fastlane.tools/) et le [plugin Gradle play-publisher](https://github.com/Triple-T/gradle-play-publisher)
 
-* Avec le plugin gradle, c'est plutôt simple, depuis la version https://github.com/Triple-T/gradle-play-publisher/releases/tag/1.2.0[1.2.0], le fichier est automatiquement envoyé sur le store lorsque l'obfusctation est activée.
+* Avec le plugin gradle, c'est plutôt simple, depuis la version [1.2.0](https://github.com/Triple-T/gradle-play-publisher/releases/tag/1.2.0), le fichier est automatiquement envoyé sur le store lorsque l'obfusctation est activée.
 
 * Avec fastlane, c'est à peine un peu plus compliqué, il faut préciser dans le supply le chemin du fichier de mapping 
 ```
@@ -135,7 +133,6 @@ Et lors de l'appel à la `lane` correspondante au déploiement on peut voir dans
 +-------------------------+-------------------------------------------------+
 
 ```
-Si on n'est pas sûr de son coup on retourner sur le PlayStore dans la section __Deobfuscation files__ pour valider que tout s'est bien passé.
-
+Si on n'est pas sûr de son coup on retourner sur le PlayStore dans la section _Deobfuscation files_ pour valider que tout s'est bien passé.
 
 Et voilà, maintenant que l'activation de l'obfuscation et la desobfuscation des stacktraces n'est plus un problème, il ne reste plus qu'à les corriger ;)

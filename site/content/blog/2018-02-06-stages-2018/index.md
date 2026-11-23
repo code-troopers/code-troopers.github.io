@@ -11,11 +11,10 @@ aliases: 2018/02/06/stage-2018.html
 
 Avec un peu de retard, voici nos offres de stages pour 2018, ça se passe toujours à MAME, le baby-foot est toujours à proximité pour se détendre entre deux lignes de codes.
 
-- [line-through]#Administration système : https://code-troopers.com/files/Stage_2018_4DMIN.pdf[Stage_2018_4DMIN]# : *Attribué*
-- [line-through]#Développement Frontend et/ou Backend : https://code-troopers.com/files/Stage_2018_CR4.pdf[Stage_2018_CR4]#
-- [line-through]#Développement Frontend et/ou Backend : https://code-troopers.com/files/Stage_2018_W3.pdf[Stage_2018_W3]#
+* <span class="line-through">Administration système : [Stage_2018_4DMIN](https://code-troopers.com/files/Stage_2018_4DMIN.pdf)</span> : **Attribué**
+* <span class="line-through">Développement Frontend et/ou Backend : [Stage_2018_CR4](https://code-troopers.com/files/Stage_2018_CR4.pdf)</span>
+* <span class="line-through">Développement Frontend et/ou Backend : [Stage_2018_W3](https://code-troopers.com/files/Stage_2018_W3.pdf)</span>
 
 Il s'agit pour la plupart de projets déjà en production donc du travail de qualité est attendu ! Et on fera tout pour que le résultat du stage soit intégré directement en production.
 
 Pour postuler vous pouvez envoyer vos candidatures à : stage@code-troopers.com
-

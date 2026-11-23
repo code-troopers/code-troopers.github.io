@@ -21,20 +21,20 @@ Régulièrement une API nous ressort un pavé de 5000 lignes qui peuvent être l
 
 jq est disponible dans la plupart des gestionnaires de paquet.
 
+## jq par l'exemple
 
-== jq par l'exemple
-
-Prenons cette board publique https://trello.com/b/nPNSBZjB/trello-resources nous pouvons aller dans le menu et faire *menu* -> *plus* -> *imprimer et exporter* -> *exporter en json*
+Prenons cette board publique https://trello.com/b/nPNSBZjB/trello-resources nous pouvons aller dans le menu et faire **menu** → **plus** → **imprimer et exporter** → **exporter en json**
 
 Maintenant nous avons du json, regardons ce qu'il y a à l'intérieur.
 
 `jq '.' nPNSBZjB.json`
 
-:lightboxGroup: 0
-:lightboxImage: 2018-07-09_jq/jq1
-:lightboxImageTitle: jq example 1
-
-include::site/static/lightbox.adoc[]
+<div style="text-align : center">
+<a style="display: inline" href="/images/posts/2018-07-09_jq/jq1.png" data-lightbox="0" title="jq example 1">
+        <img class="medium" src="/images/posts/2018-07-09_jq/jq1_min.png" alt="jq example 1"/>
+</a>
+</div>
+<br/>
 
 Si vous aviez ouvert le fichier avec un éditeur conventionnel, vous pouvez voir que c'est un peu plus joli et coloré.
 
@@ -42,11 +42,12 @@ En fouillant un peu, nous voyons que ce qui nous intéresse se trouve dans l'obj
 
 `jq '.actions[]' nPNSBZjB.json`
 
-:lightboxGroup: 0
-:lightboxImage: 2018-07-09_jq/jq2
-:lightboxImageTitle: jq example 2
-
-include::site/static/lightbox.adoc[]
+<div style="text-align : center">
+<a style="display: inline" href="/images/posts/2018-07-09_jq/jq2.png" data-lightbox="0" title="jq example 2">
+        <img class="medium" src="/images/posts/2018-07-09_jq/jq2_min.png" alt="jq example 2"/>
+</a>
+</div>
+<br/>
 
 Comme vous l'avez peut-être compris, une façon simple d'utiliser jq est de mettre en paramètre le path json que l'on souhaite extraire. Ici, les `[]` sont optionnels, cela permet d'afficher uniquement des objets lorsque l'on a un tableau comme ici pour actions.
 
@@ -56,27 +57,27 @@ Il y a cependant beaucoup trop d'informations pour nous qui désirons uniquement
 jq -c '.actions[] | {txt: .data.text, name: .data.card.name, member: .memberCreator.fullName}' nPNSBZjB.json
 ```
 
-:lightboxGroup: 0
-:lightboxImage: 2018-07-09_jq/jq3
-:lightboxImageTitle: jq example 3
+<div style="text-align : center">
+<a style="display: inline" href="/images/posts/2018-07-09_jq/jq3.png" data-lightbox="0" title="jq example 3">
+        <img class="medium" src="/images/posts/2018-07-09_jq/jq3_min.png" alt="jq example 3"/>
+</a>
+</div>
+<br/>
 
-include::site/static/lightbox.adoc[]
+Comme nous le ferions en javascript, il suffit de mettre le **nom du champ** **:** **la variable**. Nous pouvons aussi en profiter pour afficher les objets sur une ligne pour gagner en visibilité grâce au `-c`.
 
-
-Comme nous le ferions en javascript, il suffit de mettre le *nom du champ* *:* *la variable*. Nous pouvons aussi en profiter pour afficher les objets sur une ligne pour gagner en visibilité grâce au `-c`.
-
-Allons encore un peu plus loin, nous ne voulons pas des objets qui ont leur champs texte à null ou alors ceux qui ont un commentaire qui commence par une notification avec `@`, nous pouvons *sélectionner* les objets avec un *select*
+Allons encore un peu plus loin, nous ne voulons pas des objets qui ont leur champs texte à null ou alors ceux qui ont un commentaire qui commence par une notification avec `@`, nous pouvons **sélectionner** les objets avec un **select**
 
 ```
 jq -c '.actions[] | {txt: .data.text, name: .data.card.name, member: .memberCreator.fullName} | select(.txt!=null) | select(.txt | startswith("@"))' nPNSBZjB.json
 ```
 
-:lightboxGroup: 0
-:lightboxImage: 2018-07-09_jq/jq4
-:lightboxImageTitle: jq example 4
-
-include::site/static/lightbox.adoc[]
-
+<div style="text-align : center">
+<a style="display: inline" href="/images/posts/2018-07-09_jq/jq4.png" data-lightbox="0" title="jq example 4">
+        <img class="medium" src="/images/posts/2018-07-09_jq/jq4_min.png" alt="jq example 4"/>
+</a>
+</div>
+<br/>
 
 Dernière commande sur l'utilisation de jq, la possibilité de trier, par exemple dans l'ordre alphabétique du champs texte
 
@@ -84,12 +85,12 @@ Dernière commande sur l'utilisation de jq, la possibilité de trier, par exempl
 jq -c '.actions |= sort_by(.data.text)|.actions[] | {txt: .data.text, name: .data.card.name, member: .memberCreator.fullName} | select(.txt!=null) | select(.txt | startswith("@"))' nPNSBZjB.json
 ```
 
-:lightboxGroup: 0
-:lightboxImage: 2018-07-09_jq/jq5
-:lightboxImageTitle: jq example 5
-
-include::site/static/lightbox.adoc[]
-
+<div style="text-align : center">
+<a style="display: inline" href="/images/posts/2018-07-09_jq/jq5.png" data-lightbox="0" title="jq example 5">
+        <img class="medium" src="/images/posts/2018-07-09_jq/jq5_min.png" alt="jq example 5"/>
+</a>
+</div>
+<br/>
 
 J'espère que ce petit exemple d'utilisation de jq vous aura plu, je vous laisse à la documentation officielle si vous désirez en savoir plus : https://stedolan.github.io/jq/
 

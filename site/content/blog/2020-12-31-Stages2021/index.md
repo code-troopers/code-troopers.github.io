@@ -15,13 +15,11 @@ les étudiants en proposant plus d'offres de stages que les autres années.
 
 En fonction de la période de l'année (et des conditions sanitaires), ça se passera en remote, à MAME et/ou dans les nouveaux locaux de Code-Troopers, toujours à Tours Centre (_suspense_ 🤭). 
 
-- Développement Web sur https://chapi.to[Chapi.to] : https://code-troopers.com/files/Stage_2021_Matomo.pdf[Stage_2021_MATOMO]
-- Développement Frontend et/ou Backend : https://code-troopers.com/files/Stage_2021_VU3.pdf[Stage_2021_VU3]
-- Ops : https://code-troopers.com/files/Stage_2021_Ops.pdf[Stage_2021_Ops]
-- Communication : https://code-troopers.com/files/Stage_2021_CM.pdf[Stage_2021_CM]
-
+* Développement Web sur [Chapi.to](https://chapi.to) : [Stage_2021_MATOMO](https://code-troopers.com/files/Stage_2021_Matomo.pdf)
+* Développement Frontend et/ou Backend : [Stage_2021_VU3](https://code-troopers.com/files/Stage_2021_VU3.pdf)
+* Ops : [Stage_2021_Ops](https://code-troopers.com/files/Stage_2021_Ops.pdf)
+* Communication : [Stage_2021_CM](https://code-troopers.com/files/Stage_2021_CM.pdf)
 
 Ce stage sera rémunéré selon les conditions légales, plus une prime dépendant du résultat final.
-
 
 Pour postuler vous pouvez envoyer vos C.V. à : stage@code-troopers.com

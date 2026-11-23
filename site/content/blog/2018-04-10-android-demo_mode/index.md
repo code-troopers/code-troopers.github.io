@@ -9,38 +9,37 @@ url: /2018/04/27/android-demo-mode/
 aliases: 2018/04/27/android-demo-mode.html
 ---
 
-
 Depuis la version 6.0 de Android (Marshmallow), une nouvelle section a fait son apparition dans  les _developer settings_, elle est nommée `Mode démonstration` (ou _Demo mode_ en anglais).
 
 À l'intérieur se trouvent deux options `Activer le mode de démonstration` et `Afficher le mode de démonstration`. Alors oui, la  subtile différence ne saute pas aux yeux. 
-Et lorsque l'on active la première rien ne se passe, mais dès que l'on clique sur la seconde ... magie !
- 
+Et lorsque l'on active la première rien ne se passe, mais dès que l'on clique sur la seconde … magie !
+
 La status bar est modifiée (plus ou moins, cela dépend du nombre de notifications que vous aviez en attente). Toutes les notifications ont disparues, l'heure est modifiée, la batterie, le signal gsm ainsi que le signal wifi passent à 100%.
 
 C'est génial, mais ça ne sert à rien comme ça, pourtant c'est bel et bien le but de cette fonctionnalité.
 
-{lt}div style="text-align : center"{gt}
-{lt}a class="inlineBoxes" href="/images/posts/2018-04-10-AndroidDemoMode/demo_mode_settings_noborder.png" data-lightbox="1" {gt}
-        {lt}img class="medium" src="/images/posts/2018-04-10-AndroidDemoMode/demo_mode_settings_noborder.png" /{gt}
-{lt}/a{gt}
-{lt}a class="inlineBoxes" href="/images/posts/2018-04-10-AndroidDemoMode/demo_mode_details_noborder.png" data-lightbox="1" {gt}
-        {lt}img class="medium" src="/images/posts/2018-04-10-AndroidDemoMode/demo_mode_details_noborder.png" /{gt}
-{lt}/a{gt}
-{lt}/div{gt}
- 
+<div style="text-align : center">
+<a class="inlineBoxes" href="/images/posts/2018-04-10-AndroidDemoMode/demo_mode_settings_noborder.png" data-lightbox="1" >
+        <img class="medium" src="/images/posts/2018-04-10-AndroidDemoMode/demo_mode_settings_noborder.png" />
+</a>
+<a class="inlineBoxes" href="/images/posts/2018-04-10-AndroidDemoMode/demo_mode_details_noborder.png" data-lightbox="1" >
+        <img class="medium" src="/images/posts/2018-04-10-AndroidDemoMode/demo_mode_details_noborder.png" />
+</a>
+</div>
+
 Ces deux options permettent donc d'activer et de passer son téléphone en mode démo. 
 Cela permet de couper toutes les notifications et de réinitialiser à des valeurs standards l'heure et l'état des connexions de la status bar.
 Tout cela dans le but de _clarifier_ l'écran et cela va nous aider dans l'idée de ne pas détourner l'attention de l'utilisateur sur des détails (plus ou moins gênants).
 
-{lt}div style="text-align : center"{gt}
-{lt}a class="inlineBoxes" href="/images/posts/2018-04-10-AndroidDemoMode/demo_mode_activation.gif" data-lightbox="1" {gt}
-        {lt}img class="medium" src="/images/posts/2018-04-10-AndroidDemoMode/demo_mode_activation.gif" /{gt}
-{lt}/a{gt}
-{lt}/div{gt}
+<div style="text-align : center">
+<a class="inlineBoxes" href="/images/posts/2018-04-10-AndroidDemoMode/demo_mode_activation.gif" data-lightbox="1" >
+        <img class="medium" src="/images/posts/2018-04-10-AndroidDemoMode/demo_mode_activation.gif" />
+</a>
+</div>
 
 En effet il est plutôt utile lors de rendez-vous ou démo client de ne pas recevoir la notif du dernier message Facebook de votre maman.
 
-L'autre principale utilité que je vois, c'est pour faire les screenshots qui iront sur le Play Store. En effet rien de pire dans le store qu'un screenshot d'app avec 50 notifications en cours qui gâchent le truc (enfin si, le pire c'est un screenshot ios...)
+L'autre principale utilité que je vois, c'est pour faire les screenshots qui iront sur le Play Store. En effet rien de pire dans le store qu'un screenshot d'app avec 50 notifications en cours qui gâchent le truc (enfin si, le pire c'est un screenshot ios…)
 
 Mais normalement si vous êtes un dev normal, donc un peu flémard, faire les screenshosts à la main vous ne trouvez pas ça très drôle.
 Donc il faudrait pouvoir lancer le _démo mode_ juste avant les screenshots. La chance est avec nous car c'est possible.
@@ -49,39 +48,34 @@ En effet tout un tas d'options sont disponibles via adb pour activer le _demo mo
 Pour faire ce que l'on a fait tout au début en passant à la main par les settings il nous suffit d'appeler les commandes adb suivantes :
 
 Activation globale du _demo mode_ 
-[source, shell]
-----
+```shell
 adb shell settings put global sysui_demo_allowed 1
-----
+```
 
 Démarrage et Arrêt du _demo mode_
-[source, shell]
-----
+```shell
 adb shell am broadcast -a com.android.systemui.demo -e command enter
 adb shell am broadcast -a com.android.systemui.demo -e command exit
-----
+```
 
 Ensuite, entre le démarrage et l'arrêt, on peut appeler les commandes une à une pour modifier l'état de la status bar.
 Les principales pour moi étant :
 
 Masquer les notifications :
-[source, shell]
-----
+```shell
 adb shell am broadcast -a com.android.systemui.demo -e command notifications -e visible false
-----
+```
 
 Figer l'heure :
-[source, shell]
-----
+```shell
 adb shell am broadcast -a com.android.systemui.demo -e command clock -e hhmm 1331
-----
+```
 
-Toutes les options disponibles sont listées dans https://android.googlesource.com/platform/frameworks/base/+/android-6.0.0_r1/packages/SystemUI/docs/demo_mode.md[la doc officielle]. 
+Toutes les options disponibles sont listées dans [la doc officielle](https://android.googlesource.com/platform/frameworks/base/+/android-6.0.0_r1/packages/SystemUI/docs/demo_mode.md). 
 
 Une fois trouvée la configuration parfaite pour son projet, il suffit de faire un petit script en plus à jouer avant les screens et le tour est joué.
 
-[source, shell]
-----
+```shell
 function startDemoMode {
     adb shell settings put global sysui_demo_allowed 1
     adb shell am broadcast -a com.android.systemui.demo -e command enter
@@ -95,9 +89,8 @@ function startDemoMode {
 function stopDemoMode {
     adb shell am broadcast -a com.android.systemui.demo -e command exit
 }
-----
+```
 
 Il ne reste plus qu'à rajouter l'appel à ses fonctions au moment opportun dans le processus de screenshot.
 
-
-Rappel : pour activer le mode développeur, ça se passe https://developer.android.com/studio/debug/dev-options.html[dans les paramètres du téléphone].
+Rappel : pour activer le mode développeur, ça se passe [dans les paramètres du téléphone](https://developer.android.com/studio/debug/dev-options.html).

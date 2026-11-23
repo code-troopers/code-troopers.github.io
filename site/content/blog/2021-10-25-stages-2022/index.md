@@ -16,10 +16,10 @@ Code-Troopers pour publier des offres de stages 👩‍🎓👨‍🎓
 Alors comme chaque année, on a sorti nos meilleures plumes 🖋️️ pour vous rédiger ces offres. Nous savons tous que ce n'est
 jamais chose simple de trouver un stage, c'est pourquoi (comme l'année dernière) nous vous en proposons 4.
 
-- Ops, développement Web et/ou mobile : https://code-troopers.com/files/Stage_2022_Code-Troopers_Matomo.pdf[Stage_2022_Code-Troopers_Matomo]
-- Développement Web : https://code-troopers.com/files/Stage_2022_Code-Troopers_Navig.pdf[Stage_2022_Code-Troopers_Navig]
-- Développement Web : https://code-troopers.com/files/Stage_2022_Code-Troopers_Wakiki.pdf[Stage_2022_Code-Troopers_Wakiki]
-- Gestion : https://code-troopers.com/files/Stage_2022_Code-Troopers_Gestion.pdf[Stage_2022_Code-Troopers_Gestion]
+* Ops, développement Web et/ou mobile : [Stage_2022_Code-Troopers_Matomo](https://code-troopers.com/files/Stage_2022_Code-Troopers_Matomo.pdf)
+* Développement Web : [Stage_2022_Code-Troopers_Navig](https://code-troopers.com/files/Stage_2022_Code-Troopers_Navig.pdf)
+* Développement Web : [Stage_2022_Code-Troopers_Wakiki](https://code-troopers.com/files/Stage_2022_Code-Troopers_Wakiki.pdf)
+* Gestion : [Stage_2022_Code-Troopers_Gestion](https://code-troopers.com/files/Stage_2022_Code-Troopers_Gestion.pdf)
 
 Ces stages auront lieu dans nos nouveaux locaux tourangeaux à Tours centre (le télétravail est également autorisé) et
 ils seront rémunérés selon les conditions légales.
