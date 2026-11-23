@@ -48,5 +48,16 @@ export default [
       "semi": 2,
       "space-before-blocks": [2, "always"]
     }
+  },
+  {
+    files: ["scripts/**/*.mjs"],
+    languageOptions: {
+      globals: {
+        ...globals.node
+      }
+    },
+    rules: {
+      "no-console": 0
+    }
   }
 ];

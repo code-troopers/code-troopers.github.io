@@ -6,14 +6,16 @@
   "repository": "github:code-troopers/code-troopers.github.io",
   "license": "MIT",
   "scripts": {
-    "lint": "eslint src",
+    "lint": "eslint src scripts",
     "start": "run-p 'start:**'",
     "start:hugo": "hugo -d ../dist -s site -w -D -F",
     "start:webpack": "webpack-dev-server --config webpack.dev.js --hot",
     "build": "yarn build:webpack && yarn build:hugo",
     "build:preview": "yarn build:webpack && yarn build:hugo -D -F",
     "build:hugo": "hugo -d ../dist -s site --panicOnWarning",
-    "build:webpack": "cross-env NODE_ENV=production webpack --config webpack.prod.js"
+    "build:webpack": "cross-env NODE_ENV=production webpack --config webpack.prod.js",
+    "check:content": "node scripts/check-content.mjs",
+    "verify": "yarn lint && yarn check:content && yarn build"
   },
   "devDependencies": {
     "@babel/core": "^8",
@@ -28,6 +30,7 @@
     "eslint": "^10",
     "globals": "^17",
     "hugo-extended": "~0.164.0",
+    "js-yaml": "^4",
     "mini-css-extract-plugin": "^2.10.2",
     "npm-run-all2": "^9",
     "postcss": "^8.5.33",

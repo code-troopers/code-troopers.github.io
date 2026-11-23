@@ -1,0 +1,14 @@
+# With "Require review from Code Owners" enabled on main, a PR needs an
+# approval from the owners of every file it touches.
+
+# Default: code, styles, templates, dependencies, CI and agent instructions
+*                         @mattboll
+
+# Editorial content: no owner, mergeable once CI is green
+/site/content/
+/site/static/files/
+/site/static/images/
+/site/static/img/
+/site/static/llms.txt
+/site/data/team.json
+/site/data/cloud.json

@@ -3492,6 +3492,7 @@ __metadata:
     globals: "npm:^17"
     highlight.js: "npm:^11.12.0"
     hugo-extended: "npm:~0.164.0"
+    js-yaml: "npm:^4"
     lightbox2: "npm:^2.12.0"
     mini-css-extract-plugin: "npm:^2.10.2"
     npm-run-all2: "npm:^9"
@@ -4961,7 +4962,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"js-yaml@npm:^4.1.0":
+"js-yaml@npm:^4, js-yaml@npm:^4.1.0":
   version: 4.3.2
   resolution: "js-yaml@npm:4.3.2"
   dependencies:
