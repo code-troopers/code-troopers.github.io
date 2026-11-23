@@ -1,8 +1,10 @@
-// Sanity checks on blog and work entries, run in CI before the Hugo build.
+// Sanity checks on editable content, run in CI before the Hugo build.
 // Errors fail the build; warnings are only printed.
 // --tags lists existing tags with their usage count.
-import {readdirSync, readFileSync, existsSync, statSync} from "node:fs";
+// --write-allowlist records the risky HTML currently in content (technical review only).
+import {readdirSync, readFileSync, writeFileSync, existsSync, statSync} from "node:fs";
 import {join, relative} from "node:path";
+import {createHash} from "node:crypto";
 import yaml from "js-yaml";
 
 const CONTENT = "site/content";
@@ -11,6 +13,21 @@ const MAX_IMAGE_BYTES = 1024 * 1024;
 const IMAGE_EXT = /\.(png|jpe?g|webp|gif)$/i;
 // <base href="/"> makes relative image paths resolve from the site root
 const RELATIVE_IMAGE = /(?:\]\(|src=")(?!\/|https?:|#)([^)"\s]+\.(?:png|jpe?g|webp|gif|svg))/gi;
+
+// Folders without code owner: anything merged there skips technical review
+const EDITABLE_DIRS = ["site/content", "site/static/files", "site/static/images", "site/static/img"];
+const EDITABLE_FILE = /\.(md|html|png|jpe?g|webp|gif|svg|avif|pdf|webm|mp4)$/i;
+const IGNORED_FILE = /^(\.keep|\.gitkeep|\.DS_Store)$/;
+const ALLOWLIST = "scripts/content-allowlist.json";
+// Markup that runs code or loads third-party resources
+const RISKY_HTML = new RegExp([
+  String.raw`<(script|style|iframe|object|embed|frameset|frame|form|foreignObject)\b[\s\S]*?<\/\1\s*>`,
+  String.raw`<(?:script|style|iframe|object|embed|frameset|frame|form|foreignObject|link|meta|base)\b[^>]*>`,
+  String.raw`\son[a-z]+\s*=\s*(?:"[^"]*"|'[^']*'|[^\s>]+)`,
+  String.raw`javascript:[^"'\s>)]*`,
+].join("|"), "gi");
+// Code samples are rendered as text, not executed
+const CODE_SAMPLE = /^(```|~~~)[\s\S]*?^\1[^\S\n]*$|`[^`\n]+`/gm;
 
 const errors = [];
 const warnings = [];
@@ -97,6 +114,60 @@ if (process.argv.includes("--tags")) {
   const all = [...tags.values()].flatMap((spellings) => [...spellings]).sort((a, b) => b[1] - a[1]);
   for (const [tag, count] of all) console.log(`${String(count).padStart(3)}  ${tag}`);
   process.exit(0);
+}
+
+function* walk(dir) {
+  for (const entry of readdirSync(dir, {withFileTypes: true})) {
+    const path = join(dir, entry.name);
+    if (entry.isDirectory()) yield* walk(path);
+    else if (!IGNORED_FILE.test(entry.name)) yield path;
+  }
+}
+
+function riskyHtml(file) {
+  let text = readFileSync(file, "utf8");
+  if (file.endsWith(".md")) text = text.replace(CODE_SAMPLE, (m) => m.replace(/[^\n]/g, " "));
+  return [...text.matchAll(RISKY_HTML)].map((m) => {
+    const snippet = m[0].replace(/\s+/g, " ").trim();
+    return {
+      hash: createHash("sha256").update(snippet).digest("hex").slice(0, 16),
+      line: text.slice(0, m.index).split("\n").length,
+      label: snippet.length > 50 ? `${snippet.slice(0, 50)}…` : snippet,
+    };
+  });
+}
+
+const found = {};
+for (const root of EDITABLE_DIRS) {
+  for (const file of walk(root)) {
+    if (!EDITABLE_FILE.test(file)) {
+      errors.push(`${file}: file type not allowed in content folders (needs a technical review)`);
+    } else if (/\.(md|html|svg)$/i.test(file)) {
+      const items = riskyHtml(file);
+      if (items.length) found[file] = items;
+    }
+  }
+}
+
+if (process.argv.includes("--write-allowlist")) {
+  const allowlist = Object.fromEntries(Object.entries(found).sort().map(([f, items]) => [f, items.map((i) => i.hash)]));
+  writeFileSync(ALLOWLIST, JSON.stringify(allowlist, null, 2) + "\n");
+  console.log(`${ALLOWLIST} written`);
+  process.exit(0);
+}
+
+const allowlist = existsSync(ALLOWLIST) ? JSON.parse(readFileSync(ALLOWLIST, "utf8")) : {};
+for (const [file, items] of Object.entries(found)) {
+  const allowed = [...(allowlist[file] || [])];
+  for (const item of items) {
+    const i = allowed.indexOf(item.hash);
+    if (i >= 0) {
+      allowed.splice(i, 1);
+      continue;
+    }
+    errors.push(`${file}:${item.line}: "${item.label}" can run code or load third-party resources, ` +
+      `content cannot contain it without a technical review (see ${ALLOWLIST})`);
+  }
 }
 
 for (const spellings of tags.values()) {

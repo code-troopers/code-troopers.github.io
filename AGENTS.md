@@ -34,6 +34,7 @@ Tout le reste. En particulier :
 - changer la mise en page, les couleurs, la typographie, la structure HTML d'une page ;
 - modifier le menu (`site/data/menu.json`), le pied de page, les textes de la section Compétences (ils sont dans des gabarits) ;
 - changer l'URL d'une page existante, supprimer une page ;
+- intégrer une vidéo, un widget de réseau social, un formulaire ou tout autre élément externe (`<iframe>`, `<script>`, `<style>`, attributs `onclick`…) ;
 - une demande de contenu qui t'oblige à toucher un fichier du niveau 2.
 
 Pour le niveau 2 : fais le travail sur une branche, ouvre la PR, **ne la merge pas**. GitHub demande automatiquement la relecture à l'équipe `@code-troopers/owners` (fichier `.github/CODEOWNERS`). Explique à l'utilisateur, en termes simples, ce qui a été modifié et pourquoi une relecture est nécessaire.
@@ -267,6 +268,7 @@ Technologies utilisées
 
 - **CI** (`.github/workflows/ci.yml`) sur chaque PR : `yarn lint`, `yarn check:content` (frontmatter, image de couverture présente, URL unique et cohérente avec la date…), `yarn build` (qui échoue au moindre avertissement Hugo).
 - **CODEOWNERS** : toute PR qui touche autre chose que du contenu exige l'approbation d'un membre de `@code-troopers/owners`.
+- **HTML sûr dans le contenu** : le contrôle du contenu refuse dans `site/content/` et les dossiers d'images et de PDF tout ce qui exécute du code ou charge une ressource externe (`<script>`, `<iframe>`, `<style>`, `<link>`, `<form>`, attributs `on…=`, liens `javascript:`) ainsi que les types de fichiers autres que texte, images, PDF et vidéos. Les éléments déjà présents sont autorisés un par un dans `scripts/content-allowlist.json`. Ne lance jamais `yarn check:content --write-allowlist` : mettre à jour cette liste est une décision technique, à laisser aux relecteurs.
 - **Preview Netlify** sur chaque PR, pour relire le rendu avant publication.
 
 ## 11. Comment rendre compte à l'utilisateur
