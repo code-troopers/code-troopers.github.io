@@ -2,27 +2,10 @@ const path = require("path");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const AssetsPlugin = require("assets-webpack-plugin");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const NodePolyfillPlugin = require("node-polyfill-webpack-plugin");
-const webpack = require("webpack");
-
-class RemoveNodeSchemePlugin {
-  apply(compiler) {
-    compiler.hooks.normalModuleFactory.tap("RemoveNodeSchemePlugin", (nmf) => {
-      nmf.hooks.beforeResolve.tap("RemoveNodeSchemePlugin", (data) => {
-        if (!data || !data.request) return;
-        if (data.request.startsWith("node:")) {
-          data.request = data.request.replace(/^node:/, "");
-        }
-      });
-    });
-  }
-}
 
 module.exports = {
   entry: {
     main: path.join(__dirname, "src", "index.js"),
-    cms: path.join(__dirname, "src", "js", "cms.js"),
   },
 
   output: {
@@ -80,24 +63,9 @@ module.exports = {
 
   resolve: {
     extensions: [".js", ".scss"],
-    alias: {
-      "@": path.resolve(__dirname, "src/"),
-    },
-    fallback: {
-      buffer: require.resolve("buffer/"),
-      process: require.resolve("process/browser"),
-      url: require.resolve("url/"),
-      path: require.resolve("path-browserify"),
-      stream: require.resolve("stream-browserify"),
-      http: require.resolve("stream-http"),
-      https: require.resolve("https-browserify"),
-    },
   },
 
   plugins: [
-    new NodePolyfillPlugin(),
-    new RemoveNodeSchemePlugin(),
-
     new AssetsPlugin({
       filename: "webpack.json",
       path: path.join(process.cwd(), "site/data"),
@@ -109,13 +77,6 @@ module.exports = {
         { from: "./src/fonts/", to: "fonts/" },
         { from: "./site/data/cloud.json", to: "data/cloud.json" },
       ],
-    }),
-
-    new HtmlWebpackPlugin({
-      filename: "admin/index.html",
-      template: "src/cms.html",
-      inject: true,
-      chunks: ["cms"],
     }),
 
     new MiniCssExtractPlugin({
