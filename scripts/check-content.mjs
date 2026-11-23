@@ -20,7 +20,7 @@ const tags = new Map();
 function parse(file) {
   const text = readFileSync(file, "utf8");
   const match = text.match(/^---\r?\n([\s\S]*?)\r?\n---/);
-  if (!match) throw new Error("frontmatter YAML manquant (bloc --- en tête de fichier)");
+  if (!match) throw new Error("missing YAML frontmatter (--- block at the top of the file)");
   return {fm: yaml.load(match[1]) || {}, body: text.slice(match[0].length)};
 }
 
@@ -31,7 +31,7 @@ for (const section of SECTIONS) {
     const dir = join(root, entry.name);
     const index = readdirSync(dir).find((f) => /^index\.(md|html)$/.test(f));
     if (!index) {
-      warnings.push(`${dir}: dossier sans index.md, rien n'y est publié`);
+      warnings.push(`${dir}: folder without index.md, nothing in it is published`);
       continue;
     }
     const file = join(dir, index);
@@ -47,31 +47,31 @@ for (const section of SECTIONS) {
     if (fm.expirydate && new Date(fm.expirydate) < new Date()) continue;
 
     for (const key of ["title", "date", "url"]) {
-      if (!fm[key]) errors.push(`${file}: champ « ${key} » manquant`);
+      if (!fm[key]) errors.push(`${file}: missing "${key}" field`);
     }
     if (fm.date && Number.isNaN(new Date(fm.date).getTime())) {
-      errors.push(`${file}: date invalide « ${fm.date} » (format attendu : AAAA-MM-JJ)`);
+      errors.push(`${file}: invalid date "${fm.date}" (expected YYYY-MM-DD)`);
     }
     if ("draft" in fm && typeof fm.draft !== "boolean") {
-      errors.push(`${file}: « draft » doit valoir true ou false`);
+      errors.push(`${file}: "draft" must be true or false`);
     }
     if (fm.tags && !Array.isArray(fm.tags)) {
-      errors.push(`${file}: « tags » doit être une liste`);
+      errors.push(`${file}: "tags" must be a list`);
     }
     if (fm.cover && !existsSync(join(dir, fm.cover))) {
-      errors.push(`${file}: image de couverture « ${fm.cover} » absente du dossier`);
+      errors.push(`${file}: cover image "${fm.cover}" not found in the folder`);
     }
     if (section === "blog" && fm.url) {
       const iso = fm.date instanceof Date ? fm.date.toISOString() : String(fm.date);
       const day = /^\d{4}-\d{2}-\d{2}/.test(iso) ? iso.slice(0, 10).replaceAll("-", "/") : null;
       if (!/^\/\d{4}\/\d{2}\/\d{2}\/[\w-]+\/$/.test(fm.url)) {
-        errors.push(`${file}: url « ${fm.url} » invalide (format attendu : /AAAA/MM/JJ/slug/)`);
+        errors.push(`${file}: invalid url "${fm.url}" (expected /YYYY/MM/DD/slug/)`);
       } else if (day && !fm.url.startsWith(`/${day}/`)) {
-        warnings.push(`${file}: la date de l'url « ${fm.url} » ne correspond pas au champ date (${day})`);
+        warnings.push(`${file}: url "${fm.url}" does not match the date field (${day})`);
       }
     }
     if (fm.url) {
-      if (urls.has(fm.url)) errors.push(`${file}: url « ${fm.url} » déjà utilisée par ${urls.get(fm.url)}`);
+      if (urls.has(fm.url)) errors.push(`${file}: url "${fm.url}" already used by ${urls.get(fm.url)}`);
       else urls.set(fm.url, file);
     }
     for (const tag of Array.isArray(fm.tags) ? fm.tags : []) {
@@ -81,13 +81,13 @@ for (const section of SECTIONS) {
       spellings.set(String(tag), (spellings.get(String(tag)) || 0) + 1);
     }
     for (const [, src] of body.matchAll(RELATIVE_IMAGE)) {
-      errors.push(`${file}: image « ${src} » en chemin relatif, utiliser ${fm.url || "/<url de la page>/"}${src}`);
+      errors.push(`${file}: relative image path "${src}", use ${fm.url || "/<page url>/"}${src}`);
     }
 
     for (const f of readdirSync(dir)) {
       const size = statSync(join(dir, f)).size;
       if (IMAGE_EXT.test(f) && size > MAX_IMAGE_BYTES) {
-        warnings.push(`${relative(".", join(dir, f))}: image de ${(size / 1048576).toFixed(1)} Mo, à compresser (< 1 Mo)`);
+        warnings.push(`${relative(".", join(dir, f))}: ${(size / 1048576).toFixed(1)} MB image, compress it (< 1 MB)`);
       }
     }
   }
@@ -101,11 +101,11 @@ if (process.argv.includes("--tags")) {
 
 for (const spellings of tags.values()) {
   if (spellings.size > 1) {
-    warnings.push(`tag écrit de plusieurs façons : ${[...spellings.keys()].join(" / ")} (réutiliser l'orthographe existante)`);
+    warnings.push(`tag spelled several ways: ${[...spellings.keys()].join(" / ")} (reuse the existing spelling)`);
   }
 }
 
 for (const w of warnings) console.warn(`⚠ ${w}`);
 for (const e of errors) console.error(`✖ ${e}`);
-console.log(`${errors.length} erreur(s), ${warnings.length} avertissement(s)`);
+console.log(`${errors.length} error(s), ${warnings.length} warning(s)`);
 process.exit(errors.length ? 1 : 0);

@@ -2,7 +2,7 @@
   "name": "code-troopers-website",
   "version": "1.0.0",
   "private": true,
-  "description": "Site vitrine de Code-Troopers (Hugo + Webpack)",
+  "description": "Code-Troopers company website (Hugo + Webpack)",
   "repository": "github:code-troopers/code-troopers.github.io",
   "license": "MIT",
   "scripts": {
