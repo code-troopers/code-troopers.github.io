@@ -1,0 +1,31 @@
+{{ define "main" }}
+<div id="contact-card" class="join">
+  <section class="join-section">
+    <div class="join-wrap">
+      {{ with .Resources.GetMatch .Params.photo }}
+      {{ with .Resize "300x webp q85" }}
+      <img class="contact-card-photo" src="{{ .RelPermalink }}" width="150" height="150" alt="Photo de {{ $.Title }}">
+      {{ end }}
+      {{ end }}
+      <h1>{{ .Title }}</h1>
+      <hr class="contact-card-rule">
+      {{ with .Params.linkedin }}
+      <h2><a href="{{ . }}" target="_blank" rel="noopener">Ajoutez-moi sur Linkedin</a></h2>
+      <p><a href="{{ . }}" class="contact-card-linkedin" target="_blank" rel="noopener" aria-label="Linkedin (nouvelle fenêtre)">{{ partial "svg" "linkedin-fill" }}</a></p>
+      {{ end }}
+      {{ with .Params.vcard }}
+      <p><a href="{{ . }}" class="join-button">Sauvegarder mon contact</a></p>
+      {{ end }}
+      <div class="contact-card-body">
+        <div class="contact-card-text">
+          {{ .Content }}
+        </div>
+        <p class="contact-card-logo">
+          <img src="/img/logo-code-troopers-tête-couleur.png" width="90" height="90" alt="">
+          <strong>Code-Troopers</strong>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+{{ end }}

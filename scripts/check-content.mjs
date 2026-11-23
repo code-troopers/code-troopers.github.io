@@ -8,7 +8,12 @@ import {createHash} from "node:crypto";
 import yaml from "js-yaml";
 
 const CONTENT = "site/content";
-const SECTIONS = ["blog", "work"];
+// Fields each entry must define, per content section
+const SECTIONS = {
+  blog: ["title", "date", "url"],
+  work: ["title", "date", "url"],
+  rejoindre: ["title", "date", "contract", "location"],
+};
 const MAX_IMAGE_BYTES = 1024 * 1024;
 const IMAGE_EXT = /\.(png|jpe?g|webp|gif)$/i;
 // <base href="/"> makes relative image paths resolve from the site root
@@ -41,7 +46,7 @@ function parse(file) {
   return {fm: yaml.load(match[1]) || {}, body: text.slice(match[0].length)};
 }
 
-for (const section of SECTIONS) {
+for (const [section, required] of Object.entries(SECTIONS)) {
   const root = join(CONTENT, section);
   for (const entry of readdirSync(root, {withFileTypes: true})) {
     if (!entry.isDirectory()) continue;
@@ -63,7 +68,7 @@ for (const section of SECTIONS) {
     // Expired entries are not built by Hugo
     if (fm.expirydate && new Date(fm.expirydate) < new Date()) continue;
 
-    for (const key of ["title", "date", "url"]) {
+    for (const key of required) {
       if (!fm[key]) errors.push(`${file}: missing "${key}" field`);
     }
     if (fm.date && Number.isNaN(new Date(fm.date).getTime())) {

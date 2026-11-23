@@ -1,0 +1,177 @@
+{{ define "main" }}
+<div id="rejoindre" class="join">
+  {{ $hero := "" }}
+  {{ with .Resources.GetMatch .Params.heroPhoto }}{{ $hero = (.Resize "1920x webp q75").RelPermalink }}{{ end }}
+  <section class="join-hero" style="{{ printf "--join-hero: url('%s')" $hero | safeCSS }}">
+    <div class="join-wrap">
+      <h1>Bienvenue chez Code-Troopers</h1>
+      <div class="join-intro">{{ .Params.intro | markdownify }}</div>
+      <hr class="join-divider">
+      <h2>Nos valeurs</h2>
+      <ul class="join-values">
+        {{ range .Params.values }}
+        <li>
+          {{ with .icon }}<span class="join-value-icon">{{ partial "svg" . }}</span>{{ end }}
+          <h3>{{ .title }}</h3>
+          <p>{{ .text | markdownify }}</p>
+        </li>
+        {{ end }}
+      </ul>
+    </div>
+  </section>
+
+  {{ with .Params.figures }}
+  <section class="join-band join-figures">
+    <ul class="join-wrap">
+      {{ range . }}
+      <li><strong>{{ .value }}</strong><span>{{ .label }}</span></li>
+      {{ end }}
+    </ul>
+  </section>
+  {{ end }}
+
+  <section class="join-section">
+    <div class="join-wrap">
+      <h2>Qui sont les Troopers ?</h2>
+      <hr class="join-divider">
+      <div class="join-carousel" data-carousel>
+        <button type="button" class="join-carousel-button join-carousel-prev" data-carousel-prev aria-label="Témoignages précédents">&#10140;</button>
+        <ul class="join-testimonials" data-carousel-track>
+          {{ range .Params.testimonials }}
+          {{ $t := . }}
+          <li>
+            {{ with $.Resources.GetMatch .photo }}
+            {{ with .Fill "300x300 Center webp q80" }}
+            <img src="{{ .RelPermalink }}" width="150" height="150" alt="Photo de {{ $t.name }}" loading="lazy">
+            {{ end }}
+            {{ end }}
+            <h3>{{ .name }}</h3>
+            <p class="join-testimonial-title">{{ .title }}</p>
+            <p class="join-testimonial-quote">{{ .quote | markdownify }}</p>
+            {{ with .contact }}<p class="join-testimonial-contact"><a href="{{ .href }}">{{ .text }}</a></p>{{ end }}
+            <p class="join-socials">
+              {{ range $network := slice "linkedin" "github" "gitlab" "steam" "malt" }}
+              {{ with index $t $network }}
+              <a href="{{ . }}" target="_blank" rel="noopener" aria-label="{{ title $network }} de {{ $t.name }} (nouvelle fenêtre)">{{ partial "svg" (cond (eq $network "malt") "malt" (printf "%s-fill" $network)) }}</a>
+              {{ end }}
+              {{ end }}
+            </p>
+          </li>
+          {{ end }}
+        </ul>
+        <button type="button" class="join-carousel-button join-carousel-next" data-carousel-next aria-label="Témoignages suivants">&#10140;</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="join-section join-promise-heading">
+    <div class="join-wrap">
+      <h2>Notre promesse</h2>
+      <hr class="join-divider">
+    </div>
+  </section>
+  <section class="join-promise">
+    <ul class="join-wrap">
+      {{ range .Params.promise }}
+      {{ $p := . }}
+      <li>
+        {{ with $.Resources.GetMatch .photo }}
+        {{ with .Fill "600x400 Center webp q80" }}
+        <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="" loading="lazy">
+        {{ end }}
+        {{ end }}
+        <h3>{{ .title }}</h3>
+        {{ .text | markdownify }}
+      </li>
+      {{ end }}
+    </ul>
+  </section>
+
+  <section class="join-section">
+    <div class="join-wrap join-day">
+      <ol>
+        {{ range .Params.day }}
+        <li>
+          <h3>{{ .time }}</h3>
+          <p>{{ .text | markdownify }}</p>
+        </li>
+        {{ end }}
+      </ol>
+      <div class="join-day-heading">
+        <h2>Une journée<br>avec nous</h2>
+        <hr class="join-divider">
+      </div>
+    </div>
+  </section>
+
+  <section class="join-section join-year">
+    <div class="join-wrap">
+      <h2>Une année avec nous</h2>
+      <hr class="join-divider">
+      {{ .Params.year | markdownify }}
+    </div>
+  </section>
+
+  <section class="join-section">
+    <div class="join-wrap join-office">
+      <div>
+        <h2>Notre<br>agence</h2>
+        <hr class="join-divider">
+        {{ .Params.office | markdownify }}
+      </div>
+      <div class="join-carousel join-photos" data-carousel>
+        <button type="button" class="join-carousel-button join-carousel-prev" data-carousel-prev aria-label="Photo précédente">&#10140;</button>
+        <ul data-carousel-track>
+          {{ range .Params.photos }}
+          {{ $alt := .alt }}
+          {{ with $.Resources.GetMatch .file }}
+          <li>
+            <a href="{{ (.Resize "1600x webp q85").RelPermalink }}" data-lightbox="agence" data-title="{{ $alt }}">
+              {{ with .Resize "800x webp q80" }}
+              <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="{{ $alt }}" loading="lazy">
+              {{ end }}
+            </a>
+          </li>
+          {{ end }}
+          {{ end }}
+        </ul>
+        <button type="button" class="join-carousel-button join-carousel-next" data-carousel-next aria-label="Photo suivante">&#10140;</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="join-section" id="offres">
+    <div class="join-wrap">
+      <h2>Devenir un Trooper</h2>
+      <hr class="join-divider">
+      <div class="join-openings">{{ .Params.openings | markdownify }}</div>
+      <ul class="join-offers">
+        {{ range .Pages.ByWeight }}
+        <li>
+          <div class="join-offer-card">
+            <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+            <p>
+              {{ with .Params.contract }}Type de contrat : {{ . }}<br>{{ end }}
+              {{ with .Params.location }}Lieu : {{ . }}<br>{{ end }}
+              {{ with .Params.profile }}Profil recherché : {{ . }}{{ end }}
+            </p>
+          </div>
+          <a href="{{ .RelPermalink }}" class="join-button" aria-label="En savoir plus sur l'offre {{ .Title }}">En savoir plus</a>
+        </li>
+        {{ else }}
+        <li class="join-offers-empty">Aucune offre ouverte pour le moment.</li>
+        {{ end }}
+      </ul>
+    </div>
+  </section>
+
+  <section class="join-band join-spontaneous">
+    <div class="join-wrap">
+      <div class="join-spontaneous-box">
+        <p>{{ .Params.spontaneous | markdownify }}</p>
+        <a href="mailto:{{ .Params.applyEmail }}" class="join-button join-button-light">Soumettre ma candidature</a>
+      </div>
+    </div>
+  </section>
+</div>
+{{ end }}
