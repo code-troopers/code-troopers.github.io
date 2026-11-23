@@ -9,7 +9,7 @@ tags:
  - Festivals
  - Chapitô
  - We Guide
- - Navig'Tours
+ - NavigTours
 
 title: 'Projets internes, tu feras'
 url: /2018/06/18/projets-internes/
