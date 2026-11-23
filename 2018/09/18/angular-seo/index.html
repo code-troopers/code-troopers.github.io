@@ -5,7 +5,7 @@
   <meta name="description" content="" />
 
     
-  <link href="/main.9d7454509e2b96b98b19.css" rel="stylesheet" />
+  <link href="/main.fff3669dde03eba9c0d1.css" rel="stylesheet" />
    
   <meta charset="utf-8" />
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
@@ -28,7 +28,7 @@
 
 
 <meta property="og:title" content="SEO et Single Page Application" />
-<meta property="og:description" content=" Lorsque nous avons commencé à développer We Guide, nous avons pas mal réfléchi à quel framework utiliser pour réaliser la partie front et, du fait de notre expérience, avons choisi Angular. Nous connaissions les problèmes liés aux Single Page Application et au SEO mais nous pensions pouvoir les résoudre facilement par la suite. Au final, c’était un peu plus compliqué que prévu et nous allons expliquer pourquoi dans la suite de cet article.
+<meta property="og:description" content="Lorsque nous avons commencé à développer We Guide, nous avons pas mal réfléchi à quel framework utiliser pour réaliser la partie front et, du fait de notre expérience, avons choisi Angular. Nous connaissions les problèmes liés aux Single Page Application et au SEO mais nous pensions pouvoir les résoudre facilement par la suite. Au final, c’était un peu plus compliqué que prévu et nous allons expliquer pourquoi dans la suite de cet article.
 " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://code-troopers.com/2018/09/18/angular-seo/" />
@@ -42,7 +42,7 @@
 
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="SEO et Single Page Application" />
-<meta name="twitter:description" content=" Lorsque nous avons commencé à développer We Guide, nous avons pas mal réfléchi à quel framework utiliser pour réaliser la partie front et, du fait de notre expérience, avons choisi Angular. Nous connaissions les problèmes liés aux Single Page Application et au SEO mais nous pensions pouvoir les résoudre facilement par la suite. Au final, c’était un peu plus compliqué que prévu et nous allons expliquer pourquoi dans la suite de cet article.
+<meta name="twitter:description" content="Lorsque nous avons commencé à développer We Guide, nous avons pas mal réfléchi à quel framework utiliser pour réaliser la partie front et, du fait de notre expérience, avons choisi Angular. Nous connaissions les problèmes liés aux Single Page Application et au SEO mais nous pensions pouvoir les résoudre facilement par la suite. Au final, c’était un peu plus compliqué que prévu et nous allons expliquer pourquoi dans la suite de cet article.
 " />
 <meta name="twitter:image" content="https://code-troopers.com/2018/09/18/angular-seo/angularseo-banner_hu_99b67896e199124d.png" />
 
@@ -123,166 +123,104 @@
                     </ul>
                     
                     <div class="content">
-                        <div class="paragraph">
-<p>Lorsque nous avons commencé à développer <a href="https://www.weguide.fr" rel="noopener" target="_blank">We Guide</a>, nous avons pas mal réfléchi à quel framework utiliser pour réaliser la partie front et, du fait de notre expérience, avons choisi <strong>Angular</strong>.
+                        <p>Lorsque nous avons commencé à développer <a href="https://www.weguide.fr">We Guide</a>, nous avons pas mal réfléchi à quel framework utiliser pour réaliser la partie front et, du fait de notre expérience, avons choisi <strong>Angular</strong>.
 Nous connaissions les problèmes liés aux <strong>Single Page Application</strong> et au <strong>SEO</strong> mais nous pensions pouvoir les résoudre facilement par la suite.
-Au final, c’était un peu plus compliqué que prévu et nous allons expliquer pourquoi dans la suite de cet article.</p>
-</div>
-<div class="sect1">
-<h2 id="_les_balises_meta">Les balises &lt;meta&gt;</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Angular fournit deux services afin de modifier les balises <strong>HTML</strong> destinées au <strong>SEO</strong> lors de l’affichage d’une page, <code>Meta</code> et <code>Title</code> qui, comme leur nom l’indique, permettent de modifier les balises <code>&lt;meta&gt;</code> et <code>&lt;title&gt;</code>.</p>
-</div>
-<div class="paragraph">
-<p>Voici un exemple de service créé pour mettre à jour les balises meta destinées à l’OpenGraph et à Twitter.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-javascript" data-lang="javascript">@Injectable({
-  providedIn: &#39;root&#39;
-})
-export class SeoService {
-
-  constructor(private meta: Meta,
-              private title: Title) {
-  }
-
-  generateTags(config) {
-    // default values
-    config = {
-      title: &#39;Titre de la page&#39;,
-      description: &#39;Description de la page par défaut&#39;,
-      image: &#39;http://imagepardefaut.com&#39;,
-      ...config
-    };
-
-    this.meta.updateTag({name: &#39;twitter:card&#39;, content: &#39;summary&#39;});
-    this.meta.updateTag({name: &#39;twitter:site&#39;, content: &#39;@twitter&#39;});
-    this.meta.updateTag({name: &#39;twitter:title&#39;, content: config.title});
-    this.meta.updateTag({name: &#39;twitter:description&#39;, content: config.description});
-    this.meta.updateTag({name: &#39;twitter:image&#39;, content: config.image});
-
-    this.meta.updateTag({property: &#39;og:type&#39;, content: &#39;article&#39;});
-    this.meta.updateTag({property: &#39;og:site_name&#39;, content: &#39;SiteName&#39;});
-    this.meta.updateTag({property: &#39;og:title&#39;, content: config.title});
-    this.meta.updateTag({property: &#39;og:description&#39;, content: config.description});
-    this.meta.updateTag({property: &#39;og:image&#39;, content: config.image});
-    this.meta.updateTag({property: &#39;og:url&#39;, content: `https://monurl/`});
-
-    this.title.setTitle(config.title);
-    this.meta.addTags([
-      {name: &#39;description&#39;, content: config.description},
-      {name: &#39;keywords&#39;, content: config.description},
-    ]);
-  }
-}</code></pre>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_le_sitemap">Le Sitemap</h2>
-<div class="sectionbody">
-<div class="paragraph">
+Au final, c&rsquo;était un peu plus compliqué que prévu et nous allons expliquer pourquoi dans la suite de cet article.</p>
+<h2 id="les-balises-meta">Les balises &lt;meta&gt;</h2>
+<p>Angular fournit deux services afin de modifier les balises <strong>HTML</strong> destinées au <strong>SEO</strong> lors de l&rsquo;affichage d&rsquo;une page, <code>Meta</code> et <code>Title</code> qui, comme leur nom l&rsquo;indique, permettent de modifier les balises <code>&lt;meta&gt;</code> et <code>&lt;title&gt;</code>.</p>
+<p>Voici un exemple de service créé pour mettre à jour les balises meta destinées à l&rsquo;OpenGraph et à Twitter.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">@</span><span style="color:#a6e22e">Injectable</span>({
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">providedIn</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;root&#39;</span>
+</span></span><span style="display:flex;"><span>})
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SeoService</span> {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">constructor</span>(<span style="color:#66d9ef">private</span> <span style="color:#a6e22e">meta</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">Meta</span>,
+</span></span><span style="display:flex;"><span>              <span style="color:#66d9ef">private</span> <span style="color:#a6e22e">title</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">Title</span>) {
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">generateTags</span>(<span style="color:#a6e22e">config</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// default values
+</span></span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">config</span> <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">title</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Titre de la page&#39;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">description</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Description de la page par défaut&#39;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">image</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;http://imagepardefaut.com&#39;</span>,
+</span></span><span style="display:flex;"><span>      ...<span style="color:#a6e22e">config</span>
+</span></span><span style="display:flex;"><span>    };
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">meta</span>.<span style="color:#a6e22e">updateTag</span>({<span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;twitter:card&#39;</span>, <span style="color:#a6e22e">content</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;summary&#39;</span>});
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">meta</span>.<span style="color:#a6e22e">updateTag</span>({<span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;twitter:site&#39;</span>, <span style="color:#a6e22e">content</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;@twitter&#39;</span>});
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">meta</span>.<span style="color:#a6e22e">updateTag</span>({<span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;twitter:title&#39;</span>, <span style="color:#a6e22e">content</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">config</span>.<span style="color:#a6e22e">title</span>});
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">meta</span>.<span style="color:#a6e22e">updateTag</span>({<span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;twitter:description&#39;</span>, <span style="color:#a6e22e">content</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">config</span>.<span style="color:#a6e22e">description</span>});
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">meta</span>.<span style="color:#a6e22e">updateTag</span>({<span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;twitter:image&#39;</span>, <span style="color:#a6e22e">content</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">config</span>.<span style="color:#a6e22e">image</span>});
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">meta</span>.<span style="color:#a6e22e">updateTag</span>({<span style="color:#a6e22e">property</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;og:type&#39;</span>, <span style="color:#a6e22e">content</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;article&#39;</span>});
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">meta</span>.<span style="color:#a6e22e">updateTag</span>({<span style="color:#a6e22e">property</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;og:site_name&#39;</span>, <span style="color:#a6e22e">content</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;SiteName&#39;</span>});
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">meta</span>.<span style="color:#a6e22e">updateTag</span>({<span style="color:#a6e22e">property</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;og:title&#39;</span>, <span style="color:#a6e22e">content</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">config</span>.<span style="color:#a6e22e">title</span>});
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">meta</span>.<span style="color:#a6e22e">updateTag</span>({<span style="color:#a6e22e">property</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;og:description&#39;</span>, <span style="color:#a6e22e">content</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">config</span>.<span style="color:#a6e22e">description</span>});
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">meta</span>.<span style="color:#a6e22e">updateTag</span>({<span style="color:#a6e22e">property</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;og:image&#39;</span>, <span style="color:#a6e22e">content</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">config</span>.<span style="color:#a6e22e">image</span>});
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">meta</span>.<span style="color:#a6e22e">updateTag</span>({<span style="color:#a6e22e">property</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;og:url&#39;</span>, <span style="color:#a6e22e">content</span><span style="color:#f92672">:</span> <span style="color:#e6db74">`https://monurl/`</span>});
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">title</span>.<span style="color:#a6e22e">setTitle</span>(<span style="color:#a6e22e">config</span>.<span style="color:#a6e22e">title</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">meta</span>.<span style="color:#a6e22e">addTags</span>([
+</span></span><span style="display:flex;"><span>      {<span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;description&#39;</span>, <span style="color:#a6e22e">content</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">config</span>.<span style="color:#a6e22e">description</span>},
+</span></span><span style="display:flex;"><span>      {<span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;keywords&#39;</span>, <span style="color:#a6e22e">content</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">config</span>.<span style="color:#a6e22e">description</span>},
+</span></span><span style="display:flex;"><span>    ]);
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="le-sitemap">Le Sitemap</h2>
 <p>Une autre partie du <strong>SEO</strong> indispensable est le sitemap.
 Il permet aux robots de savoir exactement quelles pages indexer.
 Problème, sur une application comme <strong>We Guide</strong>, nous ne pouvons pas écrire ce fichier en dur, en effet, des nouveaux guides créent leur profil tous les jours sur la plateforme, ce qui veut dire, une nouvelle url en plus à indexer.</p>
-</div>
-<div class="paragraph">
-<p>Pour remédier à cela c’est assez simple, il faut que le fichier soit dynamique et généré à la volée par votre serveur.
-Pour faire cela, il suffit de servir une route <code>/sitemap</code> qui retourne un fichier <strong>XML</strong> généré à l’aide d’appel aux différents services de votre application.</p>
-</div>
-<div class="paragraph">
+<p>Pour remédier à cela c&rsquo;est assez simple, il faut que le fichier soit dynamique et généré à la volée par votre serveur.
+Pour faire cela, il suffit de servir une route <code>/sitemap</code> qui retourne un fichier <strong>XML</strong> généré à l&rsquo;aide d&rsquo;appel aux différents services de votre application.</p>
 <p>Voici un exemple sur une application <strong>Spring Boot</strong> en <strong>Kotlin</strong></p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">@Component
-class SitemapView(@Autowired val sitemapService: SitemapService) : AbstractView() {
-    override fun renderMergedOutputModel(model: MutableMap&lt;String, Any&gt;?,
-                                         request: HttpServletRequest?,
-                                         response: HttpServletResponse?) {
-        response?.contentType = APPLICATION_XML_VALUE
-        response?.writer?.append(sitemapService.createSitemap())
-    }
-}
-
-@RestController
-class SitemapController(@Autowired val sitemapView: SitemapView) {
-    @GetMapping(&#34;/sitemap&#34;, produces = arrayOf(APPLICATION_XML_VALUE))
-    fun generateSiteMap(): SitemapView {
-        return sitemapView
-    }
-}</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Pour générer le fichier <strong>XML</strong>, nous avons utilisé cette librairie <a href="https://github.com/lgraubner/sitemap-generator" rel="noopener" target="_blank">https://github.com/lgraubner/sitemap-generator</a>.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_le_rendu_côté_serveur">Le rendu côté serveur</h2>
-<div class="sectionbody">
-<div class="paragraph">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a6e22e">@Component</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SitemapView</span>(<span style="color:#a6e22e">@Autowired</span> val sitemapService: SitemapService) : AbstractView() {
+</span></span><span style="display:flex;"><span>    override fun <span style="color:#a6e22e">renderMergedOutputModel</span>(model: MutableMap<span style="color:#f92672">&lt;</span>String, Any<span style="color:#f92672">&gt;?</span>,
+</span></span><span style="display:flex;"><span>                                         request: HttpServletRequest<span style="color:#f92672">?</span>,
+</span></span><span style="display:flex;"><span>                                         response: HttpServletResponse<span style="color:#f92672">?</span>) {
+</span></span><span style="display:flex;"><span>        response<span style="color:#f92672">?</span>.<span style="color:#a6e22e">contentType</span> <span style="color:#f92672">=</span> APPLICATION_XML_VALUE
+</span></span><span style="display:flex;"><span>        response<span style="color:#f92672">?</span>.<span style="color:#a6e22e">writer</span><span style="color:#f92672">?</span>.<span style="color:#a6e22e">append</span>(sitemapService.<span style="color:#a6e22e">createSitemap</span>())
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@RestController</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SitemapController</span>(<span style="color:#a6e22e">@Autowired</span> val sitemapView: SitemapView) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@GetMapping</span>(<span style="color:#e6db74">&#34;/sitemap&#34;</span>, produces <span style="color:#f92672">=</span> arrayOf(APPLICATION_XML_VALUE))
+</span></span><span style="display:flex;"><span>    fun <span style="color:#a6e22e">generateSiteMap</span>(): SitemapView {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> sitemapView
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Pour générer le fichier <strong>XML</strong>, nous avons utilisé cette librairie <a href="https://github.com/lgraubner/sitemap-generator">https://github.com/lgraubner/sitemap-generator</a>.</p>
+<h2 id="le-rendu-côté-serveur">Le rendu côté serveur</h2>
 <p>La dernière étape est la plus compliquée.
-Il faut ajouter une logique au niveau du serveur front qui, si l’appel vient d’un robot, le redirige vers un service permettant de générer le code <strong>HTML</strong> final de notre page car le problème des robots c’est que un, ils n’aiment pas le javascript (le moteur utilisé n’est pas récent) et deux, ils n’aiment pas attendre.</p>
-</div>
-<div class="paragraph">
-<p>Le service en question que nous avons choisi se nomme <strong>Rendertron</strong> (<a href="https://github.com/GoogleChrome/rendertron" rel="noopener" target="_blank">https://github.com/GoogleChrome/rendertron</a>). Ce n’est rien d’autre qu’un <strong>Google Chrome</strong> headless auquel on envoie l’url de la page que l’on désire et nous renvoie le code <strong>HTML</strong> en réponse.</p>
-</div>
-<div class="paragraph">
-<p>Pour décider si l’on doit faire du rendu côté serveur ou du rendu côté client, nous nous sommes inspirés d’une librairie Java <a href="https://github.com/greengerong/prerender-java" rel="noopener" target="_blank">https://github.com/greengerong/prerender-java</a>.
+Il faut ajouter une logique au niveau du serveur front qui, si l&rsquo;appel vient d&rsquo;un robot, le redirige vers un service permettant de générer le code <strong>HTML</strong> final de notre page car le problème des robots c&rsquo;est que un, ils n&rsquo;aiment pas le javascript (le moteur utilisé n&rsquo;est pas récent) et deux, ils n&rsquo;aiment pas attendre.</p>
+<p>Le service en question que nous avons choisi se nomme <strong>Rendertron</strong> (<a href="https://github.com/GoogleChrome/rendertron">https://github.com/GoogleChrome/rendertron</a>). Ce n&rsquo;est rien d&rsquo;autre qu&rsquo;un <strong>Google Chrome</strong> headless auquel on envoie l&rsquo;url de la page que l&rsquo;on désire et nous renvoie le code <strong>HTML</strong> en réponse.</p>
+<p>Pour décider si l&rsquo;on doit faire du rendu côté serveur ou du rendu côté client, nous nous sommes inspirés d&rsquo;une librairie Java <a href="https://github.com/greengerong/prerender-java">https://github.com/greengerong/prerender-java</a>.
 Cette librairie fournit directement un filtre <strong>HTTP</strong> permettant de rediriger vers une url si le <code>User-Agent</code> est compris dans la liste des robots de crawling.</p>
-</div>
-<div class="paragraph">
 <p>Il nous a suffit de brancher ce filtre au niveau de <strong>Spring Boot</strong> comme ceci :</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">@Bean
-public FilterRegistrationBean registerSeoFilter() {
-    PreRenderSEOFilter seoFilter = new PreRenderSEOFilter();
-    FilterRegistrationBean filterRegistrationBean = new FilterRegistrationBean();
-
-    filterRegistrationBean.setFilter(seoFilter);
-    filterRegistrationBean.addInitParameter(
-        &#34;prerenderServiceUrl&#34;,
-        env.getProperty(&#34;application.rendertron.url&#34;)+&#34;/render&#34;);
-
-    filterRegistrationBean.addUrlPatterns(&#34;/*&#34;);
-
-    return filterRegistrationBean;
-}</code></pre>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_validation">Validation</h2>
-<div class="sectionbody">
-<div class="paragraph">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a6e22e">@Bean</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> FilterRegistrationBean <span style="color:#a6e22e">registerSeoFilter</span>() {
+</span></span><span style="display:flex;"><span>    PreRenderSEOFilter seoFilter <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> PreRenderSEOFilter();
+</span></span><span style="display:flex;"><span>    FilterRegistrationBean filterRegistrationBean <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> FilterRegistrationBean();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    filterRegistrationBean.<span style="color:#a6e22e">setFilter</span>(seoFilter);
+</span></span><span style="display:flex;"><span>    filterRegistrationBean.<span style="color:#a6e22e">addInitParameter</span>(
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;prerenderServiceUrl&#34;</span>,
+</span></span><span style="display:flex;"><span>        env.<span style="color:#a6e22e">getProperty</span>(<span style="color:#e6db74">&#34;application.rendertron.url&#34;</span>)<span style="color:#f92672">+</span><span style="color:#e6db74">&#34;/render&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    filterRegistrationBean.<span style="color:#a6e22e">addUrlPatterns</span>(<span style="color:#e6db74">&#34;/*&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> filterRegistrationBean;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="validation">Validation</h2>
 <p>Une fois que vous avez fait toutes vos modifications, vous pouvez tester le bon fonctionnement grâce à plusieurs outils :</p>
-</div>
-<div class="ulist">
 <ul>
-<li>
-<p><a href="https://cards-dev.twitter.com/validator" rel="noopener" target="_blank">https://cards-dev.twitter.com/validator</a> : le système de <strong>Twitter</strong> pour vérifier l’aperçu d’un lien quand on le partage dans un tweet.</p>
-</li>
-<li>
-<p><a href="https://search.google.com/search-console" rel="noopener" target="_blank">https://search.google.com/search-console</a> : la <strong>Google Search Console</strong>, l’outil de <strong>Google</strong> vous permet de voir le <strong>HTML</strong> ou même une capture d’écran d’une URL de votre site de la façon dont voit le robot d’indexation de <strong>Google</strong>. Il vous permet aussi de consulter le sitemap et voir si ses urls ont bien été indexées.</p>
-</li>
+<li><a href="https://cards-dev.twitter.com/validator">https://cards-dev.twitter.com/validator</a> : le système de <strong>Twitter</strong> pour vérifier l&rsquo;aperçu d&rsquo;un lien quand on le partage dans un tweet.</li>
+<li><a href="https://search.google.com/search-console">https://search.google.com/search-console</a> : la <strong>Google Search Console</strong>, l&rsquo;outil de <strong>Google</strong> vous permet de voir le <strong>HTML</strong> ou même une capture d&rsquo;écran d&rsquo;une URL de votre site de la façon dont voit le robot d&rsquo;indexation de <strong>Google</strong>. Il vous permet aussi de consulter le sitemap et voir si ses urls ont bien été indexées.</li>
 </ul>
-</div>
-<div class="paragraph">
-<p>Enfin vous n’avez plus qu’à attendre quelques jours que les différents robots passent sur votre site afin de voir les résultats sur les différents moteurs de recherche.</p>
-</div>
-<div class="paragraph">
+<p>Enfin vous n&rsquo;avez plus qu&rsquo;à attendre quelques jours que les différents robots passent sur votre site afin de voir les résultats sur les différents moteurs de recherche.</p>
 <p>Pour <strong>We Guide</strong>, nous sommes actuellement entrain de tester cette amélioration sur notre plateforme de recette et on espère déployer la version de production très prochainement.</p>
-</div>
-</div>
-</div>
 
                     </div>
                     <div class="content-footer">
@@ -434,7 +372,7 @@ public FilterRegistrationBean registerSeoFilter() {
 
     
     
-      <script src="/main.c675e.js"></script>
+      <script src="/main.6a4f7.js"></script>
     
     <script>
       const d = new Date();

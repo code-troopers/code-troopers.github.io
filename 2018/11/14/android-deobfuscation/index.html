@@ -5,7 +5,7 @@
   <meta name="description" content="" />
 
     
-  <link href="/main.9d7454509e2b96b98b19.css" rel="stylesheet" />
+  <link href="/main.fff3669dde03eba9c0d1.css" rel="stylesheet" />
    
   <meta charset="utf-8" />
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
@@ -28,7 +28,7 @@
 
 
 <meta property="og:title" content="Android - Obfuscation et Désobfuscation" />
-<meta property="og:description" content=" C’est un fait, décompiler une application android (le fichier apk) pour en examiner le code source est une chose plutôt simple. Il existe de nombreux outils permettant de le faire et c’est logique car, grossièrement, l’apk n’est qu’une archive contenant le code source de l’application et les différentes ressources utilisées dans celle-ci (images, fichiers de langue, layouts de vue…​). Les motivations pour cela peuvent être nombreuses et variées et ce n’est d’ailleurs pas très important car, à partir du moment où c’est faisable, des personnes le feront.
+<meta property="og:description" content="C’est un fait, décompiler une application android (le fichier apk) pour en examiner le code source est une chose plutôt simple. Il existe de nombreux outils permettant de le faire et c’est logique car, grossièrement, l’apk n’est qu’une archive contenant le code source de l’application et les différentes ressources utilisées dans celle-ci (images, fichiers de langue, layouts de vue…). Les motivations pour cela peuvent être nombreuses et variées et ce n’est d’ailleurs pas très important car, à partir du moment où c’est faisable, des personnes le feront.
 " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://code-troopers.com/2018/11/14/android-deobfuscation/" />
@@ -43,7 +43,7 @@
 
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Android - Obfuscation et Désobfuscation" />
-<meta name="twitter:description" content=" C’est un fait, décompiler une application android (le fichier apk) pour en examiner le code source est une chose plutôt simple. Il existe de nombreux outils permettant de le faire et c’est logique car, grossièrement, l’apk n’est qu’une archive contenant le code source de l’application et les différentes ressources utilisées dans celle-ci (images, fichiers de langue, layouts de vue…​). Les motivations pour cela peuvent être nombreuses et variées et ce n’est d’ailleurs pas très important car, à partir du moment où c’est faisable, des personnes le feront.
+<meta name="twitter:description" content="C’est un fait, décompiler une application android (le fichier apk) pour en examiner le code source est une chose plutôt simple. Il existe de nombreux outils permettant de le faire et c’est logique car, grossièrement, l’apk n’est qu’une archive contenant le code source de l’application et les différentes ressources utilisées dans celle-ci (images, fichiers de langue, layouts de vue…). Les motivations pour cela peuvent être nombreuses et variées et ce n’est d’ailleurs pas très important car, à partir du moment où c’est faisable, des personnes le feront.
 " />
 <meta name="twitter:image" content="https://code-troopers.com/2018/11/14/android-deobfuscation/android-rocket-banner_hu_42a78468082e0f64.png" />
 
@@ -126,79 +126,45 @@
                     </ul>
                     
                     <div class="content">
-                        <div class="paragraph">
-<p>C’est un fait, décompiler une application android (le fichier apk) pour en examiner le code source est une chose plutôt simple.
-Il existe de nombreux outils permettant de le faire et c’est logique car, grossièrement, l’apk n’est qu’une archive contenant le code source de l’application et les différentes ressources utilisées dans celle-ci (images, fichiers de langue, layouts de vue…​).
-Les motivations pour cela peuvent être nombreuses et variées et ce n’est d’ailleurs pas très important car, à partir du moment où c’est faisable, des personnes le feront.</p>
-</div>
-<div class="paragraph">
-<p>Le petit problème, c’est qu’en tant que développeur qui a passé de longs mois à bosser sur son appli, on n’a pas forcément envie de tout se faire copier par le premier venu.
-Donc pour tenter de contrer cela il est possible d’activer l’obfuscation, c’est une phase supplémentaire qui vient s’éxecuter lors de la phase de build.</p>
-</div>
-<div class="paragraph">
-<p>Et c’est assez simple, il faut juste le déclarer dans le fichier gradle :</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>  buildTypes {
+                        <p>C&rsquo;est un fait, décompiler une application android (le fichier apk) pour en examiner le code source est une chose plutôt simple.
+Il existe de nombreux outils permettant de le faire et c&rsquo;est logique car, grossièrement, l&rsquo;apk n&rsquo;est qu&rsquo;une archive contenant le code source de l&rsquo;application et les différentes ressources utilisées dans celle-ci (images, fichiers de langue, layouts de vue…).
+Les motivations pour cela peuvent être nombreuses et variées et ce n&rsquo;est d&rsquo;ailleurs pas très important car, à partir du moment où c&rsquo;est faisable, des personnes le feront.</p>
+<p>Le petit problème, c&rsquo;est qu&rsquo;en tant que développeur qui a passé de longs mois à bosser sur son appli, on n&rsquo;a pas forcément envie de tout se faire copier par le premier venu.
+Donc pour tenter de contrer cela il est possible d&rsquo;activer l&rsquo;obfuscation, c&rsquo;est une phase supplémentaire qui vient s&rsquo;éxecuter lors de la phase de build.</p>
+<p>Et c&rsquo;est assez simple, il faut juste le déclarer dans le fichier gradle :</p>
+<pre tabindex="0"><code>  buildTypes {
         release {
             minifyEnabled true
             proguardFiles &#39;proguard-rules.pro&#39;
         }
-    }</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Le processus de build va donc avoir une étape supplémentaire.
-Mais comme rien n’est jamais aussi simple, il faut faire attention à correctement configurer son ficher proguard (qui décrit les règles à appliquer lors de l’obfuscation) afin de ne pas nuire au bon fonctionnement de son application.</p>
-</div>
-<div class="paragraph">
+    }
+</code></pre><p>Le processus de build va donc avoir une étape supplémentaire.
+Mais comme rien n&rsquo;est jamais aussi simple, il faut faire attention à correctement configurer son ficher proguard (qui décrit les règles à appliquer lors de l&rsquo;obfuscation) afin de ne pas nuire au bon fonctionnement de son application.</p>
 <p>La <a href="https://developer.android.com/studio/build/shrink-code">doc officielle de Google</a> en parle, tout comme de nombreux articles de <a href="https://blog.octo.com/demystifier-proguard-pour-les-developpeurs-android/">blogs</a>.</p>
-</div>
-<div class="paragraph">
 <p>Une fois que tout ce travail de configuration est terminé, que notre code source de prod est correctement obfusqué, la partie intéressante commence :
-les <em>stacktraces</em>…​</p>
-</div>
-<div class="paragraph">
-<p>Les crashs remontés par store sont en fait le résultat d’une stacktrace qui a été générée car une erreur est survenue pendant l’exécution du code de l’application sur un device utilisateur.
-Or, si le code source présent sur le device d’un utilisateur est obfusqué, la stacktrace qui est générée le sera aussi.</p>
-</div>
-<div class="paragraph">
-<p>Et voilà à quoi cela peut ressembler :
-</p><div style="text-align : center">
-<a class="inlineBoxes" data-lightbox="1" href="/images/posts/2018-11-14-Android-Deobfuscation/android-playstore-stacktrace.png">
-        <img class="medium" src="/images/posts/2018-11-14-Android-Deobfuscation/android-playstore-stacktrace.png"/>
+les <em>stacktraces</em>…</p>
+<p>Les crashs remontés par store sont en fait le résultat d&rsquo;une stacktrace qui a été générée car une erreur est survenue pendant l&rsquo;exécution du code de l&rsquo;application sur un device utilisateur.
+Or, si le code source présent sur le device d&rsquo;un utilisateur est obfusqué, la stacktrace qui est générée le sera aussi.</p>
+<p>Et voilà à quoi cela peut ressembler :</p>
+<div style="text-align : center">
+<a class="inlineBoxes" href="/images/posts/2018-11-14-Android-Deobfuscation/android-playstore-stacktrace.png" data-lightbox="1" >
+        <img class="medium" src="/images/posts/2018-11-14-Android-Deobfuscation/android-playstore-stacktrace.png" />
 </a>
-</div><p></p>
 </div>
-<div class="paragraph">
 <p>Même si on arrive à identifier certaines lignes ou actions, ça ne sera pas très pratique à débugger car les numéros de ligne ou les noms de classe ne sont pas toujours pertinents.
-Ici, impossible de trouver dans quelle classe s’est produite l’erreur car je ne sais pas a quoi correspond ni <code>a</code> ni <code>b</code>.</p>
-</div>
-<div class="paragraph">
-<p>Mais tout n’est pas perdu. Il y a une section dans le PlayStore qui se nomme <em>Deobfuscation files</em>.
-Elle va nous permettre d’ajouter un fichier de mapping qui va faire le lien entre le code obfusqué et le code réel tel qu’il est dans mon IDE.</p>
-</div>
-<div class="paragraph">
-<p></p><div style="text-align : center">
-<a class="inlineBoxes" data-lightbox="1" href="/images/posts/2018-11-14-Android-Deobfuscation/android-playstore-deobfuscation.png">
-        <img class="medium" src="/images/posts/2018-11-14-Android-Deobfuscation/android-playstore-deobfuscation.png"/>
+Ici, impossible de trouver dans quelle classe s&rsquo;est produite l&rsquo;erreur car je ne sais pas a quoi correspond ni <code>a</code> ni <code>b</code>.</p>
+<p>Mais tout n&rsquo;est pas perdu. Il y a une section dans le PlayStore qui se nomme <em>Deobfuscation files</em>.
+Elle va nous permettre d&rsquo;ajouter un fichier de mapping qui va faire le lien entre le code obfusqué et le code réel tel qu&rsquo;il est dans mon IDE.</p>
+<div style="text-align : center">
+<a class="inlineBoxes" href="/images/posts/2018-11-14-Android-Deobfuscation/android-playstore-deobfuscation.png" data-lightbox="1" >
+        <img class="medium" src="/images/posts/2018-11-14-Android-Deobfuscation/android-playstore-deobfuscation.png" />
 </a>
-</div><p></p>
 </div>
-<div class="paragraph">
 <p>Ce fichier est généré automatiquement lors de la phase de build.
 Il se trouve normalement là :</p>
-</div>
-<div class="paragraph">
 <p><code>/app/build/outputs/mapping/release/mapping.txt</code></p>
-</div>
-<div class="paragraph">
 <p>et ressemble à ça (en beaucoup plus long) :</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>android.arch.core.internal.FastSafeIterableMap -&gt; android.arch.a.a.a:
+<pre tabindex="0"><code>android.arch.core.internal.FastSafeIterableMap -&gt; android.arch.a.a.a:
     java.util.HashMap mHashMap -&gt; a
     void &lt;init&gt;() -&gt; &lt;init&gt;
     boolean contains(java.lang.Object) -&gt; a
@@ -223,77 +189,43 @@ android.arch.core.internal.SafeIterableMap$AscendingIterator -&gt; android.arch.
     android.arch.core.internal.SafeIterableMap$Entry forward(android.arch.core.internal.SafeIterableMap$Entry) -&gt; a
 android.arch.core.internal.SafeIterableMap$DescendingIterator -&gt; android.arch.a.a.b$b:
     void &lt;init&gt;(android.arch.core.internal.SafeIterableMap$Entry,android.arch.core.internal.SafeIterableMap$Entry) -&gt; &lt;init&gt;
-    android.arch.core.internal.SafeIterableMap$Entry forward(android.arch.core.internal.SafeIterableMap$Entry) -&gt; a</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Lorsque qu’il est ajouté dans le PlayStore les stacktraces redeviennent intéligibles.
+    android.arch.core.internal.SafeIterableMap$Entry forward(android.arch.core.internal.SafeIterableMap$Entry) -&gt; a
+</code></pre><p>Lorsque qu&rsquo;il est ajouté dans le PlayStore les stacktraces redeviennent intéligibles.
 Voici donc la même erreur mais avec le fichier de mapping uploadé :</p>
-</div>
-<div class="paragraph">
-<p></p><div style="text-align : center">
-<a class="inlineBoxes" data-lightbox="1" href="/images/posts/2018-11-14-Android-Deobfuscation/android-playstore-stacktrace-deobfuscated.png">
-        <img class="medium" src="/images/posts/2018-11-14-Android-Deobfuscation/android-playstore-stacktrace-deobfuscated.png"/>
+<div style="text-align : center">
+<a class="inlineBoxes" href="/images/posts/2018-11-14-Android-Deobfuscation/android-playstore-stacktrace-deobfuscated.png" data-lightbox="1" >
+        <img class="medium" src="/images/posts/2018-11-14-Android-Deobfuscation/android-playstore-stacktrace-deobfuscated.png" />
 </a>
-</div><p></p>
 </div>
-<div class="paragraph">
-<p>Attention cela ne fonctionne que pour les stacktraces survenues après l’ajout du ficher, ce n’est malheureusement pas rétroactif.</p>
-</div>
-<div class="paragraph">
-<p>D’où l’importance d’ajouter ce fichier à chaque nouvelle release de l’application pour ne rien rater.</p>
-</div>
-<div class="paragraph">
+<p>Attention cela ne fonctionne que pour les stacktraces survenues après l&rsquo;ajout du ficher, ce n&rsquo;est malheureusement pas rétroactif.</p>
+<p>D&rsquo;où l&rsquo;importance d&rsquo;ajouter ce fichier à chaque nouvelle release de l&rsquo;application pour ne rien rater.</p>
 <p>Et pour faire cela on va avoir plusieurs solutions :</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>la première est de se connecter au PlayStore et d’aller dans la bonne section pour ajouter le fichier à la main. Même si ça va fonctionner, il faut espérer ne pas oublier de le faire à chaque fois. Et cela rend le processus de livraison encore plus fastidieux, pas franchement génial.</p>
-</li>
-<li>
-<p>la deuxième solution est donc de le faire automatiquement. Sachant que l’on utilise déjà des outils pour faire l’upload des apk en automatique et pour ne pas avoir à se connecter à l’interface, ça semble être une bonne idée.
-Ces outils sont <a href="https://fastlane.tools/">Fastlane</a> et le <a href="https://github.com/Triple-T/gradle-play-publisher">plugin Gradle play-publisher</a></p>
-<div class="ulist">
+<ol>
+<li>la première est de se connecter au PlayStore et d&rsquo;aller dans la bonne section pour ajouter le fichier à la main. Même si ça va fonctionner, il faut espérer ne pas oublier de le faire à chaque fois. Et cela rend le processus de livraison encore plus fastidieux, pas franchement génial.</li>
+<li>la deuxième solution est donc de le faire automatiquement. Sachant que l&rsquo;on utilise déjà des outils pour faire l&rsquo;upload des apk en automatique et pour ne pas avoir à se connecter à l&rsquo;interface, ça semble être une bonne idée.
+Ces outils sont <a href="https://fastlane.tools/">Fastlane</a> et le <a href="https://github.com/Triple-T/gradle-play-publisher">plugin Gradle play-publisher</a></li>
+</ol>
 <ul>
 <li>
-<p>Avec le plugin gradle, c’est plutôt simple, depuis la version <a href="https://github.com/Triple-T/gradle-play-publisher/releases/tag/1.2.0">1.2.0</a>, le fichier est automatiquement envoyé sur le store lorsque l’obfusctation est activée.</p>
+<p>Avec le plugin gradle, c&rsquo;est plutôt simple, depuis la version <a href="https://github.com/Triple-T/gradle-play-publisher/releases/tag/1.2.0">1.2.0</a>, le fichier est automatiquement envoyé sur le store lorsque l&rsquo;obfusctation est activée.</p>
 </li>
 <li>
-<p>Avec fastlane, c’est à peine un peu plus compliqué, il faut préciser dans le supply le chemin du fichier de mapping</p>
+<p>Avec fastlane, c&rsquo;est à peine un peu plus compliqué, il faut préciser dans le supply le chemin du fichier de mapping</p>
 </li>
 </ul>
-</div>
-</li>
-</ol>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>    supply(
+<pre tabindex="0"><code>    supply(
         mapping: &#39;./app/build/outputs/mapping/release/mapping.txt&#39;
-    )</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Et lors de l’appel à la <code>lane</code> correspondante au déploiement on peut voir dans les logs que le fichier est bien trouvé et uploadé</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>+-------------------------+-------------------------------------------------+
+    )
+</code></pre><p>Et lors de l&rsquo;appel à la <code>lane</code> correspondante au déploiement on peut voir dans les logs que le fichier est bien trouvé et uploadé</p>
+<pre tabindex="0"><code>+-------------------------+-------------------------------------------------+
 |                         Summary for supply 2.98.0                         |
 +-------------------------+-------------------------------------------------+
 | track                   | alpha                                           |
 | apk                     | ./app/build/outputs/apk/release/app-release.apk |
 | mapping                 | ./app/build/outputs/mapping/release/mapping.txt |
-+-------------------------+-------------------------------------------------+</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Si on n’est pas sûr de son coup on retourner sur le PlayStore dans la section <em>Deobfuscation files</em> pour valider que tout s’est bien passé.</p>
-</div>
-<div class="paragraph">
-<p>Et voilà, maintenant que l’activation de l’obfuscation et la desobfuscation des stacktraces n’est plus un problème, il ne reste plus qu’à les corriger ;)</p>
-</div>
++-------------------------+-------------------------------------------------+
+</code></pre><p>Si on n&rsquo;est pas sûr de son coup on retourner sur le PlayStore dans la section <em>Deobfuscation files</em> pour valider que tout s&rsquo;est bien passé.</p>
+<p>Et voilà, maintenant que l&rsquo;activation de l&rsquo;obfuscation et la desobfuscation des stacktraces n&rsquo;est plus un problème, il ne reste plus qu&rsquo;à les corriger ;)</p>
 
                     </div>
                     <div class="content-footer">
@@ -447,7 +379,7 @@ Ces outils sont <a href="https://fastlane.tools/">Fastlane</a> et le <a href="ht
 
     
     
-      <script src="/main.c675e.js"></script>
+      <script src="/main.6a4f7.js"></script>
     
     <script>
       const d = new Date();

@@ -5,7 +5,7 @@
   <meta name="description" content="" />
 
     
-  <link href="/main.9d7454509e2b96b98b19.css" rel="stylesheet" />
+  <link href="/main.fff3669dde03eba9c0d1.css" rel="stylesheet" />
    
   <meta charset="utf-8" />
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
@@ -28,7 +28,7 @@
 
 
 <meta property="og:title" content="Tester ses webhooks avec RequestBin et ngrok" />
-<meta property="og:description" content=" RequestBin est un service qui permet de tester très facilement des webhooks que l’on souhaite brancher à une API, ou bien encore de tester son client HTTP en inspectant les requêtes qui sont émises. Ce service était auparavant acccessible en ligne, mais victime de son succès, il a ensuite été retiré. Cependant leurs créateurs ont mis à disposition de la communauté les sources afin de permettre à n’importe qui d’heberger sa propre instance de RequestBin.
+<meta property="og:description" content="RequestBin est un service qui permet de tester très facilement des webhooks que l’on souhaite brancher à une API, ou bien encore de tester son client HTTP en inspectant les requêtes qui sont émises. Ce service était auparavant acccessible en ligne, mais victime de son succès, il a ensuite été retiré. Cependant leurs créateurs ont mis à disposition de la communauté les sources afin de permettre à n’importe qui d’heberger sa propre instance de RequestBin.
 " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://code-troopers.com/2018/05/02/requestbin-ngrok/" />
@@ -43,7 +43,7 @@
 
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Tester ses webhooks avec RequestBin et ngrok" />
-<meta name="twitter:description" content=" RequestBin est un service qui permet de tester très facilement des webhooks que l’on souhaite brancher à une API, ou bien encore de tester son client HTTP en inspectant les requêtes qui sont émises. Ce service était auparavant acccessible en ligne, mais victime de son succès, il a ensuite été retiré. Cependant leurs créateurs ont mis à disposition de la communauté les sources afin de permettre à n’importe qui d’heberger sa propre instance de RequestBin.
+<meta name="twitter:description" content="RequestBin est un service qui permet de tester très facilement des webhooks que l’on souhaite brancher à une API, ou bien encore de tester son client HTTP en inspectant les requêtes qui sont émises. Ce service était auparavant acccessible en ligne, mais victime de son succès, il a ensuite été retiré. Cependant leurs créateurs ont mis à disposition de la communauté les sources afin de permettre à n’importe qui d’heberger sa propre instance de RequestBin.
 " />
 <meta name="twitter:image" content="https://code-troopers.com/2018/05/02/requestbin-ngrok/requestbin-ngrok-banner_hu_773faf7e587ac3f3.png" />
 
@@ -126,215 +126,95 @@
                     </ul>
                     
                     <div class="content">
-                        <div class="paragraph">
-<p><strong><a href="https://github.com/Runscope/requestbin" rel="noopener" target="_blank">RequestBin</a></strong> est un service qui permet de tester très facilement des webhooks que l’on souhaite brancher à une API, ou bien encore de tester son client HTTP en inspectant les requêtes qui sont émises.
-Ce service était auparavant acccessible en ligne, mais victime de son succès, il a ensuite été retiré. Cependant leurs créateurs ont mis à disposition de la communauté les sources afin de permettre à n’importe qui d’heberger sa propre instance de <strong>RequestBin</strong>.</p>
-</div>
-<div class="paragraph">
-<p>Nous allons donc voir avec quelle simplicité il est possible de tester rapidement ce service en local sur sa machine, et comment il va nous aider par exemple à faire de l’intégration de webhooks externes. Afin de faire cela en un minimum de configuration nous allons également utiliser <strong><a href="https://ngrok.com/" rel="noopener" target="_blank">ngrok</a></strong>, un second outil très pratique qui permet d’exposer sur une url publique un service tournant sur sa machine en local.</p>
-</div>
-<div class="sect1">
-<h2 id="_requestbin"><strong>RequestBin</strong></h2>
-<div class="sectionbody">
-<div class="sect2">
-<h3 id="_déploiement">Déploiement</h3>
-<div class="paragraph">
+                        <p><strong><a href="https://github.com/Runscope/requestbin">RequestBin</a></strong> est un service qui permet de tester très facilement des webhooks que l&rsquo;on souhaite brancher à une API, ou bien encore de tester son client HTTP en inspectant les requêtes qui sont émises.
+Ce service était auparavant acccessible en ligne, mais victime de son succès, il a ensuite été retiré. Cependant leurs créateurs ont mis à disposition de la communauté les sources afin de permettre à n&rsquo;importe qui d&rsquo;heberger sa propre instance de <strong>RequestBin</strong>.</p>
+<p>Nous allons donc voir avec quelle simplicité il est possible de tester rapidement ce service en local sur sa machine, et comment il va nous aider par exemple à faire de l&rsquo;intégration de webhooks externes. Afin de faire cela en un minimum de configuration nous allons également utiliser <strong><a href="https://ngrok.com/">ngrok</a></strong>, un second outil très pratique qui permet d&rsquo;exposer sur une url publique un service tournant sur sa machine en local.</p>
+<h2 id="requestbin"><strong>RequestBin</strong></h2>
+<h3 id="déploiement">Déploiement</h3>
 <p><em>Prérequis</em> : disposer de docker et de docker-compose sur la machine qui va heberger le service.</p>
-</div>
-<div class="ulist">
 <ul>
-<li>
-<p>Récupérer les sources de <strong><a href="https://github.com/Runscope/requestbin" rel="noopener" target="_blank">RequestBin</a></strong></p>
-</li>
+<li>Récupérer les sources de <strong><a href="https://github.com/Runscope/requestbin">RequestBin</a></strong></li>
 </ul>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>$ git clone git://github.com/Runscope/requestbin.git</pre>
-</div>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Construction du service</p>
-</li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ git clone git://github.com/Runscope/requestbin.git
+</span></span></code></pre></div><ul>
+<li>Construction du service</li>
 </ul>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>$ cd requestbin
-$ sudo docker-compose build</pre>
-</div>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Démarrage du service</p>
-</li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ cd requestbin
+</span></span><span style="display:flex;"><span>$ sudo docker-compose build
+</span></span></code></pre></div><ul>
+<li>Démarrage du service</li>
 </ul>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>$ sudo docker-compose up -d</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>C’est tout, le service est alors disponible sur le port 8000.</p>
-</div>
-<div class="paragraph">
-<p></p><div style="text-align : center">
-<a data-lightbox="0" href="/images/posts/2018-05-02_requestbin-ngrok/homepage.png" style="display: inline" title="Page d’accueil">
-        <img class="medium" src="/images/posts/2018-05-02_requestbin-ngrok/homepage_min.png" alt="Page d’accueil"/>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ sudo docker-compose up -d
+</span></span></code></pre></div><p>C&rsquo;est tout, le service est alors disponible sur le port 8000.</p>
+<div style="text-align : center">
+<a style="display: inline" href="/images/posts/2018-05-02_requestbin-ngrok/homepage.png" data-lightbox="0" title="Page d'accueil">
+        <img class="medium" src="/images/posts/2018-05-02_requestbin-ngrok/homepage_min.png" alt="Page d'accueil"/>
 </a>
 </div>
-<br/><p></p>
-</div>
-<div class="paragraph">
-<p>Il est à noter que le projet est également préconfiguré pour deployer rapidement le service sur Heroku, seul l’addon <code>heroku-redis</code> est nécessaire : se référer à la documentation pour davantages d’informations à ce sujet.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_visualisation_de_requêtes_http">Visualisation de requêtes HTTP</h3>
-<div class="paragraph">
+<br/>
+<p>Il est à noter que le projet est également préconfiguré pour deployer rapidement le service sur Heroku, seul l&rsquo;addon <code>heroku-redis</code> est nécessaire : se référer à la documentation pour davantages d&rsquo;informations à ce sujet.</p>
+<h3 id="visualisation-de-requêtes-http">Visualisation de requêtes HTTP</h3>
 <p>Une fois le service démarré, il est alors possible de commencer à débugger nos requêtes HTTP en quelques secondes.</p>
-</div>
-<div class="paragraph">
-<p>Pour cela il suffit de cliquer sur <code>Create a RequestBin</code>. Un <em>Bin</em> va alors être généré et permettra donc d’écouter toutes les requêtes entrantes. Il s’agit ni plus ni moins d’un endpoint dynamique qui va accepter toutes les requêtes HTTP entrantes.</p>
-</div>
-<div class="paragraph">
-<p></p><div style="text-align : center">
-<a data-lightbox="0" href="/images/posts/2018-05-02_requestbin-ngrok/first_bin.png" style="display: inline" title="Exemple de Bin">
+<p>Pour cela il suffit de cliquer sur <code>Create a RequestBin</code>. Un <em>Bin</em> va alors être généré et permettra donc d&rsquo;écouter toutes les requêtes entrantes. Il s&rsquo;agit ni plus ni moins d&rsquo;un endpoint dynamique qui va accepter toutes les requêtes HTTP entrantes.</p>
+<div style="text-align : center">
+<a style="display: inline" href="/images/posts/2018-05-02_requestbin-ngrok/first_bin.png" data-lightbox="0" title="Exemple de Bin">
         <img class="medium" src="/images/posts/2018-05-02_requestbin-ngrok/first_bin_min.png" alt="Exemple de Bin"/>
 </a>
 </div>
-<br/><p></p>
-</div>
-<div class="paragraph">
-<p>Ensuite, comme l’indique le <em>Bin</em> on va pouvoir commencer à jouer avec en branchant nos webhooks ou clients à tester sur cette url, dans notre exemple il s’agit de <code><a class="bare" href="http://localhost:8000/1hc5lg41">http://localhost:8000/1hc5lg41</a></code>.
-Voyons le résultat d’une requête POST d’un objet JSON quelconque :</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">$ curl -H &#34;Content-Type: application/json&#34; -d &#39;{&#34;username&#34;:&#34;GillesDor&#34;,&#34;password&#34;:&#34;v0dk@0r@nge&#34;}&#39; http://localhost:8000/1hc5lg41</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p></p><div style="text-align : center">
-<a data-lightbox="0" href="/images/posts/2018-05-02_requestbin-ngrok/result.png" style="display: inline" title="Visualisation d’une requête">
-        <img class="medium" src="/images/posts/2018-05-02_requestbin-ngrok/result_min.png" alt="Visualisation d’une requête"/>
+<br/>
+<p>Ensuite, comme l&rsquo;indique le <em>Bin</em> on va pouvoir commencer à jouer avec en branchant nos webhooks ou clients à tester sur cette url, dans notre exemple il s&rsquo;agit de <code>http://localhost:8000/1hc5lg41</code>.
+Voyons le résultat d&rsquo;une requête POST d&rsquo;un objet JSON quelconque :</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ curl -H <span style="color:#e6db74">&#34;Content-Type: application/json&#34;</span> -d <span style="color:#e6db74">&#39;{&#34;username&#34;:&#34;GillesDor&#34;,&#34;password&#34;:&#34;v0dk@0r@nge&#34;}&#39;</span> http://localhost:8000/1hc5lg41
+</span></span></code></pre></div><div style="text-align : center">
+<a style="display: inline" href="/images/posts/2018-05-02_requestbin-ngrok/result.png" data-lightbox="0" title="Visualisation d'une requête">
+        <img class="medium" src="/images/posts/2018-05-02_requestbin-ngrok/result_min.png" alt="Visualisation d'une requête"/>
 </a>
 </div>
-<br/><p></p>
-</div>
-<div class="paragraph">
-<p>Après avoir rafraîchi la page, il est alors très simple de visualiser le résultat reçu par notre <em>Bin</em> : headers, body, paramètres, …​</p>
-</div>
-<div class="paragraph">
-<p>Il devient alors très facile d’analyser les requêtes entrantes d’un webhook que l’on souhaite brancher à notre API avant d’implémenter son intégration à proprement parler. À l’inverse cela peut permettre également de voir les données qui vont être reçues par une API que l’on souhaite attaquer avec son propre client HTTP.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_redirection_de_requêtes_sur_son_environnement_avec_ngrok">Redirection de requêtes sur son environnement avec ngrok</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Afin d’aller plus loin dans la démarche, il peut être parfois nécessaire de configurer un webhook externe sur une url publique pour que ce dernier puisse nous envoyer ses requêtes.</p>
-</div>
-<div class="paragraph">
-<p>Imaginons que l’on veuille d’abord tester les résultats envoyés par ce webhook en utilisant <strong>RequestBin</strong>. On a alors probablement lancé le service en local sur sa propre machine, qui elle même se trouve (au minimum) derrière un routeur que l’on a pas la possibilité (ou l’envie) de configurer pour effectuer la redirection de ports adequat pour atteindre notre machine.</p>
-</div>
-<div class="paragraph">
-<p>Nous allons pouvoir nous abstraire de tout cela grâce à <strong><a href="https://ngrok.com/" rel="noopener" target="_blank">ngrok</a></strong>. Il s’agit d’un petit outil qui permet d’exposer des services locaux sur des urls publiques (en HTTP ou HTTPS), sans avoir à faire de quelconque configuration de notre équipement réseau.</p>
-</div>
-<div class="sect2">
-<h3 id="_installation">Installation</h3>
-<div class="paragraph">
-<p>Il s’agit d’un simple <a href="https://ngrok.com/download" rel="noopener" target="_blank">binaire à télécharger</a>. Il est aussi possible de se créer un compte si l’on souhaite administrer plus finement les tunnels que l’on veut créer mais cette étape reste facultative pour le simple usage que nous souhaitons en faire.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_création_de_tunnel">Création de tunnel</h3>
-<div class="paragraph">
+<br/>
+<p>Après avoir rafraîchi la page, il est alors très simple de visualiser le résultat reçu par notre <em>Bin</em> : headers, body, paramètres, …</p>
+<p>Il devient alors très facile d&rsquo;analyser les requêtes entrantes d&rsquo;un webhook que l&rsquo;on souhaite brancher à notre API avant d&rsquo;implémenter son intégration à proprement parler. À l&rsquo;inverse cela peut permettre également de voir les données qui vont être reçues par une API que l&rsquo;on souhaite attaquer avec son propre client HTTP.</p>
+<h2 id="redirection-de-requêtes-sur-son-environnement-avec-ngrok">Redirection de requêtes sur son environnement avec ngrok</h2>
+<p>Afin d&rsquo;aller plus loin dans la démarche, il peut être parfois nécessaire de configurer un webhook externe sur une url publique pour que ce dernier puisse nous envoyer ses requêtes.</p>
+<p>Imaginons que l&rsquo;on veuille d&rsquo;abord tester les résultats envoyés par ce webhook en utilisant <strong>RequestBin</strong>. On a alors probablement lancé le service en local sur sa propre machine, qui elle même se trouve (au minimum) derrière un routeur que l&rsquo;on a pas la possibilité (ou l&rsquo;envie) de configurer pour effectuer la redirection de ports adequat pour atteindre notre machine.</p>
+<p>Nous allons pouvoir nous abstraire de tout cela grâce à <strong><a href="https://ngrok.com/">ngrok</a></strong>. Il s&rsquo;agit d&rsquo;un petit outil qui permet d&rsquo;exposer des services locaux sur des urls publiques (en HTTP ou HTTPS), sans avoir à faire de quelconque configuration de notre équipement réseau.</p>
+<h3 id="installation">Installation</h3>
+<p>Il s&rsquo;agit d&rsquo;un simple <a href="https://ngrok.com/download">binaire à télécharger</a>. Il est aussi possible de se créer un compte si l&rsquo;on souhaite administrer plus finement les tunnels que l&rsquo;on veut créer mais cette étape reste facultative pour le simple usage que nous souhaitons en faire.</p>
+<h3 id="création-de-tunnel">Création de tunnel</h3>
 <p>Une fois <strong>ngrok</strong> installé il est ensuite possible de monter une url publique vers notre serveur local en une seule commande :</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">$ ngrok http 8000 -host-header=&#34;localhost:8000&#34;</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p></p><div style="text-align : center">
-<a data-lightbox="0" href="/images/posts/2018-05-02_requestbin-ngrok/ngrok.png" style="display: inline" title="ngrok">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ ngrok http <span style="color:#ae81ff">8000</span> -host-header<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;localhost:8000&#34;</span>
+</span></span></code></pre></div><div style="text-align : center">
+<a style="display: inline" href="/images/posts/2018-05-02_requestbin-ngrok/ngrok.png" data-lightbox="0" title="ngrok">
         <img class="medium" src="/images/posts/2018-05-02_requestbin-ngrok/ngrok_min.png" alt="ngrok"/>
 </a>
 </div>
-<br/><p></p>
-</div>
-<div class="paragraph">
-<p>Ici nous venons donc d’exposer notre serveur accessible sur le port 8000 de notre machine sur une url publique fournie par <strong>ngrok</strong>.
-Ce dernier nous indique alors une url dynamique publique à utiliser, dans notre exemple il s’agit donc de <code><a class="bare" href="https://4c4cdfa3.ngrok.io">https://4c4cdfa3.ngrok.io</a></code> (ou en HTTP).</p>
-</div>
-<div class="paragraph">
+<br/>
+<p>Ici nous venons donc d&rsquo;exposer notre serveur accessible sur le port 8000 de notre machine sur une url publique fournie par <strong>ngrok</strong>.
+Ce dernier nous indique alors une url dynamique publique à utiliser, dans notre exemple il s&rsquo;agit donc de <code>https://4c4cdfa3.ngrok.io</code> (ou en HTTP).</p>
 <p>À partir de là nous avons bien accès à notre <strong>RequestBin</strong> local sur une url publique.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_branchement_du_webhook">Branchement du webhook</h3>
-<div class="paragraph">
+<h3 id="branchement-du-webhook">Branchement du webhook</h3>
 <p>Toute la mécanique est alors en place pour paramétrer correctement notre webhook public pour lui permettre de logger ses requêtes dans notre <strong>RequestBin</strong> local.
-En effet il suffit de lui fournir comme url : <code><a class="bare" href="https://4c4cdfa3.ngrok.io/1hc5lg41">https://4c4cdfa3.ngrok.io/1hc5lg41</a></code>.</p>
-</div>
-<div class="paragraph">
+En effet il suffit de lui fournir comme url : <code>https://4c4cdfa3.ngrok.io/1hc5lg41</code>.</p>
 <p>Afin de vérifier cela, un simple appel curl nous permettra de valider notre installation :</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">$ curl -H &#34;Content-Type: application/json&#34; -d &#39;{&#34;username&#34;:&#34;PierreBillon&#34;,&#34;password&#34;:&#34;la_bamba_triste&#34;}&#39; https://4c4cdfa3.ngrok.io/1hc5lg41</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p></p><div style="text-align : center">
-<a data-lightbox="0" href="/images/posts/2018-05-02_requestbin-ngrok/result_final.png" style="display: inline" title="Résultat final">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ curl -H <span style="color:#e6db74">&#34;Content-Type: application/json&#34;</span> -d <span style="color:#e6db74">&#39;{&#34;username&#34;:&#34;PierreBillon&#34;,&#34;password&#34;:&#34;la_bamba_triste&#34;}&#39;</span> https://4c4cdfa3.ngrok.io/1hc5lg41
+</span></span></code></pre></div><div style="text-align : center">
+<a style="display: inline" href="/images/posts/2018-05-02_requestbin-ngrok/result_final.png" data-lightbox="0" title="Résultat final">
         <img class="medium" src="/images/posts/2018-05-02_requestbin-ngrok/result_final_min.png" alt="Résultat final"/>
 </a>
 </div>
-<br/><p></p>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_conclusion">Conclusion</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Nous avons donc réussi à mettre en place un moyen de visualiser les requêtes HTTP entrantes d’un webhook public grâce à <strong>RequestBin</strong> et <strong>ngrok</strong>, et à moindre coût.</p>
-</div>
-<div class="paragraph">
-<p>Dans la vraie vie cela permettra donc de visualiser les données reçues lorsque l’on veut intégrer les webhooks d’un quelconque service, avant ou pendant l’implémentation à proprement parler, pour avoir un contrôle sur les données qui vont transiter.</p>
-</div>
-<div class="paragraph">
+<br/>
+<h2 id="conclusion">Conclusion</h2>
+<p>Nous avons donc réussi à mettre en place un moyen de visualiser les requêtes HTTP entrantes d&rsquo;un webhook public grâce à <strong>RequestBin</strong> et <strong>ngrok</strong>, et à moindre coût.</p>
+<p>Dans la vraie vie cela permettra donc de visualiser les données reçues lorsque l&rsquo;on veut intégrer les webhooks d&rsquo;un quelconque service, avant ou pendant l&rsquo;implémentation à proprement parler, pour avoir un contrôle sur les données qui vont transiter.</p>
 <p>Effectivement, selon les services à intégrer la documentation des webhooks est généralement suffisante pour appréhender ces problématiques mais cela peut parfois être intéressant de manipuler directement les requêtes pour anticiper certains cas ou incompréhensions de la documentation.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_bonus">Bonus</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Nous avons vu une technique basée sur <strong>RequestBin</strong> pour logguer des requetes HTTP entrantes, moyennant quelques commandes à effectuer sur son poste. Il existe en fait d’autres services en ligne pour effectuer cela…​
-On pourra citer notamment <strong><a href="https://webhook.site" rel="noopener" target="_blank">Webhook Tester</a></strong> qui est une solution clef en main pour tester des webhooks, comme son nom l’indique, et qui gère pour nous la mise à disposition d’une url publique.</p>
-</div>
-<div class="paragraph">
-<p></p><div style="text-align : center">
-<a data-lightbox="0" href="/images/posts/2018-05-02_requestbin-ngrok/webhook_tester.png" style="display: inline" title="Webhook Tester">
+<h2 id="bonus">Bonus</h2>
+<p>Nous avons vu une technique basée sur <strong>RequestBin</strong> pour logguer des requetes HTTP entrantes, moyennant quelques commandes à effectuer sur son poste. Il existe en fait d&rsquo;autres services en ligne pour effectuer cela…
+On pourra citer notamment <strong><a href="https://webhook.site">Webhook Tester</a></strong> qui est une solution clef en main pour tester des webhooks, comme son nom l&rsquo;indique, et qui gère pour nous la mise à disposition d&rsquo;une url publique.</p>
+<div style="text-align : center">
+<a style="display: inline" href="/images/posts/2018-05-02_requestbin-ngrok/webhook_tester.png" data-lightbox="0" title="Webhook Tester">
         <img class="medium" src="/images/posts/2018-05-02_requestbin-ngrok/webhook_tester_min.png" alt="Webhook Tester"/>
 </a>
 </div>
-<br/><p></p>
-</div>
-</div>
-</div>
+<br/>
 
                     </div>
                     <div class="content-footer">
@@ -488,7 +368,7 @@ On pourra citer notamment <strong><a href="https://webhook.site" rel="noopener" 
 
     
     
-      <script src="/main.c675e.js"></script>
+      <script src="/main.6a4f7.js"></script>
     
     <script>
       const d = new Date();

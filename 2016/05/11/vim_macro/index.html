@@ -5,7 +5,7 @@
   <meta name="description" content="" />
 
     
-  <link href="/main.9d7454509e2b96b98b19.css" rel="stylesheet" />
+  <link href="/main.fff3669dde03eba9c0d1.css" rel="stylesheet" />
    
   <meta charset="utf-8" />
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
@@ -28,7 +28,7 @@
 
 
 <meta property="og:title" content="Macro Vim : C&#39;est trop génial" />
-<meta property="og:description" content=" Comme certains d’entre vous le savent, j’aime beaucoup Vim. Il n’y a pas très longtemps au Tours JUG, je disais que je n’avais pas de cas d’utilisation des macro dans Vim dont certains disent que c’est LA killer feature. Et bien j’ai trouvé un use case et « c’est trop génial ! » comme dirait Agnès.
+<meta property="og:description" content="Comme certains d’entre vous le savent, j’aime beaucoup Vim. Il n’y a pas très longtemps au Tours JUG, je disais que je n’avais pas de cas d’utilisation des macro dans Vim dont certains disent que c’est LA killer feature. Et bien j’ai trouvé un use case et « c’est trop génial ! » comme dirait Agnès.
 Angular2 et macros Vim Les vidéos de Devoxx 2016 sont sorties, dont Angular 2 : Préparez vous dès maintenant à la migration (Benoit Lemoine). Une des étapes est de passer par les ControllerAs, je ne vais pas refaire la conf ce n’est pas le but. Bref, je travaille sur un projet qui définit les controllers comme ceci :
 " />
 <meta property="og:type" content="article" />
@@ -44,7 +44,7 @@ Angular2 et macros Vim Les vidéos de Devoxx 2016 sont sorties, dont Angular 2 :
 
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Macro Vim : C&#39;est trop génial" />
-<meta name="twitter:description" content=" Comme certains d’entre vous le savent, j’aime beaucoup Vim. Il n’y a pas très longtemps au Tours JUG, je disais que je n’avais pas de cas d’utilisation des macro dans Vim dont certains disent que c’est LA killer feature. Et bien j’ai trouvé un use case et « c’est trop génial ! » comme dirait Agnès.
+<meta name="twitter:description" content="Comme certains d’entre vous le savent, j’aime beaucoup Vim. Il n’y a pas très longtemps au Tours JUG, je disais que je n’avais pas de cas d’utilisation des macro dans Vim dont certains disent que c’est LA killer feature. Et bien j’ai trouvé un use case et « c’est trop génial ! » comme dirait Agnès.
 Angular2 et macros Vim Les vidéos de Devoxx 2016 sont sorties, dont Angular 2 : Préparez vous dès maintenant à la migration (Benoit Lemoine). Une des étapes est de passer par les ControllerAs, je ne vais pas refaire la conf ce n’est pas le but. Bref, je travaille sur un projet qui définit les controllers comme ceci :
 " />
 <meta name="twitter:image" content="https://code-troopers.com/2016/05/11/vim_macro/ohmyzsh-banner_hu_53cf9192d8121350.png" />
@@ -128,92 +128,44 @@ Angular2 et macros Vim Les vidéos de Devoxx 2016 sont sorties, dont Angular 2 :
                     </ul>
                     
                     <div class="content">
-                        <div class="paragraph">
-<p>Comme certains d’entre vous le savent, j’aime beaucoup Vim. Il n’y a pas très longtemps au Tours JUG, je disais que je n’avais pas de cas d’utilisation des macro dans Vim dont certains disent que c’est LA killer feature. Et bien j’ai trouvé un use case et « c’est trop génial ! » comme dirait Agnès.</p>
-</div>
-<div class="paragraph">
-<p></p><div style="text-align : center">
-<a class="inlineBoxes" data-lightbox="0" href="/images/posts/2016-05-VimMacro/trop_genial.gif" title="trop génial">
+                        <p>Comme certains d&rsquo;entre vous le savent, j&rsquo;aime beaucoup Vim. Il n&rsquo;y a pas très longtemps au Tours JUG, je disais que je n&rsquo;avais pas de cas d&rsquo;utilisation des macro dans Vim dont certains disent que c&rsquo;est LA killer feature. Et bien j&rsquo;ai trouvé un use case et « c&rsquo;est trop génial ! » comme dirait Agnès.</p>
+<div style="text-align : center">
+<a class="inlineBoxes" href="/images/posts/2016-05-VimMacro/trop_genial.gif" data-lightbox="0" title="trop génial">
         <img class="medium" src="/images/posts/2016-05-VimMacro/trop_genial.gif" alt="trop génial"/>
 </a>
-</div><p></p>
 </div>
-<div class="sect1">
-<h2 id="_angular2_et_macros_vim">Angular2 et macros Vim</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Les vidéos de Devoxx 2016 sont sorties, dont <a href="https://www.youtube.com/watch?v=5U4OasGuo0o">Angular 2 : Préparez vous dès maintenant à la migration (Benoit Lemoine)</a>. Une des étapes est de passer par les ControllerAs, je ne vais pas refaire la conf ce n’est pas le but. Bref, je travaille sur un projet qui définit les controllers comme ceci :</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>$routeProvider.when(&#39;/admin/displayMail&#39;, {templateUrl: &#39;partials/display_mail.html&#39;, controller: &#39;ListMailCtrl&#39;});
+<h2 id="angular2-et-macros-vim">Angular2 et macros Vim</h2>
+<p>Les vidéos de Devoxx 2016 sont sorties, dont <a href="https://www.youtube.com/watch?v=5U4OasGuo0o">Angular 2 : Préparez vous dès maintenant à la migration (Benoit Lemoine)</a>. Une des étapes est de passer par les ControllerAs, je ne vais pas refaire la conf ce n&rsquo;est pas le but. Bref, je travaille sur un projet qui définit les controllers comme ceci :</p>
+<pre tabindex="0"><code>$routeProvider.when(&#39;/admin/displayMail&#39;, {templateUrl: &#39;partials/display_mail.html&#39;, controller: &#39;ListMailCtrl&#39;});
 $routeProvider.when(&#39;/admin/createEditMail&#39;, {templateUrl: &#39;partials/create_mail.html&#39;, controller: &#39;EditMailCtrl&#39;});
 $routeProvider.when(&#39;/admin/createEditMail/:id&#39;, {templateUrl: &#39;partials/create_mail.html&#39;, controller: &#39;EditMailCtrl&#39;});
 $routeProvider.when(&#39;/admin/displayUsers&#39;, {templateUrl: &#39;partials/display_users.html&#39;, controller: &#39;DisplayUsersCtrl&#39;});
 $routeProvider.when(&#39;/admin/createUser&#39;, {templateUrl: &#39;partials/create_user.html&#39;, controller: &#39;CreateUserCtrl&#39;});
-$routeProvider.when(&#39;/admin/updateUser/:login&#39;, {templateUrl: &#39;partials/update_user.html&#39;, controller: &#39;UpdateUserCtrl&#39;});</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Je veux rajouter pour chaque ligne un <code>controllerAs: &#39;monCtrl&#39;</code> avec comme nom le même que le controller associé mais en commençant par une minuscule, et donc obtenir les lignes ci-dessous. J’ai extrait 6 controllers mais en réalité il y en a plutôt une cinquantaine (les noms ont été changés si on me demande).</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>$routeProvider.when(&#39;/admin/displayMail&#39;, {templateUrl: &#39;partials/display_mail.html&#39;, controller: &#39;ListMailCtrl&#39;, controllerAs: &#39;listMailCtrl&#39;});
+$routeProvider.when(&#39;/admin/updateUser/:login&#39;, {templateUrl: &#39;partials/update_user.html&#39;, controller: &#39;UpdateUserCtrl&#39;});
+</code></pre><p>Je veux rajouter pour chaque ligne un <code>controllerAs: 'monCtrl'</code> avec comme nom le même que le controller associé mais en commençant par une minuscule, et donc obtenir les lignes ci-dessous. J&rsquo;ai extrait 6 controllers mais en réalité il y en a plutôt une cinquantaine (les noms ont été changés si on me demande).</p>
+<pre tabindex="0"><code>$routeProvider.when(&#39;/admin/displayMail&#39;, {templateUrl: &#39;partials/display_mail.html&#39;, controller: &#39;ListMailCtrl&#39;, controllerAs: &#39;listMailCtrl&#39;});
 $routeProvider.when(&#39;/admin/createEditMail&#39;, {templateUrl: &#39;partials/create_mail.html&#39;, controller: &#39;EditMailCtrl&#39;, controllerAs: &#39;editMailCtrl&#39;});
 $routeProvider.when(&#39;/admin/createEditMail/:id&#39;, {templateUrl: &#39;partials/create_mail.html&#39;, controller: &#39;EditMailCtrl&#39;, controllerAs: &#39;editMailCtrl&#39;});
 $routeProvider.when(&#39;/admin/displayUsers&#39;, {templateUrl: &#39;partials/display_users.html&#39;, controller: &#39;DisplayUsersCtrl&#39;, controllerAs: &#39;displayUsersCtrl&#39;});
 $routeProvider.when(&#39;/admin/createUser&#39;, {templateUrl: &#39;partials/create_user.html&#39;, controller: &#39;CreateUserCtrl&#39;, controllerAs: &#39;createUserCtrl&#39;});
-$routeProvider.when(&#39;/admin/updateUser/:login&#39;, {templateUrl: &#39;partials/update_user.html&#39;, controller: &#39;UpdateUserCtrl&#39;, controllerAs: &#39;updateUserCtrl&#39;});</pre>
-</div>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>qa</code> : on commence la macro, on enregistre dans a</p>
-</li>
-<li>
-<p><code>/controller:&lt;enter&gt;</code> : on recherche controller:</p>
-</li>
-<li>
-<p><code>eeee</code> : on se déplace de mot en mot pour arriver sur le nom du controller</p>
-</li>
-<li>
-<p><code>yi&#39;</code> : on copie tout ce qui se trouve à l’intérieur des &#39; (le nom du controller donc)</p>
-</li>
-<li>
-<p><code>ela</code> : on se déplace vers la droite et on passe en insertion</p>
-</li>
-<li>
-<p><code>controllerAs: &#39;&#39;&lt;Esc&gt;</code> : on écrit le texte et on repasse en mode normal</p>
-</li>
-<li>
-<p><code>hp</code> : on passe sur la première &#39; et on copie le texte précédemment copié</p>
-</li>
-<li>
-<p><code>bgur</code> : on se place au début du mot et on passe la première lettre en minuscule</p>
-</li>
-<li>
-<p><code>q</code> : fin de l’enregistrement</p>
-</li>
-<li>
-<p><code>50@a</code> : on joue la macro 50 fois</p>
-</li>
+$routeProvider.when(&#39;/admin/updateUser/:login&#39;, {templateUrl: &#39;partials/update_user.html&#39;, controller: &#39;UpdateUserCtrl&#39;, controllerAs: &#39;updateUserCtrl&#39;});
+</code></pre><ul>
+<li><code>qa</code> : on commence la macro, on enregistre dans a</li>
+<li><code>/controller:&lt;enter&gt;</code> : on recherche controller:</li>
+<li><code>eeee</code> : on se déplace de mot en mot pour arriver sur le nom du controller</li>
+<li><code>yi'</code> : on copie tout ce qui se trouve à l&rsquo;intérieur des ' (le nom du controller donc)</li>
+<li><code>ela</code> : on se déplace vers la droite et on passe en insertion</li>
+<li><code>controllerAs: ''&lt;Esc&gt;</code> : on écrit le texte et on repasse en mode normal</li>
+<li><code>hp</code> : on passe sur la première ' et on copie le texte précédemment copié</li>
+<li><code>bgur</code> : on se place au début du mot et on passe la première lettre en minuscule</li>
+<li><code>q</code> : fin de l&rsquo;enregistrement</li>
+<li><code>50@a</code> : on joue la macro 50 fois</li>
 </ul>
-</div>
-<div class="paragraph">
 <p>ce qui donne :
-<code>qa/controller:&lt;enter&gt;eeeeyi’era, controllerAs: &#39;&#39;&lt;Esc&gt;cpbgurq50@a</code></p>
-</div>
-<div class="paragraph">
-<p>Juste en lisant le texte, on a l’impression que c’est compliqué, avec les explications j’espère que ça paraît plus simple, en tout cas ça l’est avec l’habitude. Cela paraît long aussi mais au final c’est rapide à taper, il suffit de voir la vidéo qui est en vitesse réelle :</p>
-</div>
-<div class="paragraph">
-<p></p><div style="text-align: center;margin:50px;">
-<video style="width: 100%;" controls="" src="/videos/vim_macro.webm"></video>
-</div><p></p>
-</div>
-</div>
+<code>qa/controller:&lt;enter&gt;eeeeyi'era, controllerAs: ''&lt;Esc&gt;cpbgurq50@a</code></p>
+<p>Juste en lisant le texte, on a l&rsquo;impression que c&rsquo;est compliqué, avec les explications j&rsquo;espère que ça paraît plus simple, en tout cas ça l&rsquo;est avec l&rsquo;habitude. Cela paraît long aussi mais au final c&rsquo;est rapide à taper, il suffit de voir la vidéo qui est en vitesse réelle :</p>
+<div style="text-align: center;margin:50px;">
+<video style="width: 100%;" controls src="/videos/vim_macro.webm"></video>
 </div>
 
                     </div>
@@ -368,7 +320,7 @@ $routeProvider.when(&#39;/admin/updateUser/:login&#39;, {templateUrl: &#39;parti
 
     
     
-      <script src="/main.c675e.js"></script>
+      <script src="/main.6a4f7.js"></script>
     
     <script>
       const d = new Date();

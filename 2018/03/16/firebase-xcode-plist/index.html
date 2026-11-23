@@ -5,7 +5,7 @@
   <meta name="description" content="" />
 
     
-  <link href="/main.9d7454509e2b96b98b19.css" rel="stylesheet" />
+  <link href="/main.fff3669dde03eba9c0d1.css" rel="stylesheet" />
    
   <meta charset="utf-8" />
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
@@ -28,7 +28,7 @@
 
 
 <meta property="og:title" content="Firebase &#43; XCode" />
-<meta property="og:description" content=" Il est courant maintenant d’utiliser Firebase dans les applications mobiles. Que ce soit pour la partie statistiques, les notifications ou le reporting des crashes. L’intégration est très facile, mais peut devenir compliquée dès lors qu’on manipule des target différentes avec des configurations différentes. Cet article va vous détailler une façon simple mais efficace de gérer ces différences.
+<meta property="og:description" content="Il est courant maintenant d’utiliser Firebase dans les applications mobiles. Que ce soit pour la partie statistiques, les notifications ou le reporting des crashes. L’intégration est très facile, mais peut devenir compliquée dès lors qu’on manipule des target différentes avec des configurations différentes. Cet article va vous détailler une façon simple mais efficace de gérer ces différences.
 Multiples fichiers plist Les fichiers plist sont des fichiers XML de configuration pour XCode. Lors de la création d’un projet dans Firebase, il est possible de récupérer une version générée contenant les bonnes variables pour votre projet. Le problème qui peut se produire est lorsqu’on génère plusieurs livrables avec des configurations qui doivent être différentes grace aux target. Il n’est pas possible, ni confortable, de gérer le cas de plusieurs fichiers plist dans les sources. La redéfinition du nom du fichier à faire utiliser par Firebase ne marche pas à tous les coups et il a tendance à aller lire la valeur par défaut GoogleService-Info.plist.
 " />
 <meta property="og:type" content="article" />
@@ -43,7 +43,7 @@ Multiples fichiers plist Les fichiers plist sont des fichiers XML de configurati
 
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Firebase &#43; XCode" />
-<meta name="twitter:description" content=" Il est courant maintenant d’utiliser Firebase dans les applications mobiles. Que ce soit pour la partie statistiques, les notifications ou le reporting des crashes. L’intégration est très facile, mais peut devenir compliquée dès lors qu’on manipule des target différentes avec des configurations différentes. Cet article va vous détailler une façon simple mais efficace de gérer ces différences.
+<meta name="twitter:description" content="Il est courant maintenant d’utiliser Firebase dans les applications mobiles. Que ce soit pour la partie statistiques, les notifications ou le reporting des crashes. L’intégration est très facile, mais peut devenir compliquée dès lors qu’on manipule des target différentes avec des configurations différentes. Cet article va vous détailler une façon simple mais efficace de gérer ces différences.
 Multiples fichiers plist Les fichiers plist sont des fichiers XML de configuration pour XCode. Lors de la création d’un projet dans Firebase, il est possible de récupérer une version générée contenant les bonnes variables pour votre projet. Le problème qui peut se produire est lorsqu’on génère plusieurs livrables avec des configurations qui doivent être différentes grace aux target. Il n’est pas possible, ni confortable, de gérer le cas de plusieurs fichiers plist dans les sources. La redéfinition du nom du fichier à faire utiliser par Firebase ne marche pas à tous les coups et il a tendance à aller lire la valeur par défaut GoogleService-Info.plist.
 " />
 <meta name="twitter:image" content="https://code-troopers.com/2018/03/16/firebase-xcode-plist/firebasexcode-banner_hu_832e5b0e946807e5.png" />
@@ -125,108 +125,56 @@ Multiples fichiers plist Les fichiers plist sont des fichiers XML de configurati
                     </ul>
                     
                     <div class="content">
-                        <div class="paragraph">
-<p>Il est courant maintenant d’utiliser Firebase dans les applications mobiles.
+                        <p>Il est courant maintenant d&rsquo;utiliser Firebase dans les applications mobiles.
 Que ce soit pour la partie statistiques, les notifications ou le reporting des <em>crashes</em>.
-L’intégration est très facile, mais peut devenir compliquée dès lors qu’on manipule des <em>target</em> différentes avec des configurations différentes.
+L&rsquo;intégration est très facile, mais peut devenir compliquée dès lors qu&rsquo;on manipule des <em>target</em> différentes avec des configurations différentes.
 Cet article va vous détailler une façon simple mais efficace de gérer ces différences.</p>
-</div>
-<div class="sect1">
-<h2 id="_multiples_fichiers_plist">Multiples fichiers <code>plist</code></h2>
-<div class="sectionbody">
-<div class="paragraph">
+<h2 id="multiples-fichiers-plist">Multiples fichiers <code>plist</code></h2>
 <p>Les fichiers <code>plist</code> sont des fichiers XML de configuration pour XCode.
-Lors de la création d’un projet dans Firebase, il est possible de récupérer une version générée contenant les bonnes variables pour votre projet.
-Le problème qui peut se produire est lorsqu’on génère plusieurs livrables avec des configurations qui doivent être différentes grace aux <em>target</em>.
-Il n’est pas possible, ni confortable, de gérer le cas de plusieurs fichiers <code>plist</code> dans les sources.
+Lors de la création d&rsquo;un projet dans Firebase, il est possible de récupérer une version générée contenant les bonnes variables pour votre projet.
+Le problème qui peut se produire est lorsqu&rsquo;on génère plusieurs livrables avec des configurations qui doivent être différentes grace aux <em>target</em>.
+Il n&rsquo;est pas possible, ni confortable, de gérer le cas de plusieurs fichiers <code>plist</code> dans les sources.
 La redéfinition du nom du fichier à faire utiliser par Firebase ne marche pas à tous les coups et il a tendance à aller lire la valeur par défaut <code>GoogleService-Info.plist</code>.</p>
-</div>
-<div class="paragraph">
-<p>L’idée est donc d’utiliser un script au build qui se chargera de configurer correctement le fichier <code>plist</code> qui sera inclu dans le livrable.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_première_étape_variabilisation">Première étape : variabilisation</h2>
-<div class="sectionbody">
-<div class="paragraph">
+<p>L&rsquo;idée est donc d&rsquo;utiliser un script au build qui se chargera de configurer correctement le fichier <code>plist</code> qui sera inclu dans le livrable.</p>
+<h2 id="première-étape--variabilisation">Première étape : variabilisation</h2>
 <p>Pour être capable de générer le fichier <code>plist</code> correctement, il est nécessaire de le variabiliser.
-Dans mon cas, j’ai identifié les valeurs suivantes qui devaient être variabilisées:</p>
-</div>
-<div class="ulist">
+Dans mon cas, j&rsquo;ai identifié les valeurs suivantes qui devaient être variabilisées:</p>
 <ul>
-<li>
-<p>GOOGLE_APP_ID</p>
-</li>
-<li>
-<p>BUNDLE_ID</p>
-</li>
-<li>
-<p>CLIENT_ID</p>
-</li>
-<li>
-<p>REVERSED_CLIENT_ID</p>
-</li>
+<li>GOOGLE_APP_ID</li>
+<li>BUNDLE_ID</li>
+<li>CLIENT_ID</li>
+<li>REVERSED_CLIENT_ID</li>
 </ul>
-</div>
-<div class="paragraph">
-<p>J’ai donc ajouté des variables à la configuration de mon build pour représenter ces valeurs qui doivent être personnalisées.
-J’utilise des fichiers <code>.xcconfig</code> mais ceci fonctionne également avec l’ajout manuel (dans <code>Build Settings &gt; + &gt; Add User-Defined settings</code>)</p>
-</div>
-<div class="paragraph">
-<p></p><div style="text-align : center">
-<a data-lightbox="0" href="/images/posts/2018-03-16_FirebasePlistXcode/xcode_firebase_config.png" style="display: inline" title="XCode target configuration">
+<p>J&rsquo;ai donc ajouté des variables à la configuration de mon build pour représenter ces valeurs qui doivent être personnalisées.
+J&rsquo;utilise des fichiers <code>.xcconfig</code> mais ceci fonctionne également avec l&rsquo;ajout manuel (dans <code>Build Settings &gt; + &gt; Add User-Defined settings</code>)</p>
+<div style="text-align : center">
+<a style="display: inline" href="/images/posts/2018-03-16_FirebasePlistXcode/xcode_firebase_config.png" data-lightbox="0" title="XCode target configuration">
         <img class="medium" src="/images/posts/2018-03-16_FirebasePlistXcode/xcode_firebase_config_min.png" alt="XCode target configuration"/>
 </a>
 </div>
-<br/><p></p>
-</div>
-<div class="paragraph">
-<p>En plus de ça, j’ai modifié le fichier <code>GoogleService-Info.plist</code> téléchargé sur Firebase pour enlever les éléments qui allaient être remplacés à terme.
-Plus exactement, j’ai remplacé les valeurs par des chaînes du type <code>WILL BE REPLACED AT BUILD TIME</code>, qui me permettent facilement de me rendre compte d’un oubli de configuration.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_deuxième_étape_génération_du_fichier">Deuxième étape : génération du fichier</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Une fois le fichier et l’environnement préparé, il ne reste qu’à générer la version finale.
+<br/>
+<p>En plus de ça, j&rsquo;ai modifié le fichier <code>GoogleService-Info.plist</code> téléchargé sur Firebase pour enlever les éléments qui allaient être remplacés à terme.
+Plus exactement, j&rsquo;ai remplacé les valeurs par des chaînes du type <code>WILL BE REPLACED AT BUILD TIME</code>, qui me permettent facilement de me rendre compte d&rsquo;un oubli de configuration.</p>
+<h2 id="deuxième-étape--génération-du-fichier">Deuxième étape : génération du fichier</h2>
+<p>Une fois le fichier et l&rsquo;environnement préparé, il ne reste qu&rsquo;à générer la version finale.
 Pour se faire, je me base sur le système de <em>build</em> de XCode qui permet de définir simplement des étapes.
-Les variables définies dans la configuration du projet sont en effet disponibles simplement lors de l’exécution des étapes de <em>build</em>.
-En utilisant l’outil <code>defaults</code> inclu dans macOS pour la manipulation des fichiers <code>plist</code>, il est donc facile de définir les valeurs attendues dans le fichier.
-J’ai ainsi rajouté une étape <em>shell</em> script correspondant à ceci dans le processus de <em>build</em>.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">defaults write &#34;${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.app/GoogleService-Info.plist&#34; GOOGLE_APP_ID ${GOOGLE_APP_ID}
-defaults write &#34;${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.app/GoogleService-Info.plist&#34; BUNDLE_ID ${PKG_IDENTIFIER}
-defaults write &#34;${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.app/GoogleService-Info.plist&#34; CLIENT_ID ${CLIENT_ID}
-defaults write &#34;${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.app/GoogleService-Info.plist&#34; REVERSED_CLIENT_ID ${REVERSED_CLIENT_ID}</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Enfin, il faut ordonner cette étape de <em>build</em> après celle de copie des ressources, pour effectuer la modification uniquement dans le fichier binaire de l’application et non dans les sources du projet.</p>
-</div>
-<div class="paragraph">
-<p></p><div style="text-align : center">
-<a data-lightbox="0" href="/images/posts/2018-03-16_FirebasePlistXcode/xcode_firebase_build_script.png" style="display: inline" title="XCode build script configuration">
+Les variables définies dans la configuration du projet sont en effet disponibles simplement lors de l&rsquo;exécution des étapes de <em>build</em>.
+En utilisant l&rsquo;outil <code>defaults</code> inclu dans macOS pour la manipulation des fichiers <code>plist</code>, il est donc facile de définir les valeurs attendues dans le fichier.
+J&rsquo;ai ainsi rajouté une étape <em>shell</em> script correspondant à ceci dans le processus de <em>build</em>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>defaults write <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>BUILT_PRODUCTS_DIR<span style="color:#e6db74">}</span><span style="color:#e6db74">/</span><span style="color:#e6db74">${</span>PRODUCT_NAME<span style="color:#e6db74">}</span><span style="color:#e6db74">.app/GoogleService-Info.plist&#34;</span> GOOGLE_APP_ID <span style="color:#e6db74">${</span>GOOGLE_APP_ID<span style="color:#e6db74">}</span>
+</span></span><span style="display:flex;"><span>defaults write <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>BUILT_PRODUCTS_DIR<span style="color:#e6db74">}</span><span style="color:#e6db74">/</span><span style="color:#e6db74">${</span>PRODUCT_NAME<span style="color:#e6db74">}</span><span style="color:#e6db74">.app/GoogleService-Info.plist&#34;</span> BUNDLE_ID <span style="color:#e6db74">${</span>PKG_IDENTIFIER<span style="color:#e6db74">}</span>
+</span></span><span style="display:flex;"><span>defaults write <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>BUILT_PRODUCTS_DIR<span style="color:#e6db74">}</span><span style="color:#e6db74">/</span><span style="color:#e6db74">${</span>PRODUCT_NAME<span style="color:#e6db74">}</span><span style="color:#e6db74">.app/GoogleService-Info.plist&#34;</span> CLIENT_ID <span style="color:#e6db74">${</span>CLIENT_ID<span style="color:#e6db74">}</span>
+</span></span><span style="display:flex;"><span>defaults write <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>BUILT_PRODUCTS_DIR<span style="color:#e6db74">}</span><span style="color:#e6db74">/</span><span style="color:#e6db74">${</span>PRODUCT_NAME<span style="color:#e6db74">}</span><span style="color:#e6db74">.app/GoogleService-Info.plist&#34;</span> REVERSED_CLIENT_ID <span style="color:#e6db74">${</span>REVERSED_CLIENT_ID<span style="color:#e6db74">}</span>
+</span></span></code></pre></div><p>Enfin, il faut ordonner cette étape de <em>build</em> après celle de copie des ressources, pour effectuer la modification uniquement dans le fichier binaire de l&rsquo;application et non dans les sources du projet.</p>
+<div style="text-align : center">
+<a style="display: inline" href="/images/posts/2018-03-16_FirebasePlistXcode/xcode_firebase_build_script.png" data-lightbox="0" title="XCode build script configuration">
         <img class="medium" src="/images/posts/2018-03-16_FirebasePlistXcode/xcode_firebase_build_script_min.png" alt="XCode build script configuration"/>
 </a>
 </div>
-<br/><p></p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_bénéfices">Bénéfices</h2>
-<div class="sectionbody">
-<div class="paragraph">
+<br/>
+<h2 id="bénéfices">Bénéfices</h2>
 <p>Il est donc facile de disposer de configuration différente de Firebase entre le <em>debug</em> et la <em>release</em> par exemple.
-Ainsi vous pouvez tester l’envoi de notification, par exemple, sans risquer de polluer des utilisateurs de production, ou activer le <em>crash reporting</em> uniquement en production par exemple.</p>
-</div>
-</div>
-</div>
+Ainsi vous pouvez tester l&rsquo;envoi de notification, par exemple, sans risquer de polluer des utilisateurs de production, ou activer le <em>crash reporting</em> uniquement en production par exemple.</p>
 
                     </div>
                     <div class="content-footer">
@@ -378,7 +326,7 @@ Ainsi vous pouvez tester l’envoi de notification, par exemple, sans risquer de
 
     
     
-      <script src="/main.c675e.js"></script>
+      <script src="/main.6a4f7.js"></script>
     
     <script>
       const d = new Date();

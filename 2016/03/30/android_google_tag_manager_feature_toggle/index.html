@@ -5,7 +5,7 @@
   <meta name="description" content="" />
 
     
-  <link href="/main.9d7454509e2b96b98b19.css" rel="stylesheet" />
+  <link href="/main.fff3669dde03eba9c0d1.css" rel="stylesheet" />
    
   <meta charset="utf-8" />
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
@@ -28,7 +28,7 @@
 
 
 <meta property="og:title" content="Android : Feature Toggle avec Google Tag Manager" />
-<meta property="og:description" content=" Le concept de feature toggle est bien pratique en tant que développeur si l’on souhaite faire évoluer sa base de code source à un rythme différent de celui des livraisons et des fonctionnalités. C’est souvent le cas lorsqu’il y a autour du produit une équipe marketing / communication qui s’occupe d’annoncer telle ou telle nouvelle fonctionnalité.
+<meta property="og:description" content="Le concept de feature toggle est bien pratique en tant que développeur si l’on souhaite faire évoluer sa base de code source à un rythme différent de celui des livraisons et des fonctionnalités. C’est souvent le cas lorsqu’il y a autour du produit une équipe marketing / communication qui s’occupe d’annoncer telle ou telle nouvelle fonctionnalité.
 Le problème avec Android c’est qu’il peut être vite problématique d’utiliser ces features toggle, car une fois l’application arrivée sur le téléphone des utilisateurs le développeur n’a plus la possibilité de changer la valeur des flags autrement qu’en relivrant l’application, ce qui peut vite se terminer par du spam d’updates si les activations/désactivations sont trop fréquentes ou trop rapprochées.
 " />
 <meta property="og:type" content="article" />
@@ -44,7 +44,7 @@ Le problème avec Android c’est qu’il peut être vite problématique d’uti
 
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Android : Feature Toggle avec Google Tag Manager" />
-<meta name="twitter:description" content=" Le concept de feature toggle est bien pratique en tant que développeur si l’on souhaite faire évoluer sa base de code source à un rythme différent de celui des livraisons et des fonctionnalités. C’est souvent le cas lorsqu’il y a autour du produit une équipe marketing / communication qui s’occupe d’annoncer telle ou telle nouvelle fonctionnalité.
+<meta name="twitter:description" content="Le concept de feature toggle est bien pratique en tant que développeur si l’on souhaite faire évoluer sa base de code source à un rythme différent de celui des livraisons et des fonctionnalités. C’est souvent le cas lorsqu’il y a autour du produit une équipe marketing / communication qui s’occupe d’annoncer telle ou telle nouvelle fonctionnalité.
 Le problème avec Android c’est qu’il peut être vite problématique d’utiliser ces features toggle, car une fois l’application arrivée sur le téléphone des utilisateurs le développeur n’a plus la possibilité de changer la valeur des flags autrement qu’en relivrant l’application, ce qui peut vite se terminer par du spam d’updates si les activations/désactivations sont trop fréquentes ou trop rapprochées.
 " />
 <meta name="twitter:image" content="https://code-troopers.com/2016/03/30/android_google_tag_manager_feature_toggle/android-banner_hu_47336ead53b362c6.png" />
@@ -128,119 +128,62 @@ Le problème avec Android c’est qu’il peut être vite problématique d’uti
                     </ul>
                     
                     <div class="content">
-                        <div class="paragraph">
-<p>Le concept de <code>feature toggle</code> est bien pratique en tant que développeur si l’on souhaite faire évoluer sa base de code source à un rythme différent de celui des livraisons et des fonctionnalités.
-C’est souvent le cas lorsqu’il y a autour du produit une équipe marketing / communication qui s’occupe d’annoncer telle ou telle nouvelle fonctionnalité.</p>
-</div>
-<div class="paragraph">
-<p>Le problème avec Android c’est qu’il peut être vite problématique d’utiliser ces features toggle, car une fois l’application arrivée sur le téléphone des utilisateurs le développeur n’a plus
-la possibilité de changer la valeur des flags autrement qu’en relivrant l’application, ce qui peut vite se terminer par du spam d’updates si les activations/désactivations sont trop fréquentes ou trop rapprochées.</p>
-</div>
-<div class="paragraph">
-<p>C’est là qu’entre en jeu <code>Google Tag Manager</code>, cet outil made by Google va nous offrir la possibilité d’activer/désactiver lesdites fonctionnalités et cela sans avoir à redéployer l’application sur le store.</p>
-</div>
-<div class="sect1">
-<h2 id="_google_tag_manager_la_configuration">Google Tag Manager : La configuration</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Pour commencer, il faut aller dans l’interface dédiée de <a href="https://tagmanager.google.com">Google Tag Manager</a> afin de générer la configuration nécessaire pour notre application.
-C’est via cette IHM et avec les informations que l’on va y ajouter que l’on pourra revenir plus tard et modifier des valeurs qui seront prises en compte dans l’application Android.</p>
-</div>
-<div class="paragraph">
-<p>La mise en place d’une configuration pour une application Android passe donc par les étapes suivantes :</p>
-</div>
-<div class="ulist">
+                        <p>Le concept de <code>feature toggle</code> est bien pratique en tant que développeur si l&rsquo;on souhaite faire évoluer sa base de code source à un rythme différent de celui des livraisons et des fonctionnalités.
+C&rsquo;est souvent le cas lorsqu&rsquo;il y a autour du produit une équipe marketing / communication qui s&rsquo;occupe d&rsquo;annoncer telle ou telle nouvelle fonctionnalité.</p>
+<p>Le problème avec Android c&rsquo;est qu&rsquo;il peut être vite problématique d&rsquo;utiliser ces features toggle, car une fois l&rsquo;application arrivée sur le téléphone des utilisateurs le développeur n&rsquo;a plus
+la possibilité de changer la valeur des flags autrement qu&rsquo;en relivrant l&rsquo;application, ce qui peut vite se terminer par du spam d&rsquo;updates si les activations/désactivations sont trop fréquentes ou trop rapprochées.</p>
+<p>C&rsquo;est là qu&rsquo;entre en jeu <code>Google Tag Manager</code>, cet outil made by Google va nous offrir la possibilité d&rsquo;activer/désactiver lesdites fonctionnalités et cela sans avoir à redéployer l&rsquo;application sur le store.</p>
+<h2 id="google-tag-manager--la-configuration">Google Tag Manager : La configuration</h2>
+<p>Pour commencer, il faut aller dans l&rsquo;interface dédiée de <a href="https://tagmanager.google.com">Google Tag Manager</a> afin de générer la configuration nécessaire pour notre application.
+C&rsquo;est via cette IHM et avec les informations que l&rsquo;on va y ajouter que l&rsquo;on pourra revenir plus tard et modifier des valeurs qui seront prises en compte dans l&rsquo;application Android.</p>
+<p>La mise en place d&rsquo;une configuration pour une application Android passe donc par les étapes suivantes :</p>
 <ul>
-<li>
-<p>Créez un nouveau container (ce qui correspond à créer la configuration pour une application).</p>
-</li>
-<li>
-<p>Donnez-lui le nom que vous voulez et sélectionnez le type <code>Android</code>.</p>
-</li>
-<li>
-<p>Une fois le container créé un code unique du type <code>GTM-XXXXXX</code> lui est attribué par Google notez-le, il sera utilisé dans le code de l’application Android.</p>
-</li>
-<li>
-<p>Ensuite dans ce container rendez-vous dans la partie <code>Variables</code> et créez une nouvelle variable.</p>
-</li>
-<li>
-<p>Choisissez le type <code>Value Collection</code>.</p>
-</li>
-<li>
-<p>Définissez sa valeur avec un objet json { &#39;clé&#39; : &#39;valeur&#39; }, la clé sera elle aussi réutilisée dans le code Android et la valeur peut être ce que vous souhaitez (ici un boolean ira très bien).</p>
-</li>
-<li>
-<p>N’oubliez d’activer cette variable en sélectionnant Enable : <code>Always</code>.</p>
-</li>
-<li>
-<p>Sauvegardez la variable.</p>
-</li>
-<li>
-<p>Vous pouvez dès à présent publier le container, il est prêt à être utilisé.</p>
-</li>
-<li>
-<p>Avant de quitter cet écran une dernière opération utile, téléchargez la première version publiée du container, il sera nécessaire de l’embarquer dans le code source en tant que configuration initiale.</p>
-</li>
+<li>Créez un nouveau container (ce qui correspond à créer la configuration pour une application).</li>
+<li>Donnez-lui le nom que vous voulez et sélectionnez le type <code>Android</code>.</li>
+<li>Une fois le container créé un code unique du type <code>GTM-XXXXXX</code> lui est attribué par Google notez-le, il sera utilisé dans le code de l&rsquo;application Android.</li>
+<li>Ensuite dans ce container rendez-vous dans la partie <code>Variables</code> et créez une nouvelle variable.</li>
+<li>Choisissez le type <code>Value Collection</code>.</li>
+<li>Définissez sa valeur avec un objet json { 'clé' : 'valeur' }, la clé sera elle aussi réutilisée dans le code Android et la valeur peut être ce que vous souhaitez (ici un boolean ira très bien).</li>
+<li>N&rsquo;oubliez d&rsquo;activer cette variable en sélectionnant Enable : <code>Always</code>.</li>
+<li>Sauvegardez la variable.</li>
+<li>Vous pouvez dès à présent publier le container, il est prêt à être utilisé.</li>
+<li>Avant de quitter cet écran une dernière opération utile, téléchargez la première version publiée du container, il sera nécessaire de l&rsquo;embarquer dans le code source en tant que configuration initiale.</li>
 </ul>
-</div>
-<div class="paragraph">
 <p>Ces étapes sont résumées dans ces écrans :</p>
-</div>
-<div class="paragraph">
-<p></p><div style="text-align : center">
-<a class="inlineBoxes" data-lightbox="0" href="/images/posts/2016-03-AndroidGoogleTagManager/GoogleTagManager_containerCreation1.png" title="Création du container">
+<div style="text-align : center">
+<a class="inlineBoxes" href="/images/posts/2016-03-AndroidGoogleTagManager/GoogleTagManager_containerCreation1.png" data-lightbox="0" title="Création du container">
         <img class="medium" src="/images/posts/2016-03-AndroidGoogleTagManager/GoogleTagManager_containerCreation1_min.png" alt="Création du container"/>
 </a>
-<a class="inlineBoxes" data-lightbox="0" href="/images/posts/2016-03-AndroidGoogleTagManager/GoogleTagManager_containerCreation2.png" title="Création du container - Nom et type">
+<a class="inlineBoxes" href="/images/posts/2016-03-AndroidGoogleTagManager/GoogleTagManager_containerCreation2.png" data-lightbox="0" title="Création du container - Nom et type">
         <img class="medium" src="/images/posts/2016-03-AndroidGoogleTagManager/GoogleTagManager_containerCreation2_min.png" alt="Création du container - Nom et type"/>
 </a>
-<a class="inlineBoxes" data-lightbox="0" href="/images/posts/2016-03-AndroidGoogleTagManager/GoogleTagManager_gtmIdGenerated.png" title="GTM id généré">
+<a class="inlineBoxes" href="/images/posts/2016-03-AndroidGoogleTagManager/GoogleTagManager_gtmIdGenerated.png" data-lightbox="0" title="GTM id généré">
         <img class="medium" src="/images/posts/2016-03-AndroidGoogleTagManager/GoogleTagManager_gtmIdGenerated_min.png" alt="GTM id généré"/>
 </a>
-<a class="inlineBoxes" data-lightbox="0" href="/images/posts/2016-03-AndroidGoogleTagManager/GoogleTagManager_screenVariables.png" title="Écran &#39;Variables&#39;">
-        <img class="medium" src="/images/posts/2016-03-AndroidGoogleTagManager/GoogleTagManager_screenVariables_min.png" alt="Écran &#39;Variables&#39;"/>
+<a class="inlineBoxes" href="/images/posts/2016-03-AndroidGoogleTagManager/GoogleTagManager_screenVariables.png" data-lightbox="0" title="Écran 'Variables'">
+        <img class="medium" src="/images/posts/2016-03-AndroidGoogleTagManager/GoogleTagManager_screenVariables_min.png" alt="Écran 'Variables'"/>
 </a>
-<a class="inlineBoxes" data-lightbox="0" href="/images/posts/2016-03-AndroidGoogleTagManager/GoogleTagManager_createVariable.png" title="Création d’une nouvelle variable">
-        <img class="medium" src="/images/posts/2016-03-AndroidGoogleTagManager/GoogleTagManager_createVariable_min.png" alt="Création d’une nouvelle variable"/>
+<a class="inlineBoxes" href="/images/posts/2016-03-AndroidGoogleTagManager/GoogleTagManager_createVariable.png" data-lightbox="0" title="Création d'une nouvelle variable">
+        <img class="medium" src="/images/posts/2016-03-AndroidGoogleTagManager/GoogleTagManager_createVariable_min.png" alt="Création d'une nouvelle variable"/>
 </a>
-<a class="inlineBoxes" data-lightbox="0" href="/images/posts/2016-03-AndroidGoogleTagManager/GoogleTagManager_publishContainer.png" title="Publication du container">
+<a class="inlineBoxes" href="/images/posts/2016-03-AndroidGoogleTagManager/GoogleTagManager_publishContainer.png" data-lightbox="0" title="Publication du container">
         <img class="medium" src="/images/posts/2016-03-AndroidGoogleTagManager/GoogleTagManager_publishContainer_min.png" alt="Publication du container"/>
 </a>
-<a class="inlineBoxes" data-lightbox="0" href="/images/posts/2016-03-AndroidGoogleTagManager/GoogleTagManager_downloadContainer.png" title="Téléchargement du container">
+<a class="inlineBoxes" href="/images/posts/2016-03-AndroidGoogleTagManager/GoogleTagManager_downloadContainer.png" data-lightbox="0" title="Téléchargement du container">
         <img class="medium" src="/images/posts/2016-03-AndroidGoogleTagManager/GoogleTagManager_downloadContainer_min.png" alt="Téléchargement du container"/>
-</a><p></p>
+</a>
 </div>
-<div class="paragraph">
-<p></p></div>
-<br/><p></p>
-</div>
-<div class="paragraph">
-<p>Normalement arrivé là, vous avez configuré un container avec une variable dans celui-ci. Et vous disposez pour ce container de son <em>code unique</em> ainsi que d’un <em>binaire</em> de son contenu.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_application_android_le_code">Application Android : Le code</h2>
-<div class="sectionbody">
-<div class="paragraph">
+<br/>
+<p>Normalement arrivé là, vous avez configuré un container avec une variable dans celui-ci. Et vous disposez pour ce container de son <em>code unique</em> ainsi que d&rsquo;un <em>binaire</em> de son contenu.</p>
+<h2 id="application-android--le-code">Application Android : Le code</h2>
 <p>La seconde partie du travail consiste à modifier son code applicatif afin de lire la variable précédemment ajoutée dans Google Tag Manager.</p>
-</div>
-<div class="ulist">
 <ul>
-<li>
-<p>Pour commencer, stockez votre code Google Tag Manager (dans une constante ou un ficher xml, peu importe).</p>
-</li>
+<li>Pour commencer, stockez votre code Google Tag Manager (dans une constante ou un ficher xml, peu importe).</li>
 </ul>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;resources&gt;
-    &lt;string name=&#34;tag_manager_id&#34;&gt;GTM-N8NXMK&lt;/string&gt;
-&lt;/resources&gt;</code></pre>
-</div>
-</div>
-<div class="ulist">
-<ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#f92672">&lt;resources&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;string</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;tag_manager_id&#34;</span><span style="color:#f92672">&gt;</span>GTM-N8NXMK<span style="color:#f92672">&lt;/string&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/resources&gt;</span>
+</span></span></code></pre></div><ul>
 <li>
 <p>Ensuite copiez le binaire téléchargé (correspondant à la configuration initiale du container) dans le répertoire <em>/res/raw/</em>, attention vous devrez surement changer le nom du fichier pour enlever les majuscules.</p>
 </li>
@@ -248,117 +191,62 @@ C’est via cette IHM et avec les informations que l’on va y ajouter que l’o
 <p>Ajoutez dans votre <em>build.gradle</em> une nouvelle dépendance vers les play services (seulement la partie analytics nous intéresse).</p>
 </li>
 </ul>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-groovy" data-lang="groovy">dependencies {
-    compile &#39;com.google.android.gms:play-services-analytics:8.4.0&#39;
-}</code></pre>
-</div>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Maintenant dans une Activity (ou bien dans votre Application), vous avez deux choses à faire, récupérer une instance de TagManager et faire une requête pour lire la configuration actuelle du Container.</p>
-</li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-groovy" data-lang="groovy"><span style="display:flex;"><span>dependencies <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    compile <span style="color:#e6db74">&#39;com.google.android.gms:play-services-analytics:8.4.0&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><ul>
+<li>Maintenant dans une Activity (ou bien dans votre Application), vous avez deux choses à faire, récupérer une instance de TagManager et faire une requête pour lire la configuration actuelle du Container.</li>
 </ul>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">public class MainActivity extends AppCompatActivity {
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-        final TagManager tagManager = TagManager.getInstance(this);
-        PendingResult pending = tagManager.loadContainerPreferFresh(getString(R.string.tag_manager_id), R.raw.gtm_initial_conf);
-        pending.setResultCallback(new ResultCallback&lt;ContainerHolder&gt;() {
-           @Override
-           public void onResult(@NonNull ContainerHolder containerHolder) {
-               // If unsuccessful, return
-               if (!containerHolder.getStatus().isSuccess()) {
-                   // Deal with failure
-                   return;
-               }
-               containerHolder.refresh();
-
-               final boolean feature1Status = containerHolder.getContainer().getBoolean(&#34;feature1&#34;);
-               Log.d(&#34;TagManager&#34;, String.valueOf(feature1Status));
-           }
-        }, 2, TimeUnit.SECONDS);
-}</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Et c’est tout ! Vous pouvez retourner dans l’interface de Tag Manager, pour modifier la valeur de la variable feature1, publiez la nouvelle version du container et si vous redémarrez l’application,
- la nouvelle valeur devrait apparaitre.</p>
-</div>
-<div class="paragraph">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MainActivity</span> <span style="color:#66d9ef">extends</span> AppCompatActivity {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@Override</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">protected</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">onCreate</span>(Bundle savedInstanceState) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">super</span>.<span style="color:#a6e22e">onCreate</span>(savedInstanceState);
+</span></span><span style="display:flex;"><span>        setContentView(R.<span style="color:#a6e22e">layout</span>.<span style="color:#a6e22e">activity_main</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">final</span> TagManager tagManager <span style="color:#f92672">=</span> TagManager.<span style="color:#a6e22e">getInstance</span>(<span style="color:#66d9ef">this</span>);
+</span></span><span style="display:flex;"><span>        PendingResult pending <span style="color:#f92672">=</span> tagManager.<span style="color:#a6e22e">loadContainerPreferFresh</span>(getString(R.<span style="color:#a6e22e">string</span>.<span style="color:#a6e22e">tag_manager_id</span>), R.<span style="color:#a6e22e">raw</span>.<span style="color:#a6e22e">gtm_initial_conf</span>);
+</span></span><span style="display:flex;"><span>        pending.<span style="color:#a6e22e">setResultCallback</span>(<span style="color:#66d9ef">new</span> ResultCallback<span style="color:#f92672">&lt;</span>ContainerHolder<span style="color:#f92672">&gt;</span>() {
+</span></span><span style="display:flex;"><span>           <span style="color:#a6e22e">@Override</span>
+</span></span><span style="display:flex;"><span>           <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">onResult</span>(<span style="color:#a6e22e">@NonNull</span> ContainerHolder containerHolder) {
+</span></span><span style="display:flex;"><span>               <span style="color:#75715e">// If unsuccessful, return</span>
+</span></span><span style="display:flex;"><span>               <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span>containerHolder.<span style="color:#a6e22e">getStatus</span>().<span style="color:#a6e22e">isSuccess</span>()) {
+</span></span><span style="display:flex;"><span>                   <span style="color:#75715e">// Deal with failure</span>
+</span></span><span style="display:flex;"><span>                   <span style="color:#66d9ef">return</span>;
+</span></span><span style="display:flex;"><span>               }
+</span></span><span style="display:flex;"><span>               containerHolder.<span style="color:#a6e22e">refresh</span>();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>               <span style="color:#66d9ef">final</span> <span style="color:#66d9ef">boolean</span> feature1Status <span style="color:#f92672">=</span> containerHolder.<span style="color:#a6e22e">getContainer</span>().<span style="color:#a6e22e">getBoolean</span>(<span style="color:#e6db74">&#34;feature1&#34;</span>);
+</span></span><span style="display:flex;"><span>               Log.<span style="color:#a6e22e">d</span>(<span style="color:#e6db74">&#34;TagManager&#34;</span>, String.<span style="color:#a6e22e">valueOf</span>(feature1Status));
+</span></span><span style="display:flex;"><span>           }
+</span></span><span style="display:flex;"><span>        }, 2, TimeUnit.<span style="color:#a6e22e">SECONDS</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Et c&rsquo;est tout ! Vous pouvez retourner dans l&rsquo;interface de Tag Manager, pour modifier la valeur de la variable feature1, publiez la nouvelle version du container et si vous redémarrez l&rsquo;application,
+la nouvelle valeur devrait apparaitre.</p>
 <p>Rapide et efficace, non ?</p>
-</div>
-<div class="sect2">
-<h3 id="_chargement_des_données_du_container">Chargement des données du container</h3>
-<div class="paragraph">
-<p>Via l’instance de TagManager différentes méthodes sont disponibles pour charger le container et les valeurs qu’il contient.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">tagManager.loadContainerDefaultOnly(...); # <b class="conum">(1)</b>
-tagManager.loadContainerPreferFresh(...); # <b class="conum">(2)</b>
-tagManager.loadContainerPreferNonDefault(...); # <b class="conum">(2)</b></code></pre>
-</div>
-</div>
-<div class="colist arabic">
-<ol>
-<li>
-<p>va uniquement regarder les valeurs dans le binaire ajouté dans /res/raw</p>
-</li>
-<li>
-<p>vont essayer de prendre les dernières valeurs publiées (ou non) mais sans être garantie à 100% (notamment s’il ya des problèmes de réseaux)</p>
-</li>
+<h3 id="chargement-des-données-du-container">Chargement des données du container</h3>
+<p>Via l&rsquo;instance de TagManager différentes méthodes sont disponibles pour charger le container et les valeurs qu&rsquo;il contient.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>tagManager.<span style="color:#a6e22e">loadContainerDefaultOnly</span>(...); <span style="color:#960050;background-color:#1e0010">#</span> (1)
+</span></span><span style="display:flex;"><span>tagManager.<span style="color:#a6e22e">loadContainerPreferFresh</span>(...); <span style="color:#960050;background-color:#1e0010">#</span> (2)
+</span></span><span style="display:flex;"><span>tagManager.<span style="color:#a6e22e">loadContainerPreferNonDefault</span>(...); <span style="color:#960050;background-color:#1e0010">#</span> (2)
+</span></span></code></pre></div><ol>
+<li>va uniquement regarder les valeurs dans le binaire ajouté dans /res/raw</li>
+<li>vont essayer de prendre les dernières valeurs publiées (ou non) mais sans être garantie à 100% (notamment s&rsquo;il ya des problèmes de réseaux)</li>
 </ol>
-</div>
-<div class="paragraph">
 <p>Les différences sont détaillées <a href="https://developers.google.com/android/reference/com/google/android/gms/tagmanager/TagManager#public-methods">dans la doc</a>.
 Mais selon toute logique cette qui va nous intéresser sera uniquement <code>loadContainerPreferFresh()</code>.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_conclusion">Conclusion</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Les pour et les contre d’utiliser Tag Manager pour faire du feature toggle vont forcément dépendre du besoin du développeur.</p>
-</div>
-<div class="sect2">
-<h3 id="_pour">Pour</h3>
-<div class="paragraph">
-<p>Le principale avantage et la mise en place sans le développement d’une API rien que pour ça (si votre application n’a pas de backend dédié, pas besoin d’en créer un).<br/>
-Toute la logique de configuration initiale versus configuration mise à jour est déjà implémentée et tout se gère via l’appel <code>tagManager.loadContainer()</code>.<br/>
-Ça fonctionne tout aussi bien sur iOS.<br/>
-Un autre point très intéressant (et non abordé ici) est la publication d’une variable selon des critères (on va pouvoir modifier un toggle, pour par exemple faire du A/B testing en fonction d’un tas de critères comme la taille de l’écran ou bien la langue de l’utilisateur ou même la version de l’application).</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_contre">Contre</h3>
-<div class="paragraph">
+<h2 id="conclusion">Conclusion</h2>
+<p>Les pour et les contre d&rsquo;utiliser Tag Manager pour faire du feature toggle vont forcément dépendre du besoin du développeur.</p>
+<h3 id="pour">Pour</h3>
+<p>Le principale avantage et la mise en place sans le développement d&rsquo;une API rien que pour ça (si votre application n&rsquo;a pas de backend dédié, pas besoin d&rsquo;en créer un).<br>
+Toute la logique de configuration initiale versus configuration mise à jour est déjà implémentée et tout se gère via l&rsquo;appel <code>tagManager.loadContainer()</code>.<br>
+Ça fonctionne tout aussi bien sur iOS.<br>
+Un autre point très intéressant (et non abordé ici) est la publication d&rsquo;une variable selon des critères (on va pouvoir modifier un toggle, pour par exemple faire du A/B testing en fonction d&rsquo;un tas de critères comme la taille de l&rsquo;écran ou bien la langue de l&rsquo;utilisateur ou même la version de l&rsquo;application).</p>
+<h3 id="contre">Contre</h3>
 <p>Si le <code>loadPreferFresh</code> échoue (problème réseau par exemple) on retombe sur la config par défaut, mais est-ce que ça fonctionnerait mieux avec une solution custom ? par sûr.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_liens">Liens</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Code sources d’exemple : <a class="bare" href="https://github.com/fchauveau/blog-android-tag-manager">https://github.com/fchauveau/blog-android-tag-manager</a><br/>
-Documentation Google officielle : <a class="bare" href="https://developers.google.com/tag-manager/android/v4/">https://developers.google.com/tag-manager/android/v4/</a><br/>
-Cours Udacity d’explication : <a class="bare" href="https://www.udacity.com/course/viewer#!/c-ud876-2/l-4027658558/m-4328729937">https://www.udacity.com/course/viewer#!/c-ud876-2/l-4027658558/m-4328729937</a></p>
-</div>
-</div>
-</div>
+<h2 id="liens">Liens</h2>
+<p>Code sources d&rsquo;exemple : <a href="https://github.com/fchauveau/blog-android-tag-manager">https://github.com/fchauveau/blog-android-tag-manager</a><br>
+Documentation Google officielle : <a href="https://developers.google.com/tag-manager/android/v4/">https://developers.google.com/tag-manager/android/v4/</a><br>
+Cours Udacity d&rsquo;explication : <a href="https://www.udacity.com/course/viewer#!/c-ud876-2/l-4027658558/m-4328729937">https://www.udacity.com/course/viewer#!/c-ud876-2/l-4027658558/m-4328729937</a></p>
 
                     </div>
                     <div class="content-footer">
@@ -512,7 +400,7 @@ Cours Udacity d’explication : <a class="bare" href="https://www.udacity.com/co
 
     
     
-      <script src="/main.c675e.js"></script>
+      <script src="/main.6a4f7.js"></script>
     
     <script>
       const d = new Date();

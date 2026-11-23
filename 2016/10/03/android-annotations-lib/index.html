@@ -5,7 +5,7 @@
   <meta name="description" content="" />
 
     
-  <link href="/main.9d7454509e2b96b98b19.css" rel="stylesheet" />
+  <link href="/main.fff3669dde03eba9c0d1.css" rel="stylesheet" />
    
   <meta charset="utf-8" />
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
@@ -28,8 +28,9 @@
 
 
 <meta property="og:title" content="Android Annotations : Abusez-en !" />
-<meta property="og:description" content=" Dans le lot des supports librairies que propose Google pour le développement Android (principalement pour la compatibilité de certains composants sur des anciennes versions de l’OS) il y en a une qui de prime abord ne va pas beaucoup servir c’est support-annotations.
-En effet cette librairie ne contient pas grand chose en terme de classes ni de méthodes. En revanche elle possède de nombreuses annotations (d’où son nom…​). Le comble c’est que presque toutes ces annotations sont définie en tant que @Retention(CLASS), c’est-à-dire qu’elles seront conservées lors la génération des fichiers .classes mais n’auront pas d’impact au moment de l’execution du code`. À quoi peuvent-elles servir ? Et bien c’est le propre des annotations, elles servent à apporter des informations sur des portions de code et éventuellement donner quelques instructions au compilateur. L’un des exemples le plus connu est @Deprecated que vous devez cotoyer tous les jours. Cette annotation a pour seul but d’informer le développeur qu’il est fortement déconseillé d’utiliser cette méthode.
+<meta property="og:description" content="Dans le lot des supports librairies que propose Google pour le développement Android (principalement pour la compatibilité de certains composants sur des anciennes versions de l’OS) il y en a une qui de prime abord ne va pas beaucoup servir c’est support-annotations.
+En effet cette librairie ne contient pas grand chose en terme de classes ni de méthodes. En revanche elle possède de nombreuses annotations (d’où son nom…). Le comble c’est que presque toutes ces annotations sont définie en tant que @Retention(CLASS), c’est-à-dire qu’elles seront conservées lors la génération des fichiers .classes mais n’auront pas d’impact au moment de l’execution du code`.
+À quoi peuvent-elles servir ? Et bien c’est le propre des annotations, elles servent à apporter des informations sur des portions de code et éventuellement donner quelques instructions au compilateur. L’un des exemples le plus connu est @Deprecated que vous devez cotoyer tous les jours. Cette annotation a pour seul but d’informer le développeur qu’il est fortement déconseillé d’utiliser cette méthode.
 " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://code-troopers.com/2016/10/03/android-annotations-lib/" />
@@ -45,8 +46,9 @@ En effet cette librairie ne contient pas grand chose en terme de classes ni de m
 
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Android Annotations : Abusez-en !" />
-<meta name="twitter:description" content=" Dans le lot des supports librairies que propose Google pour le développement Android (principalement pour la compatibilité de certains composants sur des anciennes versions de l’OS) il y en a une qui de prime abord ne va pas beaucoup servir c’est support-annotations.
-En effet cette librairie ne contient pas grand chose en terme de classes ni de méthodes. En revanche elle possède de nombreuses annotations (d’où son nom…​). Le comble c’est que presque toutes ces annotations sont définie en tant que @Retention(CLASS), c’est-à-dire qu’elles seront conservées lors la génération des fichiers .classes mais n’auront pas d’impact au moment de l’execution du code`. À quoi peuvent-elles servir ? Et bien c’est le propre des annotations, elles servent à apporter des informations sur des portions de code et éventuellement donner quelques instructions au compilateur. L’un des exemples le plus connu est @Deprecated que vous devez cotoyer tous les jours. Cette annotation a pour seul but d’informer le développeur qu’il est fortement déconseillé d’utiliser cette méthode.
+<meta name="twitter:description" content="Dans le lot des supports librairies que propose Google pour le développement Android (principalement pour la compatibilité de certains composants sur des anciennes versions de l’OS) il y en a une qui de prime abord ne va pas beaucoup servir c’est support-annotations.
+En effet cette librairie ne contient pas grand chose en terme de classes ni de méthodes. En revanche elle possède de nombreuses annotations (d’où son nom…). Le comble c’est que presque toutes ces annotations sont définie en tant que @Retention(CLASS), c’est-à-dire qu’elles seront conservées lors la génération des fichiers .classes mais n’auront pas d’impact au moment de l’execution du code`.
+À quoi peuvent-elles servir ? Et bien c’est le propre des annotations, elles servent à apporter des informations sur des portions de code et éventuellement donner quelques instructions au compilateur. L’un des exemples le plus connu est @Deprecated que vous devez cotoyer tous les jours. Cette annotation a pour seul but d’informer le développeur qu’il est fortement déconseillé d’utiliser cette méthode.
 " />
 <meta name="twitter:image" content="https://code-troopers.com/2016/10/03/android-annotations-lib/android-simple-banner_hu_e01c62cce8f1fb9d.png" />
 
@@ -131,244 +133,112 @@ En effet cette librairie ne contient pas grand chose en terme de classes ni de m
                     </ul>
                     
                     <div class="content">
-                        <div class="paragraph">
-<p>Dans le lot des <a href="https://developer.android.com/topic/libraries/support-library/index.html">supports librairies</a> que propose Google pour le développement Android (principalement pour la compatibilité de certains composants sur des anciennes versions de l’OS) il y en a une qui de prime abord ne va pas beaucoup servir c’est <code>support-annotations</code>.</p>
-</div>
-<div class="paragraph">
-<p>En effet cette librairie ne contient pas grand chose en terme de classes ni de <a href="http://www.methodscount.com/?lib=com.android.support%3Asupport-annotations%3A24.2.1">méthodes</a>. En revanche elle possède de nombreuses annotations (d’où son nom…​). Le comble c’est que presque toutes ces annotations sont définie en tant que <code>@Retention(CLASS)</code>, c’est-à-dire qu’elles seront conservées lors la génération des fichiers <em>.classes</em> mais n’auront pas d’impact au moment de l’execution du code`.<br/>
-À quoi peuvent-elles servir ? Et bien c’est le propre des annotations, elles servent à apporter des informations sur des portions de code et éventuellement donner quelques instructions au compilateur. L’un des exemples le plus connu est <em>@Deprecated</em> que vous devez cotoyer tous les jours. Cette annotation a pour seul but d’informer le développeur qu’il est fortement déconseillé d’utiliser cette méthode.</p>
-</div>
-<div class="paragraph">
-<p>L’avantage d’utiliser les <code>support-annotations</code> est qu’Android Studio connait leur signification et donc va pouvoir highlighter des portions de code en rapport avec celles-ci lorsqu’un comportement attendu n’est pas respecté.</p>
-</div>
-<div class="paragraph">
+                        <p>Dans le lot des <a href="https://developer.android.com/topic/libraries/support-library/index.html">supports librairies</a> que propose Google pour le développement Android (principalement pour la compatibilité de certains composants sur des anciennes versions de l&rsquo;OS) il y en a une qui de prime abord ne va pas beaucoup servir c&rsquo;est <code>support-annotations</code>.</p>
+<p>En effet cette librairie ne contient pas grand chose en terme de classes ni de <a href="http://www.methodscount.com/?lib=com.android.support%3Asupport-annotations%3A24.2.1">méthodes</a>. En revanche elle possède de nombreuses annotations (d&rsquo;où son nom…). Le comble c&rsquo;est que presque toutes ces annotations sont définie en tant que <code>@Retention(CLASS)</code>, c&rsquo;est-à-dire qu&rsquo;elles seront conservées lors la génération des fichiers <em>.classes</em> mais n&rsquo;auront pas d&rsquo;impact au moment de l&rsquo;execution du code`.<br>
+À quoi peuvent-elles servir ? Et bien c&rsquo;est le propre des annotations, elles servent à apporter des informations sur des portions de code et éventuellement donner quelques instructions au compilateur. L&rsquo;un des exemples le plus connu est <em>@Deprecated</em> que vous devez cotoyer tous les jours. Cette annotation a pour seul but d&rsquo;informer le développeur qu&rsquo;il est fortement déconseillé d&rsquo;utiliser cette méthode.</p>
+<p>L&rsquo;avantage d&rsquo;utiliser les <code>support-annotations</code> est qu&rsquo;Android Studio connait leur signification et donc va pouvoir highlighter des portions de code en rapport avec celles-ci lorsqu&rsquo;un comportement attendu n&rsquo;est pas respecté.</p>
 <p>Faisons un petit tour des <a href="https://developer.android.com/reference/android/support/annotation/package-summary.html">annotations présentes dans <code>support-annotations</code></a> et de leur intégration dans Android Studio</p>
-</div>
-<div class="sect1">
-<h2 id="_nullable_nonnull">@Nullable / @NonNull</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Le couple d’annotations le plus connu est probablement @Nullable et @NonNull, car déjà présent depuis un certain temps dans différents packages comme <a href="https://www.jetbrains.com/help/idea/2016.2/nullable-and-notnull-annotations.html">Intellij</a> ou <a href="http://mvnrepository.com/artifact/javax.annotation/javax.annotation-api/1.3">javax.annotations</a>.</p>
-</div>
-<div class="paragraph">
-<p>Annoter une méthode @Nullable permet d’indiquer que le retour de celle-ci peut être <em>null</em> et donc qu’il est fort préférable de procéder à un null check avant d’utiliser l’objet retourné. Le @NonNull permet lui d’assurer que le résultat est toujours un objet valide.</p>
-</div>
-<div class="paragraph">
-<p></p><div style="text-align : center">
-<a class="inlineBoxes" data-lightbox="1" href="/images/posts/2016-09_AndroidAnnotations/android_annotations_nullable.png" title="Warning sur un retour @Nullable">
+<h2 id="nullable--nonnull">@Nullable / @NonNull</h2>
+<p>Le couple d&rsquo;annotations le plus connu est probablement @Nullable et @NonNull, car déjà présent depuis un certain temps dans différents packages comme <a href="https://www.jetbrains.com/help/idea/2016.2/nullable-and-notnull-annotations.html">Intellij</a> ou <a href="http://mvnrepository.com/artifact/javax.annotation/javax.annotation-api/1.3">javax.annotations</a>.</p>
+<p>Annoter une méthode @Nullable permet d&rsquo;indiquer que le retour de celle-ci peut être <em>null</em> et donc qu&rsquo;il est fort préférable de procéder à un null check avant d&rsquo;utiliser l&rsquo;objet retourné. Le @NonNull permet lui d&rsquo;assurer que le résultat est toujours un objet valide.</p>
+<div style="text-align : center">
+<a class="inlineBoxes" href="/images/posts/2016-09_AndroidAnnotations/android_annotations_nullable.png" data-lightbox="1" title="Warning sur un retour @Nullable">
         <img class="medium" src="/images/posts/2016-09_AndroidAnnotations/android_annotations_nullable_min.png" alt="Warning sur un retour @Nullable"/>
 </a>
-<a class="inlineBoxes" data-lightbox="1" href="/images/posts/2016-09_AndroidAnnotations/android_annotations_notnull.png" title="Warning sur une methode @NonNull">
+<a class="inlineBoxes" href="/images/posts/2016-09_AndroidAnnotations/android_annotations_notnull.png" data-lightbox="1" title="Warning sur une methode @NonNull">
         <img class="medium" src="/images/posts/2016-09_AndroidAnnotations/android_annotations_notnull_min.png" alt="Warning sur une methode @NonNull"/>
 </a>
-</div><p></p>
 </div>
-<div class="paragraph">
-<p><br/></p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_anyres">@&lt;Any&gt;Res</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Le groupe d’annotations suivant est probablement celui que j’utilise le plus souvent est le <code>@…​Res</code>.</p>
-</div>
-<div class="paragraph">
-<p>Et oui étant donné que toutes les références des ressources sont des <code>int</code> lorsqu’elles sont générées dans votre class <em>R</em> il est difficile de les différencier lorsqu’on en passe une en paramètre de méthode.
-Et bien avec un <code>@ColorRes int myColor</code>, Android Studio s’occupera de vous avertir si la valeur passée ne correspond pas à une ressource du type <code>color</code>.</p>
-</div>
-<div class="paragraph">
-<p></p><div style="text-align : center">
-<a class="inlineBoxes" data-lightbox="1" href="/images/posts/2016-09_AndroidAnnotations/android_annotations_stringres.png" title="Warning sur un paramètre @StringRes">
+<br/>
+<h2 id="anyres">@&lt;Any&gt;Res</h2>
+<p>Le groupe d&rsquo;annotations suivant est probablement celui que j&rsquo;utilise le plus souvent est le <code>@...Res</code>.</p>
+<p>Et oui étant donné que toutes les références des ressources sont des <code>int</code> lorsqu&rsquo;elles sont générées dans votre class <em>R</em> il est difficile de les différencier lorsqu&rsquo;on en passe une en paramètre de méthode.
+Et bien avec un <code>@ColorRes int myColor</code>, Android Studio s&rsquo;occupera de vous avertir si la valeur passée ne correspond pas à une ressource du type <code>color</code>.</p>
+<div style="text-align : center">
+<a class="inlineBoxes" href="/images/posts/2016-09_AndroidAnnotations/android_annotations_stringres.png" data-lightbox="1" title="Warning sur un paramètre @StringRes">
         <img class="medium" src="/images/posts/2016-09_AndroidAnnotations/android_annotations_stringres_min.png" alt="Warning sur un paramètre @StringRes"/>
 </a>
-</div><p></p>
 </div>
-<div class="paragraph">
-<p><br/></p>
-</div>
-<div class="paragraph">
+<br/>
 <p>La liste (non complète) des ressources que vous pouvez contrôler :</p>
-</div>
-<div class="ulist">
 <ul>
-<li>
-<p><code>ColorRes</code></p>
-</li>
-<li>
-<p><code>DimenRes</code></p>
-</li>
-<li>
-<p><code>DrawableRes</code></p>
-</li>
-<li>
-<p><code>IdRes</code></p>
-</li>
-<li>
-<p><code>StringRes</code></p>
-</li>
+<li><code>ColorRes</code></li>
+<li><code>DimenRes</code></li>
+<li><code>DrawableRes</code></li>
+<li><code>IdRes</code></li>
+<li><code>StringRes</code></li>
 </ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_callsuper">@CallSuper</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Je l’ai découverte récemment et je trouve qu’elle est d’une grande aide. Étant donné l’importance du cycle de vie de chaque élément dans Android
-il est indispensble de s’assurer que chaque méthode est appelée au bon moment.
-Et lorsque qu’il y a un peu de refactor il arrive vite d’oublier d’appeler le super d’une méthode surchargée. Maintenant vous en serez averti !</p>
-</div>
-<div class="paragraph">
-<p></p><div style="text-align : center">
-<a class="inlineBoxes" data-lightbox="1" href="/images/posts/2016-09_AndroidAnnotations/android_annotations_callsuper.png" title="Warning sur un appel super manquant">
+<h2 id="callsuper">@CallSuper</h2>
+<p>Je l&rsquo;ai découverte récemment et je trouve qu&rsquo;elle est d&rsquo;une grande aide. Étant donné l&rsquo;importance du cycle de vie de chaque élément dans Android
+il est indispensble de s&rsquo;assurer que chaque méthode est appelée au bon moment.
+Et lorsque qu&rsquo;il y a un peu de refactor il arrive vite d&rsquo;oublier d&rsquo;appeler le super d&rsquo;une méthode surchargée. Maintenant vous en serez averti !</p>
+<div style="text-align : center">
+<a class="inlineBoxes" href="/images/posts/2016-09_AndroidAnnotations/android_annotations_callsuper.png" data-lightbox="1" title="Warning sur un appel super manquant">
         <img class="medium" src="/images/posts/2016-09_AndroidAnnotations/android_annotations_callsuper_min.png" alt="Warning sur un appel super manquant"/>
 </a>
-</div><p></p>
 </div>
-<div class="paragraph">
-<p><br/></p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_requirepermission">@RequirePermission</h2>
-<div class="sectionbody">
-<div class="paragraph">
+<br/>
+<h2 id="requirepermission">@RequirePermission</h2>
 <p>Pour être sur de ne pas oublier une permission dans le <code>manifest.xml</code> cette annotation permettra (sur une classe ou une méthode) de vous rappeler explicitement quelles sont celles dont vous avez besoin.</p>
-</div>
-<div class="paragraph">
-<p>On peut d’ailleurs voir le warning d’Android Studio en créant un sample project et en démarrant une nouvelle activity avec un <code>Intent.ACTION_CALL</code>.</p>
-</div>
-<div class="paragraph">
-<p></p><div style="text-align : center">
-<a class="inlineBoxes" data-lightbox="1" href="/images/posts/2016-09_AndroidAnnotations/android_annotations_permission.png" title="Warning sur une permission manquante">
+<p>On peut d&rsquo;ailleurs voir le warning d&rsquo;Android Studio en créant un sample project et en démarrant une nouvelle activity avec un <code>Intent.ACTION_CALL</code>.</p>
+<div style="text-align : center">
+<a class="inlineBoxes" href="/images/posts/2016-09_AndroidAnnotations/android_annotations_permission.png" data-lightbox="1" title="Warning sur une permission manquante">
         <img class="medium" src="/images/posts/2016-09_AndroidAnnotations/android_annotations_permission_min.png" alt="Warning sur une permission manquante"/>
 </a>
-</div><p></p>
 </div>
-<div class="paragraph">
-<p><br/></p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_stringdef">@StringDef</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Lorsque l’on dev pour Android on doit savoir que <a href="https://www.youtube.com/watch?v=Hzs6OBcvNQE">les enums sont à proscrire</a> et du coup c’est embêtant, car c’est tout de même bien pratique.
+<br/>
+<h2 id="stringdef">@StringDef</h2>
+<p>Lorsque l&rsquo;on dev pour Android on doit savoir que <a href="https://www.youtube.com/watch?v=Hzs6OBcvNQE">les enums sont à proscrire</a> et du coup c&rsquo;est embêtant, car c&rsquo;est tout de même bien pratique.
 La parade est donc de passer par une liste de constantes et de créer une nouvelle annotation qui limitera les valeurs attendues, comme ceci :</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">public final static String Constant.TROOPER_VINCENT = &#34;VM&#34;;
-public final static String Constant.TROOPER_JORIS = &#34;JP&#34;;
-public final static String Constant.TROOPER_BENJAMIN = &#34;BC&#34;;
-
-@StringDef({
-        Constant.TROOPER_VINCENT,
-        Constant.TROOPER_JORIS,
-        Constant.TROOPER_BENJAMIN,
-})
-@Retention(RetentionPolicy.SOURCE)
-public @interface Trooper {
-}</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Et ensuite d’utiliser cette annotation à chaque fois que seulement une des valeurs précédente est autorisée.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">public void getProject(@Trooper String currentTrooper){}</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Certes ce n’est pas aussi puissant qu’une enum, mais il faudra faire avec.</p>
-</div>
-<div class="paragraph">
-<p></p><div style="text-align : center">
-<a class="inlineBoxes" data-lightbox="1" href="/images/posts/2016-09_AndroidAnnotations/android_annotations_stringdef.png" title="Warning sur un paramètre non attendu">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">final</span> <span style="color:#66d9ef">static</span> String Constant.<span style="color:#a6e22e">TROOPER_VINCENT</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;VM&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">final</span> <span style="color:#66d9ef">static</span> String Constant.<span style="color:#a6e22e">TROOPER_JORIS</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;JP&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">final</span> <span style="color:#66d9ef">static</span> String Constant.<span style="color:#a6e22e">TROOPER_BENJAMIN</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;BC&#34;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@StringDef</span>({
+</span></span><span style="display:flex;"><span>        Constant.<span style="color:#a6e22e">TROOPER_VINCENT</span>,
+</span></span><span style="display:flex;"><span>        Constant.<span style="color:#a6e22e">TROOPER_JORIS</span>,
+</span></span><span style="display:flex;"><span>        Constant.<span style="color:#a6e22e">TROOPER_BENJAMIN</span>,
+</span></span><span style="display:flex;"><span>})
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@Retention</span>(RetentionPolicy.<span style="color:#a6e22e">SOURCE</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#a6e22e">@interface</span> Trooper {
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Et ensuite d&rsquo;utiliser cette annotation à chaque fois que seulement une des valeurs précédente est autorisée.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">getProject</span>(<span style="color:#a6e22e">@Trooper</span> String currentTrooper){}
+</span></span></code></pre></div><p>Certes ce n&rsquo;est pas aussi puissant qu&rsquo;une enum, mais il faudra faire avec.</p>
+<div style="text-align : center">
+<a class="inlineBoxes" href="/images/posts/2016-09_AndroidAnnotations/android_annotations_stringdef.png" data-lightbox="1" title="Warning sur un paramètre non attendu">
         <img class="medium" src="/images/posts/2016-09_AndroidAnnotations/android_annotations_stringdef_min.png" alt="Warning sur un paramètre non attendu"/>
 </a>
-</div><p></p>
 </div>
-<div class="paragraph">
-<p><br/></p>
-</div>
-<div class="paragraph">
+<br/>
 <p>Il est possible de faire la même chose pour une liste de <em>Integer</em> avec <code>@IntDef</code>.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_range">@Range</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Toujours dans l’idée d’éviter de créer des énum @IntRange permettra de spécifier un peu plus ce qu’une méthode attend en paramètre.</p>
-</div>
-<div class="paragraph">
-<p></p><div style="text-align : center">
-<a class="inlineBoxes" data-lightbox="1" href="/images/posts/2016-09_AndroidAnnotations/android_annotations_range.png" title="Warning sur un paramètre hors limites">
+<h2 id="range">@Range</h2>
+<p>Toujours dans l&rsquo;idée d&rsquo;éviter de créer des énum @IntRange permettra de spécifier un peu plus ce qu&rsquo;une méthode attend en paramètre.</p>
+<div style="text-align : center">
+<a class="inlineBoxes" href="/images/posts/2016-09_AndroidAnnotations/android_annotations_range.png" data-lightbox="1" title="Warning sur un paramètre hors limites">
         <img class="medium" src="/images/posts/2016-09_AndroidAnnotations/android_annotations_range_min.png" alt="Warning sur un paramètre hors limites"/>
 </a>
-</div><p></p>
 </div>
-<div class="paragraph">
-<p><br/></p>
-</div>
-<div class="paragraph">
+<br/>
 <p>Une variante <code>@FloatRange</code> est aussi disponible.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_lint">Lint</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Comme chacune des erreurs n’empèche pas la compilation du projet, un bon moyen de surveiller qu’il n’y a pas de violation aux règles mises en place grâce à toutes ces annotations,
+<h2 id="lint">Lint</h2>
+<p>Comme chacune des erreurs n&rsquo;empèche pas la compilation du projet, un bon moyen de surveiller qu&rsquo;il n&rsquo;y a pas de violation aux règles mises en place grâce à toutes ces annotations,
 est de contrôler les rapports générés par lint</p>
-</div>
-<div class="paragraph">
-<p></p><div style="text-align : center">
-<a class="inlineBoxes" data-lightbox="1" href="/images/posts/2016-09_AndroidAnnotations/android_annotations_lint.png" title="Exemple de rapport lint">
+<div style="text-align : center">
+<a class="inlineBoxes" href="/images/posts/2016-09_AndroidAnnotations/android_annotations_lint.png" data-lightbox="1" title="Exemple de rapport lint">
         <img class="medium" src="/images/posts/2016-09_AndroidAnnotations/android_annotations_lint_min.png" alt="Exemple de rapport lint"/>
 </a>
-</div><p></p>
 </div>
-<div class="paragraph">
-<p><br/></p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_lajouter_dans_son_projet">L’ajouter dans son projet</h2>
-<div class="sectionbody">
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-groovy" data-lang="groovy">dependencies {
-    compile &#39;com.android.support:support-annotations:24.2.1&#39;
-}</code></pre>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_liens">Liens</h3>
-<div class="paragraph">
-<p><a class="bare" href="https://developer.android.com/topic/libraries/support-library/features.html#annotations">https://developer.android.com/topic/libraries/support-library/features.html#annotations</a></p>
-</div>
-<div class="paragraph">
-<p><a class="bare" href="https://developer.android.com/studio/write/annotations.html">https://developer.android.com/studio/write/annotations.html</a></p>
-</div>
-<div class="paragraph">
-<p><a class="bare" href="https://developer.android.com/reference/android/support/annotation/package-summary.html">https://developer.android.com/reference/android/support/annotation/package-summary.html</a></p>
-</div>
-<div class="paragraph">
-<p><a class="bare" href="https://github.com/fchauveau/blog-android-annotations/tree/master/app/src/main/java/com/codetroopers">https://github.com/fchauveau/blog-android-annotations/tree/master/app/src/main/java/com/codetroopers</a></p>
-</div>
-</div>
-</div>
-</div>
+<br/>
+<h2 id="lajouter-dans-son-projet">L&rsquo;ajouter dans son projet</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-groovy" data-lang="groovy"><span style="display:flex;"><span>dependencies <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    compile <span style="color:#e6db74">&#39;com.android.support:support-annotations:24.2.1&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><h3 id="liens">Liens</h3>
+<p><a href="https://developer.android.com/topic/libraries/support-library/features.html#annotations">https://developer.android.com/topic/libraries/support-library/features.html#annotations</a></p>
+<p><a href="https://developer.android.com/studio/write/annotations.html">https://developer.android.com/studio/write/annotations.html</a></p>
+<p><a href="https://developer.android.com/reference/android/support/annotation/package-summary.html">https://developer.android.com/reference/android/support/annotation/package-summary.html</a></p>
+<p><a href="https://github.com/fchauveau/blog-android-annotations/tree/master/app/src/main/java/com/codetroopers">https://github.com/fchauveau/blog-android-annotations/tree/master/app/src/main/java/com/codetroopers</a></p>
 
                     </div>
                     <div class="content-footer">
@@ -524,7 +394,7 @@ est de contrôler les rapports générés par lint</p>
 
     
     
-      <script src="/main.c675e.js"></script>
+      <script src="/main.6a4f7.js"></script>
     
     <script>
       const d = new Date();

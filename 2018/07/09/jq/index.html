@@ -5,7 +5,7 @@
   <meta name="description" content="" />
 
     
-  <link href="/main.9d7454509e2b96b98b19.css" rel="stylesheet" />
+  <link href="/main.fff3669dde03eba9c0d1.css" rel="stylesheet" />
    
   <meta charset="utf-8" />
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
@@ -28,7 +28,7 @@
 
 
 <meta property="og:title" content="Faire du json comme si on faisait du sed (*)" />
-<meta property="og:description" content=" Nous usons et abusons de Trello pour nos projets. Pour un projet en particulier, je voulais retrouver certains commentaires répartis sur plusieurs mois. Juste en regardant les cartes une par une ou en regardant l’historique serait trop fastidieux. Heureusement chaque board Trello permet un export au format json qui nous permet de s’en servir à notre guise.
+<meta property="og:description" content="Nous usons et abusons de Trello pour nos projets. Pour un projet en particulier, je voulais retrouver certains commentaires répartis sur plusieurs mois. Juste en regardant les cartes une par une ou en regardant l’historique serait trop fastidieux. Heureusement chaque board Trello permet un export au format json qui nous permet de s’en servir à notre guise.
 Je veux juste sortir quelques données, je ne referai jamais la même chose plusieurs fois et je veux que ça me prenne 10 minutes max donc un projet java c’est juste impensable, un langage de script sera plus adapté et ça tombe bien car d’une part le shell (la ligne de commande) est un de mes langages préférés et j’ai découvert jq il n’y a pas longtemps.
 " />
 <meta property="og:type" content="article" />
@@ -45,7 +45,7 @@ Je veux juste sortir quelques données, je ne referai jamais la même chose plus
 
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Faire du json comme si on faisait du sed (*)" />
-<meta name="twitter:description" content=" Nous usons et abusons de Trello pour nos projets. Pour un projet en particulier, je voulais retrouver certains commentaires répartis sur plusieurs mois. Juste en regardant les cartes une par une ou en regardant l’historique serait trop fastidieux. Heureusement chaque board Trello permet un export au format json qui nous permet de s’en servir à notre guise.
+<meta name="twitter:description" content="Nous usons et abusons de Trello pour nos projets. Pour un projet en particulier, je voulais retrouver certains commentaires répartis sur plusieurs mois. Juste en regardant les cartes une par une ou en regardant l’historique serait trop fastidieux. Heureusement chaque board Trello permet un export au format json qui nous permet de s’en servir à notre guise.
 Je veux juste sortir quelques données, je ne referai jamais la même chose plusieurs fois et je veux que ça me prenne 10 minutes max donc un projet java c’est juste impensable, un langage de script sera plus adapté et ça tombe bien car d’une part le shell (la ligne de commande) est un de mes langages préférés et j’ai découvert jq il n’y a pas longtemps.
 " />
 <meta name="twitter:image" content="https://code-troopers.com/2018/07/09/jq/ohmyzsh-banner_hu_f9de4bc71ce825e4.png" />
@@ -131,119 +131,59 @@ Je veux juste sortir quelques données, je ne referai jamais la même chose plus
                     </ul>
                     
                     <div class="content">
-                        <div class="paragraph">
-<p>Nous usons et abusons de Trello pour nos projets. Pour un projet en particulier, je voulais retrouver certains commentaires répartis sur plusieurs mois.
-Juste en regardant les cartes une par une ou en regardant l’historique serait trop fastidieux.
-Heureusement chaque board Trello permet un export au format json qui nous permet de s’en servir à notre guise.</p>
-</div>
-<div class="paragraph">
-<p>Je veux juste sortir quelques données, je ne referai jamais la même chose plusieurs fois et je veux que ça me prenne 10 minutes max donc un projet java c’est juste impensable, un langage de script sera plus adapté et ça tombe bien car d’une part le shell (la ligne de commande) est un de mes langages préférés et j’ai découvert <code>jq</code> il n’y a pas longtemps.</p>
-</div>
-<div class="paragraph">
+                        <p>Nous usons et abusons de Trello pour nos projets. Pour un projet en particulier, je voulais retrouver certains commentaires répartis sur plusieurs mois.
+Juste en regardant les cartes une par une ou en regardant l&rsquo;historique serait trop fastidieux.
+Heureusement chaque board Trello permet un export au format json qui nous permet de s&rsquo;en servir à notre guise.</p>
+<p>Je veux juste sortir quelques données, je ne referai jamais la même chose plusieurs fois et je veux que ça me prenne 10 minutes max donc un projet java c&rsquo;est juste impensable, un langage de script sera plus adapté et ça tombe bien car d&rsquo;une part le shell (la ligne de commande) est un de mes langages préférés et j&rsquo;ai découvert <code>jq</code> il n&rsquo;y a pas longtemps.</p>
 <p>Régulièrement une API nous ressort un pavé de 5000 lignes qui peuvent être lourdes à lire dans un éditeur de texte, pourquoi pas utiliser pour ces occasions <code>jq</code> qui va permettre de traiter ou formatter les données.</p>
-</div>
-<div class="paragraph">
 <p>jq est disponible dans la plupart des gestionnaires de paquet.</p>
-</div>
-<div class="sect1">
-<h2 id="_jq_par_lexemple">jq par l’exemple</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Prenons cette board publique <a class="bare" href="https://trello.com/b/nPNSBZjB/trello-resources">https://trello.com/b/nPNSBZjB/trello-resources</a> nous pouvons aller dans le menu et faire <strong>menu</strong> → <strong>plus</strong> → <strong>imprimer et exporter</strong> → <strong>exporter en json</strong></p>
-</div>
-<div class="paragraph">
-<p>Maintenant nous avons du json, regardons ce qu’il y a à l’intérieur.</p>
-</div>
-<div class="paragraph">
-<p><code>jq &#39;.&#39; nPNSBZjB.json</code></p>
-</div>
-<div class="paragraph">
-<p></p><div style="text-align : center">
-<a data-lightbox="0" href="/images/posts/2018-07-09_jq/jq1.png" style="display: inline" title="jq example 1">
+<h2 id="jq-par-lexemple">jq par l&rsquo;exemple</h2>
+<p>Prenons cette board publique <a href="https://trello.com/b/nPNSBZjB/trello-resources">https://trello.com/b/nPNSBZjB/trello-resources</a> nous pouvons aller dans le menu et faire <strong>menu</strong> → <strong>plus</strong> → <strong>imprimer et exporter</strong> → <strong>exporter en json</strong></p>
+<p>Maintenant nous avons du json, regardons ce qu&rsquo;il y a à l&rsquo;intérieur.</p>
+<p><code>jq '.' nPNSBZjB.json</code></p>
+<div style="text-align : center">
+<a style="display: inline" href="/images/posts/2018-07-09_jq/jq1.png" data-lightbox="0" title="jq example 1">
         <img class="medium" src="/images/posts/2018-07-09_jq/jq1_min.png" alt="jq example 1"/>
 </a>
 </div>
-<br/><p></p>
-</div>
-<div class="paragraph">
-<p>Si vous aviez ouvert le fichier avec un éditeur conventionnel, vous pouvez voir que c’est un peu plus joli et coloré.</p>
-</div>
-<div class="paragraph">
-<p>En fouillant un peu, nous voyons que ce qui nous intéresse se trouve dans l’objet actions, nous pouvons regarder plus en détail les actions uniquement :</p>
-</div>
-<div class="paragraph">
-<p><code>jq &#39;.actions[]&#39; nPNSBZjB.json</code></p>
-</div>
-<div class="paragraph">
-<p></p><div style="text-align : center">
-<a data-lightbox="0" href="/images/posts/2018-07-09_jq/jq2.png" style="display: inline" title="jq example 2">
+<br/>
+<p>Si vous aviez ouvert le fichier avec un éditeur conventionnel, vous pouvez voir que c&rsquo;est un peu plus joli et coloré.</p>
+<p>En fouillant un peu, nous voyons que ce qui nous intéresse se trouve dans l&rsquo;objet actions, nous pouvons regarder plus en détail les actions uniquement :</p>
+<p><code>jq '.actions[]' nPNSBZjB.json</code></p>
+<div style="text-align : center">
+<a style="display: inline" href="/images/posts/2018-07-09_jq/jq2.png" data-lightbox="0" title="jq example 2">
         <img class="medium" src="/images/posts/2018-07-09_jq/jq2_min.png" alt="jq example 2"/>
 </a>
 </div>
-<br/><p></p>
-</div>
-<div class="paragraph">
-<p>Comme vous l’avez peut-être compris, une façon simple d’utiliser jq est de mettre en paramètre le path json que l’on souhaite extraire. Ici, les <code>[]</code> sont optionnels, cela permet d’afficher uniquement des objets lorsque l’on a un tableau comme ici pour actions.</p>
-</div>
-<div class="paragraph">
-<p>Il y a cependant beaucoup trop d’informations pour nous qui désirons uniquement la description, le nom de la carte et l’auteur. Nous pouvons formater les données simplement comme ceci :</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>jq -c &#39;.actions[] | {txt: .data.text, name: .data.card.name, member: .memberCreator.fullName}&#39; nPNSBZjB.json</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p></p><div style="text-align : center">
-<a data-lightbox="0" href="/images/posts/2018-07-09_jq/jq3.png" style="display: inline" title="jq example 3">
+<br/>
+<p>Comme vous l&rsquo;avez peut-être compris, une façon simple d&rsquo;utiliser jq est de mettre en paramètre le path json que l&rsquo;on souhaite extraire. Ici, les <code>[]</code> sont optionnels, cela permet d&rsquo;afficher uniquement des objets lorsque l&rsquo;on a un tableau comme ici pour actions.</p>
+<p>Il y a cependant beaucoup trop d&rsquo;informations pour nous qui désirons uniquement la description, le nom de la carte et l&rsquo;auteur. Nous pouvons formater les données simplement comme ceci :</p>
+<pre tabindex="0"><code>jq -c &#39;.actions[] | {txt: .data.text, name: .data.card.name, member: .memberCreator.fullName}&#39; nPNSBZjB.json
+</code></pre><div style="text-align : center">
+<a style="display: inline" href="/images/posts/2018-07-09_jq/jq3.png" data-lightbox="0" title="jq example 3">
         <img class="medium" src="/images/posts/2018-07-09_jq/jq3_min.png" alt="jq example 3"/>
 </a>
 </div>
-<br/><p></p>
-</div>
-<div class="paragraph">
+<br/>
 <p>Comme nous le ferions en javascript, il suffit de mettre le <strong>nom du champ</strong> <strong>:</strong> <strong>la variable</strong>. Nous pouvons aussi en profiter pour afficher les objets sur une ligne pour gagner en visibilité grâce au <code>-c</code>.</p>
-</div>
-<div class="paragraph">
 <p>Allons encore un peu plus loin, nous ne voulons pas des objets qui ont leur champs texte à null ou alors ceux qui ont un commentaire qui commence par une notification avec <code>@</code>, nous pouvons <strong>sélectionner</strong> les objets avec un <strong>select</strong></p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>jq -c &#39;.actions[] | {txt: .data.text, name: .data.card.name, member: .memberCreator.fullName} | select(.txt!=null) | select(.txt | startswith(&#34;@&#34;))&#39; nPNSBZjB.json</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p></p><div style="text-align : center">
-<a data-lightbox="0" href="/images/posts/2018-07-09_jq/jq4.png" style="display: inline" title="jq example 4">
+<pre tabindex="0"><code>jq -c &#39;.actions[] | {txt: .data.text, name: .data.card.name, member: .memberCreator.fullName} | select(.txt!=null) | select(.txt | startswith(&#34;@&#34;))&#39; nPNSBZjB.json
+</code></pre><div style="text-align : center">
+<a style="display: inline" href="/images/posts/2018-07-09_jq/jq4.png" data-lightbox="0" title="jq example 4">
         <img class="medium" src="/images/posts/2018-07-09_jq/jq4_min.png" alt="jq example 4"/>
 </a>
 </div>
-<br/><p></p>
-</div>
-<div class="paragraph">
-<p>Dernière commande sur l’utilisation de jq, la possibilité de trier, par exemple dans l’ordre alphabétique du champs texte</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>jq -c &#39;.actions |= sort_by(.data.text)|.actions[] | {txt: .data.text, name: .data.card.name, member: .memberCreator.fullName} | select(.txt!=null) | select(.txt | startswith(&#34;@&#34;))&#39; nPNSBZjB.json</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p></p><div style="text-align : center">
-<a data-lightbox="0" href="/images/posts/2018-07-09_jq/jq5.png" style="display: inline" title="jq example 5">
+<br/>
+<p>Dernière commande sur l&rsquo;utilisation de jq, la possibilité de trier, par exemple dans l&rsquo;ordre alphabétique du champs texte</p>
+<pre tabindex="0"><code>jq -c &#39;.actions |= sort_by(.data.text)|.actions[] | {txt: .data.text, name: .data.card.name, member: .memberCreator.fullName} | select(.txt!=null) | select(.txt | startswith(&#34;@&#34;))&#39; nPNSBZjB.json
+</code></pre><div style="text-align : center">
+<a style="display: inline" href="/images/posts/2018-07-09_jq/jq5.png" data-lightbox="0" title="jq example 5">
         <img class="medium" src="/images/posts/2018-07-09_jq/jq5_min.png" alt="jq example 5"/>
 </a>
 </div>
-<br/><p></p>
-</div>
-<div class="paragraph">
-<p>J’espère que ce petit exemple d’utilisation de jq vous aura plu, je vous laisse à la documentation officielle si vous désirez en savoir plus : <a class="bare" href="https://stedolan.github.io/jq/">https://stedolan.github.io/jq/</a></p>
-</div>
-<div class="paragraph">
-<p>(*) <code>sed</code> c’est la commande qui permet de modifier une chaîne de caractères en shell et que tout informaticien connaît.</p>
-</div>
-</div>
-</div>
+<br/>
+<p>J&rsquo;espère que ce petit exemple d&rsquo;utilisation de jq vous aura plu, je vous laisse à la documentation officielle si vous désirez en savoir plus : <a href="https://stedolan.github.io/jq/">https://stedolan.github.io/jq/</a></p>
+<p>(*) <code>sed</code> c&rsquo;est la commande qui permet de modifier une chaîne de caractères en shell et que tout informaticien connaît.</p>
 
                     </div>
                     <div class="content-footer">
@@ -399,7 +339,7 @@ Heureusement chaque board Trello permet un export au format json qui nous permet
 
     
     
-      <script src="/main.c675e.js"></script>
+      <script src="/main.6a4f7.js"></script>
     
     <script>
       const d = new Date();
