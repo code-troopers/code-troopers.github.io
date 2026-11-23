@@ -10,8 +10,8 @@ module.exports = merge(common, {
   mode: "production",
 
   output: {
-    filename: "[name].[hash:5].js",
-    chunkFilename: "[id].[hash:5].js",
+    filename: "[name].[contenthash:5].js",
+    chunkFilename: "[id].[contenthash:5].js",
     path: path.resolve(__dirname, "dist")
   },
 
