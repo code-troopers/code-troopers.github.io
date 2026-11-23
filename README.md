@@ -6,7 +6,7 @@ Site statique [Hugo](https://gohugo.io) (contenu en Markdown, gabarits) et Webpa
 
 ## Démarrer
 
-Prérequis : Node.js 24 (`.nvmrc`), Corepack (`corepack enable`) et [Asciidoctor](https://asciidoctor.org) (`brew install asciidoctor` ou `sudo apt install asciidoctor`).
+Prérequis : Node.js 24 (`.nvmrc`) et Corepack (`corepack enable`).
 
 ```bash
 yarn install

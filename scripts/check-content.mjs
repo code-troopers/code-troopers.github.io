@@ -29,7 +29,7 @@ for (const section of SECTIONS) {
   for (const entry of readdirSync(root, {withFileTypes: true})) {
     if (!entry.isDirectory()) continue;
     const dir = join(root, entry.name);
-    const index = readdirSync(dir).find((f) => /^index\.(md|adoc|html)$/.test(f));
+    const index = readdirSync(dir).find((f) => /^index\.(md|html)$/.test(f));
     if (!index) {
       warnings.push(`${dir}: dossier sans index.md, rien n'y est publié`);
       continue;
@@ -80,10 +80,8 @@ for (const section of SECTIONS) {
       const spellings = tags.get(key);
       spellings.set(String(tag), (spellings.get(String(tag)) || 0) + 1);
     }
-    if (!index.endsWith(".adoc")) {
-      for (const [, src] of body.matchAll(RELATIVE_IMAGE)) {
-        errors.push(`${file}: image « ${src} » en chemin relatif, utiliser ${fm.url || "/<url de la page>/"}${src}`);
-      }
+    for (const [, src] of body.matchAll(RELATIVE_IMAGE)) {
+      errors.push(`${file}: image « ${src} » en chemin relatif, utiliser ${fm.url || "/<url de la page>/"}${src}`);
     }
 
     for (const f of readdirSync(dir)) {

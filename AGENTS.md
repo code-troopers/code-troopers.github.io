@@ -58,7 +58,6 @@ Pour le niveau 2 : fais le travail sur une branche, ouvre la PR, **ne la merge 
 | Git | versionner | `xcode-select --install` |
 | Node.js **24** | build | `brew install node@24` ou `nvm install 24` (version dans `.nvmrc`) |
 | Yarn 4 via Corepack | dépendances | `corepack enable` (fourni avec Node) |
-| Asciidoctor | 21 anciens articles en `.adoc` | `brew install asciidoctor` (Linux : `sudo apt install asciidoctor`) |
 
 Hugo n'est **pas** à installer : il est fourni par le paquet npm `hugo-extended` (version figée volontairement, voir section 9).
 
@@ -79,7 +78,6 @@ yarn check:content    # seulement le contrôle du contenu (rapide)
 | --- | --- | --- |
 | `This project's package.json defines "packageManager": "yarn@4…". However the current global version of Yarn is 1.x` | Corepack non activé | `corepack enable`, puis relancer |
 | Erreur de version Node, ou paquets qui refusent de s'installer | Node trop ancien | Installer et utiliser Node 24 (`nvm use`) |
-| `render of ".../index.adoc" failed … executing "main" at <.Content>` | Asciidoctor absent | `brew install asciidoctor` |
 | `Port 3000 is already in use` | Un autre `yarn start` tourne | Fermer l'autre terminal ou `PORT=3001 yarn start` |
 | Page sans style en local | Webpack pas encore prêt | Attendre quelques secondes et recharger |
 | `yarn install` échoue faute de réseau (bac à sable de l'agent) | Accès réseau coupé | Demander à l'utilisateur d'autoriser l'accès réseau pour cette commande |

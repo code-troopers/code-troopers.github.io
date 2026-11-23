@@ -15,6 +15,3 @@
 [dev]
   framework = "hugo"
   targetPort = 3000
-
-[security.exec]
-    allow = ['^asciidoctor$']
