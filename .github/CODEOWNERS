@@ -2,7 +2,7 @@
 # approval from the owners of every file it touches.
 
 # Default: code, styles, templates, dependencies, CI and agent instructions
-*                         @mattboll
+*                         @code-troopers/owners
 
 # Editorial content: no owner, mergeable once CI is green
 /site/content/

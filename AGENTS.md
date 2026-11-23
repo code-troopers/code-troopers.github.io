@@ -7,7 +7,7 @@ Instructions pour tout agent IA (Codex, Claude, Copilot, Cursor, Gemini…) qui 
 - Site vitrine de **Code-Troopers**, agence de développement web et mobile à Tours : https://code-troopers.com
 - Site statique **Hugo** (gabarits + contenu Markdown) et **Webpack** (CSS/JS). Site entièrement en français (`fr-FR`).
 - La personne qui te parle n'est **pas forcément développeuse** (par exemple Nicolas, commercial). Elle ne verra pas si tu ajoutes une librairie, casses un gabarit ou dégrades le style. **C'est à toi d'être prudent à sa place.**
-- Référent technique : Matthieu (GitHub `@mattboll`). Toute modification technique passe par sa relecture.
+- Relecteurs techniques : l'équipe GitHub `@code-troopers/owners` (développeurs seniors, dont Matthieu). Toute modification technique passe par leur relecture.
 
 ## 2. Règle d'or : classer la demande avant d'agir
 
@@ -36,7 +36,7 @@ Tout le reste. En particulier :
 - changer l'URL d'une page existante, supprimer une page ;
 - une demande de contenu qui t'oblige à toucher un fichier du niveau 2.
 
-Pour le niveau 2 : fais le travail sur une branche, ouvre la PR, **ne la merge pas**. GitHub demande automatiquement la relecture à `@mattboll` (fichier `.github/CODEOWNERS`). Explique à l'utilisateur, en termes simples, ce qui a été modifié et pourquoi une relecture est nécessaire.
+Pour le niveau 2 : fais le travail sur une branche, ouvre la PR, **ne la merge pas**. GitHub demande automatiquement la relecture à l'équipe `@code-troopers/owners` (fichier `.github/CODEOWNERS`). Explique à l'utilisateur, en termes simples, ce qui a été modifié et pourquoi une relecture est nécessaire.
 
 **En cas de doute, c'est du niveau 2.**
 
@@ -95,10 +95,10 @@ yarn check:content    # seulement le contrôle du contenu (rapide)
    - `feat(blog): add article on senior developers`
    - `feat(work): add Fizzer case study`
    - `chore(team): update Nicolas photo`
-6. Pousser et ouvrir une PR vers `main` en remplissant le modèle (`.github/PULL_REQUEST_TEMPLATE.md`) :
+6. Pousser et ouvrir une PR vers `main` en remplissant le modèle (`.github/PULL_REQUEST_TEMPLATE.md`). Le dépôt est public : **titre et description de la PR en anglais**, sans mention d'IA :
    ```bash
    git push -u origin HEAD
-   gh pr create --base main --title "<message du commit>" --body "<sections du modèle remplies>"
+   gh pr create --base main --title "<commit message>" --body "<filled-in template sections, in English>"
    ```
    Sans `gh`, donner à l'utilisateur le lien que `git push` affiche.
 7. Attendre les vérifications (`gh pr checks`) :
@@ -106,7 +106,7 @@ yarn check:content    # seulement le contrôle du contenu (rapide)
    - **Netlify** : une preview du site (lien `deploy-preview-<n>--code-troopers.netlify.app`). **Donne ce lien à l'utilisateur** pour qu'il relise avant publication.
 8. Merge :
    - niveau 1, CI verte, preview validée par l'utilisateur : `gh pr merge --squash --delete-branch` ;
-   - niveau 2 : ne pas merger, attendre l'approbation de `@mattboll`.
+   - niveau 2 : ne pas merger, attendre l'approbation d'un membre de `@code-troopers/owners`.
 9. Après le merge, la mise en ligne prend quelques minutes. Vérifier sur https://code-troopers.com.
 
 Une PR = un sujet. Ne mélange pas une correction de typo et un nouvel article.
@@ -258,7 +258,7 @@ Technologies utilisées
 - Gabarits dans `site/layouts/` (partials dans `site/layouts/partials/`). Le rendu Markdown autorise le HTML brut (`unsafe = true`).
 - Styles : SCSS dans `src/css/`, couleurs et tailles dans `src/css/_variables.scss`. Réutiliser les variables existantes, ne pas introduire de nouvelles couleurs ni polices.
 - **Hugo est figé en 0.164** : à partir de 0.165, le calcul des résumés automatiques (`.Truncated`) change et retire des liens sur les cartes d'articles. Ne pas monter Hugo sans adapter les gabarits et comparer le rendu.
-- **Aucune nouvelle dépendance** sans accord explicite de `@mattboll`. Le site n'embarque que `highlight.js` (coloration du code) et `lightbox2` (agrandissement des images).
+- **Aucune nouvelle dépendance** sans accord explicite d'un membre de `@code-troopers/owners`. Le site n'embarque que `highlight.js` (coloration du code) et `lightbox2` (agrandissement des images).
 - Éléments volontaires à ne pas « corriger » : thème Halloween en octobre et blague du 1er avril (`src/index.js`, `site/static/js/april.js`), ordre aléatoire de l'équipe et du nuage de technologies, mesure d'audience Matomo.
 - Le cache d'images de Hugo (`site/resources/_gen`) est versionné pour accélérer le build : ne pas le modifier à la main.
 - Une modification technique ne doit pas changer le rendu des pages non concernées. Comparer `dist/` avant et après quand c'est possible.
@@ -266,7 +266,7 @@ Technologies utilisées
 ## 10. Garde-fous en place
 
 - **CI** (`.github/workflows/ci.yml`) sur chaque PR : `yarn lint`, `yarn check:content` (frontmatter, image de couverture présente, URL unique et cohérente avec la date…), `yarn build` (qui échoue au moindre avertissement Hugo).
-- **CODEOWNERS** : toute PR qui touche autre chose que du contenu exige l'approbation de `@mattboll`.
+- **CODEOWNERS** : toute PR qui touche autre chose que du contenu exige l'approbation d'un membre de `@code-troopers/owners`.
 - **Preview Netlify** sur chaque PR, pour relire le rendu avant publication.
 
 ## 11. Comment rendre compte à l'utilisateur
