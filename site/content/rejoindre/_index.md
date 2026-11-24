@@ -1,6 +1,14 @@
 ---
 title: Rejoindre Code-Troopers
 description: "Code-Troopers recrute des développeurs à Tours : nos valeurs, une journée avec nous, nos bureaux et nos offres d'emploi, de stage et d'alternance."
+# Old team.code-troopers.com addresses of closed offers
+aliases:
+  - /fiche-de-poste-alternant/
+  - /rejoindre/fiche-de-poste-alternant/
+  - /fiche-de-poste-alternant-com-mkt/
+  - /rejoindre/fiche-de-poste-alternant-com-mkt/
+  - /fiche-de-poste-stagedeveloppeur/
+  - /rejoindre/fiche-de-poste-stagedeveloppeur/
 heroPhoto: accueil-equipe.jpg
 # Background photo of each job offer page
 offerHeroPhoto: promesse-perennite.jpg

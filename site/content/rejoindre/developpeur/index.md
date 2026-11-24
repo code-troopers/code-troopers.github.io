@@ -3,6 +3,10 @@ title: Développeur (H/F)
 tagline: À la recherche d'un nouveau Trooper
 date: 2021-06-21
 weight: 10
+# Old team.code-troopers.com addresses
+aliases:
+  - /fiche-de-poste-developpeur/
+  - /rejoindre/fiche-de-poste-developpeur/
 contract: CDI
 location: Tours (remote friendly)
 profile: Min. 2-3 ans XP
