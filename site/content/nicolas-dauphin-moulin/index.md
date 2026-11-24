@@ -2,6 +2,9 @@
 title: Nicolas Dauphin-Moulin
 type: contact-card
 url: /nicolas-dauphin-moulin/
+# Old team.code-troopers.com address (QR code), redirected by Cloudflare to /rejoindre/
+aliases:
+  - /rejoindre/nicolas-dauphin-moulin/
 photo: nicolas-dauphin-moulin.png
 linkedin: https://www.linkedin.com/in/nicolas-dauphin-moulin/
 vcard: https://prewww.code-troopers.com/vcards/Nicolas%20Dauphin-Moulin.vcf

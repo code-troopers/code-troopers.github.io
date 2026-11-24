@@ -1,5 +1,8 @@
 ---
 title: Exemple de mission
+# Old team.code-troopers.com address
+aliases:
+  - /exemple-de-mission/
 tagline: Mission à pourvoir
 date: 2023-03-14
 # Linked from the developer offer, not listed on /rejoindre/
