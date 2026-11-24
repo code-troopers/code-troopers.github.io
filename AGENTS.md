@@ -9,9 +9,17 @@ Instructions pour tout agent IA (Codex, Claude, Copilot, Cursor, Gemini…) qui 
 - La personne qui te parle n'est **pas forcément développeuse** (par exemple une personne de l'équipe commerciale). Elle ne verra pas si tu ajoutes une librairie, casses un gabarit ou dégrades le style. **C'est à toi d'être prudent à sa place.**
 - Relecteurs techniques : l'équipe GitHub `@code-troopers/owners` (développeurs seniors). Toute modification technique passe par leur relecture.
 
+### Parler à l'utilisateur
+
+- Mots simples. Pas de jargon (branche, commit, PR, CI, merge, frontmatter…) sans l'expliquer en quelques mots : une PR est une « demande de mise en ligne », merger veut dire « publier ».
+- Ne pose une question que si la réponse change ce que tu vas faire. Une demande précise (« remplace X par Y ») s'exécute sans redemander confirmation.
+- Une question à la fois, à laquelle on répond par oui, non ou un choix simple, avec ta recommandation.
+- Ne lui demande jamais de choisir un nom de branche, un message de commit ou le niveau de la demande : c'est ton travail.
+- Garde pour toi les détails techniques qui ne demandent aucune décision de sa part (avertissements déjà connus, commandes lancées, structure des fichiers). S'il y a un vrai doute sur le contenu (texte présent à plusieurs endroits, formulation ambiguë), pose-le en citant la page du site concernée, pas le fichier.
+
 ## 2. Règle d'or : classer la demande avant d'agir
 
-Avant toute modification, classe la demande dans un des deux niveaux et annonce-le à l'utilisateur.
+Avant toute modification, classe la demande dans un des deux niveaux et annonce-le à l'utilisateur en une phrase simple : « C'est une modification de contenu, tu pourras la publier toi-même » ou « C'est une modification technique, un développeur devra la relire avant publication ».
 
 ### Niveau 1 : contenu (rapide, sans relecture technique)
 
@@ -90,12 +98,15 @@ yarn check:content    # seulement le contrôle du contenu (rapide)
 1. Partir de `main` à jour : `git switch main && git pull`.
 2. Créer une branche courte et explicite : `content/article-xxx`, `content/typo-accueil`, `fix/…`, `feat/…`.
 3. Faire la modification, puis `yarn verify`. Corriger toute erreur avant d'aller plus loin. Le contrôle du contenu affiche aussi des avertissements déjà connus sur d'anciens contenus : ils ne bloquent pas, mais **ta modification ne doit en ajouter aucun**.
-4. **Faire valider en local par l'utilisateur, avant tout commit** :
-   - Lancer `yarn start` en arrière-plan : le serveur tourne en continu, ne pas attendre qu'il se termine. Si l'outil ne permet pas de laisser tourner une commande, demander à l'utilisateur de lancer `yarn start` dans un terminal.
-   - Donner l'adresse exacte de chaque page modifiée (par exemple `http://localhost:3000/rejoindre/`) et demander de la vérifier sur ordinateur et en largeur mobile (fenêtre étroite ou mode « appareil » du navigateur). `yarn start` ouvre tout seul un onglet sur l'accueil du site.
-   - **Attendre l'accord explicite de l'utilisateur avant de committer.** S'il demande une retouche, la faire et lui redemander de vérifier.
-   - Arrêter le serveur une fois la modification validée.
-5. Committer avec un message en anglais au format Conventional Commits, sans mention d'IA ni trailer `Co-Authored-By` :
+4. **Faire vérifier le rendu par l'utilisateur.** Comment dépend de l'endroit où tu tournes :
+   - **Sur l'ordinateur de l'utilisateur** (Codex CLI, application Codex ouverte sur un dossier local, Claude Code…) : faire valider en local, **avant tout commit** :
+     - Lancer `yarn start` en arrière-plan : le serveur tourne en continu, ne pas attendre qu'il se termine. Si l'outil ne permet pas de laisser tourner une commande, demander à l'utilisateur de lancer `yarn start` dans un terminal.
+     - Donner l'adresse exacte de chaque page modifiée (par exemple `http://localhost:3000/rejoindre/`) et demander de la vérifier sur ordinateur et en largeur mobile (fenêtre étroite ou mode « appareil » du navigateur). `yarn start` ouvre tout seul un onglet sur l'accueil du site.
+     - **Attendre l'accord explicite de l'utilisateur avant de committer.** S'il demande une retouche, la faire et lui redemander de vérifier.
+     - Arrêter le serveur une fois la modification validée.
+   - **Dans le cloud** (Codex dans ChatGPT, agent lancé depuis GitHub…) : l'utilisateur ne peut pas ouvrir ton `localhost`, ne lui demande pas de lancer de commande. Committe, ouvre la PR, et la vérification se fait sur la preview Netlify (étape 7), **avant publication**.
+   - Dans le doute, considère que tu es dans le cloud : la preview Netlify montre de toute façon le vrai site.
+5. Committer avec un message **en anglais** (même si la conversation est en français) au format Conventional Commits, sans mention d'IA ni trailer `Co-Authored-By` :
    - `fix(content): fix typo on homepage`
    - `feat(blog): add article on senior developers`
    - `feat(work): add Fizzer case study`
@@ -108,10 +119,10 @@ yarn check:content    # seulement le contrôle du contenu (rapide)
    Sans `gh`, donner à l'utilisateur le lien que `git push` affiche.
 7. Attendre les vérifications (`gh pr checks`) :
    - **CI** : lint, contrôle du contenu, build ;
-   - **Netlify** : une preview du site (lien `deploy-preview-<n>--code-troopers.netlify.app`). **Donne ce lien à l'utilisateur** pour qu'il relise avant publication.
-8. Merge :
-   - niveau 1, CI verte, preview validée par l'utilisateur : `gh pr merge --squash --delete-branch` ;
-   - niveau 2 : ne pas merger, attendre l'approbation d'un membre de `@code-troopers/owners`.
+   - **Netlify** : une preview du site (lien `deploy-preview-<n>--code-troopers.netlify.app`), prête quelques minutes après l'ouverture de la PR. **Donne à l'utilisateur l'adresse exacte de chaque page modifiée sur la preview** (par exemple `https://deploy-preview-144--code-troopers.netlify.app/rejoindre/`) et demande-lui de la vérifier sur ordinateur et sur téléphone. Attends son accord explicite avant de publier.
+8. Publier (merger) :
+   - niveau 1, CI verte, preview validée par l'utilisateur : `gh pr merge --squash --delete-branch`. Si tu ne peux pas merger (pas de `gh`, agent dans le cloud), explique-lui comment faire : ouvrir le lien de la PR, cliquer sur le bouton vert en bas de la page (choisir « Squash and merge » si un menu propose plusieurs options), puis « Confirm squash and merge ». Il n'a besoin de l'accord de personne ;
+   - niveau 2 : ne pas merger. Dis-lui simplement qu'un développeur de l'équipe va relire, et que la PR sera publiée après son approbation.
 9. Après le merge, la mise en ligne prend quelques minutes. Vérifier sur https://code-troopers.com.
 
 Une PR = un sujet. Ne mélange pas une correction de typo et un nouvel article.
@@ -300,6 +311,7 @@ Texte de l'offre en Markdown (titres `##`, listes, tableaux)…
 ## 10. Garde-fous en place
 
 - **CI** (`.github/workflows/ci.yml`) sur chaque PR : `yarn lint`, `yarn check:content` (frontmatter, image de couverture présente, URL unique et cohérente avec la date…), `yarn build` (qui échoue au moindre avertissement Hugo).
+- **Branche `main` protégée** : tout passe par une PR, même une faute de frappe. Une PR de contenu peut être publiée par son auteur dès que la CI est verte, sans approbation ; une PR technique exige l'approbation d'un membre de `@code-troopers/owners`.
 - **CODEOWNERS** : toute PR qui touche autre chose que du contenu exige l'approbation d'un membre de `@code-troopers/owners`.
 - **HTML sûr dans le contenu** : le contrôle du contenu refuse dans `site/content/` et les dossiers d'images et de PDF tout ce qui exécute du code ou charge une ressource externe (`<script>`, `<iframe>`, `<style>`, `<link>`, `<form>`, attributs `on…=`, liens `javascript:`) ainsi que les types de fichiers autres que texte, images, PDF et vidéos. Les éléments déjà présents sont autorisés un par un dans `scripts/content-allowlist.json`. Ne lance jamais `yarn check:content --write-allowlist` : mettre à jour cette liste est une décision technique, à laisser aux relecteurs.
 - **Preview Netlify** sur chaque PR, pour relire le rendu avant publication.
