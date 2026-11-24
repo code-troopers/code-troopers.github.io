@@ -163,7 +163,7 @@ openings: |
 
   **Tu es à la recherche d’un emploi ? Tu veux changer d’horizon ? Tu rêves de rejoindre notre équipe ?**
 
-  **Consulte nos offres ci-dessous !**
+  **Consulte notre offre ci-dessous !**
 spontaneous: |
   Tu n’as pas trouvé ton bonheur parmis les offres proposées mais tu souhaite nous rejoindre ?\
   Nous sommes toujours à la recherche de nouvelles compétences ! Alors si tu es passionné par ton métier et prêt à relever de nouveaux défis…\
